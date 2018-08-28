@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Smarty - Multipurpose + Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+
+
+		VERTICAL MENU ONLY
+		menu-vertical			= vertical menu
+		menu-vertical			= vertical menu
+		menu-inverse			= right side menu
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation menu-vertical">
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- SIDE MENU -->
+			<div id="mainMenu" class="navbar-toggleable-md sidebar-vertical">
+
+				<a href="index.html" class="logo text-center">
+					<img src="assets/images/_smarty/logo.png" alt="">
+				</a>
+
+				<div class="sidebar-nav">
+					<div class="navbar navbar-default" role="navigation">
+
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+
+						<div class="navbar-collapse sidebar-navbar-collapse collapse" aria-expanded="false">
+
+							<!-- MENU -->
+							<ul class="nav navbar-nav">
+								<li>
+									<a href="index.html">
+										<i class="et-trophy"></i> 
+										Home
+									</a>
+								</li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+										<i class="et-layers"></i> 
+										Pages 
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="feature-header-side-left-1-gg.html">Background Grain Green</a></li>
+										<li><a href="feature-header-side-left-1-gb.html">Background Grain Blue</a></li>
+										<li><a href="feature-header-side-left-1-gy.html">Background Grain Yellow</a></li>
+										<li><a href="feature-header-side-left-1-go.html">Background Grain Orange</a></li>
+										<li><a href="feature-header-side-left-1-ggr.html">Background Grain Grey</a></li>
+									</ul>
+								</li>
+								<li class="dropdown active">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="">
+										<i class="et-beaker"></i> 
+										Features
+									</a>
+									<ul class="dropdown-menu">
+										<li class="active"><a href="feature-header-side-left-1.html">Header Left Fixed</a></li>
+										<li><a href="feature-header-side-left-2.html">Header Left Onclick</a></li>
+										<li><a href="feature-header-side-right-1.html">Header Right Fixed</a></li>
+										<li><a href="feature-header-side-right-2.html">Header Right Onclick</a></li>
+										<li><a href="feature-header-side-left-3.html">Header Left Dark</a></li>
+										<li><a href="feature-header-side-right-3.html">Header Right Dark</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="">
+										<i class="et-mic"></i> 
+										Portfolio
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="portfolio-grid-2-columns.html">2 Columns</a></li>
+										<li><a href="portfolio-grid-3-columns.html">3 Columns</a></li>
+										<li><a href="portfolio-grid-4-columns.html">4 Columns</a></li>
+										<li><a href="portfolio-layout-default.html">Single Basic</a></li>
+										<li><a href="portfolio-layout-aside-left.html">Left Sidebar</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="">
+										<i class="et-heart"></i> 
+										Blog
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="blog-default-aside-left.html">Left Sidebar</a></li>
+										<li><a href="blog-default-aside-right.html">Right Sidebar</a></li>
+										<li><a href="blog-default-fullwidth.html">Full Width</a></li>
+										<li><a href="blog-single-default.html">Single</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="" aria-expanded="false">
+										<i class="et-basket"></i> 
+										Shop
+									</a>
+									<ul class="dropdown-menu">
+
+										<li><a href="shop-2col-left.html">2 Columns</a></li>
+										<li><a href="shop-3col-left.html">3 Columns</a></li>
+										<li><a href="shop-4col-left.html">4 Columns</a></li>
+										<li><a href="shop-cart.html">Shop Cart</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="page-contact-1.html">
+										<i class="et-envelope"></i> 
+										Contact Us
+									</a>
+								</li>
+							</ul>
+							<!-- /MENU -->
+
+						</div><!--/.nav-collapse -->
+
+					</div>
+				</div>
+
+
+				<!-- Social Icons -->
+				<div class="social-icons hidden-sm-down text-center">
+					<a href="#" class="social-icon social-icon-sm social-icon-light social-facebook" data-toggle="tooltip" data-placement="top" title="Facebook">
+						<i class="icon-facebook"></i>
+						<i class="icon-facebook"></i>
+					</a>
+					<a href="#" class="social-icon social-icon-sm social-icon-light social-twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+						<i class="icon-twitter"></i>
+						<i class="icon-twitter"></i>
+					</a>
+					<a href="#" class="social-icon social-icon-sm social-icon-light social-pinterest" data-toggle="tooltip" data-placement="top" title="Pinterest">
+						<i class="icon-pinterest"></i>
+						<i class="icon-pinterest"></i>
+					</a>
+					<a href="#" class="social-icon social-icon-sm social-icon-light social-linkedin" data-toggle="tooltip" data-placement="top" title="Linkedin">
+						<i class="icon-linkedin"></i>
+						<i class="icon-linkedin"></i>
+					</a>
+					<a href="#" class="social-icon social-icon-sm social-icon-light social-gplus" data-toggle="tooltip" data-placement="top" title="Google Plus">
+						<i class="icon-gplus"></i>
+						<i class="icon-gplus"></i>
+					</a>
+				</div>
+				<!-- /Social Icons -->
+
+
+				<!-- Paragraph -->
+				<p class="text-center hidden-sm-down">office@yourdomain.com</p>
+				<!-- /Paragraph -->
+
+			</div>
+			<!-- /SIDE MENU -->
+
+
+			<section class="p-0">
+
+				<!--
+					fullwidth - required for full width portfolio
+				-->
+				<div id="portfolio" class="clearfix fullwidth portfolio-nogutter portfolio-isotope portfolio-isotope-3">
+
+					<div class="portfolio-item development"><!-- item -->
+
+						<div class="item-box">
+							<figure>
+								<span class="item-hover">
+									<span class="overlay dark-5"></span>
+									<span class="inner">
+
+										<!-- lightbox -->
+										<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/1-min.jpg" data-plugin-options='{"type":"image"}'>
+											<span class="fa fa-plus fs-20"></span>
+										</a>
+
+										<!-- details -->
+										<a class="ico-rounded" href="portfolio-single-slider.html">
+											<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+										</a>
+
+									</span>
+								</span>
+
+								<img class="img-fluid" src="demo_files/images/mockups/800x553/1-min.jpg" width="800" height="553" alt="">
+							</figure>
+
+							<div class="item-box-desc">
+								<h3>Street Photography</h3>
+								<ul class="list-inline categories m-0">
+									<li><a href="#">Photography</a></li>
+									<li><a href="#">Design</a></li>
+								</ul>
+							</div>
+
+						</div>
+
+					</div><!-- /item -->
+
+
+					<div class="portfolio-item photography"><!-- item -->
+
+						<div class="item-box">
+							<figure>
+								<span class="item-hover">
+									<span class="overlay dark-5"></span>
+									<span class="inner">
+
+										<!-- lightbox -->
+										<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/2-min.jpg" data-plugin-options='{"type":"image"}'>
+											<span class="fa fa-plus fs-20"></span>
+										</a>
+
+										<!-- details -->
+										<a class="ico-rounded" href="portfolio-single-slider.html">
+											<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+										</a>
+
+									</span>
+								</span>
+
+								<img class="img-fluid" src="demo_files/images/mockups/800x553/2-min.jpg" width="800" height="553" alt="">
+							</figure>
+
+							<div class="item-box-desc">
+								<h3>Street Photography</h3>
+								<ul class="list-inline categories m-0">
+									<li><a href="#">Photography</a></li>
+									<li><a href="#">Design</a></li>
+								</ul>
+							</div>
+
+						</div>
+
+					</div><!-- /item -->
+
+
+					<div class="portfolio-item design"><!-- item -->
+
+						<div class="item-box">
+							<figure>
+								<span class="item-hover">
+									<span class="overlay dark-5"></span>
+									<span class="inner">
+
+										<!-- lightbox -->
+										<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/3-min.jpg" data-plugin-options='{"type":"image"}'>
+											<span class="fa fa-plus fs-20"></span>
+										</a>
+
+										<!-- details -->
+										<a class="ico-rounded" href="portfolio-single-slider.html">
+											<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+										</a>
+
+									</span>
+								</span>
+
+								<img class="img-fluid" src="demo_files/images/mockups/800x553/3-min.jpg" width="800" height="553" alt="">
+							</figure>
+
+							<div class="item-box-desc">
+								<h3>Street Photography</h3>
+								<ul class="list-inline categories m-0">
+									<li><a href="#">Photography</a></li>
+									<li><a href="#">Design</a></li>
+								</ul>
+							</div>
+
+						</div>
+
+					</div><!-- /item -->
+
+
+					<div class="portfolio-item design"><!-- item -->
+
+						<div class="item-box">
+							<figure>
+								<span class="item-hover">
+									<span class="overlay dark-5"></span>
+									<span class="inner">
+
+										<!-- lightbox -->
+										<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/4-min.jpg" data-plugin-options='{"type":"image"}'>
+											<span class="fa fa-plus fs-20"></span>
+										</a>
+
+										<!-- details -->
+										<a class="ico-rounded" href="portfolio-single-slider.html">
+											<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+										</a>
+
+									</span>
+								</span>
+
+								<img class="img-fluid" src="demo_files/images/mockups/800x553/4-min.jpg" width="800" height="553" alt="">
+							</figure>
+
+							<div class="item-box-desc">
+								<h3>Street Photography</h3>
+								<ul class="list-inline categories m-0">
+									<li><a href="#">Photography</a></li>
+									<li><a href="#">Design</a></li>
+								</ul>
+							</div>
+
+						</div>
+
+					</div><!-- /item -->
+
+
+					<div class="portfolio-item development"><!-- item -->
+
+						<div class="item-box">
+							<figure>
+								<span class="item-hover">
+									<span class="overlay dark-5"></span>
+									<span class="inner">
+
+										<!-- lightbox -->
+										<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/5-min.jpg" data-plugin-options='{"type":"image"}'>
+											<span class="fa fa-plus fs-20"></span>
+										</a>
+
+										<!-- details -->
+										<a class="ico-rounded" href="portfolio-single-slider.html">
+											<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+										</a>
+
+									</span>
+								</span>
+
+								<img class="img-fluid" src="demo_files/images/mockups/800x553/5-min.jpg" width="800" height="553" alt="">
+							</figure>
+
+							<div class="item-box-desc">
+								<h3>Street Photography</h3>
+								<ul class="list-inline categories m-0">
+									<li><a href="#">Photography</a></li>
+									<li><a href="#">Design</a></li>
+								</ul>
+							</div>
+
+						</div>
+
+					</div><!-- /item -->
+
+
+					<div class="portfolio-item photography"><!-- item -->
+
+						<div class="item-box">
+							<figure>
+								<span class="item-hover">
+									<span class="overlay dark-5"></span>
+									<span class="inner">
+
+										<!-- lightbox -->
+										<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/6-min.jpg" data-plugin-options='{"type":"image"}'>
+											<span class="fa fa-plus fs-20"></span>
+										</a>
+
+										<!-- details -->
+										<a class="ico-rounded" href="portfolio-single-slider.html">
+											<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+										</a>
+
+									</span>
+								</span>
+
+								<img class="img-fluid" src="demo_files/images/mockups/800x553/6-min.jpg" width="800" height="553" alt="">
+							</figure>
+
+							<div class="item-box-desc">
+								<h3>Street Photography</h3>
+								<ul class="list-inline categories m-0">
+									<li><a href="#">Photography</a></li>
+									<li><a href="#">Design</a></li>
+								</ul>
+							</div>
+
+						</div>
+
+					</div><!-- /item -->
+
+
+					<div class="portfolio-item design"><!-- item -->
+
+						<div class="item-box">
+							<figure>
+								<span class="item-hover">
+									<span class="overlay dark-5"></span>
+									<span class="inner">
+
+										<!-- lightbox -->
+										<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/7-min.jpg" data-plugin-options='{"type":"image"}'>
+											<span class="fa fa-plus fs-20"></span>
+										</a>
+
+										<!-- details -->
+										<a class="ico-rounded" href="portfolio-single-slider.html">
+											<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+										</a>
+
+									</span>
+								</span>
+
+								<img class="img-fluid" src="demo_files/images/mockups/800x553/7-min.jpg" width="800" height="553" alt="">
+							</figure>
+
+							<div class="item-box-desc">
+								<h3>Street Photography</h3>
+								<ul class="list-inline categories m-0">
+									<li><a href="#">Photography</a></li>
+									<li><a href="#">Design</a></li>
+								</ul>
+							</div>
+
+						</div>
+
+					</div><!-- /item -->
+
+
+					<div class="portfolio-item design"><!-- item -->
+
+						<div class="item-box">
+							<figure>
+								<span class="item-hover">
+									<span class="overlay dark-5"></span>
+									<span class="inner">
+
+										<!-- lightbox -->
+										<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/8-min.jpg" data-plugin-options='{"type":"image"}'>
+											<span class="fa fa-plus fs-20"></span>
+										</a>
+
+										<!-- details -->
+										<a class="ico-rounded" href="portfolio-single-slider.html">
+											<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+										</a>
+
+									</span>
+								</span>
+
+								<img class="img-fluid" src="demo_files/images/mockups/800x553/8-min.jpg" width="800" height="553" alt="">
+							</figure>
+
+							<div class="item-box-desc">
+								<h3>Street Photography</h3>
+								<ul class="list-inline categories m-0">
+									<li><a href="#">Photography</a></li>
+									<li><a href="#">Design</a></li>
+								</ul>
+							</div>
+
+						</div>
+
+					</div><!-- /item -->
+
+
+					<div class="portfolio-item development"><!-- item -->
+
+						<div class="item-box">
+							<figure>
+								<span class="item-hover">
+									<span class="overlay dark-5"></span>
+									<span class="inner">
+
+										<!-- lightbox -->
+										<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/9-min.jpg" data-plugin-options='{"type":"image"}'>
+											<span class="fa fa-plus fs-20"></span>
+										</a>
+
+										<!-- details -->
+										<a class="ico-rounded" href="portfolio-single-slider.html">
+											<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+										</a>
+
+									</span>
+								</span>
+
+								<img class="img-fluid" src="demo_files/images/mockups/800x553/9-min.jpg" width="800" height="553" alt="">
+							</figure>
+
+							<div class="item-box-desc">
+								<h3>Street Photography</h3>
+								<ul class="list-inline categories m-0">
+									<li><a href="#">Photography</a></li>
+									<li><a href="#">Design</a></li>
+								</ul>
+							</div>
+
+						</div>
+
+					</div><!-- /item -->
+
+				</div>
+			
+			</section>
+
+
+
+
+			<!-- CALLOUT -->
+			<div class="alert alert-transparent bordered-bottom m-0">
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-md-9 col-sm-12"><!-- left text -->
+							<h3>Call now at <span><strong>+800-565-2390</strong></span> and get 15% discount!</h3>
+							<p class="font-lato fw-300 fs-20 m-0-bottom">
+								We truly care about our users and our product.
+							</p>
+						</div><!-- /left text -->
+
+						
+						<div class="col-md-3 col-sm-12 text-right"><!-- right btn -->
+							<a href="page-contact-1.html" class="btn btn-primary btn-lg">CONTACT US</a>
+						</div><!-- /right btn -->
+
+					</div>
+
+				</div>
+			</div>
+			<!-- /CALLOUT -->
+
+
+
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
+
+					<div class="row">
+						
+						<div class="col-md-8">
+
+							<!-- Footer Logo -->
+							<img class="footer-logo footer-2" src="assets/images/_smarty/logo-footer.png" alt="" />
+
+							<!-- Small Description -->
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.</p>
+
+							<hr />
+
+							<div class="row">
+								<div class="col-md-6 col-sm-6">
+
+									<!-- Newsletter Form -->
+									<p class="mb-10">Subscribe to Our <strong>Newsletter</strong></p>
+
+									<form action="php/newsletter.php".box-shadow- method="post">
+										<div class="input-group">
+											<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+											<input type="email" id="email" name="email" class="form-control" placeholder="Enter your Email" required="required">
+											<span class="input-group-btn">
+												<button class="btn btn-success" type="submit">Subscribe</button>
+											</span>
+										</div>
+									</form>
+									<!-- /Newsletter Form -->
+								</div>
+
+								<div class="col-md-6 col-sm-6 hidden-xs-down">
+
+									<!-- Social Icons -->
+									<div class="ml-50 clearfix">
+
+										<p class="mb-10">Follow Us</p>
+										<a href="#" class="social-icon social-icon-sm social-icon-transparent social-facebook float-left" data-toggle="tooltip" data-placement="top" title="Facebook">
+											<i class="icon-facebook"></i>
+											<i class="icon-facebook"></i>
+										</a>
+
+										<a href="#" class="social-icon social-icon-sm social-icon-transparent social-twitter float-left" data-toggle="tooltip" data-placement="top" title="Twitter">
+											<i class="icon-twitter"></i>
+											<i class="icon-twitter"></i>
+										</a>
+
+										<a href="#" class="social-icon social-icon-sm social-icon-transparent social-gplus float-left" data-toggle="tooltip" data-placement="top" title="Google plus">
+											<i class="icon-gplus"></i>
+											<i class="icon-gplus"></i>
+										</a>
+
+										<a href="#" class="social-icon social-icon-sm social-icon-transparent social-linkedin float-left" data-toggle="tooltip" data-placement="top" title="Linkedin">
+											<i class="icon-linkedin"></i>
+											<i class="icon-linkedin"></i>
+										</a>
+
+										<a href="#" class="social-icon social-icon-sm social-icon-transparent social-rss float-left" data-toggle="tooltip" data-placement="top" title="Rss">
+											<i class="icon-rss"></i>
+											<i class="icon-rss"></i>
+										</a>
+
+									</div>
+									<!-- /Social Icons -->
+
+								</div>
+								
+							</div>
+
+						</div>
+
+						<div class="col-md-4">
+							<h4 class="letter-spacing-1">PHOTO GALLERY</h4>
+							
+							<a href="#">
+								<img src="demo_files/images/150x99/10-min.jpg" height="70" alt="" />
+							</a>
+							<a href="#">
+								<img src="demo_files/images/150x99/19-min.jpg" height="70" alt="" />
+							</a>
+							<a href="#">
+								<img src="demo_files/images/150x99/12-min.jpg" height="70" alt="" />
+							</a>
+							<a href="#">
+								<img src="demo_files/images/150x99/13-min.jpg" height="70" alt="" />
+							</a>
+							<a href="#">
+								<img src="demo_files/images/150x99/18-min.jpg" height="70" alt="" />
+							</a>
+							<a href="#">
+								<img src="demo_files/images/150x99/15-min.jpg" height="70" alt="" />
+							</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="copyright">
+					<div class="container">
+						<ul class="float-right m-0 list-inline mobile-block">
+							<li><a href="#">Terms & Conditions</a></li>
+							<li>&bull;</li>
+							<li><a href="#">Privacy</a></li>
+						</ul>
+						&copy; All Rights Reserved, Company LTD
+					</div>
+				</div>
+			</footer>			<!-- /FOOTER -->
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script>var plugin_path = 'assets/plugins/';</script>
+		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+		<script src="assets/js/scripts.js"></script>
+		
+		<!-- STYLESWITCHER - REMOVE -->
+		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+	</body>
+</html>

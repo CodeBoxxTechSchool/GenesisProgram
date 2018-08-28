@@ -1,0 +1,2242 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Smarty - Multipurpose + Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation">
+
+		<!-- SLIDE TOP -->
+		<div id="slidetop">
+
+			<div class="container">
+				
+				<div class="row">
+
+					<div class="col-md-4">
+						<h6><i class="icon-heart"></i> WHY SMARTY?</h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. </p>
+					</div>
+
+					<div class="col-md-4">
+						<h6><i class="fa-facheck"></i> RECENTLY VISITED</h6>
+						<ul class="list-unstyled">
+							<li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet</a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> This is a very long text, very very very very very very very very very very very very </a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet</a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> Dolor sit amet,consectetur adipiscing elit amet</a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet,consectetur adipiscing elit</a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-4">
+						<h6><i class="icon-envelope"></i> CONTACT INFO</h6>
+						<ul class="list-unstyled">
+							<li><b>Address:</b> PO Box 21132, Here Weare St, <br /> Melbourne, Vivas 2355 Australia</li>
+							<li><b>Phone:</b> 1-800-565-2390</li>
+							<li><b>Email:</b> <a href="mailto:support@yourname.com">support@yourname.com</a></li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+
+			<a class="slidetop-toggle" href="#"><!-- toggle button --></a>
+
+		</div>
+		<!-- /SLIDE TOP -->
+
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+			<div id="header" class="navbar-toggleable-md sticky clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- BUTTONS -->
+						<ul class="float-right nav nav-pills nav-second-main">
+
+							<!-- SEARCH -->
+							<li class="search">
+								<a href="javascript:;">
+									<i class="fa fa-search"></i>
+								</a>
+								<div class="search-box">
+									<form action="page-search-result-1.html" method="get">
+										<div class="input-group">
+											<input type="text" name="src" placeholder="Search" class="form-control" />
+											<span class="input-group-btn">
+												<button class="btn btn-primary" type="submit">Search</button>
+											</span>
+										</div>
+									</form>
+								</div> 
+							</li>
+							<!-- /SEARCH -->
+
+						</ul>
+						<!-- /BUTTONS -->
+
+						<!-- Logo -->
+						<a class="logo float-left" href="index.html">
+							<img src="assets/images/_smarty/logo_dark.png" alt="" />
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<nav class="nav-main">
+
+								<!--
+									NOTE
+									
+									For a regular link, remove "dropdown" class from LI tag and "dropdown-toggle" class from the href.
+									Direct Link Example: 
+
+									<li>
+										<a href="#">HOME</a>
+									</li>
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main">
+									<li class="dropdown"><!-- HOME -->
+										<a class="dropdown-toggle" href="#">
+											HOME
+										</a>
+										<ul class="dropdown-menu">
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													HOME CORPORATE
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="index-corporate-1.html">CORPORATE LAYOUT 1</a></li>
+													<li><a href="index-corporate-2.html">CORPORATE LAYOUT 2</a></li>
+													<li><a href="index-corporate-3.html">CORPORATE LAYOUT 3</a></li>
+													<li><a href="index-corporate-4.html">CORPORATE LAYOUT 4</a></li>
+													<li><a href="index-corporate-5.html">CORPORATE LAYOUT 5</a></li>
+													<li><a href="index-corporate-6.html">CORPORATE LAYOUT 6</a></li>
+													<li><a href="index-corporate-7.html">CORPORATE LAYOUT 7</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													HOME PORTFOLIO
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="index-portfolio-1.html">PORTFOLIO LAYOUT 1</a></li>
+													<li><a href="index-portfolio-2.html">PORTFOLIO LAYOUT 2</a></li>
+													<li><a href="index-portfolio-masonry.html">PORTFOLIO MASONRY</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													HOME BLOG
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="index-blog-1.html">BLOG LAYOUT 1</a></li>
+													<li><a href="index-blog-2.html">BLOG LAYOUT 2</a></li>
+													<li><a href="index-blog-3.html">BLOG LAYOUT 3</a></li>
+													<li><a href="index-blog-4.html">BLOG LAYOUT 4</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													HOME SHOP
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="index-shop-1.html">SHOP LAYOUT 1</a></li>
+													<li><a href="index-shop-2.html">SHOP LAYOUT 2</a></li>
+													<li><a href="index-shop-3.html">SHOP LAYOUT 3</a></li>
+													<li><a href="index-shop-4.html">SHOP LAYOUT 4</a></li>
+													<li><a href="index-shop-5.html">SHOP LAYOUT 5</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													HOME MAGAZINE
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="index-magazine-1.html">MAGAZINE LAYOUT 1</a></li>
+													<li><a href="index-magazine-2.html">MAGAZINE LAYOUT 2</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													HOME LANDING PAGE
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="index-landing-1.html">LANDING PAGE LAYOUT 1</a></li>
+													<li><a href="index-landing-2.html">LANDING PAGE LAYOUT 2</a></li>
+													<li><a href="index-landing-3.html">LANDING PAGE LAYOUT 3</a></li>
+													<li><a href="index-landing-4.html">LANDING PAGE LAYOUT 4</a></li>
+													<li><a href="index-landing-5.html">LANDING PAGE LAYOUT 5</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													HOME FULLSCREEN
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="index-fullscreen-revolution.html">FULLSCREEN - REVOLUTION</a></li>
+													<li><a href="index-fullscreen-youtube.html">FULLSCREEN - YOUTUBE</a></li>
+													<li><a href="index-fullscreen-local-video.html">FULLSCREEN - LOCAL VIDEO</a></li>
+													<li><a href="index-fullscreen-image.html">FULLSCREEN - IMAGE</a></li>
+													<li><a href="index-fullscreen-txt-rotator.html">FULLSCREEN - TEXT ROTATOR</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													HOME ONE PAGE
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="index-onepage-default.html">ONE PAGE - DEFAULT</a></li>
+													<li><a href="index-onepage-revolution.html">ONE PAGE - REVOLUTION</a></li>
+													<li><a href="index-onepage-image.html">ONE PAGE - IMAGE</a></li>
+													<li><a href="index-onepage-parallax.html">ONE PAGE - PARALLAX</a></li>
+													<li><a href="index-onepage-youtube.html">ONE PAGE - YOUTUBE</a></li>
+													<li><a href="index-onepage-text-rotator.html">ONE PAGE - TEXT ROTATOR</a></li>
+													<li><a href="start-onepage.html"><span class="badge badge-success float-right">new</span> 10+ MORE LAYOUTS</a></li>
+												</ul>
+											</li>
+											<li class="divider"></li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													HOME - THEMATICS <i class="fa fa-heart ml-10"></i>
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="index-thematics-restaurant.html">HOME - RESTAURANT</a></li>
+													<li><a href="index-thematics-education.html">HOME - EDUCATION</a></li>
+													<li><a href="index-thematics-construction.html">HOME - CONSTRUCTION</a></li>
+													<li><a href="index-thematics-medical.html">HOME - MEDICAL</a></li>
+													<li><a href="index-thematics-church.html">HOME - CHURCH</a></li>
+													<li><a href="index-thematics-fashion.html">HOME - FASHION</a></li>
+													<li><a href="index-thematics-wedding.html">HOME - WEDDING</a></li>
+													<li><a href="index-thematics-events.html">HOME - EVENTS</a></li>
+													<li><a href="index-thematics-hosting.html">HOME - HOSTING</a></li>
+													<li><a href="index-thematics-lawyer.html">HOME - LAWYER</a></li>
+												<li><a href="http://www.stepofweb.com/propose-design.html" data-toggle="tooltip" data-placement="top" title="Do you need a specific home design? We can include it in the next update!" target="_blank"><span class="badge badge-danger float-right">hot</span> PROPOSE THEMATIC</a></li>
+												</ul>
+											</li>
+											<li class="divider"></li>
+											<li><a href="start-revslider.html" data-toggle="tooltip" data-placement="top" title="57 More Revolution Slider V5"><span class="badge badge-danger float-right">new</span> 57 MORE LAYOUTS</a></li>
+											<li class="divider"></li>
+											<li><a href="index-simple-revolution.html">HOME SIMPLE - REVOLUTION</a></li>
+											<li><a href="index-simple-layerslider.html">HOME SIMPLE - LAYERSLIDER</a></li>
+											<li><a href="index-simple-parallax.html">HOME SIMPLE - PARALLAX</a></li>
+											<li><a href="index-simple-youtube.html">HOME SIMPLE - YOUTUBE</a></li>
+										</ul>
+									</li>
+									<li class="dropdown"><!-- PAGES -->
+										<a class="dropdown-toggle" href="#">
+											PAGES
+										</a>
+										<ul class="dropdown-menu">
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													MISCELLANEOUS
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="portfolio-single-project.html">PROJECT PAGE</a></li>
+													<li><a href="page-category.html">CATEGORY PAGE</a></li>
+													<li><a href="page-cookie-alert.html">COOKIE ALERT</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													ABOUT
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="page-about-us-1.html">ABOUT US - LAYOUT 1</a></li>
+													<li><a href="page-about-us-2.html">ABOUT US - LAYOUT 2</a></li>
+													<li><a href="page-about-us-3.html">ABOUT US - LAYOUT 3</a></li>
+													<li><a href="page-about-us-4.html">ABOUT US - LAYOUT 4</a></li>
+													<li><a href="page-about-us-5.html">ABOUT US - LAYOUT 5</a></li>
+													<li><a href="page-about-me-1.html">ABOUT ME - LAYOUT 1</a></li>
+													<li><a href="page-about-me-2.html">ABOUT ME - LAYOUT 2</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													TEAM
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="page-team-1.html">TEAM - LAYOUT 1</a></li>
+													<li><a href="page-team-2.html">TEAM - LAYOUT 2</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													SERVICES
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="page-services-1.html">SERVICES - LAYOUT 1</a></li>
+													<li><a href="page-services-2.html">SERVICES - LAYOUT 2</a></li>
+													<li><a href="page-services-3.html">SERVICES - LAYOUT 3</a></li>
+													<li><a href="page-services-4.html">SERVICES - LAYOUT 4</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													FAQ
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="page-faq-1.html">FAQ - LAYOUT 1</a></li>
+													<li><a href="page-faq-2.html">FAQ - LAYOUT 2</a></li>
+													<li><a href="page-faq-3.html">FAQ - LAYOUT 3</a></li>
+													<li><a href="page-faq-4.html">FAQ - LAYOUT 4</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													CONTACT
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="page-contact-1.html">CONTACT - LAYOUT 1</a></li>
+													<li><a href="page-contact-2.html">CONTACT - LAYOUT 2</a></li>
+													<li><a href="page-contact-3.html">CONTACT - LAYOUT 3</a></li>
+													<li><a href="page-contact-4.html">CONTACT - LAYOUT 4</a></li>
+													<li><a href="page-contact-5.html">CONTACT - LAYOUT 5</a></li>
+													<li><a href="page-contact-recaptcha.html">CONTACT - RECAPTCHA</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													ERROR
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="page-404-1.html">ERROR 404 - LAYOUT 1</a></li>
+													<li><a href="page-404-2.html">ERROR 404 - LAYOUT 2</a></li>
+													<li><a href="page-404-3.html">ERROR 404 - LAYOUT 3</a></li>
+													<li><a href="page-404-4.html">ERROR 404 - LAYOUT 4</a></li>
+													<li><a href="page-404-5.html">ERROR 404 - LAYOUT 5</a></li>
+													<li><a href="page-404-6.html">ERROR 404 - LAYOUT 6</a></li>
+													<li><a href="page-404-7.html">ERROR 404 - LAYOUT 7</a></li>
+													<li><a href="page-404-8.html">ERROR 404 - LAYOUT 8</a></li>
+													<li class="divider"></li>
+													<li><a href="page-500-1.html">ERROR 500 - LAYOUT 1</a></li>
+													<li><a href="page-500-2.html">ERROR 500 - LAYOUT 2</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													SIDEBAR
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="page-sidebar-left.html">SIDEBAR LEFT</a></li>
+													<li><a href="page-sidebar-right.html">SIDEBAR RIGHT</a></li>
+													<li><a href="page-sidebar-both.html">SIDEBAR BOTH</a></li>
+													<li><a href="page-sidebar-no.html">NO SIDEBAR</a></li>
+													<li class="divider"></li>
+													<li><a href="page-sidebar-dark-left.html">SIDEBAR LEFT - DARK</a></li>
+													<li><a href="page-sidebar-dark-right.html">SIDEBAR RIGHT - DARK</a></li>
+													<li><a href="page-sidebar-dark-both.html">SIDEBAR BOTH - DARK</a></li>
+													<li><a href="page-sidebar-dark-no.html">NO SIDEBAR - DARK</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													LOGIN/REGISTER
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="page-login-1.html">LOGIN - LAYOUT 1</a></li>
+													<li><a href="page-login-2.html">LOGIN - LAYOUT 2</a></li>
+													<li><a href="page-login-3.html">LOGIN - LAYOUT 3</a></li>
+													<li><a href="page-login-4.html">LOGIN - LAYOUT 4</a></li>
+													<li><a href="page-login-5.html">LOGIN - LAYOUT 5</a></li>
+													<li><a href="page-login-register-1.html">LOGIN + REGISTER 1</a></li>
+													<li><a href="page-login-register-2.html">LOGIN + REGISTER 2</a></li>
+													<li><a href="page-login-register-3.html">LOGIN + REGISTER 3</a></li>
+													<li><a href="page-register-1.html">REGISTER - LAYOUT 1</a></li>
+													<li><a href="page-register-2.html">REGISTER - LAYOUT 2</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													CLIENTS
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="page-clients-1.html">CLIENTS 1 - SIDEBAR RIGHT</a></li>
+													<li><a href="page-clients-2.html">CLIENTS 1 - SIDEBAR LEFT</a></li>
+													<li><a href="page-clients-3.html">CLIENTS 1 - FULLWIDTH</a></li>
+													<li class="divider"></li>
+													<li><a href="page-clients-4.html">CLIENTS 2 - SIDEBAR RIGHT</a></li>
+													<li><a href="page-clients-5.html">CLIENTS 2 - SIDEBAR LEFT</a></li>
+													<li><a href="page-clients-6.html">CLIENTS 2 - FULLWIDTH</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													SEARCH RESULT
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="page-search-result-1.html">LAYOUT 1 - LEFT SIDEBAR</a></li>
+													<li><a href="page-search-result-2.html">LAYOUT 1 - RIGHT SIDEBAR</a></li>
+													<li><a href="page-search-result-3.html">LAYOUT 1 - FULLWIDTH</a></li>
+													<li class="divider"></li>
+													<li><a href="page-search-result-4.html">LAYOUT 2 - LEFT SIDEBAR</a></li>
+													<li><a href="page-search-result-5.html">LAYOUT 2 - RIGHT SIDEBAR</a></li>
+													<li class="divider"></li>
+													<li><a href="page-search-result-6.html">LAYOUT 3 - TABLE SEARCH</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													PROFILE
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="page-profile.html">USER PROFILE</a></li>
+													<li><a href="page-profile-projects.html">USER PROJECTS</a></li>
+													<li><a href="page-profile-comments.html">USER COMMENTS</a></li>
+													<li><a href="page-profile-history.html">USER HISTORY</a></li>
+													<li><a href="page-profile-settings.html">USER SETTINGS</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													MAINTENANCE
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="page-maintenance-1.html">MAINTENANCE - LAYOUT 1</a></li>
+													<li><a href="page-maintenance-2.html">MAINTENANCE - LAYOUT 2</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													COMING SOON
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="page-coming-soon-1.html">COMING SOON - LAYOUT 1</a></li>
+													<li><a href="page-coming-soon-2.html">COMING SOON - LAYOUT 2</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													FORUM
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="page-forum-home.html">FORUM - HOME</a></li>
+													<li><a href="page-forum-topic.html">FORUM - TOPIC</a></li>
+													<li><a href="page-forum-post.html">FORUM - POST</a></li>
+												</ul>
+											</li>
+											<li><a href="page-careers.html">CAREERS</a></li>
+											<li><a href="page-sitemap.html">SITEMAP</a></li>
+											<li><a href="page-blank.html">BLANK PAGE</a></li>
+										</ul>
+									</li>
+									<li class="dropdown active"><!-- FEATURES -->
+										<a class="dropdown-toggle" href="#">
+											FEATURES
+										</a>
+										<ul class="dropdown-menu">
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													<i class="et-browser"></i> SLIDERS
+												</a>
+												<ul class="dropdown-menu">
+													<li>
+														<a class="dropdown-toggle" href="#">REVOLUTION SLIDER 4.x</a>
+														<ul class="dropdown-menu">
+															<li><a href="feature-slider-revolution-fullscreen.html">FULLSCREEN</a></li>
+															<li><a href="feature-slider-revolution-fullwidth.html">FULL WIDTH</a></li>
+															<li><a href="feature-slider-revolution-fixedwidth.html">FIXED WIDTH</a></li>
+															<li><a href="feature-slider-revolution-kenburns.html">KENBURNS EFFECT</a></li>
+															<li><a href="feature-slider-revolution-videobg.html">HTML5 VIDEO</a></li>
+															<li><a href="feature-slider-revolution-captions.html">CAPTIONS</a></li>
+															<li><a href="feature-slider-revolution-smthumb.html">THUMB SMALL</a></li>
+															<li><a href="feature-slider-revolution-lgthumb.html">THUMB LARGE</a></li>
+															<li class="divider"></li>
+															<li><a href="feature-slider-revolution-prev1.html">NAV PREVIEW 1</a></li>
+															<li><a href="feature-slider-revolution-prev2.html">NAV PREVIEW 2</a></li>
+															<li><a href="feature-slider-revolution-prev3.html">NAV PREVIEW 3</a></li>
+															<li><a href="feature-slider-revolution-prev4.html">NAV PREVIEW 4</a></li>
+															<li><a href="feature-slider-revolution-prev0.html">NAV THEME DEFAULT</a></li>
+														</ul>
+													</li>
+													<li>
+														<a class="dropdown-toggle" href="#">LAYER SLIDER</a>
+														<ul class="dropdown-menu">
+															<li><a href="feature-slider-layer-fullwidth.html">FULLWIDTH</a></li>
+															<li><a href="feature-slider-layer-fixed.html">FIXED WIDTH</a></li>
+															<li><a href="feature-slider-layer-captions.html">CAPTIONS</a></li>
+															<li><a href="feature-slider-layer-carousel.html">CAROUSEL</a></li>
+															<li><a href="feature-slider-layer-2d3d.html">2D &amp; 3D TRANSITIONS</a></li>
+															<li><a href="feature-slider-layer-thumb.html">THUMB NAV</a></li>
+															<li class="divider"></li>
+															<li><a href="start-layerslider.html"><span class="badge badge-success float-right">new</span> LAYER SLIDER 6</a></li>
+														</ul>
+													</li>
+													<li>
+														<a class="dropdown-toggle" href="#">FLEX SLIDER</a>
+														<ul class="dropdown-menu">
+															<li><a href="feature-slider-flexslider-fullwidth.html">FULL WIDTH</a></li>
+															<li><a href="feature-slider-flexslider-content.html">CONTENT</a></li>
+															<li><a href="feature-slider-flexslider-thumbs.html">WITH THUMBS</a></li>
+														</ul>
+													</li>
+													<li>
+														<a class="dropdown-toggle" href="#">OWL SLIDER</a>
+														<ul class="dropdown-menu">
+															<li><a href="feature-slider-owl-fullwidth.html">FULL WIDTH</a></li>
+															<li><a href="feature-slider-owl-fixed.html">FIXED WIDTH</a></li>
+															<li><a href="feature-slider-owl-fixed+progress.html">FIXED + PROGRESS</a></li>
+															<li><a href="feature-slider-owl-carousel.html">BASIC CAROUSEL</a></li>
+															<li><a href="feature-slider-owl-fade.html">EFFECT - FADE</a></li>
+															<li><a href="feature-slider-owl-backslide.html">EFFECT - BACKSLIDE</a></li>
+															<li><a href="feature-slider-owl-godown.html">EFFECT - GODOWN</a></li>
+															<li><a href="feature-slider-owl-fadeup.html">EFFECT - FADE UP</a></li>
+														</ul>
+													</li>
+													<li>
+														<a class="dropdown-toggle" href="#">SWIPE SLIDER</a>
+														<ul class="dropdown-menu">
+															<li><a href="feature-slider-swipe-full.html">FULLSCREEN</a></li>
+															<li><a href="feature-slider-swipe-fixed-height.html">FIXED HEIGHT</a></li>
+															<li><a href="feature-slider-swipe-autoplay.html">AUTOPLAY</a></li>
+															<li><a href="feature-slider-swipe-fade.html">FADE TRANSITION</a></li>
+															<li><a href="feature-slider-swipe-slide.html">SLIDE TRANSITION</a></li>
+															<li><a href="feature-slider-swipe-coverflow.html">COVERFLOW TRANSITION</a></li>
+															<li><a href="feature-slider-swipe-html5-video.html">HTML5 VIDEO</a></li>
+															<li><a href="feature-slider-swipe-3columns.html">3 COLUMNS</a></li>
+															<li><a href="feature-slider-swipe-4columns.html">4 COLUMNS</a></li>
+														</ul>
+													</li>
+													<li><a href="feature-slider-nivo.html">NIVO SLIDER</a></li>
+													<li><a href="feature-slider-camera.html">CAMERA SLIDER</a></li>
+													<li><a href="feature-slider-elastic.html">ELASTIC SLIDER</a></li>
+													<li><a href="feature-slider-backstretch.html">BACKSTRETCH SLIDER</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													<i class="et-hotairballoon"></i> HEADERS
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="feature-header-light.html">HEADER - LIGHT</a></li>
+													<li><a href="feature-header-dark.html">HEADER - DARK</a></li>
+													<li>
+														<a class="dropdown-toggle" href="#">HEADER - HEIGHT</a>
+														<ul class="dropdown-menu">
+														<li><a href="feature-header-large.html">LARGE (96px)</a></li>
+														<li><a href="feature-header-medium.html">MEDIUM (70px)</a></li>
+														<li><a href="feature-header-small.html">SMALL (60px)</a></li>
+														</ul>
+													</li>
+													<li>
+														<a class="dropdown-toggle" href="#">HEADER - SHADOW</a>
+														<ul class="dropdown-menu">
+															<li><a href="feature-header-shadow-after-1.html">SHADOW 1 - AFTER</a></li>
+															<li><a href="feature-header-shadow-before-1.html">SHADOW 1 - BEFORE</a></li>
+															<li class="divider"></li>
+															<li><a href="feature-header-shadow-after-2.html">SHADOW 2 - AFTER</a></li>
+															<li><a href="feature-header-shadow-before-2.html">SHADOW 2 - BEFORE</a></li>
+															<li class="divider"></li>
+															<li><a href="feature-header-shadow-after-3.html">SHADOW 3 - AFTER</a></li>
+															<li><a href="feature-header-shadow-before-3.html">SHADOW 3 - BEFORE</a></li>
+															<li class="divider"></li>
+															<li><a href="feature-header-shadow-dark-1.html">SHADOW - DARK PAGE EXAMPLE</a></li>
+														</ul>
+													</li>
+													<li><a href="feature-header-transparent.html">HEADER - TRANSPARENT</a></li>
+													<li><a href="feature-header-transparent-line.html">HEADER - TRANSP+LINE</a></li>
+													<li><a href="feature-header-translucent.html">HEADER - TRANSLUCENT</a></li>
+													<li>
+														<a class="dropdown-toggle" href="#">HEADER - BOTTOM</a>
+														<ul class="dropdown-menu">
+															<li><a href="feature-header-bottom-light.html">BOTTOM LIGHT</a></li>
+															<li><a href="feature-header-bottom-dark.html">BOTTOM DARK</a></li>
+															<li><a href="feature-header-bottom-transp.html">BOTTOM TRANSPARENT</a></li>
+														</ul>
+													</li>
+													<li>
+														<a class="dropdown-toggle" href="#">HEADER - LEFT SIDE</a>
+														<ul class="dropdown-menu">
+															<li><a href="feature-header-side-left-1.html">FIXED</a></li>
+															<li><a href="feature-header-side-left-2.html">OPEN ON CLICK</a></li>
+															<li><a href="feature-header-side-left-3.html">DARK</a></li>
+														</ul>
+													</li>
+													<li>
+														<a class="dropdown-toggle" href="#">HEADER - RIGHT SIDE</a>
+														<ul class="dropdown-menu">
+															<li><a href="feature-header-side-right-1.html">FIXED</a></li>
+															<li><a href="feature-header-side-right-2.html">OPEN ON CLICK</a></li>
+															<li><a href="feature-header-side-right-3.html">DARK</a></li>
+														</ul>
+													</li>													<li>
+														<a class="dropdown-toggle" href="#">HEADER - STATIC</a>
+														<ul class="dropdown-menu">
+															<li><a href="feature-header-static-top-light.html">STATIC TOP - LIGHT</a></li>
+															<li><a href="feature-header-static-top-dark.html">STATIC TOP - DARK</a></li>
+															<li class="divider"></li>
+															<li><a href="feature-header-static-bottom-light.html">STATIC BOTTOM - LIGHT</a></li>
+															<li><a href="feature-header-static-bottom-dark.html">STATIC BOTTOM - DARK</a></li>
+														</ul>
+													</li>
+													<li><a href="feature-header-centered.html">HEADER - NAV CENTERED</a></li>
+													<li><a href="feature-header-nosticky.html">HEADER - NO STICKY</a></li>
+													<li><a href="feature-header-scroll.html">HEADER - SCROLL APPEAR</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													<i class="et-anchor"></i> FOOTERS
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="feature-footer-1.html#footer">FOOTER - LAYOUT 1</a></li>
+													<li><a href="feature-footer-2.html#footer">FOOTER - LAYOUT 2</a></li>
+													<li><a href="feature-footer-3.html#footer">FOOTER - LAYOUT 3</a></li>
+													<li><a href="feature-footer-4.html#footer">FOOTER - LAYOUT 4</a></li>
+													<li><a href="feature-footer-5.html#footer">FOOTER - LAYOUT 5</a></li>
+													<li><a href="feature-footer-6.html#footer">FOOTER - LAYOUT 6</a></li>
+													<li><a href="feature-footer-7.html#footer">FOOTER - LAYOUT 7</a></li>
+													<li><a href="feature-footer-8.html#footer">FOOTER - LAYOUT 8 (light)</a></li>
+													<li><a href="feature-footer-0.html#footer">FOOTER - STICKY</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													<i class="et-circle-compass"></i> MENU STYLES
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="feature-menu-0.html">MENU - OVERLAY</a></li>
+													<li><a href="feature-menu-1.html">MENU - STYLE 1</a></li>
+													<li><a href="feature-menu-2.html">MENU - STYLE 2</a></li>
+													<li><a href="feature-menu-3.html">MENU - STYLE 3</a></li>
+													<li><a href="feature-menu-4.html">MENU - STYLE 4</a></li>
+													<li><a href="feature-menu-5.html">MENU - STYLE 5</a></li>
+													<li><a href="feature-menu-6.html">MENU - STYLE 6</a></li>
+													<li><a href="feature-menu-7.html">MENU - STYLE 7</a></li>
+													<li><a href="feature-menu-8.html">MENU - STYLE 8</a></li>
+													<li><a href="feature-menu-9.html">MENU - STYLE 9</a></li>
+													<li><a href="feature-menu-10.html">MENU - STYLE 10</a></li>
+													<li><a href="feature-menu-11.html">MENU - STYLE 11 (BULLET NAV)</a></li>
+													<li><a href="feature-menu-12.html">MENU - STYLE 12</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													<i class="et-genius"></i> MENU DROPDOWN
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="feature-menu-dd-light.html">DROPDOWN - LIGHT</a></li>
+													<li><a href="feature-menu-dd-dark.html">DROPDOWN - DARK</a></li>
+													<li><a href="feature-menu-dd-color.html">DROPDOWN - COLOR</a></li>
+													<li><a href="feature-menu-dd-effects.html">DROPDOWN - EFFECTS</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													<i class="et-beaker"></i> PAGE TITLES
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="feature-title-left.html">ALIGN LEFT</a></li>
+													<li><a href="feature-title-right.html">ALIGN RIGHT</a></li>
+													<li><a href="feature-title-center.html">ALIGN CENTER</a></li>
+													<li><a href="feature-title-light.html">LIGHT</a></li>
+													<li><a href="feature-title-dark.html">DARK</a></li>
+													<li><a href="feature-title-tabs.html">WITH TABS</a></li>
+													<li><a href="feature-title-breadcrumbs.html">BREADCRUMBS ONLY</a></li>
+													<li>
+														<a class="dropdown-toggle" href="#">PARALLAX</a>
+														<ul class="dropdown-menu">
+															<li><a href="feature-title-parallax-small.html">PARALLAX SMALL</a></li>
+															<li><a href="feature-title-parallax-medium.html">PARALLAX MEDIUM</a></li>
+															<li><a href="feature-title-parallax-large.html">PARALLAX LARGE</a></li>
+															<li><a href="feature-title-parallax-2xlarge.html">PARALLAX 2x LARGE</a></li>
+															<li><a href="feature-title-parallax-transp.html">TRANSPARENT HEADER</a></li>
+															<li><a href="feature-title-parallax-transp-large.html">TRANSPARENT HEADER - LARGE</a></li>
+														</ul>
+													</li>
+													<li><a href="feature-title-short-height.html">SHORT HEIGHT</a></li>
+													<li><a href="feature-title-rotative-text.html">ROTATIVE TEXT</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													<i class="et-layers"></i> PAGE SUBMENU
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="feature-page-submenu-light.html">PAGE SUBMENU - LIGHT</a></li>
+													<li><a href="feature-page-submenu-dark.html">PAGE SUBMENU - DARK</a></li>
+													<li><a href="feature-page-submenu-color.html">PAGE SUBMENU - COLOR</a></li>
+													<li><a href="feature-page-submenu-transparent.html">PAGE SUBMENU - TRANSPARENT</a></li>
+													<li><a href="feature-page-submenu-below-title.html">PAGE SUBMENU - BELOW PAGE TITLE</a></li>
+													<li><a href="feature-page-submenu-scrollto.html">PAGE SUBMENU - SCROLLTO</a></li>
+												</ul>
+											</li>
+											<li class="dropdown active">
+												<a class="dropdown-toggle" href="#">
+													<i class="et-trophy"></i> ICONS
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="feature-icons-fontawesome.html">FONTAWESOME</a></li>
+													<li><a href="feature-icons-glyphicons.html">GLYPHICONS</a></li>
+													<li><a href="feature-icons-etline.html">ET LINE</a></li>
+													<li><a href="shortcode-material-design-icons.html">MATERIAL ICONS</a></li>
+													<li class="active"><a href="feature-icons-flags.html">FLAGS</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													<i class="et-flag"></i> BACKGROUNDS
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="feature-content-bg-grey.html">CONTENT - SIMPLE GREY</a></li>
+													<li><a href="feature-content-bg-ggrey.html">CONTENT - GRAIN GREY</a></li>
+													<li><a href="feature-content-bg-gblue.html">CONTENT - GRAIN BLUE</a></li>
+													<li><a href="feature-content-bg-ggreen.html">CONTENT - GRAIN GREEN</a></li>
+													<li><a href="feature-content-bg-gorange.html">CONTENT - GRAIN ORANGE</a></li>
+													<li><a href="feature-content-bg-gyellow.html">CONTENT - GRAIN YELLOW</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													<i class="et-magnifying-glass"></i> SEARCH LAYOUTS
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="feature-search-default.html">SEARCH - DEFAULT</a></li>
+													<li><a href="feature-search-fullscreen-light.html">SEARCH - FULLSCREEN LIGHT</a></li>
+													<li><a href="feature-search-fullscreen-dark.html">SEARCH - FULLSCREEN DARK</a></li>
+													<li><a href="feature-search-header-light.html">SEARCH - HEADER LIGHT</a></li>
+													<li><a href="feature-search-header-dark.html">SEARCH - HEADER DARK</a></li>
+												</ul>
+											</li>
+											<li><a href="shortcode-animations.html"><i class="et-expand"></i> ANIMATIONS</a></li>
+											<li><a href="feature-grid.html"><i class="et-grid"></i> GRID</a></li>
+											<li><a href="feature-essentials.html"><i class="et-heart"></i> ESSENTIALS</a></li>
+											<li><a href="page-changelog.html"><i class="et-alarmclock"></i> CHANGELOG</a></li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													<i class="et-newspaper"></i> SIDE PANEL
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="feature-sidepanel-dark-right.html">SIDE card - DARK - RIGHT</a></li>
+													<li><a href="feature-sidepanel-dark-left.html">SIDE card - DARK - LEFT</a></li>
+													<li class="divider"></li>
+													<li><a href="feature-sidepanel-light-right.html">SIDE card - LIGHT - RIGHT</a></li>
+													<li><a href="feature-sidepanel-light-left.html">SIDE card - LIGHT - LEFT</a></li>
+													<li class="divider"></li>
+													<li><a href="feature-sidepanel-color-right.html">SIDE card - COLOR - RIGHT</a></li>
+													<li><a href="feature-sidepanel-color-left.html">SIDE card - COLOR - LEFT</a></li>
+												</ul>
+											</li>
+											<li><a target="_blank" href="../Admin/Admin_BS3/"><span class="badge badge-success float-right">BONUS</span><i class="et-gears"></i> ADMIN PANEL</a></li>
+										</ul>
+									</li>
+									<li class="dropdown mega-menu"><!-- PORTFOLIO -->
+										<a class="dropdown-toggle" href="#">
+											PORTFOLIO
+										</a>
+										<ul class="dropdown-menu">
+											<li>
+												<div class="row">
+
+													<div class="col-md-5th">
+														<ul class="list-unstyled">
+															<li><span>GRID</span></li>
+															<li><a href="portfolio-grid-1-columns.html">1 COLUMN</a></li>
+															<li><a href="portfolio-grid-2-columns.html">2 COLUMNS</a></li>
+															<li><a href="portfolio-grid-3-columns.html">3 COLUMNS</a></li>
+															<li><a href="portfolio-grid-4-columns.html">4 COLUMNS</a></li>
+															<li><a href="portfolio-grid-5-columns.html">5 COLUMNS</a></li>
+															<li><a href="portfolio-grid-6-columns.html">6 COLUMNS</a></li>
+														</ul>
+													</div>
+
+													<div class="col-md-5th">
+														<ul class="list-unstyled">
+															<li><span>MASONRY</span></li>
+															<li><a href="portfolio-masonry-2-columns.html">2 COLUMNS</a></li>
+															<li><a href="portfolio-masonry-3-columns.html">3 COLUMNS</a></li>
+															<li><a href="portfolio-masonry-4-columns.html">4 COLUMNS</a></li>
+															<li><a href="portfolio-masonry-5-columns.html">5 COLUMNS</a></li>
+															<li><a href="portfolio-masonry-6-columns.html">6 COLUMNS</a></li>
+															
+														</ul>
+													</div>
+
+													<div class="col-md-5th">
+														<ul class="list-unstyled">
+															<li><span>SINGLE</span></li>
+															<li><a href="portfolio-single-extended.html">EXTENDED ITEM</a></li>
+															<li><a href="portfolio-single-parallax.html">PARALLAX IMAGE</a></li>
+															<li><a href="portfolio-single-slider.html">SLIDER GALLERY</a></li>
+															<li><a href="portfolio-single-html5-video.html">HTML5 VIDEO</a></li>
+															<li><a href="portfolio-single-masonry-thumbs.html">MASONRY THUMBS</a></li>
+															<li><a href="portfolio-single-embed-video.html">EMBED VIDEO</a></li>
+															<li><a href="portfolio-single-project.html">SINGLE PROJECT</a></li>
+														</ul>
+													</div>
+
+													<div class="col-md-5th">
+														<ul class="list-unstyled">
+															<li><span>LAYOUT</span></li>
+															<li><a href="portfolio-layout-default.html">DEFAULT</a></li>
+															<li><a href="portfolio-layout-aside-left.html">LEFT SIDEBAR</a></li>
+															<li><a href="portfolio-layout-aside-right.html">RIGHT SIDEBAR</a></li>
+															<li><a href="portfolio-layout-aside-both.html">BOTH SIDEBAR</a></li>
+															<li><a href="portfolio-layout-fullwidth.html">FULL WIDTH (100%)</a></li>
+															<li><a href="portfolio-layout-tabfilter.html">TAB FILTER &amp; PAGINATION</a></li>
+
+														</ul>
+													</div>
+
+													<div class="col-md-5th">
+														<ul class="list-unstyled">
+															<li><span>LOADING</span></li>
+															<li><a href="portfolio-loading-pagination.html">PAGINATION</a></li>
+															<li><a href="portfolio-loading-jpagination.html">JQUERY PAGINATION</a></li>
+															<li><a href="portfolio-loading-infinite-scroll.html">INFINITE SCROLL</a></li>
+															<li><a href="portfolio-loading-ajax-page.html">AJAX IN PAGE</a></li>
+															<li><a href="portfolio-loading-ajax-modal.html">AJAX IN MODAL</a></li>
+														</ul>
+													</div>
+
+												</div>
+											</li>
+										</ul>
+									</li>
+									<li class="dropdown"><!-- BLOG and SHOP -->
+										<a class="dropdown-toggle" href="#">
+											BLOG &amp; SHOP
+										</a>
+										<ul class="dropdown-menu">
+
+											<!-- BLOG -->
+											<li>
+												<h4><i class="fa fa-cubes"></i> BLOG</h4>
+											</li>
+
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													DEFAULT
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="blog-default-aside-left.html">LEFT SIDEBAR</a></li>
+													<li><a href="blog-default-aside-right.html">RIGHT SIDEBAR</a></li>
+													<li><a href="blog-default-aside-both.html">BOTH SIDEBAR</a></li>
+													<li><a href="blog-default-fullwidth.html">FULL WIDTH</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													GRID
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="blog-column-2colums.html">2 COLUMNS</a></li>
+													<li><a href="blog-column-3colums.html">3 COLUMNS</a></li>
+													<li><a href="blog-column-4colums.html">4 COLUMNS</a></li>
+													<li class="divider"></li>
+													<li><a href="blog-column-aside-left.html">LEFT SIDEBAR</a></li>
+													<li><a href="blog-column-aside-right.html">RIGHT SIDEBAR</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													MASONRY
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="blog-masonry-2colums.html">2 COLUMNS</a></li>
+													<li><a href="blog-masonry-3colums.html">3 COLUMNS</a></li>
+													<li><a href="blog-masonry-4colums.html">4 COLUMNS</a></li>
+													<li><a href="blog-masonry-fullwidth.html">FULLWIDTH</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													TIMELINE
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="blog-timeline-aside-left.html">LEFT SIDEBAR</a></li>
+													<li><a href="blog-timeline-aside-right.html">RIGHT SIDEBAR</a></li>
+													<li><a href="blog-timeline-right-aside-right.html">RIGHT + TIMELINE RIGHT</a></li>
+													<li><a href="blog-timeline-right-aside-left.html">LEFT + TIMELINE RIGHT</a></li>
+													<li><a href="blog-timeline-fullwidth-left.html">FULL WIDTH - LEFT</a></li>
+													<li><a href="blog-timeline-fullwidth-right.html">FULL WIDTH - RIGHT</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													SMALL IMAGE
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="blog-smallimg-aside-left.html">LEFT SIDEBAR</a></li>
+													<li><a href="blog-smallimg-aside-right.html">RIGHT SIDEBAR</a></li>
+													<li><a href="blog-smallimg-aside-both.html">BOTH SIDEBAR</a></li>
+													<li><a href="blog-smallimg-fullwidth.html">FULL WIDTH</a></li>
+													<li class="divider"></li>
+													<li><a href="blog-smallimg-alternate-1.html">ALTERNATE 1</a></li>
+													<li><a href="blog-smallimg-alternate-2.html">ALTERNATE 2</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													SINGLE
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="blog-single-default.html">DEFAULT</a></li>
+													<li><a href="blog-single-aside-left.html">LEFT SIDEBAR</a></li>
+													<li><a href="blog-single-aside-right.html">RIGHT SIDEBAR</a></li>
+													<li><a href="blog-single-fullwidth.html">FULL WIDTH</a></li>
+													<li><a href="blog-single-small-image-left.html">SMALL IMAGE - LEFT</a></li>
+													<li><a href="blog-single-small-image-right.html">SMALL IMAGE - RIGHT</a></li>
+													<li><a href="blog-single-big-image.html">BIG IMAGE</a></li>
+													<li><a href="blog-single-fullwidth-image.html">FULLWIDTH IMAGE</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													COMMENTS
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="blog-comments-bordered.html#comments">BORDERED COMMENTS</a></li>
+													<li><a href="blog-comments-default.html#comments">DEFAULT COMMENTS</a></li>
+													<li><a href="blog-comments-facebook.html#comments">FACEBOOK COMMENTS</a></li>
+													<li><a href="blog-comments-disqus.html#comments">DISQUS COMMENTS</a></li>
+												</ul>
+											</li>
+
+
+											<!-- SHOP -->
+											<li>
+												<h4><i class="fa fa-opencart"></i> SHOP</h4>
+											</li>
+
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													1 COLUMN
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="shop-1col-left.html">LEFT SIDEBAR</a></li>
+													<li><a href="shop-1col-right.html">RIGHT SIDEBAR</a></li>
+													<li><a href="shop-1col-both.html">BOTH SIDEBAR</a></li>
+													<li><a href="shop-1col-full.html">FULL WIDTH</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													2 COLUMNS
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="shop-2col-left.html">LEFT SIDEBAR</a></li>
+													<li><a href="shop-2col-right.html">RIGHT SIDEBAR</a></li>
+													<li><a href="shop-2col-both.html">BOTH SIDEBAR</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													3 COLUMNS
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="shop-3col-left.html">LEFT SIDEBAR</a></li>
+													<li><a href="shop-3col-right.html">RIGHT SIDEBAR</a></li>
+													<li><a href="shop-3col-full.html">FULL WIDTH</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													4 COLUMNS
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="shop-4col-left.html">LEFT SIDEBAR</a></li>
+													<li><a href="shop-4col-right.html">RIGHT SIDEBAR</a></li>
+													<li><a href="shop-4col-full.html">FULL WIDTH</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#">
+													SINGLE PRODUCT
+												</a>
+												<ul class="dropdown-menu">
+													<li><a href="shop-single-left.html">LEFT SIDEBAR</a></li>
+													<li><a href="shop-single-right.html">RIGHT SIDEBAR</a></li>
+													<li><a href="shop-single-both.html">BOTH SIDEBAR</a></li>
+													<li><a href="shop-single-full.html">FULL WIDTH</a></li>
+												</ul>
+											</li>
+											<li><a href="shop-compare.html">COMPARE</a></li>
+											<li><a href="shop-cart.html">CART</a></li>
+											<li><a href="shop-checkout.html">CHECKOUT</a></li>
+											<li><a href="shop-checkout-final.html">ORDER PLACED</a></li>
+
+										</ul>
+									</li>
+									<li class="dropdown mega-menu"><!-- SHORTCODES -->
+										<a class="dropdown-toggle" href="#">
+											SHORTCODES
+										</a>
+										<ul class="dropdown-menu">
+											<li>
+												<div class="row">
+
+													<div class="col-md-5th">
+														<ul class="list-unstyled">
+															<li><a href="shortcode-animations.html">ANIMATIONS</a></li>
+															<li><a href="shortcode-buttons.html">BUTTONS</a></li>
+															<li><a href="shortcode-carousel.html">CAROUSEL</a></li>
+															<li><a href="shortcode-charts.html">GRAPHS</a></li>
+															<li><a href="shortcode-clients.html">CLIENTS</a></li>
+															<li><a href="shortcode-columns.html">GRID &amp; COLUMNS</a></li>
+															<li><a href="shortcode-counters.html">COUNTERS</a></li>
+															<li><a href="shortcode-forms.html">FORM ELEMENTS</a></li>
+														</ul>
+													</div>
+
+													<div class="col-md-5th">
+														<ul class="list-unstyled">
+															<li><a href="shortcode-dividers.html">DIVIDERS</a></li>
+															<li><a href="shortcode-icon-boxes.html">BOXES &amp; ICONS</a></li>
+															<li><a href="shortcode-galleries.html">GALLERIES</a></li>
+															<li><a href="shortcode-headings.html">HEADING STYLES</a></li>
+															<li><a href="shortcode-icon-lists.html">ICON LISTS</a></li>
+															<li><a href="shortcode-labels.html">LABELS &amp; BADGES</a></li>
+															<li><a href="shortcode-lightbox.html">LIGHTBOX</a></li>
+															<li><a href="shortcode-forms-editors.html">HTML EDITORS</a></li>
+														</ul>
+													</div>
+
+													<div class="col-md-5th">
+														<ul class="list-unstyled">
+															<li><a href="shortcode-cards.html">Cards</a></li>
+															<li><a href="shortcode-maps.html"><span class="badge badge-success float-right">new</span> MAPS</a></li>
+															<li><a href="shortcode-media-embeds.html">MEDIA EMBEDS</a></li>
+															<li><a href="shortcode-modals.html">MODAL / POPOVER / NOTIF</a></li>
+															<li><a href="shortcode-navigations.html">NAVIGATIONS</a></li>
+															<li><a href="shortcode-paginations.html">PAGINATIONS</a></li>
+															<li><a href="shortcode-progress-bar.html">PROGRESS BARS</a></li>
+															<li><a href="shortcode-widgets.html">WIDGETS</a></li>
+														</ul>
+													</div>
+
+													<div class="col-md-5th">
+														<ul class="list-unstyled">
+															<li><a href="shortcode-pricing.html">PRICING BOXES</a></li>
+															<li><a href="shortcode-process-steps.html">PROCESS STEPS</a></li>
+															<li><a href="shortcode-callouts.html">CALLOUTS</a></li>
+															<li><a href="shortcode-info-bars.html">INFO BARS</a></li>
+															<li><a href="shortcode-blockquotes.html">BLOCKQUOTES</a></li>
+															<li><a href="shortcode-responsive.html">RESPONSIVE</a></li>
+															<li><a href="shortcode-sections.html">SECTIONS</a></li>
+															<li><a href="shortcode-social-icons.html">SOCIAL ICONS</a></li>
+														</ul>
+													</div>
+
+													<div class="col-md-5th">
+														<ul class="list-unstyled">
+															<li><a href="shortcode-alerts.html">ALERTS</a></li>
+															<li><a href="shortcode-styled-icons.html">STYLED ICONS</a></li>
+															<li><a href="shortcode-tables.html">TABLES</a></li>
+															<li><a href="shortcode-tabs.html">TABS</a></li>
+															<li><a href="shortcode-testimonials.html">TESTIMONIALS</a></li>
+															<li><a href="shortcode-thumbnails.html">THUMBNAILS</a></li>
+															<li><a href="shortcode-toggles.html">TOGGLES</a></li>
+															<li><a href="shortcode-material-design-badges.html"><span class="badge badge-danger float-right">new</span> <b>MATERIAL DESIGN</b></a></li>
+														</ul>
+													</div>
+
+												</div>
+											</li>
+										</ul>
+									</li>
+
+
+
+									<!-- 
+										MENU ANIMATIONS
+											.nav-animate-fadeIn
+											.nav-animate-fadeInUp
+											.nav-animate-bounceIn
+											.nav-animate-bounceInUp
+											.nav-animate-flipInX
+											.nav-animate-flipInY
+											.nav-animate-zoomIn
+											.nav-animate-slideInUp
+
+											.nav-hover-animate 		= animate text on hover
+
+											.hover-animate-bounceIn = bounceIn effect on mouse over of main menu
+									-->
+									<li class="dropdown mega-menu nav-animate-fadeIn nav-hover-animate hover-animate-bounceIn"><!-- THEMATIC -->
+										<a class="dropdown-toggle noicon" href="#">
+											<span class="badge badge-danger float-right fs-11">v2</span>
+											<b>NEW</b>
+										</a>
+										<ul class="dropdown-menu dropdown-menu-clean">
+											<li>
+												<div class="row">
+
+													<div class="col-md-5th">
+														<ul class="list-unstyled">
+															<li><span>PACKS : READY TO USE</span></li>
+															<li class="divider"></li>
+															<li>
+																<span class="fs-11 mt-0 pb-15 pt-15 text-info">NEW AND HOT: COMPLETE PACKAGES READY TO USE</span>
+															</li>
+															<li class="divider"></li>
+															<li><a target="_blank" href="pack-realestate-home-1.html">REAL ESTATE</a></li>
+															<li><a target="_blank" href="pack-megashop-home-1.html">MEGA SHOP</a></li>
+															<li><a target="_blank" href="pack-hotel-home-1.html">HOTEL v1</a></li>
+															<li><a target="_blank" href="pack-hotel-v2-home-1.html">HOTEL v2</a></li>
+															<li><a target="_blank" href="pack-photography-home-1.html">PHOTOGRAPHY / PORTFOLIO</a></li>
+															<li><a target="_blank" href="pack-caffe-home-1.html">CAFFE</a></li>
+															<li><a target="_blank" href="pack-caffe-onepage.html">CAFFE - ONEPAGE</a></li>
+														</ul>
+													</div>
+
+													<div class="col-md-5th">
+														<ul class="list-unstyled">
+															<li><span>NEW PAGES</span></li>
+															<li><a target="_blank" href="portfolio-single-project.html">PORTFOLIO SINGLE</a></li>
+															<li><a target="_blank" href="page-cookie-alert.html">COOKIE ALERT</a></li>
+															<li><a target="_blank" href="page-category.html">CATEGORY PAGE</a></li>
+
+															<li><span>IMPROVED</span></li>
+															<li><a target="_blank" href="index-thematics-hosting.html">HOMEPAGE : <b>HOSTING</b></a></li>
+															<li><a target="_blank" href="index-thematics-restaurant.html">HOMEPAGE : <b>RESTAURANT</b></a></li>
+															<li><a target="_blank" href="index-thematics-lawyer.html">HOMEPAGE : <b>LAWYER</b></a></li>
+															<li><a target="_blank" href="index-thematics-fashion.html">HOMEPAGE : <b>FASHION</b></a></li>
+														</ul>
+													</div>
+
+													<div class="col-md-5th">
+														<ul class="list-unstyled">
+															<li><span>NEW COMPONENTS</span></li>
+															<li><a target="_blank" href="shortcode-material-design-badges.html">MATERIAL DESIGN LITE</a></li>
+
+															<li><span>NEW FEATURES</span></li>
+															<li><a target="_blank" href="feature-menu-12.html">NEW HEADER/MENU</a></li>
+															<li><a target="_blank" href="feature-menu-dd-effects.html">MENU DROPDOWN EFFECTS</a></li>
+															<li><a target="_blank" href="shortcode-carousel-2.html">OWL CAROUSEL 2</a></li>
+															<li><a target="_blank" href="shortcode-thumbnails.html">IMAGE HOVER/STYLES</a></li>
+														</ul>
+													</div>
+
+													<div class="col-md-6 hidden-sm text-center">
+														<div class="p-15 block">
+															<img class="img-fluid" src="demo_files/images/new_menu.png" alt="" />
+														</div>
+														<p class="menu-caption hidden-xs-down text-muted text-center">
+															THE MOST COMPLETE HTML TEMPLATE
+														</p>
+													</div>
+
+												</div>
+											</li>
+										</ul>
+									</li>
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+
+			<!-- 
+				PAGE HEADER 
+				
+				CLASSES:
+					.page-header-xs	= 20px margins
+					.page-header-md	= 50px margins
+					.page-header-lg	= 80px margins
+					.page-header-xlg= 130px margins
+					.dark			= dark page header
+
+					.shadow-before-1 	= shadow 1 header top
+					.shadow-after-1 	= shadow 1 header bottom
+					.shadow-before-2 	= shadow 2 header top
+					.shadow-after-2 	= shadow 2 header bottom
+					.shadow-before-3 	= shadow 3 header top
+					.shadow-after-3 	= shadow 3 header bottom
+			-->
+			<section class="page-header">
+				<div class="container">
+
+					<h1>FLAGS</h1>
+
+					<!-- breadcrumbs -->
+					<ol class="breadcrumb">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Features</a></li>
+						<li class="active">Flags</li>
+					</ol><!-- /breadcrumbs -->
+
+				</div>
+			</section>
+			<!-- /PAGE HEADER -->
+
+
+
+
+			<!-- -->
+			<section>
+				<div class="container iconFlags">
+					
+				<!-- inline search -->
+				<div class="bg-light p-15 b-0">
+					<input class="form-control" type="text" id="inline-search" placeholder="Icon search...">
+				</div>
+				<!-- /inline search -->
+
+				<h4 class="page-header">America</h4>		
+				<div class="row">
+					
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ai.png" alt="Anguilla"> Anguilla
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ag.png" alt="Antigua and Barbuda"> Antigua and Barbuda
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ar.png" alt="Argentina"> Argentina
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/aw.png" alt="Aruba"> Aruba
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/bs.png" alt="Bahamas"> Bahamas
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/bb.png" alt="Barbados"> Barbados
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/bz.png" alt="Belize"> Belize
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/bm.png" alt="Bermuda"> Bermuda
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/bo.png" alt="Bolivia, Plurinational State of"> Bolivia, Plurinational State of
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/br.png" alt="Brazil"> Brazil
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ca.png" alt="Canada"> Canada
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ky.png" alt="Cayman Islands"> Cayman Islands
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/cl.png" alt="Chile"> Chile
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/co.png" alt="Colombia"> Colombia
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/cr.png" alt="Costa Rica"> Costa Rica
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/cu.png" alt="Cuba"> Cuba
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/dm.png" alt="Dominica"> Dominica
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/do.png" alt="Dominican Republic"> Dominican Republic
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ec.png" alt="Ecuador"> Ecuador
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/sv.png" alt="El Salvador"> El Salvador
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/fk.png" alt="Falkland Islands (Malvinas)"> Falkland Islands (Malvinas)
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/gf.png" alt="French Guiana"> French Guiana
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/gl.png" alt="Greenland"> Greenland
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/gd.png" alt="Grenada"> Grenada
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/gp.png" alt="Guadeloupe"> Guadeloupe
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/gt.png" alt="Guatemala"> Guatemala
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/gy.png" alt="Guyana"> Guyana
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ht.png" alt="Haiti"> Haiti
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/hn.png" alt="Honduras"> Honduras
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/jm.png" alt="Jamaica"> Jamaica
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/mq.png" alt="Martinique"> Martinique
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/mx.png" alt="Mexico"> Mexico
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ms.png" alt="Montserrat"> Montserrat
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/an.png" alt="Netherlands Antilles"> Netherlands Antilles
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ni.png" alt="Nicaragua"> Nicaragua
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/pa.png" alt="Panama"> Panama
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/py.png" alt="Paraguay"> Paraguay
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/pe.png" alt="Peru"> Peru
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/pr.png" alt="Puerto Rico"> Puerto Rico
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/kn.png" alt="Saint Kitts and Nevis"> Saint Kitts and Nevis
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/lc.png" alt="Saint Lucia"> Saint Lucia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/pm.png" alt="Saint Pierre and Miquelon"> Saint Pierre and Miquelon
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/vc.png" alt="Saint Vincent and the Grenadines"> Saint Vincent and the Grenadines
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/sr.png" alt="Suriname"> Suriname
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/tt.png" alt="Trinidad and Tobago"> Trinidad and Tobago
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/tc.png" alt="Turks and Caicos Islands"> Turks and Caicos Islands
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/us.png" alt="United States"> United States
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/uy.png" alt="Uruguay"> Uruguay
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ve.png" alt="Venezuela, Bolivarian Republic of"> Venezuela, Bolivarian Republic of
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/vg.png" alt="Virgin Islands, British"> Virgin Islands, British
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/vi.png" alt="Virgin Islands, U.S."> Virgin Islands, U.S.
+					</div>
+				</div>
+
+				<h4 class="page-header">Europe</h4>
+				<div class="row">
+					
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/al.png" alt="Albania"> Albania
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ad.png" alt="Andorra"> Andorra
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/at.png" alt="Austria"> Austria
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/by.png" alt="Belarus"> Belarus
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/be.png" alt="Belgium"> Belgium
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ba.png" alt="Bosnia and Herzegovina"> Bosnia and Herzegovina
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/bg.png" alt="Bulgaria"> Bulgaria
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/hr.png" alt="Croatia"> Croatia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/cz.png" alt="Czech Republic"> Czech Republic
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/dk.png" alt="Denmark"> Denmark
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ee.png" alt="Estonia"> Estonia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/fo.png" alt="Faroe Islands"> Faroe Islands
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/fi.png" alt="Finland"> Finland
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/fr.png" alt="France"> France
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/de.png" alt="Germany"> Germany
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/gi.png" alt="Gibraltar"> Gibraltar
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/gr.png" alt="Greece"> Greece
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/va.png" alt="Holy See (Vatican City State)"> Holy See (Vatican City State)
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/hu.png" alt="Hungary"> Hungary
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/is.png" alt="Iceland"> Iceland
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ie.png" alt="Ireland"> Ireland
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/it.png" alt="Italy"> Italy
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/lv.png" alt="Latvia"> Latvia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/li.png" alt="Liechtenstein"> Liechtenstein
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/lt.png" alt="Lithuania"> Lithuania
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/lu.png" alt="Luxembourg"> Luxembourg
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/mk.png" alt="Macedonia, The Former Yugoslav Republic of"> Macedonia, The Former Yugoslav Republic of
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/mt.png" alt="Malta"> Malta
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/md.png" alt="Moldova, Republic of"> Moldova, Republic of
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/mc.png" alt="Monaco"> Monaco
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/me.png" alt="Montenegro"> Montenegro
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/nl.png" alt="Netherlands"> Netherlands
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/no.png" alt="Norway"> Norway
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/pl.png" alt="Poland"> Poland
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/pt.png" alt="Portugal"> Portugal
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ro.png" alt="Romania"> Romania
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ru.png" alt="Russian Federation"> Russian Federation
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/sm.png" alt="San Marino"> San Marino
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/rs.png" alt="Serbia"> Serbia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/sk.png" alt="Slovakia"> Slovakia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/si.png" alt="Slovenia"> Slovenia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/es.png" alt="Spain"> Spain
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/se.png" alt="Sweden"> Sweden
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ch.png" alt="Switzerland"> Switzerland
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ua.png" alt="Ukraine"> Ukraine
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/gb.png" alt="United Kingdom"> United Kingdom
+					</div>
+				</div>
+
+				<h4 class="page-header">Asia</h4>
+				<div class="row">
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/af.png" alt="Afghanistan"> Afghanistan
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/am.png" alt="Armenia"> Armenia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/az.png" alt="Azerbaijan"> Azerbaijan
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/bh.png" alt="Bahrain"> Bahrain
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/bd.png" alt="Bangladesh"> Bangladesh
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/bt.png" alt="Bhutan"> Bhutan
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/bn.png" alt="Brunei Darussalam"> Brunei Darussalam
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/kh.png" alt="Cambodia"> Cambodia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/cn.png" alt="China"> China
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/cy.png" alt="Cyprus"> Cyprus
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ge.png" alt="Georgia"> Georgia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/hk.png" alt="Hong Kong"> Hong Kong
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/in.png" alt="India"> India
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/id.png" alt="Indonesia"> Indonesia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ir.png" alt="Iran, Islamic Republic of"> Iran, Islamic Republic of
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/iq.png" alt="Iraq"> Iraq
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/il.png" alt="Israel"> Israel
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/jp.png" alt="Japan"> Japan
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/jo.png" alt="Jordan"> Jordan
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/kz.png" alt="Kazakhstan"> Kazakhstan
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/kp.png" alt="Korea, Democratic People's Republic of"> Korea, Democratic People's Republic of
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/kr.png" alt="Korea, Republic of"> Korea, Republic of
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/kw.png" alt="Kuwait"> Kuwait
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/kg.png" alt="Kyrgyzstan"> Kyrgyzstan
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/la.png" alt="Lao People's Democratic Republic"> Lao People's Democratic Republic
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/lb.png" alt="Lebanon"> Lebanon
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/mo.png" alt="Macao"> Macao
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/my.png" alt="Malaysia"> Malaysia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/mv.png" alt="Maldives"> Maldives
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/mn.png" alt="Mongolia"> Mongolia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/mm.png" alt="Myanmar"> Myanmar
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/np.png" alt="Nepal"> Nepal
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/om.png" alt="Oman"> Oman
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/pk.png" alt="Pakistan"> Pakistan
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ps.png" alt="Palestinian Territory, Occupied"> Palestinian Territory, Occupied
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ph.png" alt="Philippines"> Philippines
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/qa.png" alt="Qatar"> Qatar
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/sa.png" alt="Saudi Arabia"> Saudi Arabia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/sg.png" alt="Singapore"> Singapore
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/lk.png" alt="Sri Lanka"> Sri Lanka
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/sy.png" alt="Syrian Arab Republic"> Syrian Arab Republic
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/tw.png" alt="Taiwan, Province of China"> Taiwan, Province of China
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/tj.png" alt="Tajikistan"> Tajikistan
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/th.png" alt="Thailand"> Thailand
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/tl.png" alt="Timor-Leste"> Timor-Leste
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/tr.png" alt="Turkey"> Turkey
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/tm.png" alt="Turkmenistan"> Turkmenistan
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ae.png" alt="United Arab Emirates"> United Arab Emirates
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/uz.png" alt="Uzbekistan"> Uzbekistan
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/vn.png" alt="Viet Nam"> Viet Nam
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ye.png" alt="Yemen"> Yemen
+					</div>
+				</div>
+
+				<h4 class="page-header">Australia and Oceania</h4>
+				<div class="row">
+					
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/as.png" alt="American Samoa"> American Samoa
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/au.png" alt="Australia"> Australia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ck.png" alt="Cook Islands"> Cook Islands
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/fj.png" alt="Fiji"> Fiji
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/pf.png" alt="French Polynesia"> French Polynesia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/gu.png" alt="Guam"> Guam
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ki.png" alt="Kiribati"> Kiribati
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/mh.png" alt="Marshall Islands"> Marshall Islands
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/fm.png" alt="Micronesia, Federated States of"> Micronesia, Federated States of
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/nr.png" alt="Nauru"> Nauru
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/nc.png" alt="New Caledonia"> New Caledonia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/nz.png" alt="New Zealand"> New Zealand
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/nu.png" alt="Niue"> Niue
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/nf.png" alt="Norfolk Island"> Norfolk Island
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/mp.png" alt="Northern Mariana Islands"> Northern Mariana Islands
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/pw.png" alt="Palau"> Palau
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/pg.png" alt="Papua New Guinea"> Papua New Guinea
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/pn.png" alt="Pitcairn"> Pitcairn
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ws.png" alt="Samoa"> Samoa
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/sb.png" alt="Solomon Islands"> Solomon Islands
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/tk.png" alt="Tokelau"> Tokelau
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/to.png" alt="Tonga"> Tonga
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/tv.png" alt="Tuvalu"> Tuvalu
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/vu.png" alt="Vanuatu"> Vanuatu
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/wf.png" alt="Wallis and Futuna"> Wallis and Futuna
+					</div>
+					
+				</div>
+
+				<h4 class="page-header">Africa</h4>
+				<div class="row">
+
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/dz.png" alt="Algeria"> Algeria
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ao.png" alt="Angola"> Angola
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/bj.png" alt="Benin"> Benin
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/bw.png" alt="Botswana"> Botswana
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/bf.png" alt="Burkina Faso"> Burkina Faso
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/bi.png" alt="Burundi"> Burundi
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/cm.png" alt="Cameroon"> Cameroon
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/cv.png" alt="Cape Verde"> Cape Verde
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/cf.png" alt="Central African Republic"> Central African Republic
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/td.png" alt="Chad"> Chad
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/km.png" alt="Comoros"> Comoros
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/cg.png" alt="Congo"> Congo
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/cd.png" alt="Congo, The Democratic Republic of the"> Congo, The Democratic Republic of the
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ci.png" alt="Côte d'Ivoire"> Côte d'Ivoire
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/dj.png" alt="Djibouti"> Djibouti
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/eg.png" alt="Egypt"> Egypt
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/gq.png" alt="Equatorial Guinea"> Equatorial Guinea
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/er.png" alt="Eritrea"> Eritrea
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/et.png" alt="Ethiopia"> Ethiopia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ga.png" alt="Gabon"> Gabon
+					</div>			
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/gm.png" alt="Gambia"> Gambia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/gh.png" alt="Ghana"> Ghana
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/gn.png" alt="Guinea"> Guinea
+					</div>			
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/gw.png" alt="Guinea-Bissau"> Guinea-Bissau
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ke.png" alt="Kenya"> Kenya
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ls.png" alt="Lesotho"> Lesotho
+					</div>			
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/lr.png" alt="Liberia"> Liberia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ly.png" alt="Libya"> Libya
+					</div>				
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/mg.png" alt="Madagascar"> Madagascar
+					</div>			
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/mw.png" alt="Malawi"> Malawi
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ml.png" alt="Mali"> Mali
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/mr.png" alt="Mauritania"> Mauritania
+					</div>			
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/mu.png" alt="Mauritius"> Mauritius
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/yt.png" alt="Mayotte"> Mayotte
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ma.png" alt="Morocco"> Morocco
+					</div>			
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/mz.png" alt="Mozambique"> Mozambique
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/na.png" alt="Namibia"> Namibia
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ne.png" alt="Niger"> Niger
+					</div>			
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ng.png" alt="Nigeria"> Nigeria
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/rw.png" alt="Rwanda"> Rwanda
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/re.png" alt="Réunion"> Réunion
+					</div>			
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/sh.png" alt="Saint Helena"> Saint Helena
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/st.png" alt="Sao Tome and Principe"> Sao Tome and Principe
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/sn.png" alt="Senegal"> Senegal
+					</div>			
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/sc.png" alt="Seychelles"> Seychelles
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/sl.png" alt="Sierra Leone"> Sierra Leone
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/so.png" alt="Somalia"> Somalia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/za.png" alt="South Africa"> South Africa
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/sd.png" alt="Sudan"> Sudan
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/sz.png" alt="Swaziland"> Swaziland
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/tz.png" alt="Tanzania"> Tanzania
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/tg.png" alt="Togo"> Togo
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/tn.png" alt="Tunisia"> Tunisia
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/ug.png" alt="Uganda"> Uganda
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/eh.png" alt="Western Sahara"> Western Sahara
+					</div>	
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/zm.png" alt="Zambia"> Zambia
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/zw.png" alt="Zimbabwe"> Zimbabwe
+					</div>	
+				</div>
+
+
+				<h4 class="page-header">Other areas</h4>
+				<div class="row">
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/bv.png" alt="Bouvet Island"> Bouvet Island
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/io.png" alt="British Indian Ocean Territory"> British Indian Ocean Territory
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/england.png" alt="England"> England
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/europeanunion.png" alt="European Union"> European Union
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/tf.png" alt="French Southern Territories"> French Southern Territories
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/hm.png" alt="Heard Island and McDonald Islands"> Heard Island and McDonald Islands
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/scotland.png" alt="Scotland"> Scotland
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/gs.png" alt="South Georgia and the South Sandwich Islands"> South Georgia and the South Sandwich Islands
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/um.png" alt="United States Minor Outlying Islands"> United States Minor Outlying Islands
+					</div>
+					<div class="col-6 col-md-3 col-sm-4 flag-icon">
+						<img src="assets/images/_smarty/flags/wales.png" alt="Wales"> Wales
+					</div>
+					
+				</div>
+
+				<hr />
+
+<pre>
+Usage:
+&#60;img src="assets/images/_smarty/flags/us.png" alt="United States" /&#62;
+
+Output:  <img src="assets/images/_smarty/flags/us.png" alt="United States" />
+
+Note: Click the icon to copy the image name
+</pre>
+
+				</div>
+			</section>
+			<!-- / -->
+
+
+
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
+
+					<div class="row">
+						
+						<div class="col-md-3">
+							<!-- Footer Logo -->
+							<img class="footer-logo" src="assets/images/_smarty/logo-footer.png" alt="" />
+
+							<!-- Small Description -->
+							<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+
+							<!-- Contact Address -->
+							<address>
+								<ul class="list-unstyled">
+									<li class="footer-sprite address">
+										PO Box 21132<br>
+										Here Weare St, Melbourne<br>
+										Vivas 2355 Australia<br>
+									</li>
+									<li class="footer-sprite phone">
+										Phone: 1-800-565-2390
+									</li>
+									<li class="footer-sprite email">
+										<a href="mailto:support@yourname.com">support@yourname.com</a>
+									</li>
+								</ul>
+							</address>
+							<!-- /Contact Address -->
+
+						</div>
+
+						<div class="col-md-3">
+
+							<!-- Latest Blog Post -->
+							<h4 class="letter-spacing-1">LATEST NEWS</h4>
+							<ul class="footer-posts list-unstyled">
+								<li>
+									<a href="#">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue</a>
+									<small>29 June 2017</small>
+								</li>
+								<li>
+									<a href="#">Nullam id dolor id nibh ultricies</a>
+									<small>29 June 2017</small>
+								</li>
+								<li>
+									<a href="#">Duis mollis, est non commodo luctus</a>
+									<small>29 June 2017</small>
+								</li>
+							</ul>
+							<!-- /Latest Blog Post -->
+
+						</div>
+
+						<div class="col-md-2">
+
+							<!-- Links -->
+							<h4 class="letter-spacing-1">EXPLORE SMARTY</h4>
+							<ul class="footer-links list-unstyled">
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Our Services</a></li>
+								<li><a href="#">Our Clients</a></li>
+								<li><a href="#">Our Pricing</a></li>
+								<li><a href="#">Smarty Tour</a></li>
+								<li><a href="#">Contact Us</a></li>
+							</ul>
+							<!-- /Links -->
+
+						</div>
+
+						<div class="col-md-4">
+
+							<!-- Newsletter Form -->
+							<h4 class="letter-spacing-1">KEEP IN TOUCH</h4>
+							<p>Subscribe to Our Newsletter to get Important News &amp; Offers</p>
+
+							<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+									<span class="input-group-btn">
+										<button class="btn btn-success" type="submit">Subscribe</button>
+									</span>
+								</div>
+							</form>
+							<!-- /Newsletter Form -->
+
+							<!-- Social Icons -->
+							<div class="mt-20">
+								<a href="#" class="social-icon social-icon-border social-facebook float-left" data-toggle="tooltip" data-placement="top" title="Facebook">
+
+									<i class="icon-facebook"></i>
+									<i class="icon-facebook"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-twitter float-left" data-toggle="tooltip" data-placement="top" title="Twitter">
+									<i class="icon-twitter"></i>
+									<i class="icon-twitter"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-gplus float-left" data-toggle="tooltip" data-placement="top" title="Google plus">
+									<i class="icon-gplus"></i>
+									<i class="icon-gplus"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-linkedin float-left" data-toggle="tooltip" data-placement="top" title="Linkedin">
+									<i class="icon-linkedin"></i>
+									<i class="icon-linkedin"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-rss float-left" data-toggle="tooltip" data-placement="top" title="Rss">
+									<i class="icon-rss"></i>
+									<i class="icon-rss"></i>
+								</a>
+					
+							</div>
+							<!-- /Social Icons -->
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="copyright">
+					<div class="container">
+						<ul class="float-right m-0 list-inline mobile-block">
+							<li><a href="#">Terms &amp; Conditions</a></li>
+							<li>&bull;</li>
+							<li><a href="#">Privacy</a></li>
+						</ul>
+						&copy; All Rights Reserved, Company LTD
+					</div>
+				</div>
+			</footer>
+			<!-- /FOOTER -->
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script>var plugin_path = 'assets/plugins/';</script>
+		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+		<script src="assets/js/scripts.js"></script>
+		
+		<!-- STYLESWITCHER - REMOVE -->
+		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<script>/* <![CDATA[ */
+
+			/*
+				Icon prompt
+			*/
+			jQuery(".iconFlags div.flag-icon").bind("click", function(e) {
+				if(!jQuery(this).hasClass('external')) {
+					window.prompt ("Copy to clipboard: Ctrl+C, Enter/Esc", jQuery("img", this).attr('src')/*.replace('assets/images/_smarty/flags/', '')*/);
+					e.preventDefault();
+				}
+			});
+
+			/* 
+				Inline Search 
+			*/
+			jQuery("#inline-search").keyup(function() {
+				var keywords = jQuery.trim(this.value);
+				if (keywords == "") {
+					_unfilter();
+				}
+				else {
+					_filter(keywords);
+				}
+			});
+
+			function _filter(keywords) {
+				jQuery("div.flag-icon, h4.page-header").hide(); 
+				jQuery('div.flag-icon>img[alt*="'+capitaliseFirstLetter(keywords)+'"]').parent().show();
+			}
+
+			function _unfilter() {
+				jQuery("div.flag-icon, h4.page-header").show()
+			}
+
+			function capitaliseFirstLetter(string) {
+				var string = string.toLowerCase();
+				return string.charAt(0).toUpperCase() + string.slice(1);
+			}
+
+		/* ]]> */</script>
+
+	</body>
+</html>

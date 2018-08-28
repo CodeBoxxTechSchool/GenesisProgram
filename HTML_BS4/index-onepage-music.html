@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Smarty - Multipurpose + Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- REVOLUTION SLIDER -->
+		<link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+
+		<!-- MEDIAELEMENT -->
+		<link href="assets/plugins/mediaelement/mediaelementplayer.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/thematics-music.css" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation">
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- Logo -->
+						<a class="logo float-left scrollTo" href="#top">
+							<img src="assets/images/_smarty/logo_dark.png" alt="" />
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse">
+							<nav class="nav-main">
+
+								<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									<li class="active"><!-- HOME -->
+										<a href="#home">
+											HOME
+										</a>
+									</li>
+									<li><!-- NEWS -->
+										<a href="#news">
+											NEWS
+										</a>
+									</li>
+									<li><!-- EVENTS -->
+										<a href="#events">
+											EVENTS
+										</a>
+									</li>
+									<li><!-- WORK -->
+										<a href="#gallery">
+											GALLERY
+										</a>
+									</li>
+									<li><!-- VIDEOS -->
+										<a href="#videos">
+											VIDEOS
+										</a>
+									</li>
+									<li><!-- PRICING -->
+										<a href="#reservation">
+											RESERVATION
+										</a>
+									</li>
+									<li><!-- BLOG -->
+										<a class="external" href="blog-default-aside-left.html">
+											BLOG
+										</a>
+									</li>
+									<li><!-- CONTACT -->
+										<a href="#contact">
+											CONTACT
+										</a>
+									</li>
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+
+
+			<!-- REVOLUTION SLIDER -->
+			<div id="home" class="slider fullwidthbanner-container roundedcorners">
+				<!--
+					Navigation Styles:
+					
+						data-navigationStyle="" theme default navigation
+						
+						data-navigationStyle="preview1"
+						data-navigationStyle="preview2"
+						data-navigationStyle="preview3"
+						data-navigationStyle="preview4"
+						
+					Bottom Shadows
+						data-shadow="1"
+						data-shadow="2"
+						data-shadow="3"
+						
+					Slider Height (do not use on fullscreen mode)
+						data-height="300"
+						data-height="350"
+						data-height="400"
+						data-height="450"
+						data-height="500"
+						data-height="550"
+						data-height="600"
+						data-height="650"
+						data-height="700"
+						data-height="750"
+						data-height="800"
+				-->
+				<div class="fullscreenbanner" data-height="600" data-shadow="0" data-navigationStyle="preview1">
+					<ul class="hide">
+
+						<!-- SLIDE  -->
+						<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 1" data-thumb="demo_files/images/thematics/music/slider_1-min.jpg">
+
+							<img src="assets/images/_smarty/1x1.png" data-lazyload="demo_files/images/thematics/music/slider_1-min.jpg" alt="" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" />
+
+							<div class="overlay dark-3"><!-- dark overlay [1 to 9 opacity] --></div>
+
+							<div class="tp-caption font-cinzel-decorative customin ltl tp-resizeme large_bold_white"
+								data-x="center"
+								data-y="230"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-speed="800"
+								data-start="1200"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="z-index: 10;">
+								Music / Band
+							</div>
+
+							<div class="tp-caption customin ltl tp-resizeme small_light_white font-lato"
+								data-x="center"
+								data-y="350"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-speed="800"
+								data-start="1400"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="z-index: 10; width: 100%; max-width: 750px; white-space: normal; text-align:center; font-size:20px;">
+								Fabulas definitiones ei pri per recteque hendrerit scriptorem in errem scribentur mel fastidii propriae philosophia cu mea.
+							</div>
+
+
+						</li>
+
+						<!-- SLIDE  -->
+						<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 1" data-thumb="demo_files/images/thematics/music/slider_3-min.jpg">
+
+							<img src="assets/images/_smarty/1x1.png" data-lazyload="demo_files/images/thematics/music/slider_3-min.jpg" alt="" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" />
+
+							<div class="overlay dark-3"><!-- dark overlay [1 to 9 opacity] --></div>
+
+							<div class="tp-caption font-cinzel-decorative customin ltl tp-resizeme large_bold_white"
+								data-x="center"
+								data-y="230"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-speed="800"
+								data-start="1200"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="z-index: 10;">
+								For Your Soul
+							</div>
+
+							<div class="tp-caption customin ltl tp-resizeme small_light_white font-lato"
+								data-x="center"
+								data-y="350"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-speed="800"
+								data-start="1400"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="z-index: 10; width: 100%; max-width: 750px; white-space: normal; text-align:center; font-size:20px;">
+								Fabulas definitiones ei pri per recteque hendrerit scriptorem in errem scribentur mel fastidii propriae philosophia cu mea.
+							</div>
+
+
+						</li>
+
+						<!-- SLIDE  -->
+						<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 1" data-thumb="demo_files/images/thematics/music/slider_5-min.jpg">
+
+							<img src="assets/images/_smarty/1x1.png" data-lazyload="demo_files/images/thematics/music/slider_5-min.jpg" alt="" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" />
+
+							<div class="overlay dark-3"><!-- dark overlay [1 to 9 opacity] --></div>
+
+							<div class="tp-caption font-cinzel-decorative customin ltl tp-resizeme large_bold_white"
+								data-x="center"
+								data-y="230"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-speed="800"
+								data-start="1200"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="z-index: 10;">
+								POP MUSIC EVENT
+							</div>
+
+							<div class="tp-caption customin ltl tp-resizeme small_light_white font-lato"
+								data-x="center"
+								data-y="320"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-speed="800"
+								data-start="1400"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="z-index: 10; width: 100%; max-width: 750px; white-space: normal; text-align:center; font-size:20px;">
+								Fabulas definitiones ei pri per recteque hendrerit scriptorem in errem scribentur mel fastidii propriae philosophia cu mea.
+							</div>
+						</li>
+
+					</ul>
+
+					<div class="tp-bannertimer"><!-- progress bar --></div>
+				</div>
+			</div>
+			<!-- /REVOLUTION SLIDER -->
+
+
+			<!-- Parallax -->
+			<section class="p-10 dark parallax parallax-1" style="background-image: url('demo_files/images/particles_bg.jpg');">
+				<div class="container text-center">
+
+					<h1 class="m-0 fw-300 fs-30">RECENT ALBUMS / <span class="fs-20">DO NOT TO MISS</span></h1>
+
+				</div>
+			</section>
+			<!-- /Parallax -->
+
+
+			<!-- Albums -->
+			<div class="row box-gradient box-gray">
+				<div class="col-6 col-sm-3 p-0">
+					<a href="page-music.html">
+						<img class="img-fluid" src="demo_files/images/thematics/music/a1-min.jpg" alt="img" />
+					</a>
+					<div class="music-album-title text-left">
+
+						<!-- album download -->
+						<!--
+						<div class="music-album-download float-right">
+							<a class="text-white" href="#">
+								<i class="fa fa-cloud-download"></i>
+							</a>
+							<a class="text-white" href="#">
+								<i class="fa fa-apple"></i>
+							</a>
+							<a class="text-white" href="#">
+								<img src="assets/images/_smarty/misc/icon-amazon.png" width="17" height="17" alt="download from amazon" />
+							</a>
+						</div>
+						-->
+
+						<!-- album thumbnail -->
+						<div class="music-album-thumbnail">
+							<img src="demo_files/images/thematics/music/a1-min.jpg" alt="" width="34" height="34">
+						</div>
+
+						<!-- album playlist -->
+						<ol class="music-album-list">
+							<li data-download="http://audiojungle.net/item/driving-in-my-car/826142" data-apple="http://audiojungle.net/item/driving-in-my-car/826142" data-amazon="http://audiojungle.net/item/driving-in-my-car/826142" data-mp3="http://theme.stepofweb.com/.mp3/driving_my_car.mp3">Driving my car // <span class="music-song-title-info">Band Name - Album Name</span></li>
+							<li data-download="http://audiojungle.net/item/fight-no-more/143561" data-apple="http://audiojungle.net/item/fight-no-more/143561" data-amazon="http://audiojungle.net/item/fight-no-more/143561" data-mp3="http://theme.stepofweb.com/.mp3/fight_no_more.mp3">Fight no more // <span class="music-song-title-info">Band Name - Album Name</span></li>
+							<li data-download="http://audiojungle.net/item/a-little-on-the-wild-side/2283292" data-apple="http://audiojungle.net/item/a-little-on-the-wild-side/2283292" data-amazon="http://audiojungle.net/item/a-little-on-the-wild-side/2283292" data-mp3="http://theme.stepofweb.com/.mp3/a_little_on_the_wild_side.mp3">A little on the wild // <span class="music-song-title-info">Band Name - Album Name</span></li>
+							<li data-download="" data-apple="http://audiojungle.net/item/power-up/2508186" data-amazon="http://audiojungle.net/item/power-up/2508186" data-mp3="http://theme.stepofweb.com/.mp3/power_up.mp3">Power Up // <span class="music-song-title-info">Band Name - Album Name</span></li>
+							<li data-download="http://audiojungle.net/item/heavy-fuel/134328" data-apple="http://audiojungle.net/item/heavy-fuel/134328" data-amazon="http://audiojungle.net/item/heavy-fuel/134328" data-mp3="http://theme.stepofweb.com/.mp3/heavy_fuel.mp3">Heavy Fuel // <span class="music-song-title-info">Band Name - Album Name</span></li>
+							<li data-download="" data-apple="http://audiojungle.net/item/im-sixteen-until-i-die/128478" data-amazon="http://audiojungle.net/item/timelapse/12027034" data-mp3="http://theme.stepofweb.com/.mp3/sixteen_until_i_die.mp3">Sixteen Until I Die // <span class="music-song-title-info">Band Name - Album Name</span></li>
+						</ol>
+
+						<i class="fa fa-play pointer album-play"></i> 
+						<a  class="text-white" href="page-music.html">
+							Fly Away
+						</a>
+					</div>
+				</div>
+
+				<div class="col-6 col-sm-3 p-0">
+					<a href="page-music.html">
+						<img class="img-fluid" src="demo_files/images/thematics/music/a2-min.jpg" alt="img" />
+					</a>
+					<div class="music-album-title text-left">
+
+						<!-- album download -->
+						<!--
+						<div class="music-album-download float-right">
+							<a class="text-white" href="#">
+								<i class="fa fa-cloud-download"></i>
+							</a>
+							<a class="text-white" href="#">
+								<i class="fa fa-apple"></i>
+							</a>
+							<a class="text-white" href="#">
+								<img src="assets/images/_smarty/misc/icon-amazon.png" width="17" height="17" alt="download from amazon" />
+							</a>
+						</div>
+						-->
+
+						<!-- album thumbnail -->
+						<div class="music-album-thumbnail">
+							<img src="demo_files/images/thematics/music/a2-min.jpg" alt="" width="34" height="34">
+						</div>
+
+						<!-- album playlist -->
+						<ol class="music-album-list">
+							<li data-download="http://audiojungle.net/item/motivate/11638130" data-apple="http://audiojungle.net/item/motivate/11638130" data-amazon="http://audiojungle.net/item/motivate/11638130" data-mp3="http://theme.stepofweb.com/.mp3/Motivate.mp3">Motivation // <span class="music-song-title-info">Band Name - Album Name</span></li>
+							<li data-download="http://audiojungle.net/item/sport/11388694" data-apple="http://audiojungle.net/item/sport/11388694" data-amazon="http://audiojungle.net/item/sport/11388694" data-mp3="http://theme.stepofweb.com/.mp3/Energy.mp3">Energy // <span class="music-song-title-info">Band Name - Album Name</span></li>
+							<li data-download="http://audiojungle.net/item/powerful-dubstep/12356740" data-apple="http://audiojungle.net/item/powerful-dubstep/12356740" data-amazon="http://audiojungle.net/item/powerful-dubstep/12356740" data-mp3="http://theme.stepofweb.com/.mp3/Powerful_Dubstep.mp3">Powerful Dubstep // <span class="music-song-title-info">Band Name - Album Name</span></li>
+							<li data-download="" data-apple="http://audiojungle.net/item/hyperlapse/12107454" data-amazon="http://audiojungle.net/item/hyperlapse/12107454" data-mp3="http://theme.stepofweb.com/.mp3/Hyperlapse.mp3">Hyperlapse // <span class="music-song-title-info">Band Name - Album Name</span></li>
+							<li data-download="http://audiojungle.net/item/club-life/12283640" data-apple="http://audiojungle.net/item/club-life/12283640" data-amazon="http://audiojungle.net/item/club-life/12283640" data-mp3="http://theme.stepofweb.com/.mp3/club_life.mp3">Club Life // <span class="music-song-title-info">Band Name - Album Name</span></li>
+							<li data-download="" data-apple="http://audiojungle.net/item/timelapse/12027034" data-amazon="http://audiojungle.net/item/timelapse/12027034" data-mp3="http://theme.stepofweb.com/.mp3/Timelapse.mp3">Timelapse // <span class="music-song-title-info">Band Name - Album Name</span></li>
+						</ol>
+
+						<i class="fa fa-play pointer album-play"></i> 
+						<a  class="text-white" href="page-music.html">
+							Alway You
+						</a>
+					</div>
+				</div>
+
+				<div class="col-6 col-sm-3 p-0">
+					<a href="page-music.html">
+						<img class="img-fluid" src="demo_files/images/thematics/music/a3-min.jpg" alt="img" />
+					</a>
+					<div class="music-album-title text-left">
+
+						<!-- album download -->
+						<!--
+						<div class="music-album-download float-right">
+							<a class="text-white" href="#">
+								<i class="fa fa-cloud-download"></i>
+							</a>
+							<a class="text-white" href="#">
+								<i class="fa fa-apple"></i>
+							</a>
+							<a class="text-white" href="#">
+								<img src="assets/images/_smarty/misc/icon-amazon.png" width="17" height="17" alt="download from amazon" />
+							</a>
+						</div>
+						-->
+
+						<!-- album thumbnail -->
+						<div class="music-album-thumbnail">
+							<img src="demo_files/images/thematics/music/a3-min.jpg" alt="" width="34" height="34">
+						</div>
+
+						<!-- album playlist -->
+						<ol class="music-album-list">
+							<li data-download="http://audiojungle.net/item/endless-summer/119960" data-apple="http://audiojungle.net/item/endless-summer/119960" data-amazon="http://audiojungle.net/item/endless-summer/119960" data-mp3="http://theme.stepofweb.com/.mp3/endless_summer.mp3">Endless Summer // <span class="music-song-title-info">Band Name - Album Name</span></li>
+							<li data-download="http://audiojungle.net/item/ultra-modern/236967" data-apple="http://audiojungle.net/item/ultra-modern/236967" data-amazon="http://audiojungle.net/item/ultra-modern/236967" data-mp3="http://theme.stepofweb.com/.mp3/ultra_modern.mp3">Ultra Modern // <span class="music-song-title-info">Band Name - Album Name</span></li>
+							<li data-download="http://audiojungle.net/item/fly-away/44652" data-apple="http://audiojungle.net/item/fly-away/44652" data-amazon="http://audiojungle.net/item/fly-away/44652" data-mp3="http://theme.stepofweb.com/.mp3/fly_away.mp3">Fly Away // <span class="music-song-title-info">Band Name - Album Name</span></li>
+							<li data-download="" data-apple="http://audiojungle.net/item/harmonics/101492" data-amazon="http://audiojungle.net/item/harmonics/101492" data-mp3="http://theme.stepofweb.com/.mp3/harmonics.mp3">Harmonics // <span class="music-song-title-info">Band Name - Album Name</span></li>
+							<li data-download="http://audiojungle.net/item/time-to-rise/11913523" data-apple="http://audiojungle.net/item/time-to-rise/11913523" data-amazon="http://audiojungle.net/item/time-to-rise/11913523" data-mp3="http://theme.stepofweb.com/.mp3/time_to_rise.mp3">Time to Rise // <span class="music-song-title-info">Band Name - Album Name</span></li>
+						</ol>
+
+						<i class="fa fa-play pointer album-play"></i> 
+						<a  class="text-white" href="page-music.html">
+							Motorbreath
+						</a>
+					</div>
+				</div>
+
+				<div class="col-6 col-sm-3 p-0">
+					<a href="page-music.html">
+						<img class="img-fluid" src="demo_files/images/thematics/music/a4-min.jpg" alt="img" />
+					</a>
+					<div class="music-album-title text-left">
+
+						<!-- album download -->
+						<!--
+						<div class="music-album-download float-right">
+							<a class="text-white" href="#">
+								<i class="fa fa-cloud-download"></i>
+							</a>
+							<a class="text-white" href="#">
+								<i class="fa fa-apple"></i>
+							</a>
+							<a class="text-white" href="#">
+								<img src="assets/images/_smarty/misc/icon-amazon.png" width="17" height="17" alt="download from amazon" />
+							</a>
+						</div>
+						-->
+
+						<!-- album thumbnail -->
+						<div class="music-album-thumbnail">
+							<img src="demo_files/images/thematics/music/a4-min.jpg" alt="" width="34" height="34">
+						</div>
+
+						<!-- album playlist -->
+						<ol class="music-album-list">
+							<li data-download="http://audiojungle.net/item/motivate/11638130" data-apple="http://audiojungle.net/item/motivate/11638130" data-amazon="http://audiojungle.net/item/motivate/11638130" data-mp3="http://theme.stepofweb.com/.mp3/Motivate.mp3">Motivation // <span class="music-song-title-info">Band Name - Album Name</span></li>
+							<li data-download="http://audiojungle.net/item/sport/11388694" data-apple="http://audiojungle.net/item/sport/11388694" data-amazon="http://audiojungle.net/item/sport/11388694" data-mp3="http://theme.stepofweb.com/.mp3/Energy.mp3">Energy // <span class="music-song-title-info">Band Name - Album Name</span></li>
+							<li data-download="http://audiojungle.net/item/powerful-dubstep/12356740" data-apple="http://audiojungle.net/item/powerful-dubstep/12356740" data-amazon="http://audiojungle.net/item/powerful-dubstep/12356740" data-mp3="http://theme.stepofweb.com/.mp3/Powerful_Dubstep.mp3">Powerful Dubstep // <span class="music-song-title-info">Band Name - Album Name</span></li>
+							<li data-download="" data-apple="http://audiojungle.net/item/hyperlapse/12107454" data-amazon="http://audiojungle.net/item/hyperlapse/12107454" data-mp3="http://theme.stepofweb.com/.mp3/Hyperlapse.mp3">Hyperlapse // <span class="music-song-title-info">Band Name - Album Name</span></li>
+							<li data-download="http://audiojungle.net/item/club-life/12283640" data-apple="http://audiojungle.net/item/club-life/12283640" data-amazon="http://audiojungle.net/item/club-life/12283640" data-mp3="http://theme.stepofweb.com/.mp3/club_life.mp3">Club Life // <span class="music-song-title-info">Band Name - Album Name</span></li>
+							<li data-download="" data-apple="http://audiojungle.net/item/timelapse/12027034" data-amazon="http://audiojungle.net/item/timelapse/12027034" data-mp3="http://theme.stepofweb.com/.mp3/Timelapse.mp3">Timelapse // <span class="music-song-title-info">Band Name - Album Name</span></li>
+						</ol>
+
+						<i class="fa fa-play pointer album-play"></i> 
+						<a  class="text-white" href="page-music.html">
+							So simple
+						</a>
+					</div>
+				</div>
+
+			</div>
+			<!-- /Albums -->
+
+
+			<!-- News -->
+			<section id="news">
+				<div class="container">
+
+					<div class="row">
+					
+						<!-- RIGHT -->
+						<div class="col-lg-9 col-md-9 col-sm-9 order-lg-2 order-md-2 order-sm-2">
+
+							<h2>Recent News <span class="fs-18">/ Get update from us!</span></h2>
+
+							<!-- news item -->
+							<div class="inews-item">
+								<a class="inews-thumbnail" href="#">
+									<span class="inews-sticky font-lato">
+										<i class="fa fa-bullhorn"></i> 
+										NEW &amp; HOT
+									</span>
+									<img class="img-fluid" src="demo_files/images/thematics/music/a1-min.jpg" alt="image" />
+								</a>
+								
+								<div class="inews-item-content">
+
+									<div class="inews-date-wrapper">
+										<span class="inews-date-day">29</span>
+										<span class="inews-date-month">June</span>
+										<span class="inews-date-year">2015</span>
+									</div>
+
+									<div class="inews-content-inner">
+
+										<h3 class="fs-20"><a href="#">Lorem Upsum Dolor</a></h3>
+										<ul class="blog-post-info list-inline b-0 mb-20 p-0">
+											<li>
+												<a href="page-profile.html">
+													<i class="fa fa-user"></i> 
+													<span class="font-lato">By John Doe</span>
+												</a>
+											</li>
+											<li>
+												<i class="fa fa-folder-open-o"></i> 
+
+												<a class="category" href="#">
+													<span class="font-lato">Design</span>
+												</a>
+												<a class="category" href="#">
+													<span class="font-lato">Photography</span>
+												</a>
+											</li>
+										</ul>
+
+										<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Idque Caesaris facere voluntate liceret: sese habere....</p>
+									</div>
+									
+
+								</div>
+							</div>
+							<!-- /news item -->
+
+							<!-- news item -->
+							<div class="inews-item">
+								<a class="inews-thumbnail" href="#">
+									<img class="img-fluid" src="demo_files/images/thematics/music/a2-min.jpg" alt="image" />
+								</a>
+								
+								<div class="inews-item-content">
+
+									<div class="inews-date-wrapper">
+										<span class="inews-date-day">29</span>
+										<span class="inews-date-month">June</span>
+										<span class="inews-date-year">2015</span>
+									</div>
+
+									<div class="inews-content-inner">
+
+										<h3 class="fs-20"><a href="#">Lorem Upsum Dolor</a></h3>
+										<ul class="blog-post-info list-inline b-0 mb-20 p-0">
+											<li>
+												<a href="page-profile.html">
+													<i class="fa fa-user"></i> 
+													<span class="font-lato">By John Doe</span>
+												</a>
+											</li>
+											<li>
+												<i class="fa fa-folder-open-o"></i> 
+
+												<a class="category" href="#">
+													<span class="font-lato">Design</span>
+												</a>
+												<a class="category" href="#">
+													<span class="font-lato">Photography</span>
+												</a>
+											</li>
+										</ul>
+
+										<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Idque Caesaris facere voluntate liceret: sese habere....</p>
+									</div>
+									
+
+								</div>
+							</div>
+							<!-- /news item -->
+
+							<!-- news item -->
+							<div class="inews-item">
+								<a class="inews-thumbnail" href="#">
+									<img class="img-fluid" src="demo_files/images/thematics/music/a3-min.jpg" alt="image" />
+								</a>
+								
+								<div class="inews-item-content">
+
+									<div class="inews-date-wrapper">
+										<span class="inews-date-day">29</span>
+										<span class="inews-date-month">June</span>
+										<span class="inews-date-year">2015</span>
+									</div>
+
+									<div class="inews-content-inner">
+
+										<h3 class="fs-20"><a href="#">Lorem Upsum Dolor</a></h3>
+										<ul class="blog-post-info list-inline b-0 mb-20 p-0">
+											<li>
+												<a href="page-profile.html">
+													<i class="fa fa-user"></i> 
+													<span class="font-lato">By John Doe</span>
+												</a>
+											</li>
+											<li>
+												<i class="fa fa-folder-open-o"></i> 
+
+												<a class="category" href="#">
+													<span class="font-lato">Design</span>
+												</a>
+												<a class="category" href="#">
+													<span class="font-lato">Photography</span>
+												</a>
+											</li>
+										</ul>
+
+										<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Idque Caesaris facere voluntate liceret: sese habere....</p>
+									</div>
+									
+
+								</div>
+							</div>
+							<!-- /news item -->
+
+						</div>
+
+						<!-- LEFT -->
+						<div class="col-lg-3 col-md-3 col-sm-3 order-lg-1 order-md-1 order-sm-1">
+
+							<h3 class="mt-8">Twitter Feed</h3>
+
+							<!--
+								data-php="php/twitter/tweet.php"	- widget php path
+								data-username="stepofweb"			- twitter username
+								data-limit="3"						- maximum twwts to load
+								
+								PLEASE NOTE!
+								php/_cache/ - folder should be writable by the webserver!
+										- it's used to cache tweets
+							-->
+							<ul class="widget-twitter mb-20" data-php="php/twitter/tweet.php" data-username="stepofweb" data-limit="3">
+								<li></li>
+							</ul>
+
+							<!-- Soundcloud Widget -->
+							<iframe style="width:100%; height:166px" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/42082783&amp;color=a94545&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
+
+						</div>
+						
+					</div>
+
+				</div>
+			</section>
+			<!-- /News -->
+			
+
+
+			<!-- Next Event -->
+			<section class="parallax parallax-2" style="background-image: url('assets/images/_smarty/backgrounds/bg1-min.jpg');">
+				<div class="overlay dark-7"><!-- dark overlay [0 to 9 opacity] --></div>
+
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-sm-7">
+							<h2 class="fs-40 mb-6">Next Event - New York</h2>
+							<h3 class="fs-30">29 June <small>08:00</small></h3>
+						</div>
+						
+						<div class="col-sm-5">
+							<div class="countdown countdown-md" data-from="December 31, 2018 15:03:26"><!-- Example Date From: December 31, 2018 15:03:26 --></div>
+						</div>
+					</div>
+
+
+				</div>
+			</section>
+			<!-- /Next Event -->
+
+
+
+
+			<!-- Upcoming Events -->
+			<section id="events">
+				<div class="container">
+
+					<div class="heading-title">
+						<h3>UPCOMING EVENTS /<span class="fs-16 fw-400">see you soon!</span></h3>
+					</div>
+
+					<div class="row">
+
+						<div class="col-sm-4">
+
+							<h4><i class="glyphicon glyphicon-option-vertical"></i> Ordered By Date</h4>
+
+							<div class="event-item">
+								<div class="event-date-wrapper">
+									<span class="event-date-day">02</span>
+									<span class="event-date-month">April</span>
+								</div>
+								<div class="event-content-wrapper">
+									<div class="event-content-inner-wrapper">
+										<h3 class="event-title"><a href="#">New York</a></h3>
+										<div class="event-location">Colonial Life Arena w/ Aloe Blacc </div>
+									</div>
+									<div class="event-status-wrapper">
+										<a href="#">Buy Ticket</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="event-item">
+								<div class="event-date-wrapper">
+									<span class="event-date-day">03</span>
+									<span class="event-date-month">April</span>
+								</div>
+								<div class="event-content-wrapper">
+									<div class="event-content-inner-wrapper">
+										<h3 class="event-title"><a href="#">New York</a></h3>
+										<div class="event-location">Colonial Life Arena w/ Aloe Blacc </div>
+									</div>
+									<div class="event-status-wrapper">
+										<a href="#">Buy Ticket</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="event-item">
+								<div class="event-date-wrapper">
+									<span class="event-date-day">04</span>
+									<span class="event-date-month">April</span>
+								</div>
+								<div class="event-content-wrapper">
+									<div class="event-content-inner-wrapper">
+										<h3 class="event-title"><a href="#">New York</a></h3>
+										<div class="event-location">Colonial Life Arena w/ Aloe Blacc </div>
+									</div>
+									<div class="event-status-wrapper">
+										<a href="#">Buy Ticket</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-sm-4">
+
+							<h4><i class="glyphicon glyphicon-option-vertical"></i> Ordered By Title</h4>
+
+							<div class="event-item">
+								<div class="event-date-wrapper">
+									<span class="event-date-day">08</span>
+									<span class="event-date-month">April</span>
+								</div>
+								<div class="event-content-wrapper">
+									<div class="event-content-inner-wrapper">
+										<h3 class="event-title"><a href="#">New York</a></h3>
+										<div class="event-location">Colonial Life Arena w/ Aloe Blacc </div>
+									</div>
+									<div class="event-status-wrapper">
+										<a href="#">Buy Ticket</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="event-item">
+								<div class="event-date-wrapper">
+									<span class="event-date-day">09</span>
+									<span class="event-date-month">April</span>
+								</div>
+								<div class="event-content-wrapper">
+									<div class="event-content-inner-wrapper">
+										<h3 class="event-title"><a href="#">New York</a></h3>
+										<div class="event-location">Colonial Life Arena w/ Aloe Blacc </div>
+									</div>
+									<div class="event-status-wrapper">
+										<a href="#">Buy Ticket</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="event-item">
+								<div class="event-date-wrapper">
+									<span class="event-date-day">10</span>
+									<span class="event-date-month">April</span>
+								</div>
+								<div class="event-content-wrapper">
+									<div class="event-content-inner-wrapper">
+										<h3 class="event-title"><a href="#">New York</a></h3>
+										<div class="event-location">Colonial Life Arena w/ Aloe Blacc </div>
+									</div>
+									<div class="event-status-wrapper">
+										<a href="#">Buy Ticket</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-sm-4">
+
+							<h4><i class="glyphicon glyphicon-option-vertical"></i> Order Randomly</h4>
+
+							<div class="event-item">
+								<div class="event-date-wrapper">
+									<span class="event-date-day">14</span>
+									<span class="event-date-month">April</span>
+								</div>
+								<div class="event-content-wrapper">
+									<div class="event-content-inner-wrapper">
+										<h3 class="event-title"><a href="#">New York</a></h3>
+										<div class="event-location">Colonial Life Arena w/ Aloe Blacc </div>
+									</div>
+									<div class="event-status-wrapper">
+										<a href="#">Buy Ticket</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="event-item">
+								<div class="event-date-wrapper">
+									<span class="event-date-day">15</span>
+									<span class="event-date-month">April</span>
+								</div>
+								<div class="event-content-wrapper">
+									<div class="event-content-inner-wrapper">
+										<h3 class="event-title"><a href="#">New York</a></h3>
+										<div class="event-location">Colonial Life Arena w/ Aloe Blacc </div>
+									</div>
+									<div class="event-status-wrapper">
+										<a href="#">Buy Ticket</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="event-item">
+								<div class="event-date-wrapper">
+									<span class="event-date-day">16</span>
+									<span class="event-date-month">April</span>
+								</div>
+								<div class="event-content-wrapper">
+									<div class="event-content-inner-wrapper">
+										<h3 class="event-title"><a href="#">New York</a></h3>
+										<div class="event-location">Colonial Life Arena w/ Aloe Blacc </div>
+									</div>
+									<div class="event-status-wrapper">
+										<a href="#">Buy Ticket</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+
+				</div>
+			</section>
+			<!-- /Upcoming Events -->
+
+
+
+
+			<!-- Events Gallery -->
+			<section id="gallery" class="dark1 alternate">
+				<div class="container">
+
+					<div class="heading-title">
+						<h3>EVENTS <span>GALLERY</span></h3>
+						<p class="font-lato fs-14">Lorem ipsum dolor sit amet.</p>
+					</div>
+
+					<!-- 
+						RELATED CAROUSEL 
+
+						controlls-over		= navigation buttons over the image 
+						buttons-autohide 	= navigation buttons visible on mouse hover only
+
+						owl-carousel item paddings
+							.owl-padding-0
+							.owl-padding-1
+							.owl-padding-2
+							.owl-padding-3
+							.owl-padding-6
+							.owl-padding-10
+							.owl-padding-15
+							.owl-padding-20
+					-->
+					<div class="text-center">
+						<div class="owl-carousel owl-padding-1 m-0 buttons-autohide controlls-over" data-plugin-options='{"singleItem": false, "items": "4", "autoPlay": 4500, "navigation": true, "pagination": false}'>
+							
+							<!-- item -->
+							<div class="item-box">
+								<figure>
+									<span class="item-hover">
+										<span class="overlay dark-5"></span>
+										<span class="inner">
+
+											<!-- lightbox -->
+											<a class="ico-rounded lightbox" href="demo_files/images/thematics/music/e1-min.jpg" data-plugin-options='{"type":"image"}'>
+												<span class="fa fa-plus fs-20"></span>
+											</a>
+
+											<!-- details -->
+											<a class="ico-rounded" href="portfolio-single-slider.html">
+												<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+											</a>
+
+										</span>
+									</span>
+
+									<img class="img-fluid" src="demo_files/images/thematics/music/e1-min.jpg" width="600" height="399" alt="">
+								</figure>
+
+								<div class="item-box-desc">
+									<h3>New York</h3>
+									<ul class="list-inline categories m-0">
+										<li><a href="javascript:;">29 June 2017</a></li>
+									</ul>
+								</div>
+
+							</div>
+							<!-- /item -->
+
+							<!-- item -->
+							<div class="item-box">
+								<figure>
+									<span class="item-hover">
+										<span class="overlay dark-5"></span>
+										<span class="inner">
+
+											<!-- lightbox -->
+											<a class="ico-rounded lightbox" href="demo_files/images/thematics/music/e2-min.jpg" data-plugin-options='{"type":"image"}'>
+												<span class="fa fa-plus fs-20"></span>
+											</a>
+
+											<!-- details -->
+											<a class="ico-rounded" href="portfolio-single-slider.html">
+												<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+											</a>
+
+										</span>
+									</span>
+
+									<img class="img-fluid" src="demo_files/images/thematics/music/e2-min.jpg" width="600" height="399" alt="">
+								</figure>
+
+								<div class="item-box-desc">
+									<h3>New York</h3>
+									<ul class="list-inline categories m-0">
+										<li><a href="javascript:;">29 June 2017</a></li>
+									</ul>
+								</div>
+
+							</div>
+							<!-- /item -->
+
+							<!-- item -->
+							<div class="item-box">
+								<figure>
+									<span class="item-hover">
+										<span class="overlay dark-5"></span>
+										<span class="inner">
+
+											<!-- lightbox -->
+											<a class="ico-rounded lightbox" href="demo_files/images/thematics/music/e3-min.jpg" data-plugin-options='{"type":"image"}'>
+												<span class="fa fa-plus fs-20"></span>
+											</a>
+
+											<!-- details -->
+											<a class="ico-rounded" href="portfolio-single-slider.html">
+												<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+											</a>
+
+										</span>
+									</span>
+
+									<img class="img-fluid" src="demo_files/images/thematics/music/e3-min.jpg" width="600" height="399" alt="">
+								</figure>
+
+								<div class="item-box-desc">
+									<h3>New York</h3>
+									<ul class="list-inline categories m-0">
+										<li><a href="javascript:;">29 June 2017</a></li>
+									</ul>
+								</div>
+
+							</div>
+							<!-- /item -->
+
+							<!-- item -->
+							<div class="item-box">
+								<figure>
+									<span class="item-hover">
+										<span class="overlay dark-5"></span>
+										<span class="inner">
+
+											<!-- lightbox -->
+											<a class="ico-rounded lightbox" href="demo_files/images/thematics/music/e4-min.jpg" data-plugin-options='{"type":"image"}'>
+												<span class="fa fa-plus fs-20"></span>
+											</a>
+
+											<!-- details -->
+											<a class="ico-rounded" href="portfolio-single-slider.html">
+												<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+											</a>
+
+										</span>
+									</span>
+
+									<img class="img-fluid" src="demo_files/images/thematics/music/e4-min.jpg" width="600" height="399" alt="">
+								</figure>
+
+								<div class="item-box-desc">
+									<h3>New York</h3>
+									<ul class="list-inline categories m-0">
+										<li><a href="javascript:;">29 June 2017</a></li>
+									</ul>
+								</div>
+
+							</div>
+							<!-- /item -->
+
+							<!-- item -->
+							<div class="item-box">
+								<figure>
+									<span class="item-hover">
+										<span class="overlay dark-5"></span>
+										<span class="inner">
+
+											<!-- lightbox -->
+											<a class="ico-rounded lightbox" href="demo_files/images/thematics/music/e5-min.jpg" data-plugin-options='{"type":"image"}'>
+												<span class="fa fa-plus fs-20"></span>
+											</a>
+
+											<!-- details -->
+											<a class="ico-rounded" href="portfolio-single-slider.html">
+												<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+											</a>
+
+										</span>
+									</span>
+
+									<img class="img-fluid" src="demo_files/images/thematics/music/e5-min.jpg" width="600" height="399" alt="">
+								</figure>
+
+								<div class="item-box-desc">
+									<h3>New York</h3>
+									<ul class="list-inline categories m-0">
+										<li><a href="javascript:;">29 June 2017</a></li>
+									</ul>
+								</div>
+
+							</div>
+							<!-- /item -->
+
+							<!-- item -->
+							<div class="item-box">
+								<figure>
+									<span class="item-hover">
+										<span class="overlay dark-5"></span>
+										<span class="inner">
+
+											<!-- lightbox -->
+											<a class="ico-rounded lightbox" href="demo_files/images/thematics/music/e6-min.jpg" data-plugin-options='{"type":"image"}'>
+												<span class="fa fa-plus fs-20"></span>
+											</a>
+
+											<!-- details -->
+											<a class="ico-rounded" href="portfolio-single-slider.html">
+												<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+											</a>
+
+										</span>
+									</span>
+
+									<img class="img-fluid" src="demo_files/images/thematics/music/e6-min.jpg" width="600" height="399" alt="">
+								</figure>
+
+								<div class="item-box-desc">
+									<h3>New York</h3>
+									<ul class="list-inline categories m-0">
+										<li><a href="javascript:;">29 June 2017</a></li>
+									</ul>
+								</div>
+
+							</div>
+							<!-- /item -->
+
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<!-- /Events Gallery -->
+
+
+
+
+			<!-- Latest Videos -->
+			<section id="videos" class="parallax parallax-3" style="background-image: url('demo_files/images/thematics/music/slider_5-min.jpg');">
+				<div class="overlay dark-8"><!-- dark overlay [0 to 9 opacity] --></div>
+
+				<div class="container text-center">
+
+					<h2 class="fs-30 mb-6">LATEST <span>VIDEOS</span></h2>
+
+					<hr />
+
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="embed-responsive embed-responsive-16by9"><!-- VIMEO VIDEO -->
+								<iframe class="embed-responsive-item" src="http://player.vimeo.com/video/30802443" width="800" height="450"></iframe>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="embed-responsive embed-responsive-16by9"><!-- VIMEO VIDEO -->
+								<iframe class="embed-responsive-item" src="http://player.vimeo.com/video/75588009" width="800" height="450"></iframe>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="embed-responsive embed-responsive-16by9"><!-- VIMEO VIDEO -->
+								<iframe class="embed-responsive-item" src="http://player.vimeo.com/video/7271514" width="800" height="450"></iframe>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<!-- /Latest Videos -->
+
+
+
+
+			<!-- Reservation -->
+			<section id="reservation" class="alternate">
+				<div class="container">
+
+					<header class="text-center mb-60 clearfix">
+						<h2 class="fw-300 mb-0">TICKET <span><strong>RESERVATION</strong></span></h2>
+					</header>
+
+					<form class="validate" action="php/contact.php" method="post" data-success="Reservation sent! Thank you!" data-toastr-position="bottom-right">
+						<div class="row">
+							<div class="col-md-4">
+								<input type="text" id="reservation_name" name="reservation_name" class="form-control required" placeholder="Name*">
+							</div>
+
+							<div class="col-md-4">
+								<input type="email" id="reservation_email" name="reservation_email" class="form-control required" placeholder="Email*">
+							</div>
+
+							<div class="col-md-4">
+								<input type="text" id="reservation_phone" name="reservation_phone" class="form-control required" placeholder="Phone*">
+							</div>
+
+						</div>
+						<div class="row">
+
+							<div class="col-md-4">
+								<input type="text" id="reservation_date" name="reservation_date" class="form-control datepicker required" data-format="yyyy-mm-dd" data-lang="en" data-RTL="false" placeholder="Reservation Date*">
+							</div>
+
+							<div class="col-md-4">
+								<select id="reservation_people" name="reservation_people" class="form-control required">
+									<option value="1">1 Person</option>
+									<option value="2" selected="selected">2 People</option>
+									<option value="3">3 People</option>
+									<option value="4">4 People</option>
+									<option value="5">5 People</option>
+									<option value="6">6 People</option>
+									<option value="7">7 People</option>
+									<option value="8">8 People</option>
+									<option value="9">9 People</option>
+									<option value="10">10 People</option>
+									<option value="12">12 People</option>
+									<option value="15">15 People</option>
+									<option value="20">20 People</option>
+									<option value="25">25 People</option>
+									<option value="30">30 People</option>
+								</select>
+							</div>
+
+							<div class="col-md-4">
+								<button class="btn btn-success btn-block" type="submit">SUBMIT RESERVATION</button>
+							</div>
+
+						</div>
+
+
+					</form>
+
+				</div>
+			</section>
+			<!-- /Reservation -->
+
+
+
+
+			<!-- CONTACT -->
+			<section id="contact">
+				<div class="container">
+
+					<header class="text-center mb-60">
+						<h2>Contact Us</h2>
+						<p class="lead font-lato">Lorem ipsum dolor sit amet adipiscium elit</p>
+						<hr />
+					</header>
+
+
+					<div class="row">
+
+						<!-- FORM -->
+						<div class="col-md-8 col-sm-8">
+
+							<h3>Drop us a line or just say <strong><em>Hello!</em></strong></h3>
+
+							
+							<!--
+								MESSAGES
+								
+									How it works?
+									The form data is posted to php/contact.php where the fields are verified!
+									php.contact.php will redirect back here and will add a hash to the end of the URL:
+										#alert_success 		= email sent
+										#alert_failed		= email not sent - internal server error (404 error or SMTP problem)
+										#alert_mandatory	= email not sent - required fields empty
+										Hashes are handled by assets/js/contact.js
+
+									Form data: required to be an array. Example:
+										contact[email][required]  WHERE: [email] = field name, [required] = only if this field is required (PHP will check this)
+										Also, add `required` to input fields if is a mandatory field. 
+										Example: <input required type="email" value="" class="form-control" name="contact[email][required]">
+
+									PLEASE NOTE: IF YOU WANT TO ADD OR REMOVE FIELDS (EXCEPT CAPTCHA), JUST EDIT THE HTML CODE, NO NEED TO EDIT php/contact.php or javascript
+												 ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
+
+									WARNING! Do not change the `email` and `name`!
+												contact[name][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+												contact[email][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+							-->
+
+							<!-- Alert Success -->
+							<div id="alert_success" class="alert alert-success mb-30">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								<strong>Thank You!</strong> Your message successfully sent!
+							</div><!-- /Alert Success -->
+
+
+							<!-- Alert Failed -->
+							<div id="alert_failed" class="alert alert-danger mb-30">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								<strong>[SMTP] Error!</strong> Internal server error!
+							</div><!-- /Alert Failed -->
+
+
+							<!-- Alert Mandatory -->
+							<div id="alert_mandatory" class="alert alert-danger mb-30">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
+							</div><!-- /Alert Mandatory -->
+
+
+							<form action="php/contact.php" method="post" enctype="multipart/form-data">
+								<fieldset>
+									<input type="hidden" name="action" value="contact_send" />
+
+									<div class="row">
+										<div class="col-md-4">
+											<label for="contact:name">Full Name *</label>
+											<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
+										</div>
+										<div class="col-md-4">
+											<label for="contact:email">E-mail Address *</label>
+											<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+										</div>
+										<div class="col-md-4">
+											<label for="contact:phone">Phone</label>
+											<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-8">
+											<label for="contact:subject">Subject *</label>
+											<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+										</div>
+										<div class="col-md-4">
+											<label for="contact_department">Department</label>
+											<select class="form-control pointer" name="contact[department]">
+												<option value="">--- Select ---</option>
+												<option value="Marketing">Marketing</option>
+												<option value="Webdesign">Webdesign</option>
+												<option value="Architecture">Architecture</option>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<label for="contact:message">Message *</label>
+											<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<label for="contact:attachment">File Attachment</label>
+
+											<!-- custom file upload -->
+											<input class="custom-file-upload" type="file" id="file" name="contact[attachment]" id="contact:attachment" data-btn-text="Select a File" />
+											<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
+
+										</div>
+									</div>
+
+								</fieldset>
+
+								<div class="row">
+									<div class="col-md-12">
+										<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SEND MESSAGE</button>
+									</div>
+								</div>
+							</form>
+
+						</div>
+						<!-- /FORM -->
+
+
+						<!-- INFO -->
+						<div class="col-md-4 col-sm-4">
+
+							<h2>Visit Us</h2>
+
+							<!-- 
+							Available heights
+								h-100
+								h-150
+								h-200
+								h-250
+								h-300
+								h-350
+								h-400
+								h-450
+								h-500
+								h-550
+								h-600
+							-->
+							<div id="map2" class="h-400 grayscale"></div>
+
+							<hr />
+
+							<p>
+								<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> Street Name, City Name, Country</span>
+								<span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:1800-555-1234">1800-555-1234</a></span>
+								<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:mail@yourdomain.com">mail@yourdomain.com</a></span>
+							</p>
+
+						</div>
+						<!-- /INFO -->
+
+					</div>
+
+				</div>
+			</section>
+			<!-- /CONTACT -->
+
+
+
+
+			<!-- 
+				AUDIO PLAYER 
+				
+				.position-bottom	= bottom fixed
+				.position-top		= top fixed
+			-->
+			<div id="music-player" class="position-bottom">
+				<div class="container">
+
+					<div class="music-float-top-player music-item">
+
+						<!-- album thumbnail -->
+						<div class="music-top-player-thumbnail">
+							<img src="demo_files/images/thematics/music/a1-min.jpg" alt="" width="34" height="34" />
+						</div>
+
+						<!-- song title -->
+						<div class="music-top-player-title elipsis">
+							A little on the wild
+							 // <span class="music-song-title-info">Band Name - Album Name</span>
+						</div>
+
+						<!-- song download -->
+						<div class="music-top-player-download">
+							<a class="top-player-list" href="#"><i class="icon-list-ul"></i></a>
+							<a class="top-player-download music-download" target="_blank" href="http://audiojungle.net/item/a-little-on-the-wild-side/2283292"><i class="fa fa-cloud-download"></i></a>
+							<a class="top-player-apple" target="_blank" href="http://audiojungle.net/item/a-little-on-the-wild-side/2283292"><i class="fa fa-apple"></i></a>
+							<a class="top-player-amazon" target="_blank" href="http://audiojungle.net/item/a-little-on-the-wild-side/2283292"><img src="assets/images/_smarty/misc/icon-amazon.png" width="17" height="17" alt="download from amazon"></a>
+						</div>
+
+						<!-- audio file -->
+						<audio style="width:100%; height:70px;" id="music-player-audio" preload="auto" controls="controls">
+							<source type="audio/mpeg" src="http://theme.stepofweb.com/.mp3/a_little_on_the_wild_side.mp3">
+						</audio>
+
+					</div>
+
+					<!-- player list -->
+					<ol id="music-player-list" class="music-player-list list-unstyled m-0">
+						<li data-download="http://audiojungle.net/item/a-little-on-the-wild-side/2283292" data-apple="http://audiojungle.net/item/a-little-on-the-wild-side/2283292" data-amazon="http://audiojungle.net/item/a-little-on-the-wild-side/2283292" data-mp3="http://theme.stepofweb.com/.mp3/a_little_on_the_wild_side.mp3">A little on the wild // <span class="music-song-title-info">Band Name - Album Name</span></li>
+						<li data-download="http://audiojungle.net/item/driving-in-my-car/826142" data-apple="http://audiojungle.net/item/driving-in-my-car/826142" data-amazon="http://audiojungle.net/item/driving-in-my-car/826142" data-mp3="http://theme.stepofweb.com/.mp3/driving_my_car.mp3">Driving my car // <span class="music-song-title-info">Band Name - Album Name</span></li>
+						<li data-download="http://audiojungle.net/item/fight-no-more/143561" data-apple="http://audiojungle.net/item/fight-no-more/143561" data-amazon="http://audiojungle.net/item/fight-no-more/143561" data-mp3="http://theme.stepofweb.com/.mp3/fight_no_more.mp3">Fight no more // <span class="music-song-title-info">Band Name - Album Name</span></li>
+						<li data-download="" data-apple="http://audiojungle.net/item/power-up/2508186" data-amazon="http://audiojungle.net/item/power-up/2508186" data-mp3="http://theme.stepofweb.com/.mp3/power_up.mp3">Power Up // <span class="music-song-title-info">Band Name - Album Name</span></li>
+						<li data-download="http://audiojungle.net/item/heavy-fuel/134328" data-apple="http://audiojungle.net/item/heavy-fuel/134328" data-amazon="http://audiojungle.net/item/heavy-fuel/134328" data-mp3="http://theme.stepofweb.com/.mp3/heavy_fuel.mp3">Heavy Fuel // <span class="music-song-title-info">Band Name - Album Name</span></li>
+						<li data-download="" data-apple="http://audiojungle.net/item/im-sixteen-until-i-die/128478" data-amazon="http://audiojungle.net/item/timelapse/12027034" data-mp3="http://theme.stepofweb.com/.mp3/sixteen_until_i_die.mp3">Sixteen Until I Die // <span class="music-song-title-info">Band Name - Album Name</span></li>
+					</ol>
+
+				</div>
+
+				<!-- player open -->
+				<a href="#" id="music-player-open"></a>
+			</div>
+			<!-- /AUDIO PLAYER -->
+
+
+
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
+
+					<div class="row">
+						
+						<div class="col-md-8">
+
+							<!-- Footer Logo -->
+							<img class="footer-logo footer-2" src="assets/images/_smarty/logo-footer.png" alt="" />
+
+							<!-- Small Description -->
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.</p>
+
+							<hr />
+
+							<div class="row">
+								<div class="col-md-6 col-sm-6">
+
+									<!-- Newsletter Form -->
+									<p class="mb-10">Subscribe to Our <strong>Newsletter</strong></p>
+
+									<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+										<div class="input-group">
+											<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+											<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+											<span class="input-group-btn">
+												<button class="btn btn-success" type="submit">Subscribe</button>
+											</span>
+										</div>
+									</form>
+									<!-- /Newsletter Form -->
+								</div>
+
+								<div class="col-md-6 col-sm-6 hidden-xs-down">
+
+									<!-- Social Icons -->
+									<div class="ml-50 clearfix">
+
+										<p class="mb-10">Follow Us</p>
+										<a href="#" class="social-icon social-icon-sm social-icon-transparent social-facebook float-left" data-toggle="tooltip" data-placement="top" title="Facebook">
+											<i class="icon-facebook"></i>
+											<i class="icon-facebook"></i>
+										</a>
+
+										<a href="#" class="social-icon social-icon-sm social-icon-transparent social-twitter float-left" data-toggle="tooltip" data-placement="top" title="Twitter">
+											<i class="icon-twitter"></i>
+											<i class="icon-twitter"></i>
+										</a>
+
+										<a href="#" class="social-icon social-icon-sm social-icon-transparent social-gplus float-left" data-toggle="tooltip" data-placement="top" title="Google plus">
+											<i class="icon-gplus"></i>
+											<i class="icon-gplus"></i>
+										</a>
+
+										<a href="#" class="social-icon social-icon-sm social-icon-transparent social-linkedin float-left" data-toggle="tooltip" data-placement="top" title="Linkedin">
+											<i class="icon-linkedin"></i>
+											<i class="icon-linkedin"></i>
+										</a>
+
+										<a href="#" class="social-icon social-icon-sm social-icon-transparent social-rss float-left" data-toggle="tooltip" data-placement="top" title="Rss">
+											<i class="icon-rss"></i>
+											<i class="icon-rss"></i>
+										</a>
+
+									</div>
+									<!-- /Social Icons -->
+
+								</div>
+								
+							</div>
+
+						</div>
+
+						<div class="col-md-4">
+							<h4 class="letter-spacing-1">PHOTO GALLERY</h4>
+							
+							<div class="footer-gallery lightbox" data-plugin-options='{"delegate": "a", "gallery": {"enabled": true}}'>
+								<a href="demo_files/images/thematics/music/e1-min.jpg">
+									<img src="demo_files/images/thematics/music/e1-min.jpg" width="105" height="70" alt="" />
+								</a>
+								<a href="demo_files/images/thematics/music/e2-min.jpg">
+									<img src="demo_files/images/thematics/music/e2-min.jpg" width="105" height="70" alt="" />
+								</a>
+								<a href="demo_files/images/thematics/music/e3-min.jpg">
+									<img src="demo_files/images/thematics/music/e3-min.jpg" width="105" height="70" alt="" />
+								</a>
+								<a href="demo_files/images/thematics/music/e4-min.jpg">
+									<img src="demo_files/images/thematics/music/e4-min.jpg" width="105" height="70" alt="" />
+								</a>
+								<a href="demo_files/images/thematics/music/e5-min.jpg">
+									<img src="demo_files/images/thematics/music/e5-min.jpg" width="105" height="70" alt="" />
+								</a>
+								<a href="demo_files/images/thematics/music/e6-min.jpg">
+									<img src="demo_files/images/thematics/music/e6-min.jpg" width="105" height="70" alt="" />
+								</a>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="copyright">
+					<div class="container">
+						<ul class="float-right m-0 list-inline mobile-block">
+							<li><a href="#">Terms &amp; Conditions</a></li>
+							<li>&bull;</li>
+							<li><a href="#">Privacy</a></li>
+						</ul>
+						&copy; All Rights Reserved, Company LTD
+					</div>
+				</div>
+			</footer>
+			<!-- /FOOTER -->
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script>var plugin_path = 'assets/plugins/';</script>
+		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+		<script src="assets/js/scripts.js"></script>
+		
+		<!-- STYLESWITCHER - REMOVE -->
+		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+
+		<!-- REVOLUTION SLIDER -->
+		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="assets/js/view/demo.revolution_slider.js"></script>
+
+		<!-- PAGELEVEL SCRIPTS -->
+		<script src="assets/js/view/demo.music.js"></script>
+
+	</body>
+</html>

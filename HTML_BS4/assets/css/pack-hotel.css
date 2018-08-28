@@ -1,0 +1,327 @@
+/**	PACKAGE: 	HOTEL
+
+	USED BY:	pack-hotel-*.html
+				pack-hotel-v2-*.html
+
+	COLOR: 		#534635  [replace to change the color]
+ **************************************************************** **/
+
+
+
+
+
+/** CUSTOM HEADER
+	pack-hotel-v2-*.html
+ *************************** **/
+#header.transparent:not(.fixed) { /* bordered header */
+	border-bottom: rgba(255,255,255,0.3) 1px solid !important;
+}
+
+#header.fixed { /* force header color */
+	background: #534635 !important;
+}
+
+/* main menu links color - for a good contrast */
+#header.fixed.dark #topMain li>a {
+	color: #fff !important;
+}
+#header.fixed.transparent #topMain.nav-pills>li>a {
+	color: #fff !important;
+}
+
+/* dropdown background color */
+#topNav div.submenu-color ul.dropdown-menu {
+	color: #fff;
+	background-color: #534635;
+	border-color: #534635;
+	border-top-color: rgba(0,0,0,0.2);
+}
+
+/* we want a very clean dropdown menu - no border bottom separator */
+#topNav ul.dropdown-menu li {
+	border-bottom: 0;
+}
+
+/* mobile menu background color */
+@media only screen and (max-width: 992px) {
+	#header.dark.transparent #topMain {
+	    background-color: #534635 !important;
+	}
+}
+
+
+
+
+
+
+/** CUSTOM PAGE HEADER
+	pack-hotel-v2-*.html
+ *************************** **/
+section.page-header h1 {
+	font-size: 40px !important;
+	margin-top: 40px;
+	margin-bottom:0;
+}
+@media only screen and (max-width: 992px) {
+	section.page-header h1 {
+		margin-top:0;
+		margin-bottom: 30px;
+	}
+}
+
+
+
+
+
+/** CUSTOM FOOTER
+ *************************** **/
+#footer {
+	 background: #534635;
+}
+#footer>.copyright.has-social .social-icon {
+    margin-top: 8px;
+    margin-bottom: 0;
+    line-height: 0;
+    background: #534635;
+}
+
+
+
+
+
+
+
+/** OVERLAY MENU 
+	pack-hotel-*.html
+ *************************** **/
+body>#topMain {
+	background-color: rgba(0,0,0,0.85);
+	position: fixed !important;
+}
+	/* address + logo alingnment */
+	body>#topMain .topMain-address {
+		margin-top:-25px;
+	}
+
+/* close button style - match special buttons below */
+#menu_overlay_close {
+	background-color: #000;
+	border: rgba(255,255,255,0.19) 6px solid;
+	margin-left: 0;
+	left: auto;
+	right: 10px;
+	top: 10px;
+	width: 66px;
+	height: 66px;
+	line-height: 50px;
+}
+#menu_overlay_close:hover {
+	background-color: #f6f6f6;
+	color: #000;
+}
+#menu_overlay_close>i {
+	font-size: 60px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+
+
+
+
+/** SPECIAL TOP BUTTONS [MENU|BOOKING]
+	pack-hotel-*.html
+ *************************** **/
+.specialBtn {
+	position:fixed; left:10px; top:10px;
+	display:inline-block;
+	background:rgba(255,255,255,0.1);
+	padding:6px;
+	z-index:80;
+	color: #fff;
+
+	-webkit-transition: background 600ms;
+	   -moz-transition: background 600ms;
+		 -o-transition: background 600ms;
+			transition: background 600ms;
+}
+.specialBtn:hover,
+.specialBtn:active {
+	background:#fff;
+}
+
+.specialBtn>i,
+.specialBtn>span {
+	display:block;
+	min-width:54px; height:54px;
+	background-color:#000;
+
+	-webkit-transition: background 300ms;
+	   -moz-transition: background 300ms;
+		 -o-transition: background 300ms;
+			transition: background 300ms;
+}
+.specialBtn:hover>i,
+.specialBtn:hover>span {
+	background-color:#f6f6f6;
+}
+
+.specialBtn.specialBtn-Burger>i {
+	background-image:url('data:image/gif;base64,R0lGODlhNwA3AJEAAAAAAP///////wAAACH5BAEAAAIALAAAAAA3ADcAAAJUlI+py+0Po5y02ouz3rz7D4biSJbmiabqyrZhAMfyTNc1Zue6je/+7goKh8Si8dj6KXmXpVPWezqR1Kr1is2apM8o9+f9ArXksvmMTqvX7Lb7DS8AADs=');
+	background-repeat:no-repeat;
+	background-position:center;
+}
+.specialBtn.specialBtn-Burger:hover>i {
+	background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAA3CAYAAACo29JGAAAARklEQVRoge3WsQ0AIAwDsML/P8MLdECoxZ4zJFsiAAAAqGgksutai7yj3vN2i5dajwPgex5KVa3HAfA9D6Wq1uMAAACoaQMxSAMQNhNmmQAAAABJRU5ErkJggg==');
+
+}
+
+/* fix button focus */
+.specialBtn.specialBtn-booking:focus {
+	color: #fff;
+}
+.specialBtn.specialBtn-booking:hover:focus {
+	color: #000;
+}
+
+
+/* position */
+.specialBtn-left {
+	left: 10px;
+	right: auto;
+}
+.specialBtn-right {
+	left: auto;
+	right: 10px;
+}
+
+
+/* booking button */
+.specialBtn.specialBtn-booking>span>i {
+    font-size: 30px !important;
+    padding-right: 12px;
+    float: left;
+
+}
+.specialBtn.specialBtn-booking>span {
+	padding: 10px;
+}
+.specialBtn.specialBtn-booking>span>small {
+    font-size: 10px;
+    display: block;
+    text-align: right;
+    margin-top: -4px;
+    color:#999;
+}
+
+
+
+
+
+
+
+/** BOOK ONLINE | RESERVATION
+ *************************** **/
+ul.booking-option-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+	ul.booking-option-list>li {
+		border: #dee5ed 1px solid;
+		margin-bottom: 10px;
+	}
+	ul.booking-option-list>li>label {
+		padding: 14px 20px;
+		margin: 0;
+		line-height: 1;
+		cursor: pointer;
+	}
+		ul.booking-option-list>li h3 {
+			font-size: 15px;
+			margin: 0;
+		}
+		ul.booking-option-list>li>label>i {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			left: auto;
+			width: 30px;
+			height: 30px;
+			margin: 0;
+			background-color: rgba(0,0,0,0.03);
+			border-width: 1px;
+			
+			-webkit-border-radius: 0 !important;
+					border-radius: 0 !important;
+		}
+			ul.booking-option-list>li .radio input + i:after {
+				top:5px;
+				left:5px;
+				content: "\f00c";
+				font: normal normal normal 17px/1 'FontAwesome';
+				background-color: transparent;
+			}
+
+
+form .booking-form-highlight {
+	background-color: rgba(0,0,0,0.03);
+	border: rgba(0,0,0,0.03) 1px solid;
+	padding: 15px;
+}
+
+
+
+
+
+/** ROOMS
+ *************************** **/
+.room-info { /* pack-hotel-rooms-detail.html */
+	background-color: rgba(0,0,0,0.06);
+	padding: 20px;
+	border-radius: 3px;
+}
+.room-info ul>li {
+	display: table;
+}
+.room-info ul>li>b {
+	display: inline-block;
+	width: 110px;
+}
+@media only screen and (min-width: 768px) {
+	.cards-rooms p.card-text { /* pack-hotel-rooms.html */
+		height: 130px;
+		display: block;
+		overflow: hidden;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** REWRITES : TUNING
+ *************************** **/
+.btn.btn-primary {
+	 background: #534635;
+}
+
+.btn.btn-primary {
+	border: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+	.container {
+		width: 100%;
+	}
+}

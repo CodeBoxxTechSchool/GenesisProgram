@@ -1,0 +1,97 @@
+/**	PACKAGE: 	CAFFE
+
+	USED BY:	pack-caffe-*.html
+ **************************************************************** **/
+/* menu sidebar */
+body.menu-vertical #mainMenu.sidebar-vertical.sidebar-dark {
+	background-color: #292c30 !important;
+}
+
+/* mobile bar */
+body.menu-vertical #mainMenu.sidebar-vertical.sidebar-dark .sidebar-nav .navbar ul {
+	background-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #999;
+}
+/* mobile button */
+.navbar-default .navbar-toggle {
+	margin-right: 0;
+	margin-left: 0;
+	text-align: center;
+}
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+	
+}
+
+
+
+/* menu links */
+body.menu-vertical #mainMenu.sidebar-vertical .navbar-default .navbar-nav>li>a {
+	font-size:14px;
+	text-transform: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+body.menu-vertical #mainMenu.sidebar-vertical.sidebar-dark .sidebar-nav .navbar ul,
+body.menu-vertical #mainMenu.sidebar-vertical .navbar-default .navbar-nav>li>a {
+	border-color: rgba(255,255,255,0.06) !important;
+}
+
+
+/* logo */
+@media only screen and (max-width: 768px) {
+	img.logo-xs-half {
+		max-height: 80px;
+		width: auto !important;
+	}
+}
+
+
+
+/* MISC */
+.btn-callout-custom {
+	background-color: rgba(0,0,0,0.03);
+}
+
+
+/* foods & drinks */
+.cover-column-title {
+	background-color: #292c30;
+	color:#fff;
+	margin: 0; 
+	padding: 15px;
+	text-align: center;
+}
+	.cover-column-title>small {
+		font-size:13px;
+		display: block;
+		color: #fff;
+	}
+.cover-column {
+	background-position: left top; 
+	background-repeat: no-repeat; 
+	background-size: cover; 
+
+	min-height: 200px; 
+	height: 100%;
+}
+
+
+/* FOOTER */
+#footer {
+	border-top: rgba(0,0,0,0.1) 1px solid;
+	width: 100%;
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 20px 0 !important;
+	background: #292c30 !important;
+}
+#footer>.container {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}

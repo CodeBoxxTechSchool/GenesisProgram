@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Smarty - Multipurpose + Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- SWIPER SLIDER -->
+		<link href="assets/plugins/slider.swiper/dist/css/swiper.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/header-0.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation">
+
+		<!-- SLIDE TOP -->
+		<div id="slidetop">
+
+			<div class="container">
+				
+				<div class="row">
+
+					<div class="col-md-4">
+						<h6><i class="icon-heart"></i> WHY SMARTY?</h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. </p>
+					</div>
+
+					<div class="col-md-4">
+						<h6><i class="fa-facheck"></i> RECENTLY VISITED</h6>
+						<ul class="list-unstyled">
+							<li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet</a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> This is a very long text, very very very very very very very very very very very very </a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet</a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> Dolor sit amet,consectetur adipiscing elit amet</a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet,consectetur adipiscing elit</a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-4">
+						<h6><i class="icon-envelope"></i> CONTACT INFO</h6>
+						<ul class="list-unstyled">
+							<li><b>Address:</b> PO Box 21132, Here Weare St, <br /> Melbourne, Vivas 2355 Australia</li>
+							<li><b>Phone:</b> 1-800-565-2390</li>
+							<li><b>Email:</b> <a href="mailto:support@yourname.com">support@yourname.com</a></li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+
+			<a class="slidetop-toggle" href="#"><!-- toggle button --></a>
+
+		</div>
+		<!-- /SLIDE TOP -->
+
+
+		<!-- 
+			OVERLAY NAVIGATION 
+			Outside of #wrapper
+			
+			CSS HEADER REQUIRED:
+			<link href="assets/css/header-0.css" rel="stylesheet" type="text/css" />
+		-->
+		<div id="topMain">
+			<div class="menu-content">
+				<div class="container">
+
+					<!-- menu close -->
+					<button id="menu_overlay_close">
+						<i class="fa fa-remove"></i>
+					</button><!-- /menu close -->
+
+					<div class="row">
+						<div class="col-md-8 col-12 offset-md-2">
+
+							<div class="row">
+								<div class="menu-list col-md-6 col-sm-6">
+
+									<ul class="list-unstyled font-raleway">
+										<li class="active"><!-- HOME -->
+											<a href="index.html">
+												HOME
+											</a>
+										</li>
+										<li><!-- ABOUT -->
+											<a href="index.html">
+												ABOUT
+											</a>
+										</li>
+										<li><!-- BLOG -->
+											<a href="index.html">
+												BLOG
+											</a>
+										</li>
+										<li><!-- SERVICES -->
+											<a href="index.html">
+												SERVICES
+											</a>
+										</li>
+										<li><!-- CONTACT -->
+											<a href="index.html">
+												CONTACT
+											</a>
+										</li>
+									</ul>
+
+								</div>
+
+								<div class="text-right col-md-6 col-sm-6 hidden-xs-down">
+									<div class="letter-spacing-2 fs-16 fw-300">
+										<p>office@yourdomain.com</p>
+										<p>
+											Tel: 	1800-123-467<br />
+													1800-887-897
+										</p>
+										<p>
+											PO Box 21132<br>
+											Here Weare St, Melbourne<br>
+											Vivas 2355 Australia<br>
+										</p>
+										<p><!-- SOCAL ICONS -->
+											<a href="#" class="social-icon social-icon-sm social-icon-transparent social-facebook" data-toggle="tooltip" data-placement="bottom" title="Facebook">
+												<i class="icon-facebook"></i>
+												<i class="icon-facebook"></i>
+											</a>
+											<a href="#" class="social-icon social-icon-sm social-icon-transparent social-twitter" data-toggle="tooltip" data-placement="bottom" title="Twitter">
+												<i class="icon-twitter"></i>
+												<i class="icon-twitter"></i>
+											</a>
+											<a href="#" class="social-icon social-icon-sm social-icon-transparent social-gplus" data-toggle="tooltip" data-placement="bottom" title="Google Plus">
+												<i class="icon-gplus"></i>
+												<i class="icon-gplus"></i>
+											</a>
+											<a href="#" class="social-icon social-icon-sm social-icon-transparent social-linkedin" data-toggle="tooltip" data-placement="bottom" title="Linkedin">
+												<i class="icon-linkedin"></i>
+												<i class="icon-linkedin"></i>
+											</a>
+											<a href="#" class="social-icon social-icon-sm social-icon-transparent social-flickr" data-toggle="tooltip" data-placement="bottom" title="Flickr">
+												<i class="icon-flickr"></i>
+												<i class="icon-flickr"></i>
+											</a>
+										</p><!-- /SOCAL ICONS -->
+									</div>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- /OVERLAY NAVIGATION -->
+
+
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+			<div id="header" class="navbar-toggleable-md sticky clearfix">
+				<div id="topNav" class="container">
+
+					<!-- Logo -->
+					<a class="logo float-left" href="index.html">
+						<img src="assets/images/_smarty/logo_dark.png" alt="" />
+					</a>
+
+					<div class="float-right">
+
+							<!-- BUTTONS -->
+							<ul class="topNavBtn list-inline">
+
+								<li>
+									<button id="menu_overlay_open">
+										<span></span>
+									</button>
+								</li>
+
+							</ul><!-- /BUTTONS -->
+
+					</div>
+
+				</div>
+			</div>
+
+
+
+
+
+			<!-- 
+				SLIDER
+
+				Classes:
+					.fullheight = full height slider
+			-->
+			<section id="slider" class="fullheight">
+
+				<!--
+					SWIPPER SLIDER PARAMS
+					
+					data-effect="slide|fade|coverflow"
+					data-autoplay="2500|false" 						(remove to disable autoplay)
+				-->
+				<div class="swiper-container" data-effect="slide" data-autoplay="false">
+					<div class="swiper-wrapper">
+
+						<!-- SLIDE 1 -->
+						<div class="swiper-slide" style="background-image: url('demo_files/images/1200x800/24-min.jpg');">
+							<div class="overlay dark-4"><!-- dark overlay [1 to 9 opacity] --></div>
+							
+							<div class="display-table">
+								<div class="display-table-cell vertical-align-middle">
+									<div class="container">
+
+										<div class="row">
+											<div class="text-center col-md-8 col-12 offset-md-2">
+
+												<h1 class="bold font-raleway wow fadeInUp" data-wow-delay="0.4s">WELCOME TO SMARTY</h1>
+												<p class="lead font-lato fw-300 hidden-xs-down wow fadeInUp" data-wow-delay="0.6s">Porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam.</p>
+												<a class="btn btn-default btn-lg wow fadeIn" data-wow-delay="1.5s" href="#">PURCHASE NOW</a>
+
+											</div>
+										</div>
+							
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						<!-- /SLIDE 1 -->
+
+
+						<!-- SLIDE 2 -->
+						<div class="swiper-slide">
+							<div class="overlay dark-3"><!-- dark overlay [1 to 9 opacity] --></div>
+
+							<div class="slider-video">
+								<video poster="demo_files/images/video/back.jpg" preload="auto" loop autoplay muted>
+									<source src='demo_files/images/video/back.webm' type='video/webm' />
+									<source src='demo_files/images/video/back.mp4' type='video/mp4' />
+								</video>
+							</div>
+
+
+							<div class="display-table">
+								<div class="display-table-cell vertical-align-middle">
+									<div class="container">
+
+										<div class="row">
+											<div class="col-md-5 col-12">
+
+												<h1 class="bold font-raleway wow fadeInUp" data-wow-delay="0.4s">POWERFUL MULTIPURPOSE</h1>
+												<p class="lead font-lato fw-300 hidden-xs-down wow fadeInUp" data-wow-delay="0.6s">Porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non.</p>
+												<a class="btn btn-default btn-lg hidden-xs-down wow fadeIn" data-wow-delay="1.5s" href="#">PURCHASE NOW</a>
+
+											</div>
+											<div class="col-md-7 hidden-xs-down text-right">
+												<img class="img-fluid" src="demo_files/images/fullscreen-video.png" alt="" />
+											</div>
+										</div>
+							
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						<!-- /SLIDE 2 -->
+
+
+						<!-- SLIDE 3 -->
+						<div class="swiper-slide" style="background-image: url('demo_files/images/1200x800/10-min.jpg');">
+							<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
+							
+							<div class="display-table">
+								<div class="display-table-cell vertical-align-middle">
+									<div class="container">
+
+										<div class="row">
+											<div class="text-center col-md-8 col-12 offset-md-2">
+
+												<h1 class="bold font-raleway wow fadeInUp" data-wow-delay="0.4s">WELCOME TO SMARTY</h1>
+												<p class="lead font-lato fw-300 hidden-xs-down wow fadeInUp" data-wow-delay="0.6s">Porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam.</p>
+												<a class="btn btn-default btn-lg wow fadeIn" data-wow-delay="1.5s" href="#">PURCHASE NOW</a>
+
+											</div>
+										</div>
+							
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						<!-- /SLIDE 3 -->
+
+					</div>
+
+					<!-- Swiper Pagination -->
+					<div class="swiper-pagination"></div>
+
+					<!-- Swiper Arrows -->
+					<div class="swiper-button-next"><i class="fa fa-angle-right"></i></div>
+					<div class="swiper-button-prev"><i class="fa fa-angle-left"></i></div>
+				</div>
+					
+			</section>
+			<!-- /SLIDER -->
+
+
+
+			<!-- Subscribe -->
+			<section class="alternate section-xs">
+				<div class="container">
+
+					<div class="row text-center">
+						<div class="col-lg-4 col-sm-8 offset-lg-4 offset-md-2 offset-sm-2">
+
+							<p class="fs-12 text-muted m-0">Please note: we never sell your email address!</p>
+							<h5 class="letter-spacing-1">SUBSCRIBE TO SMARTY NEWSLETTER</h5>
+							<div class="input-group">
+								<input id="newsletter_subscribe_email" type="text" class="form-control" placeholder="Type your email...">
+								<span class="input-group-btn">
+									<button id="newsletter_subscribe_btn" class="btn btn-primary" type="button">SUBSCRIBE</button>
+								</span>
+							</div><!-- /input-group -->
+
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+			<!-- /Subscribe -->
+
+
+
+			<!-- -->
+			<section>
+				<div class="container">
+					
+					<div class="row">
+					
+						<div class="col-md-4">
+							
+							<div class="heading-title heading-border-bottom heading-color">
+								<h3>Passion</h3>
+							</div>
+							
+							<p>Fabulas definitiones ei pri per recteque hendrerit scriptorem in errem scribentur mel fastidii propriae philosophia cu mea. Utinam ipsum everti necessitatibus at fuisset splendide.</p>
+							
+							<a href="#">
+								Read
+								<!-- /word rotator -->
+								<span class="word-rotator" data-delay="2000">
+									<span class="items">
+										<span>more</span>
+										<span>now</span>
+									</span>
+								</span><!-- /word rotator -->
+								<i class="glyphicon glyphicon-menu-right fs-12"></i>
+							</a>
+
+						</div>
+
+						<div class="col-md-4">
+							<div class="heading-title heading-border-bottom heading-color">
+								<h3>Precision</h3>
+							</div>
+							<p>Fabulas definitiones ei pri per recteque hendrerit scriptorem in errem scribentur mel fastidii propriae philosophia cu mea. Utinam ipsum everti necessitatibus at fuisset splendide.</p>
+
+							<a href="#">
+								Read
+								<!-- /word rotator -->
+								<span class="word-rotator" data-delay="2000">
+									<span class="items">
+										<span>more</span>
+										<span>now</span>
+									</span>
+								</span><!-- /word rotator -->
+								<i class="glyphicon glyphicon-menu-right fs-12"></i>
+							</a>
+
+						</div>
+
+						<div class="col-md-4">
+							<div class="heading-title heading-border-bottom heading-color">
+								<h3>Simplicity</h3>
+							</div>
+							<p>Fabulas definitiones ei pri per recteque hendrerit scriptorem in errem scribentur mel fastidii propriae philosophia cu mea. Utinam ipsum everti necessitatibus at fuisset splendide.</p>
+
+							<a href="#">
+								Read
+								<!-- /word rotator -->
+								<span class="word-rotator" data-delay="2000">
+									<span class="items">
+										<span>more</span>
+										<span>now</span>
+									</span>
+								</span><!-- /word rotator -->
+								<i class="glyphicon glyphicon-menu-right fs-12"></i>
+							</a>
+
+						</div>
+
+					</div>
+					
+				</div>
+			</section>
+			<!-- / -->
+
+
+
+
+
+
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
+
+					<div class="row">
+						
+						<div class="col-md-3">
+							<!-- Footer Logo -->
+							<img class="footer-logo" src="assets/images/_smarty/logo-footer.png" alt="" />
+
+							<!-- Small Description -->
+							<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+
+							<!-- Contact Address -->
+							<address>
+								<ul class="list-unstyled">
+									<li class="footer-sprite address">
+										PO Box 21132<br>
+										Here Weare St, Melbourne<br>
+										Vivas 2355 Australia<br>
+									</li>
+									<li class="footer-sprite phone">
+										Phone: 1-800-565-2390
+									</li>
+									<li class="footer-sprite email">
+										<a href="mailto:support@yourname.com">support@yourname.com</a>
+									</li>
+								</ul>
+							</address>
+							<!-- /Contact Address -->
+
+						</div>
+
+						<div class="col-md-3">
+
+							<!-- Latest Blog Post -->
+							<h4 class="letter-spacing-1">LATEST NEWS</h4>
+							<ul class="footer-posts list-unstyled">
+								<li>
+									<a href="#">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue</a>
+									<small>29 June 2017</small>
+								</li>
+								<li>
+									<a href="#">Nullam id dolor id nibh ultricies</a>
+									<small>29 June 2017</small>
+								</li>
+								<li>
+									<a href="#">Duis mollis, est non commodo luctus</a>
+									<small>29 June 2017</small>
+								</li>
+							</ul>
+							<!-- /Latest Blog Post -->
+
+						</div>
+
+						<div class="col-md-2">
+
+							<!-- Links -->
+							<h4 class="letter-spacing-1">EXPLORE SMARTY</h4>
+							<ul class="footer-links list-unstyled">
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Our Services</a></li>
+								<li><a href="#">Our Clients</a></li>
+								<li><a href="#">Our Pricing</a></li>
+								<li><a href="#">Smarty Tour</a></li>
+								<li><a href="#">Contact Us</a></li>
+							</ul>
+							<!-- /Links -->
+
+						</div>
+
+						<div class="col-md-4">
+
+							<!-- Newsletter Form -->
+							<h4 class="letter-spacing-1">KEEP IN TOUCH</h4>
+							<p>Subscribe to Our Newsletter to get Important News &amp; Offers</p>
+
+							<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+									<span class="input-group-btn">
+										<button class="btn btn-success" type="submit">Subscribe</button>
+									</span>
+								</div>
+							</form>
+							<!-- /Newsletter Form -->
+
+							<!-- Social Icons -->
+							<div class="mt-20">
+								<a href="#" class="social-icon social-icon-border social-facebook float-left" data-toggle="tooltip" data-placement="top" title="Facebook">
+
+									<i class="icon-facebook"></i>
+									<i class="icon-facebook"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-twitter float-left" data-toggle="tooltip" data-placement="top" title="Twitter">
+									<i class="icon-twitter"></i>
+									<i class="icon-twitter"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-gplus float-left" data-toggle="tooltip" data-placement="top" title="Google plus">
+									<i class="icon-gplus"></i>
+									<i class="icon-gplus"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-linkedin float-left" data-toggle="tooltip" data-placement="top" title="Linkedin">
+									<i class="icon-linkedin"></i>
+									<i class="icon-linkedin"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-rss float-left" data-toggle="tooltip" data-placement="top" title="Rss">
+									<i class="icon-rss"></i>
+									<i class="icon-rss"></i>
+								</a>
+					
+							</div>
+							<!-- /Social Icons -->
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="copyright">
+					<div class="container">
+						<ul class="float-right m-0 list-inline mobile-block">
+							<li><a href="#">Terms &amp; Conditions</a></li>
+							<li>&bull;</li>
+							<li><a href="#">Privacy</a></li>
+						</ul>
+						&copy; All Rights Reserved, Company LTD
+					</div>
+				</div>
+			</footer>
+			<!-- /FOOTER -->
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script>var plugin_path = 'assets/plugins/';</script>
+		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+		<script src="assets/js/scripts.js"></script>
+		
+		<!-- STYLESWITCHER - REMOVE -->
+		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+		
+		<!-- SWIPER SLIDER -->
+		<script src="assets/plugins/slider.swiper/dist/js/swiper.min.js"></script>
+		<script src="assets/js/view/demo.swiper_slider.js"></script>
+
+	</body>
+</html>

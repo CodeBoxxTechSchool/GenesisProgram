@@ -1,0 +1,2510 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Mega Shop</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Cairo:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/color_scheme/blue.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/header-6.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/pack-megashop.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/custom-forms-v2.css" rel="stylesheet" type="text/css" />
+
+
+		<!-- PRELOAD GALLERY IMAGES : OPTIONAL -->
+		<link rel="prefetch" href="demo_files/images/packs/megashop/product_view/p1-min.jpg">
+		<link rel="prefetch" href="demo_files/images/packs/megashop/product_view/p2-min.jpg">
+		<link rel="prefetch" href="demo_files/images/packs/megashop/product_view/p3-min.jpg">
+		<link rel="prefetch" href="demo_files/images/packs/megashop/product_view/p4-min.jpg">
+		<link rel="prefetch" href="demo_files/images/packs/megashop/product_view/p5-min.jpg">
+		<link rel="prefetch" href="demo_files/images/packs/megashop/product_view/p6-min.jpg">
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		.smoothscroll 			= create a browser smooth scroll
+		.enable-animation		= enable WOW animations
+		.boxed layout-dark		= black friday dark layout (used with #header.header-dark)
+		.boxed					= boxed layout
+	-->
+	<body class="smoothscroll enable-animation">
+
+
+
+		<!-- 
+			# HEADER V2 # 
+			- very differnt from other headers -
+
+
+			+ HEADER STYLE
+				.header-light
+				.header-dark
+
+
+			+ HEADER SHADOWS
+				.header-shadow-1
+
+
+			+ MISC
+				.header-fixed				= enable sticky header
+
+		-->
+		<nav id="header" class="header-light header-fixed header-shadow-1">
+			<div class="container">
+
+				<!-- 
+					MOBILE : NAVIGATION TOGGLE 
+					* always before .header-logo
+					 data-text="MENIU"
+				-->
+				<button class="nav-toggle"></button>
+
+
+
+				<!-- 
+					LOGO 
+				-->
+				<a class="header-logo" href="pack-megashop-home-1.html">
+					<img src="demo_files/images/packs/megashop/logo_dark.png" height="60" alt="">
+				</a>
+
+
+				<!--
+					+ LAYOUT
+						.header-buttons-bordered
+				-->
+				<ul class="list-inline header-buttons">
+					<li class="list-inline-item">
+						<a href="pack-megashop-cart.html">
+							<i class="fa fa-opencart"></i>
+							<span class="badge badge-default">0</span>
+							my cart
+						</a>
+					</li>
+					<li class="list-inline-item hidden-xs-down">
+						<a href="pack-megashop-account-wishlist.html">
+							<i class="fa fa-heart-o"></i>
+							<span class="badge badge-default">0</span>
+							wishlist
+						</a>
+					</li>
+					<li class="list-inline-item header-button-arrow">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+							<i class="fa fa-user-o"></i>
+							my account
+						</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<span><i class="fa fa-user"></i> John Doe</span>
+							<div class="pl-15 pr-15 pt-15 pb-15">
+								<h4 class="fs-13 fw-400 mb-10">Welcome to Smarty!</h4>
+								<a href="pack-megashop-sign-in.html" class="btn btn-primary btn-sm btn-block fw-300">SIGN IN</a>
+								
+								<div class="clearfix mt-8">
+									<span class="fs-11 pt-3 float-left">OR SIGN IN WITH:</span>
+
+									<div class="float-right">
+										<a target="_blank" class="social-icon social-icon-sm social-facebook" href="#">
+											<i class="fa fa-facebook"></i>
+											<i class="fa fa-facebook"></i>
+										</a>
+										<a target="_blank" class="social-icon social-icon-sm social-gplus" href="#">
+											<i class="fa fa-google-plus"></i>
+											<i class="fa fa-google-plus"></i>
+										</a>
+									</div>
+								</div>
+
+
+								<a href="pack-megashop-sign-up.html" class="btn btn-danger btn-sm btn-block fw-300">SIGN UP</a>
+
+							</div>
+
+							<hr>
+
+							<a class="dropdown-item" href="pack-megashop-account-wishlist.html">My Wishlist</a>
+							<a class="dropdown-item" href="pack-megashop-account-orders.html">My Orders</a>
+							<a class="dropdown-item" href="pack-megashop-account-settings.html">Account Settings</a>
+							<a class="dropdown-item dropdown-custom-icon dropdown-myaccount-logout" href="#">
+								<i class="fa fa-power-off"></i> 
+								<b>Log Out</b>
+							</a>
+						</div>
+					</li>
+				</ul>
+
+
+				<form action="#" method="get" class="search-global hidden-sm-down">
+					<input type="text" name="s" class="form-control" placeholder="I'm shopping for...">
+					<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+				</form>
+
+
+				<!--
+					.main-nav-bordered
+				-->
+				<nav class="main-nav main-nav-toggle">
+
+					<div class="main-nav-mobile-header clearfix">
+						<button class="nav-toggle-close"></button>
+						<img src="demo_files/images/packs/megashop/logo_dark.png" height="60" alt="">
+					</div>
+
+					<div class="main-nav-mobile-scroll">
+						<ul class="list-unstyled mb-0">
+
+							<li class="main-nav-search hidden-sm-up">
+								<form action="#" method="get" class="search-global input-group mb-0">
+									<input type="text" name="s" class="form-control" placeholder="I'm shopping for...">
+									<span class="input-group-btn">
+										<button class="btn btn-default" type="submit">
+											<i class="fa fa-search"></i>
+										</button>
+									</span>
+								</form>
+							</li>
+
+							<li>
+								<span>
+									<a href="#" data-text="&ndash; EXPLORE ALL">
+										CATEGORIES
+									</a>
+								</span>
+							</li>
+
+							<li class="main-nav-item">
+								<a href="#" class="text-danger">
+									<i class="fa fa-circle-o-notch text-danger"></i> 
+									MEGASHOP PAGES
+								</a>
+
+								<div class="main-nav-submenu">
+									<h3><i class="fa fa-star-o"></i> MEGASHOP PAGES</h3>
+									<ul class="list-unstyled">
+										<li><a href="pack-megashop-home-1.html">Home - #1 - boxed</a></li>
+										<li><a href="pack-megashop-home-1-f.html">Home - #1 - fluid</a></li>
+										<li><a href="pack-megashop-home-2.html">Home - #2 - boxed</a></li>
+										<li><a href="pack-megashop-home-2-f.html">Home - #2 - fluid</a></li>
+										<li><a href="pack-megashop-home-3.html">Home - #3 - boxed</a></li>
+										<li><a href="pack-megashop-home-3-f.html">Home - #3 - fluid</a></li>
+										<li><a href="pack-megashop-home-0.html">Home - Black Friday - boxed</a></li>
+										<li><a href="pack-megashop-home-0-f.html">Home - Black Friday - fluid</a></li>
+										<li><hr></li>
+										<li><a href="pack-megashop-list-1.html">Product List - 1</a></li>
+										<li><a href="pack-megashop-list-2.html">Product List - 2</a></li>
+										<li><hr></li>
+										<li><a href="pack-megashop-single-1.html">Product View - #1 - boxed</a></li>
+										<li><a href="pack-megashop-single-2.html">Product View - #2 - fluid</a></li>
+										<li><hr></li>
+										<li><a href="pack-megashop-cart.html">Cart</a></li>
+										<li><a href="pack-megashop-cart-checkout.html">Checkout</a></li>
+										<li><hr></li>
+										<li><a href="pack-megashop-about-us.html">Page - About Us</a></li>
+										<li><a href="pack-megashop-sign-in.html">Page - Sign In</a></li>
+										<li><a href="pack-megashop-sign-up.html">Page - Sign Up</a></li>
+										<li><a href="pack-megashop-contact.html">Page - Contact</a></li>
+									</ul>
+								</div>
+
+							</li>
+
+							<!-- 
+								.main-nav-expanded = expanded mega menu
+							-->
+							<li class="main-nav-item main-nav-expanded">
+								<a href="#">
+									<i class="fa fa-circle-o-notch"></i> 
+									Women's Clothing
+								</a>
+
+								<div class="main-nav-submenu">
+									<div class="row">
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">Dresses</a></li>
+												<li><a href="#">Bouses &amp; Shirts</a></li>
+												<li><a href="#">T-Shirts</a></li>
+												<li><a href="#">Socks</a></li>
+												<li><a href="#">Rompers</a></li>
+												<li><a href="#"><span class="badge badge-danger float-right">NEW</span> Jumpsuits</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Bottoms</a></li>
+												<li><a href="#">Jeans</a></li>
+												<li><a href="#">Pants</a></li>
+												<li><a href="#">Wide LLeg Pants</a></li>
+												<li><a href="#">Shorts</a></li>
+												<li><a href="#">Leggins</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Intimates &amp; Sleepers</a></li>
+												<li><a href="#">Panties</a></li>
+												<li><a href="#">Pajamas Sets</a></li>
+												<li><a href="#">Nightgowns &amp; Sleepshirts</a></li>
+												<li><a href="#">Bustiers &amp; Corsets</a></li>
+												<li><a href="#">Bra &amp; Brief Sets</a></li>
+											</ul>
+										</div>
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">Outwear &amp; Jackets</a></li>
+												<li><a href="#">Leather &amp; Suede</a></li>
+												<li><a href="#">Blazers</a></li>
+												<li><a href="#">Parkas</a></li>
+												<li><a href="#">Down Coats</a></li>
+												<li><a href="#">Basic Jackets</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Weddings &amp; Events</a></li>
+												<li><a href="#">Wedding Dresses</a></li>
+												<li><a href="#">Evening Dresses</a></li>
+												<li><a href="#">Prom Dresses</a></li>
+												<li><a href="#">Cocktail Dresses</a></li>
+												<li><a href="#"><span class="badge badge-success float-right">PROMO</span> Bridesmaid Dresses</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Accessories</a></li>
+												<li><a href="#">Sunglasses</a></li>
+												<li><a href="#">Baseball Caps</a></li>
+												<li><a href="#">Scarves &amp; Wraps</a></li>
+												<li><a href="#">Belts</a></li>
+												<li><a href="#">Hair Accessories</a></li>
+											</ul>
+										</div>
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">New Arrivals</a></li>
+												<li><a href="#">Cotton Jumpsuits</a></li>
+												<li><a href="#">Black Jeans</a></li>
+												<li><a href="#">Hats &amp; Caps</a></li>
+												<li><a href="#">Shorts</a></li>
+												<li><a href="#">Leggins</a></li>
+												<li><a href="#">Polo Shirts</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Stripe Dresses</a></li>
+												<li><a href="#">Sequin Dresses</a></li>
+												<li><a href="#">Denim Shirts</a></li>
+												<li><a href="#">Letter Print Tee</a></li>
+												<li><a href="#">Hair Accessories</a></li>
+												<li><a href="#">Sexy Bras</a></li>
+												<li><a href="#">Tube Tops</a></li>
+												<li><a href="#">Rompers</a></li>
+											</ul>
+
+										</div>
+
+										<div class="col-md-3 text-right hidden-sm-down">
+
+											<a class="mt-15 block" href="#">
+												<img class="img-fluid" src="demo_files/images/packs/megashop/banners/banner_menu_1col.png" alt="">
+											</a>
+										</div>
+
+									</div>
+
+								</div>
+							</li>
+
+							<!-- 
+								.main-nav-expanded = expanded mega menu
+							-->
+							<li class="main-nav-item main-nav-expanded">
+								<a href="#">
+									<i class="fa fa-circle-o-notch"></i> 
+									Men's Clothing
+								</a>
+
+								<div class="main-nav-submenu">
+									<div class="row">
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">Dresses</a></li>
+												<li><a href="#">Bouses &amp; Shirts</a></li>
+												<li><a href="#">T-Shirts</a></li>
+												<li><a href="#">Socks</a></li>
+												<li><a href="#">Rompers</a></li>
+												<li><a href="#"><span class="badge badge-danger float-right">NEW</span> Jumpsuits</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Bottoms</a></li>
+												<li><a href="#">Jeans</a></li>
+												<li><a href="#">Pants</a></li>
+												<li><a href="#">Wide LLeg Pants</a></li>
+												<li><a href="#">Shorts</a></li>
+												<li><a href="#">Leggins</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Intimates &amp; Sleepers</a></li>
+												<li><a href="#">Panties</a></li>
+												<li><a href="#">Pajamas Sets</a></li>
+												<li><a href="#">Nightgowns &amp; Sleepshirts</a></li>
+												<li><a href="#">Bustiers &amp; Corsets</a></li>
+												<li><a href="#">Bra &amp; Brief Sets</a></li>
+											</ul>
+										</div>
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">Outwear &amp; Jackets</a></li>
+												<li><a href="#">Leather &amp; Suede</a></li>
+												<li><a href="#">Blazers</a></li>
+												<li><a href="#">Parkas</a></li>
+												<li><a href="#">Down Coats</a></li>
+												<li><a href="#">Basic Jackets</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Weddings &amp; Events</a></li>
+												<li><a href="#">Wedding Dresses</a></li>
+												<li><a href="#">Evening Dresses</a></li>
+												<li><a href="#">Prom Dresses</a></li>
+												<li><a href="#">Cocktail Dresses</a></li>
+												<li><a href="#"><span class="badge badge-success float-right">PROMO</span> Bridesmaid Dresses</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Accessories</a></li>
+												<li><a href="#">Sunglasses</a></li>
+												<li><a href="#">Baseball Caps</a></li>
+												<li><a href="#">Scarves &amp; Wraps</a></li>
+												<li><a href="#">Belts</a></li>
+												<li><a href="#">Hair Accessories</a></li>
+											</ul>
+										</div>
+
+										<div class="col-md-6 text-right hidden-sm-down">
+
+											<a class="mt-15 block" href="#">
+												<img class="img-fluid" src="demo_files/images/packs/megashop/banners/banner_menu_2_2col.png" alt="">
+											</a>
+										</div>
+
+									</div>
+
+								</div>
+							</li>
+
+							<!-- 
+								.main-nav-expanded = expanded mega menu
+							-->
+							<li class="main-nav-item main-nav-expanded">
+								<a href="#">
+									<i class="fa fa-circle-o-notch"></i> 
+									Toys &amp; Games
+								</a>
+
+								<div class="main-nav-submenu">
+									<div class="row">
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">Outwear &amp; Jackets</a></li>
+												<li><a href="#">Leather &amp; Suede</a></li>
+												<li><a href="#">Blazers</a></li>
+												<li><a href="#">Parkas</a></li>
+												<li><a href="#">Down Coats</a></li>
+												<li><a href="#">Basic Jackets</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Weddings &amp; Events</a></li>
+												<li><a href="#">Wedding Dresses</a></li>
+												<li><a href="#">Evening Dresses</a></li>
+												<li><a href="#">Prom Dresses</a></li>
+												<li><a href="#">Cocktail Dresses</a></li>
+												<li><a href="#"><span class="badge badge-success float-right">PROMO</span> Bridesmaid Dresses</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Accessories</a></li>
+												<li><a href="#">Sunglasses</a></li>
+												<li><a href="#">Baseball Caps</a></li>
+												<li><a href="#">Scarves &amp; Wraps</a></li>
+												<li><a href="#">Belts</a></li>
+												<li><a href="#">Hair Accessories</a></li>
+											</ul>
+										</div>
+
+										<div class="col-md-9 text-right hidden-sm-down">
+
+											<a class="mt-15 block" href="#">
+												<img class="img-fluid" src="demo_files/images/packs/megashop/banners/banner_menu_3col.png" alt="">
+											</a>
+										</div>
+
+									</div>
+
+								</div>
+							</li>
+
+							<!-- 
+								.main-nav-expanded = expanded mega menu
+							-->
+							<li class="main-nav-item main-nav-expanded">
+								<a href="#">
+									<i class="fa fa-circle-o-notch text-default"></i> 
+									Computers &amp; Office
+								</a>
+
+								<div class="main-nav-submenu">
+									<div class="row">
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">Outwear &amp; Jackets</a></li>
+												<li><a href="#">Leather &amp; Suede</a></li>
+												<li><a href="#">Blazers</a></li>
+												<li><a href="#">Parkas</a></li>
+												<li><a href="#">Down Coats</a></li>
+												<li><a href="#">Basic Jackets</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Weddings &amp; Events</a></li>
+												<li><a href="#">Wedding Dresses</a></li>
+												<li><a href="#">Evening Dresses</a></li>
+												<li><a href="#">Prom Dresses</a></li>
+												<li><a href="#">Cocktail Dresses</a></li>
+												<li><a href="#"><span class="badge badge-success float-right">PROMO</span> Bridesmaid Dresses</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Accessories</a></li>
+												<li><a href="#">Sunglasses</a></li>
+												<li><a href="#">Baseball Caps</a></li>
+												<li><a href="#">Scarves &amp; Wraps</a></li>
+												<li><a href="#">Belts</a></li>
+												<li><a href="#">Hair Accessories</a></li>
+											</ul>
+										</div>
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">New Arrivals</a></li>
+												<li><a href="#">Cotton Jumpsuits</a></li>
+												<li><a href="#">Black Jeans</a></li>
+												<li><a href="#">Hats &amp; Caps</a></li>
+												<li><a href="#">Shorts</a></li>
+												<li><a href="#">Leggins</a></li>
+												<li><a href="#">Polo Shirts</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Stripe Dresses</a></li>
+												<li><a href="#">Sequin Dresses</a></li>
+												<li><a href="#">Denim Shirts</a></li>
+												<li><a href="#">Letter Print Tee</a></li>
+												<li><a href="#">Hair Accessories</a></li>
+												<li><a href="#">Sexy Bras</a></li>
+												<li><a href="#">Tube Tops</a></li>
+												<li><a href="#">Rompers</a></li>
+											</ul>
+
+										</div>
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">Dresses</a></li>
+												<li><a href="#">Bouses &amp; Shirts</a></li>
+												<li><a href="#">T-Shirts</a></li>
+												<li><a href="#">Socks</a></li>
+												<li><a href="#">Rompers</a></li>
+												<li><a href="#"><span class="badge badge-danger float-right">NEW</span> Jumpsuits</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Bottoms</a></li>
+												<li><a href="#">Jeans</a></li>
+												<li><a href="#">Pants</a></li>
+												<li><a href="#">Wide LLeg Pants</a></li>
+												<li><a href="#">Shorts</a></li>
+												<li><a href="#">Leggins</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Intimates &amp; Sleepers</a></li>
+												<li><a href="#">Panties</a></li>
+												<li><a href="#">Pajamas Sets</a></li>
+												<li><a href="#">Nightgowns &amp; Sleepshirts</a></li>
+												<li><a href="#">Bustiers &amp; Corsets</a></li>
+												<li><a href="#">Bra &amp; Brief Sets</a></li>
+											</ul>
+										</div>
+
+										<div class="col-md-3 text-right hidden-sm-down">
+
+											<div class="row main-nav-brand-list">
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/1.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/2.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/3.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/4.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/5.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/6.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/7.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/8.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/1.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/5.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/1.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/2.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/3.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/4.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/5.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/6.jpg" alt="">
+												</a>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+							</li>
+
+
+							<!-- 
+								.main-nav-expanded = expanded mega menu
+							-->
+							<li class="main-nav-item main-nav-expanded">
+								<a href="#">
+									<i class="fa fa-circle-o-notch"></i> 
+									Men's Best Gifts
+								</a>
+
+								<div class="main-nav-submenu">
+									<div class="row">
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">Outwear &amp; Jackets</a></li>
+												<li><a href="#">Leather &amp; Suede</a></li>
+												<li><a href="#">Blazers</a></li>
+												<li><a href="#">Parkas</a></li>
+												<li><a href="#">Down Coats</a></li>
+												<li><a href="#">Basic Jackets</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Weddings &amp; Events</a></li>
+												<li><a href="#">Wedding Dresses</a></li>
+												<li><a href="#">Evening Dresses</a></li>
+												<li><a href="#">Prom Dresses</a></li>
+												<li><a href="#">Cocktail Dresses</a></li>
+												<li><a href="#"><span class="badge badge-success float-right">PROMO</span> Bridesmaid Dresses</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Accessories</a></li>
+												<li><a href="#">Sunglasses</a></li>
+												<li><a href="#">Baseball Caps</a></li>
+												<li><a href="#">Scarves &amp; Wraps</a></li>
+												<li><a href="#">Belts</a></li>
+												<li><a href="#">Hair Accessories</a></li>
+											</ul>
+										</div>
+
+										<div class="col-md-9 text-right hidden-sm-down">
+
+											<a class="mt-15 block" href="#">
+												<img class="img-fluid" src="demo_files/images/packs/megashop/banners/banner_menu_3_2col.png" alt="">
+											</a>
+										</div>
+
+									</div>
+
+								</div>
+							</li>
+
+							<!-- 
+								.main-nav-expanded = expanded mega menu
+							-->
+							<li class="main-nav-item main-nav-expanded">
+								<a href="#">
+									<i class="fa fa-circle-o-notch text-warning"></i> 
+									Sports &amp; Outdoor
+								</a>
+
+								<div class="main-nav-submenu">
+									<div class="row">
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">Outwear &amp; Jackets</a></li>
+												<li><a href="#">Leather &amp; Suede</a></li>
+												<li><a href="#">Blazers</a></li>
+												<li><a href="#">Parkas</a></li>
+												<li><a href="#">Down Coats</a></li>
+												<li><a href="#">Basic Jackets</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Weddings &amp; Events</a></li>
+												<li><a href="#">Wedding Dresses</a></li>
+												<li><a href="#">Evening Dresses</a></li>
+												<li><a href="#">Prom Dresses</a></li>
+												<li><a href="#">Cocktail Dresses</a></li>
+												<li><a href="#"><span class="badge badge-success float-right">PROMO</span> Bridesmaid Dresses</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Accessories</a></li>
+												<li><a href="#">Sunglasses</a></li>
+												<li><a href="#">Baseball Caps</a></li>
+												<li><a href="#">Scarves &amp; Wraps</a></li>
+												<li><a href="#">Belts</a></li>
+												<li><a href="#">Hair Accessories</a></li>
+											</ul>
+										</div>
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">New Arrivals</a></li>
+												<li><a href="#">Cotton Jumpsuits</a></li>
+												<li><a href="#">Black Jeans</a></li>
+												<li><a href="#">Hats &amp; Caps</a></li>
+												<li><a href="#">Shorts</a></li>
+												<li><a href="#">Leggins</a></li>
+												<li><a href="#">Polo Shirts</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Stripe Dresses</a></li>
+												<li><a href="#">Sequin Dresses</a></li>
+												<li><a href="#">Denim Shirts</a></li>
+												<li><a href="#">Letter Print Tee</a></li>
+												<li><a href="#">Hair Accessories</a></li>
+												<li><a href="#">Sexy Bras</a></li>
+												<li><a href="#">Tube Tops</a></li>
+												<li><a href="#">Rompers</a></li>
+											</ul>
+
+										</div>
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">Dresses</a></li>
+												<li><a href="#">Bouses &amp; Shirts</a></li>
+												<li><a href="#">T-Shirts</a></li>
+												<li><a href="#">Socks</a></li>
+												<li><a href="#">Rompers</a></li>
+												<li><a href="#"><span class="badge badge-danger float-right">NEW</span> Jumpsuits</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Bottoms</a></li>
+												<li><a href="#">Jeans</a></li>
+												<li><a href="#">Pants</a></li>
+												<li><a href="#">Wide LLeg Pants</a></li>
+												<li><a href="#">Shorts</a></li>
+												<li><a href="#">Leggins</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Intimates &amp; Sleepers</a></li>
+												<li><a href="#">Panties</a></li>
+												<li><a href="#">Pajamas Sets</a></li>
+												<li><a href="#">Nightgowns &amp; Sleepshirts</a></li>
+												<li><a href="#">Bustiers &amp; Corsets</a></li>
+												<li><a href="#">Bra &amp; Brief Sets</a></li>
+											</ul>
+										</div>
+
+										<div class="col-md-3 text-right hidden-sm-down">
+
+											<div class="row main-nav-brand-list">
+
+												<a href="#" class="block">
+													<img class="img-fluid" src="demo_files/images/packs/megashop/banners/banner_menu_1_3col.png" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/1.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/2.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/3.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/4.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/5.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/6.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/7.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/8.jpg" alt="">
+												</a>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+							</li>
+
+							<!-- 
+								.main-nav-expanded = expanded mega menu
+							-->
+							<li class="main-nav-item main-nav-expanded">
+								<a href="#">
+									<i class="fa fa-circle-o-notch text-info"></i> 
+									Baby Toys
+								</a>
+
+								<div class="main-nav-submenu">
+									<div class="row">
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">Dresses</a></li>
+												<li><a href="#">Bouses &amp; Shirts</a></li>
+												<li><a href="#">T-Shirts</a></li>
+												<li><a href="#">Socks</a></li>
+												<li><a href="#">Rompers</a></li>
+												<li><a href="#"><span class="badge badge-danger float-right">NEW</span> Jumpsuits</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Bottoms</a></li>
+												<li><a href="#">Jeans</a></li>
+												<li><a href="#">Pants</a></li>
+												<li><a href="#">Wide LLeg Pants</a></li>
+												<li><a href="#">Shorts</a></li>
+												<li><a href="#">Leggins</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Intimates &amp; Sleepers</a></li>
+												<li><a href="#">Panties</a></li>
+												<li><a href="#">Pajamas Sets</a></li>
+												<li><a href="#">Nightgowns &amp; Sleepshirts</a></li>
+												<li><a href="#">Bustiers &amp; Corsets</a></li>
+												<li><a href="#">Bra &amp; Brief Sets</a></li>
+											</ul>
+										</div>
+
+
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">Outwear &amp; Jackets</a></li>
+												<li><a href="#">Leather &amp; Suede</a></li>
+												<li><a href="#">Blazers</a></li>
+												<li><a href="#">Parkas</a></li>
+												<li><a href="#">Down Coats</a></li>
+												<li><a href="#">Basic Jackets</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Weddings &amp; Events</a></li>
+												<li><a href="#">Wedding Dresses</a></li>
+												<li><a href="#">Evening Dresses</a></li>
+												<li><a href="#">Prom Dresses</a></li>
+												<li><a href="#">Cocktail Dresses</a></li>
+												<li><a href="#"><span class="badge badge-success float-right">PROMO</span> Bridesmaid Dresses</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Accessories</a></li>
+												<li><a href="#">Sunglasses</a></li>
+												<li><a href="#">Baseball Caps</a></li>
+												<li><a href="#">Scarves &amp; Wraps</a></li>
+												<li><a href="#">Belts</a></li>
+												<li><a href="#">Hair Accessories</a></li>
+											</ul>
+										</div>
+
+
+										<div class="col-md-3 text-right hidden-sm-down">
+
+											<a class="mt-15 block" href="#">
+												<img class="img-fluid" src="demo_files/images/packs/megashop/banners/banner_menu_1col.png" alt="">
+											</a>
+
+										</div>
+
+										<div class="col-md-3 text-right hidden-sm-down">
+
+											<div class="row main-nav-brand-list pt-15">
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/1.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/2.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/3.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/4.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/5.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/6.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/7.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/8.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/1.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/5.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/1.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/2.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/3.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/4.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/5.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/6.jpg" alt="">
+												</a>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+							</li>
+
+							<!-- 
+								.main-nav-expanded = expanded mega menu
+							-->
+							<li class="main-nav-item main-nav-expanded">
+								<a href="#">
+									<i class="fa fa-circle-o-notch text-info"></i> 
+									Home Garden &amp; Furniture
+								</a>
+
+								<div class="main-nav-submenu">
+									<div class="row">
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">Dresses</a></li>
+												<li><a href="#">Bouses &amp; Shirts</a></li>
+												<li><a href="#">T-Shirts</a></li>
+												<li><a href="#">Socks</a></li>
+												<li><a href="#">Rompers</a></li>
+												<li><a href="#"><span class="badge badge-danger float-right">NEW</span> Jumpsuits</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Bottoms</a></li>
+												<li><a href="#">Jeans</a></li>
+												<li><a href="#">Pants</a></li>
+												<li><a href="#">Wide LLeg Pants</a></li>
+												<li><a href="#">Shorts</a></li>
+												<li><a href="#">Leggins</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Intimates &amp; Sleepers</a></li>
+												<li><a href="#">Panties</a></li>
+												<li><a href="#">Pajamas Sets</a></li>
+												<li><a href="#">Nightgowns &amp; Sleepshirts</a></li>
+												<li><a href="#">Bustiers &amp; Corsets</a></li>
+												<li><a href="#">Bra &amp; Brief Sets</a></li>
+											</ul>
+										</div>
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">Outwear &amp; Jackets</a></li>
+												<li><a href="#">Leather &amp; Suede</a></li>
+												<li><a href="#">Blazers</a></li>
+												<li><a href="#">Parkas</a></li>
+												<li><a href="#">Down Coats</a></li>
+												<li><a href="#">Basic Jackets</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Weddings &amp; Events</a></li>
+												<li><a href="#">Wedding Dresses</a></li>
+												<li><a href="#">Evening Dresses</a></li>
+												<li><a href="#">Prom Dresses</a></li>
+												<li><a href="#">Cocktail Dresses</a></li>
+												<li><a href="#"><span class="badge badge-success float-right">PROMO</span> Bridesmaid Dresses</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Accessories</a></li>
+												<li><a href="#">Sunglasses</a></li>
+												<li><a href="#">Baseball Caps</a></li>
+												<li><a href="#">Scarves &amp; Wraps</a></li>
+												<li><a href="#">Belts</a></li>
+												<li><a href="#">Hair Accessories</a></li>
+											</ul>
+										</div>
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">New Arrivals</a></li>
+												<li><a href="#">Cotton Jumpsuits</a></li>
+												<li><a href="#">Black Jeans</a></li>
+												<li><a href="#">Hats &amp; Caps</a></li>
+												<li><a href="#">Shorts</a></li>
+												<li><a href="#">Leggins</a></li>
+												<li><a href="#">Polo Shirts</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Stripe Dresses</a></li>
+												<li><a href="#">Sequin Dresses</a></li>
+												<li><a href="#">Denim Shirts</a></li>
+												<li><a href="#">Letter Print Tee</a></li>
+												<li><a href="#">Hair Accessories</a></li>
+												<li><a href="#">Sexy Bras</a></li>
+												<li><a href="#">Tube Tops</a></li>
+												<li><a href="#">Rompers</a></li>
+											</ul>
+
+										</div>
+
+										<div class="col-md-3 text-right hidden-sm-down">
+
+											<a class="mt-15 block" href="#">
+												<img class="img-fluid" src="demo_files/images/packs/megashop/banners/banner_menu_1_2col.png" alt="">
+											</a>
+										</div>
+
+									</div>
+
+								</div>
+							</li>
+
+							<!-- 
+								.main-nav-expanded = expanded mega menu
+							-->
+							<li class="main-nav-item main-nav-expanded">
+								<a href="#">
+									<i class="fa fa-circle-o-notch text-warning"></i> 
+									Clothing, Shoes, Jewlery
+								</a>
+
+								<div class="main-nav-submenu">
+									<div class="row">
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">Outwear &amp; Jackets</a></li>
+												<li><a href="#">Leather &amp; Suede</a></li>
+												<li><a href="#">Blazers</a></li>
+												<li><a href="#">Parkas</a></li>
+												<li><a href="#">Down Coats</a></li>
+												<li><a href="#">Basic Jackets</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Weddings &amp; Events</a></li>
+												<li><a href="#">Wedding Dresses</a></li>
+												<li><a href="#">Evening Dresses</a></li>
+												<li><a href="#">Prom Dresses</a></li>
+												<li><a href="#">Cocktail Dresses</a></li>
+												<li><a href="#"><span class="badge badge-success float-right">PROMO</span> Bridesmaid Dresses</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Accessories</a></li>
+												<li><a href="#">Sunglasses</a></li>
+												<li><a href="#">Baseball Caps</a></li>
+												<li><a href="#">Scarves &amp; Wraps</a></li>
+												<li><a href="#">Belts</a></li>
+												<li><a href="#">Hair Accessories</a></li>
+											</ul>
+										</div>
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">New Arrivals</a></li>
+												<li><a href="#">Cotton Jumpsuits</a></li>
+												<li><a href="#">Black Jeans</a></li>
+												<li><a href="#">Hats &amp; Caps</a></li>
+												<li><a href="#">Shorts</a></li>
+												<li><a href="#">Leggins</a></li>
+												<li><a href="#">Polo Shirts</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Stripe Dresses</a></li>
+												<li><a href="#">Sequin Dresses</a></li>
+												<li><a href="#">Denim Shirts</a></li>
+												<li><a href="#">Letter Print Tee</a></li>
+												<li><a href="#">Hair Accessories</a></li>
+												<li><a href="#">Sexy Bras</a></li>
+												<li><a href="#">Tube Tops</a></li>
+												<li><a href="#">Rompers</a></li>
+											</ul>
+
+										</div>
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">Dresses</a></li>
+												<li><a href="#">Bouses &amp; Shirts</a></li>
+												<li><a href="#">T-Shirts</a></li>
+												<li><a href="#">Socks</a></li>
+												<li><a href="#">Rompers</a></li>
+												<li><a href="#"><span class="badge badge-danger float-right">NEW</span> Jumpsuits</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Bottoms</a></li>
+												<li><a href="#">Jeans</a></li>
+												<li><a href="#">Pants</a></li>
+												<li><a href="#">Wide LLeg Pants</a></li>
+												<li><a href="#">Shorts</a></li>
+												<li><a href="#">Leggins</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Intimates &amp; Sleepers</a></li>
+												<li><a href="#">Panties</a></li>
+												<li><a href="#">Pajamas Sets</a></li>
+												<li><a href="#">Nightgowns &amp; Sleepshirts</a></li>
+												<li><a href="#">Bustiers &amp; Corsets</a></li>
+												<li><a href="#">Bra &amp; Brief Sets</a></li>
+											</ul>
+										</div>
+
+										<div class="col-md-3 text-right hidden-sm-down">
+
+											<div class="row main-nav-brand-list">
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/1.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/2.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/3.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/4.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/5.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/6.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/7.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/8.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/1.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/5.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/1.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/2.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/3.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/4.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/5.jpg" alt="">
+												</a>
+
+												<a class="col-md-6" href="#">
+													<img class="img-fluid" src="demo_files/images/brands/6.jpg" alt="">
+												</a>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+							</li>
+							
+							<!-- 
+								.main-nav-expanded = expanded mega menu
+							-->
+							<li class="main-nav-item main-nav-expanded">
+								<a href="#">
+									<i class="fa fa-circle-o-notch text-warning"></i> 
+									Phones &amp; Accessories
+								</a>
+
+								<div class="main-nav-submenu">
+									<div class="row">
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">Dresses</a></li>
+												<li><a href="#">Bouses &amp; Shirts</a></li>
+												<li><a href="#">T-Shirts</a></li>
+												<li><a href="#">Socks</a></li>
+												<li><a href="#">Rompers</a></li>
+												<li><a href="#"><span class="badge badge-danger float-right">NEW</span> Jumpsuits</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Bottoms</a></li>
+												<li><a href="#">Jeans</a></li>
+												<li><a href="#">Pants</a></li>
+												<li><a href="#">Wide LLeg Pants</a></li>
+												<li><a href="#">Shorts</a></li>
+												<li><a href="#">Leggins</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Intimates &amp; Sleepers</a></li>
+												<li><a href="#">Panties</a></li>
+												<li><a href="#">Pajamas Sets</a></li>
+												<li><a href="#">Nightgowns &amp; Sleepshirts</a></li>
+												<li><a href="#">Bustiers &amp; Corsets</a></li>
+												<li><a href="#">Bra &amp; Brief Sets</a></li>
+											</ul>
+										</div>
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">Outwear &amp; Jackets</a></li>
+												<li><a href="#">Leather &amp; Suede</a></li>
+												<li><a href="#">Blazers</a></li>
+												<li><a href="#">Parkas</a></li>
+												<li><a href="#">Down Coats</a></li>
+												<li><a href="#">Basic Jackets</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Weddings &amp; Events</a></li>
+												<li><a href="#">Wedding Dresses</a></li>
+												<li><a href="#">Evening Dresses</a></li>
+												<li><a href="#">Prom Dresses</a></li>
+												<li><a href="#">Cocktail Dresses</a></li>
+												<li><a href="#"><span class="badge badge-success float-right">PROMO</span> Bridesmaid Dresses</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Accessories</a></li>
+												<li><a href="#">Sunglasses</a></li>
+												<li><a href="#">Baseball Caps</a></li>
+												<li><a href="#">Scarves &amp; Wraps</a></li>
+												<li><a href="#">Belts</a></li>
+												<li><a href="#">Hair Accessories</a></li>
+											</ul>
+										</div>
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">New Arrivals</a></li>
+												<li><a href="#">Cotton Jumpsuits</a></li>
+												<li><a href="#">Black Jeans</a></li>
+												<li><a href="#">Hats &amp; Caps</a></li>
+												<li><a href="#">Shorts</a></li>
+												<li><a href="#">Leggins</a></li>
+												<li><a href="#">Polo Shirts</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Stripe Dresses</a></li>
+												<li><a href="#">Sequin Dresses</a></li>
+												<li><a href="#">Denim Shirts</a></li>
+												<li><a href="#">Letter Print Tee</a></li>
+												<li><a href="#">Hair Accessories</a></li>
+												<li><a href="#">Sexy Bras</a></li>
+												<li><a href="#">Tube Tops</a></li>
+												<li><a href="#">Rompers</a></li>
+											</ul>
+
+										</div>
+
+										<div class="col-md-3 text-right hidden-sm-down">
+
+											<a class="mt-15 block" href="#">
+												<img class="img-fluid" src="demo_files/images/packs/megashop/banners/banner_menu_1col.png" alt="">
+											</a>
+										</div>
+
+									</div>
+
+								</div>
+
+							</li>
+
+							<!-- 
+								.main-nav-expanded = expanded mega menu
+							-->
+							<li class="main-nav-item main-nav-expanded">
+								<a href="#">
+									<i class="fa fa-circle-o-notch"></i> 
+									Books &amp; Gifts
+								</a>
+
+								<div class="main-nav-submenu">
+									<div class="row">
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">Dresses</a></li>
+												<li><a href="#">Bouses &amp; Shirts</a></li>
+												<li><a href="#">T-Shirts</a></li>
+												<li><a href="#">Socks</a></li>
+												<li><a href="#">Rompers</a></li>
+												<li><a href="#"><span class="badge badge-danger float-right">NEW</span> Jumpsuits</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Bottoms</a></li>
+												<li><a href="#">Jeans</a></li>
+												<li><a href="#">Pants</a></li>
+												<li><a href="#">Wide LLeg Pants</a></li>
+												<li><a href="#">Shorts</a></li>
+												<li><a href="#">Leggins</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Intimates &amp; Sleepers</a></li>
+												<li><a href="#">Panties</a></li>
+												<li><a href="#">Pajamas Sets</a></li>
+												<li><a href="#">Nightgowns &amp; Sleepshirts</a></li>
+												<li><a href="#">Bustiers &amp; Corsets</a></li>
+												<li><a href="#">Bra &amp; Brief Sets</a></li>
+											</ul>
+										</div>
+
+										<div class="col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="#">Outwear &amp; Jackets</a></li>
+												<li><a href="#">Leather &amp; Suede</a></li>
+												<li><a href="#">Blazers</a></li>
+												<li><a href="#">Parkas</a></li>
+												<li><a href="#">Down Coats</a></li>
+												<li><a href="#">Basic Jackets</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Weddings &amp; Events</a></li>
+												<li><a href="#">Wedding Dresses</a></li>
+												<li><a href="#">Evening Dresses</a></li>
+												<li><a href="#">Prom Dresses</a></li>
+												<li><a href="#">Cocktail Dresses</a></li>
+												<li><a href="#"><span class="badge badge-success float-right">PROMO</span> Bridesmaid Dresses</a></li>
+											</ul>
+
+											<ul class="list-unstyled">
+												<li><a href="#">Accessories</a></li>
+												<li><a href="#">Sunglasses</a></li>
+												<li><a href="#">Baseball Caps</a></li>
+												<li><a href="#">Scarves &amp; Wraps</a></li>
+												<li><a href="#">Belts</a></li>
+												<li><a href="#">Hair Accessories</a></li>
+											</ul>
+										</div>
+
+										<div class="col-md-6 text-right hidden-sm-down">
+
+											<a class="mt-15 block" href="#">
+												<img class="img-fluid" src="demo_files/images/packs/megashop/banners/banner_menu_2_2col.png" alt="">
+											</a>
+										</div>
+
+									</div>
+
+								</div>
+							</li>
+
+							<li class="main-nav-item">
+								<a href="#">
+									<i class="fa fa-circle-o-notch"></i> 
+									<span class="badge badge-danger">NEW</span> Electronics
+								</a>
+							</li>
+						</ul>
+					</div>
+
+				</nav>
+
+			</div>
+		</nav>
+		<!-- /HEADER -->
+
+
+
+
+
+
+
+		<!-- 
+			PAGE HEADER 
+			
+			CLASSES:
+				.page-header-xs	= 20px margins
+				.page-header-md	= 50px margins
+				.page-header-lg	= 80px margins
+							.page-header-xlg= 130px margins
+				.dark		= dark page header
+				.light		= light page header
+		-->
+		<section class="page-header page-header-xs mt-60">
+			<div class="container">
+
+				<h1>Smart 360 Fidget spinner</h1>
+
+				<span class="fs-15 fw-300">
+					Smarty Rating: <span class="ml-15 rating rating-5 text-warning"></span>
+					<span class="fs-13 block">Last updated on <time datetime="2017-06-02">June 02nd, 2017</time></span>
+				</span>
+
+				<!-- breadcrumbs -->
+				<ol class="breadcrumb">
+					<li><a href="#">Home</a></li>
+					<li class="active">Category</li>
+				</ol><!-- /breadcrumbs -->
+
+			</div>
+		</section>
+		<!-- /PAGE HEADER -->
+
+
+
+
+
+
+
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+
+			<!-- PRODUCT GALLERY -->
+			<section>
+				<div class="container">
+
+
+					<!-- IMAGE -->
+					<div class="row">
+
+						<!-- image -->
+						<div class="col-sm-6 col-md-6">
+
+							<div class="clearfix mb-30">
+
+								<div class="thumbnail mb-8 rad-0 pb-0">
+								
+									<!--
+										IMAGE ZOOM 
+										
+										data-mode="mouseover|grab|click|toggle"
+									-->
+									<figure id="zoom-primary" class="zoom" data-mode="mouseover">
+										<!-- 
+											zoom buttton
+											
+											positions available:
+												.bottom-right
+												.bottom-left
+												.top-right
+												.top-left
+										-->
+
+										<a class="lightbox bottom-right" href="demo_files/images/packs/megashop/product_view/p1-min.jpg" data-plugin-options='{"type":"image"}'>
+											<i class="fa fa-search"></i>
+										</a>
+
+										<!-- 
+											image
+
+											Extra: add .image-bw class to force black and white!
+										-->
+										<img class="img-fluid" src="demo_files/images/packs/megashop/product_view/p1-min.jpg" width="568" alt="" />
+									</figure>
+
+								</div>
+
+								<!-- 
+									Thumbnails (required height:100px) 
+									
+									data-for = figure image id match
+
+									NOTE: 	loop wil cause an issue to zoom plugin!
+											DO NOT use loop!
+								-->
+								<div data-for="zoom-primary" class="owl-carousel-2 zoom-more" data-plugin-options='{
+									"responsiveBaseElement":	"#wrapper", 
+									"loop":						false, 
+									"margin":					8, 
+
+									"nav":						true, 
+									"dots":						false, 
+
+									"center":					false, 
+									"slideBy":					"1", 
+									"autoplay":					false, 
+									"autoplayTimeout":			4500, 
+									"autoWidth":				false,
+									"merge":					true,
+									"rtl":						false,
+
+									"animateIn":				"flipInX",
+									"animateOut":				"flipOutX",
+
+									"responsive": {
+										"0":	{"items":3},
+										"960":	{"items":5}
+									}
+
+								}'>
+									<a class="thumbnail rad-0 active" href="demo_files/images/packs/megashop/product_view/p1-min.jpg">
+										<img class="img-fluid" src="demo_files/images/packs/megashop/product_view/p1-min.jpg" height="100" alt="" />
+									</a>
+									<a class="thumbnail rad-0" href="demo_files/images/packs/megashop/product_view/p2-min.jpg">
+										<img class="img-fluid" src="demo_files/images/packs/megashop/product_view/p2-min.jpg" height="100" alt="" />
+									</a>
+									<a class="thumbnail rad-0" href="demo_files/images/packs/megashop/product_view/p3-min.jpg">
+										<img class="img-fluid" src="demo_files/images/packs/megashop/product_view/p3-min.jpg" height="100" alt="" />
+									</a>
+									<a class="thumbnail rad-0" href="demo_files/images/packs/megashop/product_view/p4-min.jpg">
+										<img class="img-fluid" src="demo_files/images/packs/megashop/product_view/p4-min.jpg" height="100" alt="" />
+									</a>
+									<a class="thumbnail rad-0" href="demo_files/images/packs/megashop/product_view/p5-min.jpg">
+										<img class="img-fluid" src="demo_files/images/packs/megashop/product_view/p5-min.jpg" height="100" alt="" />
+									</a>
+									<a class="thumbnail rad-0" href="demo_files/images/packs/megashop/product_view/p6-min.jpg">
+										<img class="img-fluid" src="demo_files/images/packs/megashop/product_view/p6-min.jpg" height="100" alt="" />
+									</a>
+								</div>
+								<!-- /Thumbnails -->
+
+							</div>
+
+						</div>
+						<!-- /image -->
+
+						<!-- details -->
+						<div class="col-sm-6 col-md-6">
+
+								<div class="box-border-shadow p-20 mb-30">
+									<div class="fs-20">
+										<span class="line-through pl-0 fs-15 mr-10">$11.20</span>
+										$9.44
+									</div>
+
+									<div class="clearfix ">
+										<span class="float-right text-success"><i class="fa fa-check"></i> In Stock</span>
+										<!--
+										<span class="float-right text-danger"><i class="fa fa-remove"></i> Out of Stock</span>
+										-->
+
+										<strong>SKU:</strong> UY7321987
+									</div>
+								</div>
+
+
+								<!-- countdown -->
+								<div class="text-center mb-30 box-border-shadow p-20">
+									<h5>Limited Offer</h5>
+									<div class="countdown" data-from="January 31, 2020 15:03:26" data-labels="years,months,weeks,days,hour,min,sec"><!-- Example Date From: December 31, 2018 15:03:26 --></div>
+								</div>
+								<!-- /countdown -->
+
+
+								<p class="text-muted fs-18 fw-200">
+									<em>
+										Hold spinner in one hand and use the other hand to spin it rapidly using small continuous strikes to keep it spinning indefinitely with practice spinners can be spun using one hand only using the fingers of one hand to stop and start spinning. These are perfect pocket pieces for people wanting something small,simple,discrete and fun-also effective for focus,stress relief and deep thought. 
+									</em>
+								</p>
+
+
+
+								<!-- FORM -->
+								<form class="clearfix form-inline m-0" method="get" action="pack-megashop-cart.html">
+									<input type="hidden" name="product_id" value="1" />
+
+									<!-- see assets/js/view/demo.shop.js -->
+									<input type="hidden" id="color" name="color" value="yellow" />
+									<input type="hidden" id="qty" name="qty" value="1" />
+									<input type="hidden" id="size" name="size" value="5" />
+									<!-- see assets/js/view/demo.shop.js -->
+
+									<div class="btn-group float-left product-opt-color">
+										<button type="button" class="btn btn-default dropdown-toggle product-color-dd rad-0" data-toggle="dropdown">&nbsp;
+											<span id="product-selected-color" class="tag shop-color mt-6 ml-6" style="background-color:#F0E68C"></span>
+										</button>
+
+										<!-- 
+											href = required to be hex color starting with: #
+											data-val = color name or color id from the database 
+										-->
+										<ul id="product-color-dd" class="dropdown-menu clearfix" role="menu">
+											<li class="active"><a class="tag shop-color" data-val="purple" href="#800080" style="background-color:#800080"></a></li>
+											<li><a class="tag shop-color" data-val="red" href="#FF0000" style="background-color:#FF0000"></a></li>
+											<li><a class="tag shop-color" data-val="pink" href="#FF0080" style="background-color:#FF0080"></a></li>
+											<li><a class="tag shop-color" data-val="orange" href="#FF6600" style="background-color:#FF6600"></a></li>
+											<li><a class="tag shop-color" data-val="grey" href="#E0DCC8" style="background-color:#E0DCC8"></a></li>
+											<li><a class="tag shop-color" data-val="yellow" href="#F0E68C" style="background-color:#F0E68C"></a></li>
+											<li><a class="tag shop-color" data-val="light-yellow" href="#FFFFD0" style="background-color:#FFFFD0"></a></li>
+											<li><a class="tag shop-color" style="background-color:#4B0082"></a></li>
+											<li><a class="tag shop-color" data-val="dark-grey" href="#666666" style="background-color:#666666"></a></li>
+											<li><a class="tag shop-color" data-val="green" href="#00FF00" style="background-color:#00FF00"></a></li>
+										</ul>
+									</div><!-- /btn-group -->
+
+									<div class="btn-group float-left product-opt-size">
+										<button type="button" class="btn btn-default dropdown-toggle product-size-dd rad-0 w-120" data-toggle="dropdown">
+											
+											Size <small id="product-selected-size">(<span>5</span>)</small>
+										</button>
+
+										<!-- data-val = size value or size id -->
+										<ul id="product-size-dd" class="dropdown-menu" role="menu">
+											<li class="active"><a data-val="5" href="#">5</a></li>
+											<li><a data-val="5.5" href="#">5.5</a></li>
+											<li><a data-val="6" href="#">6</a></li>
+											<li><a data-val="6.5" href="#">6.5</a></li>
+											<li><a data-val="7" href="#">7</a></li>
+											<li><a data-val="7.5" href="#">7.7</a></li>
+											<li><a data-val="8" href="#">8</a></li>
+											<li><a data-val="8.5" href="#">8.5</a></li>
+											<li><a data-val="9" href="#">9</a></li>
+											<li><a data-val="9.5" href="#">9.5</a></li>
+											<li><a data-val="10" href="#">10</a></li>
+											<li><a data-val="10.5" href="#">10.5</a></li>
+											<li><a data-val="11" href="#">11</a></li>
+											<li><a data-val="11.5" href="#">11.5</a></li>
+											<li><a data-val="12" href="#">12</a></li>
+											<li><a data-val="13" href="#">13</a></li>
+											<li><a data-val="14" href="#">14</a></li>
+										</ul>
+									</div><!-- /btn-group -->
+
+									<div class="btn-group float-left product-opt-qty">
+										<button type="button" class="btn btn-default dropdown-toggle product-qty-dd rad-0 w-120" data-toggle="dropdown">
+											
+											Qty <small id="product-selected-qty">(<span>5</span>)</small>
+										</button>
+
+										<ul id="product-qty-dd" class="dropdown-menu clearfix" role="menu">
+											<li class="active"><a data-val="1" href="#">1</a></li>
+											<li><a data-val="2" href="#">2</a></li>
+											<li><a data-val="3" href="#">3</a></li>
+											<li><a data-val="4" href="#">4</a></li>
+											<li><a data-val="5" href="#">5</a></li>
+											<li><a data-val="6" href="#">6</a></li>
+											<li><a data-val="7" href="#">7</a></li>
+											<li><a data-val="8" href="#">8</a></li>
+											<li><a data-val="9" href="#">9</a></li>
+											<li><a data-val="10" href="#">10</a></li>
+										</ul>
+									</div><!-- /btn-group -->
+
+									<button class="btn btn-danger float-left product-add-cart rad-0">ADD TO CART</button>
+
+								</form>
+								<!-- /FORM -->
+
+
+
+
+
+								<hr class="mt-40">
+
+
+
+								<div class="clearfix">
+
+									<a href="#" class="float-right btn-favourite-add btn btn-default btn-v1 btn-sm mp-0 add-wishlist" data-item-id="1">
+										<i class="fa fa-heart-o hidden-xs-down hidden-sm hidden-sm-down"></i> SAVE TO WISHLIST
+									</a>
+
+									<!-- social -->
+									<div class="float-left">
+
+										<a target="_blank" href="#" class="social-icon social-icon-sm social-facebook" data-toggle="tooltip" data-placement="top" title="Sare on Facebook">
+											<i class="fa fa-facebook"></i>
+											<i class="fa fa-facebook"></i>
+										</a>
+										<a target="_blank" href="#" class="social-icon social-icon-sm social-twitter" data-toggle="tooltip" data-placement="top" title="Sare on Twitter">
+											<i class="fa fa-twitter"></i>
+											<i class="fa fa-twitter"></i>
+										</a>
+										<a target="_blank" href="#" class="social-icon social-icon-sm social-gplus" data-toggle="tooltip" data-placement="top" title="Sare on Google Plus">
+											<i class="fa fa-google-plus"></i>
+											<i class="fa fa-google-plus"></i>
+										</a>
+
+									</div>
+
+								</div>
+
+								<hr>
+
+
+						</div>
+						<!-- /details -->
+
+
+					</div>
+					<!-- /IMAGE -->
+
+				</div>
+			</section>
+			<!-- /PRODUCT GALLERY -->
+
+
+
+
+			<!-- INFO BAR -->
+			<section class="info-bar info-bar-clean">
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-sm-3">
+							<i class="glyphicon glyphicon-globe"></i>
+							<h3>FREE SHIPPING &amp; RETURN</h3>
+							<p>Free shipping on all orders over $99.</p>
+						</div>
+
+						<div class="col-sm-3">
+							<i class="glyphicon glyphicon-usd"></i>
+							<h3>MONEY BACK GUARANTEE</h3>
+							<p>100% money back guarantee.</p>
+						</div>
+
+						<div class="col-sm-3">
+							<i class="glyphicon glyphicon-flag"></i>
+							<h3>ONLINE SUPPORT 24/7</h3>
+							<p>Lorem ipsum dolor sit amet.</p>
+						</div>
+
+						<div class="col-sm-3">
+							<i class="glyphicon glyphicon-heart"></i>
+							<h3><span class="countTo">9845</span> HAPPY CUSTOMERS</h3>
+							<p>Lorem ipsum dolor sit amet.</p>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+			<!-- /INFO BAR -->
+
+
+
+
+
+			<!-- -->
+			<section>
+				<div class="container">
+
+
+					<ul id="myTab" class="nav nav-tabs nav-top-border">
+						<li class="nav-item"><a class="nav-link active" class="fw-400 fs-14" href="#description" role="tab" data-toggle="tab">DESCRIPTION</a></li>
+						<li class="nav-item"><a class="nav-link" class="fw-400 fs-14" href="#reviews" role="tab" data-toggle="tab">REVIEWS (2)</a></li>
+					</ul>
+
+
+					<div class="tab-content pt-20">
+
+						<!-- DESCRIPTION -->
+						<div role="tabpanel" class="tab-pane clearfix active" id="description">
+							<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Aliquam fermentum commodo magna, id pretium nisi elementum at. Nulla molestie, ligula in fringilla rhoncus, risus leo dictum est, nec egestas nunc sem tincidunt turpis. Sed posuere consectetur est at lobortis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Aliquam fermentum commodo magna, id pretium nisi elementum at. Nulla molestie, ligula in fringilla rhoncus, risus leo dictum est, nec egestas nunc sem tincidunt turpis. Sed posuere consectetur est at lobortis.</p>
+							
+							<figure class="float-left mr-20 w-400 p-20">
+								<img class="img-fluid" src="demo_files/images/packs/megashop/product_view/description/d4-min.jpg" height="100" alt="" />
+							</figure>
+
+							<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Aliquam fermentum commodo magna, id pretium nisi elementum at. Nulla molestie, ligula in fringilla rhoncus, risus leo dictum est, nec egestas nunc sem tincidunt turpis. Sed posuere consectetur est at lobortis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Aliquam fermentum commodo magna, id pretium nisi elementum at. Nulla molestie, ligula in fringilla rhoncus, risus leo dictum est, nec egestas nunc sem tincidunt turpis. Sed posuere consectetur est at lobortis.</p>
+							<p>Donec blandit ultrices condimentum. Aliquam fermentum commodo magna, id pretium nisi elementum at. Nulla molestie, ligula in fringilla rhoncus, risus leo dictum est, nec egestas nunc sem tincidunt turpis. Sed posuere consectetur est at lobortis.</p>
+
+							<hr>
+
+							<figure class="float-right ml-20 w-400 p-20">
+								<img class="img-fluid" src="demo_files/images/packs/megashop/product_view/description/d2-min.jpg" height="100" alt="" />
+							</figure>
+
+							<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Aliquam fermentum commodo magna, id pretium nisi elementum at. Nulla molestie, ligula in fringilla rhoncus, risus leo dictum est, nec egestas nunc sem tincidunt turpis. Sed posuere consectetur est at lobortis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Aliquam fermentum commodo magna, id pretium nisi elementum at. Nulla molestie, ligula in fringilla rhoncus, risus leo dictum est, nec egestas nunc sem tincidunt turpis. Sed posuere consectetur est at lobortis.</p>
+							<p>Donec blandit ultrices condimentum. Aliquam fermentum commodo magna, id pretium nisi elementum at. Nulla molestie, ligula in fringilla rhoncus, risus leo dictum est, nec egestas nunc sem tincidunt turpis. Sed posuere consectetur est at lobortis.</p>
+
+							<hr>
+
+							<figure class="float-left mr-20 w-400 p-20">
+								<img class="img-fluid" src="demo_files/images/packs/megashop/product_view/description/d5-min.jpg" height="100" alt="" />
+							</figure>
+							<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Aliquam fermentum commodo magna, id pretium nisi elementum at. Nulla molestie, ligula in fringilla rhoncus, risus leo dictum est, nec egestas nunc sem tincidunt turpis. Sed posuere consectetur est at lobortis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Aliquam fermentum commodo magna, id pretium nisi elementum at. Nulla molestie, ligula in fringilla rhoncus, risus leo dictum est, nec egestas nunc sem tincidunt turpis. Sed posuere consectetur est at lobortis.</p>
+
+							<p>Donec blandit ultrices condimentum. Aliquam fermentum commodo magna, id pretium nisi elementum at. Nulla molestie, ligula in fringilla rhoncus, risus leo dictum est, nec egestas nunc sem tincidunt turpis. Sed posuere consectetur est at lobortis.</p>
+
+
+
+							<div class="table-responsive">
+								<table class="table table-hover">
+
+									<thead>
+										<tr>
+											<th class="fw-300 fs-15 mt-80">SPECIFICATIONS</th>
+											<th></th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>Radius</td>
+											<td>43mm</td>
+										</tr>
+										<tr>
+											<td>Color</td>
+											<td>Black/Blue</td>
+										</tr>
+										<tr>
+											<td>Weight</td>
+											<td>40g</td>
+										</tr>
+										<tr>
+											<td>Height</td>
+											<td>70mm</td>
+										</tr>
+										<tr>
+											<td>Lubrification</td>
+											<td><i class="fa fa-check mr-10 text-success"></i> YES</td>
+										</tr>
+										<tr>
+											<td>Interchangable Bearings</td>
+											<td><i class="fa fa-remove mr-10 text-danger"></i> NO</td>
+										</tr>
+									</tbody>
+
+								</table>
+							</div>
+
+						</div>
+
+						
+						<!-- REVIEWS -->
+						<div role="tabpanel" class="tab-pane clearfix" id="reviews">
+							<!-- REVIEW ITEM -->
+							<div class="block mb-60">
+
+								<span class="user-avatar"><!-- user-avatar -->
+									<img class="float-left media-object" src="assets/images/_smarty/avatar2.jpg" width="64" height="64" alt="">
+								</span>
+
+								<div class="media-body">
+									<h4 class="media-heading fs-14">
+										John Doe &ndash; 
+										<span class="text-muted">June 29, 2014 - 11:23</span> &ndash;
+										<span class="fs-14 text-muted"><!-- stars -->
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star-o"></i>
+										</span>
+									</h4>
+									
+									<p>
+										Proin eget tortor risus. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.
+									</p>
+
+								</div>
+
+							</div>
+							<!-- /REVIEW ITEM -->
+
+							<!-- REVIEW ITEM -->
+							<div class="block mb-60">
+
+								<span class="user-avatar"><!-- user-avatar -->
+									<img class="float-left media-object" src="assets/images/_smarty/avatar2.jpg" width="64" height="64" alt="">
+								</span>
+
+								<div class="media-body">
+									<h4 class="media-heading fs-14">
+										John Doe &ndash; 
+										<span class="text-muted">June 29, 2014 - 11:23</span> &ndash;
+										<span class="fs-14 text-muted"><!-- stars -->
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star-o"></i>
+											<i class="fa fa-star-o"></i>
+										</span>
+									</h4>
+									
+									<p>
+										Proin eget tortor risus. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.
+									</p>
+
+								</div>
+
+							</div>
+							<!-- /REVIEW ITEM -->
+
+
+							<!-- REVIEW FORM -->
+							<h4 class="mb-20">ADD A REVIEW</h4>
+							<form method="post" action="#" id="form">
+								
+								<div class="row mb-10">
+									
+									<div class="col-md-6 mb-10">
+										<!-- Name -->
+										<input type="text" name="review_name" class="form-control" placeholder="Name *" maxlength="100" required="">
+									</div>
+									
+									<div class="col-md-6">
+										<!-- Email -->
+										<input type="email" name="review_email" class="form-control" placeholder="Email *" maxlength="100" required="">
+									</div>
+								</div>
+								
+								<!-- Comment -->
+								<div class="mb-30">
+									<textarea name="review_text" id="text" class="form-control" rows="6" placeholder="Comment" maxlength="1000"></textarea>
+								</div>
+
+								<!-- Stars -->
+								<div class="product-star-vote clearfix">
+
+									<label class="radio float-left">
+										<input type="radio" name="product-review-vote" value="1" />
+										<i></i> 1 Star
+									</label>
+
+									<label class="radio float-left">
+										<input type="radio" name="product-review-vote" value="2" />
+										<i></i> 2 Stars
+									</label>
+
+									<label class="radio float-left">
+										<input type="radio" name="product-review-vote" value="3" />
+										<i></i> 3 Stars
+									</label>
+
+									<label class="radio float-left">
+										<input type="radio" name="product-review-vote" value="4" />
+										<i></i> 4 Stars
+									</label>
+
+									<label class="radio float-left">
+										<input type="radio" name="product-review-vote" value="5" />
+										<i></i> 5 Stars
+									</label>
+
+								</div>
+
+								<!-- Send Button -->
+								<button type="submit" class="btn btn-primary btn-v1"><i class="fa fa-check"></i> Send Review</button>
+								
+							</form>
+							<!-- /REVIEW FORM -->
+
+						</div>
+					</div>
+
+
+				</div>
+			</section>
+			<!-- -->
+
+
+
+
+
+
+			<!-- RELATED -->
+			<section class="pt-15 pb-15">
+				<div class="container">
+
+					<h3 class="text-center fw-400 fs-20 mt-20">
+						RELATED PRODUCTS
+						<small class="block fs-12 text-primary fw-200">LOREM IPSUM DOLOR SIT AMET</small>
+					</h3>
+
+					<div class="row">
+
+						<!-- item -->
+						<div class="col-md-3 col-sm-6 col-12">
+
+							<div class="card hover-shadow">
+
+								<a class="img-hover-switch m-15" href="pack-megashop-single-1.html">
+									<figure>
+										<img class="img-fluid" src="demo_files/images/packs/megashop/products/related/r5-min.jpg" alt="">
+									</figure>
+
+									<span class="product-price product-price-over-image product-price-autohide fw-600">
+										<span class="block fs-20">
+											<span class="line-through fs-14 fw-200">$11.77</span> 
+											$9.44
+										</span>
+									</span>
+								</a>
+
+
+								<h3 class="product-item-title text-left pl-15 pr-15 fs-15 mb-15">
+									<a href="pack-megashop-single-1.html">Fidget Spinner</a>
+								</h3>
+
+							</div>
+
+						</div>
+						<!-- /item -->
+
+
+						<!-- item -->
+						<div class="col-md-3 col-sm-6 col-12">
+
+							<div class="card hover-shadow">
+
+								<a class="img-hover-switch m-15" href="pack-megashop-single-1.html">
+									<figure>
+										<img class="img-fluid" src="demo_files/images/packs/megashop/products/related/r6-min.jpg" alt="">
+									</figure>
+
+									<span class="product-price product-price-over-image product-price-autohide fw-600">
+										<span class="block fs-20">
+											<span class="line-through fs-14 fw-200">$11.77</span> 
+											$78
+										</span>
+									</span>
+								</a>
+
+
+								<h3 class="product-item-title text-left pl-15 pr-15 fs-15 mb-15">
+									<a href="pack-megashop-single-1.html">Fidget Spinner</a>
+								</h3>
+
+							</div>
+
+						</div>
+						<!-- /item -->
+
+
+						<!-- item -->
+						<div class="col-md-3 col-sm-6 col-12">
+
+							<div class="card hover-shadow">
+
+								<a class="img-hover-switch m-15" href="pack-megashop-single-1.html">
+									<figure>
+										<img class="img-fluid" src="demo_files/images/packs/megashop/products/related/r7-min.jpg" alt="">
+									</figure>
+
+									<span class="product-price product-price-over-image product-price-autohide fw-600">
+										<span class="block fs-20">
+											<span class="line-through fs-14 fw-200">$11.77</span> 
+											$78
+										</span>
+									</span>
+								</a>
+
+
+								<h3 class="product-item-title text-left pl-15 pr-15 fs-15 mb-15">
+									<a href="pack-megashop-single-1.html">Fidget Spinner</a>
+								</h3>
+
+							</div>
+
+						</div>
+						<!-- /item -->
+
+
+						<!-- item -->
+						<div class="col-md-3 col-sm-6 col-12">
+
+							<div class="card hover-shadow">
+
+								<a class="img-hover-switch m-15" href="pack-megashop-single-1.html">
+									<figure>
+										<img class="img-fluid" src="demo_files/images/packs/megashop/products/related/r8-min.jpg" alt="">
+									</figure>
+
+									<span class="product-price product-price-over-image product-price-autohide fw-600">
+										<span class="block fs-20">
+											<span class="line-through fs-14 fw-200">$11.77</span> 
+											$78
+										</span>
+									</span>
+								</a>
+
+
+								<h3 class="product-item-title text-left pl-15 pr-15 fs-15 mb-15">
+									<a href="pack-megashop-single-1.html">Fidget Spinner</a>
+								</h3>
+
+							</div>
+
+						</div>
+						<!-- /item -->
+
+
+
+
+
+
+						<!-- item -->
+						<div class="col-md-3 col-sm-6 col-12">
+
+							<div class="card hover-shadow">
+
+								<a class="img-hover-switch m-15" href="pack-megashop-single-1.html">
+									<figure>
+										<img class="img-fluid" src="demo_files/images/packs/megashop/products/related/r1-min.jpg" alt="">
+									</figure>
+
+									<span class="product-price product-price-over-image product-price-autohide fw-600">
+										<span class="block fs-20">
+											<span class="line-through fs-14 fw-200">$11.77</span> 
+											$78
+										</span>
+									</span>
+								</a>
+
+
+								<h3 class="product-item-title text-left pl-15 pr-15 fs-15 mb-15">
+									<a href="pack-megashop-single-1.html">Fidget Spinner</a>
+								</h3>
+
+								<div class="btn-grid text-center">
+									<a href="pack-megashop-cart.html" class="btn btn-danger fs-14 btn-sm btn-fancy-left">ADD TO CART</a>
+									<a href="#" class="btn btn-flat fs-14 btn-sm btn-fancy-right add-wishlist" data-item-id="1" title="add to wishlist"><i class="fa fa-heart-o m-0 p-0"></i></a>
+								</div>
+
+							</div>
+
+						</div>
+						<!-- /item -->
+
+
+						<!-- item -->
+						<div class="col-md-3 col-sm-6 col-12">
+
+							<div class="card hover-shadow">
+
+								<a class="img-hover-switch m-15" href="pack-megashop-single-1.html">
+									<figure>
+										<img class="img-fluid" src="demo_files/images/packs/megashop/products/related/r2-min.jpg" alt="">
+									</figure>
+
+									<span class="product-price product-price-over-image product-price-autohide fw-600">
+										<span class="block fs-20">
+											<span class="line-through fs-14 fw-200">$11.77</span> 
+											$78
+										</span>
+									</span>
+								</a>
+
+
+								<h3 class="product-item-title text-left pl-15 pr-15 fs-15 mb-15">
+									<a href="pack-megashop-single-1.html">Fidget Spinner</a>
+								</h3>
+
+								<div class="btn-grid text-center">
+									<a href="pack-megashop-cart.html" class="btn btn-danger fs-14 btn-sm btn-fancy-left">ADD TO CART</a>
+									<a href="#" class="btn btn-flat fs-14 btn-sm btn-fancy-right add-wishlist" data-item-id="1" title="add to wishlist"><i class="fa fa-heart-o m-0 p-0"></i></a>
+								</div>
+
+							</div>
+
+						</div>
+						<!-- /item -->
+
+
+						<!-- item -->
+						<div class="col-md-3 col-sm-6 col-12">
+
+							<div class="card hover-shadow">
+
+								<a class="img-hover-switch m-15" href="pack-megashop-single-1.html">
+									<figure>
+										<img class="img-fluid" src="demo_files/images/packs/megashop/products/related/r3-min.jpg" alt="">
+									</figure>
+
+									<span class="product-price product-price-over-image product-price-autohide fw-600">
+										<span class="block fs-20">
+											<span class="line-through fs-14 fw-200">$11.77</span> 
+											$78
+										</span>
+									</span>
+								</a>
+
+
+								<h3 class="product-item-title text-left pl-15 pr-15 fs-15 mb-15">
+									<a href="pack-megashop-single-1.html">Fidget Spinner</a>
+								</h3>
+
+								<div class="btn-grid text-center">
+									<a href="pack-megashop-cart.html" class="btn btn-danger fs-14 btn-sm btn-fancy-left">ADD TO CART</a>
+									<a href="#" class="btn btn-flat fs-14 btn-sm btn-fancy-right add-wishlist" data-item-id="1" title="add to wishlist"><i class="fa fa-heart-o m-0 p-0"></i></a>
+								</div>
+
+							</div>
+
+						</div>
+						<!-- /item -->
+
+
+						<!-- item -->
+						<div class="col-md-3 col-sm-6 col-12">
+
+							<div class="card hover-shadow">
+
+								<a class="img-hover-switch m-15" href="pack-megashop-single-1.html">
+									<figure>
+										<img class="img-fluid" src="demo_files/images/packs/megashop/products/related/r4-min.jpg" alt="">
+									</figure>
+
+									<span class="product-price product-price-over-image product-price-autohide fw-600">
+										<span class="block fs-20">
+											<span class="line-through fs-14 fw-200">$11.77</span> 
+											$78
+										</span>
+									</span>
+								</a>
+
+
+								<h3 class="product-item-title text-left pl-15 pr-15 fs-15 mb-15">
+									<a href="pack-megashop-single-1.html">Fidget Spinner</a>
+								</h3>
+
+								<div class="btn-grid text-center">
+									<a href="pack-megashop-cart.html" class="btn btn-danger fs-14 btn-sm btn-fancy-left">ADD TO CART</a>
+									<a href="#" class="btn btn-flat fs-14 btn-sm btn-fancy-right add-wishlist" data-item-id="1" title="add to wishlist"><i class="fa fa-heart-o m-0 p-0"></i></a>
+								</div>
+
+							</div>
+
+						</div>
+						<!-- /item -->
+
+
+					</div>
+
+				</div>
+			</section>
+			<!-- /RELATED -->
+
+
+		</div>
+		<!-- /wrapper -->
+
+
+
+
+
+
+
+
+
+		<!-- FOOTER -->
+		<footer id="footer" class="footer-light">
+			<div class="container pt-0 p-bottom-0">
+
+				<div class="row mt-60 mb-0 fs-13">
+
+					<!-- col #1 -->
+					<div class="col-md-4 col-sm-4 mb-0">
+
+						<!-- Footer Logo -->
+						<img class="footer-logo" src="demo_files/images/packs/megashop/logo_dark_footer.png" alt="" />
+
+						<p>
+							We offer competitive prices on our 10 million plus product range. We ship to over 200 countries!
+						</p>
+
+
+						<!-- Newsletter Form -->
+						<h4 class="letter-spacing-1 mb-10">KEEP IN TOUCH</h4>
+
+						<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+								<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+								<span class="input-group-btn">
+									<button class="btn btn-primary" type="submit">Subscribe</button>
+								</span>
+							</div>
+						</form>
+						<!-- /Newsletter Form -->
+
+
+						<!-- Social Icons -->
+						<div class="clearfix">
+
+							<a href="#" class="social-icon social-icon-sm social-icon-border social-facebook float-left" data-toggle="tooltip" data-placement="top" title="Facebook">
+								<i class="icon-facebook"></i>
+								<i class="icon-facebook"></i>
+							</a>
+
+							<a href="#" class="social-icon social-icon-sm social-icon-border social-twitter float-left" data-toggle="tooltip" data-placement="top" title="Twitter">
+								<i class="icon-twitter"></i>
+								<i class="icon-twitter"></i>
+							</a>
+
+							<a href="#" class="social-icon social-icon-sm social-icon-border social-gplus float-left" data-toggle="tooltip" data-placement="top" title="Google plus">
+								<i class="icon-gplus"></i>
+								<i class="icon-gplus"></i>
+							</a>
+
+							<a href="#" class="social-icon social-icon-sm social-icon-border social-linkedin float-left" data-toggle="tooltip" data-placement="top" title="Linkedin">
+								<i class="icon-linkedin"></i>
+								<i class="icon-linkedin"></i>
+							</a>
+
+							<a href="#" class="social-icon social-icon-sm social-icon-border social-pinterest float-left" data-toggle="tooltip" data-placement="top" title="Rss">
+								<i class="icon-pinterest"></i>
+								<i class="icon-pinterest"></i>
+							</a>
+
+						</div>
+						<!-- /Social Icons -->
+
+
+					</div>
+					<!-- /col #1 -->
+
+					<!-- col #2 -->
+					<div class="col-md-8 col-sm-8 mb-0">
+
+						<div class="row">
+
+							<div class="col-md-5 hidden-sm hidden-xs-down">
+								<h4 class="letter-spacing-1">RECENT NEWS</h4>
+								<ul class="list-unstyled footer-list half-paddings">
+									<li>
+										<a class="block" href="#">New CSS3 Transitions this Year</a>
+										<small>June 29, 2017</small>
+									</li>
+									<li>
+										<a class="block" href="#">Inteligent Transitions In UX Design</a>
+										<small>June 29, 2017</small>
+									</li>
+									<li>
+										<a class="block" href="#">Lorem Ipsum Dolor</a>
+										<small>June 29, 2017</small>
+									</li>
+									<li>
+										<a class="block" href="#">New CSS3 Transitions this Year</a>
+										<small>June 29, 2017</small>
+									</li>
+								</ul>
+							</div>
+
+							<div class="col-md-3 hidden-sm hidden-xs-down">
+								<h4 class="letter-spacing-1">EXPLORE</h4>
+								<ul class="list-unstyled footer-list half-paddings b-0">
+									<li><a class="block" href="#"><i class="fa fa-angle-right"></i> Customer Service</a></li>
+									<li><a class="block" href="#"><i class="fa fa-angle-right"></i> Making Payments</a></li>
+									<li><a class="block" href="#"><i class="fa fa-angle-right"></i> New User Guide</a></li>
+									<li><a class="block" href="#"><i class="fa fa-angle-right"></i> Buyer Protection</a></li>
+									<li><a class="block" href="#"><i class="fa fa-angle-right"></i> Delivery Options</a></li>
+									<li><a class="block" href="#"><i class="fa fa-angle-right"></i> Partnerships</a></li>
+									<li><a class="block" href="#"><i class="fa fa-angle-right"></i> Affiliate Program</a></li>
+								</ul>
+							</div>
+
+							<div class="col-md-4 mb-0">
+								<h4 class="letter-spacing-1">SECURE PAYMENTS</h4>
+								<p>Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet.</p>
+								<p>	<!-- see assets/images/_smarty/cc/ for more icons -->
+									<img src="assets/images/_smarty/cc/Visa.png" alt="" />
+									<img src="assets/images/_smarty/cc/Mastercard.png" alt="" />
+									<img src="assets/images/_smarty/cc/Maestro.png" alt="" />
+									<img src="assets/images/_smarty/cc/PayPal.png" alt="" />
+								</p>
+							</div>
+
+						</div>
+
+					</div>
+					<!-- /col #2 -->
+
+				</div>
+
+			</div>
+
+			<div class="copyright">
+				<div class="container">
+					<ul class="float-right m-0 list-inline mobile-block">
+						<li><a href="#">Terms &amp; Conditions</a></li>
+						<li>&bull;</li>
+						<li><a href="#">Privacy</a></li>
+					</ul>
+					&copy; All Rights Reserved, Company LTD
+				</div>
+			</div>
+		</footer>
+		<!-- /FOOTER -->
+
+
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script>var plugin_path = 'assets/plugins/';</script>
+		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+		<script src="assets/js/scripts.js"></script>
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<script src="assets/js/view/demo.shop.js"></script>
+
+	</body>
+</html>

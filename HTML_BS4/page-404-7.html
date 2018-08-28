@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Smarty - Multipurpose + Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- SWIPER SLIDER -->
+		<link href="assets/plugins/slider.swiper/dist/css/swiper.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+
+
+		VERTICAL MENU ONLY
+		menu-vertical			= vertical menu
+		menu-vertical			= vertical menu
+		menu-inverse			= right side menu
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation menu-vertical menu-vertical-hide">
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				SIDE MENU 
+				
+				.sidebar-hidden = open only on click
+			-->
+			<div id="mainMenu" class="navbar-toggleable-md sidebar-vertical sidebar-hidden">
+
+				<button id="sidebar_vertical_btn"><i></i></button>
+
+				<div class="sidebar-nav">
+					<div class="navbar navbar-default" role="navigation">
+
+						<a href="index.html" class="logo text-center">
+							<img src="assets/images/_smarty/logo.png" alt="">
+						</a>
+
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+
+						<div class="navbar-collapse sidebar-navbar-collapse collapse" aria-expanded="false">
+
+							<!-- MENU -->
+							<ul class="nav navbar-nav">
+								<li>
+									<a href="index.html">
+										<i class="et-trophy"></i> 
+										Home
+									</a>
+								</li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+										<i class="et-layers"></i> 
+										Pages 
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="feature-header-side-left-1-gg.html">Background Grain Green</a></li>
+										<li><a href="feature-header-side-left-1-gb.html">Background Grain Blue</a></li>
+										<li><a href="feature-header-side-left-1-gy.html">Background Grain Yellow</a></li>
+										<li><a href="feature-header-side-left-1-go.html">Background Grain Orange</a></li>
+										<li><a href="feature-header-side-left-1-ggr.html">Background Grain Grey</a></li>
+									</ul>
+								</li>
+								<li class="dropdown active">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="">
+										<i class="et-beaker"></i> 
+										Features
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="feature-header-side-left-1.html">Header Left Fixed</a></li>
+										<li class="active"><a href="feature-header-side-left-2.html">Header Left Onclick</a></li>
+										<li><a href="feature-header-side-right-1.html">Header Right Fixed</a></li>
+										<li><a href="feature-header-side-right-2.html">Header Right Onclick</a></li>
+										<li><a href="feature-header-side-left-3.html">Header Left Dark</a></li>
+										<li><a href="feature-header-side-right-3.html">Header Right Dark</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="">
+										<i class="et-mic"></i> 
+										Portfolio
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="portfolio-grid-2-columns.html">2 Columns</a></li>
+										<li><a href="portfolio-grid-3-columns.html">3 Columns</a></li>
+										<li><a href="portfolio-grid-4-columns.html">4 Columns</a></li>
+										<li><a href="portfolio-layout-default.html">Single Basic</a></li>
+										<li><a href="portfolio-layout-aside-left.html">Left Sidebar</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="">
+										<i class="et-heart"></i> 
+										Blog
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="blog-default-aside-left.html">Left Sidebar</a></li>
+										<li><a href="blog-default-aside-right.html">Right Sidebar</a></li>
+										<li><a href="blog-default-fullwidth.html">Full Width</a></li>
+										<li><a href="blog-single-default.html">Single</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="" aria-expanded="false">
+										<i class="et-basket"></i> 
+										Shop
+									</a>
+									<ul class="dropdown-menu">
+
+										<li><a href="shop-2col-left.html">2 Columns</a></li>
+										<li><a href="shop-3col-left.html">3 Columns</a></li>
+										<li><a href="shop-4col-left.html">4 Columns</a></li>
+										<li><a href="shop-cart.html">Shop Cart</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="page-contact-1.html">
+										<i class="et-envelope"></i> 
+										Contact Us
+									</a>
+								</li>
+							</ul>
+							<!-- /MENU -->
+
+						</div><!--/.nav-collapse -->
+
+					</div>
+				</div>
+
+
+				<!-- Social Icons -->
+				<div class="social-icons hidden-md hidden-sm hidden-xs-down text-center">
+					<a href="#" class="social-icon social-icon-sm social-icon-light social-facebook" data-toggle="tooltip" data-placement="top" title="Facebook">
+						<i class="icon-facebook"></i>
+						<i class="icon-facebook"></i>
+					</a>
+					<a href="#" class="social-icon social-icon-sm social-icon-light social-twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+						<i class="icon-twitter"></i>
+						<i class="icon-twitter"></i>
+					</a>
+					<a href="#" class="social-icon social-icon-sm social-icon-light social-pinterest" data-toggle="tooltip" data-placement="top" title="Pinterest">
+						<i class="icon-pinterest"></i>
+						<i class="icon-pinterest"></i>
+					</a>
+					<a href="#" class="social-icon social-icon-sm social-icon-light social-linkedin" data-toggle="tooltip" data-placement="top" title="Linkedin">
+						<i class="icon-linkedin"></i>
+						<i class="icon-linkedin"></i>
+					</a>
+					<a href="#" class="social-icon social-icon-sm social-icon-light social-gplus" data-toggle="tooltip" data-placement="top" title="Google Plus">
+						<i class="icon-gplus"></i>
+						<i class="icon-gplus"></i>
+					</a>
+				</div>
+				<!-- /Social Icons -->
+
+
+				<!-- Paragraph -->
+				<p class="text-center hidden-xs-down">office@yourdomain.com</p>
+				<!-- /Paragraph -->
+
+			</div>
+			<!-- /SIDE MENU -->
+
+
+
+			<!-- 
+				SLIDER
+
+				Classes:
+					.fullheight = full height slider
+			-->
+			<section id="slider" class="fullheight">
+
+				<!--
+					SWIPPER SLIDER PARAMS
+					
+					data-effect="slide|fade|coverflow"
+					data-autoplay="2500|false" 						(remove to disable autoplay)
+				-->
+				<div class="swiper-container" data-effect="fade" data-autoplay="false">
+					<div class="swiper-wrapper">
+
+						<!-- SLIDE 1 -->
+						<div class="swiper-slide" style="background-image: url('demo_files/images/medical/1200x800/flickr_29-min.jpg');">
+							<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
+							
+							<div class="display-table">
+								<div class="display-table-cell vertical-align-middle">
+									<div class="container">
+
+										<div class="row">
+											<div class="text-center col-md-8 col-12 offset-md-2">
+
+												<h1 class="bold font-raleway wow fadeInUp" data-wow-delay="0.4s">PAGE NOT FOUND</h1>
+												<p class="lead font-lato fw-300 hidden-xs-down wow fadeInUp" data-wow-delay="0.6s">Sorry, The page you requested can not be found!</p>
+												<a class="fs-20 font-lato wow fadeInUp" href="index.html" data-wow-delay="1.9s"><i class="glyphicon glyphicon-menu-left mr-10 fs-16"></i> back to Smarty homepage now!</a>
+
+											</div>
+										</div>
+							
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						<!-- /SLIDE 1 -->
+
+
+						<!-- SLIDE 2 -->
+						<div class="swiper-slide" style="background-image: url('demo_files/images/medical/1200x800/flickr_31-min.jpg');">
+							<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
+							
+							<div class="display-table">
+								<div class="display-table-cell vertical-align-middle">
+									<div class="container">
+
+										<div class="row">
+											<div class="col-md-5 col-12">
+
+												<h1 class="bold font-raleway wow fadeInUp" data-wow-delay="0.4s">PAGE NOT FOUND</h1>
+												<p class="lead font-lato fw-300 hidden-xs-down wow fadeInUp" data-wow-delay="0.6s">Sorry, The page you requested can not be found!</p>
+												<a class="fs-20 font-lato wow fadeInUp" href="index.html" data-wow-delay="1.9s"><i class="glyphicon glyphicon-menu-left mr-10 fs-16"></i> back to Smarty homepage now!</a>
+
+											</div>
+										</div>
+							
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						<!-- /SLIDE 2 -->
+
+					</div>
+
+					<!-- Swiper Pagination -->
+					<div class="swiper-pagination"></div>
+
+					<!-- Swiper Arrows -->
+					<div class="swiper-button-next"><i class="fa fa-angle-right"></i></div>
+					<div class="swiper-button-prev"><i class="fa fa-angle-left"></i></div>
+				</div>
+					
+			</section>
+			<!-- /SLIDER -->
+
+
+
+
+			<!-- -->
+			<section class="section-xlg">
+				<div class="container">
+					
+					<div class="row">
+
+						<div class="col-md-6 col-sm-6 hidden-xs-down">
+							
+							<div class="error-404">
+								404
+							</div>
+						
+						</div>
+
+						<div class="col-md-6 col-sm-6">
+						
+							<h3 class="m-0">Sorry, <strong>The page you requested can not be found!</strong></h3>
+							<p class="mt-0 fs-20 font-lato text-muted">Please, search again using more specific keywords.</p>
+
+							<!-- INLINE SEARCH -->
+							<div class="inline-search clearfix mb-60">
+								<form action="" method="get" class="widget_search">
+									<input type="search" placeholder="Search..." id="s" name="s" class="serch-input">
+									<button type="submit">
+										<i class="fa fa-search"></i>
+									</button>
+									<div class="clear"></div>
+								</form>
+							</div>
+							<!-- /INLINE SEARCH -->
+
+							<div class="divider mb-0"><!-- divider --></div>
+
+							<a class="fs-16 font-lato" href="index.html"><i class="glyphicon glyphicon-menu-left mr-10 fs-12"></i> back to Smarty homepage now!</a>
+
+						</div>
+
+					</div>
+					
+				</div>
+			</section>
+			<!-- / -->
+
+
+
+
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
+
+					<div class="row">
+						
+						<div class="col-md-3">
+							<!-- Footer Logo -->
+							<img class="footer-logo" src="assets/images/_smarty/logo-footer.png" alt="" />
+
+							<!-- Small Description -->
+							<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+
+							<!-- Contact Address -->
+							<address>
+								<ul class="list-unstyled">
+									<li class="footer-sprite address">
+										PO Box 21132<br>
+										Here Weare St, Melbourne<br>
+										Vivas 2355 Australia<br>
+									</li>
+									<li class="footer-sprite phone">
+										Phone: 1-800-565-2390
+									</li>
+									<li class="footer-sprite email">
+										<a href="mailto:support@yourname.com">support@yourname.com</a>
+									</li>
+								</ul>
+							</address>
+							<!-- /Contact Address -->
+
+						</div>
+
+						<div class="col-md-3">
+
+							<!-- Latest Blog Post -->
+							<h4 class="letter-spacing-1">LATEST NEWS</h4>
+							<ul class="footer-posts list-unstyled">
+								<li>
+									<a href="#">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue</a>
+									<small>29 June 2017</small>
+								</li>
+								<li>
+									<a href="#">Nullam id dolor id nibh ultricies</a>
+									<small>29 June 2017</small>
+								</li>
+								<li>
+									<a href="#">Duis mollis, est non commodo luctus</a>
+									<small>29 June 2017</small>
+								</li>
+							</ul>
+							<!-- /Latest Blog Post -->
+
+						</div>
+
+						<div class="col-md-2">
+
+							<!-- Links -->
+							<h4 class="letter-spacing-1">EXPLORE SMARTY</h4>
+							<ul class="footer-links list-unstyled">
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Our Services</a></li>
+								<li><a href="#">Our Clients</a></li>
+								<li><a href="#">Our Pricing</a></li>
+								<li><a href="#">Smarty Tour</a></li>
+								<li><a href="#">Contact Us</a></li>
+							</ul>
+							<!-- /Links -->
+
+						</div>
+
+						<div class="col-md-4">
+
+							<!-- Newsletter Form -->
+							<h4 class="letter-spacing-1">KEEP IN TOUCH</h4>
+							<p>Subscribe to Our Newsletter to get Important News &amp; Offers</p>
+
+							<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+									<span class="input-group-btn">
+										<button class="btn btn-success" type="submit">Subscribe</button>
+									</span>
+								</div>
+							</form>
+							<!-- /Newsletter Form -->
+
+							<!-- Social Icons -->
+							<div class="mt-20">
+								<a href="#" class="social-icon social-icon-border social-facebook float-left" data-toggle="tooltip" data-placement="top" title="Facebook">
+
+									<i class="icon-facebook"></i>
+									<i class="icon-facebook"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-twitter float-left" data-toggle="tooltip" data-placement="top" title="Twitter">
+									<i class="icon-twitter"></i>
+									<i class="icon-twitter"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-gplus float-left" data-toggle="tooltip" data-placement="top" title="Google plus">
+									<i class="icon-gplus"></i>
+									<i class="icon-gplus"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-linkedin float-left" data-toggle="tooltip" data-placement="top" title="Linkedin">
+									<i class="icon-linkedin"></i>
+									<i class="icon-linkedin"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-rss float-left" data-toggle="tooltip" data-placement="top" title="Rss">
+									<i class="icon-rss"></i>
+									<i class="icon-rss"></i>
+								</a>
+					
+							</div>
+							<!-- /Social Icons -->
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="copyright">
+					<div class="container">
+						<ul class="float-right m-0 list-inline mobile-block">
+							<li><a href="#">Terms &amp; Conditions</a></li>
+							<li>&bull;</li>
+							<li><a href="#">Privacy</a></li>
+						</ul>
+						&copy; All Rights Reserved, Company LTD
+					</div>
+				</div>
+			</footer>
+			<!-- /FOOTER -->
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script>var plugin_path = 'assets/plugins/';</script>
+		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+		<script src="assets/js/scripts.js"></script>
+		
+		<!-- STYLESWITCHER - REMOVE -->
+		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+
+		<!-- SWIPER SLIDER -->
+		<script src="assets/plugins/slider.swiper/dist/js/swiper.min.js"></script>
+		<script src="assets/js/view/demo.swiper_slider.js"></script>
+	</body>
+</html>

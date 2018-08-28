@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Smarty - Multipurpose + Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- REVOLUTION SLIDER -->
+		<link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation">
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+			<div id="header" class="navbar-toggleable-md sticky clearfix">
+
+				<!-- SEARCH HEADER -->
+				<div class="search-box over-header">
+					<a id="closeSearch" href="#" class="fa fa-remove"></a>
+
+					<form action="page-search-result-1.html" method="get">
+						<input type="text" class="form-control" placeholder="SEARCH" />
+					</form>
+				</div> 
+				<!-- /SEARCH HEADER -->
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- Logo -->
+						<a class="logo float-left scrollTo" href="#top">
+							<img src="assets/images/_smarty/logo_dark.png" alt="" />
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<nav class="nav-main">
+
+								<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									<li class="active"><!-- HOME -->
+										<a href="#home">
+											HOME
+										</a>
+									</li>
+									<li><!-- WELCOME -->
+										<a href="#welcome">
+											WELCOME
+										</a>
+									</li>
+									<li><!-- NEWS -->
+										<a href="#news">
+											NEWS
+										</a>
+									</li>
+									<li><!-- GALLERY -->
+										<a href="#gallery">
+											GALLERY
+										</a>
+									</li>
+									<li><!-- BLOG -->
+										<a class="external" href="blog-default-aside-left.html">
+											BLOG
+										</a>
+									</li>
+									<li><!-- CONTACT -->
+										<a href="#contact">
+											CONTACT
+										</a>
+									</li>
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+
+
+			<!-- REVOLUTION SLIDER -->
+			<div id="home" class="slider fullwidthbanner-container roundedcorners">
+				<!--
+					Navigation Styles:
+					
+						data-navigationStyle="" theme default navigation
+						
+						data-navigationStyle="preview1"
+						data-navigationStyle="preview2"
+						data-navigationStyle="preview3"
+						data-navigationStyle="preview4"
+						
+					Bottom Shadows
+						data-shadow="1"
+						data-shadow="2"
+						data-shadow="3"
+						
+					Slider Height (do not use on fullscreen mode)
+						data-height="300"
+						data-height="350"
+						data-height="400"
+						data-height="450"
+						data-height="500"
+						data-height="550"
+						data-height="600"
+						data-height="650"
+						data-height="700"
+						data-height="750"
+						data-height="800"
+				-->
+				<div class="fullwidthbanner" data-height="500" data-shadow="0" data-navigationStyle="preview2">
+					<ul class="hide">
+
+						<!-- SLIDE  -->
+						<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off"  data-title="Pastor Jack Hetfield">
+							<!-- MAIN IMAGE -->
+							<img src="demo_files/images/blue.jpg"  alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+							<div class="tp-caption white_big skewfromleft tp-resizeme"
+								data-x="471"
+								data-y="100" 
+								data-speed="400"
+								data-start="1500"
+								data-easing="Power3.easeInOut"
+								data-splitin="words"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="600"
+								style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+									Pastor Jack Hetfield
+							</div>
+
+							<div class="tp-caption content_text_center skewfromleft tp-resizeme"
+								data-x="530"
+								data-y="195" 
+								data-speed="500"
+								data-start="2000"
+								data-easing="Power3.easeInOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="600"
+
+								style="z-index: 3; font-size:20px; color:#fff; font-weight:300; text-shadow:none;">
+									Listen Pastor Jack Hetfield if you missed him last week<br />
+									God bless you all!
+							</div>
+
+							<div class="tp-caption tp-fade"
+								data-x="left"
+								data-y="25" 
+								data-speed="300"
+								data-start="800"
+								data-easing="Power3.easeInOut"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="300"
+								style="z-index: 4;">
+									<img src="demo_files/images/thematics/church/pastor-min.png" alt="">
+							</div>
+
+							<div class="tp-caption skewfromleft tp-resizeme  un-button-2-lg"
+								data-x="665"
+								data-y="300" 
+								data-speed="300"
+								data-start="2500"
+								data-easing="Power3.easeInOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="300"
+
+								style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+									<a class="btn btn-warning btn-lg" href="#">LISTEN NOW &nbsp; <i class="fa fa-angle-right"></i></a>
+							</div>
+						</li>
+
+						<!-- SLIDE  -->
+						<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" data-title="Junior Camp">
+							<!-- MAIN IMAGE -->
+							<img src="demo_files/images/thematics/church/slider_3-min.jpg" alt="cover image"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+							<div class="overlay dark-4"><!-- dark overlay [0 to 9 opacity] --></div>
+
+							<div class="tp-caption font-roboto skewfromleft tp-resizeme"
+								data-x="50"
+								data-y="50" 
+								data-speed="500"
+								data-start="1500"
+								data-easing="Cubic.easeOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+									Junior Camp <br />
+									Forrest
+							</div>
+
+							<div class="tp-caption skewfromrightshort tp-resizeme"
+								data-x="50"
+								data-y="250" 
+								data-speed="500"
+								data-start="1000"
+								data-easing="easeInCirc"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 3; font-size:20px; color:#fff; font-weight:300; text-shadow:none;">
+									Our church invite your kids to the yearly Junior Camp! <br />
+									Do not heistate to contact us!
+							</div>
+
+							<div class="tp-caption sfb tp-resizeme"
+								data-x="50"
+								data-y="360" 
+								data-speed="500"
+								data-start="1500"
+								data-easing="Power3.easeIn"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 4; max-width: auto;">
+									<a class="btn btn-warning btn-lg" href="#">CONTINUE READING &nbsp; <i class="fa fa-angle-right"></i></a>
+							</div>
+
+						</li>
+
+						<!-- SLIDE  -->
+						<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" data-title="Junior Camp">
+							<!-- MAIN IMAGE -->
+							<img src="demo_files/images/thematics/church/church_2-min.jpg" alt="cover image"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+							<div class="overlay dark-4"><!-- dark overlay [0 to 9 opacity] --></div>
+
+							<div class="tp-caption font-roboto skewfromleft tp-resizeme"
+								data-x="center"
+								data-y="100" 
+								data-speed="500"
+								data-start="1500"
+								data-easing="Cubic.easeOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+									Saturday Pray Week
+							</div>
+
+							<div class="tp-caption skewfromrightshort tp-resizeme"
+								data-x="center"
+								data-y="230" 
+								data-speed="500"
+								data-start="1000"
+								data-easing="easeInCirc"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 3; font-size:20px; color:#fff; font-weight:300; text-shadow:none;">
+									Pray week start at 9:30 in the morning. <br />
+									Do not miss talking with God!
+							</div>
+
+							<div class="tp-caption sfb tp-resizeme"
+								data-x="center"
+								data-y="350" 
+								data-speed="500"
+								data-start="1500"
+								data-easing="Power3.easeIn"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 4; max-width: auto;">
+									<a class="btn btn-default btn-lg" href="#">CONTINUE READING &nbsp; <i class="fa fa-angle-right"></i></a>
+							</div>
+
+						</li>
+
+					</ul>
+
+					<div class="tp-bannertimer"><!-- progress bar --></div>
+				</div>
+			</div>
+			<!-- /REVOLUTION SLIDER -->
+
+
+
+
+
+
+			<!-- Do Not Miss -->
+			<section id="donotmiss">
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-md-3">
+
+							<div class="box-static box-border-top">
+								<div class="box-title">
+									<h4>Do Not Miss</h4>
+								</div>
+								<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus.</p>
+								<p><small>Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis.</small></p>
+							</div>
+
+						</div>
+
+						<div class="col-md-3">
+
+							<div class="box-flip box-color box-icon box-icon-center box-icon-round box-icon-large text-center">
+								<div class="front">
+									<div class="box1" style="background-color:#a0ce4e;">
+										<div class="box-icon-title">
+											<i class="et-profile-male"></i>
+											<h2>Bible Study</h2>
+										</div>
+										<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere</p>
+									</div>
+								</div>
+
+								<div class="back">
+									<div class="box2" style="background-color:#a0ce4e;">
+										<h4>Bible Study</h4>
+										<hr />
+										<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere</p>
+										<a href="#" class="btn btn-block btn-translucid">Read More</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-md-3">
+
+							<div class="box-flip box-color box-icon box-icon-center box-icon-round box-icon-large text-center">
+								<div class="front">
+									<div class="box1" style="background-color:#cb9536;">
+										<div class="box-icon-title">
+											<i class="et-puzzle"></i>
+											<h2>Outserch Ministry</h2>
+										</div>
+										<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere</p>
+									</div>
+								</div>
+
+								<div class="back">
+									<div class="box2" style="background-color:#cb9536;">
+										<h4>Outserch Ministry</h4>
+										<hr />
+										<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere</p>
+										<a href="#" class="btn btn-block btn-translucid">Read More</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-md-3">
+
+							<div class="box-flip box-color box-icon box-icon-center box-icon-round box-icon-large text-center">
+								<div class="front">
+									<div class="box1" style="background-color:#73b9dc;">
+										<div class="box-icon-title">
+											<i class="et-flag"></i>
+											<h2>Teens Camp</h2>
+										</div>
+										<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere</p>
+									</div>
+								</div>
+
+								<div class="back">
+									<div class="box2" style="background-color:#73b9dc;">
+										<h4>Teens Camp</h4>
+										<hr />
+										<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere</p>
+										<a href="#" class="btn btn-block btn-translucid">Read More</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+			<!-- /Do Not Miss -->
+
+
+
+
+			<!-- Welcome -->
+			<section id="welcome">
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-sm-7">
+							<img class="img-fluid" src="demo_files/images/thematics/church/church-min.jpg" alt="" />
+						</div>
+
+						<div class="col-sm-5">
+							<h2 class="fw-300">Welcome to <span>Smarty Church</span></h2>
+						
+							<p>Lorem ipsum dolor sit amet, hinc dolores noluisse at vel, ex quod aperiri scaevola has, cum te sanctus denique. Eu liber docendi petentium has, labore.</p>
+							<p>Etiam falli mentitum id mel, ut mel sumo postulant referrentur. At has minim imperdiet, soluta offendit ocurreret sea an. </p>
+							
+							<hr />
+
+							<ul class="list-unstyled list-icons">
+								<li><i class="fa fa-check"></i> Nobis nemore epicuri pro ea</li>
+								<li><i class="fa fa-check"></i> Qui dicunt singulis dissentias an</li>
+								<li><i class="fa fa-check"></i> Ea vis diceret constituam</li>
+								<li><i class="fa fa-check"></i> Mei no autem idque integre, sumo facilis</li>
+								<li><i class="fa fa-check"></i> Est quodsi labitur moderatius an</li>
+							</ul>
+
+							<img src="demo_files/images/thematics/church/pastjack.png" alt="signature" />
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<!-- /Welcome -->
+
+
+
+
+			<!-- Parallax -->
+			<section class="parallax parallax-2" style="background-image: url('demo_files/images/thematics/church/church_2-min.jpg');">
+				<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
+
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-sm-6">
+							<h3 class="fw-300 fs-30">
+								<strong>Seniors Bible Study</strong>
+								<small class="block text-white fs-15">August 13, 2017 4:00 pm</small>
+							</h3>
+							
+							<p class="fs-19 fw-300">Join Our senior citizens for a few laughs and enjoy good company with like minded seniors.</p>
+						</div>
+
+						<div class="col-sm-6">
+							<div class="countdown countdown-lg mt-40" data-from="December 31, 2018 15:03:26"><!-- Example Date From: December 31, 2018 15:03:26 --></div>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+			<!-- /Parallax -->
+
+
+
+
+
+			<!-- News -->
+			<section id="news">
+				<div class="container">
+
+					<div class="row">
+					
+						<!-- RIGHT -->
+						<div class="col-lg-9 col-md-9 col-sm-9 order-lg-2 order-md-2 order-sm-2">
+
+							<h2>Blog News <span class="fs-18">/ Church news!</span></h2>
+
+							<!-- news item -->
+							<div class="inews-item">
+								<a class="inews-thumbnail" href="#">
+									<span class="inews-sticky font-lato">
+										<i class="fa fa-bullhorn"></i> 
+										STICKY POST
+									</span>
+									<img class="img-fluid" src="demo_files/images/thematics/church/church_thumb_1-min.jpg" alt="image" />
+								</a>
+								
+								<div class="inews-item-content">
+
+									<div class="inews-date-wrapper">
+										<span class="inews-date-day">29</span>
+										<span class="inews-date-month">June</span>
+										<span class="inews-date-year">2015</span>
+									</div>
+
+									<div class="inews-content-inner">
+
+										<h3 class="fs-20"><a href="#">Lorem Upsum Dolor</a></h3>
+										<ul class="blog-post-info list-inline b-0 mb-20 p-0">
+											<li>
+												<a href="page-profile.html">
+													<i class="fa fa-user"></i> 
+													<span class="font-lato">By John Doe</span>
+												</a>
+											</li>
+											<li>
+												<i class="fa fa-folder-open-o"></i> 
+
+												<a class="category" href="#">
+													<span class="font-lato">Design</span>
+												</a>
+												<a class="category" href="#">
+													<span class="font-lato">Photography</span>
+												</a>
+											</li>
+										</ul>
+
+										<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Idque Caesaris facere voluntate liceret: sese habere....</p>
+									</div>
+									
+
+								</div>
+							</div>
+							<!-- /news item -->
+
+							<!-- news item -->
+							<div class="inews-item">
+								<a class="inews-thumbnail" href="#">
+									<img class="img-fluid" src="demo_files/images/thematics/church/church_thumb_2-min.jpg" alt="image" />
+								</a>
+								
+								<div class="inews-item-content">
+
+									<div class="inews-date-wrapper">
+										<span class="inews-date-day">29</span>
+										<span class="inews-date-month">June</span>
+										<span class="inews-date-year">2015</span>
+									</div>
+
+									<div class="inews-content-inner">
+
+										<h3 class="fs-20"><a href="#">Lorem Upsum Dolor</a></h3>
+										<ul class="blog-post-info list-inline b-0 mb-20 p-0">
+											<li>
+												<a href="page-profile.html">
+													<i class="fa fa-user"></i> 
+													<span class="font-lato">By John Doe</span>
+												</a>
+											</li>
+											<li>
+												<i class="fa fa-folder-open-o"></i> 
+
+												<a class="category" href="#">
+													<span class="font-lato">Design</span>
+												</a>
+												<a class="category" href="#">
+													<span class="font-lato">Photography</span>
+												</a>
+											</li>
+										</ul>
+
+										<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Idque Caesaris facere voluntate liceret: sese habere....</p>
+									</div>
+									
+
+								</div>
+							</div>
+							<!-- /news item -->
+
+							<!-- news item -->
+							<div class="inews-item">
+								<a class="inews-thumbnail" href="#">
+									<img class="img-fluid" src="demo_files/images/thematics/church/church_thumb_3-min.jpg" alt="image" />
+								</a>
+								
+								<div class="inews-item-content">
+
+									<div class="inews-date-wrapper">
+										<span class="inews-date-day">29</span>
+										<span class="inews-date-month">June</span>
+										<span class="inews-date-year">2015</span>
+									</div>
+
+									<div class="inews-content-inner">
+
+										<h3 class="fs-20"><a href="#">Lorem Upsum Dolor</a></h3>
+										<ul class="blog-post-info list-inline b-0 mb-20 p-0">
+											<li>
+												<a href="page-profile.html">
+													<i class="fa fa-user"></i> 
+													<span class="font-lato">By John Doe</span>
+												</a>
+											</li>
+											<li>
+												<i class="fa fa-folder-open-o"></i> 
+
+												<a class="category" href="#">
+													<span class="font-lato">Design</span>
+												</a>
+												<a class="category" href="#">
+													<span class="font-lato">Photography</span>
+												</a>
+											</li>
+										</ul>
+
+										<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Idque Caesaris facere voluntate liceret: sese habere....</p>
+									</div>
+									
+
+								</div>
+							</div>
+							<!-- /news item -->
+
+						</div>
+
+						<!-- LEFT -->
+						<div class="col-lg-3 col-md-3 col-sm-3 order-lg-1 order-md-1 order-sm-1">
+
+							<h3 class="mt-8">Twitter Feed</h3>
+
+							<!--
+								data-php="php/twitter/tweet.php"	- widget php path
+								data-username="stepofweb"			- twitter username
+								data-limit="3"						- maximum twwts to load
+								
+								PLEASE NOTE!
+								php/_cache/ - folder should be writable by the webserver!
+										- it's used to cache tweets
+							-->
+							<ul class="widget-twitter mb-20" data-php="php/twitter/tweet.php" data-username="stepofweb" data-limit="3">
+								<li></li>
+							</ul>
+
+							<!-- Soundcloud Widget -->
+							<iframe style="width:100%; height:166px" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/52246021&amp;color=a94545&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
+
+						</div>
+						
+					</div>
+
+				</div>
+			</section>
+			<!-- /News -->
+
+
+
+
+			<!-- Subscribe -->
+			<section class="alternate section-xs">
+				<div class="container">
+
+					<div class="row text-center">
+						<div class="col-lg-4 col-sm-8 offset-lg-4 offset-md-2 offset-sm-2">
+
+							<p class="fs-12 text-muted m-0">Please note: we never sell your email address!</p>
+							<h5 class="letter-spacing-1">STAY UP TO DATE</h5>
+							<div class="input-group">
+								<input id="newsletter_subscribe_email" type="text" class="form-control" placeholder="Type your email...">
+								<span class="input-group-btn">
+									<button id="newsletter_subscribe_btn" class="btn btn-primary" type="button">SUBSCRIBE</button>
+								</span>
+							</div><!-- /input-group -->
+
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+			<!-- /Subscribe -->
+
+
+
+
+
+
+			<!-- Gallery -->
+			<section id="gallery">
+				<div class="container">
+
+					<div class="row">
+					
+						<!-- RIGHT -->
+						<div class="col-lg-8 col-md-8 col-sm-8 order-lg-2 order-md-2 order-sm-2">
+
+							<div class="masonry-gallery columns-3 clearfix lightbox" data-img-big="2" data-plugin-options='{"delegate": "a", "gallery": {"enabled": true}}'>
+
+								<a class="image-hover" href="demo_files/images/1200x800/4-min.jpg">
+									<img src="demo_files/images/600x400/4-min.jpg" alt="...">
+								</a>
+
+								<a class="image-hover" href="demo_files/images/1200x800/5-min.jpg">
+									<img src="demo_files/images/1200x800/5-min.jpg" alt="...">
+								</a>
+
+								<a class="image-hover" href="demo_files/images/1200x800/6-min.jpg">
+									<img src="demo_files/images/600x400/6-min.jpg" alt="...">
+								</a>
+
+								<a class="image-hover" href="demo_files/images/1200x800/7-min.jpg">
+									<img src="demo_files/images/600x400/7-min.jpg" alt="...">
+								</a>
+
+								<a class="image-hover" href="demo_files/images/1200x800/8-min.jpg">
+									<img src="demo_files/images/600x400/8-min.jpg" alt="...">
+								</a>
+
+								<a class="image-hover" href="demo_files/images/1200x800/9-min.jpg">
+									<img src="demo_files/images/600x400/9-min.jpg" alt="...">
+								</a>
+
+							</div>
+
+						</div>
+
+						<!-- LEFT -->
+						<div class="col-lg-4 col-md-4 col-sm-4 order-lg-1 order-md-1 order-sm-1">
+
+							<h2>Church Gallery</h2>
+							
+							<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Idque Caesaris facere voluntate liceret: sese habere</p>
+
+							<a class="btn btn-default btn-block" href="#">VIEW MORE IMAGES</a>
+						</div>
+						
+					</div>
+
+				</div>
+			</section>
+			<!-- /Gallery -->
+
+
+
+
+
+
+			<!-- CONTACT -->
+			<section id="contact">
+				<div class="container">
+
+					<header class="text-center mb-60">
+						<h2>Contact Us</h2>
+						<p class="lead font-lato">Lorem ipsum dolor sit amet adipiscium elit</p>
+						<hr />
+					</header>
+
+
+					<div class="row">
+
+						<!-- FORM -->
+						<div class="col-md-8 col-sm-8">
+
+							<h3>Drop us a line or just say <strong><em>Hello!</em></strong></h3>
+
+							
+							<!--
+								MESSAGES
+								
+									How it works?
+									The form data is posted to php/contact.php where the fields are verified!
+									php.contact.php will redirect back here and will add a hash to the end of the URL:
+										#alert_success 		= email sent
+										#alert_failed		= email not sent - internal server error (404 error or SMTP problem)
+										#alert_mandatory	= email not sent - required fields empty
+										Hashes are handled by assets/js/contact.js
+
+									Form data: required to be an array. Example:
+										contact[email][required]  WHERE: [email] = field name, [required] = only if this field is required (PHP will check this)
+										Also, add `required` to input fields if is a mandatory field. 
+										Example: <input required type="email" value="" class="form-control" name="contact[email][required]">
+
+									PLEASE NOTE: IF YOU WANT TO ADD OR REMOVE FIELDS (EXCEPT CAPTCHA), JUST EDIT THE HTML CODE, NO NEED TO EDIT php/contact.php or javascript
+												 ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
+
+									WARNING! Do not change the `email` and `name`!
+												contact[name][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+												contact[email][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+							-->
+
+							<!-- Alert Success -->
+							<div id="alert_success" class="alert alert-success mb-30">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								<strong>Thank You!</strong> Your message successfully sent!
+							</div><!-- /Alert Success -->
+
+
+							<!-- Alert Failed -->
+							<div id="alert_failed" class="alert alert-danger mb-30">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								<strong>[SMTP] Error!</strong> Internal server error!
+							</div><!-- /Alert Failed -->
+
+
+							<!-- Alert Mandatory -->
+							<div id="alert_mandatory" class="alert alert-danger mb-30">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
+							</div><!-- /Alert Mandatory -->
+
+
+							<form action="php/contact.php" method="post" enctype="multipart/form-data">
+								<fieldset>
+									<input type="hidden" name="action" value="contact_send" />
+
+									<div class="row">
+											<div class="col-md-4">
+												<label for="contact:name">Full Name *</label>
+												<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
+											</div>
+											<div class="col-md-4">
+												<label for="contact:email">E-mail Address *</label>
+												<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+											</div>
+											<div class="col-md-4">
+												<label for="contact:phone">Phone</label>
+												<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
+											</div>
+									</div>
+									<div class="row">
+											<div class="col-md-8">
+												<label for="contact:subject">Subject *</label>
+												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+											</div>
+											<div class="col-md-4">
+												<label for="contact_department">Department</label>
+												<select class="form-control pointer" name="contact[department]">
+													<option value="">--- Select ---</option>
+													<option value="Marketing">Marketing</option>
+													<option value="Webdesign">Webdesign</option>
+													<option value="Architecture">Architecture</option>
+												</select>
+											</div>
+									</div>
+									<div class="row">
+											<div class="col-md-12">
+												<label for="contact:message">Message *</label>
+												<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
+											</div>
+									</div>
+									<div class="row">
+											<div class="col-md-12">
+												<label for="contact:attachment">File Attachment</label>
+
+												<!-- custom file upload -->
+												<input class="custom-file-upload" type="file" id="file" name="contact[attachment]" id="contact:attachment" data-btn-text="Select a File" />
+												<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
+
+											</div>
+									</div>
+
+								</fieldset>
+
+								<div class="row">
+									<div class="col-md-12">
+										<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SEND MESSAGE</button>
+									</div>
+								</div>
+							</form>
+
+						</div>
+						<!-- /FORM -->
+
+
+						<!-- INFO -->
+						<div class="col-md-4 col-sm-4">
+
+							<h2>Visit Us</h2>
+
+							<!-- 
+							Available heights
+								h-100
+								h-150
+								h-200
+								h-250
+								h-300
+								h-350
+								h-400
+								h-450
+								h-500
+								h-550
+								h-600
+							-->
+							<div id="map2" class="h-400 grayscale"></div>
+
+							<hr />
+
+							<p>
+								<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> Street Name, City Name, Country</span>
+								<span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:1800-555-1234">1800-555-1234</a></span>
+								<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:mail@yourdomain.com">mail@yourdomain.com</a></span>
+							</p>
+
+						</div>
+						<!-- /INFO -->
+
+					</div>
+
+				</div>
+			</section>
+			<!-- /CONTACT -->
+
+
+
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
+
+					<div class="row">
+						
+						<div class="col-md-3">
+							<!-- Footer Logo -->
+							<img class="footer-logo" src="assets/images/_smarty/logo-footer.png" alt="" />
+
+							<!-- Small Description -->
+							<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+
+							<!-- Contact Address -->
+							<address>
+								<ul class="list-unstyled">
+									<li class="footer-sprite address">
+										PO Box 21132<br>
+										Here Weare St, Melbourne<br>
+										Vivas 2355 Australia<br>
+									</li>
+									<li class="footer-sprite phone">
+										Phone: 1-800-565-2390
+									</li>
+									<li class="footer-sprite email">
+										<a href="mailto:support@yourname.com">support@yourname.com</a>
+									</li>
+								</ul>
+							</address>
+							<!-- /Contact Address -->
+
+						</div>
+
+						<div class="col-md-3">
+
+							<!-- Latest Blog Post -->
+							<h4 class="letter-spacing-1">LATEST NEWS</h4>
+							<ul class="footer-posts list-unstyled">
+								<li>
+									<a href="#">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue</a>
+									<small>29 June 2017</small>
+								</li>
+								<li>
+									<a href="#">Nullam id dolor id nibh ultricies</a>
+									<small>29 June 2017</small>
+								</li>
+								<li>
+									<a href="#">Duis mollis, est non commodo luctus</a>
+									<small>29 June 2017</small>
+								</li>
+							</ul>
+							<!-- /Latest Blog Post -->
+
+						</div>
+
+						<div class="col-md-2">
+
+							<!-- Links -->
+							<h4 class="letter-spacing-1">EXPLORE SMARTY</h4>
+							<ul class="footer-links list-unstyled">
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Our Services</a></li>
+								<li><a href="#">Our Clients</a></li>
+								<li><a href="#">Our Pricing</a></li>
+								<li><a href="#">Smarty Tour</a></li>
+								<li><a href="#">Contact Us</a></li>
+							</ul>
+							<!-- /Links -->
+
+						</div>
+
+						<div class="col-md-4">
+
+							<!-- Newsletter Form -->
+							<h4 class="letter-spacing-1">KEEP IN TOUCH</h4>
+							<p>Subscribe to Our Newsletter to get Important News &amp; Offers</p>
+
+							<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+									<span class="input-group-btn">
+										<button class="btn btn-success" type="submit">Subscribe</button>
+									</span>
+								</div>
+							</form>
+							<!-- /Newsletter Form -->
+
+							<!-- Social Icons -->
+							<div class="mt-20">
+								<a href="#" class="social-icon social-icon-border social-facebook float-left" data-toggle="tooltip" data-placement="top" title="Facebook">
+
+									<i class="icon-facebook"></i>
+									<i class="icon-facebook"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-twitter float-left" data-toggle="tooltip" data-placement="top" title="Twitter">
+									<i class="icon-twitter"></i>
+									<i class="icon-twitter"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-gplus float-left" data-toggle="tooltip" data-placement="top" title="Google plus">
+									<i class="icon-gplus"></i>
+									<i class="icon-gplus"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-linkedin float-left" data-toggle="tooltip" data-placement="top" title="Linkedin">
+									<i class="icon-linkedin"></i>
+									<i class="icon-linkedin"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-rss float-left" data-toggle="tooltip" data-placement="top" title="Rss">
+									<i class="icon-rss"></i>
+									<i class="icon-rss"></i>
+								</a>
+					
+							</div>
+							<!-- /Social Icons -->
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="copyright">
+					<div class="container">
+						<ul class="float-right m-0 list-inline mobile-block">
+							<li><a href="#">Terms &amp; Conditions</a></li>
+							<li>&bull;</li>
+							<li><a href="#">Privacy</a></li>
+						</ul>
+						&copy; All Rights Reserved, Company LTD
+					</div>
+				</div>
+			</footer>
+			<!-- /FOOTER -->
+
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script>var plugin_path = 'assets/plugins/';</script>
+		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+		<script src="assets/js/scripts.js"></script>
+		
+		<!-- STYLESWITCHER - REMOVE -->
+		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+
+		<!-- REVOLUTION SLIDER -->
+		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="assets/js/view/demo.revolution_slider.js"></script>
+
+		<!-- PAGELEVEL SCRIPTS -->
+		<script src="assets/js/contact.js"></script>
+
+		<!-- 
+			GMAP.JS 
+			http://hpneo.github.io/gmaps/
+		-->
+		<script src="//maps.google.com/maps/api/js?key=AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY"></script>
+		<script src="assets/plugins/gmaps.js"></script>
+		<script>
+
+			jQuery(document).ready(function(){
+
+				/**
+					@BASIC GOOGLE MAP
+				**/
+				var map2 = new GMaps({
+					div: '#map2',
+					lat: -12.043333,
+					lng: -77.028333,
+					scrollwheel: false
+				});
+
+				var marker = map2.addMarker({
+					lat: -12.043333,
+					lng: -77.028333,
+					title: 'Company, Inc.'
+				});
+
+			});
+
+		</script>
+	</body>
+</html>

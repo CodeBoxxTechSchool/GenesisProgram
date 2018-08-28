@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Hotel | Smarty Packs</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/color_scheme/brown.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/pack-hotel.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/custom-forms-v2.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+	-->
+	<body class="smoothscroll enable-animation">
+
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+			-->
+			<div id="header" class="navbar-toggleable-md clearfix transparent sticky dark disable-uppercase">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+
+						<!-- SOCIAL -->
+						<ul class="float-right nav nav-pills nav-social nav-second-main">
+
+							<li>
+								<a href="https://www.twitter.com/stepofweb" target="_blank" class="social-twitter text-center text-white" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Twitter">
+									<i class="icon-twitter"></i>
+								</a>
+							</li>
+
+							<li>
+								<a href="https://www.facebook.com/stepofweb" target="_blank" class="social-facebook text-center text-white" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Facebook">
+									<i class="icon-facebook"></i>
+								</a>
+							</li>
+
+						</ul>
+						<!-- /SOCIAL -->
+
+
+						<!-- Logo -->
+						<a class="logo float-left" href="pack-hotel-v2-home-1.html">
+							<img src="demo_files/images/packs/hotel/logo-v2.png" alt="" />
+						</a>
+
+
+
+						<!-- 
+							Top Nav 
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-color">
+							<nav class="nav-main">
+
+								<!--
+									NOTE
+									
+									For a regular link, remove "dropdown" class from LI tag and "dropdown-toggle" class from the href.
+									Direct Link Example: 
+
+									<li>
+										<a href="#">HOME</a>
+									</li>
+
+									+ MENU EFFECTS
+										.nav-animate-fadeIn
+										.nav-animate-fadeInUp
+										.nav-animate-bounceIn
+										.nav-animate-bounceInUp
+										.nav-animate-flipInX
+										.nav-animate-flipInY
+										.nav-animate-zoomIn
+										.nav-animate-slideInUp
+
+										.nav-hover-animate 	= animate text on hover
+
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-hover-animate nav-animate-fadeIn">
+									<li><!-- HOME -->
+										<a href="pack-hotel-v2-home-1.html">
+											Home
+										</a>
+									</li>
+									<li><!-- ABOUT -->
+										<a href="pack-hotel-v2-about.html">
+											About
+										</a>
+									</li>
+									<li class="dropdown active"><!-- ROOMS -->
+										<a class="dropdown-toggle" href="#">
+											Rooms
+										</a>
+										<ul class="dropdown-menu">
+											<li class="active">
+												<a href="pack-hotel-v2-rooms.html">
+													Room List
+												</a>
+											</li>
+											<li>
+												<a href="pack-hotel-v2-rooms-detail.html">
+													Room Description
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><!-- GALLERY -->
+										<a href="pack-hotel-v2-gallery.html">
+											Gallery
+										</a>
+									</li>
+									<li><!-- BOOK ONLINE -->
+										<a href="pack-hotel-v2-booking.html">
+											<b>Book Online</b>
+										</a>
+									</li>
+									<li><!-- CONTACT -->
+										<a href="pack-hotel-v2-contact.html">
+											Contact
+										</a>
+									</li>
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+
+
+			<!-- 
+				PAGE HEADER 
+				
+				CLASSES:
+					.page-header-xs	= 20px margins
+					.page-header-md	= 50px margins
+					.page-header-lg	= 80px margins
+					.page-header-xlg= 130px margins
+					.dark		= dark page header
+					.light		= light page header
+			-->
+			<section class="page-header page-header-md b-0 dark" 
+				data-background-delay="5000" 
+				data-background-fade="1000" 
+				data-background="
+					demo_files/images/packs/hotel/cover/gabriel-ghnassia-518-min.jpg
+			">
+
+				<span class="overlay dark-5 raster"><!-- dark overlay [1 to 9 opacity] --></span>
+
+
+				<div class="display-table">
+					<div class="display-table-cell vertical-align-middle">
+						
+						<div class="container text-xs-center">
+
+							<h1 class="fw-400 wow fadeIn" data-wow-delay="0.2s">SMARTY ROOMS</h1>
+
+						</div>
+
+					</div>
+				</div>
+
+			</section>
+			<!-- /PAGE HEADER -->
+
+
+
+
+
+			<section>
+				<div class="container">
+
+
+					<header class="text-center mb-60">
+						<h2 class="fs-25">DESIGNED FOR YOUR PURPOSE</h2>
+						<p class="fw-300">WE TURN EVERY TRIP INTO A JOURNEY AND MAKE YOUR ARRIVAL MEMORABLE</p>
+					</header>
+
+
+					<div class="row cards-rooms">
+
+
+						<!-- room type -->
+						<div class="col-sm-6">
+
+							<div class="card">
+
+								<a href="pack-hotel-rooms-detail.html" class="image-hover-overlay">
+									<img class="card-img-top" src="demo_files/images/packs/hotel/gallery/4-min.jpg" alt="">
+								</a>
+
+								<div class="card-block">
+									<h3 class="card-title fs-18">
+										<span class="float-right fs-16">$38 
+											<span class="text-muted fs-13">/night</span>
+										</span>
+										LIFESTYLE SUITE
+									</h3>
+
+									<p class="card-text">
+										For a deluxe stay enjoy the ultimate comfort and the best night view over LA, including a personal iPad and ice machine in the room.
+									</p>
+
+									<a class="fs-14" href="pack-hotel-rooms-detail.html">VIEW ROOM INFO</a>
+								</div>
+
+							</div>
+
+						</div><!-- /room type -->
+
+
+						<!-- room type -->
+						<div class="col-sm-6">
+
+							<div class="card">
+
+								<a href="pack-hotel-rooms-detail.html" class="image-hover-overlay">
+									<img class="card-img-top" src="demo_files/images/packs/hotel/gallery/6-min.jpg" alt="">
+								</a>
+
+								<div class="card-block">
+									<h3 class="card-title fs-18">
+										<span class="float-right fs-16">$56 
+											<span class="text-muted fs-13">/night</span>
+										</span>
+										LIFESTYLE ROOMS
+									</h3>
+
+									<p class="card-text">
+										Our signature type of room providing you a luxury double king size bed, a glass-cubed extra-large bathtub with in-room view and personalized relaxation treatments. In addition, your personal iPad &amp; espresso machine.
+									</p>
+
+									<a class="fs-14" href="pack-hotel-rooms-detail.html">VIEW ROOM INFO</a>
+								</div>
+
+							</div>
+
+						</div><!-- /room type -->
+
+
+
+						<!-- room type -->
+						<div class="col-sm-6">
+
+							<div class="card">
+
+								<a href="pack-hotel-rooms-detail.html" class="image-hover-overlay">
+									<img class="card-img-top" src="demo_files/images/packs/hotel/gallery/8-min.jpg" alt="">
+								</a>
+
+								<div class="card-block">
+									<h3 class="card-title fs-18">
+										<span class="float-right fs-16">$75 
+											<span class="text-muted fs-13">/night</span>
+										</span>
+										EXECUTIVE SUITE
+									</h3>
+
+									<p class="card-text">
+										Relax in one of the upscale and distinct Executive rooms, starting from 38 sqm and featuring hypoallergenic linen with Serta Perfect Sleeper extra-large double bedding options (240×200 cm) or twin bedding options (2x120x200 cm), private Illy espresso machine, extra-large smart TVs.
+									</p>
+
+									<a class="fs-14" href="pack-hotel-rooms-detail.html">VIEW ROOM INFO</a>
+								</div>
+
+							</div>
+
+						</div><!-- /room type -->
+
+
+
+						<!-- room type -->
+						<div class="col-sm-6">
+
+							<div class="card">
+
+								<a href="pack-hotel-rooms-detail.html" class="image-hover-overlay">
+									<img class="card-img-top" src="demo_files/images/packs/hotel/gallery/12-min.jpg" alt="">
+								</a>
+
+								<div class="card-block">
+									<h3 class="card-title fs-18">
+										<span class="float-right fs-16">$99 
+											<span class="text-muted fs-13">/night</span>
+										</span>
+										BUSINESS SUITE
+									</h3>
+
+									<p class="card-text">
+										This special room type is perfect during your stay for a business event with the choice of a luxury king size 180x200 or twin bed 90x200 to enjoy. World's best mattresses - Sleep &AMP; Dream by Serta Perfect Sleeper.
+									</p>
+
+									<a class="fs-14" href="pack-hotel-rooms-detail.html">VIEW ROOM INFO</a>
+								</div>
+
+							</div>
+
+						</div><!-- /room type -->
+
+
+					</div><!-- /row -->
+
+
+
+
+				</div>
+			</section>
+
+
+
+
+			<!-- BUTTON CALLOUT -->
+			<a href="pack-hotel-booking.html" class="btn btn-xlg btn-default fs-20 fullwidth m-0 rad-0 b-0 p-40">
+				<span class="font-lato fs-30">
+					Traveling for business or pleasure?
+					<strong>Book Now &raquo;</strong>
+				</span>
+			</a>
+			<!-- /BUTTON CALLOUT -->
+
+
+
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
+
+
+					<div class="row">
+
+						<!-- col #1 -->
+						<div class="col-md-8">
+
+							<h3 class="letter-spacing-1 fw-300">WHY <b>SMARTY HOTELS</b></h3>
+
+							<!-- Small Description -->
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.
+							</p>
+							<h2>(800) 123-4567</h2>
+						</div>
+						<!-- /col #1 -->
+
+						<!-- col #2 -->
+						<div class="col-md-4">
+							<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
+
+							<!-- Newsletter Form -->
+							<p>Subscribe to Our Newsletter to get Important News & Offers</p>
+
+							<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+									<span class="input-group-btn">
+										<button class="btn btn-black" type="submit">Subscribe</button>
+									</span>
+								</div>
+							</form>
+							<!-- /Newsletter Form -->
+
+
+						</div>
+						<!-- /col #2 -->
+
+					</div>
+
+
+				</div>
+
+				<div class="copyright has-social">
+					<div class="container">
+						<!-- Social Icons -->
+						<div class="float-right nofloat-xs text-xs-center">
+							<a href="#" class="social-icon social-icon-sm social-icon-transparent social-facebook" data-toggle="tooltip" data-placement="top" title="Facebook">
+								<i class="icon-facebook"></i>
+								<i class="icon-facebook"></i>
+							</a>
+
+							<a href="#" class="social-icon social-icon-sm social-icon-transparent social-twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+								<i class="icon-twitter"></i>
+								<i class="icon-twitter"></i>
+							</a>
+
+							<a href="#" class="social-icon social-icon-sm social-icon-transparent social-gplus" data-toggle="tooltip" data-placement="top" title="Google plus">
+								<i class="icon-gplus"></i>
+								<i class="icon-gplus"></i>
+							</a>
+
+							<a href="#" class="social-icon social-icon-sm social-icon-transparent social-linkedin" data-toggle="tooltip" data-placement="top" title="Linkedin">
+								<i class="icon-linkedin"></i>
+								<i class="icon-linkedin"></i>
+							</a>
+						</div>
+						<!-- /Social Icons -->
+
+						<div class="copyright-text float-left nofloat-xs">
+							&copy; All Rights Reserved, Company LTD
+						</div>
+
+					</div>
+				</div>
+
+			</footer>
+			<!-- /FOOTER -->
+
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script>var plugin_path = 'assets/plugins/';</script>
+		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+		<script src="assets/js/scripts.js"></script>
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<script src="assets/js/view/pack_hotel.js"></script>
+
+	</body>
+</html>

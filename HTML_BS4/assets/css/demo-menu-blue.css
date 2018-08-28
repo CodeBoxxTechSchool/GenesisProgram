@@ -1,0 +1,79 @@
+/**	DEMO BLUE HEADER + DROPDOWN MENU
+	Used by shortcode-material-design.html
+
+	This file shows how can you customize the dropdown menu background
+	NOTE: this CSS file should be included the last one.
+
+	Color used: 3072e0  [blue]
+ **************************************************************** **/
+
+/* slidetop [optional, if used] - darker blue for a good contrast */
+#slidetop {
+	color: #e6ffeb;
+	background-color: #2e6ab5;
+}
+#slidetop a.slidetop-toggle {
+	border-top-color: #2e6ab5;
+}
+
+
+
+/** CUSTOM HEADER
+ *************************** **/
+#header,
+#topMain { /* force header color */
+	background: #3072e0 !important;
+}
+
+
+/* main menu links color - for a good contrast */
+#header.dark #topMain li>a {
+	color: #fff !important;
+}
+
+
+/* dropdown background color */
+#topNav div.submenu-color ul.dropdown-menu {
+	color: #fff;
+	background-color: #3072e0;
+	border-color: #3072e0;
+	border-top-color: rgba(0,0,0,0.2);
+}
+
+
+/* we want a very clean dropdown menu - no border bottom separator */
+#topNav ul.dropdown-menu li {
+	border-bottom: 0;
+}
+
+
+
+
+
+
+
+/** CUSTOM FOOTER
+ *************************** **/
+/* footer background */
+#footer {
+	background: #3072e0;
+}
+
+
+/* footer text contrast */
+#footer form input, 
+#footer form textarea,
+#footer a.social-icon {
+	color: #fff !important;
+}
+
+/* 
+	footer input placeholder
+	no really required but useful if you want a perfect contrast footer
+	set #fff or #000, according to background color!
+*/
+#footer    input::-webkit-input-placeholder,
+#footer textarea::-webkit-input-placeholder {
+	color: #fff;
+	opacity: 0.4;
+}
