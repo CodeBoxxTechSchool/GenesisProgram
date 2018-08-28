@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>LayerSlider 6 | Image Slider Example</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Nunito:300,400" rel="stylesheet">
+
+	<!-- Styles of this template -->
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+
+	<!-- LayerSlider styles -->
+	<link rel="stylesheet" href="../layerslider/css/layerslider.css" type="text/css">
+
+	<!-- External libraries: jQuery & GreenSock -->
+	<script src="../layerslider/js/jquery.js" type="text/javascript"></script>
+	<script src="../layerslider/js/greensock.js"></script>
+
+	<!-- LayerSlider script files -->
+	<script src="../layerslider/js/layerslider.transitions.js" type="text/javascript"></script>
+	<script src="../layerslider/js/layerslider.kreaturamedia.jquery.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+	<div id="layerslider" class="largemargin" style="width:750px;height:500px;max-width:750px;">
+		<div class="ls-slide" data-ls="duration:4000;kenburnsscale:1.2;">
+			<img width="750" height="500" src="images/1.jpg" class="ls-bg" alt="Image">
+		</div>
+		<div class="ls-slide" data-ls="duration:4000;">
+			<img width="750" height="500" src="images/2.jpg" class="ls-bg" alt="Image">
+		</div>
+		<div class="ls-slide" data-ls="duration:4000;">
+			<img width="750" height="500" src="images/3.jpg" class="ls-bg" alt="Image">
+		</div>
+		<div class="ls-slide" data-ls="duration:4000;deeplink:leopard;">
+			<img width="750" height="500" src="images/4.jpg" class="ls-bg" alt="Image">
+		</div>
+		<div class="ls-slide" data-ls="duration:4000;">
+			<img width="750" height="500" src="images/5.jpg" class="ls-bg" alt="Image">
+		</div>
+		<div class="ls-slide" data-ls="duration:4000;">
+			<img width="750" height="500" src="images/6.jpg" class="ls-bg" alt="Image">
+		</div>
+		<div class="ls-slide" data-ls="duration:4000;">
+			<img width="750" height="500" src="images/7.jpg" class="ls-bg" alt="Image">
+		</div>
+	</div>
+
+	<div id="description">
+		<h1>LayerSlider <span>6</span> | Image Slider Example</h1>
+		<p>
+			Our simplest example. This slider has no layers, it only uses slide background images with sliding transition effects.
+		</p>
+	</div>
+
+	<!-- Initializing the slider -->
+	<script>
+		jQuery("#layerslider").layerSlider({
+			type: 'responsive',
+			skin: 'borderlessdark',
+			skinsPath: '../layerslider/skins/',
+			thumbnailNavigation: 'always',
+			showCircleTimer: false,
+			showBarTimer: true,
+			tnContainerWidth: '100%',
+			tnWidth: 75,
+			tnHeight: 75
+		});
+	</script>
+
+</body>
+</html>

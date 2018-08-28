@@ -1,0 +1,140 @@
+/**	21. Alerts
+*************************************************** **/
+div.alert {
+	border-left-color:rgba(0,0,0,0.1);
+	border-width:1px;
+	border-left-width:5px;
+}
+div.alert-default {
+	background-color:rgba(0,0,0,0.1);
+}
+div.alert-light {
+	background-color:rgba(0,0,0,0.03);
+}
+	section.dark .alert-default {
+		color:#fff;
+		background-color:#111;
+	}
+
+	section.dark .alert-default h1,
+	section.dark .alert-default h2,
+	section.dark .alert-default h3,
+	section.dark .alert-default h4,
+	section.dark .alert-default h5,
+	section.dark .alert-default h6,
+	section.dark .alert-default p {
+		color:#fff !important;
+	}
+div.alert.alert-primary,
+div.alert.alert-primary a {
+	color:#fff;
+}
+div.alert.alert-bordered-dashed {
+	padding:30px 20px;
+	border:#ccc 2px dashed;
+}
+div.alert.alert-bordered-dotted {
+	padding:30px 20px;
+	border:#ccc 2px dotted;
+}
+div.alert.alert-bordered {
+	padding:30px 20px;
+	border:#ccc 2px solid;
+}
+div.alert.alert-theme-color,
+div.alert.alert-dark {
+	color:#fff;
+	background-color:#333;
+	border:0;
+	padding:30px 20px;
+}	
+	div.alert.alert-theme-color h1,
+	div.alert.alert-theme-color h2,
+	div.alert.alert-theme-color h3,
+	div.alert.alert-theme-color h4,
+	div.alert.alert-theme-color h5,
+	div.alert.alert-theme-color h6,
+	div.alert.alert-dark h1,
+	div.alert.alert-dark h2,
+	div.alert.alert-dark h3,
+	div.alert.alert-dark h4,
+	div.alert.alert-dark h5,
+	div.alert.alert-dark h6 {
+		color:#fff;
+	}
+
+	section.dark div.alert,
+	section.dark div.alert h1,
+	section.dark div.alert h2,
+	section.dark div.alert h3,
+	section.dark div.alert h4,
+	section.dark div.alert h5,
+	section.dark div.alert h6,
+	section.dark div.alert p {
+		color:#333;
+	}
+
+
+	section.dark div.callout.alert.alert-border,
+	section.dark div.callout.alert.alert-border h1,
+	section.dark div.callout.alert.alert-border h2,
+	section.dark div.callout.alert.alert-border h3,
+	section.dark div.callout.alert.alert-border h4,
+	section.dark div.callout.alert.alert-border h5,
+	section.dark div.callout.alert.alert-border h6,
+	section.dark div.callout.alert.alert-border p {
+		color:#fff;
+	}
+
+
+/* bordered top|botom */
+div.alert>.container {
+	margin-top:35px;
+	margin-bottom:35px;
+}
+div.alert.bordered-bottom {
+	border-bottom:rgba(0,0,0,0.1) 1px solid;
+	border-left-width:0;
+}
+div.alert.bordered-top {
+	border-bottom:rgba(0,0,0,0.1) 1px solid;
+	border-left-width:0;
+}
+div.alert.bordered-bottom h4,
+div.alert.bordered-top h4,
+div.alert.bordered-bottom h3,
+div.alert.bordered-top h3 {
+	font-weight:400;
+	margin:0;
+}
+div.alert.bordered-bottom p,
+div.alert.bordered-top p,
+div.alert.bordered-bottom p,
+div.alert.bordered-top p {
+	margin-top:0;
+}
+
+	section.dark div.alert.bordered-bottom {
+		border-bottom:#666 1px solid;
+	}
+	section.dark div.alert.bordered-top {
+		border-bottom:#666 1px solid;
+	}
+
+@media only screen and (max-width: 760px) {
+	div.alert.bordered-bottom {
+		text-align:center;
+	}
+	div.alert.bordered-bottom .btn {
+		text-align:center;
+		display:block;
+		margin-top:35px;
+	}
+}
+	
+
+/* mini alerts */
+.alert.alert-mini {
+	padding:6px 10px;
+	border-left:0;
+}

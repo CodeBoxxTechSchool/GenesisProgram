@@ -1,0 +1,93 @@
+/** 37. Styled Icons
+ **************************************************************** **/
+i.ico-transparent,
+i.ico-bordered,
+i.ico-rounded,
+i.ico-color,
+i.ico-light,
+i.ico-dark {
+
+	color: #444;
+	width:50px; height:50px;
+	line-height: 50px;
+	font-size:25px;
+	border: 1px solid #555;
+	background-color: transparent;
+	text-align:center;
+	display:inline-block;
+	margin-bottom:5px;
+	margin: 4px 8px 7px 0;
+
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+			border-radius: 3px;
+
+	-webkit-transition: all .3s ease;
+		 -o-transition: all .3s ease;
+			transition: all .3s ease;
+}
+	i.ico-transparent {
+		border:transparent;
+	}
+	i.ico-rounded {
+		-webkit-border-radius: 50%;
+		   -moz-border-radius: 50%;
+				border-radius: 50%;
+	}
+	i.ico-light {
+		border:transparent;
+		background-color:rgba(0,0,0,0.05);
+	}
+	i.ico-dark {
+		color:#fff;
+		border:transparent;
+		background-color:#333;
+	}
+	i.ico-color {
+		color:#fff;
+		border:transparent;
+		text-shadow:rgba(0,0,0,.3) 1px 1px 1px;
+	}
+i.ico-hover:hover {
+	color:#fff;
+	background-color:#111;
+}
+i.ico-hover-dark:hover {
+	color:#fff !important;
+	background-color:#111 !important;
+}
+i.ico-color.ico-hover:hover {
+	background-color:#212121;
+}
+
+i.ico-xs {
+	width:30px; height:30px;
+	line-height: 30px;
+	font-size:15px;
+}
+i.ico-lg {
+	width:80px; height:80px;
+	line-height: 80px;
+	font-size:45px;
+}
+
+
+section.dark  i.ico-rounded,
+section.dark  i.ico-bordered {
+	color:#ddd;
+	border-color:#666;
+}
+section.dark  i.ico-dark {
+	color:#ccc;
+	background-color:#111;
+}
+section.dark  i.ico-light {
+	color:#ddd;
+	background-color:#444;
+}
+section.dark  i.ico-transparent {
+	color:#ddd;
+}
+section.dark i.ico-color.ico-hover:hover {
+	background-color:#666;
+}

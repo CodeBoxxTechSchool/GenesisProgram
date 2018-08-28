@@ -1,0 +1,129 @@
+/**	45. Widgets
+**************************************************************** **/
+	/** Flickr **/
+	.widget-flickr ul,
+	.widget-flickr li {
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	.widget-flickr li {
+		display:list-inline;
+		float:left;
+		margin:1px;
+
+		-webkit-transition: all .300s;
+		   -moz-transition: all .300s;
+			 -o-transition: all .300s;
+				transition: all .300s; 
+	}
+	.widget-flickr li:hover {
+		opacity:0.85;
+		filter: alpha(opacity=85); 
+	}
+
+	/** Twitter **/
+	ul.widget-twitter,
+	ul.widget-twitter li {
+		margin:0;
+		padding:0;
+		list-style:none;
+		font-size:14px;
+	}
+	ul.widget-twitter li {
+		padding:10px 0;
+		border-bottom:rgba(0,0,0,0.06) 1px solid;
+	}
+	ul.widget-twitter li>i {
+		font-size:24px;
+		float:left;
+	}
+	ul.widget-twitter li>small {
+		display:block;
+		margin-top:10px;
+		font-size:11px;
+		letter-spacing:1px;
+	}
+	ul.widget-twitter li>span>a {
+		font-size:12px;
+		display:block;
+	}
+	ul.widget-twitter li>small>a {
+		color:#666;
+	}
+	ul.widget-twitter li>small,
+	ul.widget-twitter li>span {
+		margin-left:30px;
+		display:block;
+	}
+	section.dark ul.widget-twitter li {
+		color:#ccc;
+	}
+
+
+	/** Dribbble **/
+	ul.widget-dribbble,
+	ul.widget-dribbble li {
+		list-style:none;
+		margin:0;
+		padding:0;
+
+		-webkit-transition: all .300s;
+		   -moz-transition: all .300s;
+			 -o-transition: all .300s;
+				transition: all .300s;
+	}
+	ul.widget-dribbble>li img {
+		padding:1px;
+
+		-webkit-transition: all .300s;
+		   -moz-transition: all .300s;
+			 -o-transition: all .300s;
+				transition: all .300s; 
+	}
+	ul.widget-dribbble[data-col='1']>li {
+		float:left;
+		width:100% !important;
+	}
+	ul.widget-dribbble[data-col='2']>li {
+		float:left;
+		width:50% !important;
+	}
+	ul.widget-dribbble[data-col='3']>li {
+		float:left;
+		width:33.3% !important;
+	}
+	ul.widget-dribbble>li ,
+	ul.widget-dribbble[data-col='4']>li {
+		float:left;
+		width:25% !important;
+	}
+	ul.widget-dribbble[data-col='5']>li {
+		float:left;
+		width:20% !important;
+	}
+	ul.widget-dribbble[data-col='6']>li {
+		float:left;
+		width:16.66% !important;
+	}
+	ul.widget-dribbble>li:hover>a>img {
+		opacity:0.85;
+		filter: alpha(opacity=85);
+	}
+	@media only screen and (max-width: 482px) {
+
+		ul.widget-dribbble>li ,
+		ul.widget-dribbble[data-col='4']>li {
+			float:left;
+			width:50% !important;
+		}
+		ul.widget-dribbble[data-col='5']>li {
+			float:left;
+			width:50% !important;
+		}
+		ul.widget-dribbble[data-col='6']>li {
+			float:left;
+			width:50% !important;
+		}
+	
+	}

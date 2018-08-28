@@ -1,0 +1,66 @@
+/** Category Grid
+ **************************************************************** **/
+div.category-grid>div {
+	margin:30px 0;
+}
+	div.category-grid .card {
+		border:0;
+		background-color: rgba(0,0,0,0.02);
+		-moz-border-radius: 0;
+		     border-radius: 0;
+
+	}
+	section.section-dark div.category-grid .card {
+		background-color: rgba(0,0,0,0.08);
+	}
+
+
+	@media only screen and (min-width: 768px) {
+		/* 
+			6 COLUMNS - RECALIBRATE FOR LONG TITLES
+		*/
+		.category-grid>div.col-sm-2:nth-child(6n+1),
+		.category-grid>div.col-lg-2:nth-child(6n+1),
+		.category-grid>div.col-md-2:nth-child(6n+1) {
+			clear:both;
+		}
+
+		/* 
+			5 COLUMNS - RECALIBRATE FOR LONG TITLES
+		*/
+		.category-grid>div.col-sm-5th:nth-child(5n+1),
+		.category-grid>div.col-lg-5th:nth-child(5n+1),
+		.category-grid>div.col-md-5th:nth-child(5n+1) {
+			clear:both;
+		}
+
+
+		/* 
+			4 COLUMNS - RECALIBRATE FOR LONG TITLES
+		*/
+		.category-grid>div.col-sm-3:nth-child(4n+1),
+		.category-grid>div.col-lg-3:nth-child(4n+1),
+		.category-grid>div.col-md-3:nth-child(4n+1) {
+			clear:both;
+		}
+
+		/* 
+			3 COLUMNS - RECALIBRATE FOR LONG TITLES
+		*/
+		.category-grid>div.col-sm-4:nth-child(3n+1),
+		.category-grid>div.col-lg-4:nth-child(3n+1),
+		.category-grid>div.col-md-4:nth-child(3n+1) {
+			clear:both;
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		/* 
+			2 COLUMNS - RECALIBRATE FOR LONG TITLES
+		*/
+		.category-grid>div.col-sm-6:nth-child(2n+1),
+		.category-grid>div.col-lg-6:nth-child(2n+1),
+		.category-grid>div.col-md-6:nth-child(2n+1) {
+			clear:both;
+		}
+	}

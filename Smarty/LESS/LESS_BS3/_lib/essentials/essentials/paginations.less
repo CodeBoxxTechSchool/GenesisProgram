@@ -1,0 +1,75 @@
+/** 32. Paginations
+*************************************************** **/
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+	background: rgba(0,0,0,0.05);
+}
+.pagination > li > a {
+	margin-right:4px;
+	color:#666 !important;
+
+	-webkit-border-radius: 3px !important;
+	   -moz-border-radius: 3px !important;
+			border-radius: 3px !important;
+}
+
+.pagination > li.active>a {
+	border-color:#ddd;
+	color:#fff !important;
+}
+
+section.dark .pagination > li,
+section.dark .pagination > li > a {
+	color:#ccc !important;
+	border-color:#666;
+	background-color:transparent;
+}
+section.dark .pagination > li > a:hover,
+section.dark .pagination > li > span:hover {
+	background-color:#555;
+}
+section.dark .pagination > li.active>a {
+	color:#fff !important;
+}
+/* pager */
+section.dark .pager li>a, 
+section.dark .pager li>span {
+	background-color:#666;
+	border-color:#888;
+	color:#fff;
+}
+section.dark .pager li>a:hover {
+	background-color:#555;
+}
+
+/* simple pagination */
+.pagination.pagination-simple>li>a {
+	border:0 !important;
+	border-left:#ccc 1px solid !important;
+	background-color:transparent !important;
+	color:#333 !important;
+	padding: 0 12px !important;
+	font-weight:bold !important;
+
+	-webkit-border-radius: 0 !important;
+	   -moz-border-radius: 0 !important;
+			border-radius: 0 !important;
+}
+.pagination.pagination-simple>li.active>a {
+	color:#999 !important;
+}
+.pagination.pagination-simple>li:first-child>a {
+	border:0 !important;
+}
+section.dark .pagination.pagination-simple>li>a {
+	border-left:#666 1px solid !important;
+	color:#888 !important;
+}
+section.dark .pagination.pagination-simple>li.active>a {
+	color:#eee !important;
+}
+section.dark .pagination.pagination-simple>li:first-child>a {
+	border:0 !important;
+}

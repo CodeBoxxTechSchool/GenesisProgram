@@ -1,0 +1,87 @@
+/** 09. Blockquotes
+ **************************************************************** **/
+blockquote h1,
+blockquote h2,
+blockquote h3,
+blockquote h4,
+blockquote h5,
+blockquote h6 {
+	font-weight:bold;
+	position:relative;
+}
+blockquote {
+	border-left: 5px solid rgba(0,0,0,0.1);
+	font-size: 1.3em;
+	font-style: normal;
+	letter-spacing: -1px;
+	margin: 25px 0;
+	padding: 0 0 0 25px;
+	position: relative;
+}
+	blockquote.reverse {
+		border-left: 0;
+		border-right: 5px solid rgba(0,0,0,0.1);
+		margin: 25px 0;
+		padding: 0 25px 0 0;
+		text-align:right;
+	}
+	
+section.dark blockquote {
+	border-left-color:#666;
+}
+section.dark blockquote.reverse {
+	border-right-color:#666;
+}
+
+
+blockquote.quote {
+	border:0;
+}
+blockquote.quote:before {
+  font-family: font-icons;
+  font-weight: 400;
+  content: "\e7ad";
+  position: absolute;
+  width: 43px;
+  height: 43px;
+  line-height: 43px;
+  font-size: 43px;
+  top: 0;
+  left: 0;
+  color: #EEE;
+  z-index:0;
+}
+	blockquote.quote.reverse:before {
+		left:auto;
+		right:0;
+		text-align:right;
+	}
+
+blockquote.pull-left {
+	max-width:350px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+}
+blockquote.pull-right {
+	max-width:350px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+}
+
+blockquote p {
+	margin-bottom:20px;
+	position:relative;
+}
+blockquote cite {
+	display: block;
+	font-size: 0.75em;
+	color: #9CA6B4;
+}
+blockquote cite:before {
+	content: '\2014 \00A0';
+	padding-right:8px;
+}
+blockquote cite:after {
+	content: '\2014 \00A0';
+	padding-left:10px;
+}

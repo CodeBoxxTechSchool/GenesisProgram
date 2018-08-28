@@ -1,0 +1,242 @@
+/**	CUSTOM FORM ELEMENTS [OPTIONAL]
+
+	This CSS file will must be included after all other CSS's.
+	Nothing special - will only rewrite the form elements (input, textarea, select2, buttons)
+	to look more clean, professional.
+
+
+ **************************************************************** **/
+
+
+ /** CUSTOM : FORM ELEMENTS
+ *************************** **/
+.btn {
+	height:auto;
+	padding: 15px 20px;
+}
+
+input.form-control, 
+select.form-control, 
+textarea.form-control {
+	height: auto;
+	color: #121212;
+	background-color: #fff;
+	border-color: #dee5ed;
+	width: 100%;
+
+	border-width:1px;
+	font-size: 16px;
+	padding: 14px 20px;
+	border-radius: 3px;
+	margin-bottom: 15px;
+	outline: none;
+	-webkit-appearance: none;
+
+	-webkit-transition: all .300s;
+	   -moz-transition: all .300s;
+		 -o-transition: all .300s;
+			transition: all .300s;
+}
+
+input.form-control:hover, 
+select.form-control:hover, 
+textarea.form-control:hover {
+	background-color: #fafafa !important;
+}
+
+	section.dark input.form-control:hover, 
+	section.dark select.form-control:hover, 
+	section.dark textarea.form-control:hover {
+		background-color: #1c2125 !important;
+	}
+
+section.dark .select2-container .select2-selection--single .select2-selection__rendered,
+section.dark input.form-control,
+section.dark select.form-control,
+section.dark textarea.form-control {
+	color: #ffffff;
+	background-color: #272e33 ;
+	border-color: #272e33;
+}
+
+section.dark input::placeholder, 
+section.dark select::placeholder,    
+section.dark textarea::placeholder {
+	color: #a3a9b0 !important; 
+	}
+
+	/* textarea */
+	textarea.form-control {
+		min-height:100px;
+	}
+
+	/* normal select */
+	select.form-control:not([size]):not([multiple]) {
+		height: 50px;
+		-webkit-appearance:none;
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAMAAADNLv/0AAAANlBMVEUAAAD///+ZmZmfoqiaoKydo6ueo6ucpKqdo6qdoqqeoqqdo6qdoqqdo6qco6mdo6qcoqmdo6rJSltEAAAAEHRSTlMAAQVSU5Wmrbe+1NXf5f7+fUgvXAAAAC5JREFUeNodxkkCABAMBMEhiDX4/2fJ9KULLYHlhW5C3YIwvikgThOK3kcddPU9JQ4BFWtk/ScAAAAASUVORK5CYII=) no-repeat;
+		background-position: center right 20px;
+		background-color: #fff;
+		color:#a3a9b0;
+	}
+  	section.dark select.form-control:not([size]):not([multiple]) {
+  		background: #272e33 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAMAAADNLv/0AAAANlBMVEUAAAD///+ZmZmfoqiaoKydo6ueo6ucpKqdo6qdoqqeoqqdo6qdoqqdo6qco6mdo6qcoqmdo6rJSltEAAAAEHRSTlMAAQVSU5Wmrbe+1NXf5f7+fUgvXAAAAC5JREFUeNodxkkCABAMBMEhiDX4/2fJ9KULLYHlhW5C3YIwvikgThOK3kcddPU9JQ4BFWtk/ScAAAAASUVORK5CYII=) 15px center no-repeat;
+  		background-position: center right 20px;
+  		color:#	c9c9c9;
+  	}
+
+
+/* SELECT2 CUSTOM */
+.select2 {
+    position: relative;
+}
+.select2-container--default .select2-selection--single {
+    border: none;
+    background-color: #fff;
+}
+.select2-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 16px;
+    height: auto;
+    margin-bottom: 15px;
+}
+@media (min-width: 64em) {
+    .select2-container.select2-container--open {
+        max-width: 393px !important;
+    }
+}
+.select2-container .select2-selection--single {
+    height: auto;
+    margin: 0;
+    outline: none;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+    font-size: 16px;
+    max-width: 100%;
+    padding: 16px 20px;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dee5ed;
+    resize: none;
+    line-height: 1;
+    outline: none;
+    color: #a3a9b0;
+    text-align: left;
+    margin: 0;
+    height: 50px;
+}
+.select2-container .select2-selection--single .select2-selection__rendered:after {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAMAAADNLv/0AAAANlBMVEUAAAD///+ZmZmfoqiaoKydo6ueo6ucpKqdo6qdoqqeoqqdo6qdoqqdo6qco6mdo6qcoqmdo6rJSltEAAAAEHRSTlMAAQVSU5Wmrbe+1NXf5f7+fUgvXAAAAC5JREFUeNodxkkCABAMBMEhiDX4/2fJ9KULLYHlhW5C3YIwvikgThOK3kcddPU9JQ4BFWtk/ScAAAAASUVORK5CYII=) 0 center no-repeat;
+    width: 20px;
+}
+.select2-container .select2-results .select2-results__options {
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+}
+.select2-container .select2-results .select2-results__options .select2-results__option.select2-results__option--highlighted[aria-selected] {
+    background-color: #ccc;
+}
+section.dark .select2-container .select2-selection--single .select2-selection__rendered {
+    background-color: #272e33;
+    border-color: #272e33;
+    color: #a3a9b0;
+}
+section.dark .select2-container .select2-selection--single .select2-selection__rendered,
+.select2-container .select2-selection--single .select2-selection__rendered {
+	-webkit-transition: all .300s;
+	   -moz-transition: all .300s;
+		 -o-transition: all .300s;
+			transition: all .300s;
+}
+.select2-container .select2-selection--single .select2-selection__rendered:hover {
+	background-color: #fafafa;
+}
+section.dark .select2-container .select2-selection--single .select2-selection__rendered:hover {
+    background-color: #1c2125;
+}
+section.dark .select2-container .select2-selection--single .select2-selection__rendered:focus {
+    border-color: #c1d120;
+}
+section.dark .select2-container .select2-results .select2-results__options {
+    border-color: #a3a9b0;
+}
+section.dark .select2-container .select2-results .select2-results__options .select2-results__option {
+    background-color: #272e33;
+    color: #a3a9b0;
+}
+section.dark .select2-container .select2-results .select2-results__options .select2-results__option.select2-results__option--highlighted[aria-selected] {
+    background-color: #333a3f;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAMAAADNLv/0AAAANlBMVEUAAAD///+ZmZmfoqiaoKydo6ueo6ucpKqdo6qdoqqeoqqdo6qdoqqdo6qco6mdo6qcoqmdo6rJSltEAAAAEHRSTlMAAQVSU5Wmrbe+1NXf5f7+fUgvXAAAAC5JREFUeNodxkkCABAMBMEhiDX4/2fJ9KULLYHlhW5C3YIwvikgThOK3kcddPU9JQ4BFWtk/ScAAAAASUVORK5CYII=) 0 center no-repeat;
+    width: 20px;
+    height: 20px;
+    right: 12px;
+    top: 50%;
+    margin-top: -9px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    display: none;
+}
+.select2-results__option {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.select2-container.select2-container--open {
+    max-width: 100% !important;
+}
+section.dark .select2-dropdown {
+    border: 0;
+}
+.select2-dropdown {
+	border-color: #dee5ed;
+	border-width:1px;
+}
+.select2-container--focus {
+    outline: 1px solid transparent;
+    z-index: 102;
+}
+/* search field */
+.select2-container--default .select2-search--dropdown .select2-search__field {
+	padding: 6px !important;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+}
+
+
+
+
+
+
+
+
+/** RTL
+	Add .rtl class to body
+ *************************** **/
+/* forms */
+body.rtl .select2-container .select2-results .select2-results__options,
+body.rtl .select2-container .select2-selection--single .select2-selection__rendered {
+	text-align: right !important;
+}
+body.rtl .select2-container--default .select2-selection--single .select2-selection__arrow {
+	left:15px;
+}
+body.rtl .select2-results__option,
+body.rtl .select2-container .select2-selection--single .select2-selection__rendered {
+	padding-left:20px;
+	padding-right: 20px;
+}
+body.rtl input, body.rtl select, body.rtl textarea {
+	text-align:right !important;
+}
+
+/* normal select */
+body.rtl select.form-control:not([size]):not([multiple]) {
+	background-position: center left 15px;
+}
+body.rtl section.dark select.form-control:not([size]):not([multiple]) {
+	background-position: center left 15px;
+}

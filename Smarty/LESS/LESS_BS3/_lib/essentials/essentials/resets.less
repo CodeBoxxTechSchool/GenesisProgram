@@ -1,0 +1,159 @@
+/**	01. Resets
+*************************************************** **/
+button::-moz-focus-inner, 
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+	::selection {
+		color:#fff;
+		text-shadow:none;
+		background: #333;
+	}
+	::-moz-selection {
+		color:#fff;
+		text-shadow:none;
+		background: #333; /* Firefox */
+	}
+	::-webkit-selection {
+		color:#fff;
+		text-shadow:none;
+		background: #333; /* Safari */
+	}
+	
+button {
+	background: none;
+	border: 0; margin: 0; padding: 0;
+	cursor: pointer;
+}
+
+img {
+	border: 0;
+	vertical-align: top;
+}
+
+input:-webkit-autofill {
+	color: #ffffff !important;
+}
+
+textarea {
+	resize: none;
+}
+
+textarea, input, button, *:focus {
+	outline:none !important;
+}
+
+textarea {
+	resize: vertical;
+}
+
+select {
+	border: 2px solid #E5E7E9;
+	height: 46px;
+	padding: 12px;
+	outline: none;
+	line-height:1 !important;
+
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+			border-radius: 3px;
+}
+
+label {
+	font-weight:400;
+}
+
+iframe,
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+audio, canvas, img, video {
+	vertical-align: middle;
+}
+
+p {
+	display: block;
+	-webkit-margin-before: 0.1em;
+	 -webkit-margin-after: 0.1em;
+	 -webkit-margin-start: 0px;
+	   -webkit-margin-end: 0px;
+}
+
+a {
+	-webkit-transition: all .300s;
+	   -moz-transition: all .300s;
+		 -o-transition: all .300s;
+			transition: all .300s; 
+}
+
+a, a:focus, a:hover, a:active {
+  outline: 0;
+  cursor:pointer;
+}
+
+p, pre, ul, ol, dl, dd, blockquote,
+address, table, fieldset, form { 
+	margin-bottom: 30px; 
+}
+
+canvas {
+	width: 100% !important;
+	/* max-width: 800px; causes panorama gmap problems */
+	height: auto !important;
+}
+
+:active,
+:focus { outline: none !important; }
+
+
+select:focus,
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus {   
+	outline: 0 none;
+
+	-webkit-box-shadow: none !important;
+	   -moz-box-shadow: none !important;
+		 -o-box-shadow: none !important;
+			box-shadow: none !important;
+}
+
+
+pre {
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+			border-radius: 3px;
+}
+section.dark pre {
+	color:#ccc;
+	border-color:rgba(0,0,0,0.2);
+	background-color:rgba(0,0,0,0.2);
+}
+
+
+
+img.img-responsive {
+	display:inline-block;
+}
+
+/* IE & Mozilla fix */
+div.row>div img.img-responsive {
+	width: 100%;
+}

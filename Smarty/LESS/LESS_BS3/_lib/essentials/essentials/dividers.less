@@ -1,0 +1,174 @@
+/** 22. Dividers
+*************************************************** **/
+div.divider {
+	margin:40px 0;
+	position:relative;
+	display:block;
+	min-height:20px;
+}
+div.divider i {
+	line-height: 1;
+	font-size: 18px;
+	color:#ccc;
+}
+
+div.divider:after {
+	content: '';
+	position: absolute;
+	top: 8px;
+	left:0; right:0;
+	height: 0;
+	border-top: 1px solid #ddd;
+}
+	section.dark div.divider:after {
+		border-top:rgba(255,255,255,0.1) 1px solid;
+	}
+	section.dark div.divider:before {
+		border-top:rgba(255,255,255,0.1) 1px solid;
+	}
+
+div.divider.double-line:before {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left:0; right:0;
+	height: 0;
+	border-top: 1px solid #ddd;
+}
+	section.dark div.divider.double-line:after {
+		border-top:rgba(255,255,255,0.1) 1px solid;
+	}
+	div.divider.divider-left:after {
+		left: 30px;
+		right: 0;
+	}
+		div.divider.divider-left i {
+			float:left;
+		}
+	div.divider.divider-right:after {
+		left: 0;
+		right: 30px;
+	}
+		div.divider.divider-right i {
+			float:right;
+		}
+
+	div.divider.divider-center:after {
+		left: 50% !important;
+		right: 0;
+		margin-left: 20px;
+	}
+	div.divider.divider-center:before {
+		left: 0 !important;
+		right: 50%;
+		margin-right: 20px;
+
+		content: '';
+		position: absolute;
+		top: 8px;
+		height: 0;
+		border-top: 1px solid #ddd;
+	}
+		div.divider.divider-center {
+			text-align:center;
+		}
+
+	div.divider.divider-center.divider-short:before {
+		left: auto !important;
+		right: 50%;
+		margin-right: 20px;
+		width: 15%;
+	}
+	div.divider.divider-center.divider-short:after {
+	  left: 50% !important;
+	  right: auto !important;
+	  margin-left: 20px;
+	  width: 15%;
+	}
+
+/* dotted */
+div.divider.divider-dotted {
+	height:10px;
+	border:0;
+	background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKAQMAAAC3/F3+AAAABlBMVEX///+QkJApn3LQAAAAAnRSTlMAgJsrThgAAAAOSURBVHheYwCCUAdcJAAnnALqo5TBzAAAAABJRU5ErkJggg==') repeat-x center;
+}
+div.divider.divider-dotted:after {
+	display:none;
+}
+
+	
+/* color */
+div.divider.divider-circle.divider-left:after {
+	left:50px;
+}
+div.divider.divider-circle.divider-right:after {
+	right:50px;
+}
+div.divider.divider-circle.divider-center:after {
+	margin-left:30px;
+}
+div.divider.divider-circle.divider-center:before {
+	margin-right:30px;
+}
+div.divider.divider-circle i {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #F5F5F5;
+	margin-top:-11px;
+	text-align:center;
+	z-index:1;
+	color:#999;
+
+	-webkit-border-radius: 50%;
+	   -moz-border-radius: 50%;
+			border-radius: 50%;
+}
+
+
+/* border */
+div.divider.divider-border.divider-left:after {
+	left:50px;
+}
+div.divider.divider-border.divider-right:after {
+	right:50px;
+}
+div.divider.divider-border.divider-center:after {
+	margin-left:30px;
+}
+div.divider.divider-border.divider-center:before {
+	margin-right:30px;
+}
+div.divider.divider-border i {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	margin-top:-11px;
+	text-align:center;
+	z-index:1;
+	border:#ddd 1px solid;
+
+	-webkit-border-radius: 50%;
+	   -moz-border-radius: 50%;
+			border-radius: 50%;
+}
+	section.dark div.divider.divider-border i {
+		border-color: rgba(255,255,255,0.5);
+	}
+
+/* scroll to top */
+div.divider.divider-border>a>i.fa-chevron-up {
+	line-height:36px;
+}
+div.divider.divider-border>a>i  {
+	-webkit-transition: all .300s;
+	   -moz-transition: all .300s;
+		 -o-transition: all .300s;
+			transition: all .300s;
+}
+div.divider.divider-border>a:hover>i  {
+	color:#333;
+}
+	section.theme-color div.divider.divider-border>a:hover>i.fa-chevron-up {
+		color:#fff;
+	}

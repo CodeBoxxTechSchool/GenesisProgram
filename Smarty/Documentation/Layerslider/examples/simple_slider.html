@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>LayerSlider 6 | Simple Slider Example</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700Roboto+Slab:400|Roboto:400|Roboto+Condensed:300,400,700:400|Nunito:300,400" rel="stylesheet">
+
+	<!-- Styles of this template -->
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+
+	<!-- LayerSlider styles -->
+	<link rel="stylesheet" href="../layerslider/css/layerslider.css" type="text/css">
+
+	<!-- External libraries: jQuery & GreenSock -->
+	<script src="../layerslider/js/jquery.js" type="text/javascript"></script>
+	<script src="../layerslider/js/greensock.js"></script>
+
+	<!-- LayerSlider script files -->
+	<script src="../layerslider/js/layerslider.transitions.js" type="text/javascript"></script>
+	<script src="../layerslider/js/layerslider.kreaturamedia.jquery.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+	<div id="layerslider" style="width:1140px;height:640px;max-width:1140px;">
+
+		<div class="ls-slide" data-ls="bgsize:cover;bgposition:50% 50%;duration:4000;transition2d:104;kenburnsscale:1.00;">
+			<img width="1200" height="800" src="images/slide-1.jpg" class="ls-bg" alt="slide-1">
+			<div style="width:440px;height:120px;background:#ffffff;top:50%;left:50%;" class="ls-l" data-ls="scalexin:0;durationout:400;scalexout:0;scaleyout:0;parallaxlevel:0;">
+			</div>
+			<p style="letter-spacing:1.6px;font-family:Roboto;font-size:20px;color:#363636;top:292px;left:50%;" class="ls-l" data-ls="offsetyin:100%;durationin:900;delayin:100;clipin:0 0 100% 0;durationout:400;parallaxlevel:0;">BUILDING YOUR BRAND IS SIMPLE
+			</p>
+			<p style="font-family:Roboto Slab;font-size:15px;color:#878787;top:325px;left:518px;" class="ls-l" data-ls="offsetyin:-100%;durationin:900;delayin:100;clipin:100% 0 0 0;durationout:400;parallaxlevel:0;">business, lifestyle
+			</p>
+		</div>
+
+		<div class="ls-slide" data-ls="bgsize:cover;bgposition:50% 50%;duration:4000;transition2d:104;kenburnsscale:1.2;">
+			<img width="1200" height="800" src="images/slide-2.jpg" class="ls-bg" alt="slide-2">
+			<div style="width:440px;height:120px;background:#ffffff;top:50%;left:50%;" class="ls-l" data-ls="scalexin:0;durationout:400;scalexout:0;scaleyout:0;parallaxlevel:0;">
+			</div>
+			<p style="letter-spacing:1.6px;font-family:Roboto;font-size:20px;color:#363636;top:292px;left:50%;" class="ls-l" data-ls="offsetyin:100%;durationin:900;delayin:100;clipin:0 0 100% 0;durationout:400;parallaxlevel:0;">BUILDING YOUR BRAND IS SIMPLE
+			</p>
+			<p style="font-family:Roboto Slab;font-size:15px;color:#878787;top:325px;left:518px;" class="ls-l" data-ls="offsetyin:-100%;durationin:900;delayin:100;clipin:100% 0 0 0;durationout:400;parallaxlevel:0;">business, lifestyle
+			</p>
+		</div>
+
+		<div class="ls-slide" data-ls="bgsize:cover;bgposition:50% 50%;duration:4000;transition2d:104;kenburnsscale:1.2;">
+			<img width="1200" height="800" src="images/slide-3.jpg" class="ls-bg" alt="slide-3">
+			<div style="width:440px;height:120px;background:#ffffff;top:50%;left:50%;" class="ls-l" data-ls="scalexin:0;durationout:400;scalexout:0;scaleyout:0;parallaxlevel:0;">
+			</div>
+			<p style="letter-spacing:1.6px;font-family:Roboto;font-size:20px;color:#363636;top:292px;left:50%;" class="ls-l" data-ls="offsetyin:100%;durationin:900;delayin:100;clipin:0 0 100% 0;durationout:400;parallaxlevel:0;">BUILDING YOUR BRAND IS SIMPLE
+			</p>
+			<p style="font-family:Roboto Slab;font-size:15px;color:#878787;top:325px;left:518px;" class="ls-l" data-ls="offsetyin:-100%;durationin:900;delayin:100;clipin:100% 0 0 0;durationout:400;parallaxlevel:0;">business, lifestyle
+			</p>
+		</div>
+
+	</div>
+
+	<div id="description">
+		<h1>LayerSlider <span>6</span> | Simple Slider Example</h1>
+		<p>
+			This is a very simple example of building sliders with LayerSlider. While it uses only a few layers with minimalistic transitions, a content slider like this can be attractive at the right place.
+		</p>
+	</div>
+
+	<!-- Initializing the slider -->
+	<script>
+		jQuery("#layerslider").layerSlider({
+			type: 'responsive',
+			skin: 'outline',
+			skinsPath: '../layerslider/skins/',
+			thumbnailNavigation: false
+		});
+	</script>
+
+</body>
+</html>

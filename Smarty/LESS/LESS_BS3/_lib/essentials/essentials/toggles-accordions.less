@@ -1,0 +1,146 @@
+/** 41. Toggles & Accordions
+*************************************************** **/
+div.toggle {
+	margin: 10px 0 0;
+	position: relative;
+	clear: both;
+}
+
+div.toggle > label {
+	color: #333;
+	background:rgba(0,0,0,0.1);
+
+	cursor: pointer;
+	font-size: 16px;
+	font-weight:normal;
+	padding: 10px 20px;
+	position: relative;
+	display: block;
+	border-bottom: rgba(0,0,0,0.03) 1px solid;
+
+	-webkit-border-radius: 0;
+	   -moz-border-radius: 0;
+			border-radius: 0;
+
+	-webkit-transition: all .10s ease-out;
+	   -moz-transition: all .10s ease-out;
+		 -o-transition: all .10s ease-out;
+			transition: all .10s ease-out;
+
+	-webkit-touch-callout: none; 
+	  -webkit-user-select: none; 
+	   -khtml-user-select: none; 
+		 -moz-user-select: none; 
+		  -ms-user-select: none; 
+			  user-select: none;
+}
+	section.dark div.toggle > label {
+		color: #fff;
+		background:rgba(0,0,0,0.5);
+	}
+
+div.toggle div.toggle-content {
+	border: rgba(0,0,0,0.03) 1px solid;
+	display: none;
+	background:rgba(0,0,0,0.03);
+	margin-top: -5px;
+	padding: 15px 20px;
+
+	-webkit-border-radius: 0;
+	   -moz-border-radius: 0;
+			border-radius: 0;
+}
+div.toggle div.toggle-content p:last-child {
+	margin-bottom:0;
+}
+	section.dark div.toggle div.toggle-content {
+		background:rgba(255,255,255,0.05);
+	}
+
+div.toggle > label:before {
+	content: '';
+	border: 6px solid transparent;
+	border-top-color: inherit;
+
+	position: absolute;
+	top: 50%; right: 14px;
+	margin-top: -3px;
+}
+
+div.toggle > label:hover {
+	background: rgba(0,0,0,0.15);
+}
+
+div.toggle > label + p {
+	color: #888;
+	height: 25px;
+	display: block;
+	overflow: hidden;
+	padding-left: 10px;
+}
+
+div.toggle.active > label:before {
+	border: 6px solid transparent;
+	border-bottom-color:rgba(0,0,0,0.5);
+	right: 14px; margin-top: -10px;
+}
+
+.toggle .toggle-content {
+	border:0 !important;
+}
+
+/* transparent body */
+.toggle.toggle-transparent .toggle-content,
+.toggle.toggle-transparent-body .toggle-content {
+	background:transparent;
+}
+.toggle.toggle-transparent-body label {
+	background: rgba(0,0,0,0.03);
+}
+.toggle.toggle-transparent-body label:hover {
+	background: rgba(0,0,0,0.04);
+}
+
+/* transparent full */
+.toggle.toggle-transparent label:hover,
+.toggle.toggle-transparent label {
+	background-color:transparent;
+	border:0;
+}
+.toggle.toggle-transparent div.toggle.active label {
+	font-weight:bold;
+}
+
+/* bordered simple */
+.toggle.toggle-bordered-simple label:hover,
+.toggle.toggle-bordered-simple label {
+	border:#ccc 1px solid;
+}
+
+
+/* bordered full */
+.toggle.toggle-bordered-full label:hover,
+.toggle.toggle-bordered-full label {
+	border:#ccc 1px solid;
+	border-bottom:0;
+	margin:0;
+}
+	.toggle.toggle-bordered-full div.toggle:last-child>label {
+		border-bottom:#ccc 1px solid;
+	}
+	.toggle.toggle-bordered-full div.toggle.active>label {
+		font-weight:bold;
+	}
+.toggle.toggle-bordered-full .toggle-content {
+	border:#ccc 1px solid !important;
+	border-top:0 !important;
+	border-bottom:0 !important;
+}
+.toggle.toggle-bordered-full div.toggle {
+	margin:0;
+}
+
+/* noicon */
+.toggle.toggle-noicon div.toggle > label:before {
+	display:none;
+}

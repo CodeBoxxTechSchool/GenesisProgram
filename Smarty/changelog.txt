@@ -1,0 +1,569 @@
+@Version 	2.2.1
+@Date		Thursay, February 22, 2018
+@Author		Dorin Grigoras
+	# --
+	## NOTE: [Bootstrap 4] = changes applied for only this specific version. If not specified, changes are for both (BS 3 and 4).
+	# --
+	* Fix [Bootstrap 4]: Timeline page (changes: assets/css/layout.css ; thank's to DriveBeyond from wrapbootstrap)
+	* Fix [Bootstrap 4]: Replaced all col-xs-* to col-* (changes: all html files)
+	* Fix: Bordered Testimonials Spacing (changes: assets/css/essentials.css)
+	* Fix: Added back the SEED folder, previously removed
+	* Fix: Background Sizing on Parallax Mobile/Tablet (changes: assets/css/layout.css)
+	* Fix [Bootstrap 4]: Verical Menu (changes: assets/css/layout.css)
+	* Fix [Bootstrap 4[: Smarty Caffe Package - Mobile Menu (changes: pack-caffe-*-1.html)
+	* Fix: jQuery Onepage Navigation Plugin which caused a broke JS on href="#" (changes: asset/plugins/jquery.nav.min.js)
+	* New: Google Recaptcha (changes: php/contact.php)
+	* New: Contact Form Page With Recaptcha (added: page-contact-recaptcha.html)
+	* New: Visual Chart (changes: assets/css/essentials.css ; see it in action: about us pages)
+	* Update: Smarty Documentation (Recaptcha Usage)
+
+
+
+@Version 	2.2.0
+@Date		Tuesday, February 13, 2018
+@Author		Dorin Grigoras
+	# --
+	## NOTE: [Bootstrap 4] = changes applied for only this specific version. If not specified, changes are for both (BS 3 and 4).
+	# --
+	* Update [Bootstrap 4]: Bootstrap v4 Stable [changes: replaced assets/plugins/bootstrap/ folder]
+	* Update [Bootstrap 4]: jQuery v3.3.1 [changes: added assets/plugins/jquery/jquery-3.2.1.*.js]
+	* Update [Bootstrap 4]: Popper Plugin - dropup/dropdown fixed [changes: assets/js/scripts.js]
+	* Update [Bootstrap 4]: revolution slider html files for jQuery 3.x (changes: rs-*.html)
+	* Update [Bootstrap 4]: .page-header light background color (changes: assets/css/layout.css)
+	* Update [Bootstrap 4]: .btn-default border with 1px (changes: assets/css/layout.css)
+	* Update [Bootstrap 4]: button icon size (changes: assets/css/essentials.css)
+	* Update [Bootstrap 4]: various elements redesign
+	* Update [Bootstrap 4]: Changed <section> padding from 80 to 100px (changes: assets/css/layout.css)
+	* Update [Bootstrap 4]: form elements - larger elements by default (changes: assets/css/essentials.css)
+	* Update [Bootstrap 4]: various elements redesigned (changes: assets/css/essentials.css, assets/css/layut.css)
+	* Removed [Bootstrap 4]: from all HTML files: type="text/javascript" - not anymore needed
+	* Removed [Bootstrap 4]: .page-header border (changes: assets/css/layout.css)
+	* New: header reveal on scroll up (changes: assets/js/scripts.js) - add .scroll class to #header
+	* New [Bootstrap 4]: .btn-round - round any button (changes: assets/css/essentials.css)
+	* New [Bootstrap 4]: header appear on scroll up (added: feature-header-scroll.html)
+	* New [Bootstrap 4]: .leftTriangle and .rightTriangle classes (changes: assets/css/essentials.css)
+	* Fix: Mobile onepage (changes: assets/js/scripts.js)
+	* Fix: [Admin]: fancy select (changes: admin/assets/css/essentials.css - thanks to fc883 wrapbootstrap member)
+	* Fix [Bootstrap 4]: owl-carousel thumbnails (changes: assets/css/layout.css)
+	* Fix [Bootstrap 4]: .btn-lg paddings & font text (changes: assets/css/layout.css)
+	* Fix [Bootstrap 4]: .btn & .btn-reveal spacings (changes: assets/css/layout.css, assets/css/essentials.css)
+	* Fix [Bootstrap 4]: .input-group-addon missing in Bootstrap 4 (changes: assets/css/layout.css)
+	* Fix [Bootstrap 4]: grain backgrounds (changes: assets/css/layout.css, feature-content-bg-*.html)
+	* Fix [Bootstrap 4]: shadows on mouse click (changes: assets/css/layout.css, assets/css/essentials.css)
+	* Fix [Bootstrap 4]: bottom header main menu (changes: assets/css/layout.css)
+
+
+
+
+@Version 	2.1.0
+@Date		Thursday, November 23, 2017
+@Author		Dorin Grigoras
+	# --
+	## NOTE: [Bootstrap 4] = changes applied for only this specific version. If not specified, changes are for both (BS 3 and 4).
+	# --
+
+	* New: Seed Projects (added: SEED folder for freshly starting projects)
+	* New: Deep sidebar navigation (changes: assets/css/essentials.css, assets/css/layout-RTL.css, assets/js/scripts.js)
+	* New: Centered Navigation (added: featured-header-centered.html)
+
+	* Fix: Header dropdown 'class switch' - optimized (changes: assets/js/scripts.js)
+	* Fix: [Bootstrap 4]: various small class changes - example: from col-xs-12 to col-md-12 (changes: material design html files)
+	* Fix: [Bootstrap 4]: RTL Checkboxes - positioned outside the vewport (changes: assets/css/essentials.css)
+	* Fix: Smoothscroll (changes: assets/js/scripts.js)
+	* Fix: removed webkit-appearance: none  (changes: essentials.css)
+	* Fix: layer thematic - layerslider tab button (changes: index-thematics-lawyer.html)
+	* Fix: RTL form elements orientation (changes: assets/css/layout-RTL.css - thanks to babak_ghiasi wrapbootstrap user)
+	* Fix: Onepage Navigation - Close on click (changes: assets/js/scripts.js)
+	* Fix: Button Group (line height) (changes: assets/css/essentials.css)
+	* Fix: Pack Caffe mobile menu button (changes: assets/css/pack-caffe.css)
+
+	* Added: [Bootstrap 4] for existing BS4 projects - .hidden-* classes, previously available in BS4 Alpha (changes: assets/css/layout.css)
+	* Added: Centered Navigation Class: .navbar-collapse.navbar-centered (changes: assets/css/layout.css)
+
+	* Update: [Bootstrap 4] Bootstrap to v4.0.0 Beta 2 (changes: replaced assets/plugins/bootstrap)
+	* Update: [Bootstrap 4] Removed tether from scripts.js and added popper - required by Bootstrap (changes: assets/js/scripts.js)
+	* Update: [Bootstrap 4] Replaced class: push-* , pull-* with order-* according to Bootstrap Beta (changes: html files)
+	* Update: Swiper Slider to V3.4.2 (changes: replaced assets/plugins/slider.swiper/ folder)
+	* Update: Documentation
+	* Update: removed sidebar menu border - more clean (changes: assets/css/essentials.css)
+	* Update: Revolution Slider to V5.4.6.3 (replaced assets/plugins/slider.revolution.v5)
+	* Update: Layer Slider to V6.6.4  (replaced assets/plugins/slider.layerslider)
+
+	* Removed: ununsed plugin: jqvmap (removed: assets/plugins/jqvmap)
+	* Removed: ununsed plugin: masonry.pkgd.min.js (removed: assets/plugins/masonry.pkgd.min.js)
+
+
+
+
+@Version 	2.0.0
+@Date		Monday, June 12, 2017
+@Author		Dorin Grigoras
+	## --
+	## BOOSTRAP 4	 - 3-5% of html structure is changed and css/js files are more than 15% modified.
+	## 		 - many CSS classes are also changed/renamed/removed
+	##		 - Bootstrap 4 is recommended for new projects. If you update an existing project, you have to compare BS3 & BS4 html classes - see below BS 4 Changes
+	##
+	## BOOSTRAP 3
+	## UPDATE NOTES: - this major version has a lot of changes but most of them are in JS and CSS files.
+	##		 - html structure for Boostrap 3 is untouched so your existing project should not be affected.
+	## 		 - pay attention to assets/images - all smarty images are moved into a separate folder (assets/images/_smarty)
+	##		 - before you update your project, don't forget to create a backup!
+	## 		 - estimated time to update an existing project: ~5 minutes (only a copy/paste is needed - read careful "Moved" below)
+	##
+	## --
+
+	* Major: BOOTSRTAP 4 & JQUERY 3
+
+	* New: Material Design Lite (MDL) (added: assets/plugins/mdl/ folder, changes: assets/css/layout.css, assets/css/color_scheme/*.css)
+	* New: MDL Badges (added: shortcode-material-design.html)
+	* New: MDL Buttons (added: shortcode-material-buttons.html)
+	* New: MDL Cards (added: shortcode-material-cards.html)
+	* New: MDL Chips (added: shortcode-material-chips.html)
+	* New: MDL Dialogs (added: shortcode-material-dialogs.html)
+	* New: MDL Loading (added: shortcode-material-loading.html)
+	* New: MDL Menus (added: shortcode-material-menus.html)
+	* New: MDL Sliders (added: shortcode-material-sliders.html)
+	* New: MDL Snackbar (added: shortcode-material-snackbar.html)
+	* New: MDL Toggles (added: shortcode-material-toggles.html)
+	* New: MDL Tables (added: shortcode-material-tables.html)
+	* New: MDL Text Fields (added: shortcode-material-textfield.html)
+	* New: MDL Tooltip (added: shortcode-material-tooltip.html)
+	* New: MDL Grid (added: shortcode-material-grid.html)
+	* New: MDL Utils (added: shortcode-material-utils.html)
+	* New: MDL Icons (added: shortcode-material-icons.html)
+	
+
+	* New: PACKAGE: Photography/Portfolio - 14 pages ready to use (added: package-photography-*.html, assets/css/pack-photography.css, demo_files/images/packs/photography/)
+	* New: PACKAGE: Realestate - 19 pages ready to use (added: package-realestate-*.html, assets/css/pack-realestate.css, demo_files/images/packs/realestate/, assets/js/view/package_realestate.js)
+	* New: PACKAGE: Hotel V1 - 7 pages ready to use (added: package-hotel-*.html, assets/css/pack-hotel.css, demo_files/images/packs/hotel/ , assets/js/view/package_hotel.js)
+	* New: PACKAGE: Hotel V2 - 7 pages ready to use (added: package-hotel-v2-*.html)
+	* New: PACKAGE: Mega Shop - 23 pages ready to use (added: package-megashop-*.html, assets/css/pack-megashop.css, demo_files/images/packs/megashop/)
+	* New: PACKAGE:Caffe - 7 pages ready to use (added: package-caffe-*.html, assets/css/pack-caffe, demo_files/images/packs/caffe/)
+	* New: PACKAGE:Caffe - Onepage (added: package-caffe-*.html, assets/css/pack-caffe, demo_files/images/packs/caffe/)
+
+
+	* New: Menu dropdown 8 effects (changes: assets/css/layout.css, examples: feature-menu-dd-effects.html)
+	* New: Menu dropdown hover text effect (changes: assets/css/layout.css, example: any html file - top menu PRO)
+	* New: Main Menu hover text bounceIn (changes: assets/css/layout.css, example: any html file - top menu PRO on hover)
+	* New: Menu effects demo file (added: feature-menu-dd-effects.html)
+	* New: Mobile menu new version/layout - fixed/fullscreen layout (changes: assets/css/layout.css, assets/js/scripts.js)
+	* New: Menu dropdown category titles (changes: assets/css/layout.css, example: top menu - BLOG & SHOP)
+	* New: Breathing image effect - add class to a background image: .bg-breath (changes: assets/css/layout.css)
+	* New: added .halfheight class for #slider (changes: assets/js/scripts.js , example: shortcode-material-design.html)
+	* New: added .mobile-fullheight class - used with .halfheight for #slider (changes: assets/js/scripts.js , example: shortcode-material-design.html)
+	* New: added section.lightblue and div.lightblue classes (changes: assets/css/layout.css, update: shortcode-sections.html)
+	* New: added section.lightgreen and div.lightgreen classes (changes: assets/css/layout.css, update: shortcode-sections.html)
+	* New: added section.alternate-2 and div.alternate-2 classes (changes: assets/css/layout.css, update: shortcode-sections.html)
+	* New: added section.alternate-3 and div.alternate-3 classes (changes: assets/css/layout.css, update: shortcode-sections.html)
+	* New: demo css file to change header/footer colors (added: assets/css/demo-menu-blue.css, in action: shortcode-material-design.html)
+	* New: switch class for transparent menu on scroll - high detail oriented - added data-switch-default & data-switch-scroll for .navbar-collapse - switch dropdown class on scroll (changes: assets/js/scripts.js, example: start.html - mouse over on main menu and scroll down from your mouse scroll)
+	* New: RS Page - Clean Fullpage (added: rs-53.html)
+	* New: RS Page - Blur Effect (added: rs-54.html)
+	* New: RS Page - Particle Effect (added: rs-55.html)
+	* New: RS Page - Parallax Zoom (added: rs-56.html)
+	* New: RS Page - Website Intro (added: rs-57.html)
+	* New: Image hover zoom (changes: assets/css/essentials.css , example: shortcode-thumbnails.html) 
+	* New: Image hover plus icon (changes: assets/css/essentials.css , example: shortcode-thumbnails.html) 
+	* New: Page project item (added: portfolio-single-project.html)
+	* New: Card style imported from Bootstrap 4 (changes: assets/css/layout.css, example usage: pack-photography-category.html)
+	* New: Category page (added page-category.html)
+	* New: Added #header.disable-uppercase -  disable forcing uppercase menu text (changes: assets/css/layout.css, usage example: pack-photography-home-1.html)
+	* New: Cookie alert (changes: assets/css/layout.css , assets/js/scripts.js ; usage example: page-cookie-alert.html)
+	* New: Bootstrap 4 elements (floats, cards, text align) (changes: assets/css/essentials.css)
+	* New: Custom form elements - more clean and pro - optional, to rewrite default smarty forms (added: assets/css/custom-forms-v2.css, example usage: pack-realestate-home-1.html)
+	* New: OWL Carousel 2 (changes: assets/css/essentials.css , added: assets/plugins/owl-carousel-2 , shortcode-carousel-2.html)
+	* New: Fullscreen Google Map (changes: assets/css/layout.css, shortcode-maps.html)
+	* New: Money Number Format Function (changes: assets/js/scripts.js) ;  USAGE: mynumber.formatMoney(2, '.', ',')
+	* New: Default lazy load no image (added: assets/images/_smarty/lazy-loadimg.png)
+	* New: image raster pattern - add lines over an image (changes: assets/css/essentials.css ; example: pack-hotel-home-1.html - the lines over the main image)
+	* New: Backstretch PREV/NEXT navigation (changes: assets/css/layout.css , assets/js/scripts.js , example usage: pack-hotel-home-1.html)
+	* New: Backstretch Slider (changes: added feature-slider-backstretch.html)
+	* New: Ceneterd Rounded Logo for Sliders (changes: assets/css/layout.css , example: feature-slider-backstretch.html)
+	* New: CSS simple gallery (changes: assets/css/layout.css , added: shortcode-galleries-css.html)
+	* New: Raster Over Image (changes: assets/css/essentials.css , shortcode-thumbnails.html)
+	* New: Added .text-vertical class to rotate text/image (changes: assets/css/essentials.css)
+	* New: Premium Hover Cicles (changes: assets/css/layout.css , shortcode-thumbnails.html)
+	* New: Bordered grid (2-3-4-5-6 columns) (changes: assets/css/essentials.css, assets/css/layout-dark.css, shortcode-clients.html)
+	* New: Header layout (changes: assets/js/scripts.js, added: assets/css/header-6.css, assets/images/_smarty/misc/*.svg, example: /feature-menu-12.html)
+	* New: isMobile JS function to detect mobile devices (phone/tablet) (changes: assets/js/scripts.js ; usage: if( isMobile.any() ) alert('Mobile');)
+	* New: .box-border-shadow class - border+shadow material design style (changes: assets/css/essentials.css , usage example: pack-megashop-cart-checkout.html)
+	* New: Height precentage classes: .h-10p, .h-20p, .h-25p, .h-33p, .h-50p, .h-100p - uses "vh" (changes: assets/css/essentials.css)
+	* New: Added short classes for margins, paddings: m-* , p-* , mt-*, mb-*, pt-*, pb-* instead of margin-top-10, padding-bottom-20, etc which will be removed in the future (changes: assets/css/essentials.css)
+	* New: Menu Dropown open on the left side (changes: assets/css/layout.css, assets/css/layout-RTL.css. Example: feature-menu-dd-effects.html)
+
+
+	* Fix: Music Homepage grid layout (changes: index-thematics-music.html)
+	* Fix: Footer Light Layout (changes: assets/css/layout.css)
+	* Fix: Google Map Grayscale (changes: assets/css/essentials.css)
+	* Fix: Aside navigation icon (changes: assets/css/essentials.css)
+	* Fix: Mobile menu contrast (changes: assets/css/layout.css)
+	* Fix: Mega Menu multiple titles on the same column - spacing (changes: assets/css/layout.css)
+	* Fix: services pages - plugin load (changes: page-services-3.html, page-services-4.html)
+	* Fix: abous is page - piechart calibration (changes: page-about-us-2.html)
+	* Fix: page logo light/dark switch on transparent header (changes: page-about-me-1.html)
+	* Fix: Mobile sticky header (changes: assets/js/scripts.js)
+	* Fix: Page header if static header is used (changes: assets/css/layout.css)
+	* Fix: about us page W3C validation (changes: page-about-us-1.html)
+	* Fix: header static+transparent (changes: assets/css/layout.css , assets/js/scripts.js)
+	* Fix: removed input/textarea inner shadow on mobile (changes: assets/css/essentials.css)
+	* Fix: Landing page 3 on low resolution (changes: index-landing-3.html)
+	* Fix: Parallax plugin (changes: assets/css/essentials.css, assets/js/scripts.js)
+	* Fix: Google Map key - shortcodes (changes: shortcode-maps.html)
+	* Fix: Camera Slider - missing images (added: assets/plugins/slider.camera/images folder)
+	* Fix: Mobile fixed overlay menu (changes: assets/css/header-0.css)
+	* Fix: Wrong portfolio image path (changes: portfolio-grid-3-columns-over.html)
+	* Fix: Footer v5 - mobile spacing (changes: feature-footer-5.html)
+	* Fix: Footer contrast for .footer-light class (changes: assets/css/layout.css)
+	* Fix: RTL checbox issue (changes: assets/css/essentials.css)
+	* Fix: duplicate RTL bootstrap files - merged into one single file (added: assets/plugins/bootstrap/RTL/bootstrap-rtl-merged.css)
+	* Fix: Social icons for mobile devices - animation disabled (changes: assets/css/essentials.css)
+	* Fix: Star Rating changed from width:100% to width:auto (changes: assets/css/essentials.css)
+	* Fix: Callout large buttons - wrap long text (changes: assets/css/essentials.css)
+	* Fix: .nav-onepage class can be used outside of #topNav (changes: assets/js/scripts.js)
+	* Fix: Multiple Parallax on the same page - added .parallax-auto class instead of using: parallax-1, parallax-2, etc (changes: assets/js/scripts.js)
+	* Fix: Piechart canvas width/height (changes: assets/js/scripts.js)
+	* Fix: UI Sliders design (changes: assets/css/essentials.css)
+	* Fix: Toastr notification (changes: assets/js/scripts.js)
+	* Fix: Box Shadow effect (shortcode-thumbnails.html) (changes: assets/css/essentials.css)
+	* Fix: Safari input/select background (changes: assets/css/essentials.css)
+	* Fix: Progress bar bottom spacing - 15px by default (changes: assets/css/essentials.css)
+	
+	* Update: Revolution Slider to v5.4.4 (replaced assets/plugins/slider.revolution.v5)
+	* Update: Layer Slider to v6.4.0 (replaced assets/plugins/slider.layerslider)
+	* Update: modernizr from v2.7.1 to to v3.3.1 (changes: assets/js/scripts.js)
+	* Update: default body font size changed from 14px to 16px (changes: assets/css/layout.css)
+	* Update: mobile .side-nav max height changed from 250px to 650px (changes: assets/css/layout.css)
+	* Update: added transition animation for mobile full-height slider (changes: assets/css/layout.css, example [mobile potriait-landscape switch]: shortcode-material-design.html)
+	* Update: small javascript updates - preparing for jQuery 3 update - on Bootstrap 4 release (changes: assets/js/scripts.js)
+	* Update: removed ununsed browser detect function (changes: assets/js/scripts.js)
+	* Update: word rotator because of body font size change (changes: assets/css/layout.css, assets/css/essentials.css)
+	* Update: changed blue color to match google material (changes: assets/css/layout/color_scheme/blue.css)
+	* Update: PhpMailer frm 5.2.10 to v5.2.23 ( added: php/phpmailer/5.2.23/ folder, changes: php/contact.php, php/newsletter.php)
+	* Update: Backstretch plugin to v2.1.15 (replaced assets/plugins/jquery.backstretch.min.js)
+	* Update: Use custom button for menu overlay button by adding class: .custom-button (changes: assets/css/header-0.css, example usage: pack-hotel-home-1.html)
+	* Update: Small dark layout fixes (assets/css/layout-dark.css)
+	* Update: Parallax plugin to v1.1.3 (changes: assets/js/scripts.js)
+	* Update: Smarty Documentation - RTL section
+	* Update: Image Zoom from v1.7.14 to v1.7.20 (changes: replaced assets/plugins/image.zoom/ folder)
+	* Update: Image Zoom - forced grab on mobile device for best experience (changes: assets/js/scripts.js)
+	* Update: Removed role="form" from all html files (changes: *.html)
+	* Update: Removed main menu line separator (changes: assets/css/layout.css)
+
+	* Moved: Blog and Shop in one menu category: Blog & Shop (changes: all html files)
+	* Moved: /assets/images/demo/  to  /demo_files/ folder (changes: all HTML and CSS files - image path renamed)
+	* Moved: /assets/imgaes/*  to /assets/imgaes/_smarty/  folder - from now, smarty files will be in one organized place.
+	* Moved: /assets/plugins/styleswitcher/  to  /demo_files/ (not required as a production plugin - demo purpose only)
+
+	* NOTE: thematics = home page layouts only ; package = complete website (multiple designed pages [home/about/contact/etc] for a dedicated niche)
+
+
+
+	# #########################################
+	# DIFFERENCES BETWEEN BS3 AND BS4
+	# #########################################
+
+	* Update: Bootstrap 4 (replaced: assets/plugins/bootstrap/)
+	* Update: jQuery to v3.2.1 (changes: added assets/plugins/jquery/jquery-3.2.1.*)
+	* Update: multiple changes on assets/css/*
+	* Update: scripts.js to support jQuery 3.x (changes: assets/js/scripts.js)
+
+	* New: Added tether plugin directly to scripts.js to avoid one more external plugin - required by bootstrap 4 (assets/js/scripts.js)
+	* New: Added jquery size() custom function (removed by jquery on v3.x) - used by old plugins (changes: assets/js/scripts.js)
+	* New: esssential short helper classes: m-*, p-*, r-*, mt-*, fs-*, fw-*, etc - see feature-essentials.html (changes: assets/css/essentials.css)
+
+	* Removed: essentials helper classes: size-*, margin-top-*, padding-top-*, nomargin, nopadding, etc (changes: assets/css/essentials.css)
+	* Removed: CSS Badges - already present on BS4 (changes: assets/css/essentials.css)
+	* Removed: Music Pages - temporary removed on Bootstrap 4 due to jQuery incompatibility (removed: index-thematics-music.html, page-music.html)
+
+
+	* RENAME/REPLACE: [on all html files]	
+		jquery-2.2.3.min.js	-	jquery-3.2.1.min.js
+		img-responsive 		-	img-fluid
+		pull-left 		-	float-left
+		pull-right 		-	float-right
+		label label-		- 	badge badge-
+		img-rounded		- 	rounded
+		table-condensed		- 	table-sm
+		control-label		- 	form-control-label
+		input-lg		- 	form-control-lg
+		input-sm		- 	form-control-lg
+		list-group-item-action	- 	list-group-item
+		panel 			- 	card (space after)
+		panel-			- 	card-
+		hidden-xs		- 	hidden-xs-down
+		hidden-md		- 	hidden-md-down
+		nomargin-top		-	mt-0
+		nomargin-bottom		-	mb-0
+		nomargin-left		-	ml-0
+		nomargin-right		-	mr-0
+		nopadding-top		-	pt-0
+		nopadding-bottom	-	pb-0
+		nopadding-left		-	pl-0
+		nopadding-right		-	pr-0
+		margin-			- 	m-
+		nomargin		- 	m-0
+		padding-			p-
+		nopadding 		- 	p-0
+		noborder-top		- 	bt-0
+		noborder-bottom		- 	bb-0
+		noborder-left		- 	bl-0
+		noborder-right		- 	br-0
+		noborder 		-	b-0
+		size-			- 	fs-
+		weight-			-	fw-
+		height-			- 	h-
+		width-			- 	w-
+		col-sm-offset		- 	offset-sm
+		col-xs-offset		- 	offset-xs
+		col-md-offset		- 	offset-md
+		col-lg-offset		- 	offset-lg
+		col-lg-pull		- 	pull-lg
+		col-md-pull		- 	pull-md
+		col-sm-pull		- 	pull-sm
+		col-xs-pull		- 	pull-xs
+		col-lg-push		- 	push-lg
+		col-md-push		- 	push-md
+		col-sm-push		- 	push-sm
+		col-xs-push		- 	push-xs
+		tab-pane fade in	- 	tab-pane
+		softhide 		- 	hide
+		padding-xxs		- 	section-xs
+		padding-xs		- 	section-sm
+		padding-lg		- 	section-lg
+		padding-xlg		- 	section-xlg
+		list-group-item-action	- 	list-group-item
+		navbar-collapse sidebar-navbar-collapse collapse	 - 	navbar-collapse sidebar-navbar-collapse
+
+
+
+
+
+
+
+
+
+
+@Version 	1.2.1
+@Date		Tuesday, Febryary 28, 2017
+@Author		Dorin Grigoras
+	* New: Music Homepage (added assets/css/thematics-music.css, index-thematics-music.html)
+	* New: Music Page (added page-music.html)
+	* New: LESS (beta) (changes: added LESS folder)
+	* New: Header Social Icons (example: start.html , changes: assets/css/layout.css)
+	* Update: added main menu border top color (changes: assets/css/layout.css)
+	* Update: .label-absolute inside .img-hover (changes: assets/css/layout.css, example: start.html carousel)
+	* Update: redesign of start.html page (changes: start.html)
+	* Update: added credits to onepage navigation plugin (changes: assets/plugins/jquery.nav.min.js)
+	* Update: bullet navigation default distange (changes: assets/css/layout.css)
+	* Fix: Youtube media embeds (changes: all html files that use youtub iframe)
+	* Fix: Email HTML tags when use_smtp is set to false in config.inc.php (changes: php/contact.php)
+	* Fix: Menu dropdown alignment (changes: assets/css/layout.css)
+	* Fix: z-index to 100 for bullet navigation (changes: assets/css/layout.css)
+	* Fix: revolution slider demo (changes: rs-49.html)
+	* Removed: 'circle counters' from the demo (changes: shortcode-counters.html)
+	* Removed: parallax delay effect (changes: assets/css/layout.css)
+			If you want to keep it, add to your custom CSS file:
+			section.parallax {
+				transition: all .400s;
+			}
+
+
+
+
+@Version 	1.2.0
+@Date		Wednesday, Febryary 22, 2017
+@Author		Dorin Grigoras
+	* New Layer Slider (LS) Plugin V6.1.0 (changes: added assets/plugins/slider.layerslider)
+	* New: 7 Layer Slider Examples (changes: start.html)
+	* New: LS Page - Origami 1 (added: ls-1.html)
+	* New: LS Page - Origami 2 (added: ls-2.html)
+	* New: LS Page - Autumn Experiment (added: ls-3.html)
+	* New: LS Page - Parallax (added: ls-4.html)
+	* New: LS Page - Furniture Slider (added: ls-5.html)
+	* New: LS Page - Room Experiment (added: ls-6.html)
+	* New: LS Page - Headphones (added: ls-7.html)
+	* New: Sticky header enabled on mobile (changes: assets/js/scripts.js)
+	* New: Menu Bullet Navigation (changes: assets/css/layout.css , assets/js/scripts.js , added: feature-menu-11.html)
+	* Update: Layer Slider Documentation (changes: Documentation/Layerslider)
+	* Update: Layer Slider V6 (replaced assets/plugins/slider.layerslider/ folder)
+	* Update: External SMTP Info (changes: php/config.inc.php - added a comment, nothing to replace here)
+	* Fix: Smoothscoll force disable on mac to avoid fast scrolling (changes: assets/js/scripts.js)
+	* Fix: Revolution Slider 5 (added pack.css to assets/plugins/slider.revolution.v5)
+	* Fix: Section background color on revolution slider scroll (changes: assets/css/layout.css)
+	* Fix: Various youtube broken links in .html files
+	* Fix: Top Nav Menu background (changes: assets/css/layout.css)
+	* Fix: google map (changes: contact/onepage .html files)
+
+
+
+
+@Version 	1.1.5
+@Date		Tuesday, January 03, 2017
+@Author		Dorin Grigoras
+	* Update: Bootstrap to v3.3.7 (changes: replaced assets/plugins/bootstrap/ folder)
+	* Update: newsletter - send subscribers to email (changes: php/newsletter.php - you need to edit this file)
+	* Update: Fontawesome to v4.7.0 (changes: assets/css/essentials.css , assets/fonts/fontawesome*)
+	* Update: Revolution Slider to v5.3.1.6 (changes: replaced assets/plugins/slider.revolution.v5)
+
+
+
+
+@Version 	1.1.4
+@Date		Saturday, July 02, 2016
+@Author		Dorin Grigoras
+	* New: RS Page - Agency Slider (added: rs-40.html)
+	* New: RS Page - Restaurant Slider (added: rs-41.html)
+	* New: RS Page - Team Slider (added: rs-42.html)
+	* New: RS Page - 4K Youtube Slider (added: rs-43.html)
+	* New: RS Page - White Board (added: rs-44.html)
+	* New: RS Page - Photo Gallery (added: rs-45.html)
+	* New: RS Page - New Gallery (added: rs-46.html)
+	* New: RS Page - Sleek Landing Page (added: rs-47.html)
+	* New: RS Page - Coming Soon (added: rs-48.html)
+	* New: RS Page - App Landing Page (added: rs-49.html)
+	* New: RS Page - Fullscreen Menu (added: rs-50.html)
+	* New: RS Page - Creative Frontpage (added: rs-51.html)
+	* New: RS Page - Car Dealer (added: rs-52.html)
+	* New: Added image hover class (.grayscale-hover-color) - grayscale to color (changes: assets/css/essentials.css , example: shortcode-thumbnails.html)
+	* New: Revolution Slider Visual Editor Addon (added: documentation/Revolution_Slider/5.x/addon-visual-editor/ folder)
+	* Update: Revolution Slider to v5.2.6 (replaced: assets/plugins/slider.revolution.v5)
+	* Update: Revolution Slider Documentation (changes: documentation/Revolution_Slider/5.x/Documentation/)
+	* Update: Layer Slider to v5.6.7 (changes: replaced documentation/slider.layerslider)
+	* Update: Layer SLider Documentation (changes: documentation/Layerslider)
+	* Update: jQuery to v2.2.3 (changes: added assets/plugins/jquery/jquery-2.2.3.min.* , replaced jQuery version on all HTML files)
+	* Update: Magnific Popup to v1.1.0 (changes: replaced assets/plugins/magnific-popup folder)
+	* Update: Contact Form required length in PHP (changes: php/contact.php, line 90)
+	* Update: Documentation (Section: PHP>Contact)
+	* Update: gmaps plugin to v0.4.24 (changes: replaced assets/plugins/gmaps.js)
+	* Update: Fontawesome to v4.6.3 (changes: assets/css/essentials.css, replaced: assets/fons/fontawesome-* , feature-icons-fontawesome.html)
+	* Update: Animate to v3.5.1 (changes: assets/css/essentials.css)
+	* Fix: Google Maps Key (Key Used: AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY, Changes: page-contact-*. html files)
+	* Fix: jQuery Vectorial Map .js extension missing (changes: shortcode-maps-vectorial.html)
+	* Fix: Broken Magnific Popup Youtube Videos (changes: all html files where youtube video is opened by a magnific popup modal)
+
+
+
+
+@Version 	1.1.3
+@Date		Tuesday, January 12, 2016
+@Author		Dorin Grigoras
+	* New: RS Page - Concept Slider (added: rs-33.html)
+	* New: RS Page - Creative Freedom (added: rs-34.html)
+	* New: RS Page - Fullscreen Toggle (added: rs-35.html)
+	* New: RS Page - Parallax Scene (added: rs-36.html)
+	* New: RS Page - Wow Factor (added: rs-37.html)
+	* New: RS Page - 3D Web Product (added: rs-38.html)
+	* New: RS Page - Premium eCommerce (added: rs-39.html)
+	* New: Hosting theme (changes: added index-thematics-hosting.html)
+	* New: Hosting one page (changes: added index-onepage-hosting.html)
+	* New: Lawyer theme (changes: added index-thematics-lawyer.html)
+	* New: Lawyer one page (changes: added index-onepage-lawyer.html)
+	* New: Vectorial Maps (changes: assets/css/layout.css, added: assets/plugins/jquery-vectormap , shortcode-maps-vectorial.html)
+	* Update: Bootstrap to v3.3.6 (changes: replaced assets/plugins/bootstrap/ folder)
+	* Update: Revolution Slider to v5.1 (changes: replaced assets/plugins/slider.revolution.v5)
+	* Update: Revolution Slider 5 minor changes (changes: assets/css/layout.css)
+	* Update: Main menu default height on small screens changed to see all 7 items (changes:  assets/css/layout.css)
+	* Fix: Removed main menu line separator (changes: assets/css/layout.css)
+	* Fix: RTL vertical menu (changes: assets/css/layout-RTL.css)
+	* Fix: RTL Login Page (changes: assets/css/layout-RTL.css)
+	* Fix: Main menu link is now clickable if # is replaced with a valid link (changes: assets/js/scripts.js)
+	* Fix: Page Header Dark Layout (chnages: assets/css/layout-dark.css)
+	* Fix: Various Dark Elements (changes: assets/css/layout-dark.css)
+
+
+
+
+@Version 	1.1.2
+@Date		Sunday, September 20, 2015
+@Author		Dorin Grigoras
+	* New: Flot Charts (changes: added shortcode-charts.html, assets/plugins/chart.flot/)
+	* Fix: Various small fixes (changes: assets/css/layout.css)
+
+
+
+
+@Version 	1.1.1
+@Date		Friday, September 18, 2015
+@Author		Dorin Grigoras
+	* New: Corporate Page 7 (changes: added index-corporate-7.html)
+	* Update: Documentation - Revolution Slider 5 Local File
+	* Fix: Admin left menu after browser resize (changes: admin/assets/css/layout.css, admin/assets/css/color_scheme/green.css)
+	* Fix: Admin content resize (changes: admin/assets/js/app.js)
+	* Fix: Revolution Slider v5 arrows bottom position (changes: assets/css/layout.css removed .arrow-middle, added .arrow-bottom - used on: rs-15.html, rs-16.html)
+	
+
+
+
+@Version 	1.1.0
+@Date		Monday, September 14, 2015
+@Author		Dorin Grigoras
+	* New: Revolution Slider (RS) Plugin V5.0.8 (changes: added assets/plugins/slider.revolution.v5)
+	* New: 32 Revolution Slider Examples (changes: start.html, added: assets/images/demo/rs5/)
+	* New: RS Page - Carousel Highlight (added: rs-1.html)
+	* New: RS Page - Carousel Instagram (added: rs-2.html)
+	* New: RS Page - Carousel Media (added: rs-3.html)
+	* New: RS Page - Carousel Classic(added: rs-4.html)
+	* New: RS Page - Carousel Showcase (added: rs-5.html)
+	* New: RS Page - Carousel Photography (added: rs-6.html)
+	* New: RS Page - Rotating Words (added: rs-7.html)
+	* New: RS Page - Big Bold (added: rs-8.html)
+	* New: RS Page - Slider Fashion (added: rs-9.html)
+	* New: RS Page - Slider Gym (added: rs-10.html)
+	* New: RS Page - Slider Restaurant (added: rs-11.html)
+	* New: RS Page - Slider Product Dark (added: rs-12.html)
+	* New: RS Page - SliderProduct Light (added: rs-13.html)
+	* New: RS Page - Slider Classic (added: rs-14.html)
+	* New: RS Page - Gallery Light (added: rs-15.html)
+	* New: RS Page - Gallery Dark (added: rs-16.html)
+	* New: RS Page - Slider Fancy Text (added: rs-17.html)
+	* New: RS Page - Slider Highlight (added: rs-18.html)
+	* New: RS Page - Slider Media (added: rs-19.html)
+	* New: RS Page - Slider News (added: rs-20.html)
+	* New: RS Page - Slider Vimeo (added: rs-21.html)
+	* New: RS Page - Slider Youtube (added: rs-22.html)
+	* New: RS Page - Slider Travel (added: rs-23.html)
+	* New: RS Page - Hero Image (added: rs-24.html)
+	* New: RS Page - Hero News (added: rs-25.html)
+	* New: RS Page - Hero Newsletter (added: rs-26.html)
+	* New: RS Page - Hero Search (added: rs-27.html)
+	* New: RS Page - Hero Sports (added: rs-28.html)
+	* New: RS Page - Hero Vimeo (added: rs-29.html)
+	* New: RS Page - Hero Youtube (added: rs-30.html)
+	* New: RS Page - Premium Content Zoom (added: rs-31.html)
+	* New: RS Page - Premium Food Carousel (added: rs-32.html)
+	* New: Hover Buttons [shortcode-buttons-2.html] (changes: assets/css/color_scheme/*, assets/css/plugin-hover-buttons.css, assets/css/layout-dark.css)
+	* Update: Fontawesome to V4.4.0 (changes: assets/css/essentials.css , assets/fonts/fontawesome-* - on admin too)
+
+
+
+
+@Version 	1.0.2
+@Date		Monday, September 07, 2015
+@Author		Dorin Grigoras
+	* New: About Us - Layout 5 (changes: added page-about-us-5.html)
+	* New: Documentation more info (demo files, google fonts)
+	* New: optional css file to rewite the default fonts(added: assets/css/_layout-font-rewrite.css)
+	* New: Parallax enabled by default on mobile devices (changes: assets/css/essentials.css)
+	* Fix: RTL Sliders/Carousels (changes: assets/css/layout-RTL.css)
+	* Fix: header-side container width for < 1600px resolution (changes: assets/css/layout.css)
+
+
+
+
+@Version 	1.0.1
+@Date		Thursday, September 03, 2015
+@Author		Dorin Grigoras
+	* New: Documentation more info
+	* New: admin fullcalendar language example (changes: admin/assets/js/view/demo.calendar.js)
+	* Update: Layer Slider to 5.6.0 (changes: assets/plugins/slider.layerslider)
+	* Fix: newsletter php code (changes: assets/php/newsletter.php - thanks to Cristea Mihai)
+	* Fix: transparent header color on mobile (changes: assets/css/layout.css)
+	* Fix: education template - mobile menu color (changes: assets/css/thematic-edication.css)
+	* Fix: Various small fixes (changes: assets/css/layout.css , assets/css/layout-shop.css, assets/css/thematics-music.css, assets/css/layout-RTL.css)
+
+
+
+@Version 	1.0.0
+@Date		Tuesday, August 25, 2015
+@Author		Dorin Grigoras
+	* Initial Release

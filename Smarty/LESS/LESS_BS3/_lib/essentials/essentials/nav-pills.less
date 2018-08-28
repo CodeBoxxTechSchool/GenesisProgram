@@ -1,0 +1,29 @@
+/** 08. Nav Pills
+ **************************************************************** **/
+section .nav-pills {
+	display:inline-block;
+}
+section .nav-pills>li>a:hover,
+section .nav-pills>li>a:focus,
+section .nav-pills>li.active>a, 
+section .nav-pills>li.active>a:hover, 
+section .nav-pills>li.active>a:focus {
+	background-color:rgba(0,0,0,0.1) !important;
+}
+section .nav-pills>li>a {
+	padding:6px 15px;
+	margin-bottom:6px;
+	letter-spacing:1px;
+}
+
+@media only screen and (max-width: 550px) {
+		section .nav-pills {
+			background-color:rgba(0,0,0,0.02);
+		}
+		section .nav-pills,
+		section .nav-pills>li,
+		section .nav-pills>li>a {
+			display:block !important;
+			float:none;
+		}
+}

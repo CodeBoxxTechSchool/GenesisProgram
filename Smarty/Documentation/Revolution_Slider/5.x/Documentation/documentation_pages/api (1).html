@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+
+<html class="js_active vc_desktop vc_transform skrollr skrollr-desktop" lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+    <title>API - ThemePunch</title>
+    <meta content="en_US">
+    <meta content="article">
+    <meta content="API - ThemePunch">
+
+    <link href="assets/crayon.css" id="crayon-css" media="all" rel="stylesheet" type="text/css">
+    <link href="assets/styles.css" id="contact-form-7-css" media="all" rel="stylesheet" type="text/css">
+    <link href="assets/settings.css" id="essential-grid-plugin-settings-css" media="all" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" id="miami_pe_icons_css-css" href="assets/fonticons/css/pe-icon-7-stroke.css" type="text/css" media="all">
+    <link rel="stylesheet" id="miami_fontello_css-css" href="assets/fonts/css/fontello.css" type="text/css" media="all">
+    <link href="assets/settings_002.css" id="rs-plugin-settings-css" media="all" rel="stylesheet" type="text/css">
+    <style id="rs-plugin-settings-inline-css" type="text/css">
+.tp-caption
+    a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}.largeredbtn{font-family:"Raleway",sans-serif;font-weight:900;font-size:16px;line-height:60px;color:#fff !important;text-decoration:none;padding-left:40px;padding-right:80px;padding-top:22px;padding-bottom:22px;background:rgb(234,91,31);background:-moz-linear-gradient(top,rgba(234,91,31,1) 0%,rgba(227,58,12,1) 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(234,91,31,1)),color-stop(100%,rgba(227,58,12,1)));background:-webkit-linear-gradient(top,rgba(234,91,31,1) 0%,rgba(227,58,12,1) 100%);background:-o-linear-gradient(top,rgba(234,91,31,1) 0%,rgba(227,58,12,1) 100%);background:-ms-linear-gradient(top,rgba(234,91,31,1) 0%,rgba(227,58,12,1) 100%);background:linear-gradient(to bottom,rgba(234,91,31,1) 0%,rgba(227,58,12,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea5b1f',endColorstr='#e33a0c',GradientType=0 )}.largeredbtn:hover{background:rgb(227,58,12);background:-moz-linear-gradient(top,rgba(227,58,12,1) 0%,rgba(234,91,31,1) 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(227,58,12,1)),color-stop(100%,rgba(234,91,31,1)));background:-webkit-linear-gradient(top,rgba(227,58,12,1) 0%,rgba(234,91,31,1) 100%);background:-o-linear-gradient(top,rgba(227,58,12,1) 0%,rgba(234,91,31,1) 100%);background:-ms-linear-gradient(top,rgba(227,58,12,1) 0%,rgba(234,91,31,1) 100%);background:linear-gradient(to bottom,rgba(227,58,12,1) 0%,rgba(234,91,31,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e33a0c',endColorstr='#ea5b1f',GradientType=0 )}.fullrounded
+    img{-webkit-border-radius:400px;-moz-border-radius:400px;border-radius:400px}.tp-caption
+    a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}.largeredbtn{font-family:"Raleway",sans-serif;font-weight:900;font-size:16px;line-height:60px;color:#fff !important;text-decoration:none;padding-left:40px;padding-right:80px;padding-top:22px;padding-bottom:22px;background:rgb(234,91,31);background:-moz-linear-gradient(top,rgba(234,91,31,1) 0%,rgba(227,58,12,1) 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(234,91,31,1)),color-stop(100%,rgba(227,58,12,1)));background:-webkit-linear-gradient(top,rgba(234,91,31,1) 0%,rgba(227,58,12,1) 100%);background:-o-linear-gradient(top,rgba(234,91,31,1) 0%,rgba(227,58,12,1) 100%);background:-ms-linear-gradient(top,rgba(234,91,31,1) 0%,rgba(227,58,12,1) 100%);background:linear-gradient(to bottom,rgba(234,91,31,1) 0%,rgba(227,58,12,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea5b1f',endColorstr='#e33a0c',GradientType=0 )}.largeredbtn:hover{background:rgb(227,58,12);background:-moz-linear-gradient(top,rgba(227,58,12,1) 0%,rgba(234,91,31,1) 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(227,58,12,1)),color-stop(100%,rgba(234,91,31,1)));background:-webkit-linear-gradient(top,rgba(227,58,12,1) 0%,rgba(234,91,31,1) 100%);background:-o-linear-gradient(top,rgba(227,58,12,1) 0%,rgba(234,91,31,1) 100%);background:-ms-linear-gradient(top,rgba(227,58,12,1) 0%,rgba(234,91,31,1) 100%);background:linear-gradient(to bottom,rgba(227,58,12,1) 0%,rgba(234,91,31,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e33a0c',endColorstr='#ea5b1f',GradientType=0 )}.fullrounded
+    img{-webkit-border-radius:400px;-moz-border-radius:400px;border-radius:400px}.tp-caption
+    a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out;line-height:140%}.tp-caption a:hover{color:#ffa902}.tp-caption
+    a{color:#296169;text-shadow:none;text-decoration:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#296169}.tp-caption
+    a{color:#296169;text-shadow:none;text-decoration:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#296169}.feature-round{color:#000;background:#fff;background:rgba(255,255,255,0.7);font-size:12px;width:100px;height:100px;line-height:14px;text-align:center;text-decoration:none;box-sizing:border-box;padding:35px
+    35px 35px 35px;background-color:transparent;border-radius:50px 50px 50px 50px;border-width:0px;border-color:#000;border-style:none}.tp-caption
+    a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}.tp-caption
+    a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}.tp-caption
+    a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}.tp-caption
+    a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}.tp-caption
+    a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}.tp-caption
+    a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}.tp-caption
+    a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}
+    </style>
+    <link href="assets/tablesorter.css" id="taxes_tablesorter_css-css" media="all" rel="stylesheet" type="text/css">
+    <link href="assets/tp_ei-public.css" id="tp_ei-css" media="all" rel="stylesheet" type="text/css">
+    <link href="assets/tp_dl-public.css" id="tp_dl-css" media="all" rel="stylesheet" type="text/css">
+    <link href="assets/polls-css.css" id="wp-polls-css" media="all" rel="stylesheet" type="text/css">
+    <style id="wp-polls-inline-css" type="text/css">
+.wp-polls
+    .pollbar{margin:1px;font-size:6px;line-height:8px;height:8px;background:#e03301;border:1px
+    solid #fff}
+    </style>
+    <link href="assets/bootstrap.css" id="miami_bootstrap_css-css" media="all" rel="stylesheet" type="text/css">
+    <link href="assets/style.css" id="miami_theme_css-css" media="all" rel="stylesheet" type="text/css">
+    <link href="assets/icons.css" id="miami_icons_css-css" media="all" rel="stylesheet" type="text/css">
+    <link href="assets/fonts/css/fontello.css" id="miami_fontello_css-css" media="all" rel="stylesheet" type="text/css">
+    <link href="assets/dashicons.css" id="dashicons-css" media="all" rel="stylesheet" type="text/css">
+    <link href="assets/fonticons/css/pe-icon-7-stroke.css" id="miami_pe_icons_css-css" media="all" rel="stylesheet" type="text/css">
+    <link href="assets/helper.css" id="miami_pe_icons_helper_css-css" media="all" rel="stylesheet" type="text/css">
+    <link href="assets/js_composer.css" id="js_composer_front-css" media="all" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');__gaTracker('create','UA-43314654-1','auto',{'allowAnchor':true,'allowLinker':true});__gaTracker('set','forceSSL',true);__gaTracker('require','displayfeatures');__gaTracker('require','linkid','linkid.js');__gaTracker('send','pageview');
+    </script>
+    <script src="assets/jquery_004.js" type="text/javascript"></script>
+    <script src="assets/jquery-migrate.js" type="text/javascript"></script>
+    <script type="text/javascript">
+var CrayonSyntaxSettings={"version":"2.7.1","is_admin":"0","ajaxurl":"http:\/\/www.themepunch.com\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};var CrayonSyntaxStrings={"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+    </script>
+    <script src="assets/crayon.js" type="text/javascript"></script>
+    <script src="assets/lightbox.js" type="text/javascript"></script>
+    <script src="assets/jquery_009.js" type="text/javascript"></script>
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery_007.js" type="text/javascript"></script>
+    <script src="assets/tp_ei-public.js" type="text/javascript"></script>
+    <script type="text/javascript">
+var bajax_var={"url":"http:\/\/www.themepunch.com\/wp-admin\/admin-ajax.php","nonce":"bf726a2459","abs":"http:\/\/www.themepunch.com\/wp-content\/plugins\/tp_dl\/public\/"};
+    </script>
+    <script src="assets/tp_dl-public.js" type="text/javascript"></script>
+    <link href="http://www.themepunch.com/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml">
+    <link href="http://cdntphome.themepunchgbr.netdna-cdn.com/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml">
+    <link href="http://www.themepunch.com/?p=6238" rel="shortlink">
+    <script type="text/javascript">
+jQuery(document).ready(function(){var ajaxRevslider=function(obj){var content="";data={};data.action='revslider_ajax_call_front';data.client_action='get_slider_html';data.token='08d1c2c23b';data.type=obj.type;data.id=obj.id;data.aspectratio=obj.aspectratio;jQuery.ajax({type:"post",url:"http://www.themepunch.com/wp-admin/admin-ajax.php",dataType:'json',data:data,async:false,success:function(ret,textStatus,XMLHttpRequest){if(ret.success==true)
+    content=ret.data;},error:function(e){console.log(e);}});return content;};var ajaxRemoveRevslider=function(obj){return jQuery(obj.selector+" .rev_slider").revkill();};var extendessential=setInterval(function(){if(jQuery.fn.tpessential!=undefined){clearInterval(extendessential);if(typeof(jQuery.fn.tpessential.defaults)!=='undefined'){jQuery.fn.tpessential.defaults.ajaxTypes.push({type:"revslider",func:ajaxRevslider,killfunc:ajaxRemoveRevslider,openAnimationSpeed:0.3});}}},30);});
+    </script>
+    <meta content="Powered by Visual Composer - drag and drop page builder for WordPress." name="generator"><!--[if lte IE 9]><link
+rel="stylesheet" type="text/css" href="http://cdntphome.themepunchgbr.netdna-cdn.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.css" media="screen"><![endif]--><!--[if IE  8]><link
+rel="stylesheet" type="text/css" href="http://cdntphome.themepunchgbr.netdna-cdn.com/wp-content/plugins/js_composer/assets/css/vc-ie8.css" media="screen"><![endif]-->
+    <script type="text/javascript">
+/*<![CDATA[*/(function(url){if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){return;}
+    var addEvent=function(evt,handler){if(window.addEventListener){document.addEventListener(evt,handler,false);}else if(window.attachEvent){document.attachEvent('on'+evt,handler);}};var removeEvent=function(evt,handler){if(window.removeEventListener){document.removeEventListener(evt,handler,false);}else if(window.detachEvent){document.detachEvent('on'+evt,handler);}};var evts='contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');var logHuman=function(){var wfscr=document.createElement('script');wfscr.type='text/javascript';wfscr.async=true;wfscr.src=url+'&r='+Math.random();(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);for(var i=0;i<evts.length;i++){removeEvent(evts[i],logHuman);}};for(var i=0;i<evts.length;i++){addEvent(evts[i],logHuman);}})('//www.themepunch.com/?wordfence_logHuman=1&hid=F774EAF2A4C9ABCD12ED6558C72EBF4C');/*]]>*/
+    </script>
+    <meta content="Powered by Slider Revolution 5.0.5 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." name="generator"><noscript>
+    <style>
+.wpb_animate_when_almost_visible{opacity:1}
+    </style></noscript>
+    <script async="" src="assets/count_002.js" type="text/javascript"></script>
+    <style type="text/css">
+.esgbox-margin{margin-right:0px;}
+    </style>
+    <script async="" src="assets/a.js" type="text/javascript"></script>
+</head>
+
+<body class="single single-revsliderjquery-doc postid-6238 single-cpt onepagermenu wpb-js-composer js-comp-ver-4.7 vc_responsive">
+    <style>
+a{color:#e03301}.button:hover{border-color:#e03301;background:#e03301}.lightondark .button:hover{border-color:#e03301;background:#e03301}.lightondark .button.bordered:hover{border-color:#e03301;background:#e03301}.button.bordered:hover{border-color:#e03301;background:#e03301}.button.subtle:hover{border-color:#e03301;background:#e03301}.lightondark .button.subtle:hover{border-color:#e03301;background:#e03301}.button.highlight{border:2px
+    solid #e03301;background:#e03301}.lightondark ul.regularlist
+    a{color:#e03301}ul.speciallist li a:hover{color:#e03301}.lightondark ul.speciallist li a:hover{color:#e03301}.pricetable .priceitem.highlight
+    h3.pricetitle{background:#e03301}.lightondark .pricetable .priceitem.highlight
+    h3.pricetitle{background:#e03301}.simpleservice
+    .serviceicon{color:#e03301}.simpleservice.highlight{background:#e03301}.simpleservice.highlight:hover
+    .serviceicon{color:#e03301}.sidebar_widget.widget_nav_menu li.current_page_item
+    a{color:#e03301}.comment-reply-link.reply:hover{color:#e03301}.readmorebutton a:hover:after,.comment-reply-link.reply:hover:after{background:#e03301}.sharemainbutton:hover{background:#e03301;border:2px
+    solid #e03301}.lightondark input[type="submit"]:focus:hover{border:2px
+    solid #e03301}input[type="submit"]:hover{background:#e03301}.readmorebutton a:hover,.comment-reply-link.reply:hover{color:#e03301}.sticky .blog_post_title
+    a{color:#e03301}body,select,textarea,input[type="text"],input[type="password"],input[type="datetime"],input[type="datetime-local"],input[type="date"],input[type="month"],input[type="time"],input[type="week"],input[type="number"],input[type="email"],input[type="url"],input[type="search"],input[type="tel"],input[type="color"],#showbiz_moreportfolio_1 .showbiz-title,#showbiz_moreportfolio_1 a.showbiz-title,#showbiz_moreportfolio_1 a.showbiz-title:visited,#showbiz_moreportfolio_1 .excerpt,.sb-post-details,.sb-post-details span,.sb-post-details a,.sb-post-details a:visited,.sb-readmore,.sb-readmore span,.sb-readmore a,.sb-readmore a:visited{font-family:'Roboto',sans-serif}.esg-grid,.esg-selected-filterbutton{font-family:'Roboto',sans-serif !important}.ybg{background:#fff600;color:#000;margin:0px
+    5px}.ybgbig{background:#027EE1;color:#fff;margin:0px;font-size:18px;line-height:22px;padding:2px
+    5px;display:block;word-wrap:break-word;white-space:normal;max-width:100%}.ybgsub{background:#8a8f95;color:#fff;margin:0px;font-size:18px;line-height:22px;padding:2px
+    5px;display:block;word-wrap:break-word;white-space:normal;max-width:100%;padding-left:15px}.pkey{font-size:12px;display:inline-block;min-width:60px}.pval{font-size:12px;display:inline-block;font-weight:bold;word-wrap:break-word;white-space:normal;max-width:100%}.dval{background:#fff600;color:#000;display:inline-block;font-size:14px;padding:0px
+    5px;word-wrap:break-word;white-space:normal;max-width:100%}.deprec{background:#E03301;color:#fff;display:inline-block;font-size:14px;padding:0px
+    5px;word-wrap:break-word;white-space:normal;max-width:100%}.deprecbig{background:#E03301;color:#fff;display:block;font-size:18px;line-height:22px;padding:2px
+    5px;word-wrap:break-word;white-space:normal;max-width:100%}.pdetails{background:#DDE0E1;padding:10px
+    15px;display:block}.codeme{background:#DDE0E1;padding:15px
+    25px;display:block;color:#333}
+    </style><style>
+#intern_content_inner_wrapper{max-width:100%}
+    </style>
+
+    <section id="miamitop">
+    </section>
+
+    <article id="bodywrapper">
+        <section class="withtp-media withcolor blankheader" id="header_background">
+            <div class="innerbgholder" style="background: transparent;">
+            </div>
+        </section>
+
+        <article class=
+        "withsidebar leftside blog_single_elements_center post-6238 revsliderjquery-doc type-revsliderjquery-doc status-publish hentry category_revsliderjquery-doc-5-0 category_revsliderjquery-doc-anatomy"
+        id="page-6238">
+            <section class="dark" id="content_inner_wrapper" style="margin:auto;width:100%;background-color:#f1f1f1">
+                <div id="intern_content_inner_wrapper" style="display:table; width:100%;margin:auto;">
+                    <section id="content-container">
+                        <div class="topspacer" style="height:70px;">
+                        </div>
+
+                        <article class="dark" id="page-title-wrapper">
+                            <section class="container-fluid titleincontent hb_inner_wrapper" style="max-width:100%">
+                                <section class="page_title_outter_wrapper" style="width:100%">
+                                    <h1 class="textalignleft parallaxpgtitle dark" id="pagetitle" style="margin-top:40px;">API</h1>
+                                </section>
+                            </section>
+                        </article>
+
+                        <div class="sbr-contentwrapper">
+                            <section class="tp_vc_mw_rowwrapper" style="z-index:1;">
+                                <article class="tp_vc_mw_rowinner dark title_media_wrapper_row" style="padding-top: 0px ; padding-bottom: 0px;">
+                                    <div class="rowbgimage_overlay" style="background-color:transparent;">
+                                    </div>
+
+                                    <div class="content_max_width">
+                                        <div class="vc_row wpb_row vc_row-fluid title_media_wrapper_row vc_general vc_parallax vc_parallax-on" data-vc-parallax="1.5">
+                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                <div class="wpb_wrapper">
+                                                    <div class="wpb_text_column wpb_content_element">
+                                                        <div class="wpb_wrapper">
+                                                            <div class="blog_post_meta_container">
+                                                                <div class="blog_post_meta_line">
+                                                                    <span class="blog_post_meta_categories">5.0, Anatomy</span><span class="blog_post_meta_date">09.02.2015</span><span class=
+                                                                    "blog_post_meta_author">Krisztian</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="vc_parallax-inner skrollable skrollable-between" data-bottom-top="top: -50%;" data-top-bottom="top: 0%;" style="height: 150%; top: -10.346%;">
+                                            </div>
+                                        </div>
+
+                                        <div style="clear:both">
+                                        </div>
+                                    </div>
+                                </article>
+                            </section>
+
+                            <div class="sbr-textwrapper">
+                                <section class="tp_vc_mw_rowwrapper" style="z-index:2;">
+                                    <article class="tp_vc_mw_rowinner darkonlight" style="padding-top: 0px ; padding-bottom: 0px;">
+                                        <div class="rowbgimage_overlay" style="background-color:transparent;">
+                                        </div>
+
+                                        <div class="content_max_width">
+                                            <div class="vc_row wpb_row vc_row-fluid vc_general vc_parallax vc_parallax-on" data-vc-parallax="1.5">
+                                                <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                    <div class="wpb_wrapper">
+                                                        <div class="wpb_text_column wpb_content_element">
+                                                            <div class="wpb_wrapper">
+                                                                <p>Slider Revolution offers a public API which you can use to control the slider, and listen to events triggered by layers, slides,
+                                                                videos, etc. within your own scripts.</p>
+
+                                                                <p>To address the Methods and Events easier, &nbsp;save the reference of the Calling Script as shown below:</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="wpb_text_column wpb_content_element">
+                                                            <div class="wpb_wrapper">
+                                                                <p>
+                                                                </p>
+                                                                <link href="assets/themepunch.css" rel="stylesheet" type="text/css">
+                                                                <link href="assets/monaco.css" rel="stylesheet" type="text/css">
+
+                                                                <div class="crayon-syntax crayon-theme-themepunch crayon-font-monaco crayon-os-mac print-yes notranslate crayon-wrapped" data-settings=
+                                                                " minimize scroll-mouseover wrap" id="crayon-55e9a0fd8fa00164622339" style=
+                                                                "margin-top: 12px; margin-bottom: 12px; font-size: 14px ! important; line-height: 30px ! important; height: auto;">
+                                                                    <div class="crayon-plain-wrap">
+                                                                        <textarea class="crayon-plain print-no" data-settings="" readonly="readonly" style=
+                                                                        "-moz-tab-size: 4; font-size: 14px ! important; line-height: 30px ! important; z-index: 0; opacity: 0; overflow: hidden;">
+var revapi;
+jQuery(document).ready(function() { 
+   revapi = jQuery("#sliderid").revolution({
+   ...
+   });
+});
+</textarea>
+                                                                    </div>
+
+                                                                    <div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+                                                                        <table class="crayon-table"><tbody><tr class="crayon-row"><td class="crayon-nums " data-settings="show"><div class="crayon-nums-content" style="font-size: 14px !important; line-height: 30px !important;"><div class="crayon-num" data-line="crayon-55eec151d7ece527616411-1" style="height: 30px;">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-55eec151d7ece527616411-2" style="height: 30px;">2</div><div class="crayon-num" data-line="crayon-55eec151d7ece527616411-3" style="height: 30px;">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-55eec151d7ece527616411-4" style="height: 30px;">4</div><div class="crayon-num" data-line="crayon-55eec151d7ece527616411-5" style="height: 30px;">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-55eec151d7ece527616411-6" style="height: 30px;">6</div></div></td><td class="crayon-code"><div class="crayon-pre" style="font-size: 14px !important; line-height: 30px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-55eec151d7ece527616411-1"><span class="crayon-i ">var</span><span class="crayon-h"> </span><span class="crayon-i ">revapi</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55eec151d7ece527616411-2"><span class="crayon-k ">jQuery(document).ready(function() </span><span class="crayon-sy">{</span><span class="crayon-h"> </span></div><div class="crayon-line" id="crayon-55eec151d7ece527616411-3"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-k ">revapi = jQuery("#sliderid").revolution(</span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-55eec151d7ece527616411-4"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-i ">...</span></div><div class="crayon-line" id="crayon-55eec151d7ece527616411-5"><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55eec151d7ece527616411-6"><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div></div></td></tr></tbody></table>
+                                                                    </div>
+                                                                </div>
+
+                                                                <p>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="wpb_text_column wpb_content_element">
+                                                            <div class="wpb_wrapper">
+                                                                <p>From now on you can call the Public functions via the revapi object. &nbsp;However you still can call functions via a jQuery
+                                                                selector just like jQuery(‘#sliderid’).<em>function</em>()</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid" id="apimethods">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="" style="display:block;clear:both;height:px">
+                                                                    </div>
+
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <h5 class="subdirectory">API Methods / Functions</h5>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Pause Slider</span> <span class="pdetails">jQuery('#sliderid').revpause();</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Resume Slider</span> <span class="pdetails">jQuery('#sliderid').revresume()</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Previous Slide</span> <span class="pdetails">jQuery('#sliderid').revprev();</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Next Slide</span> <span class="pdetails">jQuery('#sliderid').revnext();</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Go To Slide with ID</span> <span class=
+                                                                            "pdetails">jQuery('#sliderid').revcallslidewithid('rs-1007');</span>This will trigger the Slide with Slide ID rs-1007.
+                                                                            Note, you dont need to add extra # selector !
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Go To Slide</span> <span class="pdetails">jQuery('#sliderid').revshowslide(2);</span>This will trigger
+                                                                            the Slide with Slide Index 2.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Get Amount of Slides</span> <span class="pdetails">jQuery('#sliderid').revmaxslide();</span>Delivers
+                                                                            the amount of the slides.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Get Current Slide Index</span> <span class=
+                                                                            "pdetails">jQuery('#sliderid').revcurrentslide();</span>Delivers the Index of the current Slide.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Get Last Slide Index</span> <span class="pdetails">jQuery('#sliderid').revlastslide();</span>Delivers
+                                                                            the Index of the last slide.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Scroll Below Slider</span> <span class="pdetails">jQuery('#sliderid').revscroll(offset);</span>Scroll
+                                                                            below the Slider with the Offset defined via the parameter. (Can be px or % value)
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Redraw Slider</span> <span class="pdetails">jQuery('#sliderid').revredraw();</span>Go through all
+                                                                            Layers, Slide, Sizes, Navigation and redraw them in the DOM. Helps to fix issues if Slider becomes Visible / Hidden after
+                                                                            some other functions, DOM Manipulation. (used for Resize Window also)
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Remove (kill) Slider</span> <span class="pdetails">jQuery('#sliderid').revkill();</span>Removes the
+                                                                            Slider with its Markups, Listeners, Timelines, callbacks etc.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid" id="apievents">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="" style="display:block;clear:both;height:50px">
+                                                                    </div>
+
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <h5 class="subdirectory">API Events</h5>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Slider Loaded</span> <span class=
+                                                                            "pdetails">jQuery('#slideid').bind("revolution.slide.onloaded",function (e) {<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("slider loaded");<br>
+                                                                            });</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Slider swapped to an other slide</span> <span class=
+                                                                            "pdetails">jQuery('#slideid').bind("revolution.slide.onchange",function (e,data) {<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("slide changed to: "+data.slideIndex);<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("current slide &lt;li&gt; Index: "+data.slideLIIndex);<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;//data.currentslide - Current Slide as jQuery Object<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;//data.prevslide - Previous Slide as jQuery Object<br>
+                                                                            });</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Slider paused</span> <span class="pdetails">revapi16.bind("revolution.slide.onpause",function (e,data)
+                                                                            {<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("timer paused");<br>
+                                                                            });</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Slider is Playing after pause</span> <span class=
+                                                                            "pdetails">jQuery('#slideid').bind("revolution.slide.onresume",function (e,data) {<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("timer resume");<br>
+                                                                            });</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Video is playing in slider</span> <span class=
+                                                                            "pdetails">jQuery('#slideid').bind("revolution.slide.onvideoplay",function (e,data) {<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("video play");<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;//data.video - The Video API to Manage Video functions<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;//data.videotype - youtube, vimeo, html5<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;//data.settings - Video Settings<br>
+                                                                            });</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Video is stopped in slider</span> <span class=
+                                                                            "pdetails">jQuery('#slideid').bind("revolution.slide.onvideostop",function (e,data) {<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("video stop");<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;//data.video - The Video API to Manage Video functions<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;//data.videotype - youtube, vimeo, html5<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;//data.settings - Video Settings<br>
+                                                                            });</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Slider reached the 'stop at' slide</span> <span class=
+                                                                            "pdetails">jQuery('#slideid').bind("revolution.slide.onstop",function (e,data) {<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("slider stopped");<br>
+                                                                            });</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Prepared for slide change</span> <span class=
+                                                                            "pdetails">jQuery('#slideid').bind("revolution.slide.onbeforeswap",function (e) {<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("Slider Before Swap");<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;//data.currentslide - Current Slide as jQuery Object<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;//data.nextslide - Coming Slide as jQuery Object<br>
+                                                                            });</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Finnished with slide change</span> <span class=
+                                                                            "pdetails">jQuery('#slideid').bind("revolution.slide.onafterswap",function (e) {<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("Slider After Swap");<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;//data.currentslide - Current Slide as jQuery Object<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;//data.previousslide - Previous Slide as jQuery Object<br>
+                                                                            });</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Last slide starts</span> <span class=
+                                                                            "pdetails">jQuery('#slideid').bind("revolution.slide.slideatend",function (e) {<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("slide at end");<br>
+                                                                            });</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                                        <div class="wpb_wrapper">
+                                                                            <span class="ybgbig">Layer Events</span> <span class=
+                                                                            "pdetails">jQuery('#slideid').bind("revolution.slide.layeraction",function (e) {<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;//data.eventtype - Layer Action (enterstage, enteredstage, leavestage,leftstage)<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;//data.layertype - Layer Type (image,video,html)<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;//data.layersettings - Default Settings for Layer<br>
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;//data.layer - Layer as jQuery Object<br>
+                                                                            });</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="vc_parallax-inner skrollable skrollable-between" data-bottom-top="top: -50%;" data-top-bottom="top: 0%;" style=
+                                                "height: 150%; top: -43.1953%;">
+                                                </div>
+                                            </div>
+
+                                            <div style="clear:both">
+                                            </div>
+                                        </div>
+                                    </article>
+                                </section>
+
+                                <section class="tp_vc_mw_rowwrapper" style="z-index:3;">
+                                    <article class="tp_vc_mw_rowinner darkonlight" style="padding-top: 0px ; padding-bottom: 0px;">
+                                        <div class="rowbgimage_overlay" style="background-color:transparent;">
+                                        </div>
+
+                                        <div class="content_max_width">
+                                            <div class="vc_row wpb_row vc_row-fluid vc_general vc_parallax vc_parallax-on" data-vc-parallax="1.5">
+                                                <div class="wpb_column vc_column_container vc_col-sm-6">
+                                                    <div class="wpb_wrapper">
+                                                        <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                                            <div class="wpb_wrapper">
+                                                                <a class="tp-btn tp-large-button-yellow" href="navigation.html" target="_self"><i class=
+                                                                "pe-7s-angle-left"></i> Back</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="wpb_column vc_column_container vc_col-sm-6">
+                                                    <div class="wpb_wrapper">
+                                                        <div class="wpb_text_column wpb_content_element">
+                                                            <div class="wpb_wrapper">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="vc_parallax-inner skrollable skrollable-before" data-bottom-top="top: -50%;" data-top-bottom="top: 0%;" style="height: 150%; top: -50%;">
+                                                </div>
+                                            </div>
+
+                                            <div style="clear:both">
+                                            </div>
+                                        </div>
+                                    </article>
+                                </section>
+                            </div>
+                        </div>
+
+                        <div class="bottomspacer" style="height:35px;">
+                        </div>
+                    </section>
+
+                    <section class="sidebar_widget" id="sidebar-container">
+                        <div class="widget-1 first clear">
+                        </div>
+
+                        <div class="widget-1 first miami_widget sidebar_widget widget_text" id="text-15">
+                            <div class="textwidget">
+                                <span style="background:#000; color:#fff; font-size:16px; font-weight:500; padding:0px 5px; line-height:22px;margin-bottom:5px">Slider Revolution 5.0 jQuery</span>
+                                <span style="background:#000; color:#fff; font-size:16px; font-weight:500; padding:0px 5px; line-height:22px;">Documentation</span>
+                            </div>
+
+                            <div class="clear">
+                            </div>
+                        </div>
+
+                        <div class="widget-2 last clear">
+                        </div>
+
+                        <div class="widget-2 last miami_widget sidebar_widget widget_nav_menu" id="nav_menu-2">
+                            <div class="menu-revslider-jquery-doc-container">
+                                <ul class="menu" id="menu-revslider-jquery-doc">
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-revsliderjquery-doc menu-item-has-children darknav docuwithsubmenu" data-backgroundcolor=
+                                    "rgba(37,37,37,1)" id="menu-item-6109">
+                                        <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                        </div>
+                                        <a class="menu-link docu-link" href="get-started/">Get Started</a>
+
+                                        <ul class="sub-menu" style="display: none;">
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6116">
+                                                <a class="menu-link docu-link" href="get-started.html#introduction">Introduction</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6117">
+                                                <a class="menu-link docu-link" href="get-started.html#neededfiles">Needed Folders</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6118">
+                                                <a class="menu-link docu-link" href="get-started.html#installslider">Installing the Slider</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6119">
+                                                <a class="menu-link docu-link" href="get-started.html#markup">The Markup</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6120">
+                                                <a class="menu-link docu-link" href="get-started.html#initialising">Initialising The Slider</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-revsliderjquery-doc menu-item-has-children darknav docuwithsubmenu" data-backgroundcolor=
+                                    "rgba(37,37,37,1)" id="menu-item-6122">
+                                        <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                        </div>
+                                        <a class="menu-link docu-link" href="anatomy/">Anatomy of Slider Revolution</a>
+
+                                        <ul class="sub-menu" style="display: none;">
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6133">
+                                                <a class="menu-link docu-link" href="anatomy.html#components">Slider Components</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6128">
+                                                <a class="menu-link docu-link" href="anatomy.html#grid">Layer Grid</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6129">
+                                                <a class="menu-link docu-link" href="anatomy.html#gridvsslider">Layer Grid vs. Slider</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children darknav docuwithsubmenu" data-backgroundcolor="rgba(37,37,37,1)" id=
+                                    "menu-item-6132">
+                                        <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                        </div>
+                                        <a class="menu-link docu-link" href="slider.html#slider">Slider</a>
+
+                                        <ul class="sub-menu" style="display: none;">
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-6229">
+                                                <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                </div>
+                                                <a class="menu-link docu-link" href="slider.html#slidertype">Slider Types</a>
+
+                                                <ul class="sub-menu" style="display: none;">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6130">
+                                                        <a class="menu-link docu-link" href="slider.html#standard">Standard</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6131">
+                                                        <a class="menu-link docu-link" href="slider.html#hero">Hero Block</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6135">
+                                                        <a class="menu-link docu-link" href="slider.html#carousel">Carousel</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-6231">
+                                                <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                </div>
+                                                <a class="menu-link docu-link" href="slider.html#sliderlayout">Slider Layouts</a>
+
+                                                <ul class="sub-menu" style="display: none;">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6230">
+                                                        <a class="menu-link docu-link" href="slider.html#auto">Auto Width</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6232">
+                                                        <a class="menu-link docu-link" href="slider.html#fullwidth">Fullwidth</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6233">
+                                                        <a class="menu-link docu-link" href="slider.html#fullscreen">Fullscreen</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-6236">
+                                                <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                </div>
+                                                <a class="menu-link docu-link" href="slider.html#slidersize">Advanced Sizing</a>
+
+                                                <ul class="sub-menu" style="display: none;">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6328">
+                                                        <a class="menu-link docu-link" href="slider.html#gridsize">Grid Sizing</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6329">
+                                                        <a class="menu-link docu-link" href="slider.html#aspectratio">Respect Aspect Ratio</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6330">
+                                                        <a class="menu-link docu-link" href="slider.html#minimumheight">Minimum Height</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6331">
+                                                        <a class="menu-link docu-link" href="slider.html#responsivelevels">Responsive Levels</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-revsliderjquery-doc menu-item-has-children darknav docuwithsubmenu" data-backgroundcolor=
+                                    "rgba(37,37,37,1)" id="menu-item-6239">
+                                        <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                        </div>
+                                        <a class="menu-link docu-link" href="slidersettings/">Slider Settings Overview</a>
+
+                                        <ul class="sub-menu" style="display: none;">
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-6289">
+                                                <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                </div>
+                                                <a class="menu-link docu-link" href="slidersettings.html#layoutandsize">Layouts &amp; Sizing</a>
+
+                                                <ul class="sub-menu" style="display: none;">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6290">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#sliderType">sliderType</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6291">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#sliderLayout">sliderLayout</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6292">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#responsiveLevels">responsiveLevels</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6293">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#gridwidth">gridwidth</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6294">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#gridheight">gridheight</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6295">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#autoHeight">autoHeight</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6296">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#minHeight">minHeight</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6297">
+                                                        <a class="menu-link docu-link" href=
+                                                        "slidersettings.html#fullScreenAlignForce">fullScreenAlignForce</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6298">
+                                                        <a class="menu-link docu-link" href=
+                                                        "slidersettings.html#fullScreenOffsetContainer">fullScreenOffsetContainer</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6299">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#fullScreenOffset">fullScreenOffset</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-6300">
+                                                <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                </div>
+                                                <a class="menu-link docu-link" href="slidersettings.html#progressing">Progressing</a>
+
+                                                <ul class="sub-menu" style="display: none;">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6301">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#delay">delay</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6302">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#disableProgressBar">disableProgressBar</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6303">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#startDelay">startDelay</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6304">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#stopAfterLoops">stopAfterLoops</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6305">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#stopAtSlide">stopAtSlide</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-6306">
+                                                        <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                        </div>
+                                                        <a class="menu-link docu-link" href="slidersettings.html#viewPort">viewPort</a>
+
+                                                        <ul class="sub-menu" style="display: none;">
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6307">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#viewPort">enable</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6308">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#viewPort">outof</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6309">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#viewPort">visible_area</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-6310">
+                                                <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                </div>
+                                                <a class="menu-link docu-link" href="slidersettings.html#lazyType">Lazy Loading</a>
+
+                                                <ul class="sub-menu" style="display: none;">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6311">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#lazyType">lazyType</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-6312">
+                                                <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                </div>
+                                                <a class="menu-link docu-link" href="slidersettings.html#appandvis">Appearance and Visibility</a>
+
+                                                <ul class="sub-menu" style="display: none;">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6313">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#dottedOverlay">dottedOverlay</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6314">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#shado">shadow</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6315">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#spinner">spinner</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6316">
+                                                        <a class="menu-link docu-link" href=
+                                                        "slidersettings.html#hideAllCaptionAtLimit">hideAllCaptionAtLimit</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6317">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#hideCaptionAtLimit">hideCaptionAtLimit</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6318">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#hideSliderAtLimit">hideSliderAtLimit</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-6319">
+                                                <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                </div>
+                                                <a class="menu-link docu-link" href="slidersettings.html#generalsettings">General Settings</a>
+
+                                                <ul class="sub-menu" style="display: none;">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6320">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#debugMode">debugMode</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6321">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#extensions">extensions</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6322">
+                                                        <a class="menu-link docu-link" href="slidersettings.html#extensions_suffix">extensions_suffix</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-6323">
+                                                        <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                        </div>
+                                                        <a class="menu-link docu-link" href="slidersettings.html#fallbacks">fallbacks</a>
+
+                                                        <ul class="sub-menu" style="display: none;">
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6324">
+                                                                <a class="menu-link docu-link" href=
+                                                                "slidersettings.html#fallbacks">panZoomDisableOnMobile</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6325">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#fallbacks">simplifyAll</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6326">
+                                                                <a class="menu-link docu-link" href=
+                                                                "slidersettings.html#fallbacks">nextSlideOnWindowFocus</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6327">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#fallbacks">disableFocusListener</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-6332">
+                                                <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                </div>
+                                                <a class="menu-link docu-link" href="slidersettings.html#parallax">Parallax Effect</a>
+
+                                                <ul class="sub-menu" style="display: none;">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-6339">
+                                                        <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                        </div>
+                                                        <a class="menu-link docu-link" href="slidersettings.html#parallax">parallax</a>
+
+                                                        <ul class="sub-menu" style="display: none;">
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6333">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#parallax">type</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6334">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#parallax">levels</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6335">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#parallax">origo</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6336">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#parallax">speed</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6337">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#parallax">bgparallax</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6338">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#parallax">disable_onmobile</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-6681">
+                                                <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                </div>
+                                                <a class="menu-link docu-link" href="slidersettings.html#carouselsettings">Carousel Settings</a>
+
+                                                <ul class="sub-menu" style="display: none;">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-6682">
+                                                        <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                        </div>
+                                                        <a class="menu-link docu-link" href="slidersettings.html#carouselsettings">Carousel</a>
+
+                                                        <ul class="sub-menu" style="display: none;">
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6683">
+                                                                <a class="menu-link docu-link" href=
+                                                                "slidersettings.html#carouselsettings">horizontal_align</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6684">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#carouselsettings">vertical_align</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6685">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#carouselsettings">infinity</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6686">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#carouselsettings">space</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6687">
+                                                                <a class="menu-link docu-link" href=
+                                                                "slidersettings.html#carouselsettings">maxVisibleItems</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6688">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#carouselsettings">stretch</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6689">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#carouselsettings">fadeout</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6690">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#carouselsettings">maxRotation</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6691">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#carouselsettings">minScale</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6692">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#carouselsettings">vary_fade</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6693">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#carouselsettings">vary_rotation</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6694">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#carouselsettings">vary_scale</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6695">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#carouselsettings">border_radius</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6696">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#carouselsettings">padding_top</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6697">
+                                                                <a class="menu-link docu-link" href="slidersettings.html#carouselsettings">padding_bottom</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-revsliderjquery-doc menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-6700">
+                                                <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                </div>
+                                                <a class="menu-link docu-link" href="navigation-settings-overview/">Navigation Settings</a>
+
+                                                <ul class="sub-menu" style="display: none;">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6701">
+                                                        <a class="menu-link docu-link" href=
+                                                        "navigation-settings-overview.html#generalnavigationsettings">keyboardNavigation</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6702">
+                                                        <a class="menu-link docu-link" href=
+                                                        "navigation-settings-overview.html#generalnavigationsettings">keyboard_direction</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6703">
+                                                        <a class="menu-link docu-link" href=
+                                                        "navigation-settings-overview.html#generalnavigationsettings">mouseScrollNavigation</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6704">
+                                                        <a class="menu-link docu-link" href=
+                                                        "navigation-settings-overview.html#generalnavigationsettings">onHoverStop</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-6705">
+                                                        <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                        </div>
+                                                        <a class="menu-link docu-link" href="navigation-settings-overview.html#touchsettings">touch</a>
+
+                                                        <ul class="sub-menu" style="display: none;">
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6706">
+                                                                <a class="menu-link docu-link" href=
+                                                                "navigation-settings-overview.html#touchsettings">touchenabled</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6707">
+                                                                <a class="menu-link docu-link" href=
+                                                                "navigation-settings-overview.html#touchsettings">swipe_treshold</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6708">
+                                                                <a class="menu-link docu-link" href=
+                                                                "navigation-settings-overview.html#touchsettings">swipe_min_touches</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6709">
+                                                                <a class="menu-link docu-link" href=
+                                                                "navigation-settings-overview.html#touchsettings">drag_block_vertical</a>
+                                                            </li>
+
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6710">
+                                                                <a class="menu-link docu-link" href=
+                                                                "navigation-settings-overview.html#touchsettings">swipe_direction</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6761">
+                                                        <a class="menu-link docu-link" href="navigation-settings-overview.html#arrowssettings">arrows</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6762">
+                                                        <a class="menu-link docu-link" href="navigation-settings-overview.html#bulletssettings">bullets</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6763">
+                                                        <a class="menu-link docu-link" href="navigation-settings-overview.html#thumbssettings">thumbnails</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6764">
+                                                        <a class="menu-link docu-link" href="navigation-settings-overview.html#tabssettings">tabs</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-revsliderjquery-doc menu-item-has-children darknav docuwithsubmenu" data-backgroundcolor=
+                                    "rgba(37,37,37,1)" id="menu-item-6785">
+                                        <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                        </div>
+                                        <a class="menu-link docu-link" href="slides/">Slides</a>
+
+                                        <ul class="sub-menu" style="display: none;">
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-6786">
+                                                <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                </div>
+                                                <a class="menu-link docu-link" href="slides.html#markup">Slide Basics</a>
+
+                                                <ul class="sub-menu" style="display: none;">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6787">
+                                                        <a class="menu-link docu-link" href="slides.html#markup">Markup</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6788">
+                                                        <a class="menu-link docu-link" href="slides.html#settings">Settings Overview</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-6921">
+                                                <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                </div>
+                                                <a class="menu-link docu-link" href="slides/">Slide Types</a>
+
+                                                <ul class="sub-menu" style="display: none;">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6922">
+                                                        <a class="menu-link docu-link" href="slides.html#imagebg">Image Background</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6923">
+                                                        <a class="menu-link docu-link" href="slides.html#videobg">Video Background</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6932">
+                                                        <a class="menu-link docu-link" href="slides.html#solidcolorbg">Solid Color Background</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6934">
+                                                        <a class="menu-link docu-link" href="slides.html#transparentbg">Transparent Background</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6935">
+                                                <a class="menu-link docu-link" href="slides.html#linkandseo">Link &amp; Seo</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6933">
+                                                <a class="menu-link docu-link" href="slides.html#kenburns">Ken Burns Effect</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6936">
+                                                <a class="menu-link docu-link" href="slides.html#parallax">Parallax Effect</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6937">
+                                                <a class="menu-link docu-link" href="slides.html#easetable">Ease Table</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-6938">
+                                                <a class="menu-link docu-link" href="slides.html#transitiontable">Transition Table</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-revsliderjquery-doc menu-item-has-children darknav docuwithsubmenu" data-backgroundcolor=
+                                    "rgba(37,37,37,1)" id="menu-item-6941">
+                                        <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                        </div>
+                                        <a class="menu-link docu-link" href="layers/">Layers</a>
+
+                                        <ul class="sub-menu" style="display: none;">
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-7037">
+                                                <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                </div>
+                                                <a class="menu-link docu-link" href="layers.html#layermarkup">Layer Basics</a>
+
+                                                <ul class="sub-menu" style="display: none;">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7038">
+                                                        <a class="menu-link docu-link" href="layers.html#layermarkup">Layer Markup</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7039">
+                                                        <a class="menu-link docu-link" href="layers.html#layersettings">Settings Overview</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-7040">
+                                                <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                </div>
+                                                <a class="menu-link docu-link" href="layers.html#layertypes">Layer Types</a>
+
+                                                <ul class="sub-menu" style="display: none;">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7041">
+                                                        <a class="menu-link docu-link" href="layers.html#htmllayer">HTML Layer</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7042">
+                                                        <a class="menu-link docu-link" href="layers.html#imagelayer">Image Layer</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7043">
+                                                        <a class="menu-link docu-link" href="layers.html#videolayer">Video Layer</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7044">
+                                                        <a class="menu-link docu-link" href="layers.html#shapelayer">Shape Layer</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7045">
+                                                        <a class="menu-link docu-link" href="layers.html#buttonlayer">Button Layer</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7156">
+                                                <a class="menu-link docu-link" href="layers.html#staticlayers">Static Layers</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7081">
+                                                <a class="menu-link docu-link" href="layer-actions.html#traditionallink">Layer Hyperlink Traditional</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7190">
+                                                <a class="menu-link docu-link" href="layers.html#parallaxlayer">Parallax Effect</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-7080">
+                                                <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                </div>
+                                                <a class="menu-link docu-link" href="layer-actions/">Layer Actions</a>
+
+                                                <ul class="sub-menu" style="display: none;">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7082">
+                                                        <a class="menu-link docu-link" href="layer-actions.html#actionsyntax">Layer Action Syntax</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7083">
+                                                        <a class="menu-link docu-link" href="layer-actions.html#actionlinks">Action Links
+                                                        (Internal,external)</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7084">
+                                                        <a class="menu-link docu-link" href="layer-actions.html#actionslider">Play/Pause/Toggle Slider</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7085">
+                                                        <a class="menu-link docu-link" href="layer-actions.html#actionlayer">Start/Stop/Toggle Layer</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7086">
+                                                        <a class="menu-link docu-link" href="layer-actions.html#actioncallback">Layer CallBack</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7087">
+                                                        <a class="menu-link docu-link" href="layer-actions.html#actionvideo">Play/Pause/Toggle Video</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7088">
+                                                        <a class="menu-link docu-link" href="layer-actions.html#actionclick">Simulate Click</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7089">
+                                                        <a class="menu-link docu-link" href="layer-actions.html#actionclass">Toggle Class</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-7090">
+                                                <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                </div>
+                                                <a class="menu-link docu-link" href="layer-animations/">Layer Animations</a>
+
+                                                <ul class="sub-menu" style="display: none;">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7091">
+                                                        <a class="menu-link docu-link" href="layer-animations.html#transidle">Idle State</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7092">
+                                                        <a class="menu-link docu-link" href="layer-animations.html#transhover">Hover State &amp; Hover
+                                                        Style</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7093">
+                                                        <a class="menu-link docu-link" href="layer-animations.html#transin">“In” Animation</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7094">
+                                                        <a class="menu-link docu-link" href="layer-animations.html#transout">“Out” Animation</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7095">
+                                                        <a class="menu-link docu-link" href="layer-animations.html#transmaskin">Mask “in” Animation</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7096">
+                                                        <a class="menu-link docu-link" href="layer-animations.html#transmaskout">Mask “out” Animation</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu docuwithsubmenu" id="menu-item-7101">
+                                                <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                                </div>
+                                                <a class="menu-link docu-link" href="layer-animations.html#loopmarkup">Layer Loop Animations</a>
+
+                                                <ul class="sub-menu" style="display: none;">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7102">
+                                                        <a class="menu-link docu-link" href="layer-animations.html#loopmarkup">Loop Basics</a>
+                                                    </li>
+
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7104">
+                                                        <a class="menu-link docu-link" href="layer-animations.html#looptype">Loop Types</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children darknav docuwithsubmenu" data-backgroundcolor="rgba(37,37,37,1)" id=
+                                    "menu-item-7127">
+                                        <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                        </div>
+                                        <a class="menu-link docu-link" href="navigation/">Navigation</a>
+
+                                        <ul class="sub-menu" style="display: none;">
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7128">
+                                                <a class="menu-link docu-link" href="navigation.html#navbasic">Basics</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7129">
+                                                <a class="menu-link docu-link" href="navigation.html#navarrows">Arrows</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7130">
+                                                <a class="menu-link docu-link" href="navigation.html#navbullets">Bullets</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7131">
+                                                <a class="menu-link docu-link" href="navigation.html#navthumb">Thumbnails</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7132">
+                                                <a class="menu-link docu-link" href="navigation.html#navtabs">Tabs</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class=
+                                    "menu-item menu-item-type-custom menu-item-object-custom current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children darknav docuwithsubmenu"
+                                    data-backgroundcolor="rgba(37,37,37,1)" id="menu-item-7171">
+                                        <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                        </div>
+                                        <a class="menu-link docu-link" href="api/">API</a>
+
+                                        <ul class="sub-menu" style="display: none;">
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item" id="menu-item-7173">
+                                                <a class="menu-link docu-link" href="api/">Basics</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current-menu-ancestor" id="menu-item-7172">
+                                                <a class="menu-link docu-link" href="api.html#apimethods">Methods</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item" id="menu-item-7174">
+                                                <a class="menu-link docu-link" href="api.html#apievents">Events</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children darknav docuwithsubmenu" data-backgroundcolor="rgba(37,37,37,1)" id=
+                                    "menu-item-7176">
+                                        <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                        </div>
+                                        <a class="menu-link docu-link" href="get-started/">Hyperlinking Slides &amp; Layers</a>
+
+                                        <ul class="sub-menu" style="display: none;">
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7177">
+                                                <a class="menu-link docu-link" href="slides.html#datalink">Slide Link</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7178">
+                                                <a class="menu-link docu-link" href="layer-actions.html#traditionallink">Layer Traditional Link</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7179">
+                                                <a class="menu-link docu-link" href="layer-actions.html#actionlinks">Layer Action Link</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children darknav docuwithsubmenu" data-backgroundcolor="rgba(37,37,37,1)" id=
+                                    "menu-item-7180">
+                                        <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                        </div>
+                                        <a class="menu-link docu-link" href="slides.html#videobg">Video Content</a>
+
+                                        <ul class="sub-menu" style="display: none;">
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7181">
+                                                <a class="menu-link docu-link" href="slides.html#videobg">Video as Background</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7182">
+                                                <a class="menu-link docu-link" href="layers.html#videolayer">Video as Layer</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children darknav docuwithsubmenu" data-backgroundcolor="rgba(37,37,37,1)" id=
+                                    "menu-item-7183">
+                                        <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                        </div>
+                                        <a class="menu-link docu-link" href="slider/">Special Features</a>
+
+                                        <ul class="sub-menu" style="display: none;">
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7184">
+                                                <a class="menu-link docu-link" href="slider.html#carousel">Carousel</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7185">
+                                                <a class="menu-link docu-link" href="slidersettings.html#carouselsettings">Carousel Settings</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7186">
+                                                <a class="menu-link docu-link" href="slides.html#kenburns">Ken Burns Effect</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7187">
+                                                <a class="menu-link docu-link" href="slides.html#parallax">Parallax Effect Slide BG</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7191">
+                                                <a class="menu-link docu-link" href="layers.html#parallaxlayer">Parallax Effect Layer</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7192">
+                                                <a class="menu-link docu-link" href="slidersettings.html#viewPort">Pause/Resume Slider on Scroll</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children darknav docuwithsubmenu" data-backgroundcolor="rgba(37,37,37,1)" id=
+                                    "menu-item-7193">
+                                        <div class="menu-expander icon-angle-right" style="font-style: italic">
+                                        </div>
+                                        <a class="menu-link docu-link" href="updates">Updates &amp; Support</a>
+
+                                        <ul class="sub-menu" style="display: none;">
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7195">
+                                                <a class="menu-link docu-link" href="updates">How to Update the Plugin</a>
+                                            </li>
+
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-7194">
+                                                <a class="menu-link docu-link" href="http://www.themepunch.com/support-center/">Support Center</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="clear">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="clearfix">
+                </div>
+            </section>
+        </article>
+    </article>
+    <link href="assets/tp_vc_frontend.css" id="vc_extend_style-css" media="all" rel="stylesheet" type="text/css"><script src="assets/jquery_006.js" type=
+    "text/javascript"></script><script type="text/javascript">
+var _wpcf7={"loaderUrl":"http:\/\/www.themepunch.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ...","cached":"1"};
+    </script><script src="assets/scripts.js" type="text/javascript"></script><script src="assets/jquery_002.js" type="text/javascript"></script><script src="assets/ZeroClipboard.js" type="text/javascript"></script><script src="assets/main_002.js" type="text/javascript"></script><script src="assets/main.js" type="text/javascript"></script><script type="text/javascript">
+var pollsL10n={"ajax_url":"http:\/\/www.themepunch.com\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"1","show_fading":"1"};
+    </script><script src="assets/polls-js.js" type="text/javascript"></script><script src="assets/bootstrap.js" type="text/javascript"></script><script src="assets/retina.js" type="text/javascript"></script><script src="assets/fitvid.js" type="text/javascript"></script><script type="text/javascript">
+var miami={"sharrrephp":"http:\/\/www.themepunch.com\/wp-content\/themes\/miami\/assets\/js\/sharrre.php"};
+    </script><script src="assets/jquery_005.js" type="text/javascript"></script><script src="assets/jquery_008.js" type="text/javascript"></script><script src="assets/jquery_003.js" type="text/javascript"></script><script type="text/javascript">
+var tp_search={"search_php":"http:\/\/www.themepunch.com\/wp-content\/themes\/miami\/framework\/theme_get_search_result.php","admin_php":"http:\/\/www.themepunch.com\/wp-admin\/admin-ajax.php","estoken":"f2f550fc0b"};
+    </script><script src="assets/screen.js" type="text/javascript"></script><script src="assets/comment-reply.js" type="text/javascript"></script><script src="assets/js_composer_front.js" type="text/javascript"></script><script src="assets/skrollr.js" type="text/javascript"></script><script type="text/javascript">
+var countVars={"disqusShortname":"themepunch"};
+    </script><script src="assets/count.js" type="text/javascript"></script>
+</body>
+</html>

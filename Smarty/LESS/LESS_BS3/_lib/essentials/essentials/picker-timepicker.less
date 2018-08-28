@@ -1,0 +1,136 @@
+/** TIME PICKER
+ ******************************************* **/
+.time_pick .ti_tx,
+.time_pick .mi_tx,
+.time_pick .mer_tx {
+	width: 100%;
+	text-align: center;
+	margin: 10px 0;
+}
+
+.time_pick .time,
+.time_pick .mins,
+.time_pick .meridian {
+	width: 50px;
+	float: left;
+	margin: 0;
+	font-size: 20px;
+	color: #2d2e2e;
+	font-family: arial;
+	font-weight: 700;
+}
+
+.time_pick .prev,
+.time_pick .next {
+	position:relative;
+	cursor: pointer;
+	padding: 12px 18px;
+	width: 28%;
+	height:20px;
+	border: 2px solid #ddd;
+	margin: auto;
+	text-align:center;
+
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+			border-radius: 3px;
+}
+section.dark .time_pick .prev,
+section.dark .time_pick .next {
+	border-color:#666;
+	color:#fff;
+}
+
+.time_pick .prev:before,
+.time_pick .next:before {
+	position:absolute;
+	left:8px;
+	top:3px;
+	content: "\e260";
+	font-family: 'Glyphicons Halflings';
+	display: inline-block;
+	font-weight: 400;
+	font-style:normal;
+	margin:0;
+	padding:0;
+	line-height:1;
+}
+.time_pick .next:before {
+	content: "\e259";
+}
+.time_pick .prev:hover,
+.time_pick .next:hover {
+	background-color: #ccc;
+}
+
+.time_pick .next {
+	background-position: 50% 150%;
+}
+
+.time_pick .prev {
+	background-position: 50% -50%;
+}
+
+.time_pick {
+	position: relative;
+}
+
+.time_pick .timepicker_wrap {
+	padding: 10px;
+	z-index: 998;
+	display: none;
+	background: #fff;
+	border: 2px solid #ddd;
+	float: left;
+	position: absolute;
+	top:38px !important;
+	left: 0;
+
+	-webkit-border-bottom-right-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+
+}
+.time_pick input.timepicker + .timepicker_wrap {
+	border-top:0;
+}
+	section.dark .time_pick .timepicker_wrap { 
+		color:#eee;
+		background:#212121;
+		background:#333;
+		border-color:#666;
+	}
+.time_pick .arrow_top {
+	position: absolute;
+	top: -10px;
+	left: 20px;
+	width: 18px;
+	height: 10px;
+	z-index: 999;
+}
+.time_pick input.timepicki-input {
+	background: none repeat scroll 0 0 #FFFFFF;
+   	border: 2px solid #ddd;
+   	float: none;
+   	margin: 0;
+   	text-align: center;
+   	width: 82%;
+	font-weight:300;
+	font-size:15px;
+
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+			border-radius: 3px;
+}
+section.dark .time_pick input.timepicki-input {
+	color:#333;
+	border-color:#666;
+}
+.time_pick a.reset_time {
+	float: left;
+	margin-top: 5px;
+	color: #000;
+}

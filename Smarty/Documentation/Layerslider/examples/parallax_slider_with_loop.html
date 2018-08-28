@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>LayerSlider 6 | Parallax Slider Example</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Nunito:300,400" rel="stylesheet">
+
+	<!-- Styles of this template -->
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+
+	<!-- LayerSlider styles -->
+	<link rel="stylesheet" href="../layerslider/css/layerslider.css" type="text/css">
+
+	<!-- External libraries: jQuery & GreenSock -->
+	<script src="../layerslider/js/jquery.js" type="text/javascript"></script>
+	<script src="../layerslider/js/greensock.js"></script>
+
+	<!-- LayerSlider script files -->
+	<script src="../layerslider/js/layerslider.transitions.js" type="text/javascript"></script>
+	<script src="../layerslider/js/layerslider.kreaturamedia.jquery.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+	<div id="layerslider" style="width: 1920px; height: 1080px; max-width: 1280px;">
+
+		<div class="ls-slide" data-ls="backgroundsize:auto;parallaxtype:3d;parallaxrotation:15;">
+
+			<img class="ls-layer" data-ls="durationin:1500;parallaxlevel:-2;scalein:1.1;" src="images/parallax-bg.jpg" style="left: 50%; top: 50%;">
+
+			<img class="ls-layer" data-ls="durationin:1500;parallaxlevel:2;scalein:1.1;offsetxin:-50;" src="images/parallax-grass.png" style="left: -200px; top: -150px;">
+
+			<img class="ls-layer" data-ls="durationin:1500;parallaxlevel:4;scalein:1.1;offsetxin:-50;" src="images/parallax-grass.png" style="left: 50%; top: 50%;">
+
+			<img class="ls-layer" data-ls="durationin:1500;parallaxlevel:8;scalein:1.1;offsetxin:50;" src="images/parallax-green-back.png" style="left: 50%; top: -150px;">
+
+			<img class="ls-layer" data-ls="durationin:1500;parallaxlevel:8;scalein:1.1;offsetxin:50;" src="images/parallax-plants.png" style="left: 50%; top: 50%;">
+
+			<img class="ls-layer" data-ls="durationin:1500;parallaxlevel:14;scalein:1.1;offsetxin:50;" src="images/parallax-green-front.png" style="left: 50%; top: 50%;">
+
+			<img class="ls-layer" data-ls="durationin:0;startatin:0;loopcount:-1;loopoffsetx:-130sw;loopoffsety:-50sh;loopduration:18000;parallaxlevel:20;parallaxdurationmove:2500;" src="images/parallax-clownfish.png" style="width: 250px; left:115%; top: 80%; transform: scaleX(-1); filter: brightness(80%);">
+
+			<img class="ls-layer" data-ls="durationin:1500;parallaxlevel:12;scalein:1.1;offsetxin:-50;" src="images/parallax-branch-front.png" style="left: 50%; top: 50%;">
+
+			<img class="ls-layer" data-ls="durationin:1500;parallaxlevel:8;scalein:1.1;offsetxin:50;" src="images/parallax-flares-yellow.png" style="left: 50%; top: 50%;">
+
+			<img class="ls-layer" data-ls="durationin:1500;parallaxlevel:14;scalein:1.1;offsetxin:-50;" src="images/parallax-flares-blue.png" style="left: 50%; top: 50%;">
+
+			<img class="ls-layer" data-ls="durationin:1500;parallaxlevel:10;scalein:1.1;" src="images/parallax-lensflare.png" style="left: 50%; top: 50%;">
+
+			<img class="ls-layer" data-ls="durationin:0;loopcount:-1;loopoffsetx:140sw;loopoffsety:-60sh;loopduration:20000;parallaxlevel:30;parallaxdurationmove:2500;" src="images/parallax-clownfish.png" style="width: 350px; left:-20%; top: 75%;">
+
+			<img class="ls-layer" data-ls="durationin:0;startatin:4000;loopcount:-1;loopoffsetx:160sw;loopoffsety:-60sh;loopduration:15000;parallaxlevel:50;parallaxdurationmove:2500;" src="images/parallax-clownfish.png" style="width: 500px; left:-30%; top: 90%; filter: brightness(125%);">
+		</div>
+
+	</div>
+
+	<div id="description">
+		<h1>LayerSlider <span>6</span> | Parallax Slider Example</h1>
+		<p>
+			This is a more advanced example using the new looping and 3D parallax features of LayerSlider 6. Make sure to try it out on a mobile phone / tablet with tilting your device.
+		</p>
+	</div>
+
+	<!-- Initializing the slider -->
+	<script>
+		jQuery("#layerslider").layerSlider({
+			type: 'responsive',
+			skinsPath: '../layerslider/skins/',
+			showCircleTimer: false
+		});
+	</script>
+
+</body>
+</html>

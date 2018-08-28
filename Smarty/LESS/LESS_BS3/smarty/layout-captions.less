@@ -1,0 +1,79 @@
+
+/** Captions
+ **************************************************************** **/
+.caption-default,
+.caption-light,
+.caption-dark,
+.caption-color,
+.caption-primary,
+.caption-warning,
+.caption-info,
+.caption-danger {
+	color:#fff;
+	padding:10px;
+	font-size:13px;
+	background-color:rgba(0,0,0,0.9);
+}
+.caption-default {
+	color:inherit;
+	border:#666 1px solid;
+	background-color:transparent;
+}
+.caption-light {
+	color:#333;
+	background-color:#eaeaea;
+}
+.caption-dark {
+	color:#eee;
+	background-color:#666;
+}
+.caption-primary,
+.caption-warning,
+.caption-info,
+.caption-danger {
+	color:#fff;
+	background-color:#333;
+}
+	.caption-warning {
+		background-color:#f0ad4e;
+	}
+ 	.caption-info {
+		background-color:#5bc0de;
+	}
+	.caption-danger {
+		background-color:#d9534f;
+	}
+
+/* 
+	Slider Default Caption 
+	Example usage: shop-4col-left.html (top banner)
+	
+*/
+.caption-slider-default {
+	position:absolute !important;
+	left:0; right:0;
+	top:0; bottom:0;
+	color:#000 !important;
+}
+.caption-slider-default .caption-container {
+	margin:0 50px;
+}
+.caption-slider-default h1,
+.caption-slider-default h2,
+.caption-slider-default h3,
+.caption-slider-default h4,
+.caption-slider-default p {
+	margin:0;
+	color:#000 !important;
+}
+@media only screen and (max-width: 480px) {
+	.caption-slider-default .caption-container {
+		margin:0 30px;
+	}
+	.caption-slider-default h2 {
+		font-size:16px;
+	}
+	.caption-slider-default p {
+		display:none;
+	}
+}

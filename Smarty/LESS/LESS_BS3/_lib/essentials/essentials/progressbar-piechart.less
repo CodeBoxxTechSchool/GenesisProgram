@@ -1,0 +1,105 @@
+
+/** 05. Progress Bars & Pie Charts
+ **************************************************************** **/
+.progress {
+	overflow:visible;
+	background:rgba(0,0,0,0.1);
+	margin-bottom: 15px;
+
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+		 -o-box-shadow: none;
+			box-shadow: none;
+
+	-webkit-border-radius: 0;
+	   -moz-border-radius: 0;
+			border-radius: 0;
+}
+	section.dark .progress {
+		background-color:#333;
+	}
+.progress.progress-xxs {
+	height:3px;
+}
+.progress.progress-xs {
+	height:6px;
+}
+.progress.progress-lg {
+	height:36px;
+	overflow:hidden;
+}
+.progress.progress-lg span {
+	line-height:36px;
+	text-overflow:ellipsis; 
+	white-space: nowrap;
+}
+
+
+.progress.progress-lg span.inline-text {
+	text-align:left;
+	padding:8px;
+	display:block;
+	font-size:14px;
+	position:absolute;
+	min-width:50%;
+}
+.progress-bar-default {
+	background-color:rgba(11,11,11,0.9);
+}
+
+	/* align */
+	.progress-bar.text-left>span {
+		padding-left:10px;
+	}
+	.progress-bar.text-right>span {
+		padding-right:10px;
+	}
+
+
+
+	/** Easy Pie Chart 
+	 ******************** **/
+	.piechart {
+		position:relative;
+		display:inline-block;
+		text-align:center;
+
+		display: inline-block;
+		margin: 0 15px 15px;
+	}
+	.piechart > i {
+		position:absolute;
+		display:block;
+		text-align:center;
+		font-size: 42px;
+	}
+	.piechart > span {
+		position:absolute;
+		display:block;
+		text-align:center;
+		font-size:17px;
+		font-weight:bold;
+	}
+	.piechart > span.countTo {
+		font-size:30px;
+	}
+	
+	.piechart > span[class^="size-"], 
+	.piechart > span[class*=" size-"] {
+		line-height:inherit;
+	}
+
+	.easyPieChart {
+		display: inline-block;
+		position: relative;
+		text-align: center;
+		font-size: 22px;
+		font-weight: bold;
+		color: #333;
+	}
+
+	.easyPieChart canvas {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}

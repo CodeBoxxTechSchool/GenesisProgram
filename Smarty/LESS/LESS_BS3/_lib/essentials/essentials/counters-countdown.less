@@ -1,0 +1,292 @@
+/**	19. Counters & Countdown
+*************************************************** **/
+.countTo-sm,
+.countTo-md,
+.countTo-lg {
+	font-family:'Raleway', 'Open Sans', Arial, Helvetica, sans-serif;
+}
+.countTo-sm span.countTo {
+	margin-bottom:20px;
+	font-size:25px;
+	/*display:block;*/
+}
+	.parallax .countTo-sm i {
+		color:#fff;
+	}
+	.countTo-sm i {
+		font-size:30px;
+		margin-bottom:10px;
+	}
+
+.countTo-md span.countTo {
+	margin-bottom:20px;
+	font-size:40px;
+	display:block;
+}
+	.countTo-md i {
+		font-size:50px;
+		margin-bottom:10px;
+	}
+
+.countTo-lg span.countTo {
+	margin-bottom:20px;
+	font-size:46px;
+	display:block;
+}
+	.countTo-lg i {
+		font-size:50px;
+		margin-bottom:10px;
+	}
+
+.countTo-sm h4,
+.countTo-sm h5,
+
+.countTo-md h4,
+.countTo-md h5,
+
+.countTo-lg h4,
+.countTo-lg h5 {
+	font-weight:300;
+}
+
+
+/* Countdown */
+.countdown { 
+	display: block; 
+	font-family:'Raleway', 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.countdown-row {
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+.countdown-section {
+    display: inline-block;
+    font-size: 11px;
+    line-height: 1;
+    text-align: center;
+    width: 25%;
+    border-left: 1px solid rgba(0,0,0,0.1);
+    color: #888;
+    text-transform: capitalize;
+}
+	section.dark .countdown-section,
+	.parallax .countdown-section {
+		color:#ccc;
+		border-left-color:rgba(255,255,255,0.2);
+	}
+
+.countdown-section:first-child { 
+	border-left: 0; 
+}
+
+.countdown-amount {
+    display: block;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+section.dark .countdown-amount,
+.parallax .countdown-amount {
+	color:#fff;
+}
+
+.countdown-descr {
+    display: block;
+    width: 100%;
+}
+
+
+/* medium */
+.countdown-md .countdown-section { 
+	font-size: 14px; 
+}
+.countdown-md .countdown-amount {
+    font-size: 30px;
+    margin-bottom: 7px;
+}
+
+/* large */
+.countdown-lg .countdown-section { 
+	font-size: 14px; 
+}
+
+.countdown-lg .countdown-amount {
+    font-size: 45px;
+    margin-bottom: 7px;
+}
+/* inline */
+.countdown.countdown-inline { display: inline-block; }
+
+.countdown.countdown-inline .countdown-row {
+    display: inline-block;
+    text-align: center;
+}
+
+.countdown.countdown-inline .countdown-section {
+    display: inline-block;
+    font-size: inherit;
+    line-height: inherit;
+    width: auto;
+    border: none;
+    color: inherit;
+    margin-left: 7px;
+    text-transform: lowercase;
+}
+
+.countdown.countdown-inline .countdown-section:first-child { margin-left: 0; }
+
+.countdown.countdown-inline .countdown-amount {
+    display: inline-block;
+    font-size: inherit;
+    color: inherit;
+    font-weight: bold;
+    margin: 0 3px 0 0;
+}
+
+.countdown.countdown-inline .countdown-descr {
+    display: inline-block;
+    width: auto;
+}
+
+
+/* countdown - slider & footer */
+footer .countdown-section,
+footer .countdown-amount,
+footer .countdown.countdown-inline,
+footer .countdown,
+#slider .countdown-section,
+#slider .countdown-amount,
+#slider .countdown.countdown-inline,
+#slider .countdown {
+	color:#fff;
+}
+.countdown.squared .countdown-section,
+.countdown.circle .countdown-section {
+	border-left:0;
+}
+.countdown.squared .countdown-amount,
+.countdown.circle .countdown-amount {
+	background-color:rgba(0,0,0,0.3) !important;
+	width:100px;
+	height:100px;
+	line-height:100px;
+	font-weight:300;
+	font-size:35px;
+	color:#fff;
+
+	-webkit-border-radius: 50%;
+	   -moz-border-radius: 50%;
+			border-radius: 50%;
+
+}
+.countdown.dark .countdown-amount {
+	background-color:rgba(0,0,0,0.6) !important;
+}
+.countdown.light .countdown-amount {
+	background-color:rgba(255,255,255,0.3) !important;
+}
+
+	.countdown.squared .countdown-amount {
+		-webkit-border-radius: 0;
+		   -moz-border-radius: 0;
+				border-radius: 0;
+	}
+.countdown.squared .countdown-section,
+.countdown.circle .countdown-section {
+	width:100px;
+	margin-left:15px;
+	font-size:13px;
+}
+
+.countdown.bordered-squared .countdown-section,
+.countdown.bordered .countdown-section {
+	border-left:0;
+}
+.countdown.bordered-squared .countdown-amount,
+.countdown.bordered .countdown-amount {
+	border:rgba(0,0,0,0.3) 3px solid !important;
+	width:100px;
+	height:100px;
+	line-height:90px;
+	font-weight:300;
+	font-size:35px;
+
+	-webkit-border-radius: 50%;
+	   -moz-border-radius: 50%;
+			border-radius: 50%;
+
+}
+	.countdown.bordered-squared .countdown-amount {
+		-webkit-border-radius: 0;
+		   -moz-border-radius: 0;
+				border-radius: 0;
+	}
+	
+	.countdown.theme-style .countdown-amount {
+		-webkit-border-bottom-right-radius: 40px;
+		-webkit-border-top-left-radius: 40px;
+		-moz-border-radius-bottomright: 40px;
+		-moz-border-radius-topleft: 40px;
+		border-bottom-right-radius: 40px;
+		border-top-left-radius: 40px;
+	}
+
+
+.countdown.bordered-squared .countdown-section,
+.countdown.bordered .countdown-section {
+	width:100px;
+	margin-left:15px;
+	font-size:13px;
+}
+
+#slider .countdown.bordered .countdown-amount,
+footer .countdown.bordered .countdown-amount {
+	color:#fff;
+}
+
+@media only screen and (max-width: 900px) {
+	.countdown-sm .countdown-section,
+	.countdown-md .countdown-section,
+	.countdown-lg .countdown-section { 
+		font-size: 12px; 
+	}
+	.countdown-sm .countdown-amount,
+	.countdown-md .countdown-amount,
+	.countdown-lg .countdown-amount {
+		font-size: 20px;
+		margin-bottom: 7px;
+	}
+
+	footer .countdown-section,
+	#slider .countdown-section {
+		border-left: 1px dotted rgba(255,255,255,0.3);
+	}
+	footer .countdown-section:first-child,
+	#slider .countdown-section:first-child {
+		border-left:0;
+	}
+	footer .countdown .countdown-amount,
+	footer .countdown .countdown-section,
+	#slider .countdown .countdown-section,
+	#slider .countdown .countdown-amount {
+		background-color:transparent !important;
+		width:60px;
+		height:inherit;
+		line-height:inherit;
+		font-weight:300;
+		font-size:22px;
+		text-align:center;
+		margin-left:0;
+
+		-webkit-border-radius: 0;
+		   -moz-border-radius: 0;
+				border-radius: 0;
+	}
+	footer .countdown .countdown-section,
+	#slider .countdown .countdown-section {
+		font-size:12px;
+	}
+}

@@ -1,0 +1,187 @@
+/** Side PAnel
+ **************************************************************** **/
+#sidepanel {
+	color:#888;
+	font-size:13px;
+	position: fixed;
+	top: 0; right: -280px; bottom:0;
+	width:280px;
+	z-index: 3000;
+	background-color:#363839;
+	
+	overflow:hidden;
+	display:none;
+
+	-webkit-transition: right .4s ease;
+		 -o-transition: right .4s ease;
+			transition: right .4s ease;
+
+}
+#sidepanel_overlay {
+	position:fixed;
+	left:0; top:0;
+	right:0; bottom:0;
+	background-color:rgba(0,0,0,0.5);
+	z-index:2999;
+
+	-webkit-transition: all .400s;
+	   -moz-transition: all .400s;
+		 -o-transition: all .400s;
+			transition: all .400s;
+}
+
+#sidepanel_close {
+	color: #999;
+	background-color:rgba(0,0,0,0.2);
+
+	display: block;
+	position: absolute;
+	top: 0; right: 0;
+
+	width: 40px; height: 40px;
+	font-size: 18px;
+	line-height: 40px;
+
+	text-align: center;
+}
+#sidepanel_close:hover {
+	color:#fff;
+}
+	#sidepanel.sidepanel-light #sidepanel_close {
+		color:#777;
+		background-color:rgba(0,0,0,0.1);
+	}
+	#sidepanel.sidepanel-light #sidepanel_close:hover {
+		color:#333;
+	}
+	#sidepanel.sidepanel-theme-color #sidepanel_close {
+		color:#ccc;
+		background-color:rgba(0,0,0,0.1);
+	}
+	#sidepanel.sidepanel-theme-color #sidepanel_close:hover {
+		color:#fff;
+	}
+
+	/* position */
+	#sidepanel.sidepanel-inverse {
+		right:auto;
+		left: -280px;
+	}
+	/* colors */
+	#sidepanel.sidepanel-dark {
+		color:#ddd;
+		background-color:#363839;
+	}
+	#sidepanel.sidepanel-light {
+		color:#111;
+		background-color:#ffffff;
+	}
+	#sidepanel.sidepanel-theme-color {
+		color:#fff;
+		background-color:#333;
+	}
+
+/* sidepanel content */
+#sidepanel h1,
+#sidepanel h2,
+#sidepanel h3,
+#sidepanel h4,
+#sidepanel h5,
+#sidepanel h6 {
+	color:#ddd;
+}
+#sidepanel .sidepanel-content {
+	margin:50px 30px;
+	overflow-y:auto;
+}
+#sidepanel .sidepanel-title {
+	font-size:18px;
+	line-height:23px;
+}
+
+/* sidepanel menu */
+#sidepanel ul>li>a {
+	font-size:14px;
+}
+#sidepanel ul ul>li>a {
+	font-size:11px;
+}
+#sidepanel ul {
+	border-bottom:rgba(0,0,0,0.2) 1px solid;
+	padding-bottom:30px;
+}
+#sidepanel ul ul {
+	margin-top:6px;
+	border-bottom:0;
+	padding-bottom:0;
+}
+#sidepanel ul ul>li {
+	padding:5px 0 5px 32px;
+	
+}
+
+#sidepanel .list-group-item {
+	background-color:transparent;
+	border:0; padding:8px 0;
+}
+	#sidepanel .list-group-item a {
+		color:#ddd;
+		display:block;
+		text-decoration:none;
+	}
+	#sidepanel ul li a[data-toggle="collapse"] {
+		/* font-weight:bold; */
+	}
+	#sidepanel ul li a[data-toggle="collapse"].collapsed {
+		color:#ddd;
+		font-weight:normal;
+	}
+	#sidepanel ul li a>i.ico-dd {
+		float:right;
+	}
+	#sidepanel ul li a>i.ico-category {
+		width:20px;
+	}
+		#sidepanel .list-group-item a>i {
+			margin-right:6px;
+		}
+	#sidepanel .list-group-item .badge {
+		float:right;
+	}
+
+
+/* light */
+#sidepanel.sidepanel-light ul  a,
+#sidepanel.sidepanel-light ul li a[data-toggle="collapse"].collapsed,
+#sidepanel.sidepanel-light .list-group-item ul li a[data-toggle="collapse"].collapsed {
+	color:#777 !important;
+}
+#sidepanel.sidepanel-light,
+#sidepanel.sidepanel-light h1,
+#sidepanel.sidepanel-light h2,
+#sidepanel.sidepanel-light h3,
+#sidepanel.sidepanel-light h4,
+#sidepanel.sidepanel-light h5,
+#sidepanel.sidepanel-light h6,
+#sidepanel.sidepanel-light ul li a[data-toggle="collapse"],
+#sidepanel.sidepanel-light ul a:hover {
+	color:#111 !important;
+}
+
+/* theme color */
+#sidepanel.sidepanel-theme-color ul  a,
+#sidepanel.sidepanel-theme-color ul li a[data-toggle="collapse"].collapsed,
+#sidepanel.sidepanel-theme-color .list-group-item ul li a[data-toggle="collapse"].collapsed {
+	color:#eee !important;
+}
+#sidepanel.sidepanel-theme-color,
+#sidepanel.sidepanel-theme-color h1,
+#sidepanel.sidepanel-theme-color h2,
+#sidepanel.sidepanel-theme-color h3,
+#sidepanel.sidepanel-theme-color h4,
+#sidepanel.sidepanel-theme-color h5,
+#sidepanel.sidepanel-theme-color h6,
+#sidepanel.sidepanel-theme-color ul li a[data-toggle="collapse"],
+#sidepanel.sidepanel-theme-color ul a:hover {
+	color:#fff !important;
+}

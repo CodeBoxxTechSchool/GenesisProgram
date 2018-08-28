@@ -1,0 +1,34 @@
+/** Scroll To Top
+ **************************************************************** **/
+#toTop {
+	font-size:38px;
+	line-height:33px;
+	background-color: rgba(0,0,0,0.3);
+	color: #FFF;
+	position: fixed;
+	height: 35px; width: 40px;
+	right: 6px; bottom: 6px;
+	text-align: center;
+	text-transform: uppercase;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+	text-decoration:none;
+	display:none;
+	z-index: 1000;
+
+	-webkit-border-radius: 2px !important;
+	-moz-border-radius: 2px !important;
+	border-radius: 2px !important;
+
+	-webkit-transition: all 0.2s;
+	   -moz-transition: all 0.2s;
+		 -o-transition: all 0.2s;
+			transition: all 0.2s;
+}
+#toTop:hover {
+	background-color: rgba(0,0,0,0.7);
+}
+#toTop:before {
+	font-family: "fontawesome";
+	content: "\f102";
+}

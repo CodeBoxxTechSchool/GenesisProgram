@@ -1,0 +1,161 @@
+/** Comments
+ **************************************************************** **/
+.comments {
+	margin-top:60px;
+}
+.comments .comment-item {
+	margin:40px 0;
+}
+.comments a.comment-reply {
+	float:right;
+	font-size:11px;
+	text-transform:uppercase;
+}
+.comments span.user-avatar {
+	background:#eee;
+	width:64px; height:64px;
+	float:left;
+	margin-right:10px;
+}
+	section.dark .comments span.user-avatar {
+		background:transparent;
+	}
+.comments small {
+	font-size:12px;
+	font-family:'Open Sans',Arial,Helvetica,sans-serif;
+	color:#aaa;
+}
+.comments h4 {
+	font-size:15px;
+}
+section.dark .comments small {
+	color:#666;
+}
+
+
+	/* BORDERED COMMENTS */
+	.comment-list p,
+	.comment-list .row {
+		margin-bottom: 0px;
+	}
+	.comment-list .panel .panel-heading {
+		padding: 4px 15px;
+		position: absolute;
+		border:none;
+		border-top-right-radius:0px;
+		top: 1px;
+	}
+	.comment-list .panel .panel-heading.right {
+		border-right-width: 0px;
+		border-top-left-radius:0px;
+		right: 16px;
+	}
+	.comment-list .panel .panel-heading .panel-body {
+		padding-top: 6px;
+	}
+	.comment-list figcaption {
+		/*For wrapping text in thumbnail*/
+		word-wrap: break-word;
+	}
+	/* Portrait tablets and medium desktops */
+	@media (min-width: 768px) {
+		.comment-list .arrow:after, 
+		.comment-list .arrow:before {
+			content: "";
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-color: transparent;
+		}
+		.comment-list .panel.arrow.left:after, 
+		.comment-list .panel.arrow.left:before {
+			border-left: 0;
+		}
+		/*****Left Arrow*****/
+		.comment-list .panel.arrow.left:before {
+			left: 0px;
+			top: 30px;
+			border-right-color: inherit;
+			border-width: 16px;
+		}
+		/*Background color effect*/
+		.comment-list .panel.arrow.left:after {
+			left: 1px;
+			top: 31px;
+			border-right-color: #FFFFFF;
+			border-width: 15px;
+		}
+		/*****Right Arrow*****/
+		.comment-list .panel.arrow.right:before {
+			right: -16px;
+			top: 30px;
+			border-left-color: inherit;
+			border-width: 16px;
+		}
+		/*Background color effect*/
+		.comment-list .panel.arrow.right:after {
+			right: -14px;
+			top: 31px;
+			border-left-color: #FFFFFF;
+			border-width: 15px;
+		}
+		
+		section.dark .comment-list .thumbnail {
+			border-color:#666;
+			background-color:#666;
+		}
+		section.dark .comment-list .panel.arrow.left:after {
+				border-right-color: #212121;
+		}
+		section.dark .comment-list .panel.arrow.right:after {
+				border-left-color: #212121;
+		}
+	}
+
+	.comment-list .comment-post {
+		margin-top: 6px;
+	}
+
+
+
+/* 
+	article default comments 
+	usage example: page-profile-comments.html
+*/
+ul.comment {
+	margin-bottom:30px;
+}
+li.comment {
+	position:relative;
+	margin-bottom:25px;
+	font-size:13px;
+}
+li.comment p {
+	margin:0; padding:0;
+}
+li.comment img.avatar {
+	position:absolute;
+	left:0; top:0;
+	display:inline-block;
+}
+li.comment.comment-reply img.avatar {
+	left:6px; top:6px;
+}
+li.comment .comment-body {
+	position:relative;
+	padding-left:60px;
+}
+li.comment.comment-reply {
+	margin-left:60px;
+	background-color:rgba(0,0,0,0.04);
+	padding:6px;
+	margin-bottom:6px;
+}
+li.comment a.comment-author {
+	margin-bottom:6px;
+	display:block;
+}
+li.comment a.comment-author span {
+	font-size:15px;
+}

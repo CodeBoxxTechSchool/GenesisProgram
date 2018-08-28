@@ -1,0 +1,94 @@
+/** Material Design
+ ******************** **/
+div.side-nav[class*=" mdl-shadow--"] {
+	padding: 15px 15px 1px 15px;
+}
+@media only screen and (max-width: 768px) {
+	div.side-nav[class*=" mdl-shadow--"] {
+		padding: 0 !important;
+	}
+	div.side-nav[class*=" mdl-shadow--"] ul>li {
+		margin: 5px 15px !important;
+		border: 0 !important;
+		font-size:16px;
+	}
+}
+.mdl-badge.mdl-badge--no-background[data-badge]:after {
+	background: transparent;
+}
+
+
+/* WIDE CARD */
+.mdl-card-wide.mdl-card {
+	width: 100%;
+}
+
+/* IMAGE CARD */
+.mdl-card-image > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.mdl-card-image__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* EVENT CARD */
+.mdl-card-event > .mdl-card__actions {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.mdl-card-event > .mdl-card__title {
+  align-items: flex-start;
+}
+.mdl-card-event > .mdl-card__title > h4 {
+  margin-top: 0;
+}
+.mdl-card-event > .mdl-card__actions {
+  display: flex;
+  box-sizing:border-box;
+  align-items: center;
+}
+.mdl-card-event > .mdl-card__actions > .material-icons {
+  padding-right: 10px;
+}
+.mdl-card-event > .mdl-card__title,
+.mdl-card-event > .mdl-card__actions,
+.mdl-card-event > .mdl-card__actions > .mdl-button {
+  color: #fff;
+}
+
+/* checkbox fix */
+.mdl-checkbox__tick-outline {
+	width: 101%;
+	height: 101%;
+}
+
+/* table fix */
+table.mdl-data-table {
+	width: 100%;
+}
+.mdl-data-table td:first-of-type, .mdl-data-table th:first-of-type {
+    padding-left: 20px;
+    width: 50px;
+}
+
+
+/* text fields fix */
+label.mdl-textfield__label {
+	margin-bottom:0;
+	text-indent:1;
+}
+
+
+/* RESPONSIVE CARDS */
+@media only screen and (max-width: 768px) {
+	.mdl-mobile-fullwidth,
+	.mdl-card-image.mdl-card,
+	.mdl-card-square.mdl-card,
+	.mdl-card-event.mdl-card,
+	.mdl-card-wide.mdl-card {
+		width: 100% !important;
+	}
+}
