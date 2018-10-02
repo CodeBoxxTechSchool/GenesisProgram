@@ -1,0 +1,1098 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Smarty Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+		<!-- WEB FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+	</head>
+	<!--
+		.boxed = boxed version
+	-->
+	<body>
+
+
+		<!-- WRAPPER -->
+		<div id="wrapper">
+
+			<!-- 
+				ASIDE 
+				Keep it outside of #wrapper (responsive purpose)
+			-->
+			<aside id="aside">
+				<!--
+					Always open:
+					<li class="active alays-open">
+
+					LABELS:
+						<span class="label label-danger pull-right">1</span>
+						<span class="label label-default pull-right">1</span>
+						<span class="label label-warning pull-right">1</span>
+						<span class="label label-success pull-right">1</span>
+						<span class="label label-info pull-right">1</span>
+				-->
+				<nav id="sideNav"><!-- MAIN MENU -->
+					<ul class="nav nav-list">
+						<li><!-- dashboard -->
+							<a class="dashboard" href="index.html"><!-- warning - url used by default by ajax (if eneabled) -->
+								<i class="main-icon fa fa-dashboard"></i> <span>Dashboard</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-bar-chart-o"></i> <span>Graphs</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="graphs-flot.html">Flot Charts</a></li>
+								<li><a href="graphs-morris.html">Morris Charts</a></li>
+								<li><a href="graphs-inline.html">Inline Charts</a></li>
+								<li><a href="graphs-chartjs.html">Chart.js</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-table"></i> <span>Tables</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="tables-bootstrap.html">Bootstrap Tables</a></li>
+								<li><a href="tables-jqgrid.html">jQuery Grid</a></li>
+								<li><a href="tables-footable.html">jQuery Footable</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Datatables
+									</a>
+									<ul>
+										<li><a href="tables-datatable-managed.html">Managed Datatables</a></li>
+										<li><a href="tables-datatable-editable.html">Editable Datatables</a></li>
+										<li><a href="tables-datatable-advanced.html">Advanced Datatables</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-pencil-square-o"></i> <span>Forms</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="form-elements.html">Smarty Elements</a></li>
+								<li><a href="form-masked-inputs.html">Masked Inputs</a></li>
+								<li><a href="form-pickers.html">Pickers</a></li>
+								<li><a href="form-ui-sliders.html">UI Sliders</a></li>
+								<li><a href="form-validation.html">Validation Form</a></li>
+								<li><a href="form-html-editors.html">Html Editors</a></li>
+								<li><a href="form-autosuggest.html">Autosuggest</a></li>
+								<li><a href="form-x-editable.html">Form X-Editable</a></li>
+								<li><a href="form-dropzone.html">Dropzone File Upload</a></li>
+							</ul>
+						</li>
+						<li class="active">
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-gears"></i> <span>UI Features</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="ui-portlets.html">Portlets</a></li>
+								<li><a href="ui-buttons.html">Buttons</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Icons
+									</a>
+									<ul>
+										<li><a href="ui-icons-fontawsome.html">Fontawsome</a></li>
+										<li><a href="ui-icons-etline.html">Et-Line Icons</a></li>
+										<li><a href="ui-icons-glyphicons.html">Glyph Icons</a></li>
+										<li><a href="ui-icons-flags.html">Flags</a></li>
+									</ul>
+								</li>
+								<li><a href="ui-alerts-dialogs.html">Alerts &amp; Dialogs</a></li>
+								<li class="active"><a href="ui-tabs-acordion-navs.html">Tabs, Acordion &amp; Navs</a></li>
+								<li><a href="ui-knob.html">Knob Circles</a></li>
+								<li><a href="ui-nestable.html">Nestable List</a></li>
+								<li><a href="ui-toastr.html">Toastr Notifications</a></li>
+								<li><a href="ui-modals.html">Modals</a></li>
+								<li><a href="ui-grid.html">Grid</a></li>
+								<li><a href="ui-google-maps.html">Google Maps</a></li>
+								<li><a href="ui-vector-maps.html">Vector Maps</a></li>
+								<li><a href="ui-essentials.html">Essentials</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										<i class="fa fa-folder-open"></i>
+										Deep Navigation
+									</a>
+									<!-- 3rd Level -->
+									<ul>
+										<li>
+											<a href="#">
+												3rd Level
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-menu-arrow pull-right"></i>
+												<i class="fa fa-folder-open"></i>
+												4rd Level
+											</a>
+											<!-- 4th Level -->
+											<ul>
+												<li>
+													<a href="#">
+														4th Level
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-menu-arrow pull-right"></i>
+														<i class="fa fa-folder-open"></i>
+														5th Level
+													</a>
+													<!-- 5th Level -->
+													<ul>
+														<li>
+															<a href="#">
+																5th level
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<i class="fa fa-menu-arrow pull-right"></i>
+																<i class="fa fa-folder-open"></i>
+																6th level
+															</a>
+															<!-- 6th Level -->
+															<ul>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+															</ul><!-- /6th Level -->
+														</li>
+													</ul><!-- /5th Level -->
+												</li>
+											</ul><!-- /4th Level -->
+										</li>
+									</ul><!-- /3rd Level -->
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-book"></i> <span>Pages</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="page-invoice.html">Invoice</a></li>
+								<li><a href="page-login.html">Login</a></li>
+								<li><a href="page-register.html">Register</a></li>
+								<li><a href="page-lock.html">Lock Screen</a></li>
+								<li><a href="page-forum.html">Forum</a></li>
+								<li><a href="page-404.html">Error 404</a></li>
+								<li><a href="page-500.html">Error 500</a></li>
+								<li><a href="page-pricing.html">Pricing Table</a></li>
+								<li><a href="page-search.html">Search Result</a></li>
+								<li><a href="page-sidebar.html">Sidebar Page</a></li>
+								<li><a href="page-user-profile.html">User Profile</a></li>
+								<li><a href="page-blank-1.html">Blank Page</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+					</ul>
+
+					<!-- SECOND MAIN LIST -->
+					<h3>MORE</h3>
+					<ul class="nav nav-list">
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+						<li>
+							<a href="../../HTML_BS4/start.html">
+								<i class="main-icon fa fa-link"></i>
+								<span class="label label-danger pull-right">PRO</span> <span>Frontend</span>
+							</a>
+						</li>
+					</ul>
+
+				</nav>
+
+				<span id="asidebg"><!-- aside fixed background --></span>
+			</aside>
+			<!-- /ASIDE -->
+
+
+			<!-- HEADER -->
+			<header id="header">
+
+				<!-- Mobile Button -->
+				<button id="mobileMenuBtn"></button>
+
+				<!-- Logo -->
+				<span class="logo pull-left">
+					<img src="assets/images/logo_light.png" alt="admin panel" height="35" />
+				</span>
+
+				<form method="get" action="page-search.html" class="search pull-left hidden-xs">
+					<input type="text" class="form-control" name="k" placeholder="Search for something..." />
+				</form>
+
+				<nav>
+
+					<!-- OPTIONS LIST -->
+					<ul class="nav pull-right">
+
+						<!-- USER OPTIONS -->
+						<li class="dropdown pull-left">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+								<img class="user-avatar" alt="" src="assets/images/noavatar.jpg" height="34" /> 
+								<span class="user-name">
+									<span class="hidden-xs">
+										John Doe <i class="fa fa-angle-down"></i>
+									</span>
+								</span>
+							</a>
+							<ul class="dropdown-menu hold-on-click">
+								<li><!-- my calendar -->
+									<a href="calendar.html"><i class="fa fa-calendar"></i> Calendar</a>
+								</li>
+								<li><!-- my inbox -->
+									<a href="#"><i class="fa fa-envelope"></i> Inbox
+										<span class="pull-right label label-default">0</span>
+									</a>
+								</li>
+								<li><!-- settings -->
+									<a href="page-user-profile.html"><i class="fa fa-cogs"></i> Settings</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li><!-- lockscreen -->
+									<a href="page-lock.html"><i class="fa fa-lock"></i> Lock Screen</a>
+								</li>
+								<li><!-- logout -->
+									<a href="page-login.html"><i class="fa fa-power-off"></i> Log Out</a>
+								</li>
+							</ul>
+						</li>
+						<!-- /USER OPTIONS -->
+
+					</ul>
+					<!-- /OPTIONS LIST -->
+
+				</nav>
+
+			</header>
+			<!-- /HEADER -->
+
+
+			<!-- 
+				MIDDLE 
+			-->
+			<section id="middle">
+
+
+				<!-- page title -->
+				<header id="page-header">
+					<h1>Tabs, Acordion &amp; Navs</h1>
+					<ol class="breadcrumb">
+						<li><a href="#">UI</a></li>
+						<li class="active">Tabs, Acordion &amp; Navs</li>
+					</ol>
+				</header>
+				<!-- /page title -->
+
+
+				<div id="content" class="padding-20">
+
+					<div class="row">
+					
+						<!-- LEFT -->
+						<div class="col-md-6">
+
+							<!-- Panel Tabs -->
+							<div id="panel-ui-tan-l1" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Panel Tabs</strong>
+									</span>
+
+									<!-- tabs nav -->
+									<ul class="nav nav-tabs pull-right">
+										<li class="active"><!-- TAB 1 -->
+											<a href="#ttab1_nobg" data-toggle="tab">Tab 1 <span class="label label-danger">label</span></a>
+										</li>
+										<li class=""><!-- TAB 2 -->
+											<a href="#ttab2_nobg" data-toggle="tab"> Tab 2</a>
+										</li>
+									</ul>
+									<!-- /tabs nav -->
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+										<!-- tabs content -->
+										<div class="tab-content transparent">
+
+											<div id="ttab1_nobg" class="tab-pane active"><!-- TAB 1 CONTENT -->
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+											</div><!-- /TAB 1 CONTENT -->
+
+											<div id="ttab2_nobg" class="tab-pane"><!-- TAB 2 CONTENT -->
+												<p>Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											</div><!-- /TAB 1 CONTENT -->
+
+										</div>
+										<!-- /tabs content -->
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Panel Tabs -->
+
+							<!-- Stacked Left -->
+							<div id="panel-ui-tan-l2" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Stacked Left</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									<div class="row tabs nomargin">
+
+										<!-- tabs -->
+										<div class="col-md-3 col-sm-3 nopadding-right nopadding-left">
+											<ul class="nav nav-tabs nav-stacked">
+												<li class="active">
+													<a href="#tab_a" data-toggle="tab">
+														<span class="badge badge-warning pull-right">3</span>
+														Stacked Tab 1
+													</a>
+												</li>
+												<li>
+													<a href="#tab_b" data-toggle="tab">
+														Stacked Tab 2
+													</a>
+												</li>
+												<li>
+													<a href="#tab_c" data-toggle="tab">
+														Stacked Tab 3
+													</a>
+												</li>
+											</ul>
+										</div>
+
+										<!-- tabs content -->
+										<div class="col-md-9 col-sm-9 nopadding-right nopadding-left">
+											<div class="tab-content">
+												<div id="tab_a" class="tab-pane active">
+													<h4>Stacked left</h4>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+												</div>
+
+												<div id="tab_b" class="tab-pane">
+													<h4>Stacked left</h4>
+													<p>Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+												</div>
+
+												<div id="tab_c" class="tab-pane">
+													<h4>Stacked left</h4>
+													<p>Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Stacked Left -->
+
+							<!-- Default Tabs -->
+							<div id="panel-ui-tan-l3" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Default Tabs</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									<p>If you want a clean, no background color, add class <code>.transparent</code> to div <code>.tab-content</code></p>
+									<!-- no background -->
+									<div class="tabs nomargin">
+
+										<!-- tabs -->
+										<ul class="nav nav-tabs">
+											<li class="active">
+												<a href="#tab1_nobg" data-toggle="tab">
+													<i class="fa fa-heart"></i> Tab 1
+												</a>
+											</li>
+											<li class="">
+												<a href="#tab2_nobg" data-toggle="tab">
+													<i class="fa fa-cogs"></i> Tab 2
+												</a>
+											</li>
+										</ul>
+
+										<!-- tabs content -->
+										<div class="tab-content transparent">
+											<div id="tab1_nobg" class="tab-pane active">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+											</div>
+
+											<div id="tab2_nobg" class="tab-pane">
+												<p>Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											</div>
+										</div>
+
+									</div>
+									<!-- /no background -->
+
+									<hr />
+
+									<!-- width background -->
+									<div class="tabs nomargin-top">
+
+										<!-- tabs -->
+										<ul class="nav nav-tabs">
+											<li class="active">
+												<a href="#tab1" data-toggle="tab">
+													<i class="fa fa-heart"></i> Tab 1
+												</a>
+											</li>
+											<li>
+												<a href="#tab2" data-toggle="tab">
+													<i class="fa fa-cogs"></i> Tab 2
+												</a>
+											</li>
+										</ul>
+
+										<!-- tabs content -->
+										<div class="tab-content">
+											<div id="tab1" class="tab-pane active">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+											</div>
+
+											<div id="tab2" class="tab-pane">
+												<p>Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											</div>
+										</div>
+
+									</div>
+									<!-- /width background -->
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Default Tabs -->
+
+							<!-- Accordion -->
+							<div id="panel-ui-tan-l4" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Accordion</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									<div class="accordion panel-group" id="accordion">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordion" href="#acordion1" class="">
+														<i class="fa fa-check"></i>
+														Option 1
+													</a>
+												</h4>
+											</div>
+											<div id="acordion1" class="collapse in">
+												<div class="panel-body">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur <a data-toggle="tooltip" data-original-title="Default tooltip" href="#">pellentesque neque eget</a> diam posuere porta. Quisque ut nulla at nunc vehicula lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc vehicula lacinia.
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordion" href="#acordion2" class="collapsed">
+														<i class="fa fa-check"></i>
+														Option 2
+													</a>
+												</h4>
+											</div>
+											<div id="acordion2" class="collapse">
+												<div class="panel-body">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur <a data-toggle="tooltip" data-original-title="Default tooltip" href="#">pellentesque neque eget</a> diam posuere porta. Quisque ut nulla at nunc vehicula lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo.
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordion" href="#acordion3" class="collapsed">
+														<i class="fa fa-check"></i>
+														Option 3
+													</a>
+												</h4>
+											</div>
+											<div id="acordion3" class="collapse">
+												<div class="panel-body">
+													Curabitur <a data-toggle="tooltip" data-original-title="Default tooltip" href="#">pellentesque neque eget</a> diam posuere porta. Quisque ut nulla at nunc vehicula lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula.
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Accordion -->
+
+							<!-- Nav -->
+							<div id="panel-ui-tan-l5" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Side Navigation</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									<ul class="side-nav list-group margin-bottom30">
+										<li class="list-group-item active"><a href="#"><i class="fa fa-home"></i> Profile</a></li>
+										<li class="list-group-item list-toggle">   <!-- NOTE: "active" to be open on page load -->                
+											<a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-2"><i class="fa fa-level-down"></i> Collapse Menu</a>
+											<ul id="collapse-2" class="collapse"><!-- NOTE: "collapse in" to be open on page load -->
+												<li><a href="#"><i class="fa fa-angle-right"></i> Option #1</a></li>
+												<li><a href="#"><i class="fa fa-angle-right"></i> Option #2</a></li>
+												<li><a href="#"><i class="fa fa-angle-right"></i> Option #3</a></li>
+											</ul>
+										</li>
+
+										<li class="list-group-item"><a href="#"><i class="fa fa-comments"></i> Comments</a></li>
+										<li class="list-group-item"><a href="#"><i class="fa fa-edit"></i> History</a></li>
+										<li class="list-group-item"><a href="#"><i class="fa fa-users"></i> Friends</a></li>
+									</ul>
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Nav -->
+
+						</div>
+						<!-- /LEFT -->
+
+						<!-- RIGHT -->
+						<div class="col-md-6">
+
+							<!-- Panel Tabs Left -->
+							<div id="panel-ui-tan-l4" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<!-- tabs nav -->
+									<ul class="nav nav-tabs pull-left">
+										<li class="active"><!-- TAB 1 -->
+											<a href="#ttab1l_nobg" data-toggle="tab">Tab 1 <span class="label label-danger">label</span></a>
+										</li>
+										<li class=""><!-- TAB 2 -->
+											<a href="#ttab2l_nobg" data-toggle="tab"> Tab 2</a>
+										</li>
+									</ul>
+									<!-- /tabs nav -->
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+										<!-- tabs content -->
+										<div class="tab-content transparent">
+
+											<div id="ttab1l_nobg" class="tab-pane active"><!-- TAB 1 CONTENT -->
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+											</div><!-- /TAB 1 CONTENT -->
+
+											<div id="ttab2l_nobg" class="tab-pane"><!-- TAB 2 CONTENT -->
+												<p>Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											</div><!-- /TAB 1 CONTENT -->
+
+										</div>
+										<!-- /tabs content -->
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Panel Tabs Left -->
+
+							<!-- Stacked Right -->
+							<div id="panel-ui-tan-r2" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Stacked Right</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									<div class="row tabs nomargin">
+
+										<!-- tabs content -->
+										<div class="col-md-9 col-sm-9 nopadding-right nopadding-left">
+											<div class="tab-content">
+												<div id="tab_x" class="tab-pane active">
+													<h4>Stacked Right</h4>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+												</div>
+
+												<div id="tab_y" class="tab-pane">
+													<h4>Stacked Right</h4>
+													<p>Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+												</div>
+
+												<div id="tab_z" class="tab-pane">	
+													<h4>Stacked Right</h4>
+													<p>Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+												</div>
+											</div>
+										</div>
+
+										<!-- tabs -->
+										<div class="col-md-3 col-sm-3 nopadding-right nopadding-left">
+											<ul class="nav nav-tabs nav-stacked">
+												<li class="active">
+													<a href="#tab_x" data-toggle="tab">
+														Stacked Tab 1
+													</a>
+												</li>
+												<li>
+													<a href="#tab_y" data-toggle="tab">
+														<span class="badge badge-danger pull-right">6</span>
+														Stacked Tab 2
+													</a>
+												</li>
+												<li>
+													<a href="#tab_z" data-toggle="tab">
+														Stacked Tab 3
+													</a>
+												</li>
+											</ul>
+										</div>
+
+									</div>
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Stacked Right -->
+
+							<!-- Justified Tabs -->
+							<div id="panel-ui-tan-r1" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Justified Tabs</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									<p>If you want a clean, no background color, add class <code>.transparent</code> to div <code>.tab-content</code></p>
+									<!-- no background -->
+									<div class="tabs nomargin">
+
+										<!-- tabs -->
+										<ul class="nav nav-tabs nav-justified">
+											<li class="active">
+												<a href="#jtab1_nobg" data-toggle="tab">
+													<i class="fa fa-heart"></i> Tab 1
+												</a>
+											</li>
+											<li class="">
+												<a href="#jtab2_nobg" data-toggle="tab">
+													<i class="fa fa-cogs"></i> Tab 2
+												</a>
+											</li>
+										</ul>
+
+										<!-- tabs content -->
+										<div class="tab-content transparent">
+											<div id="jtab1_nobg" class="tab-pane active">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+											</div>
+
+											<div id="jtab2_nobg" class="tab-pane">
+												<p>Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											</div>
+										</div>
+
+									</div>
+									<!-- /no background -->
+
+									<hr />
+
+									<!-- width background -->
+									<div class="tabs nomargin-top">
+
+										<!-- tabs -->
+										<ul class="nav nav-tabs nav-justified">
+											<li class="active">
+												<a href="#jtab1" data-toggle="tab">
+													<i class="fa fa-heart"></i> Tab 1
+												</a>
+											</li>
+											<li>
+												<a href="#jtab2" data-toggle="tab">
+													<i class="fa fa-cogs"></i> Tab 2
+												</a>
+											</li>
+										</ul>
+
+										<!-- tabs content -->
+										<div class="tab-content">
+											<div id="jtab1" class="tab-pane active">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+											</div>
+
+											<div id="jtab2" class="tab-pane">
+												<p>Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											</div>
+										</div>
+
+									</div>
+									<!-- /width background -->
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Justified Tabs -->
+
+							<!-- Toggles -->
+							<div id="panel-ui-tan-r3" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Toggles</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									<div class="toggle transparent">
+
+										<div class="toggle active">
+											<label>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</label>
+											<div class="toggle-content" style="display: block;">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+											</div>
+										</div>
+
+										<div class="toggle">
+											<label>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</label>
+											<div class="toggle-content">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+											</div>
+										</div>
+
+										<div class="toggle">
+											<label>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</label>
+											<div class="toggle-content">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+											</div>
+										</div>
+
+									</div>
+
+									<hr />
+
+									<h5>Single Toggle</h5>
+									<div class="toggle transparent toggle-accordion">
+
+										<div class="toggle active">
+											<label>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</label>
+											<div class="toggle-content" style="display: block;">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+											</div>
+										</div>
+
+										<div class="toggle">
+											<label>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</label>
+											<div class="toggle-content">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+											</div>
+										</div>
+
+										<div class="toggle">
+											<label>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</label>
+											<div class="toggle-content">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Toggles -->
+
+						</div>
+						<!-- /RIGHT -->
+
+					</div>
+
+
+					<!-- NAVBARS -->
+					<div class="navbar navbar-default">
+						
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#">Brand</a>
+						</div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li class="active">
+									<a href="#">Link</a>
+								</li>
+								<li>
+									<a href="#">Link</a>
+								</li>
+							</ul>
+							<form class="navbar-form navbar-left" role="search">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Search">
+								</div>
+								<button type="submit" class="btn btn-default">
+									Submit
+								</button>
+							</form>
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a href="#">Link</a>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+									<ul class="dropdown-menu" role="menu">
+										<li>
+											<a href="#">Action</a>
+										</li>
+										<li>
+											<a href="#">Another action</a>
+										</li>
+										<li>
+											<a href="#">Something else here</a>
+										</li>
+										<li class="divider"></li>
+										<li>
+											<a href="#">Separated link</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div><!-- /.navbar-collapse -->
+						
+					</div>
+
+					<!-- navbar inverse -->
+					<div class="navbar navbar-inverse">
+						
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#">Brand</a>
+						</div>
+			
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+								<ul class="nav navbar-nav">
+									<li class="active">
+										<a href="#">Link</a>
+									</li>
+				
+									<li>
+										<a href="#">Link</a>
+									</li>
+								</ul>
+			
+								<form class="navbar-form navbar-right" role="search">
+									<div class="form-group">
+										<input class="form-control" placeholder="Search" type="text">
+									</div>
+									<button class="btn btn-primary" type="submit">
+										Submit
+									</button>
+								</form>
+						</div><!-- /.navbar-collapse -->
+						
+					</div>
+					<!-- /NAVBARS -->
+
+				</div>
+			</section>
+			<!-- /MIDDLE -->
+
+		</div>
+
+
+
+	
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+
+	</body>
+</html>

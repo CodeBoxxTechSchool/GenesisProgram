@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Smarty Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+		<!-- WEB FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+	</head>
+	<!--
+		.boxed = boxed version
+	-->
+	<body>
+
+
+		<!-- WRAPPER -->
+		<div id="wrapper">
+
+			<!-- 
+				ASIDE 
+				Keep it outside of #wrapper (responsive purpose)
+			-->
+			<aside id="aside">
+				<!--
+					Always open:
+					<li class="active alays-open">
+
+					LABELS:
+						<span class="label label-danger pull-right">1</span>
+						<span class="label label-default pull-right">1</span>
+						<span class="label label-warning pull-right">1</span>
+						<span class="label label-success pull-right">1</span>
+						<span class="label label-info pull-right">1</span>
+				-->
+				<nav id="sideNav"><!-- MAIN MENU -->
+					<ul class="nav nav-list">
+						<li><!-- dashboard -->
+							<a class="dashboard" href="index.html"><!-- warning - url used by default by ajax (if eneabled) -->
+								<i class="main-icon fa fa-dashboard"></i> <span>Dashboard</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-bar-chart-o"></i> <span>Graphs</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="graphs-flot.html">Flot Charts</a></li>
+								<li><a href="graphs-morris.html">Morris Charts</a></li>
+								<li><a href="graphs-inline.html">Inline Charts</a></li>
+								<li><a href="graphs-chartjs.html">Chart.js</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-table"></i> <span>Tables</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="tables-bootstrap.html">Bootstrap Tables</a></li>
+								<li><a href="tables-jqgrid.html">jQuery Grid</a></li>
+								<li><a href="tables-footable.html">jQuery Footable</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Datatables
+									</a>
+									<ul>
+										<li><a href="tables-datatable-managed.html">Managed Datatables</a></li>
+										<li><a href="tables-datatable-editable.html">Editable Datatables</a></li>
+										<li><a href="tables-datatable-advanced.html">Advanced Datatables</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-pencil-square-o"></i> <span>Forms</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="form-elements.html">Smarty Elements</a></li>
+								<li><a href="form-masked-inputs.html">Masked Inputs</a></li>
+								<li><a href="form-pickers.html">Pickers</a></li>
+								<li><a href="form-ui-sliders.html">UI Sliders</a></li>
+								<li><a href="form-validation.html">Validation Form</a></li>
+								<li><a href="form-html-editors.html">Html Editors</a></li>
+								<li><a href="form-autosuggest.html">Autosuggest</a></li>
+								<li><a href="form-x-editable.html">Form X-Editable</a></li>
+								<li><a href="form-dropzone.html">Dropzone File Upload</a></li>
+							</ul>
+						</li>
+						<li class="active">
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-gears"></i> <span>UI Features</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="ui-portlets.html">Portlets</a></li>
+								<li><a href="ui-buttons.html">Buttons</a></li>
+								<li class="active">
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Icons
+									</a>
+									<ul>
+										<li><a href="ui-icons-fontawsome.html">Fontawsome</a></li>
+										<li class="active"><a href="ui-icons-etline.html">Et-Line Icons</a></li>
+										<li><a href="ui-icons-glyphicons.html">Glyph Icons</a></li>
+										<li><a href="ui-icons-flags.html">Flags</a></li>
+									</ul>
+								</li>
+								<li><a href="ui-alerts-dialogs.html">Alerts &amp; Dialogs</a></li>
+								<li><a href="ui-tabs-acordion-navs.html">Tabs, Acordion &amp; Navs</a></li>
+								<li><a href="ui-knob.html">Knob Circles</a></li>
+								<li><a href="ui-nestable.html">Nestable List</a></li>
+								<li><a href="ui-toastr.html">Toastr Notifications</a></li>
+								<li><a href="ui-modals.html">Modals</a></li>
+								<li><a href="ui-grid.html">Grid</a></li>
+								<li><a href="ui-google-maps.html">Google Maps</a></li>
+								<li><a href="ui-vector-maps.html">Vector Maps</a></li>
+								<li><a href="ui-essentials.html">Essentials</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										<i class="fa fa-folder-open"></i>
+										Deep Navigation
+									</a>
+									<!-- 3rd Level -->
+									<ul>
+										<li>
+											<a href="#">
+												3rd Level
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-menu-arrow pull-right"></i>
+												<i class="fa fa-folder-open"></i>
+												4rd Level
+											</a>
+											<!-- 4th Level -->
+											<ul>
+												<li>
+													<a href="#">
+														4th Level
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-menu-arrow pull-right"></i>
+														<i class="fa fa-folder-open"></i>
+														5th Level
+													</a>
+													<!-- 5th Level -->
+													<ul>
+														<li>
+															<a href="#">
+																5th level
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<i class="fa fa-menu-arrow pull-right"></i>
+																<i class="fa fa-folder-open"></i>
+																6th level
+															</a>
+															<!-- 6th Level -->
+															<ul>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+															</ul><!-- /6th Level -->
+														</li>
+													</ul><!-- /5th Level -->
+												</li>
+											</ul><!-- /4th Level -->
+										</li>
+									</ul><!-- /3rd Level -->
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-book"></i> <span>Pages</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="page-invoice.html">Invoice</a></li>
+								<li><a href="page-login.html">Login</a></li>
+								<li><a href="page-register.html">Register</a></li>
+								<li><a href="page-lock.html">Lock Screen</a></li>
+								<li><a href="page-forum.html">Forum</a></li>
+								<li><a href="page-404.html">Error 404</a></li>
+								<li><a href="page-500.html">Error 500</a></li>
+								<li><a href="page-pricing.html">Pricing Table</a></li>
+								<li><a href="page-search.html">Search Result</a></li>
+								<li><a href="page-sidebar.html">Sidebar Page</a></li>
+								<li><a href="page-user-profile.html">User Profile</a></li>
+								<li><a href="page-blank-1.html">Blank Page</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+					</ul>
+
+					<!-- SECOND MAIN LIST -->
+					<h3>MORE</h3>
+					<ul class="nav nav-list">
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+						<li>
+							<a href="../../HTML_BS4/start.html">
+								<i class="main-icon fa fa-link"></i>
+								<span class="label label-danger pull-right">PRO</span> <span>Frontend</span>
+							</a>
+						</li>
+					</ul>
+
+				</nav>
+
+				<span id="asidebg"><!-- aside fixed background --></span>
+			</aside>
+			<!-- /ASIDE -->
+
+
+			<!-- HEADER -->
+			<header id="header">
+
+				<!-- Mobile Button -->
+				<button id="mobileMenuBtn"></button>
+
+				<!-- Logo -->
+				<span class="logo pull-left">
+					<img src="assets/images/logo_light.png" alt="admin panel" height="35" />
+				</span>
+
+				<form method="get" action="page-search.html" class="search pull-left hidden-xs">
+					<input type="text" class="form-control" name="k" placeholder="Search for something..." />
+				</form>
+
+				<nav>
+
+					<!-- OPTIONS LIST -->
+					<ul class="nav pull-right">
+
+						<!-- USER OPTIONS -->
+						<li class="dropdown pull-left">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+								<img class="user-avatar" alt="" src="assets/images/noavatar.jpg" height="34" /> 
+								<span class="user-name">
+									<span class="hidden-xs">
+										John Doe <i class="fa fa-angle-down"></i>
+									</span>
+								</span>
+							</a>
+							<ul class="dropdown-menu hold-on-click">
+								<li><!-- my calendar -->
+									<a href="calendar.html"><i class="fa fa-calendar"></i> Calendar</a>
+								</li>
+								<li><!-- my inbox -->
+									<a href="#"><i class="fa fa-envelope"></i> Inbox
+										<span class="pull-right label label-default">0</span>
+									</a>
+								</li>
+								<li><!-- settings -->
+									<a href="page-user-profile.html"><i class="fa fa-cogs"></i> Settings</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li><!-- lockscreen -->
+									<a href="page-lock.html"><i class="fa fa-lock"></i> Lock Screen</a>
+								</li>
+								<li><!-- logout -->
+									<a href="page-login.html"><i class="fa fa-power-off"></i> Log Out</a>
+								</li>
+							</ul>
+						</li>
+						<!-- /USER OPTIONS -->
+
+					</ul>
+					<!-- /OPTIONS LIST -->
+
+				</nav>
+
+			</header>
+			<!-- /HEADER -->
+
+
+			<!-- 
+				MIDDLE 
+			-->
+			<section id="middle">
+
+
+				<!-- page title -->
+				<header id="page-header">
+					<h1>Et Line</h1>
+					<ol class="breadcrumb">
+						<li><a href="#">UI</a></li>
+						<li><a href="#">Icons</a></li>
+						<li class="active">Et Line</li>
+					</ol>
+				</header>
+				<!-- /page title -->
+
+
+				<div id="content" class="padding-20">
+
+					<!-- Panel Default -->
+					<div id="panel-1" class="panel panel-default">
+
+						<div class="panel-heading">
+
+							<span class="elipsis"><!-- panel title -->
+								<strong>Et Line</strong>
+							</span>
+
+							<!-- right options -->
+							<ul class="options pull-right list-inline">
+								<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+								<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+								<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+							</ul>
+							<!-- /right options -->
+
+						</div>
+
+						<!-- panel content -->
+						<div class="panel-body">
+
+							<!-- inline search -->
+							<div class="well well-sm">
+								<div class="input-group fullwidth">
+									<input class="form-control input-lg" type="text" id="inline-search" placeholder="Icon search...">
+									<span class="input-group-addon"><i class="fa fa-lg fa-search"></i></span>
+								</div>
+							</div>
+							<!-- /inline search -->
+
+							<hr />
+
+							<div class="et-line-icons">
+								<ul class="list-unstyled clearfix margin-top-60">
+									
+									<li><i class="et-mobile"></i><span>et-mobile</span></li>
+									<li><i class="et-laptop"></i><span>et-laptop</span></li>
+									<li><i class="et-desktop"></i><span>et-desktop</span></li>
+									<li><i class="et-tablet"></i><span>et-tablet</span></li>
+									<li><i class="et-phone"></i><span>et-phone</span></li>
+									<li><i class="et-document"></i><span>et-document</span></li>
+									<li><i class="et-documents"></i><span>et-documents</span></li>
+									<li><i class="et-search"></i><span>et-search</span></li>
+									<li><i class="et-clipboard"></i><span>et-clipboard</span></li>
+									<li><i class="et-newspaper"></i><span>et-newspaper</span></li>
+									<li><i class="et-notebook"></i><span>et-notebook</span></li>
+									<li><i class="et-book-open"></i><span>et-book-open</span></li>
+									<li><i class="et-browser"></i><span>et-browser</span></li>
+									<li><i class="et-calendar"></i><span>et-calendar</span></li>
+									<li><i class="et-presentation"></i><span>et-presentation</span></li>
+									<li><i class="et-picture"></i><span>et-picture</span></li>
+									<li><i class="et-pictures"></i><span>et-pictures</span></li>
+									<li><i class="et-video"></i><span>et-video</span></li>
+									<li><i class="et-camera"></i><span>et-camera</span></li>
+									<li><i class="et-printer"></i><span>et-printer</span></li>
+									<li><i class="et-toolbox"></i><span>et-toolbox</span></li>
+									<li><i class="et-briefcase"></i><span>et-briefcase</span></li>
+									<li><i class="et-wallet"></i><span>et-wallet</span></li>
+									<li><i class="et-gift"></i><span>et-gift</span></li>
+									<li><i class="et-bargraph"></i><span>et-bargraph</span></li>
+									<li><i class="et-grid"></i><span>et-grid</span></li>
+									<li><i class="et-expand"></i><span>et-expand</span></li>
+									<li><i class="et-focus"></i><span>et-focus</span></li>
+									<li><i class="et-edit"></i><span>et-edit</span></li>
+									<li><i class="et-adjustments"></i><span>et-adjustments</span></li>
+									<li><i class="et-ribbon"></i><span>et-ribbon</span></li>
+									<li><i class="et-hourglass"></i><span>et-hourglass</span></li>
+									<li><i class="et-lock"></i><span>et-lock</span></li>
+									<li><i class="et-megaphone"></i><span>et-megaphone</span></li>
+									<li><i class="et-shield"></i><span>et-shield</span></li>
+									<li><i class="et-trophy"></i><span>et-trophy</span></li>
+									<li><i class="et-flag"></i><span>et-flag</span></li>
+									<li><i class="et-map"></i><span>et-map</span></li>
+									<li><i class="et-puzzle"></i><span>et-puzzle</span></li>
+									<li><i class="et-basket"></i><span>et-basket</span></li>
+									<li><i class="et-envelope"></i><span>et-envelope</span></li>
+									<li><i class="et-streetsign"></i><span>et-streetsign</span></li>
+									<li><i class="et-telescope"></i><span>et-telescope</span></li>
+									<li><i class="et-gears"></i><span>et-gears</span></li>
+									<li><i class="et-key"></i><span>et-key</span></li>
+									<li><i class="et-paperclip"></i><span>et-paperclip</span></li>
+									<li><i class="et-attachment"></i><span>et-attachment</span></li>
+									<li><i class="et-pricetags"></i><span>et-pricetags</span></li>
+									<li><i class="et-lightbulb"></i><span>et-lightbulb</span></li>
+									<li><i class="et-layers"></i><span>et-layers</span></li>
+									<li><i class="et-pencil"></i><span>et-pencil</span></li>
+									<li><i class="et-tools"></i><span>et-tools</span></li>
+									<li><i class="et-tools-2"></i><span>et-tools-2</span></li>
+									<li><i class="et-scissors"></i><span>et-scissors</span></li>
+									<li><i class="et-paintbrush"></i><span>et-paintbrush</span></li>
+									<li><i class="et-magnifying-glass"></i><span>et-magnifying-glass</span></li>
+									<li><i class="et-circle-compass"></i><span>et-circle-compass</span></li>
+									<li><i class="et-linegraph"></i><span>et-linegraph</span></li>
+									<li><i class="et-mic"></i><span>et-mic</span></li>
+									<li><i class="et-strategy"></i><span>et-strategy</span></li>
+									<li><i class="et-beaker"></i><span>et-beaker</span></li>
+									<li><i class="et-caution"></i><span>et-caution</span></li>
+									<li><i class="et-recycle"></i><span>et-recycle</span></li>
+									<li><i class="et-anchor"></i><span>et-anchor</span></li>
+									<li><i class="et-profile-male"></i><span>et-profile-male</span></li>
+									<li><i class="et-profile-female"></i><span>et-profile-female</span></li>
+									<li><i class="et-bike"></i><span>et-bike</span></li>
+									<li><i class="et-wine"></i><span>et-wine</span></li>
+									<li><i class="et-hotairballoon"></i><span>et-hotairballoon</span></li>
+									<li><i class="et-globe"></i><span>et-globe</span></li>
+									<li><i class="et-genius"></i><span>et-genius</span></li>
+									<li><i class="et-map-pin"></i><span>et-map-pin</span></li>
+									<li><i class="et-dial"></i><span>et-dial</span></li>
+									<li><i class="et-chat"></i><span>et-chat</span></li>
+									<li><i class="et-heart"></i><span>et-heart</span></li>
+									<li><i class="et-cloud"></i><span>et-cloud</span></li>
+									<li><i class="et-upload"></i><span>et-upload</span></li>
+									<li><i class="et-download"></i><span>et-download</span></li>
+									<li><i class="et-target"></i><span>et-target</span></li>
+									<li><i class="et-hazardous"></i><span>et-hazardous</span></li>
+									<li><i class="et-piechart"></i><span>et-piechart</span></li>
+									<li><i class="et-speedometer"></i><span>et-speedometer</span></li>
+									<li><i class="et-global"></i><span>et-global</span></li>
+									<li><i class="et-compass"></i><span>et-compass</span></li>
+									<li><i class="et-lifesaver"></i><span>et-lifesaver</span></li>
+									<li><i class="et-clock"></i><span>et-clock</span></li>
+									<li><i class="et-aperture"></i><span>et-aperture</span></li>
+									<li><i class="et-quote"></i><span>et-quote</span></li>
+									<li><i class="et-scope"></i><span>et-scope</span></li>
+									<li><i class="et-alarmclock"></i><span>et-alarmclock</span></li>
+									<li><i class="et-refresh"></i><span>et-refresh</span></li>
+									<li><i class="et-happy"></i><span>et-happy</span></li>
+									<li><i class="et-sad"></i><span>et-sad</span></li>
+									<li><i class="et-facebook"></i><span>et-facebook</span></li>
+									<li><i class="et-twitter"></i><span>et-twitter</span></li>
+									<li><i class="et-googleplus"></i><span>et-googleplus</span></li>
+									<li><i class="et-rss"></i><span>et-rss</span></li>
+									<li><i class="et-tumblr"></i><span>et-tumblr</span></li>
+									<li><i class="et-linkedin"></i><span>et-linkedin</span></li>
+									<li><i class="et-dribbble"></i><span>et-dribbble</span></li>
+										
+								</ul>
+
+<pre class="margin-top-80">
+Usage:
+&#60;i class="et-genius"&#62;&#60;/i&#62;
+
+Output:  <i class="fsize15 et-genius"></i>
+
+Note: Click the icon to copy the class
+</pre>
+							</div>
+
+						</div>
+						<!-- /panel content -->
+
+					</div>
+					<!-- /Panel Default -->
+
+				</div>
+			</section>
+			<!-- /MIDDLE -->
+
+		</div>
+
+
+
+	
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<script type="text/javascript">/* <![CDATA[ */
+
+			/*
+				Icon prompt
+				<span class="et-line-box"><i class="icon-compass"></i>icon-compass</span>
+			*/
+			jQuery(".et-line-icons li").bind("click", function(e) {
+				if(!jQuery(this).hasClass('external')) {
+					window.prompt ("Copy to clipboard: Ctrl+C, Enter/Esc", jQuery("span", this).html());
+					e.preventDefault();
+				}
+			});
+		
+			/* 
+				Inline Search 
+			*/
+			jQuery("#inline-search").keyup(function() {
+				var keywords = jQuery.trim(this.value);
+				if (keywords == "") {
+					_unfilter();
+				}
+				else {
+					_filter(keywords);
+				}
+			});
+
+			function _filter(keywords) {
+				jQuery(".et-line-icons ul li").hide(); 
+				jQuery('.et-line-icons ul li i[class*="'+keywords+'"]').parent().show();
+			}
+
+			function _unfilter() {
+				jQuery(".et-line-icons ul li").show()
+			}
+
+		/* ]]> */</script>
+
+	</body>
+</html>

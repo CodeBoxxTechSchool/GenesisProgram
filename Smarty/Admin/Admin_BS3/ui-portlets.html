@@ -1,0 +1,1134 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Smarty Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+		<!-- WEB FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+	</head>
+	<!--
+		.boxed = boxed version
+	-->
+	<body>
+
+
+		<!-- WRAPPER -->
+		<div id="wrapper">
+
+			<!-- 
+				ASIDE 
+				Keep it outside of #wrapper (responsive purpose)
+			-->
+			<aside id="aside">
+				<!--
+					Always open:
+					<li class="active alays-open">
+
+					LABELS:
+						<span class="label label-danger pull-right">1</span>
+						<span class="label label-default pull-right">1</span>
+						<span class="label label-warning pull-right">1</span>
+						<span class="label label-success pull-right">1</span>
+						<span class="label label-info pull-right">1</span>
+				-->
+				<nav id="sideNav"><!-- MAIN MENU -->
+					<ul class="nav nav-list">
+						<li><!-- dashboard -->
+							<a class="dashboard" href="index.html"><!-- warning - url used by default by ajax (if eneabled) -->
+								<i class="main-icon fa fa-dashboard"></i> <span>Dashboard</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-bar-chart-o"></i> <span>Graphs</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="graphs-flot.html">Flot Charts</a></li>
+								<li><a href="graphs-morris.html">Morris Charts</a></li>
+								<li><a href="graphs-inline.html">Inline Charts</a></li>
+								<li><a href="graphs-chartjs.html">Chart.js</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-table"></i> <span>Tables</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="tables-bootstrap.html">Bootstrap Tables</a></li>
+								<li><a href="tables-jqgrid.html">jQuery Grid</a></li>
+								<li><a href="tables-footable.html">jQuery Footable</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Datatables
+									</a>
+									<ul>
+										<li><a href="tables-datatable-managed.html">Managed Datatables</a></li>
+										<li><a href="tables-datatable-editable.html">Editable Datatables</a></li>
+										<li><a href="tables-datatable-advanced.html">Advanced Datatables</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-pencil-square-o"></i> <span>Forms</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="form-elements.html">Smarty Elements</a></li>
+								<li><a href="form-masked-inputs.html">Masked Inputs</a></li>
+								<li><a href="form-pickers.html">Pickers</a></li>
+								<li><a href="form-ui-sliders.html">UI Sliders</a></li>
+								<li><a href="form-validation.html">Validation Form</a></li>
+								<li><a href="form-html-editors.html">Html Editors</a></li>
+								<li><a href="form-autosuggest.html">Autosuggest</a></li>
+								<li><a href="form-x-editable.html">Form X-Editable</a></li>
+								<li><a href="form-dropzone.html">Dropzone File Upload</a></li>
+							</ul>
+						</li>
+						<li class="active">
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-gears"></i> <span>UI Features</span>
+							</a>
+							<ul><!-- submenus -->
+								<li class="active"><a href="ui-portlets.html">Portlets</a></li>
+								<li><a href="ui-buttons.html">Buttons</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Icons
+									</a>
+									<ul>
+										<li><a href="ui-icons-fontawsome.html">Fontawsome</a></li>
+										<li><a href="ui-icons-etline.html">Et-Line Icons</a></li>
+										<li><a href="ui-icons-glyphicons.html">Glyph Icons</a></li>
+										<li><a href="ui-icons-flags.html">Flags</a></li>
+									</ul>
+								</li>
+								<li><a href="ui-alerts-dialogs.html">Alerts &amp; Dialogs</a></li>
+								<li><a href="ui-tabs-acordion-navs.html">Tabs, Acordion &amp; Navs</a></li>
+								<li><a href="ui-knob.html">Knob Circles</a></li>
+								<li><a href="ui-nestable.html">Nestable List</a></li>
+								<li><a href="ui-toastr.html">Toastr Notifications</a></li>
+								<li><a href="ui-modals.html">Modals</a></li>
+								<li><a href="ui-grid.html">Grid</a></li>
+								<li><a href="ui-google-maps.html">Google Maps</a></li>
+								<li><a href="ui-vector-maps.html">Vector Maps</a></li>
+								<li><a href="ui-essentials.html">Essentials</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										<i class="fa fa-folder-open"></i>
+										Deep Navigation
+									</a>
+									<!-- 3rd Level -->
+									<ul>
+										<li>
+											<a href="#">
+												3rd Level
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-menu-arrow pull-right"></i>
+												<i class="fa fa-folder-open"></i>
+												4rd Level
+											</a>
+											<!-- 4th Level -->
+											<ul>
+												<li>
+													<a href="#">
+														4th Level
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-menu-arrow pull-right"></i>
+														<i class="fa fa-folder-open"></i>
+														5th Level
+													</a>
+													<!-- 5th Level -->
+													<ul>
+														<li>
+															<a href="#">
+																5th level
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<i class="fa fa-menu-arrow pull-right"></i>
+																<i class="fa fa-folder-open"></i>
+																6th level
+															</a>
+															<!-- 6th Level -->
+															<ul>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+															</ul><!-- /6th Level -->
+														</li>
+													</ul><!-- /5th Level -->
+												</li>
+											</ul><!-- /4th Level -->
+										</li>
+									</ul><!-- /3rd Level -->
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-book"></i> <span>Pages</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="page-invoice.html">Invoice</a></li>
+								<li><a href="page-login.html">Login</a></li>
+								<li><a href="page-register.html">Register</a></li>
+								<li><a href="page-lock.html">Lock Screen</a></li>
+								<li><a href="page-forum.html">Forum</a></li>
+								<li><a href="page-404.html">Error 404</a></li>
+								<li><a href="page-500.html">Error 500</a></li>
+								<li><a href="page-pricing.html">Pricing Table</a></li>
+								<li><a href="page-search.html">Search Result</a></li>
+								<li><a href="page-sidebar.html">Sidebar Page</a></li>
+								<li><a href="page-user-profile.html">User Profile</a></li>
+								<li><a href="page-blank-1.html">Blank Page</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+					</ul>
+
+					<!-- SECOND MAIN LIST -->
+					<h3>MORE</h3>
+					<ul class="nav nav-list">
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+						<li>
+							<a href="../../HTML_BS4/start.html">
+								<i class="main-icon fa fa-link"></i>
+								<span class="label label-danger pull-right">PRO</span> <span>Frontend</span>
+							</a>
+						</li>
+					</ul>
+
+				</nav>
+
+				<span id="asidebg"><!-- aside fixed background --></span>
+			</aside>
+			<!-- /ASIDE -->
+
+
+			<!-- HEADER -->
+			<header id="header">
+
+				<!-- Mobile Button -->
+				<button id="mobileMenuBtn"></button>
+
+				<!-- Logo -->
+				<span class="logo pull-left">
+					<img src="assets/images/logo_light.png" alt="admin panel" height="35" />
+				</span>
+
+				<form method="get" action="page-search.html" class="search pull-left hidden-xs">
+					<input type="text" class="form-control" name="k" placeholder="Search for something..." />
+				</form>
+
+				<nav>
+
+					<!-- OPTIONS LIST -->
+					<ul class="nav pull-right">
+
+						<!-- USER OPTIONS -->
+						<li class="dropdown pull-left">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+								<img class="user-avatar" alt="" src="assets/images/noavatar.jpg" height="34" /> 
+								<span class="user-name">
+									<span class="hidden-xs">
+										John Doe <i class="fa fa-angle-down"></i>
+									</span>
+								</span>
+							</a>
+							<ul class="dropdown-menu hold-on-click">
+								<li><!-- my calendar -->
+									<a href="calendar.html"><i class="fa fa-calendar"></i> Calendar</a>
+								</li>
+								<li><!-- my inbox -->
+									<a href="#"><i class="fa fa-envelope"></i> Inbox
+										<span class="pull-right label label-default">0</span>
+									</a>
+								</li>
+								<li><!-- settings -->
+									<a href="page-user-profile.html"><i class="fa fa-cogs"></i> Settings</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li><!-- lockscreen -->
+									<a href="page-lock.html"><i class="fa fa-lock"></i> Lock Screen</a>
+								</li>
+								<li><!-- logout -->
+									<a href="page-login.html"><i class="fa fa-power-off"></i> Log Out</a>
+								</li>
+							</ul>
+						</li>
+						<!-- /USER OPTIONS -->
+
+					</ul>
+					<!-- /OPTIONS LIST -->
+
+				</nav>
+
+			</header>
+			<!-- /HEADER -->
+
+
+			<!-- 
+				MIDDLE 
+			-->
+			<section id="middle">
+
+
+				<!-- page title -->
+				<header id="page-header">
+					<h1>Portlets</h1>
+					<ol class="breadcrumb">
+						<li><a href="#">UI</a></li>
+						<li class="active">Portlets</li>
+					</ol>
+				</header>
+				<!-- /page title -->
+
+
+				<div id="content" class="padding-20">
+
+					<div class="row">
+
+						<!-- LEFT -->
+						<div class="col-md-6">
+						
+							<!-- Default -->
+							<div id="panel-misc-portlet-l1" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Default</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									The default portlet - 3 buttons by default: collapsible, fullscreen and remove portlet
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Default -->
+
+							<!-- Tabs Right -->
+							<div id="panel-misc-portlet-l2" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Tabs Right</strong>
+									</span>
+
+									<!-- tabs nav -->
+									<ul class="nav nav-tabs pull-right">
+										<li class="active"><!-- TAB 1 -->
+											<a href="#ttab1_nobg" data-toggle="tab">Tab 1 <span class="label label-danger">label</span></a>
+										</li>
+										<li class=""><!-- TAB 2 -->
+											<a href="#ttab2_nobg" data-toggle="tab"> Tab 2 <span class="caret"></span></a>
+										</li>
+									</ul>
+									<!-- /tabs nav -->
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+										<!-- tabs content -->
+										<div class="tab-content transparent">
+
+											<div id="ttab1_nobg" class="tab-pane active"><!-- TAB 1 CONTENT -->
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+											</div><!-- /TAB 1 CONTENT -->
+
+											<div id="ttab2_nobg" class="tab-pane"><!-- TAB 2 CONTENT -->
+												<p>Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											</div><!-- /TAB 1 CONTENT -->
+
+										</div>
+										<!-- /tabs content -->
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Tabs Right -->
+
+							<!-- No Padding -->
+							<div id="panel-misc-portlet-l3" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>No Padding</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body nopadding">
+									<div class="alert alert-mini alert-success nomargin noradius noborder">
+										<button class="close" data-dismiss="alert">×</button>
+										<p><strong>portlet Alert</strong> with no panel-body padding</p>
+									</div>
+
+									<div class="padding-15">
+										The portlet comes default with 15px <code>.panel-body</code>. You can remove padding by adding <code>.nopadding</code> class.
+									</div>
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /No Padding -->
+
+							<!-- Buttons -->
+							<div id="panel-misc-portlet-l4" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Buttons</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right relative list-unstyled">
+										<li><a href="#" class="btn btn-warning btn-xs white">No icon</a></li>
+										<li><a href="#" class="btn btn-primary btn-xs white"><i class="fa fa-plus"></i> Create</a></li>
+										<li><a href="#" class="btn btn-success btn-xs white"><i class="fa fa-edit"></i> Edit</a></li>
+										<li><a href="#" class="btn btn-danger btn-xs white"><i class="fa fa-times"></i> Delete</a></li>
+									</ul>
+									<!-- /right options -->
+
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Buttons -->
+
+							<!-- Dropdowns -->
+							<div id="panel-misc-portlet-l5" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Dropdowns</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right relative list-unstyled">
+										<li class="hidden-xs">
+											<a href="#" class="opt dropdown-toggle" data-toggle="dropdown"><span class="label label-disabled">Filter <span class="caret"></span></span></a>
+											<ul class="dropdown-menu hold-on-click pull-right" role="menu">
+												<li>
+													<label class="checkbox">
+														<input type="checkbox" value="1">
+														<i></i> Checkbox 1
+													</label>
+												</li>
+												<li>
+													<label class="checkbox">
+														<input type="checkbox" value="1">
+														<i></i> Checkbox 2
+													</label>
+												</li>
+												<li>
+													<label class="radio">
+														<input name="radio" type="radio" value="1">
+														<i></i> Radio 1
+													</label>
+												</li>
+												<li>
+													<label class="radio">
+														<input name="radio" type="radio" value="1">
+														<i></i> Radio 2
+													</label>
+												</li>
+											</ul>
+										</li>
+										<li class="hidden-xs">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-success">Status <span class="caret"></span></span></a>
+											<ul class="dropdown-menu pull-right" role="menu">
+												<li><a data-portlet="color_status_switch" data-action="path_to_chat.php?status=online" data-method="GET" href="#label-success"><i class="fa fa-dot-circle-o color-green"></i> Online</a></li>
+												<li><a data-portlet="color_status_switch" data-action="path_to_chat.php?status=busy" data-method="GET" href="#label-danger"><i class="fa fa-dot-circle-o color-red"></i> Busy</a></li>
+												<li><a data-portlet="color_status_switch" data-action="path_to_chat.php?status=away" data-method="GET" href="#label-warning"><i class="fa fa-dot-circle-o color-yellow"></i> Away</a></li>
+												<li><a data-portlet="color_status_switch" data-action="path_to_chat.php?status=offline" data-method="GET" href="#label-disabled"><i class="fa fa-dot-circle-o color-gray"></i> Offline</a></li>
+											</ul>
+										</li>
+									</ul>
+									<!-- /right options -->
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Dropdowns -->
+
+							<!-- Select -->
+							<div id="panel-misc-portlet-l6" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Select</strong>
+									</span>
+
+									<label class="pull-right"><!-- PER PAGE SELECTOR -->
+										<select class="form-control pointer" id="change-page-size">
+											<option value="2">2 / page</option>
+											<option value="3">3 / page</option>
+											<option value="5">5 / page</option>
+											<option value="10" selected="selected">10 / page</option>
+											<option value="15">15 / page</option>
+											<option value="20">20 / page</option>
+										</select>
+									</label><!-- /PER PAGE SELECTOR -->
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.</p>
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Select -->
+
+							<!-- Switch -->
+							<div id="panel-misc-portlet-l7" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Switch</strong>
+									</span>
+
+									<!-- right options -->
+									<div class="sky-form pull-right">
+										<label class="switch switch switch-round switch-default  nopadding">
+											<input type="checkbox" checked="">
+											<span class="switch-label" data-on="YES" data-off="NO"></span>
+										</label>
+									</div>
+									<!-- /right options -->
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									<!-- 
+										SLIMSCROLL PARAMS
+
+										data-always-visible="true" 	- true = show only on mouse over
+										data-rail-visible="true" 	- the bar trace
+										data-railOpacity="1" 		- opacity - default 0.01
+										data-height="270" 			- scrollable area height - default is auto
+
+										data-handle-color="#2E363F" - scollbar color (default: #2E363F)
+										data-rail-color="#eaeaea"	- rail color	(default: #eaeaea)
+									-->
+									<div class="slimscroll" data-always-visible="true" data-rail-visible="true" data-railOpacity="1" data-height="200">
+										<p>
+											<b>Slimscroll - nothing to do with the switch &ndash; demo purpose only!</b><br />
+											Lorem ipsum dolor sit amet. Etharums your template left tooltip dolores nemis omnis fugats vitaes you this template amets sumon. Sed right tooltip perspiciatis unde omnis iste you top tooltip this template voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo bottom tooltip template et quasi architecto beatae vitae dicta sunt explicabo.
+										</p>
+										<p>
+											Lorem ipsum dolor sit amet. Etharums your template 
+											<a data-toggle="tooltip" data-placement="left" data-original-title="Left tooltip" href="#"><b>left tooltip</b></a> dolores nemis omnis fugats vitaes you this template amets sumon. Sed 
+											<a data-toggle="tooltip" data-placement="right" data-original-title="Right tooltip" href="#"><b>right tooltip</b></a> perspiciatis unde omnis iste you 
+											<a data-toggle="tooltip" data-placement="top" data-original-title="Top tooltip" href="#"><b>top tooltip</b></a> this template voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo 
+											<a data-toggle="tooltip" data-placement="bottom" data-original-title="Bottom tooltip" href="#"><b>bottom tooltip</b></a> template et quasi architecto beatae vitae dicta sunt explicabo.
+										</p>
+										<p>Lorem ipsum dolor sit amet. Etharums your template left tooltip dolores nemis omnis fugats vitaes you this template amets sumon. Sed right tooltip perspiciatis unde omnis iste you top tooltip this template voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo bottom tooltip template et quasi architecto beatae vitae dicta sunt explicabo.</p>
+										<p>Lorem ipsum dolor sit amet. Etharums your template left tooltip dolores nemis omnis fugats vitaes you this template amets sumon. Sed right tooltip perspiciatis unde omnis iste you top tooltip this template voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo bottom tooltip template et quasi architecto beatae vitae dicta sunt explicabo.</p>
+										<p>Lorem ipsum dolor sit amet. Etharums your template left tooltip dolores nemis omnis fugats vitaes you this template amets sumon. Sed right tooltip perspiciatis unde omnis iste you top tooltip this template voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo bottom tooltip template et quasi architecto beatae vitae dicta sunt explicabo.</p>
+									</div>
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Switch -->
+
+						</div>
+
+						<!-- RIGHT -->
+						<div class="col-md-6">
+						
+							<!-- Collapsible -->
+							<div id="panel-misc-portlet-r1" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Collapsible</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+									</ul>
+									<!-- /right options -->
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									Collapsible portlet only - no special code needed!
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Collapsible -->
+
+							<!-- Tabs Left -->
+							<div id="panel-misc-portlet-r2" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<!-- tabs nav -->
+									<ul class="nav nav-tabs pull-left">
+										<li class="active"><!-- TAB 1 -->
+											<a href="#ttab1l_nobg" data-toggle="tab">Tab 1 <span class="label label-danger">label</span></a>
+										</li>
+										<li class=""><!-- TAB 2 -->
+											<a href="#ttab2l_nobg" data-toggle="tab"> Tab 2 <span class="caret"></span></a>
+										</li>
+									</ul>
+									<!-- /tabs nav -->
+
+									&nbsp; <!-- needed if title missing . avoid using .clearfix -->
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+									</ul>
+									<!-- /right options -->
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+										<!-- tabs content -->
+										<div class="tab-content transparent">
+
+											<div id="ttab1l_nobg" class="tab-pane active"><!-- TAB 1 CONTENT -->
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+											</div><!-- /TAB 1 CONTENT -->
+
+											<div id="ttab2l_nobg" class="tab-pane"><!-- TAB 2 CONTENT -->
+												<p>Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											</div><!-- /TAB 1 CONTENT -->
+
+										</div>
+										<!-- /tabs content -->
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Tabs Left -->
+
+							<!-- Remove -->
+							<div id="panel-misc-portlet-r3" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Remove</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right relative list-unstyled">
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									Remove portlet only - no special code needed!
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Remove -->
+
+							<!-- Fullscreen -->
+							<div id="panel-misc-portlet-r4" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Fullscreen</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right relative list-unstyled">
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+									</ul>
+									<!-- /right options -->
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									Fullscreen portlet only - no special code needed!
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Fullscreen -->
+
+							<!-- Pagination -->
+							<div id="panel-misc-portlet-r5" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Pagination</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="pagination pagination-sm pull-right">
+										<li class="disabled"><a href="#">Prev</a></li>
+										<li class="active"><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a href="#">Next</a></li>
+									</ul>
+									<!-- /right options -->
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									Collapsible portlet only - no special code needed!
+
+								</div>
+								<!-- /panel content -->
+
+								<!-- panel footer -->
+								<div class="panel-footer clearfix">
+									<a class="btn btn-primary pull-right btn-sm nomargin-top nomargin-bottom" href="#">Next</a>
+									<a class="btn btn-primary pull-right btn-sm nomargin-top nomargin-bottom disabled" href="#">Prev</a>
+								</div>
+								<!-- /panel footer -->
+
+							</div>
+							<!-- /Pagination -->
+
+							<!-- Input -->
+							<div id="panel-misc-portlet-r6" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Input</strong>
+									</span>
+
+									<!-- right options -->
+									<div class="pull-right">
+										<form method="get" action="#" class="fancy-form">
+											<i class="fa fa-user"></i>
+
+											<input type="tel" class="form-control" placeholder="Fancy Input + Tooltip">
+
+											<!-- tooltip - optional, bootstrap tooltip can be used instead -->
+											<span class="fancy-tooltip top-left"> <!-- positions: .top-left | .top-right -->
+												<em>I am a tooltip!</em>
+											</span>
+										</form>
+									</div>
+									<!-- /right options -->
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									Collapsible portlet only - no special code needed!
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Input -->
+
+							<!-- Progress Bar -->
+							<div id="panel-misc-portlet-r7" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Progress Bar</strong>
+									</span>
+
+									<!-- right options -->
+									<div class="pull-right" style="width:150px;">
+										<div class="progress progress-striped active">
+											<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">60%</div>
+										</div>
+									</div>
+									<!-- /right options -->
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									<div class="alert alert-warning">
+										portlet + bootstrap progress bar
+									</div>
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Progress Bar -->
+
+							<!-- Labels and Badges -->
+							<div id="panel-misc-portlet-r8" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Labels &amp; Badges</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right relative list-unstyled">
+										<li><span class="badge">82</span></li>
+										<li><span class="label label-danger">label</span></li>
+										<li><span class="label label-warning">39</span></li>
+									</ul>
+									<!-- /right options -->
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									Labels and Badges
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Labels and Badges -->
+
+						</div>
+
+					</div>
+
+
+					<div class="row">
+					
+						<!-- LEFT -->
+						<div class="col-md-6">
+
+							<!-- Panel Default -->
+							<div id="panel-misc-portlet-color-l1" class="panel panel-default">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Panel Default</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									Add to .panel: <code>.panel-default</code>
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Panel Default -->
+
+							<!-- Panel Warning -->
+							<div id="panel-misc-portlet-color-l2" class="panel panel-warning">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Panel Warning</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									Add to .panel: <code>.panel-warning</code>
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Panel Warning -->
+
+							<!-- Panel Danger -->
+							<div id="panel-misc-portlet-color-l3" class="panel panel-danger">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Panel Danger</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									Add to .panel: <code>.panel-danger</code>
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Panel Danger -->
+
+						</div>
+
+						<!-- RIGHT -->
+						<div class="col-md-6">
+
+							<!-- Panel Clean -->
+							<div id="panel-misc-portlet-color-r1" class="panel panel-clean">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Panel Clean</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									Add to .panel: <code>.panel-clean</code>
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Panel Clean -->
+
+							<!-- Panel Info -->
+							<div id="panel-misc-portlet-color-r2" class="panel panel-info">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Panel Info</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									Add to .panel: <code>.panel-info</code>
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Panel Info -->
+
+							<!-- Panel Primary -->
+							<div id="panel-misc-portlet-color-r3" class="panel panel-primary">
+
+								<div class="panel-heading">
+
+									<span class="elipsis"><!-- panel title -->
+										<strong>Panel Primary</strong>
+									</span>
+
+									<!-- right options -->
+									<ul class="options pull-right list-inline">
+										<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+										<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+										<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+									</ul>
+									<!-- /right options -->
+
+								</div>
+
+								<!-- panel content -->
+								<div class="panel-body">
+
+									Add to .panel: <code>.panel-primary</code>
+
+								</div>
+								<!-- /panel content -->
+
+							</div>
+							<!-- /Panel Primary -->
+
+						</div>
+					</div>
+
+
+				</div>
+			</section>
+			<!-- /MIDDLE -->
+
+		</div>
+
+
+
+	
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+
+	</body>
+</html>

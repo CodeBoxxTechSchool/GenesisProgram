@@ -1,0 +1,1048 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Smarty Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+		<!-- WEB FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+	</head>
+	<!--
+		.boxed = boxed version
+	-->
+	<body>
+
+
+		<!-- WRAPPER -->
+		<div id="wrapper">
+
+			<!-- 
+				ASIDE 
+				Keep it outside of #wrapper (responsive purpose)
+			-->
+			<aside id="aside">
+				<!--
+					Always open:
+					<li class="active alays-open">
+
+					LABELS:
+						<span class="label label-danger pull-right">1</span>
+						<span class="label label-default pull-right">1</span>
+						<span class="label label-warning pull-right">1</span>
+						<span class="label label-success pull-right">1</span>
+						<span class="label label-info pull-right">1</span>
+				-->
+				<nav id="sideNav"><!-- MAIN MENU -->
+					<ul class="nav nav-list">
+						<li><!-- dashboard -->
+							<a class="dashboard" href="index.html"><!-- warning - url used by default by ajax (if eneabled) -->
+								<i class="main-icon fa fa-dashboard"></i> <span>Dashboard</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-bar-chart-o"></i> <span>Graphs</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="graphs-flot.html">Flot Charts</a></li>
+								<li><a href="graphs-morris.html">Morris Charts</a></li>
+								<li><a href="graphs-inline.html">Inline Charts</a></li>
+								<li><a href="graphs-chartjs.html">Chart.js</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-table"></i> <span>Tables</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="tables-bootstrap.html">Bootstrap Tables</a></li>
+								<li><a href="tables-jqgrid.html">jQuery Grid</a></li>
+								<li><a href="tables-footable.html">jQuery Footable</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Datatables
+									</a>
+									<ul>
+										<li><a href="tables-datatable-managed.html">Managed Datatables</a></li>
+										<li><a href="tables-datatable-editable.html">Editable Datatables</a></li>
+										<li><a href="tables-datatable-advanced.html">Advanced Datatables</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-pencil-square-o"></i> <span>Forms</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="form-elements.html">Smarty Elements</a></li>
+								<li><a href="form-masked-inputs.html">Masked Inputs</a></li>
+								<li><a href="form-pickers.html">Pickers</a></li>
+								<li><a href="form-ui-sliders.html">UI Sliders</a></li>
+								<li><a href="form-validation.html">Validation Form</a></li>
+								<li><a href="form-html-editors.html">Html Editors</a></li>
+								<li><a href="form-autosuggest.html">Autosuggest</a></li>
+								<li><a href="form-x-editable.html">Form X-Editable</a></li>
+								<li><a href="form-dropzone.html">Dropzone File Upload</a></li>
+							</ul>
+						</li>
+						<li class="active">
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-gears"></i> <span>UI Features</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="ui-portlets.html">Portlets</a></li>
+								<li><a href="ui-buttons.html">Buttons</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Icons
+									</a>
+									<ul>
+										<li><a href="ui-icons-fontawsome.html">Fontawsome</a></li>
+										<li><a href="ui-icons-etline.html">Et-Line Icons</a></li>
+										<li><a href="ui-icons-glyphicons.html">Glyph Icons</a></li>
+										<li><a href="ui-icons-flags.html">Flags</a></li>
+									</ul>
+								</li>
+								<li><a href="ui-alerts-dialogs.html">Alerts &amp; Dialogs</a></li>
+								<li><a href="ui-tabs-acordion-navs.html">Tabs, Acordion &amp; Navs</a></li>
+								<li><a href="ui-knob.html">Knob Circles</a></li>
+								<li><a href="ui-nestable.html">Nestable List</a></li>
+								<li><a href="ui-toastr.html">Toastr Notifications</a></li>
+								<li><a href="ui-modals.html">Modals</a></li>
+								<li><a href="ui-grid.html">Grid</a></li>
+								<li><a href="ui-google-maps.html">Google Maps</a></li>
+								<li><a href="ui-vector-maps.html">Vector Maps</a></li>
+								<li class="active"><a href="ui-essentials.html">Essentials</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										<i class="fa fa-folder-open"></i>
+										Deep Navigation
+									</a>
+									<!-- 3rd Level -->
+									<ul>
+										<li>
+											<a href="#">
+												3rd Level
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-menu-arrow pull-right"></i>
+												<i class="fa fa-folder-open"></i>
+												4rd Level
+											</a>
+											<!-- 4th Level -->
+											<ul>
+												<li>
+													<a href="#">
+														4th Level
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-menu-arrow pull-right"></i>
+														<i class="fa fa-folder-open"></i>
+														5th Level
+													</a>
+													<!-- 5th Level -->
+													<ul>
+														<li>
+															<a href="#">
+																5th level
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<i class="fa fa-menu-arrow pull-right"></i>
+																<i class="fa fa-folder-open"></i>
+																6th level
+															</a>
+															<!-- 6th Level -->
+															<ul>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+															</ul><!-- /6th Level -->
+														</li>
+													</ul><!-- /5th Level -->
+												</li>
+											</ul><!-- /4th Level -->
+										</li>
+									</ul><!-- /3rd Level -->
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-book"></i> <span>Pages</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="page-invoice.html">Invoice</a></li>
+								<li><a href="page-login.html">Login</a></li>
+								<li><a href="page-register.html">Register</a></li>
+								<li><a href="page-lock.html">Lock Screen</a></li>
+								<li><a href="page-forum.html">Forum</a></li>
+								<li><a href="page-404.html">Error 404</a></li>
+								<li><a href="page-500.html">Error 500</a></li>
+								<li><a href="page-pricing.html">Pricing Table</a></li>
+								<li><a href="page-search.html">Search Result</a></li>
+								<li><a href="page-sidebar.html">Sidebar Page</a></li>
+								<li><a href="page-user-profile.html">User Profile</a></li>
+								<li><a href="page-blank-1.html">Blank Page</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+					</ul>
+
+					<!-- SECOND MAIN LIST -->
+					<h3>MORE</h3>
+					<ul class="nav nav-list">
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+						<li>
+							<a href="../../HTML_BS4/start.html">
+								<i class="main-icon fa fa-link"></i>
+								<span class="label label-danger pull-right">PRO</span> <span>Frontend</span>
+							</a>
+						</li>
+					</ul>
+
+				</nav>
+
+				<span id="asidebg"><!-- aside fixed background --></span>
+			</aside>
+			<!-- /ASIDE -->
+
+
+			<!-- HEADER -->
+			<header id="header">
+
+				<!-- Mobile Button -->
+				<button id="mobileMenuBtn"></button>
+
+				<!-- Logo -->
+				<span class="logo pull-left">
+					<img src="assets/images/logo_light.png" alt="admin panel" height="35" />
+				</span>
+
+				<form method="get" action="page-search.html" class="search pull-left hidden-xs">
+					<input type="text" class="form-control" name="k" placeholder="Search for something..." />
+				</form>
+
+				<nav>
+
+					<!-- OPTIONS LIST -->
+					<ul class="nav pull-right">
+
+						<!-- USER OPTIONS -->
+						<li class="dropdown pull-left">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+								<img class="user-avatar" alt="" src="assets/images/noavatar.jpg" height="34" /> 
+								<span class="user-name">
+									<span class="hidden-xs">
+										John Doe <i class="fa fa-angle-down"></i>
+									</span>
+								</span>
+							</a>
+							<ul class="dropdown-menu hold-on-click">
+								<li><!-- my calendar -->
+									<a href="calendar.html"><i class="fa fa-calendar"></i> Calendar</a>
+								</li>
+								<li><!-- my inbox -->
+									<a href="#"><i class="fa fa-envelope"></i> Inbox
+										<span class="pull-right label label-default">0</span>
+									</a>
+								</li>
+								<li><!-- settings -->
+									<a href="page-user-profile.html"><i class="fa fa-cogs"></i> Settings</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li><!-- lockscreen -->
+									<a href="page-lock.html"><i class="fa fa-lock"></i> Lock Screen</a>
+								</li>
+								<li><!-- logout -->
+									<a href="page-login.html"><i class="fa fa-power-off"></i> Log Out</a>
+								</li>
+							</ul>
+						</li>
+						<!-- /USER OPTIONS -->
+
+					</ul>
+					<!-- /OPTIONS LIST -->
+
+				</nav>
+
+			</header>
+			<!-- /HEADER -->
+
+
+			<!-- 
+				MIDDLE 
+			-->
+			<section id="middle">
+
+
+				<!-- page title -->
+				<header id="page-header">
+					<h1>Essentials</h1>
+					<ol class="breadcrumb">
+						<li><a href="#">UI</a></li>
+						<li class="active">Essentials</li>
+					</ol>
+				</header>
+				<!-- /page title -->
+
+
+				<div id="content" class="padding-20">
+
+					<!-- jQuery Knob -->
+					<div id="ui-knob" class="panel panel-default">
+
+						<div class="panel-heading">
+
+							<span class="title elipsis">
+								<strong>ESSENTIALS</strong> <!-- panel title -->
+							</span>
+
+							<!-- right options -->
+							<ul class="options pull-right list-inline">
+								<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+								<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+								<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+							</ul>
+							<!-- /right options -->
+
+						</div>
+
+						<!-- panel content -->
+						<div class="panel-body">
+
+							<p>Essential classes (assets/css/essentials.css) that helps you to quick position elements without writing new css rules.</p>
+							
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th style="width:20%">Class</th>
+										<th style="width:30%">Description</th>
+										<th style="width:20%">Class</th>
+										<th style="width:30%">Description</th>
+									</tr>                                            
+								</thead> 
+								<tbody>
+									<tr>
+										<td><code>.size-11</code></td>
+										<td>Force font size to 11px (text, icons)</td>
+										<td><code>.weight-300</code></td>
+										<td>Force font weight to 300 (text)</td>
+									</tr>
+									<tr>
+										<td><code>.size-12</code></td>
+										<td>Force font size to 12px (text, icons)</td>
+										<td><code>.weight-400</code></td>
+										<td>Force font weight to 400 (text)</td>
+									</tr>
+									<tr>
+										<td><code>.size-13</code></td>
+										<td>Force font size to 13px (text, icons)</td>
+										<td><code>.weight-500</code></td>
+										<td>Force font weight to 500 (text)</td>
+									</tr>
+									<tr>
+										<td><code>.size-14</code></td>
+										<td>Force font size to 14px (text, icons)</td>
+										<td><code>.weight-600</code></td>
+										<td>Force font weight to 600 (text)</td>
+									</tr>
+									<tr>
+										<td><code>.size-15</code></td>
+										<td>Force font size to 15px (text, icons)</td>
+										<td><code>.weight-700</code></td>
+										<td>Force font weight to 700 (text)</td>
+									</tr>
+									<tr>
+										<td><code>.size-16</code></td>
+										<td>Force font size to 16px (text, icons)</td>
+										<td><code>.font-lato</code></td>
+										<td>Force font family: 'Lato', Arial, sans-serif</td>
+									</tr>
+									<tr>
+										<td><code>.size-17</code></td>
+										<td>Force font size to 17px (text, icons)</td>
+										<td><code>.padding-0</code></td>
+										<td>Force padding to 0px</td>
+									</tr>
+									<tr>
+										<td><code>.size-18</code></td>
+										<td>Force font size to 18px (text, icons)</td>
+										<td><code>.padding-3</code></td>
+										<td>Force padding to 3px</td>
+									</tr>
+									<tr>
+										<td><code>.size-19</code></td>
+										<td>Force font size to 19px (text, icons)</td>
+										<td><code>.padding-6</code></td>
+										<td>Force padding to 6px</td>
+									</tr>
+									<tr>
+										<td><code>.size-20</code></td>
+										<td>Force font size to 20px (text, icons)</td>
+										<td><code>.padding-8</code></td>
+										<td>Force padding to 8px</td>
+									</tr>
+									<tr>
+										<td><code>.size-26</code></td>
+										<td>Force font size to 26px (text, icons)</td>
+										<td><code>.padding-10</code></td>
+										<td>Force padding to 10px</td>
+									</tr>
+									<tr>
+										<td><code>.size-30</code></td>
+										<td>Force font size to 30px (text, icons)</td>
+										<td><code>.padding-0</code></td>
+										<td>Force padding to 0px</td>
+									</tr>
+									<tr>
+										<td><code>.size-40</code></td>
+										<td>Force font size to 40px (text, icons)</td>
+										<td><code>.padding-15</code></td>
+										<td>Force padding to 15px</td>
+									</tr>
+									<tr>
+										<td><code>.size-50</code></td>
+										<td>Force font size to 50px (text, icons)</td>
+										<td><code>.padding-20</code></td>
+										<td>Force padding to 20px</td>
+									</tr>
+									<tr>
+										<td><code>.size-60</code></td>
+										<td>Force font size to 60px (text, icons)</td>
+										<td><code>.padding-30</code></td>
+										<td>Force padding to 30px</td>
+									</tr>
+									<tr>
+										<td><code>.size-70</code></td>
+										<td>Force font size to 70px (text, icons)</td>
+										<td><code>.padding-40</code></td>
+										<td>Force padding to 40px</td>
+									</tr>
+									<tr>
+										<td><code>.size-80</code></td>
+										<td>Force font size to 80px (text, icons)</td>
+										<td><code>.padding-50</code></td>
+										<td>Force padding to 50px</td>
+									</tr>
+									<tr>
+										<td><code>.size-90</code></td>
+										<td>Force font size to 90px (text, icons)</td>
+										<td><code>.padding-60</code></td>
+										<td>Force padding to 60px</td>
+									</tr>
+									<tr>
+										<td><code>.size-100</code></td>
+										<td>Force font size to 100px (text, icons)</td>
+										<td><code>.padding-70</code></td>
+										<td>Force padding to 70px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-top-0</code></td>
+										<td>Force margin top to 0px</td>
+										<td><code>.margin-bottom-0</code></td>
+										<td>Force margin bottom to 0px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-top-3</code></td>
+										<td>Force margin top to 3px</td>
+										<td><code>.margin-bottom-3</code></td>
+										<td>Force margin bottom to 3px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-top-6</code></td>
+										<td>Force margin top to 6px</td>
+										<td><code>.margin-bottom-6</code></td>
+										<td>Force margin bottom to 6px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-top-8</code></td>
+										<td>Force margin top to 8px</td>
+										<td><code>.margin-bottom-8</code></td>
+										<td>Force margin bottom to 8px</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code>.margin-top-10</code></td>
+										<td>Force margin top to 10px</td>
+										<td><code>.margin-bottom-10</code></td>
+										<td>Force margin bottom to 10px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-top-20</code></td>
+										<td>Force margin top to 20px</td>
+										<td><code>.margin-bottom-20</code></td>
+										<td>Force margin bottom to 20px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-top-30</code></td>
+										<td>Force margin top to 30px</td>
+										<td><code>.margin-bottom-30</code></td>
+										<td>Force margin bottom to 30px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-top-40</code></td>
+										<td>Force margin top to 40px</td>
+										<td><code>.margin-bottom-40</code></td>
+										<td>Force margin bottom to 40px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-top-50</code></td>
+										<td>Force margin top to 50px</td>
+										<td><code>.margin-bottom-50</code></td>
+										<td>Force margin bottom to 50px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-top-60</code></td>
+										<td>Force margin top to 60px</td>
+										<td><code>.margin-bottom-60</code></td>
+										<td>Force margin bottom to 60px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-top-80</code></td>
+										<td>Force margin top to 80px</td>
+										<td><code>.margin-bottom-80</code></td>
+										<td>Force margin bottom to 80px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-top-100</code></td>
+										<td>Force margin top to 100px</td>
+										<td><code>.margin-bottom-100</code></td>
+										<td>Force margin bottom to 100px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-top-130</code></td>
+										<td>Force margin top to 130px</td>
+										<td><code>.margin-bottom-130</code></td>
+										<td>Force margin bottom to 130px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-top-150</code></td>
+										<td>Force margin top to 150px</td>
+										<td><code>.margin-bottom-150</code></td>
+										<td>Force margin bottom to 150px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-top-180</code></td>
+										<td>Force margin top to 180px</td>
+										<td><code>.margin-bottom-180</code></td>
+										<td>Force margin bottom to 180px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-top-200</code></td>
+										<td>Force margin top to 200px</td>
+										<td><code>.margin-bottom-200</code></td>
+										<td>Force margin bottom to 200px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-left-0</code></td>
+										<td>Force margin left to 0px</td>
+										<td><code>.margin-right-0</code></td>
+										<td>Force margin right to 0px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-left-3</code></td>
+										<td>Force margin left to 3px</td>
+										<td><code>.margin-right-3</code></td>
+										<td>Force margin right to 3px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-left-6</code></td>
+										<td>Force margin left to 6px</td>
+										<td><code>.margin-right-6</code></td>
+										<td>Force margin right to 6px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-left-8</code></td>
+										<td>Force margin left to 8px</td>
+										<td><code>.margin-right-8</code></td>
+										<td>Force margin right to 8px</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code>.margin-left-10</code></td>
+										<td>Force margin left to 10px</td>
+										<td><code>.margin-right-10</code></td>
+										<td>Force margin right to 10px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-left-20</code></td>
+										<td>Force margin left to 20px</td>
+										<td><code>.margin-right-20</code></td>
+										<td>Force margin right to 20px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-left-30</code></td>
+										<td>Force margin left to 30px</td>
+										<td><code>.margin-right-30</code></td>
+										<td>Force margin right to 30px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-left-40</code></td>
+										<td>Force margin left to 40px</td>
+										<td><code>.margin-right-40</code></td>
+										<td>Force margin right to 40px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-left-50</code></td>
+										<td>Force margin left to 50px</td>
+										<td><code>.margin-right-50</code></td>
+										<td>Force margin right to 50px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-left-60</code></td>
+										<td>Force margin left to 60px</td>
+										<td><code>.margin-right-60</code></td>
+										<td>Force margin right to 60px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-left-80</code></td>
+										<td>Force margin left to 80px</td>
+										<td><code>.margin-right-80</code></td>
+										<td>Force margin right to 80px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-left-100</code></td>
+										<td>Force margin left to 100px</td>
+										<td><code>.margin-right-100</code></td>
+										<td>Force margin right to 100px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-left-130</code></td>
+										<td>Force margin left to 130px</td>
+										<td><code>.margin-right-130</code></td>
+										<td>Force margin right to 130px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-left-150</code></td>
+										<td>Force margin left to 150px</td>
+										<td><code>.margin-right-150</code></td>
+										<td>Force margin right to 150px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-left-180</code></td>
+										<td>Force margin left to 180px</td>
+										<td><code>.margin-right-180</code></td>
+										<td>Force margin right to 180px</td>
+									</tr>
+									<tr>
+										<td><code>.margin-left-200</code></td>
+										<td>Force margin left to 200px</td>
+										<td><code>.margin-right-200</code></td>
+										<td>Force margin right to 200px</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th style="width:20%">Class</th>
+										<th style="width:30%">Description</th>
+										<th style="width:20%">Class</th>
+										<th style="width:30%">Description</th>
+									</tr>                                            
+								</thead> 
+								<tbody>
+									<tr>
+										<td><code>.height-10</code></td>
+										<td>Force height to 10px</td>
+										<td><code>.width-10</code></td>
+										<td>Force width to 10px</td>
+									</tr>
+									<tr>
+										<td><code>.height-20</code></td>
+										<td>Force height to 20px</td>
+										<td><code>.width-20</code></td>
+										<td>Force width to 20px</td>
+									</tr>
+									<tr>
+										<td><code>.height-30</code></td>
+										<td>Force height to 30px</td>
+										<td><code>.width-30</code></td>
+										<td>Force width to 30px</td>
+									</tr>
+									<tr>
+										<td><code>.height-50</code></td>
+										<td>Force height to 50px</td>
+										<td><code>.width-50</code></td>
+										<td>Force width to 50px</td>
+									</tr>
+									<tr>
+										<td><code>.height-100</code></td>
+										<td>Force height to 100px</td>
+										<td><code>.width-100</code></td>
+										<td>Force width to 100px</td>
+									</tr>
+									<tr>
+										<td><code>.height-150</code></td>
+										<td>Force height to 150px</td>
+										<td><code>.width-150</code></td>
+										<td>Force width to 150px</td>
+									</tr>
+									<tr>
+										<td><code>.height-200</code></td>
+										<td>Force height to 200px</td>
+										<td><code>.width-200</code></td>
+										<td>Force width to 200px</td>
+									</tr>
+									<tr>
+										<td><code>.height-250</code></td>
+										<td>Force height to 250px</td>
+										<td><code>.width-250</code></td>
+										<td>Force width to 250px</td>
+									</tr>
+									<tr>
+										<td><code>.height-250</code></td>
+										<td>Force height to 250px</td>
+										<td><code>.width-250</code></td>
+										<td>Force width to 250px</td>
+									</tr>
+									<tr>
+										<td><code>.height-300</code></td>
+										<td>Force height to 300px</td>
+										<td><code>.width-300</code></td>
+										<td>Force width to 300px</td>
+									</tr>
+									<tr>
+										<td><code>.height-350</code></td>
+										<td>Force height to 350px</td>
+										<td><code>.width-350</code></td>
+										<td>Force width to 350px</td>
+									</tr>
+									<tr>
+										<td><code>.height-400</code></td>
+										<td>Force height to 400px</td>
+										<td><code>.width-400</code></td>
+										<td>Force width to 400px</td>
+									</tr>
+									<tr>
+										<td><code>.height-450</code></td>
+										<td>Force height to 450px</td>
+										<td><code>.width-450</code></td>
+										<td>Force width to 450px</td>
+									</tr>
+									<tr>
+										<td><code>.height-500</code></td>
+										<td>Force height to 500px</td>
+										<td><code>.width-500</code></td>
+										<td>Force width to 500px</td>
+									</tr>
+									<tr>
+										<td><code>.height-550</code></td>
+										<td>Force height to 550px</td>
+										<td><code>.width-550</code></td>
+										<td>Force width to 550px</td>
+									</tr>
+									<tr>
+										<td><code>.height-600</code></td>
+										<td>Force height to 600px</td>
+										<td><code>.width-600</code></td>
+										<td>Force width to 600px</td>
+									</tr>
+									<tr>
+										<td><code>.height-650</code></td>
+										<td>Force height to 650px</td>
+										<td><code>.width-650</code></td>
+										<td>Force width to 650px</td>
+									</tr>
+									<tr>
+										<td><code>.height-700</code></td>
+										<td>Force height to 700px</td>
+										<td><code>.width-700</code></td>
+										<td>Force width to 700px</td>
+									</tr>
+									<tr>
+										<td><code>.height-750</code></td>
+										<td>Force height to 750px</td>
+										<td><code>.width-750</code></td>
+										<td>Force width to 750px</td>
+									</tr>
+									<tr>
+										<td><code>.height-800</code></td>
+										<td>Force height to 800px</td>
+										<td><code>.width-800</code></td>
+										<td>Force width to 800px</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									 <tr>
+										<td colspan="4">You might also need to use <code>.block</code> together with one of above classes.
+										</td>
+									 </tr>
+								</tfoot>
+							</table>
+
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th style="width:20%">Class</th>
+										<th style="width:30%">Description</th>
+										<th style="width:20%">Class</th>
+										<th style="width:30%">Description</th>
+									</tr>                                            
+								</thead> 
+								<tbody>
+									<tr>
+										<td><code>.nopadding</code></td>
+										<td>Force no paddings</td>
+										<td><code>.nomargin</code></td>
+										<td>Force no margins</td>
+									</tr>
+									<tr>
+										<td><code>.nopadding-left</code></td>
+										<td>Force no padding left</td>
+										<td><code>.nomargin-left</code></td>
+										<td>Force no nomargin left</td>
+									</tr>
+									<tr>
+										<td><code>.nopadding-right</code></td>
+										<td>Force no padding right</td>
+										<td><code>.nomargin-left</code></td>
+										<td>Force no nomargin left</td>
+									</tr>
+									<tr>
+										<td><code>.nopadding-top</code></td>
+										<td>Force no padding top</td>
+										<td><code>.nomargin-left</code></td>
+										<td>Force no nomargin left</td>
+									</tr>
+									<tr>
+										<td><code>.nopadding-bottom</code></td>
+										<td>Force no padding bottom</td>
+										<td><code>.nomargin-left</code></td>
+										<td>Force no nomargin left</td>
+									</tr>
+									<tr>
+										<td><code>.noborder</code></td>
+										<td>Force no border</td>
+										<td><code>.lowercase</code></td>
+										<td>Force text to lowercase</td>
+									</tr>
+									<tr>
+										<td><code>.noradius</code></td>
+										<td>Force to radius 0</td>
+										<td><code>.uppercase</code></td>
+										<td>Force text to uppercase</td>
+									</tr>
+									<tr>
+										<td><code>.italic</code></td>
+										<td>Force text to <i>italic</i></td>
+										<td><code>.pointer</code></td>
+										<td>Force cursor pointer (link)</td>
+									</tr>
+									<tr>
+										<td><code>.block</code></td>
+										<td>Force display to block</td>
+										<td><code>.bold</code></td>
+										<td>Force text bold</td>
+									</tr>
+									<tr>
+										<td><code>.fullwidth</code></td>
+										<td>Force width 100%</td>
+										<td><code>.justify</code></td>
+										<td>Force text to justify</td>
+									</tr>
+									<tr>
+										<td><code>.halfwidth</code></td>
+										<td>Force width 50%</td>
+										<td><code>.nofloat</code></td>
+										<td>Force float:none</td>
+									</tr>
+									<tr>
+										<td><code>.softhide</code></td>
+										<td>diplay:none , without !important</td>
+										<td><code>.no-text-underline</code></td>
+										<td>No underline (link)</td>
+									</tr>
+									<tr>
+										<td><code>.border-bottom-dashed</code></td>
+										<td>dotted bottom border</td>
+										<td><code>.border-bottom-dotted</code></td>
+										<td>dashed bottom border</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th style="width:20%">Class</th>
+										<th style="width:30%">Description</th>
+										<th style="width:20%">Class</th>
+										<th style="width:30%">Description</th>
+									</tr>                                            
+								</thead> 
+								<tbody>
+									<tr>
+										<td><code>.letter-spacing-0</code></td>
+										<td>Letter spacing 0px</td>
+										<td><code>.overlay.dark-0</code></td>
+										<td>0% opactity - used for parallax or slider</td>
+									</tr>
+									<tr>
+										<td><code>.letter-spacing-1</code></td>
+										<td>Letter spacing 0.1em</td>
+										<td><code>.overlay.dark-1</code></td>
+										<td>10% opactity - used for parallax or slider</td>
+									</tr>
+									<tr>
+										<td><code>.letter-spacing-2</code></td>
+										<td>Letter spacing 0.2em</td>
+										<td><code>.overlay.dark-2</code></td>
+										<td>20% opactity - used for parallax or slider</td>
+									</tr>
+									<tr>
+										<td><code>.letter-spacing-3</code></td>
+										<td>Letter spacing 0.3em</td>
+										<td><code>.overlay.dark-3</code></td>
+										<td>30% opactity - used for parallax or slider</td>
+									</tr>
+									<tr>
+										<td><code>.letter-spacing-4</code></td>
+										<td>Letter spacing 0.4em</td>
+										<td><code>.overlay.dark-4</code></td>
+										<td>40% opactity - used for parallax or slider</td>
+									</tr>
+									<tr>
+										<td><code>.letter-spacing-5</code></td>
+										<td>Letter spacing 0.5em</td>
+										<td><code>.overlay.dark-5</code></td>
+										<td>50% opactity - used for parallax or slider</td>
+									</tr>
+									<tr>
+										<td><code>.letter-spacing-6</code></td>
+										<td>Letter spacing 0.6em</td>
+										<td><code>.overlay.dark-6</code></td>
+										<td>60% opactity - used for parallax or slider</td>
+									</tr>
+									<tr>
+										<td><code>.letter-spacing-7</code></td>
+										<td>Letter spacing 0.7em</td>
+										<td><code>.overlay.dark-7</code></td>
+										<td>70% opactity - used for parallax or slider</td>
+									</tr>
+									<tr>
+										<td><code>.letter-spacing-8</code></td>
+										<td>Letter spacing 0.8em</td>
+										<td><code>.overlay.dark-8</code></td>
+										<td>80% opactity - used for parallax or slider</td>
+									</tr>
+									<tr>
+										<td><code>.letter-spacing-9</code></td>
+										<td>Letter spacing 0.9em</td>
+										<td><code>.overlay.dark-9</code></td>
+										<td>90% opactity - used for parallax or slider</td>
+									</tr>
+									<tr>
+										<td><code>.letter-spacing-10</code></td>
+										<td>Letter spacing 1em</td>
+										<td><code>.overlay.dark-10</code></td>
+										<td>100% opactity - used for parallax or slider</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									 <tr>
+										<td colspan="4">Overlay usage example: <code>&lt;span class="overlay dark-5"&gt;&lt;span&gt;</code>
+										</td>
+									 </tr>
+								</tfoot>  
+							</table>
+
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th style="width:30%">Class</th>
+										<th style="width:70%">Description</th>
+									</tr>                                            
+								</thead> 
+								<tbody>
+									<tr>
+										<td><code>.txt-success</code></td>
+										<td><span class="text-success">Lorem ipsum dolor sit amet.</span></td>
+									</tr>
+									<tr>
+										<td><code>.txt-danger</code></td>
+										<td><span class="text-danger">Lorem ipsum dolor sit amet.</span></td>
+									</tr>
+									<tr>
+										<td><code>.txt-warning</code></td>
+										<td><span class="text-warning">Lorem ipsum dolor sit amet.</span></td>
+									</tr>
+									<tr>
+										<td><code>.txt-info</code></td>
+										<td><span class="text-info">Lorem ipsum dolor sit amet.</span></td>
+									</tr>
+								</tbody>
+							</table>
+					
+						</div>
+						<!-- /panel content -->
+
+					</div>
+					<!-- /jQuery Knob -->
+
+				</div>
+			</section>
+			<!-- /MIDDLE -->
+
+		</div>
+
+
+
+	
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+
+	</body>
+</html>

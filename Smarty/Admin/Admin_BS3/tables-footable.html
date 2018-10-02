@@ -1,0 +1,979 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Smarty Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+		<!-- WEB FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+		<!-- FOOTABLE TABLE -->
+		<link href="assets/plugins/footable/css/footable.core.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/footable/css/footable.standalone.css" rel="stylesheet" type="text/css" />
+		<!--
+			Minimal footable skin 
+			1. remove footable.standalone.css skin first
+			2. add .fooMinimal to the footable table
+			<link href="assets/css/layout-footable-minimal.css" rel="stylesheet" type="text/css" /> 
+		-->
+	</head>
+	<!--
+		.boxed = boxed version
+	-->
+	<body>
+
+
+		<!-- WRAPPER -->
+		<div id="wrapper">
+
+			<!-- 
+				ASIDE 
+				Keep it outside of #wrapper (responsive purpose)
+			-->
+			<aside id="aside">
+				<!--
+					Always open:
+					<li class="active alays-open">
+
+					LABELS:
+						<span class="label label-danger pull-right">1</span>
+						<span class="label label-default pull-right">1</span>
+						<span class="label label-warning pull-right">1</span>
+						<span class="label label-success pull-right">1</span>
+						<span class="label label-info pull-right">1</span>
+				-->
+				<nav id="sideNav"><!-- MAIN MENU -->
+					<ul class="nav nav-list">
+						<li><!-- dashboard -->
+							<a class="dashboard" href="index.html"><!-- warning - url used by default by ajax (if eneabled) -->
+								<i class="main-icon fa fa-dashboard"></i> <span>Dashboard</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-bar-chart-o"></i> <span>Graphs</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="graphs-flot.html">Flot Charts</a></li>
+								<li><a href="graphs-morris.html">Morris Charts</a></li>
+								<li><a href="graphs-inline.html">Inline Charts</a></li>
+								<li><a href="graphs-chartjs.html">Chart.js</a></li>
+							</ul>
+						</li>
+						<li class="active">
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-table"></i> <span>Tables</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="tables-bootstrap.html">Bootstrap Tables</a></li>
+								<li><a href="tables-jqgrid.html">jQuery Grid</a></li>
+								<li class="active"><a href="tables-footable.html">jQuery Footable</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Datatables
+									</a>
+									<ul>
+										<li><a href="tables-datatable-managed.html">Managed Datatables</a></li>
+										<li><a href="tables-datatable-editable.html">Editable Datatables</a></li>
+										<li><a href="tables-datatable-advanced.html">Advanced Datatables</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-pencil-square-o"></i> <span>Forms</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="form-elements.html">Smarty Elements</a></li>
+								<li><a href="form-masked-inputs.html">Masked Inputs</a></li>
+								<li><a href="form-pickers.html">Pickers</a></li>
+								<li><a href="form-ui-sliders.html">UI Sliders</a></li>
+								<li><a href="form-validation.html">Validation Form</a></li>
+								<li><a href="form-html-editors.html">Html Editors</a></li>
+								<li><a href="form-autosuggest.html">Autosuggest</a></li>
+								<li><a href="form-x-editable.html">Form X-Editable</a></li>
+								<li><a href="form-dropzone.html">Dropzone File Upload</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-gears"></i> <span>UI Features</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="ui-portlets.html">Portlets</a></li>
+								<li><a href="ui-buttons.html">Buttons</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Icons
+									</a>
+									<ul>
+										<li><a href="ui-icons-fontawsome.html">Fontawsome</a></li>
+										<li><a href="ui-icons-etline.html">Et-Line Icons</a></li>
+										<li><a href="ui-icons-glyphicons.html">Glyph Icons</a></li>
+										<li><a href="ui-icons-flags.html">Flags</a></li>
+									</ul>
+								</li>
+								<li><a href="ui-alerts-dialogs.html">Alerts &amp; Dialogs</a></li>
+								<li><a href="ui-tabs-acordion-navs.html">Tabs, Acordion &amp; Navs</a></li>
+								<li><a href="ui-knob.html">Knob Circles</a></li>
+								<li><a href="ui-nestable.html">Nestable List</a></li>
+								<li><a href="ui-toastr.html">Toastr Notifications</a></li>
+								<li><a href="ui-modals.html">Modals</a></li>
+								<li><a href="ui-grid.html">Grid</a></li>
+								<li><a href="ui-google-maps.html">Google Maps</a></li>
+								<li><a href="ui-vector-maps.html">Vector Maps</a></li>
+								<li><a href="ui-essentials.html">Essentials</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										<i class="fa fa-folder-open"></i>
+										Deep Navigation
+									</a>
+									<!-- 3rd Level -->
+									<ul>
+										<li>
+											<a href="#">
+												3rd Level
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-menu-arrow pull-right"></i>
+												<i class="fa fa-folder-open"></i>
+												4rd Level
+											</a>
+											<!-- 4th Level -->
+											<ul>
+												<li>
+													<a href="#">
+														4th Level
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-menu-arrow pull-right"></i>
+														<i class="fa fa-folder-open"></i>
+														5th Level
+													</a>
+													<!-- 5th Level -->
+													<ul>
+														<li>
+															<a href="#">
+																5th level
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<i class="fa fa-menu-arrow pull-right"></i>
+																<i class="fa fa-folder-open"></i>
+																6th level
+															</a>
+															<!-- 6th Level -->
+															<ul>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+															</ul><!-- /6th Level -->
+														</li>
+													</ul><!-- /5th Level -->
+												</li>
+											</ul><!-- /4th Level -->
+										</li>
+									</ul><!-- /3rd Level -->
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-book"></i> <span>Pages</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="page-invoice.html">Invoice</a></li>
+								<li><a href="page-login.html">Login</a></li>
+								<li><a href="page-register.html">Register</a></li>
+								<li><a href="page-lock.html">Lock Screen</a></li>
+								<li><a href="page-forum.html">Forum</a></li>
+								<li><a href="page-404.html">Error 404</a></li>
+								<li><a href="page-500.html">Error 500</a></li>
+								<li><a href="page-pricing.html">Pricing Table</a></li>
+								<li><a href="page-search.html">Search Result</a></li>
+								<li><a href="page-sidebar.html">Sidebar Page</a></li>
+								<li><a href="page-user-profile.html">User Profile</a></li>
+								<li><a href="page-blank-1.html">Blank Page</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+					</ul>
+
+					<!-- SECOND MAIN LIST -->
+					<h3>MORE</h3>
+					<ul class="nav nav-list">
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+						<li>
+							<a href="../../HTML_BS4/start.html">
+								<i class="main-icon fa fa-link"></i>
+								<span class="label label-danger pull-right">PRO</span> <span>Frontend</span>
+							</a>
+						</li>
+					</ul>
+
+				</nav>
+
+				<span id="asidebg"><!-- aside fixed background --></span>
+			</aside>
+			<!-- /ASIDE -->
+
+
+			<!-- HEADER -->
+			<header id="header">
+
+				<!-- Mobile Button -->
+				<button id="mobileMenuBtn"></button>
+
+				<!-- Logo -->
+				<span class="logo pull-left">
+					<img src="assets/images/logo_light.png" alt="admin panel" height="35" />
+				</span>
+
+				<form method="get" action="page-search.html" class="search pull-left hidden-xs">
+					<input type="text" class="form-control" name="k" placeholder="Search for something..." />
+				</form>
+
+				<nav>
+
+					<!-- OPTIONS LIST -->
+					<ul class="nav pull-right">
+
+						<!-- USER OPTIONS -->
+						<li class="dropdown pull-left">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+								<img class="user-avatar" alt="" src="assets/images/noavatar.jpg" height="34" /> 
+								<span class="user-name">
+									<span class="hidden-xs">
+										John Doe <i class="fa fa-angle-down"></i>
+									</span>
+								</span>
+							</a>
+							<ul class="dropdown-menu hold-on-click">
+								<li><!-- my calendar -->
+									<a href="calendar.html"><i class="fa fa-calendar"></i> Calendar</a>
+								</li>
+								<li><!-- my inbox -->
+									<a href="#"><i class="fa fa-envelope"></i> Inbox
+										<span class="pull-right label label-default">0</span>
+									</a>
+								</li>
+								<li><!-- settings -->
+									<a href="page-user-profile.html"><i class="fa fa-cogs"></i> Settings</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li><!-- lockscreen -->
+									<a href="page-lock.html"><i class="fa fa-lock"></i> Lock Screen</a>
+								</li>
+								<li><!-- logout -->
+									<a href="page-login.html"><i class="fa fa-power-off"></i> Log Out</a>
+								</li>
+							</ul>
+						</li>
+						<!-- /USER OPTIONS -->
+
+					</ul>
+					<!-- /OPTIONS LIST -->
+
+				</nav>
+
+			</header>
+			<!-- /HEADER -->
+
+
+			<!-- 
+				MIDDLE 
+			-->
+			<section id="middle">
+
+
+				<!-- page title -->
+				<header id="page-header">
+					<h1>jQuery Footable</h1>
+					<ol class="breadcrumb">
+						<li><a href="#">Tables</a></li>
+						<li class="active">jQuery Footable</li>
+					</ol>
+				</header>
+				<!-- /page title -->
+
+
+				<div id="content" class="padding-20">
+
+					<!-- 
+						PANEL CLASSES:
+							panel-default
+							panel-danger
+							panel-warning
+							panel-info
+							panel-success
+
+						INFO: 	panel collapse - stored on user localStorage (handled by app.js _panels() function).
+								All pannels should have an unique ID or the panel collapse status will not be stored!
+					-->
+					<div id="panel-1" class="panel panel-default">
+						<div class="panel-heading">
+							<span class="title elipsis">
+								<strong>FOOTABLE</strong> <!-- panel title -->
+							</span>
+
+							<!-- right options -->
+							<ul class="options pull-right list-inline">
+								<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+								<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+								<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+							</ul>
+							<!-- /right options -->
+
+						</div>
+
+						<!-- panel content -->
+						<div class="panel-body">
+
+							<label><!-- PER PAGE SELECTOR . you can move it to panel-heading -->
+								<select class="form-control pointer" id="change-page-size">
+									<option value="2">2 / page</option>
+									<option value="3">3 / page</option>
+									<option value="5">5 / page</option>
+									<option value="10" selected="selected">10 / page</option>
+									<option value="15">15 / page</option>
+									<option value="20">20 / page</option>
+								</select>
+							</label><!-- /PER PAGE SELECTOR -->
+
+							<table class="fooTableInit"><!-- add .fooMinimal for minimal skin and remove foo css theme (footable.standalone.css) -->
+								<thead>
+								  <tr>
+									<th class="foo-cell">College</th>
+									<th data-type="numeric" data-hide = "s300" class="">Pell<br> (2012-2014)</th>
+									<th data-type="numeric" data-hide = "s300,s600" class="">Pell<br> (2008)</th>
+									<th data-type="numeric" data-hide = "s300,s600" class="">Pell<br> change</th>
+									<th data-type="numeric" data-hide = "s300" class="">Net price, low- to<br> middle-income</th>
+									<th data-type="numeric" data-sort-initial="descending" class="">College Access<br> Index</th>
+									<th data-type="numeric" data-hide = "s300,s600" class="">Endowment<br> per student</th>
+								  </tr>
+								</thead>
+
+								<tbody>
+
+									<tr>
+										<td class="foo-cell"> Vassar </td>
+										<td> 23 </td>
+										<td> 12 </td>
+										<td data-value="11"> +11 </td>
+										<td> $5,600 </td>
+										<td class="highlight"> 3.1 </td>
+										<td> $340,000 </td>
+									</tr>
+
+									<tr>
+										<td class="foo-cell"> Grinnell </td>
+										<td> 24 </td>
+										<td> 14 </td>
+										<td data-value = '10'> +10 </td>
+										<td> $10,400 </td>
+										<td class="highlight"> 2.7 </td>
+										<td> $880,000 </td>
+									</tr>
+
+									<tr>
+										<td class="foo-cell"> U.N.C.-Chapel Hill </td>
+										<td> 21 </td>
+										<td> 13 </td>
+										<td data-value = '8'> +8 </td>
+										<td> $7,600 </td>
+										<td class="highlight"> 2.3 </td>
+										<td> n/a </td>
+									</tr>
+
+									<tr>
+										<td class="foo-cell"> Amherst </td>
+										<td> 20 </td>
+										<td> 16 </td>
+										<td data-value = '4'> +4 </td>
+										<td> $8,400 </td>
+										<td class="highlight"> 2.0 </td>
+										<td> $940,000 </td>
+									</tr>
+
+									<tr>
+										<td class="foo-cell"> Harvard </td>
+										<td> 17 </td>
+										<td> 13 </td>
+										<td data-value = '4'> +4 </td>
+										<td> $3,000 </td>
+										<td class="highlight"> 2.0 </td>
+										<td> $1,520,000 </td>
+									</tr>
+
+									<tr>
+										<td class="foo-cell"> Pomona </td>
+										<td> 18 </td>
+										<td> 12 </td>
+										<td data-value = '6'> +6 </td>
+										<td> $5,200 </td>
+										<td class="highlight"> 1.8 </td>
+										<td> $1,170,000 </td>
+									</tr>
+
+									<tr>
+										<td class="foo-cell"> St. Mary's (Ind.) </td>
+										<td> 24 </td>
+										<td> 14 </td>
+										<td data-value = '10'> +10 </td>
+										<td> $15,900 </td>
+										<td class="highlight"> 1.8 </td>
+										<td> $80,000 </td>
+									</tr>
+
+									<tr>
+										<td class="foo-cell"> Smith </td>
+										<td> 23 </td>
+										<td> 16 </td>
+										<td data-value = '7'> +7 </td>
+										<td> $11,600 </td>
+										<td class="highlight"> 2.2 </td>
+										<td> $440,000 </td>
+									</tr>
+
+									<tr>
+										<td class="foo-cell"> Susquehanna </td>
+										<td> 25 </td>
+										<td> 17 </td>
+										<td data-value = '8'> +8 </td>
+										<td> $18,000 </td>
+										<td class="highlight"> 1.7 </td>
+										<td> $50,000 </td>
+									</tr>
+
+									<tr>
+										<td class="foo-cell"> Columbia </td>
+										<td> 16 </td>
+										<td> 12 </td>
+										<td data-value = '4'> +4 </td>
+										<td> $3,500 </td>
+										<td class="highlight"> 1.6 </td>
+										<td> $320,000 </td>
+									</tr>
+
+									<tr>
+										<td class="foo-cell"> Rice </td>
+										<td> 18 </td>
+										<td> 15 </td>
+										<td data-value = '3'> +3 </td>
+										<td> $8,100 </td>
+										<td class="highlight"> 1.5 </td>
+										<td> $810,000 </td>
+									</tr>
+
+									<tr>
+										<td class="foo-cell"> Kalamazoo </td>
+										<td> 21 </td>
+										<td> 13 </td>
+										<td data-value = '8'> +8 </td>
+										<td> $13,900 </td>
+										<td class="highlight"> 1.5 </td>
+										<td> $190,000 </td>
+									</tr>
+
+									<tr>
+										<td class="foo-cell"> Wesleyan </td>
+										<td> 18 </td>
+										<td> 12 </td>
+										<td data-value = '6'> +6 </td>
+										<td> $8,700 </td>
+										<td class="highlight"> 1.5 </td>
+										<td> $200,000 </td>
+									</tr>
+
+									<tr>
+										<td class="foo-cell"> Denison </td>
+										<td> 20 </td>
+										<td> 11 </td>
+										<td data-value = '9'> +9 </td>
+										<td> $11,800 </td>
+										<td class="highlight"> 1.5 </td>
+										<td> $330,000 </td>
+									</tr>
+
+									<tr>
+										<td class="foo-cell"> Brown </td>
+										<td> 17 </td>
+										<td> 12 </td>
+										<td data-value = '5'> +5 </td>
+										<td> $7,000 </td>
+										<td class="highlight"> 1.4 </td>
+										<td> $350,000 </td>
+									</tr>
+
+									<tr>
+										<td class="foo-cell"> Williams </td>
+										<td> 18 </td>
+										<td> 14 </td>
+										<td data-value = '4'> +4 </td>
+										<td> $9,300 </td>
+										<td class="highlight"> 1.4 </td>
+										<td> $840,000 </td>
+									</tr>
+
+									<tr>
+										<td class="foo-cell"> Barnard </td>
+										<td> 19 </td>
+										<td> 15 </td>
+										<td data-value = '4'> +4 </td>
+										<td> $11,100 </td>
+										<td class="highlight"> 1.4 </td>
+										<td> $90,000 </td>
+									</tr>
+
+									<tr>
+										<td class="foo-cell"> Stanford </td>
+										<td> 15 </td>
+										<td> 12 </td>
+										<td data-value = '3'> +3 </td>
+										<td> $4,300 </td>
+										<td class="highlight"> 1.4 </td>
+										<td> $1,200,000 </td>
+									</tr>
+
+									<tr>
+										<td class="foo-cell"> Wheaton (Ill.) </td>
+										<td> 21 </td>
+										<td> 13 </td>
+										<td data-value = '8'> +8 </td>
+										<td> $14,400 </td>
+										<td class="highlight"> 1.2 </td>
+										<td> $110,000 </td>
+									</tr>
+
+									<tr>
+										<td class="foo-cell"> Wellesley </td>
+										<td> 18 </td>
+										<td> 13 </td>
+										<td data-value = '5'> +5 </td>
+										<td> $10,600 </td>
+										<td class="highlight"> 1.2 </td>
+										<td> $640,000 </td>
+									</tr>
+
+								</tbody>
+
+							</table>
+
+
+						</div>
+						<!-- /panel content -->
+
+						<!-- panel footer -->
+						<div class="panel-footer">
+
+<!-- pre code -->
+<div class="text-left">
+	<a class="btn btn-xs btn-info" href="javascript:;" onclick="jQuery('#pre-0').slideToggle();">Show Code</a>
+</div>
+<pre id="pre-0" class="text-left noradius text-danger softhide margin-top-10">
+<span class="text-success">&lt;!-- HTML FOOTABLE --&gt;</span>
+&lt;table class="fooTableInit"&gt;&lt;!-- add .fooMinimal for minimal skin and remove foo css theme (footable.standalone.css) --&gt;
+	&lt;thead&gt;
+	  &lt;tr&gt;
+		&lt;th class="foo-cell"&gt;College&lt;/th&gt;
+		&lt;th data-type="numeric" data-hide = "s300" class=""&gt;Pell&lt;br&gt; (2012-2014)&lt;/th&gt;
+		&lt;th data-type="numeric" data-hide = "s300,s600" class=""&gt;Pell&lt;br&gt; (2008)&lt;/th&gt;
+		&lt;th data-type="numeric" data-hide = "s300,s600" class=""&gt;Pell&lt;br&gt; change&lt;/th&gt;
+		&lt;th data-type="numeric" data-hide = "s300" class=""&gt;Net price, low- to&lt;br&gt; middle-income&lt;/th&gt;
+		&lt;th data-type="numeric" data-sort-initial="descending" class=""&gt;College Access&lt;br&gt; Index&lt;/th&gt;
+		&lt;th data-type="numeric" data-hide = "s300,s600" class=""&gt;Endowment&lt;br&gt; per student&lt;/th&gt;
+	  &lt;/tr&gt;
+	&lt;/thead&gt;
+
+	&lt;tbody&gt;
+
+		&lt;tr&gt;
+			&lt;td class="foo-cell"&gt; Vassar &lt;/td&gt;
+			&lt;td&gt; 23 &lt;/td&gt;
+			&lt;td&gt; 12 &lt;/td&gt;
+			&lt;td data-value="11"&gt; +11 &lt;/td&gt;
+			&lt;td&gt; $5,600 &lt;/td&gt;
+			&lt;td class="highlight"&gt; 3.1 &lt;/td&gt;
+			&lt;td&gt; $340,000 &lt;/td&gt;
+		&lt;/tr&gt;
+
+		&lt;tr&gt;
+			&lt;td class="foo-cell"&gt; Grinnell &lt;/td&gt;
+			&lt;td&gt; 24 &lt;/td&gt;
+			&lt;td&gt; 14 &lt;/td&gt;
+			&lt;td data-value = '10'&gt; +10 &lt;/td&gt;
+			&lt;td&gt; $10,400 &lt;/td&gt;
+			&lt;td class="highlight"&gt; 2.7 &lt;/td&gt;
+			&lt;td&gt; $880,000 &lt;/td&gt;
+		&lt;/tr&gt;
+
+		&lt;tr&gt;
+			&lt;td class="foo-cell"&gt; U.N.C.-Chapel Hill &lt;/td&gt;
+			&lt;td&gt; 21 &lt;/td&gt;
+			&lt;td&gt; 13 &lt;/td&gt;
+			&lt;td data-value = '8'&gt; +8 &lt;/td&gt;
+			&lt;td&gt; $7,600 &lt;/td&gt;
+			&lt;td class="highlight"&gt; 2.3 &lt;/td&gt;
+			&lt;td&gt; n/a &lt;/td&gt;
+		&lt;/tr&gt;
+
+		&lt;tr&gt;
+			&lt;td class="foo-cell"&gt; Amherst &lt;/td&gt;
+			&lt;td&gt; 20 &lt;/td&gt;
+			&lt;td&gt; 16 &lt;/td&gt;
+			&lt;td data-value = '4'&gt; +4 &lt;/td&gt;
+			&lt;td&gt; $8,400 &lt;/td&gt;
+			&lt;td class="highlight"&gt; 2.0 &lt;/td&gt;
+			&lt;td&gt; $940,000 &lt;/td&gt;
+		&lt;/tr&gt;
+
+		&lt;tr&gt;
+			&lt;td class="foo-cell"&gt; Harvard &lt;/td&gt;
+			&lt;td&gt; 17 &lt;/td&gt;
+			&lt;td&gt; 13 &lt;/td&gt;
+			&lt;td data-value = '4'&gt; +4 &lt;/td&gt;
+			&lt;td&gt; $3,000 &lt;/td&gt;
+			&lt;td class="highlight"&gt; 2.0 &lt;/td&gt;
+			&lt;td&gt; $1,520,000 &lt;/td&gt;
+		&lt;/tr&gt;
+
+		&lt;tr&gt;
+			&lt;td class="foo-cell"&gt; Pomona &lt;/td&gt;
+			&lt;td&gt; 18 &lt;/td&gt;
+			&lt;td&gt; 12 &lt;/td&gt;
+			&lt;td data-value = '6'&gt; +6 &lt;/td&gt;
+			&lt;td&gt; $5,200 &lt;/td&gt;
+			&lt;td class="highlight"&gt; 1.8 &lt;/td&gt;
+			&lt;td&gt; $1,170,000 &lt;/td&gt;
+		&lt;/tr&gt;
+
+		&lt;tr&gt;
+			&lt;td class="foo-cell"&gt; St. Mary's (Ind.) &lt;/td&gt;
+			&lt;td&gt; 24 &lt;/td&gt;
+			&lt;td&gt; 14 &lt;/td&gt;
+			&lt;td data-value = '10'&gt; +10 &lt;/td&gt;
+			&lt;td&gt; $15,900 &lt;/td&gt;
+			&lt;td class="highlight"&gt; 1.8 &lt;/td&gt;
+			&lt;td&gt; $80,000 &lt;/td&gt;
+		&lt;/tr&gt;
+
+		&lt;tr&gt;
+			&lt;td class="foo-cell"&gt; Smith &lt;/td&gt;
+			&lt;td&gt; 23 &lt;/td&gt;
+			&lt;td&gt; 16 &lt;/td&gt;
+			&lt;td data-value = '7'&gt; +7 &lt;/td&gt;
+			&lt;td&gt; $11,600 &lt;/td&gt;
+			&lt;td class="highlight"&gt; 2.2 &lt;/td&gt;
+			&lt;td&gt; $440,000 &lt;/td&gt;
+		&lt;/tr&gt;
+
+		&lt;tr&gt;
+			&lt;td class="foo-cell"&gt; Susquehanna &lt;/td&gt;
+			&lt;td&gt; 25 &lt;/td&gt;
+			&lt;td&gt; 17 &lt;/td&gt;
+			&lt;td data-value = '8'&gt; +8 &lt;/td&gt;
+			&lt;td&gt; $18,000 &lt;/td&gt;
+			&lt;td class="highlight"&gt; 1.7 &lt;/td&gt;
+			&lt;td&gt; $50,000 &lt;/td&gt;
+		&lt;/tr&gt;
+
+		&lt;tr&gt;
+			&lt;td class="foo-cell"&gt; Columbia &lt;/td&gt;
+			&lt;td&gt; 16 &lt;/td&gt;
+			&lt;td&gt; 12 &lt;/td&gt;
+			&lt;td data-value = '4'&gt; +4 &lt;/td&gt;
+			&lt;td&gt; $3,500 &lt;/td&gt;
+			&lt;td class="highlight"&gt; 1.6 &lt;/td&gt;
+			&lt;td&gt; $320,000 &lt;/td&gt;
+		&lt;/tr&gt;
+
+		&lt;tr&gt;
+			&lt;td class="foo-cell"&gt; Rice &lt;/td&gt;
+			&lt;td&gt; 18 &lt;/td&gt;
+			&lt;td&gt; 15 &lt;/td&gt;
+			&lt;td data-value = '3'&gt; +3 &lt;/td&gt;
+			&lt;td&gt; $8,100 &lt;/td&gt;
+			&lt;td class="highlight"&gt; 1.5 &lt;/td&gt;
+			&lt;td&gt; $810,000 &lt;/td&gt;
+		&lt;/tr&gt;
+
+		&lt;tr&gt;
+			&lt;td class="foo-cell"&gt; Kalamazoo &lt;/td&gt;
+			&lt;td&gt; 21 &lt;/td&gt;
+			&lt;td&gt; 13 &lt;/td&gt;
+			&lt;td data-value = '8'&gt; +8 &lt;/td&gt;
+			&lt;td&gt; $13,900 &lt;/td&gt;
+			&lt;td class="highlight"&gt; 1.5 &lt;/td&gt;
+			&lt;td&gt; $190,000 &lt;/td&gt;
+		&lt;/tr&gt;
+
+		&lt;tr&gt;
+			&lt;td class="foo-cell"&gt; Wesleyan &lt;/td&gt;
+			&lt;td&gt; 18 &lt;/td&gt;
+			&lt;td&gt; 12 &lt;/td&gt;
+			&lt;td data-value = '6'&gt; +6 &lt;/td&gt;
+			&lt;td&gt; $8,700 &lt;/td&gt;
+			&lt;td class="highlight"&gt; 1.5 &lt;/td&gt;
+			&lt;td&gt; $200,000 &lt;/td&gt;
+		&lt;/tr&gt;
+
+		&lt;tr&gt;
+			&lt;td class="foo-cell"&gt; Denison &lt;/td&gt;
+			&lt;td&gt; 20 &lt;/td&gt;
+			&lt;td&gt; 11 &lt;/td&gt;
+			&lt;td data-value = '9'&gt; +9 &lt;/td&gt;
+			&lt;td&gt; $11,800 &lt;/td&gt;
+			&lt;td class="highlight"&gt; 1.5 &lt;/td&gt;
+			&lt;td&gt; $330,000 &lt;/td&gt;
+		&lt;/tr&gt;
+
+		&lt;tr&gt;
+			&lt;td class="foo-cell"&gt; Brown &lt;/td&gt;
+			&lt;td&gt; 17 &lt;/td&gt;
+			&lt;td&gt; 12 &lt;/td&gt;
+			&lt;td data-value = '5'&gt; +5 &lt;/td&gt;
+			&lt;td&gt; $7,000 &lt;/td&gt;
+			&lt;td class="highlight"&gt; 1.4 &lt;/td&gt;
+			&lt;td&gt; $350,000 &lt;/td&gt;
+		&lt;/tr&gt;
+
+		&lt;tr&gt;
+			&lt;td class="foo-cell"&gt; Williams &lt;/td&gt;
+			&lt;td&gt; 18 &lt;/td&gt;
+			&lt;td&gt; 14 &lt;/td&gt;
+			&lt;td data-value = '4'&gt; +4 &lt;/td&gt;
+			&lt;td&gt; $9,300 &lt;/td&gt;
+			&lt;td class="highlight"&gt; 1.4 &lt;/td&gt;
+			&lt;td&gt; $840,000 &lt;/td&gt;
+		&lt;/tr&gt;
+
+		&lt;tr&gt;
+			&lt;td class="foo-cell"&gt; Barnard &lt;/td&gt;
+			&lt;td&gt; 19 &lt;/td&gt;
+			&lt;td&gt; 15 &lt;/td&gt;
+			&lt;td data-value = '4'&gt; +4 &lt;/td&gt;
+			&lt;td&gt; $11,100 &lt;/td&gt;
+			&lt;td class="highlight"&gt; 1.4 &lt;/td&gt;
+			&lt;td&gt; $90,000 &lt;/td&gt;
+		&lt;/tr&gt;
+
+		&lt;tr&gt;
+			&lt;td class="foo-cell"&gt; Stanford &lt;/td&gt;
+			&lt;td&gt; 15 &lt;/td&gt;
+			&lt;td&gt; 12 &lt;/td&gt;
+			&lt;td data-value = '3'&gt; +3 &lt;/td&gt;
+			&lt;td&gt; $4,300 &lt;/td&gt;
+			&lt;td class="highlight"&gt; 1.4 &lt;/td&gt;
+			&lt;td&gt; $1,200,000 &lt;/td&gt;
+		&lt;/tr&gt;
+
+		&lt;tr&gt;
+			&lt;td class="foo-cell"&gt; Wheaton (Ill.) &lt;/td&gt;
+			&lt;td&gt; 21 &lt;/td&gt;
+			&lt;td&gt; 13 &lt;/td&gt;
+			&lt;td data-value = '8'&gt; +8 &lt;/td&gt;
+			&lt;td&gt; $14,400 &lt;/td&gt;
+			&lt;td class="highlight"&gt; 1.2 &lt;/td&gt;
+			&lt;td&gt; $110,000 &lt;/td&gt;
+		&lt;/tr&gt;
+
+		&lt;tr&gt;
+			&lt;td class="foo-cell"&gt; Wellesley &lt;/td&gt;
+			&lt;td&gt; 18 &lt;/td&gt;
+			&lt;td&gt; 13 &lt;/td&gt;
+			&lt;td data-value = '5'&gt; +5 &lt;/td&gt;
+			&lt;td&gt; $10,600 &lt;/td&gt;
+			&lt;td class="highlight"&gt; 1.2 &lt;/td&gt;
+			&lt;td&gt; $640,000 &lt;/td&gt;
+		&lt;/tr&gt;
+
+	&lt;/tbody&gt;
+
+&lt;/table&gt;
+
+&lt;div class="margin-top20 pagination text-center"&gt;&lt;!-- PAGINATION --&gt;&lt;/div&gt;
+
+
+
+
+<span class="text-success">&lt;!-- CSS FOOTABLE --&gt;</span>
+&lt;link href="assets/plugins/footable/css/footable.core.min.css" rel="stylesheet" type="text/css" /&gt;
+&lt;link href="assets/plugins/footable/css/footable.standalone.css" rel="stylesheet" type="text/css" /&gt;
+&lt;!--
+	Minimal footable skin 
+	1. remove footable.standalone.css skin first
+	2. add .fooMinimal to the footable table
+	&lt;link href="assets/css/layout-footable-minimal.css" rel="stylesheet" type="text/css" /&gt; 
+--&gt;
+
+
+
+
+<span class="text-success">&lt;!-- JS FOOTABLE --&gt;</span>
+&lt;script type="text/javascript"&gt;
+loadScript(plugin_path + "footable/dist/footable.min.js", function(){
+	loadScript(plugin_path + "footable/dist/footable.sort.min.js", function(){
+		loadScript(plugin_path + "footable/dist/footable.paginate.min.js", function(){ /** remove if pagination not needed **/
+
+			var $ftable = jQuery('.fooTableInit');
+
+
+			/** 01. FOOTABLE INIT
+			******************************************* **/
+			$ftable.footable({
+				breakpoints: {
+					s300: 300,
+					s600: 600
+				}
+			});
+
+
+			/** 01. PER PAGE SWITCH
+			******************************************* **/
+			jQuery('#change-page-size').change(function (e) {
+				e.preventDefault();
+				var pageSize = jQuery(this).val();
+				$ftable.data('page-size', pageSize);
+				$ftable.trigger('footable_initialized');
+			});
+
+			jQuery('#change-nav-size').change(function (e) {
+				e.preventDefault();
+				var navSize = jQuery(this).val();
+				$ftable.data('limit-navigation', navSize);
+				$ftable.trigger('footable_initialized');
+			});
+
+
+			/** 02. BOOTSTRAP 3.x PAGINATION FIX
+			******************************************* **/
+			jQuery("div.pagination").each(function() {
+				jQuery("div.pagination ul").addClass('pagination');
+				jQuery("div.pagination").removeClass('pagination');
+			});
+
+		});
+	});
+});
+&lt;/script"&gt;
+</pre>
+<!-- /pre code -->
+
+						</div>
+						<!-- /panel footer -->
+
+					</div>
+					<!-- /PANEL -->
+
+				</div>
+			</section>
+			<!-- /MIDDLE -->
+
+		</div>
+
+
+
+	
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<script type="text/javascript">
+			loadScript(plugin_path + "footable/dist/footable.min.js", function(){
+				loadScript(plugin_path + "footable/dist/footable.sort.min.js", function(){
+					loadScript(plugin_path + "footable/dist/footable.paginate.min.js", function(){ /** remove if pagination not needed **/
+
+						// footable
+						var $ftable = jQuery('.fooTableInit');
+
+
+						/** 01. FOOTABLE INIT
+						******************************************* **/
+						$ftable.footable({
+							breakpoints: {
+								s300: 300,
+								s600: 600
+							}
+						});
+
+
+						/** 01. PER PAGE SWITCH
+						******************************************* **/
+						jQuery('#change-page-size').change(function (e) {
+							e.preventDefault();
+							var pageSize = jQuery(this).val();
+							$ftable.data('page-size', pageSize);
+							$ftable.trigger('footable_initialized');
+						});
+
+						jQuery('#change-nav-size').change(function (e) {
+							e.preventDefault();
+							var navSize = jQuery(this).val();
+							$ftable.data('limit-navigation', navSize);
+							$ftable.trigger('footable_initialized');
+						});
+
+
+						/** 02. BOOTSTRAP 3.x PAGINATION FIX
+						******************************************* **/
+						jQuery("div.pagination").each(function() {
+							jQuery("div.pagination ul").addClass('pagination');
+							jQuery("div.pagination").removeClass('pagination');
+						});
+
+					});
+				});
+			});
+		</script>
+
+	</body>
+</html>

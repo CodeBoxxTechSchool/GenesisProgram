@@ -1,0 +1,1201 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Smarty Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+		<!-- WEB FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+	</head>
+	<!--
+		.boxed = boxed version
+	-->
+	<body>
+
+
+		<!-- WRAPPER -->
+		<div id="wrapper">
+
+			<!-- 
+				ASIDE 
+				Keep it outside of #wrapper (responsive purpose)
+			-->
+			<aside id="aside">
+				<!--
+					Always open:
+					<li class="active alays-open">
+
+					LABELS:
+						<span class="label label-danger pull-right">1</span>
+						<span class="label label-default pull-right">1</span>
+						<span class="label label-warning pull-right">1</span>
+						<span class="label label-success pull-right">1</span>
+						<span class="label label-info pull-right">1</span>
+				-->
+				<nav id="sideNav"><!-- MAIN MENU -->
+					<ul class="nav nav-list">
+						<li><!-- dashboard -->
+							<a class="dashboard" href="index.html"><!-- warning - url used by default by ajax (if eneabled) -->
+								<i class="main-icon fa fa-dashboard"></i> <span>Dashboard</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-bar-chart-o"></i> <span>Graphs</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="graphs-flot.html">Flot Charts</a></li>
+								<li><a href="graphs-morris.html">Morris Charts</a></li>
+								<li><a href="graphs-inline.html">Inline Charts</a></li>
+								<li><a href="graphs-chartjs.html">Chart.js</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-table"></i> <span>Tables</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="tables-bootstrap.html">Bootstrap Tables</a></li>
+								<li><a href="tables-jqgrid.html">jQuery Grid</a></li>
+								<li><a href="tables-footable.html">jQuery Footable</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Datatables
+									</a>
+									<ul>
+										<li><a href="tables-datatable-managed.html">Managed Datatables</a></li>
+										<li><a href="tables-datatable-editable.html">Editable Datatables</a></li>
+										<li><a href="tables-datatable-advanced.html">Advanced Datatables</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-pencil-square-o"></i> <span>Forms</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="form-elements.html">Smarty Elements</a></li>
+								<li><a href="form-masked-inputs.html">Masked Inputs</a></li>
+								<li><a href="form-pickers.html">Pickers</a></li>
+								<li><a href="form-ui-sliders.html">UI Sliders</a></li>
+								<li><a href="form-validation.html">Validation Form</a></li>
+								<li><a href="form-html-editors.html">Html Editors</a></li>
+								<li><a href="form-autosuggest.html">Autosuggest</a></li>
+								<li><a href="form-x-editable.html">Form X-Editable</a></li>
+								<li><a href="form-dropzone.html">Dropzone File Upload</a></li>
+							</ul>
+						</li>
+						<li class="active">
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-gears"></i> <span>UI Features</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="ui-portlets.html">Portlets</a></li>
+								<li><a href="ui-buttons.html">Buttons</a></li>
+								<li class="active">
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Icons
+									</a>
+									<ul>
+										<li><a href="ui-icons-fontawsome.html">Fontawsome</a></li>
+										<li><a href="ui-icons-etline.html">Et-Line Icons</a></li>
+										<li><a href="ui-icons-glyphicons.html">Glyph Icons</a></li>
+										<li class="active"><a href="ui-icons-flags.html">Flags</a></li>
+									</ul>
+								</li>
+								<li><a href="ui-alerts-dialogs.html">Alerts &amp; Dialogs</a></li>
+								<li><a href="ui-tabs-acordion-navs.html">Tabs, Acordion &amp; Navs</a></li>
+								<li><a href="ui-knob.html">Knob Circles</a></li>
+								<li><a href="ui-nestable.html">Nestable List</a></li>
+								<li><a href="ui-toastr.html">Toastr Notifications</a></li>
+								<li><a href="ui-modals.html">Modals</a></li>
+								<li><a href="ui-grid.html">Grid</a></li>
+								<li><a href="ui-google-maps.html">Google Maps</a></li>
+								<li><a href="ui-vector-maps.html">Vector Maps</a></li>
+								<li><a href="ui-essentials.html">Essentials</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										<i class="fa fa-folder-open"></i>
+										Deep Navigation
+									</a>
+									<!-- 3rd Level -->
+									<ul>
+										<li>
+											<a href="#">
+												3rd Level
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-menu-arrow pull-right"></i>
+												<i class="fa fa-folder-open"></i>
+												4rd Level
+											</a>
+											<!-- 4th Level -->
+											<ul>
+												<li>
+													<a href="#">
+														4th Level
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-menu-arrow pull-right"></i>
+														<i class="fa fa-folder-open"></i>
+														5th Level
+													</a>
+													<!-- 5th Level -->
+													<ul>
+														<li>
+															<a href="#">
+																5th level
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<i class="fa fa-menu-arrow pull-right"></i>
+																<i class="fa fa-folder-open"></i>
+																6th level
+															</a>
+															<!-- 6th Level -->
+															<ul>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+															</ul><!-- /6th Level -->
+														</li>
+													</ul><!-- /5th Level -->
+												</li>
+											</ul><!-- /4th Level -->
+										</li>
+									</ul><!-- /3rd Level -->
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-book"></i> <span>Pages</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="page-invoice.html">Invoice</a></li>
+								<li><a href="page-login.html">Login</a></li>
+								<li><a href="page-register.html">Register</a></li>
+								<li><a href="page-lock.html">Lock Screen</a></li>
+								<li><a href="page-forum.html">Forum</a></li>
+								<li><a href="page-404.html">Error 404</a></li>
+								<li><a href="page-500.html">Error 500</a></li>
+								<li><a href="page-pricing.html">Pricing Table</a></li>
+								<li><a href="page-search.html">Search Result</a></li>
+								<li><a href="page-sidebar.html">Sidebar Page</a></li>
+								<li><a href="page-user-profile.html">User Profile</a></li>
+								<li><a href="page-blank-1.html">Blank Page</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+					</ul>
+
+					<!-- SECOND MAIN LIST -->
+					<h3>MORE</h3>
+					<ul class="nav nav-list">
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+						<li>
+							<a href="../../HTML_BS4/start.html">
+								<i class="main-icon fa fa-link"></i>
+								<span class="label label-danger pull-right">PRO</span> <span>Frontend</span>
+							</a>
+						</li>
+					</ul>
+
+				</nav>
+
+				<span id="asidebg"><!-- aside fixed background --></span>
+			</aside>
+			<!-- /ASIDE -->
+
+
+			<!-- HEADER -->
+			<header id="header">
+
+				<!-- Mobile Button -->
+				<button id="mobileMenuBtn"></button>
+
+				<!-- Logo -->
+				<span class="logo pull-left">
+					<img src="assets/images/logo_light.png" alt="admin panel" height="35" />
+				</span>
+
+				<form method="get" action="page-search.html" class="search pull-left hidden-xs">
+					<input type="text" class="form-control" name="k" placeholder="Search for something..." />
+				</form>
+
+				<nav>
+
+					<!-- OPTIONS LIST -->
+					<ul class="nav pull-right">
+
+						<!-- USER OPTIONS -->
+						<li class="dropdown pull-left">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+								<img class="user-avatar" alt="" src="assets/images/noavatar.jpg" height="34" /> 
+								<span class="user-name">
+									<span class="hidden-xs">
+										John Doe <i class="fa fa-angle-down"></i>
+									</span>
+								</span>
+							</a>
+							<ul class="dropdown-menu hold-on-click">
+								<li><!-- my calendar -->
+									<a href="calendar.html"><i class="fa fa-calendar"></i> Calendar</a>
+								</li>
+								<li><!-- my inbox -->
+									<a href="#"><i class="fa fa-envelope"></i> Inbox
+										<span class="pull-right label label-default">0</span>
+									</a>
+								</li>
+								<li><!-- settings -->
+									<a href="page-user-profile.html"><i class="fa fa-cogs"></i> Settings</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li><!-- lockscreen -->
+									<a href="page-lock.html"><i class="fa fa-lock"></i> Lock Screen</a>
+								</li>
+								<li><!-- logout -->
+									<a href="page-login.html"><i class="fa fa-power-off"></i> Log Out</a>
+								</li>
+							</ul>
+						</li>
+						<!-- /USER OPTIONS -->
+
+					</ul>
+					<!-- /OPTIONS LIST -->
+
+				</nav>
+
+			</header>
+			<!-- /HEADER -->
+
+
+			<!-- 
+				MIDDLE 
+			-->
+			<section id="middle">
+
+
+				<!-- page title -->
+				<header id="page-header">
+					<h1>Flags</h1>
+					<ol class="breadcrumb">
+						<li><a href="#">UI</a></li>
+						<li><a href="#">Icons</a></li>
+						<li class="active">Flags</li>
+					</ol>
+				</header>
+				<!-- /page title -->
+
+				<div id="content" class="padding-20">
+
+					<!-- Panel Default -->
+					<div id="panel-1" class="panel panel-default">
+
+						<div class="panel-heading">
+
+							<span class="elipsis"><!-- panel title -->
+								<strong>FLAGS</strong>
+							</span>
+
+							<!-- right options -->
+							<ul class="options pull-right list-inline">
+								<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+								<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+								<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+							</ul>
+							<!-- /right options -->
+
+						</div>
+
+						<!-- panel content -->
+						<div class="panel-body">
+
+
+							<div class="iconFlags">
+
+								<!-- inline search -->
+								<div class="well well-sm">
+									<div class="input-group fullwidth">
+										<input class="form-control input-lg" type="text" id="inline-search" placeholder="Icon search...">
+										<span class="input-group-addon"><i class="fa fa-lg fa-search"></i></span>
+									</div>
+								</div>
+								<!-- /inline search -->
+
+								<hr />
+
+								<h4 class="page-header">America</h4>		
+								<div class="row">
+									
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ai.png" alt="Anguilla"> Anguilla
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ag.png" alt="Antigua and Barbuda"> Antigua and Barbuda
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ar.png" alt="Argentina"> Argentina
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/aw.png" alt="Aruba"> Aruba
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/bs.png" alt="Bahamas"> Bahamas
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/bb.png" alt="Barbados"> Barbados
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/bz.png" alt="Belize"> Belize
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/bm.png" alt="Bermuda"> Bermuda
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/bo.png" alt="Bolivia, Plurinational State of"> Bolivia, Plurinational State of
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/br.png" alt="Brazil"> Brazil
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ca.png" alt="Canada"> Canada
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ky.png" alt="Cayman Islands"> Cayman Islands
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/cl.png" alt="Chile"> Chile
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/co.png" alt="Colombia"> Colombia
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/cr.png" alt="Costa Rica"> Costa Rica
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/cu.png" alt="Cuba"> Cuba
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/dm.png" alt="Dominica"> Dominica
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/do.png" alt="Dominican Republic"> Dominican Republic
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ec.png" alt="Ecuador"> Ecuador
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/sv.png" alt="El Salvador"> El Salvador
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/fk.png" alt="Falkland Islands (Malvinas)"> Falkland Islands (Malvinas)
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/gf.png" alt="French Guiana"> French Guiana
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/gl.png" alt="Greenland"> Greenland
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/gd.png" alt="Grenada"> Grenada
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/gp.png" alt="Guadeloupe"> Guadeloupe
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/gt.png" alt="Guatemala"> Guatemala
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/gy.png" alt="Guyana"> Guyana
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ht.png" alt="Haiti"> Haiti
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/hn.png" alt="Honduras"> Honduras
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/jm.png" alt="Jamaica"> Jamaica
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/mq.png" alt="Martinique"> Martinique
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/mx.png" alt="Mexico"> Mexico
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ms.png" alt="Montserrat"> Montserrat
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/an.png" alt="Netherlands Antilles"> Netherlands Antilles
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ni.png" alt="Nicaragua"> Nicaragua
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/pa.png" alt="Panama"> Panama
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/py.png" alt="Paraguay"> Paraguay
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/pe.png" alt="Peru"> Peru
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/pr.png" alt="Puerto Rico"> Puerto Rico
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/kn.png" alt="Saint Kitts and Nevis"> Saint Kitts and Nevis
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/lc.png" alt="Saint Lucia"> Saint Lucia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/pm.png" alt="Saint Pierre and Miquelon"> Saint Pierre and Miquelon
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/vc.png" alt="Saint Vincent and the Grenadines"> Saint Vincent and the Grenadines
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/sr.png" alt="Suriname"> Suriname
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/tt.png" alt="Trinidad and Tobago"> Trinidad and Tobago
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/tc.png" alt="Turks and Caicos Islands"> Turks and Caicos Islands
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/us.png" alt="United States"> United States
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/uy.png" alt="Uruguay"> Uruguay
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ve.png" alt="Venezuela, Bolivarian Republic of"> Venezuela, Bolivarian Republic of
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/vg.png" alt="Virgin Islands, British"> Virgin Islands, British
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/vi.png" alt="Virgin Islands, U.S."> Virgin Islands, U.S.
+									</div>
+								</div>
+
+								<h4 class="page-header">Europe</h4>
+								<div class="row">
+									
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/al.png" alt="Albania"> Albania
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ad.png" alt="Andorra"> Andorra
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/at.png" alt="Austria"> Austria
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/by.png" alt="Belarus"> Belarus
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/be.png" alt="Belgium"> Belgium
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ba.png" alt="Bosnia and Herzegovina"> Bosnia and Herzegovina
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/bg.png" alt="Bulgaria"> Bulgaria
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/hr.png" alt="Croatia"> Croatia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/cz.png" alt="Czech Republic"> Czech Republic
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/dk.png" alt="Denmark"> Denmark
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ee.png" alt="Estonia"> Estonia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/fo.png" alt="Faroe Islands"> Faroe Islands
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/fi.png" alt="Finland"> Finland
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/fr.png" alt="France"> France
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/de.png" alt="Germany"> Germany
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/gi.png" alt="Gibraltar"> Gibraltar
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/gr.png" alt="Greece"> Greece
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/va.png" alt="Holy See (Vatican City State)"> Holy See (Vatican City State)
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/hu.png" alt="Hungary"> Hungary
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/is.png" alt="Iceland"> Iceland
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ie.png" alt="Ireland"> Ireland
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/it.png" alt="Italy"> Italy
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/lv.png" alt="Latvia"> Latvia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/li.png" alt="Liechtenstein"> Liechtenstein
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/lt.png" alt="Lithuania"> Lithuania
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/lu.png" alt="Luxembourg"> Luxembourg
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/mk.png" alt="Macedonia, The Former Yugoslav Republic of"> Macedonia, The Former Yugoslav Republic of
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/mt.png" alt="Malta"> Malta
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/md.png" alt="Moldova, Republic of"> Moldova, Republic of
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/mc.png" alt="Monaco"> Monaco
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/me.png" alt="Montenegro"> Montenegro
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/nl.png" alt="Netherlands"> Netherlands
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/no.png" alt="Norway"> Norway
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/pl.png" alt="Poland"> Poland
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/pt.png" alt="Portugal"> Portugal
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ro.png" alt="Romania"> Romania
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ru.png" alt="Russian Federation"> Russian Federation
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/sm.png" alt="San Marino"> San Marino
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/rs.png" alt="Serbia"> Serbia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/sk.png" alt="Slovakia"> Slovakia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/si.png" alt="Slovenia"> Slovenia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/es.png" alt="Spain"> Spain
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/se.png" alt="Sweden"> Sweden
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ch.png" alt="Switzerland"> Switzerland
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ua.png" alt="Ukraine"> Ukraine
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/gb.png" alt="United Kingdom"> United Kingdom
+									</div>
+								</div>
+
+								<h4 class="page-header">Asia</h4>
+								<div class="row">
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/af.png" alt="Afghanistan"> Afghanistan
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/am.png" alt="Armenia"> Armenia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/az.png" alt="Azerbaijan"> Azerbaijan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/bh.png" alt="Bahrain"> Bahrain
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/bd.png" alt="Bangladesh"> Bangladesh
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/bt.png" alt="Bhutan"> Bhutan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/bn.png" alt="Brunei Darussalam"> Brunei Darussalam
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/kh.png" alt="Cambodia"> Cambodia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/cn.png" alt="China"> China
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/cy.png" alt="Cyprus"> Cyprus
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ge.png" alt="Georgia"> Georgia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/hk.png" alt="Hong Kong"> Hong Kong
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/in.png" alt="India"> India
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/id.png" alt="Indonesia"> Indonesia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ir.png" alt="Iran, Islamic Republic of"> Iran, Islamic Republic of
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/iq.png" alt="Iraq"> Iraq
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/il.png" alt="Israel"> Israel
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/jp.png" alt="Japan"> Japan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/jo.png" alt="Jordan"> Jordan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/kz.png" alt="Kazakhstan"> Kazakhstan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/kp.png" alt="Korea, Democratic People's Republic of"> Korea, Democratic People's Republic of
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/kr.png" alt="Korea, Republic of"> Korea, Republic of
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/kw.png" alt="Kuwait"> Kuwait
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/kg.png" alt="Kyrgyzstan"> Kyrgyzstan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/la.png" alt="Lao People's Democratic Republic"> Lao People's Democratic Republic
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/lb.png" alt="Lebanon"> Lebanon
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/mo.png" alt="Macao"> Macao
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/my.png" alt="Malaysia"> Malaysia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/mv.png" alt="Maldives"> Maldives
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/mn.png" alt="Mongolia"> Mongolia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/mm.png" alt="Myanmar"> Myanmar
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/np.png" alt="Nepal"> Nepal
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/om.png" alt="Oman"> Oman
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/pk.png" alt="Pakistan"> Pakistan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ps.png" alt="Palestinian Territory, Occupied"> Palestinian Territory, Occupied
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ph.png" alt="Philippines"> Philippines
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/qa.png" alt="Qatar"> Qatar
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/sa.png" alt="Saudi Arabia"> Saudi Arabia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/sg.png" alt="Singapore"> Singapore
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/lk.png" alt="Sri Lanka"> Sri Lanka
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/sy.png" alt="Syrian Arab Republic"> Syrian Arab Republic
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/tw.png" alt="Taiwan, Province of China"> Taiwan, Province of China
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/tj.png" alt="Tajikistan"> Tajikistan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/th.png" alt="Thailand"> Thailand
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/tl.png" alt="Timor-Leste"> Timor-Leste
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/tr.png" alt="Turkey"> Turkey
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/tm.png" alt="Turkmenistan"> Turkmenistan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ae.png" alt="United Arab Emirates"> United Arab Emirates
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/uz.png" alt="Uzbekistan"> Uzbekistan
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/vn.png" alt="Viet Nam"> Viet Nam
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ye.png" alt="Yemen"> Yemen
+									</div>
+								</div>
+
+								<h4 class="page-header">Australia and Oceania</h4>
+								<div class="row">
+									
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/as.png" alt="American Samoa"> American Samoa
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/au.png" alt="Australia"> Australia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ck.png" alt="Cook Islands"> Cook Islands
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/fj.png" alt="Fiji"> Fiji
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/pf.png" alt="French Polynesia"> French Polynesia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/gu.png" alt="Guam"> Guam
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ki.png" alt="Kiribati"> Kiribati
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/mh.png" alt="Marshall Islands"> Marshall Islands
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/fm.png" alt="Micronesia, Federated States of"> Micronesia, Federated States of
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/nr.png" alt="Nauru"> Nauru
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/nc.png" alt="New Caledonia"> New Caledonia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/nz.png" alt="New Zealand"> New Zealand
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/nu.png" alt="Niue"> Niue
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/nf.png" alt="Norfolk Island"> Norfolk Island
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/mp.png" alt="Northern Mariana Islands"> Northern Mariana Islands
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/pw.png" alt="Palau"> Palau
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/pg.png" alt="Papua New Guinea"> Papua New Guinea
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/pn.png" alt="Pitcairn"> Pitcairn
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ws.png" alt="Samoa"> Samoa
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/sb.png" alt="Solomon Islands"> Solomon Islands
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/tk.png" alt="Tokelau"> Tokelau
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/to.png" alt="Tonga"> Tonga
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/tv.png" alt="Tuvalu"> Tuvalu
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/vu.png" alt="Vanuatu"> Vanuatu
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/wf.png" alt="Wallis and Futuna"> Wallis and Futuna
+									</div>
+									
+								</div>
+
+								<h4 class="page-header">Africa</h4>
+								<div class="row">
+
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/dz.png" alt="Algeria"> Algeria
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ao.png" alt="Angola"> Angola
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/bj.png" alt="Benin"> Benin
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/bw.png" alt="Botswana"> Botswana
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/bf.png" alt="Burkina Faso"> Burkina Faso
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/bi.png" alt="Burundi"> Burundi
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/cm.png" alt="Cameroon"> Cameroon
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/cv.png" alt="Cape Verde"> Cape Verde
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/cf.png" alt="Central African Republic"> Central African Republic
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/td.png" alt="Chad"> Chad
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/km.png" alt="Comoros"> Comoros
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/cg.png" alt="Congo"> Congo
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/cd.png" alt="Congo, The Democratic Republic of the"> Congo, The Democratic Republic of the
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ci.png" alt="Côte d'Ivoire"> Côte d'Ivoire
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/dj.png" alt="Djibouti"> Djibouti
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/eg.png" alt="Egypt"> Egypt
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/gq.png" alt="Equatorial Guinea"> Equatorial Guinea
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/er.png" alt="Eritrea"> Eritrea
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/et.png" alt="Ethiopia"> Ethiopia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ga.png" alt="Gabon"> Gabon
+									</div>			
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/gm.png" alt="Gambia"> Gambia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/gh.png" alt="Ghana"> Ghana
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/gn.png" alt="Guinea"> Guinea
+									</div>			
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/gw.png" alt="Guinea-Bissau"> Guinea-Bissau
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ke.png" alt="Kenya"> Kenya
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ls.png" alt="Lesotho"> Lesotho
+									</div>			
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/lr.png" alt="Liberia"> Liberia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ly.png" alt="Libya"> Libya
+									</div>				
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/mg.png" alt="Madagascar"> Madagascar
+									</div>			
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/mw.png" alt="Malawi"> Malawi
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ml.png" alt="Mali"> Mali
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/mr.png" alt="Mauritania"> Mauritania
+									</div>			
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/mu.png" alt="Mauritius"> Mauritius
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/yt.png" alt="Mayotte"> Mayotte
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ma.png" alt="Morocco"> Morocco
+									</div>			
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/mz.png" alt="Mozambique"> Mozambique
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/na.png" alt="Namibia"> Namibia
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ne.png" alt="Niger"> Niger
+									</div>			
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ng.png" alt="Nigeria"> Nigeria
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/rw.png" alt="Rwanda"> Rwanda
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/re.png" alt="Réunion"> Réunion
+									</div>			
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/sh.png" alt="Saint Helena"> Saint Helena
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/st.png" alt="Sao Tome and Principe"> Sao Tome and Principe
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/sn.png" alt="Senegal"> Senegal
+									</div>			
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/sc.png" alt="Seychelles"> Seychelles
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/sl.png" alt="Sierra Leone"> Sierra Leone
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/so.png" alt="Somalia"> Somalia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/za.png" alt="South Africa"> South Africa
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/sd.png" alt="Sudan"> Sudan
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/sz.png" alt="Swaziland"> Swaziland
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/tz.png" alt="Tanzania"> Tanzania
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/tg.png" alt="Togo"> Togo
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/tn.png" alt="Tunisia"> Tunisia
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/ug.png" alt="Uganda"> Uganda
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/eh.png" alt="Western Sahara"> Western Sahara
+									</div>	
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/zm.png" alt="Zambia"> Zambia
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/zw.png" alt="Zimbabwe"> Zimbabwe
+									</div>	
+								</div>
+
+
+								<h4 class="page-header">Other areas</h4>
+								<div class="row">
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/bv.png" alt="Bouvet Island"> Bouvet Island
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/io.png" alt="British Indian Ocean Territory"> British Indian Ocean Territory
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/england.png" alt="England"> England
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/europeanunion.png" alt="European Union"> European Union
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/tf.png" alt="French Southern Territories"> French Southern Territories
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/hm.png" alt="Heard Island and McDonald Islands"> Heard Island and McDonald Islands
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/scotland.png" alt="Scotland"> Scotland
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/gs.png" alt="South Georgia and the South Sandwich Islands"> South Georgia and the South Sandwich Islands
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/um.png" alt="United States Minor Outlying Islands"> United States Minor Outlying Islands
+									</div>
+									<div class="col-xs-6 col-md-3 col-sm-4 flag-icon">
+										<img src="assets/images/flags/wales.png" alt="Wales"> Wales
+									</div>
+									
+								</div>
+
+								<hr />
+
+<pre>
+Usage:
+&#60;img src="assets/images/flags/us.png" alt="United States" /&#62;
+
+Output:  <img src="assets/images/flags/us.png" alt="United States" />
+
+Note: Click the icon to copy the image name
+</pre>
+
+							</div>
+
+						</div>
+					
+					</div>
+
+				</div>
+			</section>
+			<!-- /MIDDLE -->
+
+		</div>
+
+
+
+	
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<script type="text/javascript">/* <![CDATA[ */
+
+			/*
+				Icon prompt
+			*/
+			jQuery(".iconFlags div.flag-icon").bind("click", function(e) {
+				if(!jQuery(this).hasClass('external')) {
+					window.prompt ("Copy to clipboard: Ctrl+C, Enter/Esc", jQuery("img", this).attr('src')/*.replace('assets/images/flags/', '')*/);
+					e.preventDefault();
+				}
+			});
+
+			/* 
+				Inline Search 
+			*/
+			jQuery("#inline-search").keyup(function() {
+				var keywords = jQuery.trim(this.value);
+				if (keywords == "") {
+					_unfilter();
+				}
+				else {
+					_filter(keywords);
+				}
+			});
+
+			function _filter(keywords) {
+				jQuery("div.flag-icon, h4.page-header").hide(); 
+				jQuery('div.flag-icon>img[alt*="'+capitaliseFirstLetter(keywords)+'"]').parent().show();
+			}
+
+			function _unfilter() {
+				jQuery("div.flag-icon, h4.page-header").show()
+			}
+
+			function capitaliseFirstLetter(string) {
+				var string = string.toLowerCase();
+				return string.charAt(0).toUpperCase() + string.slice(1);
+			}
+
+		/* ]]> */</script>
+
+	</body>
+</html>

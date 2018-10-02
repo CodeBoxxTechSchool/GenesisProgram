@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Smarty Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+		<!-- WEB FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+	</head>
+	<!--
+		.boxed = boxed version
+	-->
+	<body>
+
+
+		<!-- WRAPPER -->
+		<div id="wrapper">
+
+			<!-- 
+				ASIDE 
+				Keep it outside of #wrapper (responsive purpose)
+			-->
+			<aside id="aside">
+				<!--
+					Always open:
+					<li class="active alays-open">
+
+					LABELS:
+						<span class="label label-danger pull-right">1</span>
+						<span class="label label-default pull-right">1</span>
+						<span class="label label-warning pull-right">1</span>
+						<span class="label label-success pull-right">1</span>
+						<span class="label label-info pull-right">1</span>
+				-->
+				<nav id="sideNav"><!-- MAIN MENU -->
+					<ul class="nav nav-list">
+						<li><!-- dashboard -->
+							<a class="dashboard" href="index.html"><!-- warning - url used by default by ajax (if eneabled) -->
+								<i class="main-icon fa fa-dashboard"></i> <span>Dashboard</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-bar-chart-o"></i> <span>Graphs</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="graphs-flot.html">Flot Charts</a></li>
+								<li><a href="graphs-morris.html">Morris Charts</a></li>
+								<li><a href="graphs-inline.html">Inline Charts</a></li>
+								<li><a href="graphs-chartjs.html">Chart.js</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-table"></i> <span>Tables</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="tables-bootstrap.html">Bootstrap Tables</a></li>
+								<li><a href="tables-jqgrid.html">jQuery Grid</a></li>
+								<li><a href="tables-footable.html">jQuery Footable</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Datatables
+									</a>
+									<ul>
+										<li><a href="tables-datatable-managed.html">Managed Datatables</a></li>
+										<li><a href="tables-datatable-editable.html">Editable Datatables</a></li>
+										<li><a href="tables-datatable-advanced.html">Advanced Datatables</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="active">
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-pencil-square-o"></i> <span>Forms</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="form-elements.html">Smarty Elements</a></li>
+								<li><a href="form-masked-inputs.html">Masked Inputs</a></li>
+								<li><a href="form-pickers.html">Pickers</a></li>
+								<li class="active"><a href="form-ui-sliders.html">UI Sliders</a></li>
+								<li><a href="form-validation.html">Validation Form</a></li>
+								<li><a href="form-html-editors.html">Html Editors</a></li>
+								<li><a href="form-autosuggest.html">Autosuggest</a></li>
+								<li><a href="form-x-editable.html">Form X-Editable</a></li>
+								<li><a href="form-dropzone.html">Dropzone File Upload</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-gears"></i> <span>UI Features</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="ui-portlets.html">Portlets</a></li>
+								<li><a href="ui-buttons.html">Buttons</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Icons
+									</a>
+									<ul>
+										<li><a href="ui-icons-fontawsome.html">Fontawsome</a></li>
+										<li><a href="ui-icons-etline.html">Et-Line Icons</a></li>
+										<li><a href="ui-icons-glyphicons.html">Glyph Icons</a></li>
+										<li><a href="ui-icons-flags.html">Flags</a></li>
+									</ul>
+								</li>
+								<li><a href="ui-alerts-dialogs.html">Alerts &amp; Dialogs</a></li>
+								<li><a href="ui-tabs-acordion-navs.html">Tabs, Acordion &amp; Navs</a></li>
+								<li><a href="ui-knob.html">Knob Circles</a></li>
+								<li><a href="ui-nestable.html">Nestable List</a></li>
+								<li><a href="ui-toastr.html">Toastr Notifications</a></li>
+								<li><a href="ui-modals.html">Modals</a></li>
+								<li><a href="ui-grid.html">Grid</a></li>
+								<li><a href="ui-google-maps.html">Google Maps</a></li>
+								<li><a href="ui-vector-maps.html">Vector Maps</a></li>
+								<li><a href="ui-essentials.html">Essentials</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										<i class="fa fa-folder-open"></i>
+										Deep Navigation
+									</a>
+									<!-- 3rd Level -->
+									<ul>
+										<li>
+											<a href="#">
+												3rd Level
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-menu-arrow pull-right"></i>
+												<i class="fa fa-folder-open"></i>
+												4rd Level
+											</a>
+											<!-- 4th Level -->
+											<ul>
+												<li>
+													<a href="#">
+														4th Level
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-menu-arrow pull-right"></i>
+														<i class="fa fa-folder-open"></i>
+														5th Level
+													</a>
+													<!-- 5th Level -->
+													<ul>
+														<li>
+															<a href="#">
+																5th level
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<i class="fa fa-menu-arrow pull-right"></i>
+																<i class="fa fa-folder-open"></i>
+																6th level
+															</a>
+															<!-- 6th Level -->
+															<ul>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+															</ul><!-- /6th Level -->
+														</li>
+													</ul><!-- /5th Level -->
+												</li>
+											</ul><!-- /4th Level -->
+										</li>
+									</ul><!-- /3rd Level -->
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-book"></i> <span>Pages</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="page-invoice.html">Invoice</a></li>
+								<li><a href="page-login.html">Login</a></li>
+								<li><a href="page-register.html">Register</a></li>
+								<li><a href="page-lock.html">Lock Screen</a></li>
+								<li><a href="page-forum.html">Forum</a></li>
+								<li><a href="page-404.html">Error 404</a></li>
+								<li><a href="page-500.html">Error 500</a></li>
+								<li><a href="page-pricing.html">Pricing Table</a></li>
+								<li><a href="page-search.html">Search Result</a></li>
+								<li><a href="page-sidebar.html">Sidebar Page</a></li>
+								<li><a href="page-user-profile.html">User Profile</a></li>
+								<li><a href="page-blank-1.html">Blank Page</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+					</ul>
+
+					<!-- SECOND MAIN LIST -->
+					<h3>MORE</h3>
+					<ul class="nav nav-list">
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+						<li>
+							<a href="../../HTML_BS4/start.html">
+								<i class="main-icon fa fa-link"></i>
+								<span class="label label-danger pull-right">PRO</span> <span>Frontend</span>
+							</a>
+						</li>
+					</ul>
+
+				</nav>
+
+				<span id="asidebg"><!-- aside fixed background --></span>
+			</aside>
+			<!-- /ASIDE -->
+
+
+			<!-- HEADER -->
+			<header id="header">
+
+				<!-- Mobile Button -->
+				<button id="mobileMenuBtn"></button>
+
+				<!-- Logo -->
+				<span class="logo pull-left">
+					<img src="assets/images/logo_light.png" alt="admin panel" height="35" />
+				</span>
+
+				<form method="get" action="page-search.html" class="search pull-left hidden-xs">
+					<input type="text" class="form-control" name="k" placeholder="Search for something..." />
+				</form>
+
+				<nav>
+
+					<!-- OPTIONS LIST -->
+					<ul class="nav pull-right">
+
+						<!-- USER OPTIONS -->
+						<li class="dropdown pull-left">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+								<img class="user-avatar" alt="" src="assets/images/noavatar.jpg" height="34" /> 
+								<span class="user-name">
+									<span class="hidden-xs">
+										John Doe <i class="fa fa-angle-down"></i>
+									</span>
+								</span>
+							</a>
+							<ul class="dropdown-menu hold-on-click">
+								<li><!-- my calendar -->
+									<a href="calendar.html"><i class="fa fa-calendar"></i> Calendar</a>
+								</li>
+								<li><!-- my inbox -->
+									<a href="#"><i class="fa fa-envelope"></i> Inbox
+										<span class="pull-right label label-default">0</span>
+									</a>
+								</li>
+								<li><!-- settings -->
+									<a href="page-user-profile.html"><i class="fa fa-cogs"></i> Settings</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li><!-- lockscreen -->
+									<a href="page-lock.html"><i class="fa fa-lock"></i> Lock Screen</a>
+								</li>
+								<li><!-- logout -->
+									<a href="page-login.html"><i class="fa fa-power-off"></i> Log Out</a>
+								</li>
+							</ul>
+						</li>
+						<!-- /USER OPTIONS -->
+
+					</ul>
+					<!-- /OPTIONS LIST -->
+
+				</nav>
+
+			</header>
+			<!-- /HEADER -->
+
+
+			<!-- 
+				MIDDLE 
+			-->
+			<section id="middle">
+
+
+				<!-- page title -->
+				<header id="page-header">
+					<h1>Form UI Sliders</h1>
+					<ol class="breadcrumb">
+						<li><a href="#">Forms</a></li>
+						<li class="active">UI Sliders</li>
+					</ol>
+				</header>
+				<!-- /page title -->
+
+
+				<div id="content" class="padding-20">
+
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<b>UI Sliders - Based on jQuery UI</b><br />
+							See the bottom of the page for javascript code.
+						</div>
+					</div>
+
+
+					<!-- ------ -->
+					<div class="panel panel-default">
+						<div class="panel-heading panel-heading-transparent">
+							<strong>UI Sliders</strong>
+						</div>
+
+						<div class="panel-body">
+
+							   <div class="margin-bottom-40">
+									<div class="margin-bottom-10">
+										Select a month: <span id="monthOutput"></span>
+									</div>              
+									<div class="slider-wrapper primary-slider">
+										<div id="slider"></div>
+									</div>
+								</div>
+								
+
+								<div class="margin-bottom-20">
+									<div class="slider-wrapper danger-slider">
+										<div id="slider1"></div>
+									</div>
+								</div>
+								
+								<div class="section margin-bottom-40">
+									<div class="margin-bottom-10">
+										<label for="amount">Maximum price:</label>
+										<input type="hidden" name="amount" id="amount" class="form-control"> <!-- hidden input -->
+									</div>         
+									<div class="slider-wrapper warning-slider">
+										<div id="slider2"></div>
+									</div>
+								</div>
+								
+								<div class="margin-bottom-40">
+									<div class="margin-bottom-10">
+										<label for="bedrooms">Number of bedrooms:</label>
+										<input type="hidden" name="bedrooms" id="bedrooms" class="form-control"> <!-- hidden input -->
+									</div>          
+									<div class="slider-wrapper info-slider">
+										<div id="slider3"></div>
+									</div>
+								</div>
+
+
+							   <div class="row">
+									<div class="col-md-6 col-sm-6">
+										<div class="margin-bottom-20">
+											<label for="guests">Update select value</label>
+											<label class="field select">
+												<select class="form-control" name="guests" id="guests">
+													<option>1</option>
+													<option selected="selected">2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+													<option>6</option>
+													<option>7</option>
+													<option>8</option>
+													<option>9</option>
+													<option>10</option>                                
+												</select>
+												<i class="arrow double"></i>
+											</label> 
+										</div>            
+										<div class="slider-wrapper">
+											<div id="slider4"></div>
+										</div>
+									</div>
+									
+									<div class="col-md-6 col-sm-6">
+										<div class="margin-bottom-20">
+											<label for="donation">Update input value</label>
+											<label class="field">
+												<input type="text" id="donation" class="form-control">
+											</label> 
+										</div>             
+										<div class="slider-wrapper black-slider">
+											<div id="slider5"></div>
+										</div>
+									</div>
+								</div>
+
+						</div>
+
+						<div class="panel-footer">
+							<a href="javascript:;" onclick="jQuery('#pre-0').slideToggle();" class="btn btn-info btn-xs">Show Code</a>
+<pre id="pre-0" class="text-left noradius text-danger softhide margin-top-20 margin-bottom-0">
+<span class="text-success">&lt;!-- 
+AVAILABLE COLORS:
+.primary-slider
+.success-slider
+.warning-slider
+.danger-slider
+.info-slider
+.purple-slider
+.black-slider
+
+CREATE YOUR OWN COLOR - EXAMPLE:
+.<b>warning</b>-slider .ui-slider .ui-slider-handle{ border-color:<b>#ed9c28</b>; }
+.<b>warning</b>-slider .ui-slider .ui-slider-handle:before,
+.<b>warning</b>-slider .ui-slider .ui-slider-range { background-color:<b>#ed9c28</b>;  }
+--&gt;</span>
+
+
+<span class="text-success">&lt;!-- Slider 0 --&gt;</span>
+&lt;div class="margin-bottom-40"&gt;
+&lt;div class="margin-bottom-10"&gt;
+	Select a month: &lt;span id="monthOutput"&gt;&lt;/span&gt;
+&lt;/div&gt;                 
+&lt;div class="slider-wrapper primary-slider"&gt;
+	&lt;div id="slider"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+<span class="text-success">&lt;!-- Slider 1 --&gt;</span>
+&lt;div class="margin-bottom-20"&gt;
+&lt;div class="slider-wrapper danger-slider"&gt;
+	&lt;div id="slider1"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+<span class="text-success">&lt;!-- Slider 2 --&gt;</span>
+&lt;div class="margin-bottom-40"&gt;
+&lt;div class="margin-bottom-10"&gt;
+	&lt;label for="amount"&gt;Maximum price:&lt;/label&gt;
+	&lt;input type="hidden" name="amount" id="amount" class="form-control"&gt; &lt;!-- hidden input --&gt;
+&lt;/div&gt;           
+&lt;div class="slider-wrapper warning-slider"&gt;
+	&lt;div id="slider2"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+<span class="text-success">&lt;!-- Slider 3 --&gt;</span>
+&lt;div class="margin-bottom-40"&gt;
+&lt;div class="margin-bottom-10"&gt;
+	&lt;label for="bedrooms"&gt;Number of bedrooms:&lt;/label&gt;
+	&lt;input type="hidden" name="bedrooms" id="bedrooms" class="form-control"&gt; &lt;!-- hidden input --&gt;
+&lt;/div&gt;              
+&lt;div class="slider-wrapper info-slider"&gt;
+	&lt;div id="slider3"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+<span class="text-success">&lt;!-- Slider 4 --&gt;</span>
+&lt;div&gt;
+&lt;div class="margin-bottom-20"&gt;
+	&lt;label for="guests"&gt;Update select value&lt;/label&gt;
+	&lt;label class="field select"&gt;
+		&lt;select class="form-control" name="guests" id="guests"&gt;
+			&lt;option&gt;1&lt;/option&gt;
+			&lt;option selected="selected"&gt;2&lt;/option&gt;
+			&lt;option&gt;3&lt;/option&gt;
+			&lt;option&gt;4&lt;/option&gt;
+			&lt;option&gt;5&lt;/option&gt;
+			&lt;option&gt;6&lt;/option&gt;
+			&lt;option&gt;7&lt;/option&gt;
+			&lt;option&gt;8&lt;/option&gt;
+			&lt;option&gt;9&lt;/option&gt;
+			&lt;option&gt;10&lt;/option&gt;                                
+		&lt;/select&gt;
+		&lt;i class="arrow double"&gt;&lt;/i&gt;
+	&lt;/label&gt; 
+&lt;/div&gt;           
+&lt;div class="slider-wrapper"&gt;
+	&lt;div id="slider4"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+<span class="text-success">&lt;!-- Slider 5 --&gt;</span>
+&lt;div&gt;
+&lt;div class="margin-bottom-20"&gt;
+	&lt;label for="donation"&gt;Update input value&lt;/label&gt;
+	&lt;label class="field"&gt;
+		&lt;input type="text" id="donation" class="form-control"&gt;
+	&lt;/label&gt; 
+&lt;/div&gt;                
+&lt;div class="slider-wrapper black-slider"&gt;
+	&lt;div id="slider5"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+						</div>
+					</div>
+					<!-- /----- -->
+
+
+					<!-- ------ -->
+					<div class="panel panel-default">
+						<div class="panel-heading panel-heading-transparent">
+							<strong>UI Vertical Sliders</strong>
+						</div>
+
+						<div class="panel-body">
+
+							<div class="row">
+								<div class="col-md-6 col-sm-6">                   
+									<div id="eq" class="slider-group info-slider">
+										<div class="sliderv-wrapper"><span>100</span></div>
+										<div class="sliderv-wrapper"><span>77</span></div>
+										<div class="sliderv-wrapper"><span>55</span></div>
+										<div class="sliderv-wrapper"><span>40</span></div>
+										<div class="sliderv-wrapper"><span>55</span></div>
+										<div class="sliderv-wrapper"><span>77</span></div>
+										<div class="sliderv-wrapper"><span>100</span></div>
+									</div>
+								</div>
+								
+								<div class="col-md-6 col-sm-6">                   
+									<div id="eq2" class="slider-group purple-slider">
+										<div class="sliderv-wrapper"><span>100</span></div>
+										<div class="sliderv-wrapper"><span>77</span></div>
+										<div class="sliderv-wrapper"><span>55</span></div>
+										<div class="sliderv-wrapper"><span>40</span></div>
+										<div class="sliderv-wrapper"><span>55</span></div>
+										<div class="sliderv-wrapper"><span>77</span></div>
+										<div class="sliderv-wrapper"><span>100</span></div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="panel-footer">
+							<a href="javascript:;" onclick="jQuery('#pre-1').slideToggle();" class="btn btn-info btn-xs">Show Code</a>
+<pre id="pre-1" class="text-left noradius text-danger softhide margin-top-20 margin-bottom-0">
+<span class="text-success">&lt;!-- 
+	AVAILABLE COLORS:
+	.primary-slider
+	.success-slider
+	.warning-slider
+	.danger-slider
+	.info-slider
+	.purple-slider
+	.black-slider
+
+	CREATE YOUR OWN COLOR - EXAMPLE:
+	.<b>warning</b>-slider .ui-slider .ui-slider-handle{ border-color:<b>#ed9c28</b>; }
+	.<b>warning</b>-slider .ui-slider .ui-slider-handle:before,
+	.<b>warning</b>-slider .ui-slider .ui-slider-range { background-color:<b>#ed9c28</b>;  }
+--&gt;</span>
+
+
+&lt;div id="eq" class="slider-group purple-slider"&gt;
+	&lt;div class="sliderv-wrapper"&gt;&lt;span&gt;100&lt;/span&gt;&lt;/div&gt;
+	&lt;div class="sliderv-wrapper"&gt;&lt;span&gt;77&lt;/span&gt;&lt;/div&gt;
+	&lt;div class="sliderv-wrapper"&gt;&lt;span&gt;55&lt;/span&gt;&lt;/div&gt;
+	&lt;div class="sliderv-wrapper"&gt;&lt;span&gt;40&lt;/span&gt;&lt;/div&gt;
+	&lt;div class="sliderv-wrapper"&gt;&lt;span&gt;55&lt;/span&gt;&lt;/div&gt;
+	&lt;div class="sliderv-wrapper"&gt;&lt;span&gt;77&lt;/span&gt;&lt;/div&gt;
+	&lt;div class="sliderv-wrapper"&gt;&lt;span&gt;100&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+						</div>
+					</div>
+					<!-- /----- -->
+
+				</div>
+			</section>
+			<!-- /MIDDLE -->
+
+		</div>
+
+
+
+	
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<script type="text/javascript">
+			jQuery(window).ready(function() {
+
+				loadScript(plugin_path + 'jquery/jquery-ui.min.js', function() { /** jQuery UI **/
+					loadScript(plugin_path + 'jquery/jquery.ui.touch-punch.min.js', function() { /** Mobile Touch Slider **/
+						loadScript(plugin_path + 'form.slidebar/jquery-ui-slider-pips.min.js', function() { /** Slider Script **/
+
+							/** Slider 0
+							******************** **/
+							var months 		= ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+							var $slidern 	= jQuery("#slider").slider({
+								range: "min",
+								animate: true,
+								min: 0,
+								max: 11,
+								value: 5			
+							});
+							
+							$slidern.slider("pips", { rest: "label", labels: months });
+							$slidern.slider("float" , { labels: months });
+							$slidern.on("slidechange", function(e,ui) {
+								jQuery("#monthOutput").text(months[ui.value]);
+							});
+
+
+							/** Slider 1
+							******************** **/
+							var $slider1 = jQuery("#slider1").slider({
+								range: true,
+								animate: true,
+								min: 0,
+								max: 10,					
+								values: [2, 8]
+							});	
+							
+							jQuery("#slider1").slider("pips", { first: "pip", last: "pip" });
+
+
+
+							/** Slider 2
+							******************** **/
+							jQuery( "#slider2" ).slider({
+								range: "min",
+								animate: true,
+								value: 299,
+								min: 99,
+								max: 499,
+								step: 100,
+								slide: function(event, ui) {
+									jQuery("#amount").val("$" + ui.value);
+								}
+							});
+										
+							jQuery("#amount").val( "$" + jQuery("#slider2").slider("value"));
+							jQuery("#slider2").slider("pips", { rest: "label", prefix: "$", suffix: "" });
+							jQuery("#slider2").slider("float", { prefix: "$", suffix: "", pips: true });
+
+
+
+							/** Slider 3
+							******************** **/
+							jQuery("#slider3").slider({
+								range: "max",
+								animate: true,
+								min: 1,
+								max: 10,
+								value: 2,
+								slide: function(event, ui) {
+									jQuery("#bedrooms").val(ui.value);
+								}
+							});
+							
+							jQuery("#bedrooms").val( $("#slider3").slider("value"));
+							jQuery("#slider3").slider("pips",{ rest: "label" });
+
+
+
+							/** Slider 4
+							******************** **/
+							var select 		= jQuery("#guests");
+							var guestnumber = jQuery("#slider4").slider({
+								min: 1,
+								max: 10,
+								animate: true,
+								range: "min",
+								value: select[0].selectedIndex + 1,
+								slide: function(event, ui) {
+									select[0].selectedIndex = ui.value - 1;
+								}
+							});
+							
+							jQuery("#guests").change(function() {
+								guestnumber.slider("value", this.selectedIndex + 1);
+							});
+							
+							jQuery("#slider4").slider("pips" , {
+								rest: false
+							});				
+
+
+
+							/** Slider 5
+							******************** **/
+							jQuery("#slider5").slider({
+								value:100,
+								animate: true,
+								min: 0,
+								max: 500,
+								step: 50,
+								range: "min",
+								slide: function(event, ui) {
+									jQuery("#donation").val(ui.value);
+								}
+							});
+							
+							jQuery("#donation").val(jQuery("#slider5").slider("value"));
+							jQuery("#donation").blur(function() {
+									jQuery("#slider5").slider("value", jQuery(this).val());
+							});
+
+
+							/** Vertical 1
+							******************** **/
+							var $sliderv = jQuery("#eq > .sliderv-wrapper").each(function() {
+								var value = parseInt(jQuery(this).text(), 10);
+									jQuery(this).empty().slider({
+									value: value,
+									range: "min",
+									step: 10,
+									animate: true,
+									orientation: "vertical"
+								});
+							});
+							
+							$sliderv.slider("pips", { 
+								first: "pip", 
+								last: "pip"
+							});
+
+
+							/** Vertical 2
+							******************** **/
+							var $sliderv1 	= $("#eq2 > .sliderv-wrapper").each(function() {
+								var value 	= parseInt(jQuery(this).text(), 10);
+									jQuery(this).empty().slider({
+									value: value,
+									range: "min",
+									step: 5,
+									animate: true,
+									orientation: "vertical"
+								});
+							});
+							
+							$sliderv1.slider("pips", { 
+								first: "pip", 
+								last: "pip"
+							});
+
+
+						});
+					});
+				});
+
+			});
+		</script>
+
+	</body>
+</html>

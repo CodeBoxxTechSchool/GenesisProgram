@@ -1,0 +1,70 @@
+/** Green	#4b5354
+			#5a6667
+ **************************************************************** **/
+	::selection {
+		background: #4b5354;
+	}
+	::-moz-selection {
+		background: #4b5354; /* Firefox */
+	}
+	::-webkit-selection {
+		background: #4b5354; /* Safari */
+	}
+
+	#aside nav ul li a:active,
+	#aside nav ul li.menu-open,
+	#aside nav ul li.always-open,
+	#aside nav>ul>li>a:hover,
+	#aside nav>ul>li>a:focus,
+	#aside nav ul li.active,
+	.fancy-file-upload.fancy-file-primary>span.button,
+	.datepicker table tr td.active.active,
+	.btn-primary,
+	#header,
+
+	/*.toast-primary,*/
+	.popular .plan-title,
+	body.min #aside ul.nav>li>ul li,
+	body.min #aside ul.nav li.menu-open,
+	body.min #aside ul.nav>li:hover>ul,
+	#aside nav ul li a.dashboard,
+	#aside .logo,
+	body.min #asidesize,
+	#aside, #asidebg {
+		background-color: #5a6667;
+	}
+	
+	body.min #aside ul.nav>li:hover:before {
+		border-right-color: #5a6667;
+	}
+
+	.panel>.panel-heading strong {
+		color:#4b5354;
+	}
+	
+	.btn-primary {
+		border-color:#4b5354;
+	}
+
+	.popular {
+		border-color:#5a6667 !important;
+	}
+	
+	/**
+		IMPORTANT
+	**/
+	.btn-primary,
+	.alert-theme-color,
+	.panel-primary>.panel-heading {
+		background-color: #4b5354 !important;
+	}
+	.panel-primary,
+	.panel-primary>.panel-heading {
+		border-color: #4b5354 !important;
+	}
+	
+	@media only screen and (min-width: 768px) {
+		body.min #aside ul.nav>li:hover>a span {
+			background-color: #5a6667;
+		}
+	}

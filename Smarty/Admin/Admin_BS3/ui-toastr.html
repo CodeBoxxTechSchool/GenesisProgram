@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Smarty Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+		<!-- WEB FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+	</head>
+	<!--
+		.boxed = boxed version
+	-->
+	<body>
+
+
+		<!-- WRAPPER -->
+		<div id="wrapper">
+
+			<!-- 
+				ASIDE 
+				Keep it outside of #wrapper (responsive purpose)
+			-->
+			<aside id="aside">
+				<!--
+					Always open:
+					<li class="active alays-open">
+
+					LABELS:
+						<span class="label label-danger pull-right">1</span>
+						<span class="label label-default pull-right">1</span>
+						<span class="label label-warning pull-right">1</span>
+						<span class="label label-success pull-right">1</span>
+						<span class="label label-info pull-right">1</span>
+				-->
+				<nav id="sideNav"><!-- MAIN MENU -->
+					<ul class="nav nav-list">
+						<li><!-- dashboard -->
+							<a class="dashboard" href="index.html"><!-- warning - url used by default by ajax (if eneabled) -->
+								<i class="main-icon fa fa-dashboard"></i> <span>Dashboard</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-bar-chart-o"></i> <span>Graphs</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="graphs-flot.html">Flot Charts</a></li>
+								<li><a href="graphs-morris.html">Morris Charts</a></li>
+								<li><a href="graphs-inline.html">Inline Charts</a></li>
+								<li><a href="graphs-chartjs.html">Chart.js</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-table"></i> <span>Tables</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="tables-bootstrap.html">Bootstrap Tables</a></li>
+								<li><a href="tables-jqgrid.html">jQuery Grid</a></li>
+								<li><a href="tables-footable.html">jQuery Footable</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Datatables
+									</a>
+									<ul>
+										<li><a href="tables-datatable-managed.html">Managed Datatables</a></li>
+										<li><a href="tables-datatable-editable.html">Editable Datatables</a></li>
+										<li><a href="tables-datatable-advanced.html">Advanced Datatables</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-pencil-square-o"></i> <span>Forms</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="form-elements.html">Smarty Elements</a></li>
+								<li><a href="form-masked-inputs.html">Masked Inputs</a></li>
+								<li><a href="form-pickers.html">Pickers</a></li>
+								<li><a href="form-ui-sliders.html">UI Sliders</a></li>
+								<li><a href="form-validation.html">Validation Form</a></li>
+								<li><a href="form-html-editors.html">Html Editors</a></li>
+								<li><a href="form-autosuggest.html">Autosuggest</a></li>
+								<li><a href="form-x-editable.html">Form X-Editable</a></li>
+								<li><a href="form-dropzone.html">Dropzone File Upload</a></li>
+							</ul>
+						</li>
+						<li class="active">
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-gears"></i> <span>UI Features</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="ui-portlets.html">Portlets</a></li>
+								<li><a href="ui-buttons.html">Buttons</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Icons
+									</a>
+									<ul>
+										<li><a href="ui-icons-fontawsome.html">Fontawsome</a></li>
+										<li><a href="ui-icons-etline.html">Et-Line Icons</a></li>
+										<li><a href="ui-icons-glyphicons.html">Glyph Icons</a></li>
+										<li><a href="ui-icons-flags.html">Flags</a></li>
+									</ul>
+								</li>
+								<li><a href="ui-alerts-dialogs.html">Alerts &amp; Dialogs</a></li>
+								<li><a href="ui-tabs-acordion-navs.html">Tabs, Acordion &amp; Navs</a></li>
+								<li><a href="ui-knob.html">Knob Circles</a></li>
+								<li><a href="ui-nestable.html">Nestable List</a></li>
+								<li class="active"><a href="ui-toastr.html">Toastr Notifications</a></li>
+								<li><a href="ui-modals.html">Modals</a></li>
+								<li><a href="ui-grid.html">Grid</a></li>
+								<li><a href="ui-google-maps.html">Google Maps</a></li>
+								<li><a href="ui-vector-maps.html">Vector Maps</a></li>
+								<li><a href="ui-essentials.html">Essentials</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										<i class="fa fa-folder-open"></i>
+										Deep Navigation
+									</a>
+									<!-- 3rd Level -->
+									<ul>
+										<li>
+											<a href="#">
+												3rd Level
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-menu-arrow pull-right"></i>
+												<i class="fa fa-folder-open"></i>
+												4rd Level
+											</a>
+											<!-- 4th Level -->
+											<ul>
+												<li>
+													<a href="#">
+														4th Level
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-menu-arrow pull-right"></i>
+														<i class="fa fa-folder-open"></i>
+														5th Level
+													</a>
+													<!-- 5th Level -->
+													<ul>
+														<li>
+															<a href="#">
+																5th level
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<i class="fa fa-menu-arrow pull-right"></i>
+																<i class="fa fa-folder-open"></i>
+																6th level
+															</a>
+															<!-- 6th Level -->
+															<ul>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+															</ul><!-- /6th Level -->
+														</li>
+													</ul><!-- /5th Level -->
+												</li>
+											</ul><!-- /4th Level -->
+										</li>
+									</ul><!-- /3rd Level -->
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-book"></i> <span>Pages</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="page-invoice.html">Invoice</a></li>
+								<li><a href="page-login.html">Login</a></li>
+								<li><a href="page-register.html">Register</a></li>
+								<li><a href="page-lock.html">Lock Screen</a></li>
+								<li><a href="page-forum.html">Forum</a></li>
+								<li><a href="page-404.html">Error 404</a></li>
+								<li><a href="page-500.html">Error 500</a></li>
+								<li><a href="page-pricing.html">Pricing Table</a></li>
+								<li><a href="page-search.html">Search Result</a></li>
+								<li><a href="page-sidebar.html">Sidebar Page</a></li>
+								<li><a href="page-user-profile.html">User Profile</a></li>
+								<li><a href="page-blank-1.html">Blank Page</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+					</ul>
+
+					<!-- SECOND MAIN LIST -->
+					<h3>MORE</h3>
+					<ul class="nav nav-list">
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+						<li>
+							<a href="../../HTML_BS4/start.html">
+								<i class="main-icon fa fa-link"></i>
+								<span class="label label-danger pull-right">PRO</span> <span>Frontend</span>
+							</a>
+						</li>
+					</ul>
+
+				</nav>
+
+				<span id="asidebg"><!-- aside fixed background --></span>
+			</aside>
+			<!-- /ASIDE -->
+
+
+			<!-- HEADER -->
+			<header id="header">
+
+				<!-- Mobile Button -->
+				<button id="mobileMenuBtn"></button>
+
+				<!-- Logo -->
+				<span class="logo pull-left">
+					<img src="assets/images/logo_light.png" alt="admin panel" height="35" />
+				</span>
+
+				<form method="get" action="page-search.html" class="search pull-left hidden-xs">
+					<input type="text" class="form-control" name="k" placeholder="Search for something..." />
+				</form>
+
+				<nav>
+
+					<!-- OPTIONS LIST -->
+					<ul class="nav pull-right">
+
+						<!-- USER OPTIONS -->
+						<li class="dropdown pull-left">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+								<img class="user-avatar" alt="" src="assets/images/noavatar.jpg" height="34" /> 
+								<span class="user-name">
+									<span class="hidden-xs">
+										John Doe <i class="fa fa-angle-down"></i>
+									</span>
+								</span>
+							</a>
+							<ul class="dropdown-menu hold-on-click">
+								<li><!-- my calendar -->
+									<a href="calendar.html"><i class="fa fa-calendar"></i> Calendar</a>
+								</li>
+								<li><!-- my inbox -->
+									<a href="#"><i class="fa fa-envelope"></i> Inbox
+										<span class="pull-right label label-default">0</span>
+									</a>
+								</li>
+								<li><!-- settings -->
+									<a href="page-user-profile.html"><i class="fa fa-cogs"></i> Settings</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li><!-- lockscreen -->
+									<a href="page-lock.html"><i class="fa fa-lock"></i> Lock Screen</a>
+								</li>
+								<li><!-- logout -->
+									<a href="page-login.html"><i class="fa fa-power-off"></i> Log Out</a>
+								</li>
+							</ul>
+						</li>
+						<!-- /USER OPTIONS -->
+
+					</ul>
+					<!-- /OPTIONS LIST -->
+
+				</nav>
+
+			</header>
+			<!-- /HEADER -->
+
+
+			<!-- 
+				MIDDLE 
+			-->
+			<section id="middle">
+
+
+				<!-- page title -->
+				<header id="page-header">
+					<h1>Toastr Notifications</h1>
+					<ol class="breadcrumb">
+						<li><a href="#">UI</a></li>
+						<li class="active">Toastr Notifications</li>
+					</ol>
+				</header>
+				<!-- /page title -->
+
+
+				<div id="content" class="padding-20">
+
+					<!-- -- -->
+					<div id="ui-1" class="panel panel-default">
+
+						<div class="panel-heading">
+
+							<span class="title elipsis">
+								<strong>NOTIFICATION TYPES</strong> <!-- panel title -->
+							</span>
+
+							<!-- right options -->
+							<ul class="options pull-right list-inline">
+								<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+								<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+								<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+							</ul>
+							<!-- /right options -->
+
+						</div>
+
+						<!-- panel content -->
+						<div class="panel-body">
+
+							<!--
+								data-position:
+									top-right
+									top-left
+									top-center
+									top-full-width
+									bottom-right
+									bottom-left
+									bottom-center
+									bottom-full-width
+
+								data-notifyType:
+									primary
+									info
+									error
+									sucess
+									warning
+
+								data-message="your text here"
+								data-progressBar="true"
+								data-closeButton="true"
+								data-newestOnTop="true"
+								data-preventDuplicates="true"
+								data-showDuration="300"
+								data-hideDuration="1000"
+								data-timeOut="5000"
+								data-extendedTimeOut="1000"
+								data-showEasing="swing"
+								data-hideEasing="linear"
+								data-showMethod="fadeIn"
+								data-hideMethod="fadeOut"
+							-->
+							<a href="#" class="btn btn-primary toastr-notify" data-progressBar="true" data-position="top-right" data-notifyType="primary" data-message="Default Notification!">Show Default</a>
+							<a href="#" class="btn btn-info toastr-notify" data-progressBar="true" data-position="top-right" data-notifyType="info" data-message="Info Notification!">Show Info</a>
+							<a href="#" class="btn btn-danger toastr-notify" data-progressBar="true" data-position="top-right" data-notifyType="error" data-message="Error! Please try again!">Show Info</a>
+							<a href="#" class="btn btn-success toastr-notify" data-progressBar="true" data-position="top-right" data-notifyType="success" data-message="Successfully Saved!">Show Info</a>
+							<a href="#" class="btn btn-warning toastr-notify" data-progressBar="true" data-position="top-right" data-notifyType="warning" data-message="Warning message!">Show Info</a>
+
+
+						</div>
+						<!-- /panel content -->
+
+						<div class="panel-footer">
+
+<!-- pre code -->
+<div class="text-left">
+	<a class="btn btn-xs btn-info" href="javascript:;" onclick="jQuery('#pre-0').slideToggle();">Show Code</a>
+</div>
+<pre id="pre-0" class="text-left noradius text-danger softhide margin-top-10">
+<span class="text-success">&lt;!--
+	data-position:
+		top-right
+		top-left
+		top-center
+		top-full-width
+		bottom-right
+		bottom-left
+		bottom-center
+		bottom-full-width
+
+	data-notifyType:
+		primary
+		info
+		error
+		sucess
+		warning
+
+	data-message="your text here"
+	data-progressBar="true"
+	data-closeButton="true"
+	data-newestOnTop="true"
+	data-preventDuplicates="true"
+	data-showDuration="300"
+	data-hideDuration="1000"
+	data-timeOut="5000"
+	data-extendedTimeOut="1000"
+	data-showEasing="swing"
+	data-hideEasing="linear"
+	data-showMethod="fadeIn"
+	data-hideMethod="fadeOut"
+--&gt;</span>
+
+
+<span class="text-success">&lt;!-- Default --&gt;</span>
+&lt;a href="#" class="btn btn-default toastr-notify"<b> data-progressBar="true" data-position="top-right" data-notifyType="primary" data-message="Default Notification!"</b>&gt;Show Default&lt;/a&gt;
+
+<span class="text-success">&lt;!-- Info --&gt;</span>
+&lt;a href="#" class="btn btn-info toastr-notify"<b> data-progressBar="true" data-position="top-right" data-notifyType="info" data-message="Info Notification!"</b>&gt;Show Info&lt;/a&gt;
+
+<span class="text-success">&lt;!-- Error --&gt;</span>
+&lt;a href="#" class="btn btn-danger toastr-notify" <b>data-progressBar="true" data-position="top-right" data-notifyType="error" data-message="Error! Please try again!"</b>&gt;Show Error&lt;/a&gt;
+
+<span class="text-success">&lt;!-- Success --&gt;</span>
+&lt;a href="#" class="btn btn-success toastr-notify" <b>data-progressBar="true" data-position="top-right" data-notifyType="success" data-message="Successfully Saved!"</b>&gt;Show Success&lt;/a&gt;
+
+<span class="text-success">&lt;!-- Warning --&gt;</span>
+&lt;a href="#" class="btn btn-warning toastr-notify" <b>data-progressBar="true" data-position="top-right" data-notifyType="warning" data-message="Warning message!"</b>&gt;Show Warning&lt;/a&gt;
+
+
+
+<span class="text-success">&lt;!-- JAVASCRIPT USAGE (after scripts.js is loaded) --&gt;</span>
+_toastr("I am a test message","top-right","error",false);
+
+Use 'false' if you do not need a clickable notification.
+Use link for clickable notification. Example: "http://www.stepofweb.com"
+
+</pre>
+<!-- /pre code -->
+	
+						</div>
+
+					</div>
+					<!-- / -->
+
+					<!-- -- -->
+					<div id="ui-2" class="panel panel-default">
+
+						<div class="panel-heading">
+
+							<span class="title elipsis">
+								<strong>NOTIFICATION POSITION</strong> <!-- panel title -->
+							</span>
+
+							<!-- right options -->
+							<ul class="options pull-right list-inline">
+								<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+								<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+								<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+							</ul>
+							<!-- /right options -->
+
+						</div>
+
+						<!-- panel content -->
+						<div class="panel-body">
+
+							<!--
+								data-position:
+									top-right
+									top-left
+									top-center
+									top-full-width
+									bottom-right
+									bottom-left
+									bottom-center
+									bottom-full-width
+
+								data-notifyType:
+									primary
+									info
+									error
+									sucess
+									warning
+
+								data-message="your text here"
+								data-progressBar="true"
+								data-closeButton="true"
+								data-newestOnTop="true"
+								data-preventDuplicates="true"
+								data-showDuration="300"
+								data-hideDuration="1000"
+								data-timeOut="5000"
+								data-extendedTimeOut="1000"
+								data-showEasing="swing"
+								data-hideEasing="linear"
+								data-showMethod="fadeIn"
+								data-hideMethod="fadeOut"
+							-->
+							<a href="#" class="btn btn-default toastr-notify" data-progressBar="true" data-timeOut="3000" data-notifyType="primary" data-position="top-right" data-message="Top Right Notification">Top Right</a>
+							<a href="#" class="btn btn-default toastr-notify" data-progressBar="true" data-timeOut="3000" data-notifyType="primary" data-position="top-left" data-message="Top Left Notification">Top Left</a>
+							<a href="#" class="btn btn-default toastr-notify" data-progressBar="true" data-timeOut="3000" data-notifyType="primary" data-position="bottom-right" data-message="Bottom Right Notification">Bottom Right</a>
+							<a href="#" class="btn btn-default toastr-notify" data-progressBar="true" data-timeOut="3000" data-notifyType="primary" data-position="bottom-left" data-message="Bottom Left Notification">Bottom Left</a>
+							
+							<br /><br />
+
+							<a href="#" class="btn btn-default toastr-notify" data-progressBar="true" data-timeOut="3000" data-notifyType="primary" data-position="top-center" data-message="Top Center Notification">Top Center</a>
+							<a href="#" class="btn btn-default toastr-notify" data-progressBar="true" data-timeOut="3000" data-notifyType="primary" data-position="bottom-center" data-message="Bottom Center Notification">Bottom Center</a>
+							<a href="#" class="btn btn-default toastr-notify" data-progressBar="true" data-timeOut="3000" data-notifyType="primary" data-position="top-full-width" data-message="Top Full Width Notification">Top Full Width</a>
+							<a href="#" class="btn btn-default toastr-notify" data-progressBar="true" data-timeOut="3000" data-notifyType="primary" data-position="bottom-full-width" data-message="Bottom Full Width Notification">Bottom Full Width</a>
+							<p><small>Note: Please, wait for the current notification to dissapear before clicking a new button!</small></p>
+
+						</div>
+						<!-- /panel content -->
+
+						<div class="panel-footer">
+
+<!-- pre code -->
+<div class="text-left">
+	<a class="btn btn-xs btn-info" href="javascript:;" onclick="jQuery('#pre-1').slideToggle();">Show Code</a>
+</div>
+<pre id="pre-1" class="text-left noradius text-danger softhide margin-top-10">
+<span class="text-success">&lt;!--
+	data-position:
+		top-right
+		top-left
+		top-center
+		top-full-width
+		bottom-right
+		bottom-left
+		bottom-center
+		bottom-full-width
+
+	data-notifyType:
+		primary
+		info
+		error
+		sucess
+		warning
+
+	data-message="your text here"
+	data-progressBar="true"
+	data-closeButton="true"
+	data-newestOnTop="true"
+	data-preventDuplicates="true"
+	data-showDuration="300"
+	data-hideDuration="1000"
+	data-timeOut="5000"
+	data-extendedTimeOut="1000"
+	data-showEasing="swing"
+	data-hideEasing="linear"
+	data-showMethod="fadeIn"
+	data-hideMethod="fadeOut"
+--&gt;</span>
+
+
+<span class="text-success">&lt;!-- Top Right --&gt;</span>
+&lt;a href="#" class="btn btn-default toastr-notify" data-progressBar="true" data-timeOut="3000" data-notifyType="primary" data-position="top-right" data-message="Top Right Notification"&gt;Top Right&lt;/a&gt;
+
+<span class="text-success">&lt;!-- Top Left --&gt;</span>
+&lt;a href="#" class="btn btn-default toastr-notify" data-progressBar="true" data-timeOut="3000" data-notifyType="primary" data-position="top-left" data-message="Top Left Notification"&gt;Top Left&ltlt;/a&gt;
+
+<span class="text-success">&lt;!-- Bottom Right --&gt;</span>
+&lt;a href="#" class="btn btn-default toastr-notify" data-progressBar="true" data-timeOut="3000" data-notifyType="primary" data-position="bottom-right" data-message="Bottom Right Notification"&gt;Bottom Right&lt;/a&gt;
+
+<span class="text-success">&lt;!-- Bottom Left --&gt;</span>
+&lt;a href="#" class="btn btn-default toastr-notify" data-progressBar="true" data-timeOut="3000" data-notifyType="primary" data-position="bottom-left" data-message="Bottom Left Notification"&gt;Bottom Left&lt;/a&gt;
+
+<span class="text-success">&lt;!-- Top Center --&gt;</span>
+&lt;a href="#" class="btn btn-default toastr-notify" data-progressBar="true" data-timeOut="3000" data-notifyType="primary" data-position="top-center" data-message="Top Center Notification"&gt;Top Center&lt;/a&gt;
+
+<span class="text-success">&lt;!-- Bottom Center --&gt;</span>
+&lt;a href="#" class="btn btn-default toastr-notify" data-progressBar="true" data-timeOut="3000" data-notifyType="primary" data-position="bottom-center" data-message="Bottom Center Notification"&gt;Bottom Center&lt;/a&gt;
+
+<span class="text-success">&lt;!-- Top Full Width --&gt;</span>
+&lt;a href="#" class="btn btn-default toastr-notify" data-progressBar="true" data-timeOut="3000" data-notifyType="primary" data-position="top-full-width" data-message="Top Full Width Notification"&gt;Top Full Width&lt;/a&gt;
+
+<span class="text-success">&lt;!-- Bottom Full Width --&gt;</span>
+&lt;a href="#" class="btn btn-default toastr-notify" data-progressBar="true" data-timeOut="3000" data-notifyType="primary" data-position="bottom-full-width" data-message="Bottom Full Width Notification"&gt;Bottom Full Width&lt;/a&gt;
+</pre>
+<!-- /pre code -->
+	
+						</div>
+
+					</div>
+					<!-- / -->
+
+				</div>
+			</section>
+			<!-- /MIDDLE -->
+
+		</div>
+
+
+
+	
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+
+	</body>
+</html>

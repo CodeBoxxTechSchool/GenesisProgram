@@ -1,0 +1,846 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Smarty Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+		<!-- WEB FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+	</head>
+	<!--
+		.boxed = boxed version
+	-->
+	<body>
+
+
+		<!-- WRAPPER -->
+		<div id="wrapper">
+
+			<!-- 
+				ASIDE 
+				Keep it outside of #wrapper (responsive purpose)
+			-->
+			<aside id="aside">
+				<!--
+					Always open:
+					<li class="active alays-open">
+
+					LABELS:
+						<span class="label label-danger pull-right">1</span>
+						<span class="label label-default pull-right">1</span>
+						<span class="label label-warning pull-right">1</span>
+						<span class="label label-success pull-right">1</span>
+						<span class="label label-info pull-right">1</span>
+				-->
+				<nav id="sideNav"><!-- MAIN MENU -->
+					<ul class="nav nav-list">
+						<li><!-- dashboard -->
+							<a class="dashboard" href="index.html"><!-- warning - url used by default by ajax (if eneabled) -->
+								<i class="main-icon fa fa-dashboard"></i> <span>Dashboard</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-bar-chart-o"></i> <span>Graphs</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="graphs-flot.html">Flot Charts</a></li>
+								<li><a href="graphs-morris.html">Morris Charts</a></li>
+								<li><a href="graphs-inline.html">Inline Charts</a></li>
+								<li><a href="graphs-chartjs.html">Chart.js</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-table"></i> <span>Tables</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="tables-bootstrap.html">Bootstrap Tables</a></li>
+								<li><a href="tables-jqgrid.html">jQuery Grid</a></li>
+								<li><a href="tables-footable.html">jQuery Footable</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Datatables
+									</a>
+									<ul>
+										<li><a href="tables-datatable-managed.html">Managed Datatables</a></li>
+										<li><a href="tables-datatable-editable.html">Editable Datatables</a></li>
+										<li><a href="tables-datatable-advanced.html">Advanced Datatables</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-pencil-square-o"></i> <span>Forms</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="form-elements.html">Smarty Elements</a></li>
+								<li><a href="form-masked-inputs.html">Masked Inputs</a></li>
+								<li><a href="form-pickers.html">Pickers</a></li>
+								<li><a href="form-ui-sliders.html">UI Sliders</a></li>
+								<li><a href="form-validation.html">Validation Form</a></li>
+								<li><a href="form-html-editors.html">Html Editors</a></li>
+								<li><a href="form-autosuggest.html">Autosuggest</a></li>
+								<li><a href="form-x-editable.html">Form X-Editable</a></li>
+								<li><a href="form-dropzone.html">Dropzone File Upload</a></li>
+							</ul>
+						</li>
+						<li class="active">
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-gears"></i> <span>UI Features</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="ui-portlets.html">Portlets</a></li>
+								<li><a href="ui-buttons.html">Buttons</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Icons
+									</a>
+									<ul>
+										<li><a href="ui-icons-fontawsome.html">Fontawsome</a></li>
+										<li><a href="ui-icons-etline.html">Et-Line Icons</a></li>
+										<li><a href="ui-icons-glyphicons.html">Glyph Icons</a></li>
+										<li><a href="ui-icons-flags.html">Flags</a></li>
+									</ul>
+								</li>
+								<li><a href="ui-alerts-dialogs.html">Alerts &amp; Dialogs</a></li>
+								<li><a href="ui-tabs-acordion-navs.html">Tabs, Acordion &amp; Navs</a></li>
+								<li><a href="ui-knob.html">Knob Circles</a></li>
+								<li><a href="ui-nestable.html">Nestable List</a></li>
+								<li><a href="ui-toastr.html">Toastr Notifications</a></li>
+								<li class="active"><a href="ui-modals.html">Modals</a></li>
+								<li><a href="ui-grid.html">Grid</a></li>
+								<li><a href="ui-google-maps.html">Google Maps</a></li>
+								<li><a href="ui-vector-maps.html">Vector Maps</a></li>
+								<li><a href="ui-essentials.html">Essentials</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										<i class="fa fa-folder-open"></i>
+										Deep Navigation
+									</a>
+									<!-- 3rd Level -->
+									<ul>
+										<li>
+											<a href="#">
+												3rd Level
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-menu-arrow pull-right"></i>
+												<i class="fa fa-folder-open"></i>
+												4rd Level
+											</a>
+											<!-- 4th Level -->
+											<ul>
+												<li>
+													<a href="#">
+														4th Level
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-menu-arrow pull-right"></i>
+														<i class="fa fa-folder-open"></i>
+														5th Level
+													</a>
+													<!-- 5th Level -->
+													<ul>
+														<li>
+															<a href="#">
+																5th level
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<i class="fa fa-menu-arrow pull-right"></i>
+																<i class="fa fa-folder-open"></i>
+																6th level
+															</a>
+															<!-- 6th Level -->
+															<ul>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+															</ul><!-- /6th Level -->
+														</li>
+													</ul><!-- /5th Level -->
+												</li>
+											</ul><!-- /4th Level -->
+										</li>
+									</ul><!-- /3rd Level -->
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-book"></i> <span>Pages</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="page-invoice.html">Invoice</a></li>
+								<li><a href="page-login.html">Login</a></li>
+								<li><a href="page-register.html">Register</a></li>
+								<li><a href="page-lock.html">Lock Screen</a></li>
+								<li><a href="page-forum.html">Forum</a></li>
+								<li><a href="page-404.html">Error 404</a></li>
+								<li><a href="page-500.html">Error 500</a></li>
+								<li><a href="page-pricing.html">Pricing Table</a></li>
+								<li><a href="page-search.html">Search Result</a></li>
+								<li><a href="page-sidebar.html">Sidebar Page</a></li>
+								<li><a href="page-user-profile.html">User Profile</a></li>
+								<li><a href="page-blank-1.html">Blank Page</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+					</ul>
+
+					<!-- SECOND MAIN LIST -->
+					<h3>MORE</h3>
+					<ul class="nav nav-list">
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+						<li>
+							<a href="../../HTML_BS4/start.html">
+								<i class="main-icon fa fa-link"></i>
+								<span class="label label-danger pull-right">PRO</span> <span>Frontend</span>
+							</a>
+						</li>
+					</ul>
+
+				</nav>
+
+				<span id="asidebg"><!-- aside fixed background --></span>
+			</aside>
+			<!-- /ASIDE -->
+
+
+			<!-- HEADER -->
+			<header id="header">
+
+				<!-- Mobile Button -->
+				<button id="mobileMenuBtn"></button>
+
+				<!-- Logo -->
+				<span class="logo pull-left">
+					<img src="assets/images/logo_light.png" alt="admin panel" height="35" />
+				</span>
+
+				<form method="get" action="page-search.html" class="search pull-left hidden-xs">
+					<input type="text" class="form-control" name="k" placeholder="Search for something..." />
+				</form>
+
+				<nav>
+
+					<!-- OPTIONS LIST -->
+					<ul class="nav pull-right">
+
+						<!-- USER OPTIONS -->
+						<li class="dropdown pull-left">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+								<img class="user-avatar" alt="" src="assets/images/noavatar.jpg" height="34" /> 
+								<span class="user-name">
+									<span class="hidden-xs">
+										John Doe <i class="fa fa-angle-down"></i>
+									</span>
+								</span>
+							</a>
+							<ul class="dropdown-menu hold-on-click">
+								<li><!-- my calendar -->
+									<a href="calendar.html"><i class="fa fa-calendar"></i> Calendar</a>
+								</li>
+								<li><!-- my inbox -->
+									<a href="#"><i class="fa fa-envelope"></i> Inbox
+										<span class="pull-right label label-default">0</span>
+									</a>
+								</li>
+								<li><!-- settings -->
+									<a href="page-user-profile.html"><i class="fa fa-cogs"></i> Settings</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li><!-- lockscreen -->
+									<a href="page-lock.html"><i class="fa fa-lock"></i> Lock Screen</a>
+								</li>
+								<li><!-- logout -->
+									<a href="page-login.html"><i class="fa fa-power-off"></i> Log Out</a>
+								</li>
+							</ul>
+						</li>
+						<!-- /USER OPTIONS -->
+
+					</ul>
+					<!-- /OPTIONS LIST -->
+
+				</nav>
+
+			</header>
+			<!-- /HEADER -->
+
+
+			<!-- 
+				MIDDLE 
+			-->
+			<section id="middle">
+
+
+				<!-- page title -->
+				<header id="page-header">
+					<h1>Modals</h1>
+					<ol class="breadcrumb">
+						<li><a href="#">UI</a></li>
+						<li class="active">Modals</li>
+					</ol>
+				</header>
+				<!-- /page title -->
+
+
+				<div id="content" class="padding-20">
+
+					<!-- -- -->
+					<div id="ui-1" class="panel panel-default">
+
+						<div class="panel-heading">
+
+							<span class="title elipsis">
+								<strong>AUTOLOAD MODAL</strong> <!-- panel title -->
+							</span>
+
+							<!-- right options -->
+							<ul class="options pull-right list-inline">
+								<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+								<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+								<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+							</ul>
+							<!-- /right options -->
+
+						</div>
+
+						<!-- panel content -->
+						<div class="panel-body">
+
+							<h4>Load modal on page load</h4>
+							<!-- 
+								MODAL ON LOAD 
+								
+								data-autoload="true" 			- load modal on page load
+								data-autoload-delay="2000"		- load after 2000 ms (1000ms = 1s)
+							-->
+							<div id="shopLoadModal" class="modal fade" data-autoload="true" data-autoload-delay="2000">
+								<div class="modal-dialog modal-lg">
+									<div class="modal-content">
+
+										<!-- Modal Header -->
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModalLabel">Autoload Modal</h4>
+										</div>
+
+										<!-- body modal -->
+										<div class="modal-body clearfix">
+
+											<p>
+												This is a modal loaded when page load. You can also set a delay - when this modal shows up, after the page is loaded.
+											</p>
+											<p>
+												Please note, an unique ID is required - localStorage is used.<br />
+												localStorage use the ID to hide the modal, if user checked "Don't show this popup again".
+											</p>
+
+											<!-- Don't show this popup again -->
+											<div class="size-11 text-left">
+												<label class="checkbox pull-left">
+													<input class="loadModalHide" type="checkbox" />
+													<i></i> <span class="weight-300">Don't show this popup again</span>
+												</label>
+
+											</div>
+											<!-- /Don't show this popup again -->
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<!-- /MODAL ON LOAD -->
+
+						</div>
+						<!-- /panel content -->
+
+						<div class="panel-footer">
+
+<!-- pre code -->
+<div class="text-left">
+	<a class="btn btn-xs btn-info" href="javascript:;" onclick="jQuery('#pre-0').slideToggle();">Show Code</a>
+</div>
+<pre id="pre-0" class="text-left noradius text-danger softhide margin-top-10">
+<span class="text-success">&lt;!-- 
+	MODAL ON LOAD 
+	
+	data-autoload="true" 			- load modal on page load
+	data-autoload-delay="2000"		- load after 2000 ms (1000ms = 1s)
+	
+	Please note, an unique ID is required.
+	localstorage use the ID to hide the modal, if used checked "Don't show this popup again"
+--&gt;</span>
+&lt;div <b class="text-warning">id="REQUIRED-ID"</b> class="modal fade" <b class="text-warning">data-autoload="true" data-autoload-delay="2000"</b>&gt;
+	&lt;div class="modal-dialog modal-lg"&gt;
+		&lt;div class="modal-content"&gt;
+
+			<span class="text-success">&lt;!-- Modal Header --&gt;</span>
+			&lt;div class="modal-header"&gt;
+				&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;&lt;/button&gt;
+				&lt;h4 class="modal-title" id="myModalLabel"&gt;Modal title&lt;/h4&gt;
+			&lt;/div&gt;<span class="text-success">&lt;!-- /Modal Header --&gt;</span>
+
+			<span class="text-success">&lt;!-- body modal --&gt;</span>
+			&lt;div class="modal-body clearfix"&gt;
+
+				&lt;p&gt;
+					This is a modal loaded when page load. You can also set a delay - when this modal shows up, after the page is loaded.
+				&lt;/p&gt;
+				&lt;p&gt;
+					Please note, an unique ID is required - localStorage is used. &lt;br /&gt;
+					localStorage use the ID to hide the modal, if user checked "Don't show this popup again".
+				&lt;/p&gt;
+
+				<span class="text-success">&lt;!-- Don't show this popup again --&gt;</span>
+				&lt;div class="size-11 text-left"&gt;
+					&lt;label class="checkbox pull-left"&gt;
+						&lt;input class="loadModalHide" type="checkbox" /&gt;
+						&lt;i&gt;&lt;/i&gt; &lt;span class="weight-300"&gt;Don't show this popup again&lt;/span&gt;
+					&lt;/label&gt;
+
+				&lt;/div&gt;
+				<span class="text-success">&lt;!-- /Don't show this popup again --&gt;</span>
+
+			&lt;/div&gt;
+
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+<span class="text-success">&lt;!-- /ODAL ON LOAD --&gt;</span>
+</pre>
+<!-- /pre code -->
+	
+						</div>
+
+					</div>
+					<!-- / -->
+
+					<!-- -- -->
+					<div id="ui-2" class="panel panel-default">
+
+						<div class="panel-heading">
+
+							<span class="title elipsis">
+								<strong>BOOTSTRAP MODAL</strong> <!-- panel title -->
+							</span>
+
+							<!-- right options -->
+							<ul class="options pull-right list-inline">
+								<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+								<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+								<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+							</ul>
+							<!-- /right options -->
+
+						</div>
+
+						<!-- panel content -->
+						<div class="panel-body">
+
+							<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+								Bootstrap Modal
+							</button>
+
+							<!-- sample modal content -->
+							<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+
+										<!-- Modal Header -->
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+										</div>
+
+										<!-- Modal Body -->
+										<div class="modal-body">
+											<h4>Text in a modal</h4>
+											<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+
+											<h4>Popover in a modal</h4>
+											<p>This <a href="#" data-toggle="popover" class="btn btn-default" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">button</a> should trigger a popover on click.</p>
+
+											<h4>Tooltips in a modal</h4>
+											<p><a href="#" data-toggle="tooltip" title="Tooltip">This link</a> and <a href="#" data-toggle="tooltip" title="Tooltip">that link</a> should have tooltips on hover.</p>
+
+											<hr />
+
+											<h4>Overflowing text to show scroll behavior</h4>
+											<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+											<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+											<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+											<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+											<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+											<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+											<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+											<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+											<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+										</div>
+
+										<!-- Modal Footer -->
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-primary">Save changes</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<!-- sample modal content -->
+
+
+							<a class="btn btn-default btn-lg lightbox" href="ajax/dummy-lightbox.html" data-lightbox="iframe" data-plugin-options='{"type":"ajax", "closeOnBgClick":false}'>Modal Ajax Lightbox</a>
+
+						</div>
+						<!-- /panel content -->
+
+						<div class="panel-footer">
+
+<!-- pre code -->
+<div class="text-left">
+	<a class="btn btn-xs btn-info" href="javascript:;" onclick="jQuery('#pre-1').slideToggle();">Show Code</a>
+</div>
+<pre id="pre-1" class="text-left noradius text-danger softhide margin-top-10">
+<span class="text-success">&lt;!-- Bootstrap Modal &gt;--></span>
+&lt;button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"&gt;
+	Bootstrap Modal
+&lt;/button&gt;
+
+&lt;div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;
+	&lt;div class="modal-dialog"&gt;
+		&lt;div class="modal-content"&gt;
+
+			&lt;!-- Modal Header --&gt;
+			&lt;div class="modal-header"&gt;
+				&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;<code>&amp;times;</code>&lt;/span&gt;&lt;/button&gt;
+				&lt;h4 class="modal-title" id="myModalLabel"&gt;Modal title&lt;/h4&gt;
+			&lt;/div&gt;
+
+			&lt;!-- Modal Body --&gt;
+			&lt;div class="modal-body"&gt;
+				&lt;h4&gt;Text in a modal&lt;/h4&gt;
+				&lt;p&gt;Duis mollis, est non commodo luctus, nisi erat porttitor ligula.&lt;/p&gt;
+
+				&lt;h4&gt;Popover in a modal&lt;/h4&gt;
+				&lt;p&gt;This &lt;a href="#" data-toggle="popover" class="btn btn-default" title="A Title" data-content="And here's some amazing content. It's very engaging. right?"&gt;button&lt;/a&gt; should trigger a popover on click.&lt;/p&gt;
+
+				&lt;h4&gt;Tooltips in a modal&lt;/h4&gt;
+				&lt;p&gt;&lt;a href="#" data-toggle="tooltip" title="Tooltip"&gt;This link&lt;/a&gt; and &lt;a href="#" data-toggle="tooltip" title="Tooltip"&gt;that link&lt;/a&gt; should have tooltips on hover.&lt;/p&gt;
+			&lt;/div&gt;
+
+			&lt;!-- Modal Footer --&gt;
+			&lt;div class="modal-footer"&gt;
+				&lt;button type="button" class="btn btn-default" data-dismiss="modal"&gt;Close&lt;/button&gt;
+				&lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+			&lt;/div&gt;
+
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+<span class="text-success">&lt;!-- Modal Ajax Lightbox &gt;--></span>
+&lt;a class="btn btn-default btn-lg lightbox" href="ajax/dummy-lightbox.html" data-lightbox="iframe" data-plugin-options='{"type":"ajax", "closeOnBgClick":false}'&gt;
+	Modal Ajax Lightbox&lt;/a
+&gt;
+</pre>
+<!-- /pre code -->
+	
+						</div>
+
+					</div>
+					<!-- / -->
+
+					<!-- -- -->
+					<div id="ui-3" class="panel panel-default">
+
+						<div class="panel-heading">
+
+							<span class="title elipsis">
+								<strong>VARIOUS MODAL</strong> <!-- panel title -->
+							</span>
+
+							<!-- right options -->
+							<ul class="options pull-right list-inline">
+								<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+								<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+								<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+							</ul>
+							<!-- /right options -->
+
+						</div>
+
+						<!-- panel content -->
+						<div class="panel-body">
+
+							<!-- Fullwidth Modal -->
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-full">Fullwidth modal</button>
+							<div class="modal fade bs-example-modal-full" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-full">
+									<div class="modal-content">
+
+										<!-- header modal -->
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myLargeModalLabel">Fullwidth modal</h4>
+										</div>
+
+										<!-- body modal -->
+										<div class="modal-body">
+											Modal Content Here
+										</div>
+
+										<!-- Modal Footer -->
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-primary">Save changes</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+
+							<!-- Large Modal -->
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+							<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-lg">
+									<div class="modal-content">
+
+										<!-- header modal -->
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myLargeModalLabel">Large modal</h4>
+										</div>
+
+										<!-- body modal -->
+										<div class="modal-body">
+											...
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+
+							<!-- Small Modal -->
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+							<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-sm">
+									<div class="modal-content">
+
+										<!-- header modal -->
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="mySmallModalLabel">Small modal</h4>
+										</div>
+
+										<!-- body modal -->
+										<div class="modal-body">
+											...
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+
+							<!-- Ajax Modal -->
+							<a class=" btn btn-primary" href="ajax/dummy-modal-ajax.html" data-target="#ajax" data-toggle="modal">Ajax Modal</a>
+							<div class="modal fade" id="ajax" role="basic" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+
+										<div class="text-center">
+											<img src="assets/images/loaders/7.gif" alt="" />
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+						<!-- /panel content -->
+
+						<div class="panel-footer">
+
+<!-- pre code -->
+<div class="text-left">
+	<a class="btn btn-xs btn-info" href="javascript:;" onclick="jQuery('#pre-2').slideToggle();">Show Code</a>
+</div>
+<pre id="pre-2" class="text-left noradius text-danger softhide margin-top-10">
+<span class="text-success">&lt;!-- Fullwidth Modal &gt;--></span>
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-full"&gt;Fullwidth modal&lt;/button&gt;
+
+&lt;div class="modal fade bs-example-modal-full" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"&gt;
+	&lt;div class="modal-dialog modal-full"&gt;
+		&lt;div class="modal-content"&gt;
+
+			&lt;!-- header modal --&gt;
+			&lt;div class="modal-header"&gt;
+				&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+				&lt;h4 class="modal-title" id="myLargeModalLabel"&gt;Fullwidth modal&lt;/h4&gt;
+			&lt;/div&gt;
+
+			&lt;!-- body modal --&gt;
+			&lt;div class="modal-body"&gt;
+				Modal Content Here
+			&lt;/div&gt;
+
+			&lt;!-- Modal Footer --&gt;
+			&lt;div class="modal-footer"&gt;
+				&lt;button type="button" class="btn btn-default" data-dismiss="modal"&gt;Close&lt;/button&gt;
+				&lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+			&lt;/div&gt;
+
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+
+<span class="text-success">&lt;!-- Large Modal &gt;--></span>
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"&gt;Large modal&lt;/button&gt;
+
+&lt;div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"&gt;
+	&lt;div class="modal-dialog modal-lg"&gt;
+		&lt;div class="modal-content"&gt;
+
+			&lt;!-- header modal --&gt;
+			&lt;div class="modal-header"&gt;
+				&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+				&lt;h4 class="modal-title" id="myLargeModalLabel"&gt;Large modal&lt;/h4&gt;
+			&lt;/div&gt;
+
+			&lt;!-- body modal --&gt;
+			&lt;div class="modal-body"&gt;
+				...
+			&lt;/div&gt;
+
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+
+<span class="text-success">&lt;!-- Small Modal &gt;--></span>
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm"&gt;Small modal&lt;/button&gt;
+
+&lt;div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true"&gt;
+	&lt;div class="modal-dialog modal-sm"&gt;
+		&lt;div class="modal-content"&gt;
+
+			&lt;!-- header modal --&gt;
+			&lt;div class="modal-header"&gt;
+				&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+				&lt;h4 class="modal-title" id="mySmallModalLabel"&gt;Small modal&lt;/h4&gt;
+			&lt;/div&gt;
+
+			&lt;!-- body modal --&gt;
+			&lt;div class="modal-body"&gt;
+				...
+			&lt;/div&gt;
+
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+<span class="text-success">&lt;!-- Ajax Modal &gt;--></span>
+&lt;a class=" btn btn-primary" href="ajax/dummy-modal-ajax.html" data-target="#ajax" data-toggle="modal"&gt;Ajax Modal&lt;/a&gt;
+&lt;div class="modal fade" id="ajax" role="basic" aria-hidden="true"&gt;
+	&lt;div class="modal-dialog"&gt;
+		&lt;div class="modal-content"&gt;
+
+			&lt;div class="text-center"&gt;
+				&lt;img src="assets/images/loaders/7.gif" alt="" /&gt;
+			&lt;/div&gt;
+
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<!-- /pre code -->
+	
+						</div>
+
+					</div>
+					<!-- / -->
+
+				</div>
+			</section>
+			<!-- /MIDDLE -->
+
+		</div>
+
+
+
+	
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+
+	</body>
+</html>

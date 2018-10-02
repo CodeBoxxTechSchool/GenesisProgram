@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Smarty Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+		<!-- WEB FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+	</head>
+	<!--
+		.boxed = boxed version
+	-->
+	<body>
+
+
+		<!-- WRAPPER -->
+		<div id="wrapper">
+
+			<!-- 
+				ASIDE 
+				Keep it outside of #wrapper (responsive purpose)
+			-->
+			<aside id="aside">
+				<!--
+					Always open:
+					<li class="active alays-open">
+
+					LABELS:
+						<span class="label label-danger pull-right">1</span>
+						<span class="label label-default pull-right">1</span>
+						<span class="label label-warning pull-right">1</span>
+						<span class="label label-success pull-right">1</span>
+						<span class="label label-info pull-right">1</span>
+				-->
+				<nav id="sideNav"><!-- MAIN MENU -->
+					<ul class="nav nav-list">
+						<li><!-- dashboard -->
+							<a class="dashboard" href="index.html"><!-- warning - url used by default by ajax (if eneabled) -->
+								<i class="main-icon fa fa-dashboard"></i> <span>Dashboard</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-bar-chart-o"></i> <span>Graphs</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="graphs-flot.html">Flot Charts</a></li>
+								<li><a href="graphs-morris.html">Morris Charts</a></li>
+								<li class="active"><a href="graphs-inline.html">Inline Charts</a></li>
+								<li><a href="graphs-chartjs.html">Chart.js</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-table"></i> <span>Tables</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="tables-bootstrap.html">Bootstrap Tables</a></li>
+								<li><a href="tables-jqgrid.html">jQuery Grid</a></li>
+								<li><a href="tables-footable.html">jQuery Footable</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Datatables
+									</a>
+									<ul>
+										<li><a href="tables-datatable-managed.html">Managed Datatables</a></li>
+										<li><a href="tables-datatable-editable.html">Editable Datatables</a></li>
+										<li><a href="tables-datatable-advanced.html">Advanced Datatables</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-pencil-square-o"></i> <span>Forms</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="form-elements.html">Smarty Elements</a></li>
+								<li><a href="form-masked-inputs.html">Masked Inputs</a></li>
+								<li><a href="form-pickers.html">Pickers</a></li>
+								<li><a href="form-ui-sliders.html">UI Sliders</a></li>
+								<li><a href="form-validation.html">Validation Form</a></li>
+								<li><a href="form-html-editors.html">Html Editors</a></li>
+								<li><a href="form-autosuggest.html">Autosuggest</a></li>
+								<li><a href="form-x-editable.html">Form X-Editable</a></li>
+								<li><a href="form-dropzone.html">Dropzone File Upload</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-gears"></i> <span>UI Features</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="ui-portlets.html">Portlets</a></li>
+								<li><a href="ui-buttons.html">Buttons</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Icons
+									</a>
+									<ul>
+										<li><a href="ui-icons-fontawsome.html">Fontawsome</a></li>
+										<li><a href="ui-icons-etline.html">Et-Line Icons</a></li>
+										<li><a href="ui-icons-glyphicons.html">Glyph Icons</a></li>
+										<li><a href="ui-icons-flags.html">Flags</a></li>
+									</ul>
+								</li>
+								<li><a href="ui-alerts-dialogs.html">Alerts &amp; Dialogs</a></li>
+								<li><a href="ui-tabs-acordion-navs.html">Tabs, Acordion &amp; Navs</a></li>
+								<li><a href="ui-knob.html">Knob Circles</a></li>
+								<li><a href="ui-nestable.html">Nestable List</a></li>
+								<li><a href="ui-toastr.html">Toastr Notifications</a></li>
+								<li><a href="ui-modals.html">Modals</a></li>
+								<li><a href="ui-grid.html">Grid</a></li>
+								<li><a href="ui-google-maps.html">Google Maps</a></li>
+								<li><a href="ui-vector-maps.html">Vector Maps</a></li>
+								<li><a href="ui-essentials.html">Essentials</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										<i class="fa fa-folder-open"></i>
+										Deep Navigation
+									</a>
+									<!-- 3rd Level -->
+									<ul>
+										<li>
+											<a href="#">
+												3rd Level
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-menu-arrow pull-right"></i>
+												<i class="fa fa-folder-open"></i>
+												4rd Level
+											</a>
+											<!-- 4th Level -->
+											<ul>
+												<li>
+													<a href="#">
+														4th Level
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-menu-arrow pull-right"></i>
+														<i class="fa fa-folder-open"></i>
+														5th Level
+													</a>
+													<!-- 5th Level -->
+													<ul>
+														<li>
+															<a href="#">
+																5th level
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<i class="fa fa-menu-arrow pull-right"></i>
+																<i class="fa fa-folder-open"></i>
+																6th level
+															</a>
+															<!-- 6th Level -->
+															<ul>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+															</ul><!-- /6th Level -->
+														</li>
+													</ul><!-- /5th Level -->
+												</li>
+											</ul><!-- /4th Level -->
+										</li>
+									</ul><!-- /3rd Level -->
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-book"></i> <span>Pages</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="page-invoice.html">Invoice</a></li>
+								<li><a href="page-login.html">Login</a></li>
+								<li><a href="page-register.html">Register</a></li>
+								<li><a href="page-lock.html">Lock Screen</a></li>
+								<li><a href="page-forum.html">Forum</a></li>
+								<li><a href="page-404.html">Error 404</a></li>
+								<li><a href="page-500.html">Error 500</a></li>
+								<li><a href="page-pricing.html">Pricing Table</a></li>
+								<li><a href="page-search.html">Search Result</a></li>
+								<li><a href="page-sidebar.html">Sidebar Page</a></li>
+								<li><a href="page-user-profile.html">User Profile</a></li>
+								<li><a href="page-blank-1.html">Blank Page</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+					</ul>
+
+					<!-- SECOND MAIN LIST -->
+					<h3>MORE</h3>
+					<ul class="nav nav-list">
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+						<li>
+							<a href="../../HTML_BS4/start.html">
+								<i class="main-icon fa fa-link"></i>
+								<span class="label label-danger pull-right">PRO</span> <span>Frontend</span>
+							</a>
+						</li>
+					</ul>
+
+				</nav>
+
+				<span id="asidebg"><!-- aside fixed background --></span>
+			</aside>
+			<!-- /ASIDE -->
+
+
+			<!-- HEADER -->
+			<header id="header">
+
+				<!-- Mobile Button -->
+				<button id="mobileMenuBtn"></button>
+
+				<!-- Logo -->
+				<span class="logo pull-left">
+					<img src="assets/images/logo_light.png" alt="admin panel" height="35" />
+				</span>
+
+				<form method="get" action="page-search.html" class="search pull-left hidden-xs">
+					<input type="text" class="form-control" name="k" placeholder="Search for something..." />
+				</form>
+
+				<nav>
+
+					<!-- OPTIONS LIST -->
+					<ul class="nav pull-right">
+
+						<!-- USER OPTIONS -->
+						<li class="dropdown pull-left">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+								<img class="user-avatar" alt="" src="assets/images/noavatar.jpg" height="34" /> 
+								<span class="user-name">
+									<span class="hidden-xs">
+										John Doe <i class="fa fa-angle-down"></i>
+									</span>
+								</span>
+							</a>
+							<ul class="dropdown-menu hold-on-click">
+								<li><!-- my calendar -->
+									<a href="calendar.html"><i class="fa fa-calendar"></i> Calendar</a>
+								</li>
+								<li><!-- my inbox -->
+									<a href="#"><i class="fa fa-envelope"></i> Inbox
+										<span class="pull-right label label-default">0</span>
+									</a>
+								</li>
+								<li><!-- settings -->
+									<a href="page-user-profile.html"><i class="fa fa-cogs"></i> Settings</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li><!-- lockscreen -->
+									<a href="page-lock.html"><i class="fa fa-lock"></i> Lock Screen</a>
+								</li>
+								<li><!-- logout -->
+									<a href="page-login.html"><i class="fa fa-power-off"></i> Log Out</a>
+								</li>
+							</ul>
+						</li>
+						<!-- /USER OPTIONS -->
+
+					</ul>
+					<!-- /OPTIONS LIST -->
+
+				</nav>
+
+			</header>
+			<!-- /HEADER -->
+
+
+			<!-- 
+				MIDDLE 
+			-->
+			<section id="middle">
+
+
+				<!-- page title -->
+				<header id="page-header">
+					<h1>Inline Charts</h1>
+					<ol class="breadcrumb">
+						<li><a href="#">Graphs</a></li>
+						<li class="active">Inline Charts</li>
+					</ol>
+				</header>
+				<!-- /page title -->
+
+
+				<div id="content" class="padding-20">
+
+					<!-- Sparkline -->
+					<div id="graph-sparkline" class="panel panel-default">
+
+						<div class="panel-heading">
+
+							<span class="elipsis"><!-- panel title -->
+								<strong>Sparkline</strong>
+							</span>
+
+							<!-- right options -->
+							<ul class="options pull-right list-inline">
+								<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+								<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+								<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+							</ul>
+							<!-- /right options -->
+
+						</div>
+
+						<!-- panel content -->
+						<div class="panel-body">
+
+
+							 <!--
+								TYPE:	'line', 'bar', 'tristate', 'discrete', 'bullet', 'pie' or 'box'
+
+								USAGE: 	data-plugin-options='{"type":"bar","barColor":"#D9534F","height":"26px","barWidth":"5","barSpacing":"2"}'
+							-->
+							<p>
+								Inline 				<span class="sparkline" data-plugin-options='{"barColor":"#D9534F","height":"26px"}'>10,8,9,3,5,8,5</span> <br />
+								<code class="fsize11 text-muted hidden-md">
+									&lt;span class="sparkline" data-plugin-options='{"barColor":"#D9534F","height":"26px"}'&gt;10,8,9,3,5,8,5&lt;/span&gt;
+								</code><br /><br class="hidden-md" /><br class="hidden-md" />
+
+								line graphs 		<span class="sparkline" data-plugin-options='{"barColor":"#D9534F","height":"26px"}'>8,4,0,0,0,0,1,4,4,10,10,10,10,0,0,0,4,6,5,9,10</span><br />
+								<code class="fsize11 text-muted hidden-md">
+									&lt;span class="sparkline" data-plugin-options='{"barColor":"#D9534F","height":"26px"}'&gt;8,4,0,0,0,0,1,4,4,10,10,10,10,0,0,0,4,6,5,9,10&lt;/span&gt;
+								</code><br /><br class="hidden-md" />
+
+							</p>
+
+
+							<p>
+								Bar charts 			<span class="sparkline" data-plugin-options='{"type":"bar","barColor":"#D9534F","height":"26px","barWidth":"5","barSpacing":"2"}'>9,6,5,6,6,7,7,6,7,8,9,7</span> &nbsp; &nbsp; &nbsp;
+													<span class="sparkline" data-plugin-options='{"type":"bar","barColor":"#5CB85C","height":"26px","barWidth":"5","barSpacing":"2"}'>9,6,5,6,6,7,7,6,7,8,9,7</span> &nbsp; &nbsp; &nbsp; 
+													<span class="sparkline" data-plugin-options='{"type":"bar","barColor":"#687482","height":"26px","barWidth":"5","barSpacing":"2"}'>9,6,5,6,6,7,7,6,7,8,9,7</span><br />
+								<code class="fsize11 text-muted hidden-md">
+									&lt;span class="sparkline" data-plugin-options='{"type":"bar","barColor":"#D9534F","height":"26px","barWidth":"5","barSpacing":"2"}'&gt;9,6,5,6,6,7,7,6,7,8,9,7&lt;/span&gt; <br />
+								</code><br /><br class="hidden-md" />
+
+								Negative values: 	<span class="sparkline" data-plugin-options='{"type":"bar","barColor":"#D9534F","height":"26px","barWidth":"5","barSpacing":"2"}'>-3,1,2,0,3,-1</span><br />
+								<code class="fsize11 text-muted hidden-md">
+									&lt;span class="sparkline" data-plugin-options='{"type":"bar","barColor":"#D9534F","height":"26px","barWidth":"5","barSpacing":"2"}'&gt;-3,1,2,0,3,-1&lt;/span&gt; <br />
+								</code><br /><br class="hidden-md" />
+
+								Stacked: 			<span class="sparkline" data-plugin-options='{"type":"bar","barColor":"#D9534F","height":"26px","barWidth":"5","barSpacing":"2"}'>0:2,2:4,4:2,4:1</span><br />
+								<code class="fsize11 text-muted hidden-md">
+									Stacked &lt;span class="sparkline" data-plugin-options='{"type":"bar","barColor":"#D9534F","height":"26px","barWidth":"5","barSpacing":"2"}'&gt;0:2,2:4,4:2,4:1&lt;/span&gt; <br />
+								</code><br /><br class="hidden-md" />
+
+							</p>
+
+
+							<p>
+								Discrete
+								<span class="sparkline" data-plugin-options='{"type":"discrete","lineColor":"blue","height":"26px"}'>4,6,7,7,4,3,2,1,4,4,5,6,7,6,6,2,4,5</span><br />
+								<code class="fsize11 text-muted hidden-md">
+									&lt;span class="sparkline" data-plugin-options='{"type":"discrete","lineColor":"blue","height":"26px"}'&gt;4,6,7,7,4,3,2,1,4,4,5,6,7,6,6,2,4,5&lt;/span&gt; <br />
+								</code><br /><br class="hidden-md" />
+
+								Discrete with treshold
+								<span class="sparkline" data-plugin-options='{"type":"discrete","lineColor":"blue","thresholdColor":"red","thresholdValue":"4","height":"26px"}'>4,6,7,7,4,3,2,1,4</span><br />
+								<code class="fsize11 text-muted hidden-md">
+									&lt;span class="sparkline" data-plugin-options='{"type":"discrete","lineColor":"blue","thresholdColor":"red","thresholdValue":"4","height":"26px"}'&gt;4,6,7,7,4,3,2,1,4&lt;/span&gt; <br />
+								</code><br class="hidden-md" />
+
+							</p>
+
+
+							<p>
+								Bullet		<span class="sparkline" data-plugin-options='{"type":"bullet","height":"26px"}'>10,12,12,9,7</span><br />
+								<code class="fsize11 text-muted hidden-md">
+									&lt;span class="sparkline" data-plugin-options='{"type":"bullet","height":"26px"}'&gt;10,12,12,9,7&lt;/span&gt; <br />
+								</code><br class="hidden-md" />
+							</p>
+
+
+							<p>
+								Box		<span class="sparkline" data-plugin-options='{"type":"box","height":"26px"}'>4,27,34,52,54,59,61,68,78,82,85,87,91,93,100</span><br />
+								<code class="fsize11 text-muted hidden-md">
+									&lt;span class="sparkline" data-plugin-options='{"type":"box","height":"26px"}'&gt;4,27,34,52,54,59,61,68,78,82,85,87,91,93,100&lt;/span&gt; <br />
+								</code><br class="hidden-md" />
+							</p>
+
+							<p>
+								Pie Chart
+								<span class="sparkline" data-plugin-options='{"type":"pie","height":"26px"}'>1,1,2</span> 
+								<span class="sparkline" data-plugin-options='{"type":"pie","height":"26px"}'>1,5</span> 
+								<span class="sparkline" data-plugin-options='{"type":"pie","height":"26px"}'>20,50,80</span><br />
+								<code class="fsize11 text-muted hidden-md">
+									&lt;span class="sparkline" data-plugin-options='{"type":"pie","height":"26px"}'&gt;20,50,80&lt;/span&gt; <br />
+								</code><br class="hidden-md" />
+							</p>
+
+						</div>
+						<!-- /panel content -->
+
+					</div>
+					<!-- /Sparkline -->
+
+					<!-- Easy Pie Charts -->
+					<div id="graph-pie-chart" class="panel panel-default">
+
+						<div class="panel-heading">
+
+							<span class="elipsis"><!-- panel title -->
+								<strong>Easy Pie Charts</strong>
+							</span>
+
+							<!-- right options -->
+							<ul class="options pull-right list-inline">
+								<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+								<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+								<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+							</ul>
+							<!-- /right options -->
+
+
+						</div>
+
+						<!-- panel content -->
+						<div class="panel-body">
+
+							<ul class="list-inline">
+								<li>&nbsp;&nbsp;&nbsp;
+									<span class="easyPieChart" data-percent="86" data-easing="easeOutBounce" data-barColor="#D9534F" data-trackColor="#dddddd" data-scaleColor="#dddddd" data-size="180" data-lineWidth="20">
+										<span class="percent"></span>
+									</span>
+									&nbsp;&nbsp;&nbsp;
+								</li>
+								<li>&nbsp;&nbsp;&nbsp;
+									<span class="easyPieChart" data-percent="86" data-easing="easeOutBounce" data-barColor="#5CB85C" data-trackColor="#dddddd" data-scaleColor="#dddddd" data-size="130" data-lineWidth="15">
+										<span class="percent"></span>
+									</span>
+									&nbsp;&nbsp;&nbsp;
+								</li>
+								<li>&nbsp;&nbsp;&nbsp;
+									<span class="easyPieChart" data-percent="86" data-easing="easeOutBounce" data-barColor="#687482" data-trackColor="#dddddd" data-scaleColor="#dddddd" data-size="100" data-lineWidth="6">
+										<span class="percent"></span>
+									</span>
+									&nbsp;&nbsp;&nbsp;
+								</li>
+								<li>&nbsp;&nbsp;&nbsp;
+									<span class="easyPieChart" data-percent="86" data-easing="easeOutBounce" data-barColor="#ef1e25" data-trackColor="#dddddd" data-scaleColor="#dddddd" data-size="80" data-lineWidth="4">
+										<span class="percent"></span>
+									</span>
+									&nbsp;&nbsp;&nbsp;
+								</li>
+								<li>&nbsp;&nbsp;&nbsp;
+									<span class="easyPieChart" data-percent="86" data-easing="easeOutBounce" data-barColor="#B19A6B" data-trackColor="#dddddd" data-scaleColor="#dddddd" data-size="60" data-lineWidth="2">
+										<span class="percent"></span>
+									</span>
+									&nbsp;&nbsp;&nbsp;
+								</li>
+							</ul>
+
+							<code class="fsize11 text-muted hidden-md">
+								&lt;span class="easyPieChart" data-percent="86" data-easing="easeOutBounce" data-barColor="#ef1e25" data-trackColor="#dddddd" data-scaleColor="#dddddd" data-size="60" data-lineWidth="6"&gt;<br />
+									&nbsp; &nbsp; &lt;span class="percent"&gt;&lt;/span&gt;<br />
+								&lt;/span&gt; <br />
+							</code><br /><br />
+
+						</div>
+						<!-- /panel content -->
+
+					</div>
+					<!-- /Easy Pie Charts -->
+
+
+					<!-- INFO -->
+					<div id="notice-panel" class="panel panel-default">
+
+						<!-- panel content -->
+						<div class="panel-body">
+							<span class="label label-primary fsize12">NOTE</span> &nbsp; Javascript functions placed on <strong>app.js</strong> (do not edit, recommended)<br />
+							No page level scripts needed!
+						</div>
+						<!-- /panel content -->
+
+					</div>
+					<!-- /INFO -->
+
+				</div>
+			</section>
+			<!-- /MIDDLE -->
+
+		</div>
+
+
+
+	
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+
+	</body>
+</html>

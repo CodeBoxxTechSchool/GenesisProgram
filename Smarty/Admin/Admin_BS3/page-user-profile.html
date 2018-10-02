@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Smarty Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+		<!-- WEB FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+	</head>
+	<!--
+		.boxed = boxed version
+	-->
+	<body>
+
+
+		<!-- WRAPPER -->
+		<div id="wrapper">
+
+			<!-- 
+				ASIDE 
+				Keep it outside of #wrapper (responsive purpose)
+			-->
+			<aside id="aside">
+				<!--
+					Always open:
+					<li class="active alays-open">
+
+					LABELS:
+						<span class="label label-danger pull-right">1</span>
+						<span class="label label-default pull-right">1</span>
+						<span class="label label-warning pull-right">1</span>
+						<span class="label label-success pull-right">1</span>
+						<span class="label label-info pull-right">1</span>
+				-->
+				<nav id="sideNav"><!-- MAIN MENU -->
+					<ul class="nav nav-list">
+						<li><!-- dashboard -->
+							<a class="dashboard" href="index.html"><!-- warning - url used by default by ajax (if eneabled) -->
+								<i class="main-icon fa fa-dashboard"></i> <span>Dashboard</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-bar-chart-o"></i> <span>Graphs</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="graphs-flot.html">Flot Charts</a></li>
+								<li><a href="graphs-morris.html">Morris Charts</a></li>
+								<li><a href="graphs-inline.html">Inline Charts</a></li>
+								<li><a href="graphs-chartjs.html">Chart.js</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-table"></i> <span>Tables</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="tables-bootstrap.html">Bootstrap Tables</a></li>
+								<li><a href="tables-jqgrid.html">jQuery Grid</a></li>
+								<li><a href="tables-footable.html">jQuery Footable</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Datatables
+									</a>
+									<ul>
+										<li><a href="tables-datatable-managed.html">Managed Datatables</a></li>
+										<li><a href="tables-datatable-editable.html">Editable Datatables</a></li>
+										<li><a href="tables-datatable-advanced.html">Advanced Datatables</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-pencil-square-o"></i> <span>Forms</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="form-elements.html">Smarty Elements</a></li>
+								<li><a href="form-masked-inputs.html">Masked Inputs</a></li>
+								<li><a href="form-pickers.html">Pickers</a></li>
+								<li><a href="form-ui-sliders.html">UI Sliders</a></li>
+								<li><a href="form-validation.html">Validation Form</a></li>
+								<li><a href="form-html-editors.html">Html Editors</a></li>
+								<li><a href="form-autosuggest.html">Autosuggest</a></li>
+								<li><a href="form-x-editable.html">Form X-Editable</a></li>
+								<li><a href="form-dropzone.html">Dropzone File Upload</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-gears"></i> <span>UI Features</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="ui-portlets.html">Portlets</a></li>
+								<li><a href="ui-buttons.html">Buttons</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										Icons
+									</a>
+									<ul>
+										<li><a href="ui-icons-fontawsome.html">Fontawsome</a></li>
+										<li><a href="ui-icons-etline.html">Et-Line Icons</a></li>
+										<li><a href="ui-icons-glyphicons.html">Glyph Icons</a></li>
+										<li><a href="ui-icons-flags.html">Flags</a></li>
+									</ul>
+								</li>
+								<li><a href="ui-alerts-dialogs.html">Alerts &amp; Dialogs</a></li>
+								<li><a href="ui-tabs-acordion-navs.html">Tabs, Acordion &amp; Navs</a></li>
+								<li><a href="ui-knob.html">Knob Circles</a></li>
+								<li><a href="ui-nestable.html">Nestable List</a></li>
+								<li><a href="ui-toastr.html">Toastr Notifications</a></li>
+								<li><a href="ui-modals.html">Modals</a></li>
+								<li><a href="ui-grid.html">Grid</a></li>
+								<li><a href="ui-google-maps.html">Google Maps</a></li>
+								<li><a href="ui-vector-maps.html">Vector Maps</a></li>
+								<li><a href="ui-essentials.html">Essentials</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										<i class="fa fa-folder-open"></i>
+										Deep Navigation
+									</a>
+									<!-- 3rd Level -->
+									<ul>
+										<li>
+											<a href="#">
+												3rd Level
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-menu-arrow pull-right"></i>
+												<i class="fa fa-folder-open"></i>
+												4rd Level
+											</a>
+											<!-- 4th Level -->
+											<ul>
+												<li>
+													<a href="#">
+														4th Level
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-menu-arrow pull-right"></i>
+														<i class="fa fa-folder-open"></i>
+														5th Level
+													</a>
+													<!-- 5th Level -->
+													<ul>
+														<li>
+															<a href="#">
+																5th level
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<i class="fa fa-menu-arrow pull-right"></i>
+																<i class="fa fa-folder-open"></i>
+																6th level
+															</a>
+															<!-- 6th Level -->
+															<ul>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		6th level
+																	</a>
+																</li>
+															</ul><!-- /6th Level -->
+														</li>
+													</ul><!-- /5th Level -->
+												</li>
+											</ul><!-- /4th Level -->
+										</li>
+									</ul><!-- /3rd Level -->
+								</li>
+							</ul>
+						</li>
+						<li class="active">
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-book"></i> <span>Pages</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="page-invoice.html">Invoice</a></li>
+								<li><a href="page-login.html">Login</a></li>
+								<li><a href="page-register.html">Register</a></li>
+								<li><a href="page-lock.html">Lock Screen</a></li>
+								<li><a href="page-forum.html">Forum</a></li>
+								<li><a href="page-404.html">Error 404</a></li>
+								<li><a href="page-500.html">Error 500</a></li>
+								<li><a href="page-pricing.html">Pricing Table</a></li>
+								<li><a href="page-search.html">Search Result</a></li>
+								<li><a href="page-sidebar.html">Sidebar Page</a></li>
+								<li class="active"><a href="page-user-profile.html">User Profile</a></li>
+								<li><a href="page-blank-1.html">Blank Page</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+					</ul>
+
+					<!-- SECOND MAIN LIST -->
+					<h3>MORE</h3>
+					<ul class="nav nav-list">
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>Calendar</span>
+							</a>
+						</li>
+						<li>
+							<a href="../../HTML_BS4/start.html">
+								<i class="main-icon fa fa-link"></i>
+								<span class="label label-danger pull-right">PRO</span> <span>Frontend</span>
+							</a>
+						</li>
+					</ul>
+
+				</nav>
+
+				<span id="asidebg"><!-- aside fixed background --></span>
+			</aside>
+			<!-- /ASIDE -->
+
+
+			<!-- HEADER -->
+			<header id="header">
+
+				<!-- Mobile Button -->
+				<button id="mobileMenuBtn"></button>
+
+				<!-- Logo -->
+				<span class="logo pull-left">
+					<img src="assets/images/logo_light.png" alt="admin panel" height="35" />
+				</span>
+
+				<form method="get" action="page-search.html" class="search pull-left hidden-xs">
+					<input type="text" class="form-control" name="k" placeholder="Search for something..." />
+				</form>
+
+				<nav>
+
+					<!-- OPTIONS LIST -->
+					<ul class="nav pull-right">
+
+						<!-- USER OPTIONS -->
+						<li class="dropdown pull-left">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+								<img class="user-avatar" alt="" src="assets/images/noavatar.jpg" height="34" /> 
+								<span class="user-name">
+									<span class="hidden-xs">
+										John Doe <i class="fa fa-angle-down"></i>
+									</span>
+								</span>
+							</a>
+							<ul class="dropdown-menu hold-on-click">
+								<li><!-- my calendar -->
+									<a href="calendar.html"><i class="fa fa-calendar"></i> Calendar</a>
+								</li>
+								<li><!-- my inbox -->
+									<a href="#"><i class="fa fa-envelope"></i> Inbox
+										<span class="pull-right label label-default">0</span>
+									</a>
+								</li>
+								<li><!-- settings -->
+									<a href="page-user-profile.html"><i class="fa fa-cogs"></i> Settings</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li><!-- lockscreen -->
+									<a href="page-lock.html"><i class="fa fa-lock"></i> Lock Screen</a>
+								</li>
+								<li><!-- logout -->
+									<a href="page-login.html"><i class="fa fa-power-off"></i> Log Out</a>
+								</li>
+							</ul>
+						</li>
+						<!-- /USER OPTIONS -->
+
+					</ul>
+					<!-- /OPTIONS LIST -->
+
+				</nav>
+
+			</header>
+			<!-- /HEADER -->
+
+
+			<!-- 
+				MIDDLE 
+			-->
+			<section id="middle">
+
+
+				<!-- page title -->
+				<header id="page-header">
+					<h1>User Profile</h1>
+					<ol class="breadcrumb">
+						<li><a href="#">Pages</a></li>
+						<li class="active">User Profile</li>
+					</ol>
+				</header>
+				<!-- /page title -->
+
+
+				<div id="content" class="padding-20">
+
+					<div class="page-profile">
+
+						<div class="row">
+
+							<!-- COL 1 -->
+							<div class="col-md-4 col-lg-3">
+								<section class="panel">
+									<div class="panel-body noradius padding-10">
+
+										<figure class="margin-bottom-10"><!-- image -->
+											<img class="img-responsive" src="assets/images/demo/9_full.jpg" alt="" />
+										</figure><!-- /image -->
+
+										<!-- progress bar -->
+										<h6 class="progress-head">Profile Completion <span class="pull-right">60%</span></h6>
+										<div class="progress progress-xs">
+											<div class="progress-bar" role="progressbar" style="width: 60%;"></div>
+										</div><!-- /progress bar -->
+
+										<!-- updated -->
+										<ul class="list-unstyled size-13">
+											<li class="text-gray"><i class="fa fa-check"></i> Update Your Birthday</li>
+											<li class="text-gray"><i class="fa fa-check"></i> Update Profile Picture</li>
+											<li>Confirm Your Account</li>
+											<li>Update Your Address</li>
+										</ul><!-- /updated -->
+
+										<hr class="half-margins" />
+										
+										<!-- About -->
+										<h3 class="text-black">
+											Melisa Doe 
+											<small class="text-gray size-14"> / CEO</small>
+										</h3>
+										<p class="size-12">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt laoreet dolore magna aliquam tincidunt erat volutpat laoreet dolore magna aliquam tincidunt erat volutpat.</p>
+										<!-- /About -->
+
+										<hr class="half-margins" />
+
+										<!-- Social -->
+										<h6>Follow Me</h6>
+										<a href="#" class="btn ico-only btn-facebook btn-xs" title="Facebook"><i class="fa fa-facebook"></i></a>
+										<a href="#" class="btn ico-only btn-twitter btn-xs" title="Twitter"><i class="fa fa-twitter"></i></a>
+										<a href="#" class="btn ico-only btn-google-plus btn-xs" title="Google plus"><i class="fa fa-google-plus"></i></a>
+										<a href="#" class="btn ico-only btn-linkedin btn-xs" title="Linked In"><i class="fa fa-linkedin"></i></a>
+										<a href="#" class="btn ico-only btn-pinterest btn-xs" title="Pinterest"><i class="fa fa-pinterest"></i></a>
+										<a href="#" class="btn ico-only btn-flickr btn-xs" title="Flickr"><i class="fa fa-flickr"></i></a>
+										<a href="#" class="btn ico-only btn-tumblr btn-xs" title="Tumblr"><i class="fa fa-tumblr"></i></a>
+										<a href="#" class="btn ico-only btn-skype btn-xs" title="Skype"><i class="fa fa-skype"></i></a>
+										<a href="#" class="btn ico-only btn-stackoverflow btn-xs" title="Stack Overflow"><i class="fa fa-stack-overflow"></i></a>
+										<a href="#" class="btn ico-only btn-instagram btn-xs" title="Instagram"><i class="fa fa-instagram"></i></a>
+										<a href="#" class="btn ico-only btn-dribbble btn-xs" title="Dribble"><i class="fa fa-dribbble"></i></a>
+										<a href="#" class="btn ico-only btn-youtube btn-xs" title="Youtube"><i class="fa fa-youtube"></i></a>
+										<a href="#" class="btn ico-only btn-vimeo btn-xs" title="Vimeo"><i class="fa fa-vimeo-square"></i></a>
+										<a href="#" class="btn ico-only btn-rss btn-xs" title="Rss"><i class="fa fa-rss"></i></a>
+										<!-- /Social -->
+
+									</div>
+								</section>
+							</div><!-- /COL 1 -->
+
+							<!-- COL 2 -->
+							<div class="col-md-8 col-lg-6">
+
+								<div class="tabs white nomargin-top">
+									<ul class="nav nav-tabs tabs-primary">
+										<li class="active">
+											<a href="#overview" data-toggle="tab">Overview</a>
+										</li>
+										<li>
+											<a href="#edit" data-toggle="tab">Edit</a>
+										</li>
+									</ul>
+
+									<div class="tab-content">
+
+										<!-- Overview -->
+										<div id="overview" class="tab-pane active">
+
+											<form class="well">
+												<textarea rows="2" class="form-control" placeholder="What's on your mind?"></textarea>
+
+												<div class="margin-top-10">
+													<button type="submit" class="btn btn-sm btn-primary pull-right">Post</button>
+													<a href="#" class="btn btn-link profile-btn-link" data-toggle="tooltip" data-placement="bottom" title="Add a Location"><i class="fa fa-map-marker"></i></a>
+													<a href="#" class="btn btn-link profile-btn-link" data-toggle="tooltip" data-placement="bottom" title="Add Photo"><i class="fa fa-camera"></i></a>
+													<a href="#" class="btn btn-link profile-btn-link" data-toggle="tooltip" data-placement="bottom" title="Add File"><i class="fa fa-file"></i></a>
+												</div>
+											</form>
+
+											<hr class="invisible half-margins" />
+
+											<!-- COMMENT -->
+											<ul class="comment list-unstyled">
+												<li class="comment">
+
+													<!-- avatar -->
+													<img class="avatar" src="assets/images/demo/thumb/small3.jpg" width="50" height="50" alt="avatar" />
+
+													<!-- comment body -->
+													<div class="comment-body"> 
+														<a href="#" class="comment-author">
+															<small class="text-muted pull-right"> 12 Minutes ago </small>
+															<span>Melisa Doe</span>
+														</a>
+														<p>
+															Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
+															euismod tincidunt laoreet dolore magna aliquam tincidunt erat volutpat laoreet 
+															dolore magna aliquam tincidunt erat volutpat.  
+														</p>
+													</div><!-- /comment body -->
+
+													<!-- options -->
+													<ul class="list-inline size-11 margin-top-10">
+														<li>
+															<a href="#" class="text-info"><i class="fa fa-reply"></i> Reply</a>
+														</li>
+														<li>
+															<a href="#" class="text-success"><i class="fa fa-thumbs-up"></i> Like</a>
+														</li>
+														<li>
+															<a href="#" class="text-muted">Show All Comments (36)</a>
+														</li>
+														<li class="pull-right">
+															<a href="#" class="text-danger">Delete</a>
+														</li>
+														<li class="pull-right">
+															<a href="#" class="text-primary">Edit</a>
+														</li>
+													</ul>
+												</li><!-- /options -->
+
+												<li class="comment comment-reply">
+
+													<!-- avatar -->
+													<img class="avatar" src="assets/images/demo/thumb/small1.jpg" width="35" height="35" alt="avatar" />
+
+													<!-- comment body -->
+													<div class="comment-body"> 
+														<a href="#" class="comment-author">
+															<small class="text-muted pull-right"> 4 Minutes ago </small>
+															<span>Ioana Doe</span>
+														</a>
+														<p>
+															Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy! <i class="fa fa-smile-o green"></i> 
+														</p>
+													</div><!-- /comment body -->
+
+													<!-- options -->
+													<ul class="list-inline size-11">
+														<li>
+															<a href="#" class="text-success"><i class="fa fa-thumbs-up"></i> Like</a>
+														</li>
+														<li class="pull-right">
+															<a href="#" class="text-danger">Delete</a>
+														</li>
+														<li class="pull-right">
+															<a href="#" class="text-primary">Edit</a>
+														</li>
+													</ul><!-- /options -->
+
+												</li>
+
+												<li class="comment comment-reply">
+
+													<!-- avatar -->
+													<img class="avatar" src="assets/images/demo/thumb/small2.jpg" width="35" height="35" alt="avatar" />
+
+													<!-- comment body -->
+													<div class="comment-body"> 
+														<a href="#" class="comment-author">
+															<small class="text-muted pull-right"> a moment ago </small>
+															<span>Simona Doe</span>
+														</a>
+														<p>
+															Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy! <i class="fa fa-smile-o green"></i> 
+														</p>
+													</div><!-- /comment body -->
+
+													<!-- options -->
+													<ul class="list-inline size-11">
+														<li>
+															<a href="#" class="text-success"><i class="fa fa-thumbs-up"></i> Like</a>
+														</li>
+														<li class="pull-right">
+															<a href="#" class="text-danger">Delete</a>
+														</li>
+														<li class="pull-right">
+															<a href="#" class="text-primary">Edit</a>
+														</li>
+													</ul><!-- /options -->
+
+												</li>
+											</ul>
+											<!-- /COMMENT -->
+
+											<!-- COMMENT -->
+											<ul class="comment list-unstyled">
+												<li class="comment">
+
+													<!-- avatar -->
+													<img class="avatar" src="assets/images/demo/thumb/small4.jpg" width="50" height="50" alt="avatar" />
+
+													<!-- comment body -->
+													<div class="comment-body"> 
+														<a href="#" class="comment-author">
+															<small class="text-muted pull-right"> 12 Minutes ago </small>
+															<span>Melisa Doe</span>
+														</a>
+														<p>
+															Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
+															euismod tincidunt laoreet dolore magna aliquam tincidunt erat volutpat laoreet 
+															dolore magna aliquam tincidunt erat volutpat.  
+														</p>
+													</div><!-- /comment body -->
+
+													<!-- options -->
+													<ul class="list-inline size-11 margin-top-10">
+														<li>
+															<a href="#" class="text-info"><i class="fa fa-reply"></i> Reply</a>
+														</li>
+														<li>
+															<a href="#" class="text-success"><i class="fa fa-thumbs-up"></i> Like</a>
+														</li>
+														<li class="pull-right">
+															<a href="#" class="text-danger">Delete</a>
+														</li>
+														<li class="pull-right">
+															<a href="#" class="text-primary">Edit</a>
+														</li>
+													</ul>
+												</li><!-- /options -->
+
+												<li class="comment comment-reply">
+
+													<!-- avatar -->
+													<img class="avatar" src="assets/images/demo/thumb/small3.jpg" width="35" height="35" alt="avatar" />
+
+													<!-- comment body -->
+													<div class="comment-body"> 
+														<a href="#" class="comment-author">
+															<small class="text-muted pull-right"> 4 Minutes ago </small>
+															<span>Ioana Doe</span>
+														</a>
+														<p>
+															Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy! <i class="fa fa-smile-o green"></i> 
+														</p>
+													</div><!-- /comment body -->
+
+													<!-- options -->
+													<ul class="list-inline size-11">
+														<li>
+															<a href="#" class="text-success"><i class="fa fa-thumbs-up"></i> Like</a>
+														</li>
+														<li class="pull-right">
+															<a href="#" class="text-danger">Delete</a>
+														</li>
+														<li class="pull-right">
+															<a href="#" class="text-primary">Edit</a>
+														</li>
+													</ul><!-- /options -->
+
+												</li>
+
+												<li class="comment comment-reply">
+
+													<!-- avatar -->
+													<img class="avatar" src="assets/images/demo/thumb/small5.jpg" width="35" height="35" alt="avatar" />
+
+													<!-- comment body -->
+													<div class="comment-body"> 
+														<a href="#" class="comment-author">
+															<small class="text-muted pull-right"> a moment ago </small>
+															<span>Simona Doe</span>
+														</a>
+														<p>
+															Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy! <i class="fa fa-smile-o green"></i> 
+														</p>
+													</div><!-- /comment body -->
+
+													<!-- options -->
+													<ul class="list-inline size-11">
+														<li>
+															<a href="#" class="text-success"><i class="fa fa-thumbs-up"></i> Like</a>
+														</li>
+														<li class="pull-right">
+															<a href="#" class="text-danger">Delete</a>
+														</li>
+														<li class="pull-right">
+															<a href="#" class="text-primary">Edit</a>
+														</li>
+													</ul><!-- /options -->
+
+												</li>
+												<li>
+													<div class="input-group">
+														<input id="btn-input" type="text" class="form-control" placeholder="Type your message...">
+														<span class="input-group-btn">
+															<button class="btn btn-primary" id="btn-chat">
+																<i class="fa fa-reply"></i> Reply
+															</button> 
+														</span>
+													</div>
+												</li>
+											</ul>
+											<!-- /COMMENT -->
+
+										</div>
+
+										<!-- Edit -->
+										<div id="edit" class="tab-pane">
+
+											<form class="form-horizontal" method="get">
+												<h4>Personal Information</h4>
+												<fieldset>
+													<div class="form-group">
+														<label class="col-md-3 control-label" for="profileFirstName">First Name</label>
+														<div class="col-md-8">
+															<input type="text" class="form-control" id="profileFirstName">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-md-3 control-label" for="profileLastName">Last Name</label>
+														<div class="col-md-8">
+															<input type="text" class="form-control" id="profileLastName">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-md-3 control-label" for="profileAddress">Address</label>
+														<div class="col-md-8">
+															<input type="text" class="form-control" id="profileAddress">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-md-3 control-label" for="profileCompany">Company</label>
+														<div class="col-md-8">
+															<input type="text" class="form-control" id="profileCompany">
+														</div>
+													</div>
+												</fieldset>
+
+												<hr />
+
+												<h4>About</h4>
+												<fieldset>
+													<div class="form-group">
+														<label class="col-xs-3 control-label">Public Profile</label>
+														<div class="col-md-8">
+															<label class="checkbox">
+																<input type="checkbox" value="1" checked="checked" id="profilePublic">
+																<i></i> Checkbox 1
+															</label>
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-md-3 control-label" for="profileBio">Biographical Info</label>
+														<div class="col-md-8">
+															<textarea class="form-control" rows="3" id="profileBio"></textarea>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="sky-form">
+															<label class="col-xs-3 control-label">Profile Image</label>
+															<div class="col-md-8">
+																<label for="file" class="input input-file">
+																	<div class="button">
+																		<input type="file" id="file" onchange="this.parentNode.nextSibling.value = this.value">Browse
+																	</div>
+																	<input type="text" readonly>
+																</label>
+																<a href="#" class="btn btn-danger btn-xs nomargin"><i class="fa fa-times"></i> Remove Current Image</a>
+															</div>
+														</div>
+													</div>
+
+
+												</fieldset>
+
+												<hr />
+
+												<h4>Change Password</h4>
+												<fieldset class="mb-xl">
+													<div class="form-group">
+														<label class="col-md-3 control-label" for="profileNewPassword">New Password</label>
+														<div class="col-md-8">
+															<input type="text" class="form-control" id="profileNewPassword">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-md-3 control-label" for="profileNewPasswordRepeat">Repeat New Password</label>
+														<div class="col-md-8">
+															<input type="text" class="form-control" id="profileNewPasswordRepeat">
+														</div>
+													</div>
+												</fieldset>
+
+												<div class="row">
+													<div class="col-md-9 col-md-offset-3">
+														<button type="submit" class="btn btn-primary">Submit</button>
+														<button type="reset" class="btn btn-default">Reset</button>
+													</div>
+												</div>
+
+											</form>
+
+										</div>
+									</div>
+								</div>
+
+							</div><!-- /COL 2 -->
+
+							<!-- COL 3 -->
+							<div class="col-md-12 col-lg-3">
+
+								<!-- projects -->
+								<section class="panel panel-default">
+									<header class="panel-heading">
+										<h2 class="panel-title elipsis">
+											<i class="fa fa-rss"></i> Projects
+										</h2>
+									</header>
+
+									<div class="panel-body noradius padding-10">
+
+										<ul class="bullet-list list-unstyled">
+											<li class="red">
+												<h3>Epona HTML5 Template</h3>
+												<span class="text-gray size-12">Lorem ipsum dolor sit amet, consectetuer adipiscing </span>
+											</li>
+											<li class="green">
+												<h3>Atropos Template</h3>
+												<span class="text-gray size-12">Lorem ipsum dolor sit amet, consectetuer adipiscing </span>
+											</li>
+											<li class="blue">
+												<h3>isisone Template</h3>
+												<span class="text-gray size-12">Lorem ipsum dolor sit amet, consectetuer adipiscing </span>
+											</li>
+											<li class="orange">
+												<h3>Deusone Template</h3>
+												<span class="text-gray size-12">Lorem ipsum dolor sit amet, consectetuer adipiscing </span>
+											</li>
+										</ul>
+
+									</div>
+									
+								</section>
+								<!-- /projects -->
+
+								<!-- activity -->
+								<section class="panel panel-default">
+									<header class="panel-heading">
+										<h2 class="panel-title elipsis">
+											<i class="fa fa-rss"></i> Activity
+										</h2>
+									</header>
+
+									<div class="panel-body noradius padding-10">
+
+										<!-- activity list -->
+										<div class="row profile-activity">
+
+											<!-- activity item -->
+											<div class="col-xs-2 col-sm-1">
+												<time datetime="2014-06-29" class="datebox">
+													<strong>Jun</strong>
+													<span>29</span>
+												</time>
+											</div>
+
+											<div class="col-xs-10 col-sm-11">
+												<h6><a href="page-sidebar.html">Lorem ipsum dolor sit amet</a></h6>
+												<p>
+													Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
+													tincidunt laoreet dolore magna aliquam tincidunt erat volutpat laoreet dolore magna aliquam 
+													tincidunt erat volutpat.
+												</p>
+											</div>
+											<!-- /activity item -->
+
+											<div class="col-sm-12">
+												<hr class="half-margins" />
+											</div><!-- /activity separator -->
+
+											<!-- activity item -->
+											<div class="col-xs-2 col-sm-1">
+												<time datetime="2014-06-29" class="datebox">
+													<strong>Jun</strong>
+													<span>29</span>
+												</time>
+											</div>
+
+											<div class="col-xs-10 col-sm-11">
+												<h6><a href="page-sidebar.html">Sed diam nonummy nibh euismod</a></h6>
+												<p>
+													Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
+													tincidunt laoreet dolore magna aliquam tincidunt erat volutpat laoreet dolore magna aliquam 
+													tincidunt erat volutpat.
+												</p>
+											</div>
+											<!-- /activity item -->
+
+											<div class="col-sm-12">
+												<hr class="half-margins" />
+											</div><!-- /activity separator -->
+
+											<!-- paginatoin -->
+											<div class="text-center">
+												<ul class="pagination pagination-sm">
+													<li class="disabled"><a href="#">Prev</a></li>
+													<li class="active"><a href="#">1</a></li>
+													<li><a href="#">2</a></li>
+													<li><a href="#">3</a></li>
+													<li><a href="#">4</a></li>
+													<li><a href="#">Next</a></li>
+												</ul>													
+											</div>
+											<!-- /paginatoin -->
+
+										</div>
+										<!-- /activity list -->
+
+									</div>
+								</section>
+								<!-- /activity -->
+
+							</div><!-- /COL 3 -->
+
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+			<!-- /MIDDLE -->
+
+		</div>
+
+
+
+	
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+
+	</body>
+</html>
