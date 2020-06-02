@@ -3,17 +3,17 @@
 	line-height:96px;
 }
 #topMain.nav-pills>li>a {
-	color:#1F262D;
-	font-weight:400;
+	color:rgb(255, 255, 255);
+	font-weight:600;
 	background-color:transparent;
 } 
 #topMain.nav-pills>li:hover>a, 
 #topMain.nav-pills>li:focus>a {
-	color:#1F262D;
+	color:rgb(255, 0, 0);
 	background-color:rgba(0,0,0,0.03);
 }
 #topMain.nav-pills>li.active>a {
-	color:#687482;
+	color:#1e62f5;
 }
 
 #topMain.nav-pills>li>a.dropdown-toggle {
@@ -80,7 +80,7 @@
 	#header #topNav #topMain>li>a {
 		height:40px !important;
 		line-height:40px !important;
-		padding-top:0;
+		padding-top:0;	
 	}
 
 
