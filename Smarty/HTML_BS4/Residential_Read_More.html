@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-		<title>Residential Building Information</title>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Rocket Elevators Official Website</title>
 		<meta name="description" content="" />
 		<meta name="Author" content="Herbert Magramo [info.codebox.biz]" />
 
@@ -27,88 +27,344 @@
 		<!-- PAGE LEVEL SCRIPTS -->
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/color_scheme/yellow.css" rel="stylesheet" type="text/css" id="color_scheme" />
-    <style>
+	</head>
 
-    </style>
-    </head>
-    <body>
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
 
-        <div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation">
 
-        <!-- TOP NAV -->
-        <header id="topNav">
-            <div class="container">
 
-                <!-- Mobile Menu Button -->
-                <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
 
-                <!-- Logo -->
-                <a class="logo float-left scrollTo" href="#top">
-                    <img src="demo_files/images/thematics/construction/header_logo.png" alt="Header Logo" />
-                </a>
 
-                <!-- 
-                    Top Nav 
-                    
-                    AVAILABLE CLASSES:
-                    submenu-dark = dark sub menu
-                -->
-                <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
-                    <nav class="nav-main">
+		<!-- wrapper -->
+		<div id="wrapper">
 
-                        <!-- 
-                            .nav-onepage
-                            Required for onepage navigation links
-                            
-                            Add .external for an external link!
-                        -->
-                        <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
-                            <li class="active"><!-- HOME -->
-                                <a class= "scrollTo" href="index-onepage-construction.html">
-                                    HOME
-                                </a>
-                            </li>
-                            <li><!-- SERVICES -->
-                                <a href="http://127.0.0.1:5500/Smarty/HTML_BS4/index-onepage-construction.html#sevices">
-                                    SERVICES
-                                </a>
-                            </li>
-                            <li><!-- AWARDS -->
-                                <a href="#awards">
-                                    AWARDS
-                                </a>
-                            </li>
-                            <li><!-- NEWS -->
-                                <a href="#news">
-                                    NEWS
-                                </a>
-                            </li>
-                            <li><!-- CLIENTS -->
-                                <a href="#clients">
-                                    CLIENTS
-                                </a>
-                            </li>
-                            <li><!-- CONTACT -->
-                                <a href="#contact">
-                                    CONTACT
-                                </a>
-                            </li>
-                        </ul>
+			<!-- 
+				AVAILABLE HEADER CLASSES
 
-                    </nav>
-                </div>
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
 
-            </div>
-        </header>
-        <!-- /Top Nav -->
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
 
-        </div>
-    
-    <script>
-  
-    </script>
+				.clearfix		= required for mobile menu, do not remove!
 
-    </body>
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						
+
+						<!-- Logo -->
+						<a class="logo float-left scrollTo" href="#top">
+							<img src="demo_files/images/thematics/construction/header_logo.png" alt="Header Logo" />
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<nav class="nav-main">
+
+								<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									<li class="active"><!-- HOME -->
+										<a class= "scrollTo" href="#top">
+											HOME
+										</a>
+									</li>
+									<li class= "dropdown-content"> <!-- SERVICES -->
+										<a class = "dropdown-toggle" href="#services">
+											SERVICES
+										</a>
+										<ul class="dropdown-menu">
+											<li class="dropdown external">
+												<a href="Residential_Read_More.html">
+													Residential Building
+												</a>
+											</li>
+											<li class="dropdown external">
+												<a href="Corporate_Read_More.html">
+													Corporate Building
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><!-- AWARDS -->
+										<a href="#awards">
+											AWARDS
+										</a>
+									</li>
+									<li><!-- NEWS -->
+										<a href="#news">
+											NEWS
+										</a>
+									</li>
+									<li><!-- CLIENTS -->
+										<a href="#clients">
+											CLIENTS
+										</a>
+									</li>
+									<li><!-- CONTACT -->
+										<a href="#contact">
+											CONTACT
+										</a>
+									</li>
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+
+
+			<!-- REVOLUTION SLIDER -->
+			<div class="container pt-3">
+				<!--
+					Navigation Styles:
+					
+						data-navigationStyle="" theme default navigation
+						
+						data-navigationStyle="preview1"
+						data-navigationStyle="preview2"
+						data-navigationStyle="preview3"
+						data-navigationStyle="preview4"
+						
+					Bottom Shadows
+						data-shadow="1"
+						data-shadow="2"
+						data-shadow="3"
+						
+					Slider Height (do not use on fullscreen mode)
+						data-height="300"
+						data-height="350"
+						data-height="400"
+						data-height="450"
+						data-height="500"
+						data-height="550"
+						data-height="600"
+						data-height="650"
+						data-height="700"
+						data-height="750"
+						data-height="800"
+				-->
+				<div class="flexslider">
+					<ul class="slides">
+					
+						<!-- SLIDE 1 -->
+						<li>
+							<img src="demo_files/images/thematics/construction/residential1.jpeg"  alt="Slider 1">					
+						</li>
+
+						<!-- SLIDE 2 -->
+						<li>
+							<img src="demo_files/images/thematics/construction/residential2.jpeg" alt="Slider 2">			
+						</li>
+
+						<!-- SLIDE 3 -->
+						<li>							
+							<img src="demo_files/images/thematics/construction/residential3.jpeg" alt="Slider 3">									
+						</li>
+
+					</ul>
+
+				</div>
+			</div>
+			<!-- /REVOLUTION SLIDER -->		
+
+
+
+            <!-- Welcome -->
+			<section>
+				<div class="container">
+
+					<div class="text-center">
+						<h1 class="mb-0">Residential Building</h1>
+						<h2 class="col-sm-10 offset-sm-1 mb-0 fw-300 text-muted fs-20">Appartment complex, condominium... you name it. Rocket Elevators has every elevator model in every price range for your building.
+                            It is our duty and reputation to fulfill our clients' orders with the best service and support we can offer.
+                            Make your building easier to use by your residents with a Rocket Elevator lift.</h2>
+					</div>
+                    <div class="col-md-12 text-center"><!-- button -->
+                        <a href="#" rel="nofollow" target="_blank" class="btn btn-default btn-lg btn-round">Price Estimation</a>
+                    </div>
+				</div>
+			</section>
+            <!-- Welcome -->
+          
+			
+
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
+
+
+					<div class="row">
+
+						<!-- col #1 -->
+						<div class="col-md-8">
+
+							<h3 class="letter-spacing-1">WHY TRUST ROCKET ELEVATOR?</h3>
+
+							<!-- Small Description -->
+							<p>
+								Rocket Elevator provides elevators as well as solutions for maintenance and modernization, which add value to the life cycle of any building. We understand people flow in and between buildings, making people’s journeys safe, convenient and reliable.
+							</p>
+							<h2>(514)-701-0303</h2>
+						</div>
+						<!-- /col #1 -->
+
+						<!-- col #2 -->
+						<div class="col-md-4">
+							<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
+
+							<!-- Newsletter Form -->
+							<p>Subscribe to Our Newsletter to get Important News & Offers</p>
+
+							<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+									<span class="input-group-btn">
+										<button class="btn btn-success" type="submit">Subscribe</button>
+									</span>
+								</div>
+							</form>
+							<!-- /Newsletter Form -->
+
+
+						</div>
+						<!-- /col #2 -->
+
+					</div>
+
+
+				</div>
+
+				<div class="copyright">
+					<div class="container">
+						<ul class="float-right m-0 list-inline mobile-block">
+							<li><a href="#">Terms &amp; Conditions</a></li>
+							<li>&bull;</li>
+							<li><a href="#">Privacy</a></li>
+						</ul>
+						&copy; All Rights Reserved, Company LTD
+					</div>
+				</div>
+
+			</footer>
+			<!-- /FOOTER -->
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script>var plugin_path = 'assets/plugins/';</script>
+		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+		<script src="assets/js/scripts.js"></script>
+		
+
+
+		<!-- REVOLUTION SLIDER -->
+		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="assets/js/view/demo.revolution_slider.js"></script>
+
+		<!-- PAGELEVEL SCRIPTS -->
+		<script src="assets/js/contact.js"></script>
+
+		<!-- 
+			GMAP.JS 
+			http://hpneo.github.io/gmaps/
+		-->
+		<script src="//maps.google.com/maps/api/js?key=AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY"></script>
+		<script src="assets/plugins/gmaps.js"></script>
+		<script>
+
+			jQuery(document).ready(function(){
+
+				/**
+					@BASIC GOOGLE MAP
+				**/
+				var map2 = new GMaps({
+					div: '#map2',
+					lat: -12.043333,
+					lng: -77.028333,
+					scrollwheel: false
+				});
+
+				var marker = map2.addMarker({
+					lat: -12.043333,
+					lng: -77.028333,
+					title: 'Company, Inc.'
+				});
+
+			});
+
+		</script>
+	</body>
 </html>
