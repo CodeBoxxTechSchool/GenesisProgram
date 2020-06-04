@@ -1318,7 +1318,7 @@ section.dark.page-header ul.page-options a {
 	left:0; top:0; right:0;
 	z-index:1000;
 	font-size:14px;
-	background-color:rgb(26, 24, 24);
+	background-color:rgb(248, 246, 246);
 	border-bottom: rgba(0,0,0,0.05) 1px solid;
 
 	-webkit-box-shadow: 0 0 2px rgba(0,0,0,.1) !important;
@@ -2447,11 +2447,11 @@ body.menu-vertical #mainMenu.sidebar-vertical .navbar-collapse>ul.nav.navbar-nav
 		background-color:#333;
 	}
 	#header.dark #topMain.nav-pills>li>a {
-		color:#ccc;
+		color:rgb(255, 255, 255);
 	}
 	#header.dark #topMain.nav-pills>li.active>a,
 	#header.dark #topMain.nav-pills>li>a:hover {
-		color:#fff;
+		color:rgb(34, 129, 207);
 	}
 	
 	/* DARK CART & SEARCH */

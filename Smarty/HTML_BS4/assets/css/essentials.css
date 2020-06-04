@@ -91,7 +91,7 @@ input::-moz-focus-inner {
 }
 
 	::selection {
-		color:#fff;
+		color:rgb(99, 52, 52);
 		text-shadow:none;
 		background: #333;
 	}
