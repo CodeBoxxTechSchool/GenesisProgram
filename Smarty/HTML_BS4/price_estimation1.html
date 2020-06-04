@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Smarty - Multipurpose + Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation">
+
+		
+
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+			<div id="header" class="navbar-toggleable-md sticky clearfix">
+
+                 <!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						
+
+						<!-- Logo -->
+						<a class="logo float-left scrollTo" href="#top">
+							<img src="demo_files/images/thematics/construction/header_logo.png" alt="Header Logo" />
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<nav class="nav-main">
+
+								<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									<li class="active"><!-- HOME -->
+										<a class= "scrollTo" href="#top">
+											HOME
+										</a>
+									</li>
+									<li class= "dropdown-content"> <!-- SERVICES -->
+										<a class = "dropdown-toggle" href="#services">
+											SERVICES
+										</a>
+										<ul class="dropdown-menu">
+											<li class="dropdown external">
+												<a href="Residential_Read_More.html">
+													Residential Building
+												</a>
+											</li>
+											<li class="dropdown external">
+												<a href="Corporate_Read_More.html">
+													Corporate Building
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><!-- AWARDS -->
+										<a href="#awards">
+											AWARDS
+										</a>
+									</li>
+									<li><!-- NEWS -->
+										<a href="#news">
+											NEWS
+										</a>
+									</li>
+									<li><!-- CLIENTS -->
+										<a href="#clients">
+											CLIENTS
+										</a>
+									</li>
+									<li><!-- CONTACT -->
+										<a href="#contact">
+											CONTACT
+										</a>
+									</li>
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+			</div>
+
+
+			<!-- 
+				PAGE HEADER 
+				
+				CLASSES:
+					.page-header-xs	= 20px margins
+					.page-header-md	= 50px margins
+					.page-header-lg	= 80px margins
+					.page-header-xlg= 130px margins
+					.dark			= dark page header
+
+					.shadow-before-1 	= shadow 1 header top
+					.shadow-after-1 	= shadow 1 header bottom
+					.shadow-before-2 	= shadow 2 header top
+					.shadow-after-2 	= shadow 2 header bottom
+					.shadow-before-3 	= shadow 3 header top
+					.shadow-after-3 	= shadow 3 header bottom
+			-->
+			<section class="page-header dark page-header-xs">
+				<div class="container">
+
+					<h1>PORTFOLIO</h1>
+
+					<!-- breadcrumbs -->
+					<ol class="breadcrumb">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Portfolio</a></li>
+						<li class="active">Grid - 2 Columns</li>
+					</ol><!-- /breadcrumbs -->
+
+					<!-- page tabs -->
+					<ul class="page-header-tabs list-inline">
+						<li><a href="portfolio-grid-2-columns.html">With Gutter</a></li>
+						<li class="active"><a href="portfolio-grid-2-columns-gutter-title.html">Gutter + Title</a></li>
+						<li><a href="portfolio-grid-2-columns-nogutter.html">No Gutter</a></li>
+						<li><a href="portfolio-grid-2-columns-title.html">No Gutter + Title</a></li>
+						<li><a href="portfolio-grid-2-columns-overlay.html">Title Overlay</a></li>
+						<li><a href="portfolio-grid-2-columns-over.html">Title Over</a></li>
+					</ul><!-- /page tabs -->
+
+				</div>
+			</section>
+			<!-- /PAGE HEADER -->
+
+
+
+
+			<!-- -->
+			<section>
+				<div class="container">
+
+					<div id="portfolio" class="portfolio-gutter">
+
+						<ul class="nav nav-pills mix-filter mb-60">
+							<li data-filter="all" class="filter active"><a href="#">All</a></li>
+							<li data-filter="development" class="filter"><a href="#">Development</a></li>
+							<li data-filter="photography" class="filter"><a href="#">Photography</a></li>
+							<li data-filter="design" class="filter"><a href="#">Design</a></li>
+						</ul>
+
+
+						<div class="row mix-grid">
+
+							<div class="col-md-6 col-sm-6 mix design"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/8-min.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+												<!-- details -->
+												<a class="ico-rounded" href="portfolio-single-slider.html">
+													<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<!-- carousel -->
+										<div class="owl-carousel buttons-autohide controlls-over m-0" data-plugin-options='{"singleItem": true, "autoPlay": 4000, "navigation": false, "pagination": true, "transitionStyle":"goDown"}'>
+											<div>
+												<img class="img-fluid" src="demo_files/images/mockups/600x399/8-min.jpg" width="600" height="399" alt="">
+											</div>
+											<div>
+												<img class="img-fluid" src="demo_files/images/mockups/600x399/9-min.jpg" width="600" height="399" alt="">
+											</div>
+											<div>
+												<img class="img-fluid" src="demo_files/images/mockups/600x399/10-min.jpg" width="600" height="399" alt="">
+											</div>
+										</div>
+										<!-- /carousel -->
+
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Street Photography</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Photography</a></li>
+											<li><a href="#">Design</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-6 col-sm-6 mix development"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/11-min.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+												<!-- details -->
+												<a class="ico-rounded" href="portfolio-single-slider.html">
+													<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="demo_files/images/mockups/600x399/11-min.jpg" width="600" height="399" alt="">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Nature Photography</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Photography</a></li>
+											<li><a href="#">Design</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-6 col-sm-6 mix photography"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/20-min.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+												<!-- details -->
+												<a class="ico-rounded" href="portfolio-single-slider.html">
+													<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="demo_files/images/mockups/600x399/20-min.jpg" width="600" height="399" alt="">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Fashion Design</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Photography</a></li>
+											<li><a href="#">Design</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-6 col-sm-6 mix design"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/19-min.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+												<!-- details -->
+												<a class="ico-rounded" href="portfolio-single-slider.html">
+													<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="demo_files/images/mockups/600x399/19-min.jpg" width="600" height="399" alt="">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Ocean Project</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Photography</a></li>
+											<li><a href="#">Design</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-6 col-sm-6 mix design"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/12-min.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+												<!-- details -->
+												<a class="ico-rounded" href="portfolio-single-slider.html">
+													<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="demo_files/images/mockups/600x399/12-min.jpg" width="600" height="399" alt="">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Architect Project</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Architecture</a></li>
+											<li><a href="#">Design</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-6 col-sm-6 mix development"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/13-min.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+												<!-- details -->
+												<a class="ico-rounded" href="portfolio-single-slider.html">
+													<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="demo_files/images/mockups/600x399/13-min.jpg" width="600" height="399" alt="">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Speaker Design</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Audio</a></li>
+											<li><a href="#">Design</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-6 col-sm-6 mix photography"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/14-min.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+												<!-- details -->
+												<a class="ico-rounded" href="portfolio-single-slider.html">
+													<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="demo_files/images/mockups/600x399/14-min.jpg" width="600" height="399" alt="">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Mobile Development</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Development</a></li>
+											<li><a href="#">Design</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-6 col-sm-6 mix design"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/15-min.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+												<!-- details -->
+												<a class="ico-rounded" href="portfolio-single-slider.html">
+													<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="demo_files/images/mockups/600x399/15-min.jpg" width="600" height="399" alt="">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Nature Art</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Nature</a></li>
+											<li><a href="#">Art</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+						</div>
+
+					</div>
+					
+				</div>
+			</section>
+			<!-- / -->
+
+
+
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
+
+					<div class="row">
+						
+						<div class="col-md-3">
+							<!-- Footer Logo -->
+							<img class="footer-logo" src="assets/images/_smarty/logo-footer.png" alt="" />
+
+							<!-- Small Description -->
+							<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+
+							<!-- Contact Address -->
+							<address>
+								<ul class="list-unstyled">
+									<li class="footer-sprite address">
+										PO Box 21132<br>
+										Here Weare St, Melbourne<br>
+										Vivas 2355 Australia<br>
+									</li>
+									<li class="footer-sprite phone">
+										Phone: 1-800-565-2390
+									</li>
+									<li class="footer-sprite email">
+										<a href="mailto:support@yourname.com">support@yourname.com</a>
+									</li>
+								</ul>
+							</address>
+							<!-- /Contact Address -->
+
+						</div>
+
+						<div class="col-md-3">
+
+							<!-- Latest Blog Post -->
+							<h4 class="letter-spacing-1">LATEST NEWS</h4>
+							<ul class="footer-posts list-unstyled">
+								<li>
+									<a href="#">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue</a>
+									<small>29 June 2017</small>
+								</li>
+								<li>
+									<a href="#">Nullam id dolor id nibh ultricies</a>
+									<small>29 June 2017</small>
+								</li>
+								<li>
+									<a href="#">Duis mollis, est non commodo luctus</a>
+									<small>29 June 2017</small>
+								</li>
+							</ul>
+							<!-- /Latest Blog Post -->
+
+						</div>
+
+						<div class="col-md-2">
+
+							<!-- Links -->
+							<h4 class="letter-spacing-1">EXPLORE SMARTY</h4>
+							<ul class="footer-links list-unstyled">
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Our Services</a></li>
+								<li><a href="#">Our Clients</a></li>
+								<li><a href="#">Our Pricing</a></li>
+								<li><a href="#">Smarty Tour</a></li>
+								<li><a href="#">Contact Us</a></li>
+							</ul>
+							<!-- /Links -->
+
+						</div>
+
+						<div class="col-md-4">
+
+							<!-- Newsletter Form -->
+							<h4 class="letter-spacing-1">KEEP IN TOUCH</h4>
+							<p>Subscribe to Our Newsletter to get Important News &amp; Offers</p>
+
+							<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+									<span class="input-group-btn">
+										<button class="btn btn-success" type="submit">Subscribe</button>
+									</span>
+								</div>
+							</form>
+							<!-- /Newsletter Form -->
+
+							<!-- Social Icons -->
+							<div class="mt-20">
+								<a href="#" class="social-icon social-icon-border social-facebook float-left" data-toggle="tooltip" data-placement="top" title="Facebook">
+
+									<i class="icon-facebook"></i>
+									<i class="icon-facebook"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-twitter float-left" data-toggle="tooltip" data-placement="top" title="Twitter">
+									<i class="icon-twitter"></i>
+									<i class="icon-twitter"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-gplus float-left" data-toggle="tooltip" data-placement="top" title="Google plus">
+									<i class="icon-gplus"></i>
+									<i class="icon-gplus"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-linkedin float-left" data-toggle="tooltip" data-placement="top" title="Linkedin">
+									<i class="icon-linkedin"></i>
+									<i class="icon-linkedin"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-rss float-left" data-toggle="tooltip" data-placement="top" title="Rss">
+									<i class="icon-rss"></i>
+									<i class="icon-rss"></i>
+								</a>
+					
+							</div>
+							<!-- /Social Icons -->
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="copyright">
+					<div class="container">
+						<ul class="float-right m-0 list-inline mobile-block">
+							<li><a href="#">Terms &amp; Conditions</a></li>
+							<li>&bull;</li>
+							<li><a href="#">Privacy</a></li>
+						</ul>
+						&copy; All Rights Reserved, Company LTD
+					</div>
+				</div>
+			</footer>
+			<!-- /FOOTER -->
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script>var plugin_path = 'assets/plugins/';</script>
+		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+		<script src="assets/js/scripts.js"></script>
+		
+		<!-- STYLESWITCHER - REMOVE -->
+		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+	</body>
+</html>
