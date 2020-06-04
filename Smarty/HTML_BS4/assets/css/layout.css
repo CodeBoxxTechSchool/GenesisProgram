@@ -7355,8 +7355,8 @@ section#slider:not(.custom-form) .btn-default {
 	#slider:not(.custom-form) .btn-default,
 	.slider .btn-default {
 		color:#fff;
-		background-color:transparent;
-		border-color:#fff;
+		background-color:blue;
+		border-color:none;
 		border-width:2px;
 	}
 	#slider:not(.custom-form) .btn-default:hover,
