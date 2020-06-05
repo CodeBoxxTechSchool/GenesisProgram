@@ -470,14 +470,26 @@
 						return;
 					} else {
 						// UPDATING ANSWER DATA FROM RADIO BUTTON
-						resiCageNum = (+resiAppart / +resiFloor) / 6;
-						answerCage.innerHTML = resiCageNum;
-						resiElevatorPrice = (+servicePrice * +resiCageNum);
-						answerServicePricetotal.innerHTML = resiElevatorPrice;
+						// Selecting the input element and get its value 
+				resiAppart = document.getElementById("resi:appart").value;
+				resiFloor = document.getElementById("resi:floor").value;
+				resiBasement = document.getElementById("resi:basement").value;
 				
-						installationCostFees = (+servicePrice * +resiCageNum) * +installationCostPer / 100;
-						installationTotal = installationCostFees + (+servicePrice * +resiCageNum);
-						answerInstallationCost.innerHTML = installationTotal;
+								
+				// Displaying the value
+				// Calculate overall # of Appartements by Floor divided by 6 to obtain the number of Elevator cages required
+				// Number of cage required **** NEED TO ROUND it
+				resiCageNum = (+resiAppart / +resiFloor) / 6;
+				answerCage.innerHTML = resiCageNum;
+				// ELEVATORCOST = PRICE * NUM ELEVATORS
+				resiElevatorPrice = (+servicePrice * +resiCageNum);
+				answerServicePricetotal.innerHTML = resiElevatorPrice;
+				// INSTALLATION COST FEES
+				installationCostFees = (+servicePrice * +resiCageNum) * +installationCostPer / 100;
+				answerInstallationFees.innerHTML = installationCostFees;
+				// TOTAL PRICE
+				installationTotal = installationCostFees + (+servicePrice * +resiCageNum);
+				answerInstallationCost.innerHTML = installationTotal;		
 					}
 	   		}
    		
