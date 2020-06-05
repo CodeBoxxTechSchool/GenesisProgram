@@ -450,7 +450,15 @@
 				   output.innerHTML = el.value; // set its content to the value of the "el"
 				   answerServiceType.innerHTML = el.value;
 				   serType = el.value;
-				// SETTING SERVICE PRICE AND INSTALLATION PERSENT COST-->   
+				// SETTING SERVICE PRICE AND INSTALLATION PERSENT COST-->  
+					switch(serType) {
+						case Standard:
+						servicePrice = 7565;
+						installationCostPer = 10;
+						answerServicePrice.innerHTML = servicePrice;
+						
+					};
+					/*
 					if(serType === "Standard"){
 						servicePrice = 7565;
 						installationCostPer = 10;
@@ -466,6 +474,8 @@
 						installationCostPer = 16;
 						answerServicePrice.innerHTML = servicePrice;
 					}
+					*/
+
 					if(resiCageNum === 0){ 
 						return;
 					} else {
