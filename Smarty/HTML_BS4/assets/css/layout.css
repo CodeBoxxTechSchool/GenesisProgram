@@ -415,7 +415,7 @@ section .input-group-btn button.btn-default {
 }
 	section.dark .form-control {
 		border-color: #666;
-		background-color: rgba(255,255,255,0.05);
+		background-color: white;
 		outline: none;
 	}
 	section.dark .form-control:focus {
@@ -436,7 +436,7 @@ section .input-group-btn button.btn-default {
 section.dark input, 
 section.dark select, 
 section.dark textarea { 
-	color:#fff;
+	color:rgb(0, 0, 0);
 }
 section.dark .btn {
 	color:#fff;
