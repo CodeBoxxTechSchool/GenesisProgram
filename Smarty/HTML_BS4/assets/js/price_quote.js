@@ -25,10 +25,32 @@ function get
 
 
 /** ************* For commercial buildings computation ****************** **
-  Variables: costOfElevators = numberOfElevators * radio button selection
+  Compuration: costOfElevators = numberOfElevators * radio button selection
              installationFee = elevatorPrice * radio button selection
              totalPrice = costOfElevators + installationFee
 ************************************************************************* **/
+
+var type_of_services = new Array();
+    type_of_services ["comtosStan"] = 7565;
+    type_of_services ["comtosPre"] = 12345;
+    type_of_services ["comtosExce"] = 15400;
+
+function getTypeOfService () {
+    var typeOfService = 0;
+    var theForm = document.forms["commercialform"]
+    var selectedService = theForm.elements["selectedservice"];
+    for (var i = 0; i < selectedService.length; i++) {
+        if (selectedService[i].checked) {
+            typeOfService = type_of_services[selectedServices[i].value];
+            break;
+        }
+    }  
+}
+
+
+
+
+
 
 
 
