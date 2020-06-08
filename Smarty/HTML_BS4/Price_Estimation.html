@@ -15,18 +15,14 @@
 
 		<!-- CORE CSS -->
 		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-
-		<!-- REVOLUTION SLIDER -->
-		<link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
-		<link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
-
+		
 		<!-- THEME CSS -->
 		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
 
 		<!-- PAGE LEVEL SCRIPTS -->
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/color_scheme/yellow.css" rel="stylesheet" type="text/css" id="color_scheme" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
 	</head>
 
 	<!--
@@ -52,7 +48,7 @@
 	-->
 	<body class="smoothscroll enable-animation">
 
-
+		
 
 
 		<!-- wrapper -->
@@ -84,16 +80,16 @@
 
 				Example Usage:  class="clearfix sticky header-sm transparent b-0"
 			-->
-			<div id="header" class="navbar-toggleable-md sticky header-md clearfix dark">
+			<div id="header" class="navbar-toggleable-md sticky clearfix dark">
 
-				<!-- TOP NAV -->
+                <!-- TOP NAV -->
 				<header id="topNav">
 					<div class="container">
 
 						
 
 						<!-- Logo -->
-						<a class="logo float-left scrollTo" href="#top">
+						<a class="logo float-left scrollTo" href="http://127.0.0.1:5500/Smarty/HTML_BS4/index-onepage-construction.html">
 							<img src="demo_files/images/thematics/construction/header_logo.png" alt="Header Logo" />
 						</a>
 
@@ -114,12 +110,12 @@
 								-->
 								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
 									<li class="active"><!-- HOME -->
-										<a class= "scrollTo" href="#top">
+										<a href="http://127.0.0.1:5500/Smarty/HTML_BS4/index-onepage-construction.html">
 											HOME
 										</a>
 									</li>
 									<li class= "dropdown-content"> <!-- SERVICES -->
-										<a class = "dropdown-toggle" href="#services">
+										<a class = "dropdown-toggle" href="http://127.0.0.1:5500/Smarty/HTML_BS4/index-onepage-construction.html#services">
 											SERVICES
 										</a>
 										<ul class="dropdown-menu">
@@ -136,22 +132,22 @@
 										</ul>
 									</li>
 									<li><!-- AWARDS -->
-										<a href="#awards">
+										<a href="http://127.0.0.1:5500/Smarty/HTML_BS4/index-onepage-construction.html#awards">
 											AWARDS
 										</a>
 									</li>
 									<li><!-- NEWS -->
-										<a href="#news">
+										<a href="http://127.0.0.1:5500/Smarty/HTML_BS4/index-onepage-construction.html#news">
 											NEWS
 										</a>
 									</li>
 									<li><!-- CLIENTS -->
-										<a href="#clients">
+										<a href="http://127.0.0.1:5500/Smarty/HTML_BS4/index-onepage-construction.html#clients">
 											CLIENTS
 										</a>
 									</li>
 									<li><!-- CONTACT -->
-										<a href="#contact">
+										<a href="http://127.0.0.1:5500/Smarty/HTML_BS4/index-onepage-construction.html#contact">
 											CONTACT
 										</a>
 									</li>
@@ -166,46 +162,401 @@
 
 			</div>
 
-
-
 			
-            <!-- Radio Button-->
 
-            <div class="container pt-3">
 
-                <div class="text-center">
-                    <h1>PRICE ESTIMATION</h1>
-                </div>
-                
-                <form action="/action_page.php">
-                   
-                        <h3>Type of Buiding:</h3>
-                        <div class="residentialButton form-check-inline">
-                            <label class="form-check-label" for="radio1">
-                            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" >Residential Building
-                            </label>
+			<!-- 
+				PAGE HEADER 
+				
+				CLASSES:
+					.page-header-xs	= 20px margins
+					.page-header-md	= 50px margins
+					.page-header-lg	= 80px margins
+					.page-header-xlg= 130px margins
+					.dark			= dark page header
+
+					.shadow-before-1 	= shadow 1 header top
+					.shadow-after-1 	= shadow 1 header bottom
+					.shadow-before-2 	= shadow 2 header top
+					.shadow-after-2 	= shadow 2 header bottom
+					.shadow-before-3 	= shadow 3 header top
+					.shadow-after-3 	= shadow 3 header bottom
+			-->
+			<section class="page-header dark page-header-xs">
+				<div class="container">
+
+					<h1>CHOOSE TYPE OF BUILDING</h1>
+
+					
+
+					<!-- page tabs -->
+					<ul class="nav nav-pills page-header-tabs list-inline" role="tablist" page-header-tabs list-inline>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#residential">Residential Building</a>
+                        </li>
+
+						<li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#commercial">Commercial Building</a>
+                        </li>
+
+						<li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#corporate">Corporate Building</a>
+                        </li>
+
+						<li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#hybrid">Hybrid Building</a>
+                        </li>
+                    </ul>
+                    <!-- /page tabs -->
+
+                    <!-- Tab Panes -->
+                    <div class="tab-content">
+						<!-- residential -->
+                        <div id="residential" class="tab-pane fade">
+							<div class="container">
+							  <h3>Residential Building Estimation Form</h3>
+							  <form action="/action_page.php" id="resForm">
+                                                                  
+                                <div class="form-inline">
+                                    <label for="renoa">Number of apartments in the building:</label>
+                                    <input type="number" class="form-control" id="renoa">
+                                </div>
+
+                                <div class="form-inline">
+									<label for="renof">Number of floors in the building:</label>
+                                    <input type="number" class="form-control" id="renof">
+								</div>
+
+                                <div class="form-inline">
+									<label for="renob">Number of basements in the building:</label>
+                                    <input type="number" class="form-control" id="renob">
+								</div>        
+                                             
+                            	<!-- radio button -->
+                                <label class="custom-control-inline">Type of services:</label>
+
+                                <div class="custom-control custom-radio mb-3 custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="restoStan" name="optradio1" value="7,565">
+                                    <label class="custom-control-label" for="restoStan">Standard</label>
+                                </div>
+
+                                 <div class="custom-control custom-radio mb-3 custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="restosPre" name="optradio1" value="12,345">
+                                    <label class="custom-control-label" for="restosPre">Premium</label>
+                                </div>
+
+                                <div class="custom-control custom-radio mb-3 custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="retosExcel" name="optradio1" value="15,400">
+                                    <label class="custom-control-label" for="retosExcel">Excelium</label>
+                                </div>
+                                <!-- /radio button -->
+                                    
+								<div class="form-inline">
+                                        <label for="required-elevator-residential">Required number of elevators:</label>
+                                        <input type="number" class="form-control" id="required-elevator-hybrid" readonly>
+								</div>    
+                                  
+
+                                <div class="form-inline">
+                                        <label for="cost-per-elevator-residential">Cost of elevators:</label>
+                                        <input type="number" class="form-control" id="required-elevator-residential" readonly>
+								</div>      
+                                    
+
+								<div class="form-inline">
+                                        <label for="cost-of-installation-residential">Cost of installation:</label>
+                                        <input type="number" class="form-control" id="cost-of-installation-residential" readonly>
+                                </div>    
+                                   
+
+                                <div class="form-inline">   
+                                        <label for="total-price-residential">Total price:</label>
+                                        <input type="number" class="form-control" id="total-price-residential" readonly>
+								</div> 
+								<input type="submit">    
+                                </form>
+                            </div>
                         </div>
-                        <div class="commercialButton form-check-inline">
-                            <label class="form-check-label" for="radio2">
-                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2" >Commercial Building
-                            </label>
+						<!-- /residential -->
+
+						<!-- commercial -->
+                        <div id="commercial" class="tab-pane fade">
+							<div class="container">
+							  <h3>Commercial Building Estimation Form</h3>
+							  <form action="/action_page.php" id="comForm">
+								
+								<div class="form-inline">
+									<label for="comnobu">Number of distinct businesses:</label>
+									<input type="number" class="form-control" id="comnobu">
+								</div>
+								
+								<div class="form-inline">
+									<label for="comnof">Number of floors in the building:</label>
+									<input type="number" class="form-control" id="comnof">
+								</div>
+								
+								<div class="form-inline">
+									<label for="comnoba">Number of basements in the building:</label>
+									<input type="number" class="form-control" id="comnoba">
+								</div>
+								
+								<div class="form-inline">
+									<label for="comnop">Number of parking spaces available:</label>
+									<input type="number" class="form-control" id="comnap">
+								</div>	
+								
+								<div class="form-inline">
+									<label for="comnoe">Number of elevator cages to be deployed:</label>
+									<input type="number" class="form-control" id="comnoe" value="0">
+								</div>	
+
+								<label for="comtos">Type of services:</label>
+								
+								<!-- radio button -->
+								<div class="custom-control custom-radio mb-3 custom-control-inline">
+									<input type="radio" class="custom-control-input" id="comtosStan" name="optradio2" value="7565">
+									<label class="custom-control-label" for="comtosStan">Standard</label>
+								</div>
+						  
+								<div class="custom-control custom-radio mb-3 custom-control-inline">
+									<input type="radio" class="custom-control-input" id="comtosPre" name="optradio2" value="12345">
+									<label class="custom-control-label" for="comtosPre">Premium</label>
+								</div>
+						  
+								<div class="custom-control custom-radio mb-3 custom-control-inline">
+									<input type="radio" class="custom-control-input" id="comtosExcel" name="optradio2" value="15400">
+									<label class="custom-control-label" for="comtosExcel">Excelium</label>
+								</div>
+								<!-- /radio button -->
+
+								<div class="form-inline">
+									<label for="cost-per-elevator-commercial">Cost of elevators:</label>
+									<input type="number" class="form-control" id="cost-per-elevator-commercial" readonly>
+								</div>
+
+								<div class="form-inline">
+									<label for="cost-of-installation-commercial">Cost of Installation:</label>
+									<input type="number" class="form-control" id="cost-of-installation-commercial" readonly>
+								</div>
+
+								<div class="form-inline">
+									<label for="total-price-commercial">Total Price:</label>
+									<input type="number" class="form-control" id="total-price-commercial" readonly>
+								</div>
+								<input type="submit">
+							  </form>                  
+							</div>
+						</div>
+						<!-- /commercial -->
+
+						<!-- corporate -->
+                        <div id="corporate" class="tab-pane fade">
+							<div class="container">
+							  <h3>Corporate Building Estimation Form</h3>
+							  <form action="/action_page.php" id="corForm">
+								
+								<div class="form-inline">
+                                        <label for="cornot">Number of separate tenant companies:</label>
+                                        <input type="number" class="form-control" id="cornot">
+								</div>    
+                                    
+								<div class="form-inline">
+                                        <label for="cornof">Number of floors in the building:</label>
+                                        <input type="number" class="form-control" id="cornof">
+								</div>  
+
+								<div class="form-inline">                          
+                                        <label for="cornob">Number of basements in the building:</label>
+                                        <input type="number" class="form-control" id="cornob">
+								</div> 
+
+								<div class="form-inline">                          
+                                        <label for="cornop">Number of parking spaces available:</label>
+                                        <input type="number" class="form-control" id="cornop">
+								</div>
+
+								<div class="form-inline">                                 
+                                        <label for="cormax">Maximum number of occupants per floor:</label>
+                                        <input type="number" class="form-control" id="cormax">
+								</div>    
+                                    
+                                <!-- radio button -->
+                                                                           
+                                    <label class="custom-control-inline">Type of Services:</label>
+
+                                <div class="custom-control custom-radio mb-3 custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="cortosStan" name="optradio3" value="7,565">
+                                        <label class="custom-control-label" for="cortosStan">Standard</label>
+                                </div>
+
+                                <div class="custom-control custom-radio mb-3 custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="cortosPre" name="optradio3" value="12,345">
+                                        <label class="custom-control-label" for="cortosPre">Premium</label>
+                                </div>
+
+                                <div class="custom-control custom-radio mb-3 custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="cortosExcel" name="optradio3" value="15,400">
+                                        <label class="custom-control-label" for="cortosExcel">Excelium</label>
+                                </div>
+                                                                       
+                                <!-- /radio button -->
+                                    
+								<div class="form-inline">  
+                                        <label for="required-elevator-corporate">Required number of elevators:</label>
+                                        <input type="number" class="form-control" id="required-elevator-corporate" readonly>
+                                </div>
+
+								<div class="form-inline">  
+                                        <label for="cost-per-elevator-corporate">Cost of elevators:</label>
+                                        <input type="number" class="form-control" id="cost-per-elevator-corporate" readonly>
+								</div>  
+
+                                <div class="form-inline">  
+                                        <label for="cost-of-installation-corporate">Cost of Installation:</label>
+                                        <input type="number" class="form-control" id="cost-of-installation-corporate" readonly>
+                                </div>    
+                                                    
+								<div class="form-inline">  
+                                        <label for="total-price-corporate">Total Price:</label>
+                                        <input type="number" class="form-control" id="total-price-corporate" readonly>
+								</div> 
+								<input type="submit">   
+                              </form>
+                            </div>
+						</div>
+						
+
+                        <!-- hybrid -->
+                        <div id="hybrid" class="tab-pane fade">
+							<div class="container">
+							  <h3>Hybrid Building Estimation Form</h3>
+							  <form action="/action_page.php" id="hyForm">
+                          
+								<div class="form-inline"> 
+										<label for="hynobu">Number of distinct businesses:</label>
+                                        <input type="number" class="form-control" id="hynob">
+								</div>    
+                                  
+								<div class="form-inline"> 
+                                        <label for="hynof">number of floors in the building:</label>
+                                        <input type="number" class="form-control" id="hynof">
+								</div>    
+                                  
+								<div class="form-inline"> 
+                                        <label for="hynoba">Number of basements in the building:</label>
+                                        <input type="number" class="form-control" id="hynoba">
+								</div>    
+                                    
+								<div class="form-inline"> 
+                                        <label for="hynop">Number of parking spaces available:</label>
+                                        <input type="hynop" class="form-control" id="hynop">
+								</div>    
+                                    
+								<div class="form-inline"> 
+                                        <label for="hymoc">Maximum number of occupants per floor:</label>
+                                        <input type="number" class="form-control" id="hymoc">
+								</div>    
+                                 
+								<div class="form-inline"> 
+                                        <label for="hymop">Number of hours of activity of the building:</label>
+                                        <input type="number" class="form-control" id="hymop">
+								</div>
+									
+								<!-- radio button -->
+                                        
+                                        <label class="custom-control-inline">Type of Services:</label>
+
+                                <div class="custom-control custom-radio mb-3 custom-control-inline">
+                                        <input type="radio" class="custom-control-input " id="hytosStan" name="optradio4" value="7,565">
+                                        <label class="custom-control-label" for="hytosStan">Standard</label>
+                                 </div>
+
+                                <div class="custom-control custom-radio mb-3 custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="hytosPre" name="optradio4" value="12,345">
+                                        <label class="custom-control-label" for="hytosPre">Premium</label>
+                                </div>
+
+                                <div class="custom-control custom-radio mb-3 custom-control-inline">
+                                    	<input type="radio" class="custom-control-input" id="hytosExcel" name="optradio4"value="15,400">
+                                        <label class="custom-control-label" for="hytosExcel">Excelium</label>
+                                </div>      
+                                    
+                                <!-- /radio button -->
+                                    
+								<div class="form-inline"> 
+                                        <label for="required-elevator-hybrid">Required number of elevators:</label>
+                                        <input type="number" class="form-control" id="required-elevator-hybrid" readonly>
+								</div>
+
+								<div class="form-inline">                           
+                                        <label for="cost-per-elevator-hybrid">Cost of elevators:</label>
+                                        <input type="number" class="form-control" id="cost-per-elevator-hybrid" readonly>
+								</div>
+
+								<div class="form-inline">                           
+                                        <label for="cost-of-installation-hybrid">Cost of Installation:</label>
+                                        <input type="number" class="form-control" id="cost-of-installation-hybrid" readonly>
+								</div>
+
+                                <div class="form-inline">                           
+                                        <label for="total-price-hybrid">Total Price:</label>
+                                        <input type="number" class="form-control" id="total-price-hybrid" readonly>
+								</div>
+								<input type="submit">
+                              </form>
+                            </div>
                         </div>
-                        <div class="corporateButton form-check-inline">
-                            <label class="form-check-label" for="radio2">
-                            <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3" >Corporate Building
-                            </label>
-                        </div>
-                        <div class="hybridButton form-check-inline">
-                            <label class="form-check-label">
-                            <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option4" >Hybrid Building
-                            </label>
-                        </div>
+
+                    </div>
+                    <!-- /Tab Panes -->
+				</div>
+			</section>
+			<!-- /PAGE HEADER -->
+
+
+            <!-- -->
+			<section>
+				<div class="container">
+
+					
+
+						<div class="mix-grid">
+
+							<div class="row mix design">
+
+								<div class="col-md-12">
+									<div class="item-box">
+										<figure>
+											
+
+											<!-- carousel -->
+											<div class="owl-carousel buttons-autohide controlls-over m-0" data-plugin-options='{"singleItem": true, "autoPlay": 4000, "navigation": false, "pagination": true, "transitionStyle":"goDown"}'>
+												<div>
+													<img class="img-fluid h-500 d-block" src="demo_files/images/thematics/construction/slider1.jpeg" alt="">
+												</div>
+												<div>
+                                                    <img class="img-fluid h-500 d-block" src="demo_files/images/thematics/construction/corporate2.jpeg" alt="">
+												</div>
+												<div>
+													<img class="img-fluid h-500 d-block" src="demo_files/images/thematics/construction/corporate1.jpeg" alt="">
+												</div>
+									
+											<!-- /carousel -->
+                                        </figure>
+
+                                    </div>   
+                                </div>
+							</div>
+						</div>
+
                     
-                </form>
-              </div>
-			
+				</div>    
+            </section> 
+            
+            
 
-            </div>  
+
 			<!-- FOOTER -->
 			<footer id="footer">
 				<div class="container">
@@ -265,7 +616,7 @@
 				</div>
 
 			</footer>
-			<!-- /FOOTER -->
+			<!-- /FOOTER -->    
 
 		</div>
 		<!-- /wrapper -->
@@ -282,51 +633,14 @@
 			</div>
 		</div><!-- /PRELOADER -->
 
-
 		<!-- JAVASCRIPT FILES -->
-		<script>var plugin_path = 'assets/plugins/';</script>
-		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+	<script>var plugin_path = 'assets/plugins/';</script>
+	<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 
-		<script src="assets/js/scripts.js"></script>
+	<script src="assets/js/scripts.js"></script>
+		<script src="assets/js/price_quote.js"></script>
 		
 
-
-		<!-- REVOLUTION SLIDER -->
-		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
-		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
-		<script src="assets/js/view/demo.revolution_slider.js"></script>
-
-		<!-- PAGELEVEL SCRIPTS -->
-		<script src="assets/js/contact.js"></script>
-
-		<!-- 
-			GMAP.JS 
-			http://hpneo.github.io/gmaps/
-		-->
-		<script src="//maps.google.com/maps/api/js?key=AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY"></script>
-		<script src="assets/plugins/gmaps.js"></script>
-		<script>
-
-			jQuery(document).ready(function(){
-
-				/**
-					@BASIC GOOGLE MAP
-				**/
-				var map2 = new GMaps({
-					div: '#map2',
-					lat: -12.043333,
-					lng: -77.028333,
-					scrollwheel: false
-				});
-
-				var marker = map2.addMarker({
-					lat: -12.043333,
-					lng: -77.028333,
-					title: 'Company, Inc.'
-				});
-
-			});
-
-		</script>
 	</body>
+	
 </html>

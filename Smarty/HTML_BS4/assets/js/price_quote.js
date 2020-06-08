@@ -19,7 +19,7 @@
 ******************************************************************* **/
 
 
-function get
+
 
 
 
@@ -31,22 +31,35 @@ function get
              totalPrice = costOfElevators + installationFee
 ************************************************************************* **/
 
-var type_of_services = new Array();
-    type_of_services ["comtosStan"] = 7565;
-    type_of_services ["comtosPre"] = 12345;
-    type_of_services ["comtosExce"] = 15400;
+var commercialForm = document.getElementById('comForm');
 
-function getTypeOfService () {
-    var typeOfService = 0;
-    var theForm = document.forms["commercialform"]
-    var selectedService = theForm.elements["selectedservice"];
-    for (var i = 0; i < selectedService.length; i++) {
-        if (selectedService[i].checked) {
-            typeOfService = type_of_services[selectedServices[i].value];
-            break;
-        }
-    }  
+commercialForm.addEventListener('submit', function(evt) {
+  evt.preventDefault();
+  
+  var numberOfElevators = parseInt(document.getElementById('comnoe').value);
+  var typeOfServiceValue = getTypeOfServiceValue('optradio2');
+  var costOfElevators = numberOfElevators * typeOfServiceValue;
+  var installationFee = costOfElevators * typeOfServiceValue;
+  var totalPrice = costOfElevators + installationFee;
+  
+  var costOfElevatorsField = document.getElementById('cost-per-elevator-commercial');
+  costOfElevatorsField.value = costOfElevators;
+  
+  var costOfInstallationField = document.getElementById('cost-of-installation-commercial');
+  costOfInstallationField.value = installationFee;
+  
+  var totalPriceField = document.getElementById('total-price-commercial');
+  totalPriceField.value = totalPrice;
+})
+
+function getTypeOfServiceValue(radioName) {
+  var typeOfServices = document.getElementsByName(radioName);
+  for(var i = 0;i<typeOfServices.length;i++){
+    var radioInput = typeOfServices[i];
+    if(radioInput.checked) return parseInt(radioInput.value);
+  }
 }
+
 
 
 
