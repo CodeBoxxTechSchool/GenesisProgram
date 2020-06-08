@@ -119,7 +119,7 @@
 	#progressBar #bar,								/* OWL */
 	#page-menu,
 	#page-menu ul {
-		background-color: rgb(40, 40, 161);
+		background-color: darkred;
 	}
 	
 	/* !important required */

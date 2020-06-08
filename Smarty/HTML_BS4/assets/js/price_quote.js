@@ -10,7 +10,8 @@
 
 /** ********** For residential buildings computation ************** **
   Variables: avgFloors = number of apartments / number of floors
-             (Note: if the number of floors > 20 add 1 column)
+             (Note: if the number of floors > 20 add 1 column
+              if added 20 more another 1column to be added)
              totalElevators = avgFloors /6
              costOfElevators = radio button selection * totalElevators
              installationFee = elevatorPrice * radio button selection
