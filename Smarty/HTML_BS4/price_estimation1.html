@@ -212,337 +212,299 @@
 
                     <!-- Tab Panes -->
                     <div class="tab-content">
+						<!-- residential -->
+                        <div id="residential" class="tab-pane fade">
+							<div class="container">
+							  <h3>Residential Building Estimation Form</h3>
+							  <form action="/action_page.php" id="resForm">
+                                                                  
+                                <div class="form-inline">
+                                    <label for="renoa">Number of apartments in the building:</label>
+                                    <input type="number" class="form-control" id="renoa">
+                                </div>
 
-                        <div id="residential" class="tab-pane fade"><br>
-                            <div class="container">
-                                <h3>Residential Building Estimation Form</h3>
-                                
-                                    <form class="form-inline" action="/action_page.php">
-                          
-                                        <label for="renoa">Number of apartments in the building:</label>
-                                        <input type="number" class="form-control" id="renoa">
-                                    
-                                    </form>
-                                    <form class="form-inline" action="/action_page.php">
-                          
-                                        <label for="renof">Number of floors in the building:</label>
-                                        <input type="number" class="form-control" id="renof">
-                                    
-                                    </form>
-                                    <form class="form-inline" action="/action_page.php">
-                          
-                                        <label for="renob">Number of basements in the building:</label>
-                                        <input type="number" class="form-control" id="renob">
-                                    
-                                    </form>
-                                    <!-- radio button -->
-                                     <form class="custom-control-inline" action="/action_page.php" style="font-size: 16px font-weight-bold;">
-                                        
-                                        <label>Type of services:</label>
+                                <div class="form-inline">
+									<label for="renof">Number of floors in the building:</label>
+                                    <input type="number" class="form-control" id="renof">
+								</div>
 
-                                        <div class="custom-control custom-radio mb-3 custom-control-inline">
-                                            <input type="radio" class="custom-control-input" id="restoStan" name="optradio1" value="7,565">
-                                            <label class="custom-control-label" for="restoStan">Standard</label>
-                                        </div>
+                                <div class="form-inline">
+									<label for="renob">Number of basements in the building:</label>
+                                    <input type="number" class="form-control" id="renob">
+								</div>        
+                                             
+                            	<!-- radio button -->
+                                <label class="custom-control-inline">Type of services:</label>
 
-                                        <div class="custom-control custom-radio mb-3 custom-control-inline">
-                                            <input type="radio" class="custom-control-input" id="restosPre" name="optradio1" value="12,345">
-                                            <label class="custom-control-label" for="restosPre">Premium</label>
-                                        </div>
+                                <div class="custom-control custom-radio mb-3 custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="restoStan" name="optradio1" value="7,565">
+                                    <label class="custom-control-label" for="restoStan">Standard</label>
+                                </div>
 
-                                        <div class="custom-control custom-radio mb-3 custom-control-inline">
-                                            <input type="radio" class="custom-control-input" id="retosExcel" name="optradio1" value="15,400">
-                                            <label class="custom-control-label" for="retosExcel">Excelium</label>
-                                        </div>
+                                 <div class="custom-control custom-radio mb-3 custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="restosPre" name="optradio1" value="12,345">
+                                    <label class="custom-control-label" for="restosPre">Premium</label>
+                                </div>
+
+                                <div class="custom-control custom-radio mb-3 custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="retosExcel" name="optradio1" value="15,400">
+                                    <label class="custom-control-label" for="retosExcel">Excelium</label>
+                                </div>
+                                <!-- /radio button -->
                                     
-                                    </form>
-                                    <!-- /radio button -->
-                                    <form class="form-inline" action="/action_page.php">
-                          
+								<div class="form-inline">
                                         <label for="required-elevator-residential">Required number of elevators:</label>
                                         <input type="number" class="form-control" id="required-elevator-hybrid" readonly>
-                                    
-                                    </form>
+								</div>    
+                                  
 
-                                    <form class="form-inline" action="/action_page.php">
-                          
+                                <div class="form-inline">
                                         <label for="cost-per-elevator-residential">Cost of elevators:</label>
                                         <input type="number" class="form-control" id="required-elevator-residential" readonly>
+								</div>      
                                     
-                                    </form>
 
-                                    <form class="form-inline" action="/action_page.php">
-                          
+								<div class="form-inline">
                                         <label for="cost-of-installation-residential">Cost of installation:</label>
                                         <input type="number" class="form-control" id="cost-of-installation-residential" readonly>
-                                    
-                                    </form>
+                                </div>    
+                                   
 
-                                    <form class="form-inline" action="/action_page.php">
-                          
+                                <div class="form-inline">   
                                         <label for="total-price-residential">Total price:</label>
                                         <input type="number" class="form-control" id="total-price-residential" readonly>
-                                    
-                                    </form>
+								</div> 
+								<input type="submit">    
+                                </form>
                             </div>
                         </div>
+						<!-- /residential -->
 
-                        <div id="commercial" class="tab-pane fade"><br>
-                            <div class="container">
-                                <h3>Commercial Building Estimation Form</h3>
-                                
-                                    <form class="form-inline" action="/action_page.php">
-                          
-                                        <label for="comnobu">Number of distinct businesses:</label>
-                                        <input type="number" class="form-control" id="comnobu">
-                                    
-                                    </form>
-                                    <form class="form-inline" action="/action_page.php">
-                          
-                                        <label for="comnof">Number of floors in the building:</label>
-                                        <input type="number" class="form-control" id="comnof">
-                                    
-                                    </form>
-                                    <form class="form-inline" action="/action_page.php">
-                          
-                                        <label for="comnoba">Number of basements in the building:</label>
-                                        <input type="number" class="form-control" id="email">
-                                    
-                                    </form>
-                                    <form class="form-inline" action="/action_page.php">
-                          
-                                        <label for="comnop">Number of parking spaces available:</label>
-                                        <input type="number" class="form-control" id="comnap">
-                                    
-                                    </form>
-                                    <form class="form-inline" action="/action_page.php">
-                          
-                                        <label for="comnoe">Number of elevator cages to be deployed:</label>
-                                        <input type="number" class="form-control" id="comnoe">
-                                    
-                                    </form>
-                                    <!-- radio button -->
-                                    <form class="custom-control-inline" action="/action_page.php" style="font-size: 16px font-weight-bold;">
-                                        
-                                        <label for="comtos">Type of services:</label>
+						<!-- commercial -->
+                        <div id="commercial" class="tab-pane fade">
+							<div class="container">
+							  <h3>Commercial Building Estimation Form</h3>
+							  <form action="/action_page.php" id="comForm">
+								
+								<div class="form-inline">
+									<label for="comnobu">Number of distinct businesses:</label>
+									<input type="number" class="form-control" id="comnobu">
+								</div>
+								
+								<div class="form-inline">
+									<label for="comnof">Number of floors in the building:</label>
+									<input type="number" class="form-control" id="comnof">
+								</div>
+								
+								<div class="form-inline">
+									<label for="comnoba">Number of basements in the building:</label>
+									<input type="number" class="form-control" id="comnoba">
+								</div>
+								
+								<div class="form-inline">
+									<label for="comnop">Number of parking spaces available:</label>
+									<input type="number" class="form-control" id="comnap">
+								</div>	
+								
+								<div class="form-inline">
+									<label for="comnoe">Number of elevator cages to be deployed:</label>
+									<input type="number" class="form-control" id="comnoe" value="0">
+								</div>	
 
-                                        <div class="custom-control custom-radio mb-3 custom-control-inline">
-                                            <input type="radio" class="custom-control-input" id="comtosStan" name="optradio2" value="7,565">
-                                            <label class="custom-control-label" for="comtosStan">Standard</label>
-                                        </div>
+								<label for="comtos">Type of services:</label>
+								
+								<!-- radio button -->
+								<div class="custom-control custom-radio mb-3 custom-control-inline">
+									<input type="radio" class="custom-control-input" id="comtosStan" name="optradio2" value="7565">
+									<label class="custom-control-label" for="comtosStan">Standard</label>
+								</div>
+						  
+								<div class="custom-control custom-radio mb-3 custom-control-inline">
+									<input type="radio" class="custom-control-input" id="comtosPre" name="optradio2" value="12345">
+									<label class="custom-control-label" for="comtosPre">Premium</label>
+								</div>
+						  
+								<div class="custom-control custom-radio mb-3 custom-control-inline">
+									<input type="radio" class="custom-control-input" id="comtosExcel" name="optradio2" value="15400">
+									<label class="custom-control-label" for="comtosExcel">Excelium</label>
+								</div>
+								<!-- /radio button -->
 
-                                        <div class="custom-control custom-radio mb-3 custom-control-inline">
-                                            <input type="radio" class="custom-control-input" id="comtosPre" name="optradio2" value="12,345">
-                                            <label class="custom-control-label" for="comtosPre">Premium</label>
-                                        </div>
+								<div class="form-inline">
+									<label for="cost-per-elevator-commercial">Cost of elevators:</label>
+									<input type="number" class="form-control" id="cost-per-elevator-commercial" readonly>
+								</div>
 
-                                        <div class="custom-control custom-radio mb-3 custom-control-inline">
-                                            <input type="radio" class="custom-control-input" id="comtosExcel" name="optradio2" value="15,400">
-                                            <label class="custom-control-label" for="comtosExcel">Excelium</label>
-                                        </div>
-                                    
-                                    </form>
-                                    <!-- /radio button -->
-                                    <form class="form-inline" action="/action_page.php">
-                          
-                                        <label for="cost-per-elevator-commercial">Cost of elevators:</label>
-                                        <input type="number" class="form-control" id="cost-per-elevator-commercial" readonly>
-                                    
-                                    </form>
+								<div class="form-inline">
+									<label for="cost-of-installation-commercial">Cost of Installation:</label>
+									<input type="number" class="form-control" id="cost-of-installation-commercial" readonly>
+								</div>
 
-                                    <form class="form-inline" action="/action_page.php">
-                          
-                                        <label for="cost-of-installation-commercial">Cost of Installation:</label>
-                                        <input type="number" class="form-control" id="cost-of-installation-commercial" readonly>
-                                    
-                                    </form>
+								<div class="form-inline">
+									<label for="total-price-commercial">Total Price:</label>
+									<input type="number" class="form-control" id="total-price-commercial" readonly>
+								</div>
+								<input type="submit">
+							  </form>                  
+							</div>
+						</div>
+						<!-- /commercial -->
 
-                                    <form class="form-inline" action="/action_page.php">
-                          
-                                        <label for="total-price-commercial">Total Price:</label>
-                                        <input type="number" class="form-control" id="total-price-commercial" readonly>
-                                    
-                                    </form>
-
-                                    
-                            </div>
-                        </div>
-
-                        <div id="corporate" class="tab-pane fade"><br>
-                            <div class="container">
-                                <h3>Corporate Building Estimation Form</h3>
-                                
-                                    <form class="form-inline" action="/action_page.php">
-                          
+						<!-- corporate -->
+                        <div id="corporate" class="tab-pane fade">
+							<div class="container">
+							  <h3>Corporate Building Estimation Form</h3>
+							  <form action="/action_page.php" id="corForm">
+								
+								<div class="form-inline">
                                         <label for="cornot">Number of separate tenant companies:</label>
                                         <input type="number" class="form-control" id="cornot">
+								</div>    
                                     
-                                    </form>
-                                    <form class="form-inline" action="/action_page.php">
-                          
+								<div class="form-inline">
                                         <label for="cornof">Number of floors in the building:</label>
                                         <input type="number" class="form-control" id="cornof">
-                                    
-                                    </form>
-                                    <form class="form-inline" action="/action_page.php">
-                          
+								</div>  
+
+								<div class="form-inline">                          
                                         <label for="cornob">Number of basements in the building:</label>
                                         <input type="number" class="form-control" id="cornob">
-                                    
-                                    </form>
-                                    <form class="form-inline" action="/action_page.php">
-                          
+								</div> 
+
+								<div class="form-inline">                          
                                         <label for="cornop">Number of parking spaces available:</label>
                                         <input type="number" class="form-control" id="cornop">
-                                    
-                                    </form>
-                                    <form class="form-inline" action="/action_page.php">
-                          
+								</div>
+
+								<div class="form-inline">                                 
                                         <label for="cormax">Maximum number of occupants per floor:</label>
                                         <input type="number" class="form-control" id="cormax">
+								</div>    
                                     
-                                    </form>
-                                    <!-- radio button -->
-                                    <form class="custom-control-inline" action="/action_page.php" style="font-size: 16px font-weight-bold;">
-                                        
-                                        <label for="cortos">Type of Services:</label>
+                                <!-- radio button -->
+                                                                           
+                                    <label class="custom-control-inline">Type of Services:</label>
 
-                                        <div class="custom-control custom-radio mb-3 custom-control-inline">
-                                            <input type="radio" class="custom-control-input" id="cortosStan" name="optradio3" value="7,565">
-                                            <label class="custom-control-label" for="cortosStan">Standard</label>
-                                        </div>
+                                <div class="custom-control custom-radio mb-3 custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="cortosStan" name="optradio3" value="7,565">
+                                        <label class="custom-control-label" for="cortosStan">Standard</label>
+                                </div>
 
-                                        <div class="custom-control custom-radio mb-3 custom-control-inline">
-                                            <input type="radio" class="custom-control-input" id="cortosPre" name="optradio3" value="12,345">
-                                            <label class="custom-control-label" for="cortosPre">Premium</label>
-                                        </div>
+                                <div class="custom-control custom-radio mb-3 custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="cortosPre" name="optradio3" value="12,345">
+                                        <label class="custom-control-label" for="cortosPre">Premium</label>
+                                </div>
 
-                                        <div class="custom-control custom-radio mb-3 custom-control-inline">
-                                            <input type="radio" class="custom-control-input" id="cortosExcel" name="optradio3" value="15,400">
-                                            <label class="custom-control-label" for="cortosExcel">Excelium</label>
-                                        </div>
+                                <div class="custom-control custom-radio mb-3 custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="cortosExcel" name="optradio3" value="15,400">
+                                        <label class="custom-control-label" for="cortosExcel">Excelium</label>
+                                </div>
+                                                                       
+                                <!-- /radio button -->
                                     
-                                    </form>
-                                    <!-- /radio button -->
-                                    <form class="form-inline" action="/action_page.php">
-                          
+								<div class="form-inline">  
                                         <label for="required-elevator-corporate">Required number of elevators:</label>
                                         <input type="number" class="form-control" id="required-elevator-corporate" readonly>
-                                    
-                                    </form>
+                                </div>
 
-                                    <form class="form-inline" action="/action_page.php">
-                          
+								<div class="form-inline">  
                                         <label for="cost-per-elevator-corporate">Cost of elevators:</label>
                                         <input type="number" class="form-control" id="cost-per-elevator-corporate" readonly>
-                                    
-                                    </form>
+								</div>  
 
-                                    <form class="form-inline" action="/action_page.php">
-                          
+                                <div class="form-inline">  
                                         <label for="cost-of-installation-corporate">Cost of Installation:</label>
                                         <input type="number" class="form-control" id="cost-of-installation-corporate" readonly>
-                                    
-                                    </form>
-
-                                    <form class="form-inline" action="/action_page.php">
-                          
+                                </div>    
+                                                    
+								<div class="form-inline">  
                                         <label for="total-price-corporate">Total Price:</label>
                                         <input type="number" class="form-control" id="total-price-corporate" readonly>
-                                    
-                                    </form>
-                                    
+								</div> 
+								<input type="submit">   
+                              </form>
                             </div>
-                        </div>
-                        <div id="hybrid" class="tab-pane fade"><br>
-                            <div class="container">
-                                <h3>Hybrid Building Estimation Form</h3>
-                                
-                                    <form class="form-inline" action="/action_page.php">
+						</div>
+						
+
+                        <!-- hybrid -->
+                        <div id="hybrid" class="tab-pane fade">
+							<div class="container">
+							  <h3>Hybrid Building Estimation Form</h3>
+							  <form action="/action_page.php" id="hyForm">
                           
-                                        <label for="hynobu">Number of distinct businesses:</label>
+								<div class="form-inline"> 
+										<label for="hynobu">Number of distinct businesses:</label>
                                         <input type="number" class="form-control" id="hynob">
-                                    
-                                    </form>
-                                    <form class="form-inline" action="/action_page.php">
-                          
+								</div>    
+                                  
+								<div class="form-inline"> 
                                         <label for="hynof">number of floors in the building:</label>
                                         <input type="number" class="form-control" id="hynof">
-                                    
-                                    </form>
-                                    <form class="form-inline" action="/action_page.php">
-                          
+								</div>    
+                                  
+								<div class="form-inline"> 
                                         <label for="hynoba">Number of basements in the building:</label>
                                         <input type="number" class="form-control" id="hynoba">
+								</div>    
                                     
-                                    </form>
-                                    <form class="form-inline" action="/action_page.php">
-                          
+								<div class="form-inline"> 
                                         <label for="hynop">Number of parking spaces available:</label>
                                         <input type="hynop" class="form-control" id="hynop">
+								</div>    
                                     
-                                    </form>
-                                    <form class="form-inline" action="/action_page.php">
-                          
+								<div class="form-inline"> 
                                         <label for="hymoc">Maximum number of occupants per floor:</label>
                                         <input type="number" class="form-control" id="hymoc">
-                                    
-                                    </form>
-                                    <form class="form-inline" action="/action_page.php">
-                          
+								</div>    
+                                 
+								<div class="form-inline"> 
                                         <label for="hymop">Number of hours of activity of the building:</label>
                                         <input type="number" class="form-control" id="hymop">
-                                    
-                                    </form>
-                                    <!-- radio button -->
-                                    <form class="custom-control-inline" action="/action_page.php" style="font-size: 16px font-weight-bold;">
+								</div>
+									
+								<!-- radio button -->
                                         
-                                        <label for="hytos">Type of Services:</label>
+                                        <label class="custom-control-inline">Type of Services:</label>
 
-                                        <div class="custom-control custom-radio mb-3 custom-control-inline">
-                                            <input type="radio" class="custom-control-input " id="hytosStan" name="optradio4" value="7,565">
-                                            <label class="custom-control-label" for="hytosStan">Standard</label>
-                                        </div>
+                                <div class="custom-control custom-radio mb-3 custom-control-inline">
+                                        <input type="radio" class="custom-control-input " id="hytosStan" name="optradio4" value="7,565">
+                                        <label class="custom-control-label" for="hytosStan">Standard</label>
+                                 </div>
 
-                                        <div class="custom-control custom-radio mb-3 custom-control-inline">
-                                            <input type="radio" class="custom-control-input" id="hytosPre" name="optradio4" value="12,345">
-                                            <label class="custom-control-label" for="hytosPre">Premium</label>
-                                        </div>
+                                <div class="custom-control custom-radio mb-3 custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="hytosPre" name="optradio4" value="12,345">
+                                        <label class="custom-control-label" for="hytosPre">Premium</label>
+                                </div>
 
-                                        <div class="custom-control custom-radio mb-3 custom-control-inline">
-                                            <input type="radio" class="custom-control-input" id="hytosExcel" name="optradio4"value="15,400">
-                                            <label class="custom-control-label" for="hytosExcel">Excelium</label>
-                                        </div>
+                                <div class="custom-control custom-radio mb-3 custom-control-inline">
+                                    	<input type="radio" class="custom-control-input" id="hytosExcel" name="optradio4"value="15,400">
+                                        <label class="custom-control-label" for="hytosExcel">Excelium</label>
+                                </div>      
                                     
-                                    </form>
-                                    <!-- /radio button -->
-                                    <form class="form-inline" action="/action_page.php">
-                          
+                                <!-- /radio button -->
+                                    
+								<div class="form-inline"> 
                                         <label for="required-elevator-hybrid">Required number of elevators:</label>
                                         <input type="number" class="form-control" id="required-elevator-hybrid" readonly>
-                                    
-                                    </form>
+								</div>
 
-                                    <form class="form-inline" action="/action_page.php">
-                          
+								<div class="form-inline">                           
                                         <label for="cost-per-elevator-hybrid">Cost of elevators:</label>
                                         <input type="number" class="form-control" id="cost-per-elevator-hybrid" readonly>
-                                    
-                                    </form>
+								</div>
 
-                                    <form class="form-inline" action="/action_page.php">
-                          
+								<div class="form-inline">                           
                                         <label for="cost-of-installation-hybrid">Cost of Installation:</label>
                                         <input type="number" class="form-control" id="cost-of-installation-hybrid" readonly>
-                                    
-                                    </form>
+								</div>
 
-                                    <form class="form-inline" action="/action_page.php">
-                          
+                                <div class="form-inline">                           
                                         <label for="total-price-hybrid">Total Price:</label>
                                         <input type="number" class="form-control" id="total-price-hybrid" readonly>
-                                    
-                                    </form>
+								</div>
+								<input type="submit">
+                              </form>
                             </div>
                         </div>
 
@@ -671,13 +633,14 @@
 			</div>
 		</div><!-- /PRELOADER -->
 
-
 		<!-- JAVASCRIPT FILES -->
-		<script>var plugin_path = 'assets/plugins/';</script>
-		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+	<script>var plugin_path = 'assets/plugins/';</script>
+	<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 
-		<script src="assets/js/scripts.js"></script>
+	<script src="assets/js/scripts.js"></script>
+		<script src="assets/js/price_quote.js"></script>
 		
 
 	</body>
+	
 </html>

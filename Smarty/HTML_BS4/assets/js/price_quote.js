@@ -39,7 +39,8 @@ commercialForm.addEventListener('submit', function(evt) {
   var numberOfElevators = parseInt(document.getElementById('comnoe').value);
   var typeOfServiceValue = getTypeOfServiceValue('optradio2');
   var costOfElevators = numberOfElevators * typeOfServiceValue;
-  var installationFee = costOfElevators * typeOfServiceValue;
+  var percentageOfInstallation = getPercentageOfInstallation('optradio2');
+  var installationFee = costOfElevators * percentageOfInstallation;
   var totalPrice = costOfElevators + installationFee;
   
   var costOfElevatorsField = document.getElementById('cost-per-elevator-commercial');
@@ -60,16 +61,11 @@ function getTypeOfServiceValue(radioName) {
   }
 }
 
+function getPercentageOfInstallation(radioName) {
 
 
 
-
-
-
-
-
-
-
+}
 
 /** ********** For corporate buildings computation ************** **
   Variables: totalNumFloors = numFloors + numBasements
