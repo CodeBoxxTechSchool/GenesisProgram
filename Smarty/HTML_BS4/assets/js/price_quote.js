@@ -75,7 +75,7 @@ function getPercentageOfService(typeOfServiceValue) {
 
 /** ********** For corporate buildings computation ************** **
   Variables: totalNumFloors = numFloors + numBasements
-             avgOccupants = maxOccupants + totalNumFloors
+             avgOccupants = maxOccupants * totalNumFloors
              totalElevators = avgOccupants / 1000
              costOfElevators = radio button selection * totalElevators
              installationFee = elevatorPrice * (Standard*0.10; Premium*0.13; Excelium*0.16)
@@ -88,18 +88,18 @@ corporateForm.addEventListener('submit', function(evt) {
   evt.preventDefault();
 
   
-  var numFloors = document.getElementById('cornof');
-  var numBasements = document.getElementById('cornob');
-  var maxOccupants = document.getElementById('cormax');
+  var numFloorsCor = parseInt(document.getElementById('cornof').value);
+  var numBasementsCor = parseInt(document.getElementById('cornob').value);
+  var maxOccupantsCor = parseInt(document.getElementById('cormax').value);
   
   
 
-  var totalNumFloors = numFloors + numBasements;
-  var avgOccupants = maxOccupants + totalNumFloors;   
-  var numberOfElevatorsCor = avgOccupants / 1000;
+  var totalNumFloorsCor = numFloorsCor + numBasementsCor;
+  var avgOccupantsCor = maxOccupantsCor * totalNumFloorsCor;   
+  var numberOfElevatorsCor = avgOccupantsCor / 1000;
 
   var typeOfServiceValueCor = getTypeOfServiceValueCor('optradio3');
-  var percentageOfServiceCor = getPercentageOfService(typeOfServiceValueCor);
+  var percentageOfServiceCor = getPercentageOfServiceCor(typeOfServiceValueCor);
   
   var installationFeeCor = typeOfServiceValueCor * percentageOfServiceCor;
   var totalPriceCor = typeOfServiceValueCor + installationFeeCor;
@@ -142,10 +142,64 @@ function getPercentageOfServiceCor(typeOfServiceValueCor) {
 
 /** ********** For hybrid buildings computation ************** **
   Variables: totalNumFloors = numFloors + numBasements
-             avgOccupants = maxOccupants + totalNumFloors
+             avgOccupants = maxOccupants * totalNumFloors
              totalElevators = avgOccupants / 1000
              costOfElevators = radio button selection * totalElevators
              installationFee = elevatorPrice * radio button selection
              totalPrice = costOfElevators + installationFee
 ************************************************************** **/
 
+var hybridForm = document.getElementById('hyForm');
+
+hybridForm.addEventListener('submit', function(evt) {
+  evt.preventDefault();
+
+  
+  var numFloorsHy = parseInt(document.getElementById('hynof').value);
+  var numBasementsHy = parseInt(document.getElementById('hynoba').value);
+  var maxOccupantsHy = parseInt(document.getElementById('hymoc').value);
+  
+  
+
+  var totalNumFloorsHy = numFloorsHy + numBasementsHy;
+  var avgOccupantsHy = maxOccupantsHy * totalNumFloorsHy;   
+  var numberOfElevatorsHy = avgOccupantsHy / 1000;
+
+  var typeOfServiceValueHy = getTypeOfServiceValueHy('optradio4');
+  var percentageOfServiceHy = getPercentageOfServiceHy(typeOfServiceValueHy);
+  
+  var installationFeeHy = typeOfServiceValueHy * percentageOfServiceHy;
+  var totalPriceHy = typeOfServiceValueHy + installationFeeHy;
+
+  
+  
+  var numberOfElevatorsFieldHy = document.getElementById('required-elevator-hybrid');
+  numberOfElevatorsFieldHy.value = numberOfElevatorsHy;
+  
+  var costOfElevatorsFieldHy = document.getElementById('cost-per-elevator-hybrid');
+  costOfElevatorsFieldHy.value = typeOfServiceValueHy;
+  
+  var costOfInstallationFieldHy = document.getElementById('cost-of-installation-hybrid');
+  costOfInstallationFieldHy.value = installationFeeHy;
+  
+  var totalPriceFieldHy = document.getElementById('total-price-hybrid');
+  totalPriceFieldHy.value = totalPriceHy;
+})
+
+function getTypeOfServiceValueHy(radioName) {
+  var typeOfServicesHy = document.getElementsByName(radioName);
+  for(var i = 0;i<typeOfServicesHy.length;i++){
+    var radioInput = typeOfServicesHy[i];
+    if(radioInput.checked) return parseInt(radioInput.value);
+  }
+}
+
+function getPercentageOfServiceHy(typeOfServiceValueHy) {
+  if (typeOfServiceValueHy === 7565) {
+    return 0.10;
+  } else if(typeOfServiceValueHy === 12345) {
+    return 0.13;
+  } else {
+    return 0.16;
+  }
+} 
