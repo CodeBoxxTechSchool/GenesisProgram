@@ -36,16 +36,16 @@ var commercialForm = document.getElementById('comForm');
 commercialForm.addEventListener('submit', function(evt) {
   evt.preventDefault();
   
-  
+  var numberOfElevators = parseInt(document.getElementById('comnoe').value);
   var typeOfServiceValue = getTypeOfServiceValue('optradio2');
   var percentageOfService = getPercentageOfService(typeOfServiceValue);
-  
+  var costOfElevators = numberOfElevators * typeOfServiceValue;
   
   var installationFee = typeOfServiceValue * percentageOfService;
-  var totalPrice = typeOfServiceValue + installationFee;
+  var totalPrice = costOfElevators + installationFee;
   
-  var costOfElevatorsField = document.getElementById('cost-per-elevator-commercial');
-  costOfElevatorsField.value = typeOfServiceValue ;
+  var typeOfServiceValueField = document.getElementById('cost-per-elevator-commercial');
+  typeOfServiceValueField.value = typeOfServiceValue ;
   
   var costOfInstallationField = document.getElementById('cost-of-installation-commercial');
   costOfInstallationField.value = installationFee;
