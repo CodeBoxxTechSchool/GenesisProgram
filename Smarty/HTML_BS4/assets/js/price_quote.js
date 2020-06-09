@@ -36,7 +36,7 @@ var commercialForm = document.getElementById('comForm');
 commercialForm.addEventListener('submit', function(evt) {
   evt.preventDefault();
   
-  var numberOfElevators = parseInt(document.getElementById('comnoe').value);
+  
   var typeOfServiceValue = getTypeOfServiceValue('optradio2');
   var percentageOfService = getPercentageOfService(typeOfServiceValue);
   
@@ -82,7 +82,60 @@ function getPercentageOfService(typeOfServiceValue) {
              totalPrice = costOfElevators + installationFee
 ****************************************************************** **/
 
+var corporateForm = document.getElementById('corForm');
 
+corporateForm.addEventListener('submit', function(evt) {
+  evt.preventDefault();
+
+  
+  var numFloors = document.getElementById('cornof');
+  var numBasements = document.getElementById('cornob');
+  var maxOccupants = document.getElementById('cormax');
+  
+  
+
+  var totalNumFloors = numFloors + numBasements;
+  var avgOccupants = maxOccupants + totalNumFloors;   
+  var numberOfElevatorsCor = avgOccupants / 1000;
+
+  var typeOfServiceValueCor = getTypeOfServiceValueCor('optradio3');
+  var percentageOfServiceCor = getPercentageOfService(typeOfServiceValueCor);
+  
+  var installationFeeCor = typeOfServiceValueCor * percentageOfServiceCor;
+  var totalPriceCor = typeOfServiceValueCor + installationFeeCor;
+
+  
+  
+  var numberOfElevatorsFieldCor = document.getElementById('required-elevator-corporate');
+  numberOfElevatorsFieldCor.value = numberOfElevatorsCor;
+  
+  var costOfElevatorsFieldCor = document.getElementById('cost-per-elevator-corporate');
+  costOfElevatorsFieldCor.value = typeOfServiceValueCor;
+  
+  var costOfInstallationFieldCor = document.getElementById('cost-of-installation-corporate');
+  costOfInstallationFieldCor.value = installationFeeCor;
+  
+  var totalPriceFieldCor = document.getElementById('total-price-corporate');
+  totalPriceFieldCor.value = totalPriceCor;
+})
+
+function getTypeOfServiceValueCor(radioName) {
+  var typeOfServicesCor = document.getElementsByName(radioName);
+  for(var i = 0;i<typeOfServicesCor.length;i++){
+    var radioInput = typeOfServicesCor[i];
+    if(radioInput.checked) return parseInt(radioInput.value);
+  }
+}
+
+function getPercentageOfServiceCor(typeOfServiceValueCor) {
+  if (typeOfServiceValueCor === 7565) {
+    return 0.10;
+  } else if(typeOfServiceValueCor === 12345) {
+    return 0.13;
+  } else {
+    return 0.16;
+  }
+}  
 
 
 
