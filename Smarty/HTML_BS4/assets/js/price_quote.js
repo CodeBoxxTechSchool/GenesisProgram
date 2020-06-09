@@ -39,10 +39,10 @@ commercialForm.addEventListener('submit', function(evt) {
   var numberOfElevators = parseInt(document.getElementById('comnoe').value);
   var typeOfServiceValue = getTypeOfServiceValue('optradio2');
   var percentageOfService = getPercentageOfService(typeOfServiceValue);
-  var costOfElevators = numberOfElevators * typeOfServiceValue;
   
-  var installationFee = costOfElevators * percentageOfService;
-  var totalPrice = costOfElevators + installationFee;
+  
+  var installationFee = typeOfServiceValue * percentageOfService;
+  var totalPrice = typeOfServiceValue + installationFee;
   
   var costOfElevatorsField = document.getElementById('cost-per-elevator-commercial');
   costOfElevatorsField.value = typeOfServiceValue ;
