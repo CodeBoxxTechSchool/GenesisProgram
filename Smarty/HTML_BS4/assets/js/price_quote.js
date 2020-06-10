@@ -96,21 +96,25 @@ corporateForm.addEventListener('submit', function(evt) {
 
   var totalNumFloorsCor = numFloorsCor + numBasementsCor;
   var avgOccupantsCor = maxOccupantsCor * totalNumFloorsCor;   
-  var numberOfElevatorsCor = avgOccupantsCor / 1000;
+  
+  var numberOfElevatorsCor = math.round(avgOccupantsCor / 1000);
+
+  var costOfElevatorsCor = numberOfElevatorsCor * typeOfServiceValueCor;
 
   var typeOfServiceValueCor = getTypeOfServiceValueCor('optradio3');
   var percentageOfServiceCor = getPercentageOfServiceCor(typeOfServiceValueCor);
   
   var installationFeeCor = typeOfServiceValueCor * percentageOfServiceCor;
-  var totalPriceCor = typeOfServiceValueCor + installationFeeCor;
+  var totalPriceCor = costOfElevatorsCor + installationFeeCor;
 
   
-  
+    
+
   var numberOfElevatorsFieldCor = document.getElementById('required-elevator-corporate');
   numberOfElevatorsFieldCor.value = numberOfElevatorsCor;
   
-  var costOfElevatorsFieldCor = document.getElementById('cost-per-elevator-corporate');
-  costOfElevatorsFieldCor.value = typeOfServiceValueCor;
+  var typeOfServiceValueFieldCor = document.getElementById('cost-per-elevator-corporate');
+  typeOfServiceValueFieldCor.value = typeOfServiceValueCor;
   
   var costOfInstallationFieldCor = document.getElementById('cost-of-installation-corporate');
   costOfInstallationFieldCor.value = installationFeeCor;
