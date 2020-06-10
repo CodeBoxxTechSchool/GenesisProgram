@@ -92,22 +92,18 @@ corporateForm.addEventListener('submit', function(evt) {
   var numBasementsCor = parseInt(document.getElementById('cornob').value);
   var maxOccupantsCor = parseInt(document.getElementById('cormax').value);
   
-  
-
-  var totalNumFloorsCor = numFloorsCor + numBasementsCor;
-  var avgOccupantsCor = maxOccupantsCor * totalNumFloorsCor;   
-  
-  var numberOfElevatorsCor = math.round(avgOccupantsCor / 1000);
-
-  var costOfElevatorsCor = numberOfElevatorsCor * typeOfServiceValueCor;
-
   var typeOfServiceValueCor = getTypeOfServiceValueCor('optradio3');
   var percentageOfServiceCor = getPercentageOfServiceCor(typeOfServiceValueCor);
-  
-  var installationFeeCor = typeOfServiceValueCor * percentageOfServiceCor;
-  var totalPriceCor = costOfElevatorsCor + installationFeeCor;
 
+  var totalNumFloorsCor = numFloorsCor + numBasementsCor;
+  var avgOccupantsCor = maxOccupantsCor * totalNumFloorsCor;    
+  var numberOfElevatorsCor = Math.round(avgOccupantsCor / 1000);
   
+  
+  var costOfElevatorsCor = numberOfElevatorsCor * typeOfServiceValueCor;  
+  var installationFeeCor = typeOfServiceValueCor * percentageOfServiceCor;
+  installationFeeCor = Math.round((installationFeeCor + Number.EPSILON) * 100) / 100;
+  var totalPriceCor = costOfElevatorsCor + installationFeeCor;  
     
 
   var numberOfElevatorsFieldCor = document.getElementById('required-elevator-corporate');
@@ -163,25 +159,25 @@ hybridForm.addEventListener('submit', function(evt) {
   var numBasementsHy = parseInt(document.getElementById('hynoba').value);
   var maxOccupantsHy = parseInt(document.getElementById('hymax').value);
   
-  
-
-  var totalNumFloorsHy = numFloorsHy + numBasementsHy;
-  var avgOccupantsHy = maxOccupantsHy * totalNumFloorsHy;   
-  var requiredElevator = avgOccupantsHy / 1000;
-
   var typeOfServiceValueHy = getTypeOfServiceValueHy('optradio4');
   var percentageOfServiceHy = getPercentageOfServiceHy(typeOfServiceValueHy);
-  
-  var installationFeeHy = typeOfServiceValueHy * percentageOfServiceHy;
-  var totalPriceHy = typeOfServiceValueHy + installationFeeHy;
 
+  var totalNumFloorsHy = numFloorsHy + numBasementsHy;
+  var avgOccupantsHy = maxOccupantsHy * totalNumFloorsHy;    
+  var numberOfElevatorsHy = Math.round(avgOccupantsHy / 1000);
+  console.log(numberOfElevatorsHy);
   
+  var costOfElevatorsHy = numberOfElevatorsHy * typeOfServiceValueHy;  
+  var installationFeeHy = typeOfServiceValueHy * percentageOfServiceHy;
+  installationFeeHy = Math.round((installationFeeHy + Number.EPSILON) * 100) / 100;
+  var totalPriceHy = costOfElevatorsHy + installationFeeHy;  
+    
+
+  var numberOfElevatorsFieldHy = document.getElementById('required-elevator-hybrid');
+  numberOfElevatorsFieldHy.value = numberOfElevatorsHy;
   
-  var requiredElevatorField = document.getElementById('required-elevator-hybrid');
-  requiredElevatorField.value = requiredElevator;
-  
-  var costOfElevatorsFieldHy = document.getElementById('cost-per-elevator-hybrid');
-  costOfElevatorsFieldHy.value = typeOfServiceValueHy;
+  var typeOfServiceValueFieldHy = document.getElementById('cost-per-elevator-hybrid');
+  typeOfServiceValueFieldHy.value = typeOfServiceValueHy;
   
   var costOfInstallationFieldHy = document.getElementById('cost-of-installation-hybrid');
   costOfInstallationFieldHy.value = installationFeeHy;
@@ -206,4 +202,4 @@ function getPercentageOfServiceHy(typeOfServiceValueHy) {
   } else {
     return 0.16;
   }
-} 
+}  
