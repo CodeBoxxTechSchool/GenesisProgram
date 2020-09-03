@@ -1,0 +1,31 @@
+.font-times {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 200px;
+
+}
+
+.landing-btn a {
+    color: #1B7CB2;
+}
+
+.landing-btn a:hover {
+    color: #000;
+}
+
+@media (max-width: 650px) {
+    .home-btns {
+        display:flex;
+        justify-content:space-between;
+        width: 100%;
+    }
+    .home-btn2 {
+        right:5px;
+    }
+}
