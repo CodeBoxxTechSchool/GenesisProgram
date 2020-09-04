@@ -2639,8 +2639,8 @@ fieldset:disabled a.btn {
 
 .btn-warning {
   color: #212529;
-  background-color: #ffc107;
-  border-color: #ffc107;
+  background-color: #ff2a5f;
+  border-color: #fff;
 }
 
 .btn-warning:hover {
@@ -2655,8 +2655,8 @@ fieldset:disabled a.btn {
 
 .btn-warning.disabled, .btn-warning:disabled {
   color: #212529;
-  background-color: #ffc107;
-  border-color: #ffc107;
+  background-color: #ff2a5f;
+  border-color: #fff;
 }
 
 .btn-warning:not(:disabled):not(.disabled):active, .btn-warning:not(:disabled):not(.disabled).active,
@@ -2918,8 +2918,8 @@ fieldset:disabled a.btn {
 
 .btn-outline-warning:hover {
   color: #212529;
-  background-color: #ffc107;
-  border-color: #ffc107;
+  background-color: #ff2a5f;
+  border-color: #fff;
 }
 
 .btn-outline-warning:focus, .btn-outline-warning.focus {
@@ -2934,8 +2934,8 @@ fieldset:disabled a.btn {
 .btn-outline-warning:not(:disabled):not(.disabled):active, .btn-outline-warning:not(:disabled):not(.disabled).active,
 .show > .btn-outline-warning.dropdown-toggle {
   color: #212529;
-  background-color: #ffc107;
-  border-color: #ffc107;
+  background-color: #ff2a5f;
+  border-color: #fff;
 }
 
 .btn-outline-warning:not(:disabled):not(.disabled):active:focus, .btn-outline-warning:not(:disabled):not(.disabled).active:focus,
@@ -4887,7 +4887,7 @@ tbody.collapse.show {
 
 .badge-warning {
   color: #212529;
-  background-color: #ffc107;
+  background-color: #ff2a5f;
 }
 
 .badge-warning[href]:hover, .badge-warning[href]:focus {
@@ -6115,7 +6115,7 @@ button.bg-info:focus {
 }
 
 .bg-warning {
-  background-color: #ffc107 !important;
+  background-color: #ff2a5f !important;
 }
 
 a.bg-warning:hover, a.bg-warning:focus,
