@@ -51,7 +51,7 @@ jQuery(document).ready(function() {
 		// Init Revolution Slider
 		revapi = jQuery('.fullwidthbanner').revolution({
 			dottedOverlay:"none",
-			delay:9000,
+			delay:7000,
 			startwidth:1170,
 			startheight: jQuery(".fullwidthbanner").attr('data-height') || 500,
 			hideThumbs:hideThumbs,
@@ -134,7 +134,7 @@ jQuery(document).ready(function() {
 			if(tpj('.fullscreenbanner').revolution != undefined) {
 				revapi25 = tpj('.fullscreenbanner').show().revolution({
 					dottedOverlay:"none",
-					delay:9000,
+					delay:7000,
 					startwidth:1200,
 					startheight:700,
 					hideThumbs:10,
@@ -214,7 +214,7 @@ jQuery(document).ready(function() {
 
 		revapi = jQuery('.fullwidthbanner').revolution({
 			dottedOverlay:"none",
-			delay:9000,
+			delay:7000,
 			startwidth:1170,
 			startheight:400,
 			hideThumbs:200,
