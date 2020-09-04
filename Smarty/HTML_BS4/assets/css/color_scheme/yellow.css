@@ -119,7 +119,7 @@
 	#progressBar #bar,								/* OWL */
 	#page-menu,
 	#page-menu ul {
-		background-color:#0b64a0;
+		background-color:#ff2a5f;
 	}
 	
 	/* !important required */
@@ -394,7 +394,7 @@ section.dark .pagination > li.active>a,
 *************************************************** **/
 .process-wizard-primary > .process-wizard-step > .process-wizard-dot,
 .process-wizard-primary > .process-wizard-step > .progress > .progress-bar {
-	background:#0b64a0;
+	background:#ff2a5f;
 }
 .process-wizard-primary > .process-wizard-step > .process-wizard-dot:after {
 	background-color:rgba(0,0,0,0.4);
@@ -487,7 +487,7 @@ i.ico-hover:hover {
 .sky-form .radio input:checked + i,
 .sky-form .checkbox input:checked + i,
 .sky-form .toggle input:checked + i {
-	border-color: #0b64a0;	
+	border-color: #fff;	
 }
 .sky-form .rating input:checked ~ label {
 	color: #0b64a0;	
