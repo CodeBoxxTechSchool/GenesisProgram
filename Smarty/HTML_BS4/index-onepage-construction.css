@@ -19,6 +19,19 @@
     color: #000;
 }
 
+.tp-bgimg.defaultimg {
+    position: relative;
+}
+
+.tp-bgimg.defaultimg::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
 @media (max-width: 650px) {
     .home-btns {
         display:flex;
@@ -26,6 +39,11 @@
         width: 100%;
     }
     .home-btn2 {
-        right:5px;
+        transform: translateX(100px) !important;
     }
+}
+
+.red-not-yellow {
+    background: #ff2a5f;
+    border-color: #fff;
 }
