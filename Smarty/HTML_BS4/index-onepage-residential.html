@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>rocket elevators - multipurpose + admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- REVOLUTION SLIDER -->
+		<link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/yellow.css" rel="stylesheet" type="text/css" id="color_scheme" />
+		<link rel="stylesheet" href="index-onepage-construction.css">
+
+		<!-- FAVICON -->
+		<link href="assets/images/_smarty/favicon.png" rel="shortcut icon" type="image/png>
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation">
+
+		<!-- SLIDE TOP -->
+		<div id="slidetop">
+
+			<div class="container">
+				
+				<div class="row">
+
+					<div class="col-md-4">
+						<h6 style="color: #0b64a0">why rocket elevators®?</h6>
+						<p class="text-justify">rocket elevatos® is regarded as one of the best elevator companies in the business. we've been providing you with top quality elevators for more than 40 years. our client satisfaction is off the roof (no cap).</p>
+					</div>
+
+					<div class="col-md-4">
+						<h6 style="color: #0b64a0">recently visited</h6>
+						<ul class="list-unstyled">
+							<li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet</a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> This is a very long text, very very very very very very very very very very very very </a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet</a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> Dolor sit amet,consectetur adipiscing elit amet</a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet,consectetur adipiscing elit</a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-4">
+						<h6 style="color: #0b64a0">contact info</h6>
+						<ul class="list-unstyled">
+							<li><b style="color: #cd1732">address:</b> 418-725 boulevard lebourgneuf, quebec<br />
+								 QC G2J 0C4 <br />
+								 canada</li>
+							<li><b style="color: #cd1732">phone:</b> (581) 701-0303</li>
+							<li><b style="color: #cd1732">email:</b> <a href="mailto:info@codeboxx.biz">info@codeboxx.biz</a></li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+
+			<a class="slidetop-toggle" href="#"><!-- toggle button --></a>
+
+		</div>
+		<!-- /SLIDE TOP -->
+
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- Logo -->
+						<a class="logo float-left scrollTo" href="#top">
+							<img src="assets/images/_smarty/R2.png" alt="" />
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<nav class="nav-main">
+
+								<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									<li class="active"><!-- HOME -->
+										<a href="#home">
+											HOME
+										</a>
+									</li>
+									<li><!-- SERVICES -->
+										<a href="#services">
+											SERVICES
+										</a>
+									</li>
+									<li><!-- PORTFOLIO -->
+										<a href="#portfolio">
+											PORTFOLIO
+										</a>
+									</li>
+									<li><!-- NEWS -->
+										<a href="#news">
+											NEWS
+										</a>
+									</li>
+									<li><!-- OVERVIEW -->
+										<a href="#overview">
+											OVERVIEW
+										</a>
+									</li>
+									<li><!-- CLIENTS -->
+										<a href="#clients">
+											CLIENTS
+										</a>
+									<li><!-- CONTACT -->
+										<a href="#contact">
+											CONTACT
+										</a>
+									</li>
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+
+
+			<!-- REVOLUTION SLIDER -->
+			<section id="slider" class="fullwidthbanner-container roundedcorners">
+				<!--
+					Navigation Styles:
+					
+						data-navigationStyle="" theme default navigation
+						
+						data-navigationStyle="preview1"
+						data-navigationStyle="preview2"
+						data-navigationStyle="preview3"
+						data-navigationStyle="preview4"
+						
+					Bottom Shadows
+						data-shadow="1"
+						data-shadow="2"
+						data-shadow="3"
+						
+					Slider Height (do not use on fullscreen mode)
+						data-height="300"
+						data-height="350"
+						data-height="400"
+						data-height="450"
+						data-height="500"
+						data-height="550"
+						data-height="600"
+						data-height="650"
+						data-height="700"
+						data-height="750"
+						data-height="800"
+				-->
+				<div class="fullscreenbanner" data-navigationStyle="preview4">
+					<ul class="hide">
+
+						<!-- SLIDE  -->
+						<li data-transition="random" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 1" data-thumb="demo_files/images/150x99/27-min.jpg">
+
+							<img src="assets/images/_smarty/1x1.png" data-lazyload="demo_files/images/1200x800/25-min.jpg" alt="" data-bgfit="cover" data-bgposition="center bottom" data-bgrepeat="no-repeat" />
+
+							<div class="overlay dark-7"><!-- dark overlay [1 to 9 opacity] --></div>
+
+							<div class="tp-caption customin ltl tp-resizeme text_white"
+								data-x="center"
+								data-y="180"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-speed="800"
+								data-start="1000"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="z-index: 10;">
+								<span class="fw-300">DEVELOPMENT / MARKETING / DESIGN / PHOTO</span>
+							</div>
+
+							<div class="tp-caption customin ltl tp-resizeme large_bold_white"
+								data-x="center"
+								data-y="230"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-speed="800"
+								data-start="1200"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="z-index: 10;">
+								WELCOME TO SMARTY
+							</div>
+
+							<div class="tp-caption customin ltl tp-resizeme small_light_white"
+								data-x="center"
+								data-y="350"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-speed="800"
+								data-start="1400"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="z-index: 10; width: 750px; max-width: 750px; white-space: normal; text-align:center;">
+								Fabulas definitiones ei pri per recteque hendrerit scriptorem in errem scribentur mel fastidii propriae philosophia cu mea.
+							</div>
+
+							<div class="tp-caption customin ltl tp-resizeme"
+								data-x="center"
+								data-y="438"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-speed="800"
+								data-start="1550"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="z-index: 10;">
+								<a href="#purchase" class="btn btn-default btn-lg">
+									<span>Purchase Smarty Now</span> 
+								</a>
+							</div>
+
+						</li>
+
+						<!-- SLIDE -->
+						<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 2" data-thumb="demo_files/images/video/neuron_thumb.jpg">
+
+							<img src="assets/images/_smarty/1x1.png" data-lazyload="demo_files/images/video/neuron.jpg" alt="video" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+							<div class="tp-caption tp-fade fadeout fullscreenvideo"
+								data-x="0"
+								data-y="0"
+								data-speed="1000"
+								data-start="1100"
+								data-easing="Power4.easeOut"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1500"
+								data-endeasing="Power4.easeIn"
+								data-autoplay="true"
+								data-autoplayonlyfirsttime="false"
+								data-nextslideatend="true"
+								data-volume="mute" 
+								data-forceCover="1" 
+								data-aspectratio="16:9" 
+								data-forcerewind="on" style="z-index: 2;">
+
+								<div class="overlay dark-4"><!-- dark overlay [1 to 9 opacity] --></div>
+
+								<video class="fullvideo" preload="none" poster="demo_files/images/video/neuron.jpg">
+									<source src="demo_files/images/video/neuron.webm" type="video/webm" />
+									<source src="demo_files/images/video/neuron.mp4" type="video/mp4" />
+								</video>
+
+							</div>
+
+							<div class="tp-caption customin ltl tp-resizeme text_white"
+								data-x="center"
+								data-y="180"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-speed="800"
+								data-start="1000"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="z-index: 3;">
+								<span class="fw-300">YOUR FAVORITE MULTIPURPOSE TEMPLATE</span>
+							</div>
+
+							<div class="tp-caption customin ltl tp-resizeme large_bold_white"
+								data-x="center"
+								data-y="230"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-speed="800"
+								data-start="1200"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="z-index: 3;">
+								WELCOME TO SMARTY
+							</div>
+
+							<div class="tp-caption customin ltl tp-resizeme small_light_white"
+								data-x="center"
+								data-y="350"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-speed="800"
+								data-start="1400"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="z-index: 3; width: 750px; max-width: 750px; white-space: normal; text-align:center;">
+								Fabulas definitiones ei pri per recteque hendrerit scriptorem in errem scribentur mel fastidii propriae philosophia cu mea.
+							</div>
+
+							<div class="tp-caption customin ltl tp-resizeme"
+								data-x="center"
+								data-y="438"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-speed="800"
+								data-start="1550"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="z-index: 3;">
+								<a href="#purchase" class="btn btn-default btn-lg">
+									<span>Purchase Smarty Now</span> 
+								</a>
+							</div>
+
+						</li>
+
+						<!-- SLIDE  -->
+						<li data-transition="random" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 3" data-thumb="demo_files/images/150x99/11-min.jpg">
+
+							<img src="assets/images/_smarty/1x1.png" data-lazyload="demo_files/images/1200x800/11-min.jpg" alt="" data-bgfit="cover" data-bgposition="center bottom" data-bgrepeat="no-repeat" />
+
+							<div class="overlay dark-4"><!-- dark overlay [1 to 9 opacity] --></div>
+
+							<div class="tp-caption very_large_text lfb ltt tp-resizeme"
+								data-x="right" data-hoffset="-100"
+								data-y="center" data-voffset="-100"
+								data-speed="600"
+								data-start="800"
+								data-easing="Power4.easeOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								data-endeasing="Power4.easeIn">
+								RUN WILD
+							</div>
+
+							<div class="tp-caption medium_light_white lfb ltt tp-resizeme"
+								data-x="right" data-hoffset="-100"
+								data-y="center" data-voffset="10"
+								data-speed="600"
+								data-start="900"
+								data-easing="Power4.easeOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								data-endeasing="Power4.easeIn">
+								Happiness is an accident of nature,<br/>
+								a beautiful and flawless aberration.<br/>
+								<span style="font-size:24px;font-weight:400;">&ndash; Pat Conroy</span>
+							</div>
+
+						</li>
+
+					</ul>
+				</div>
+			</section>
+			<!-- /REVOLUTION SLIDER -->
+
+
+
+			<!-- Welcome -->
+			<section>
+				<div class="container">
+
+					<div class="text-center">
+						<h1 class="mb-0">CREATIVE <span>WEB</span> AGENCY</h1>
+						<h2 class="col-sm-10 offset-sm-1 mb-0 fw-300 text-muted fs-20">Specializes in creating Brand Identity for emerging Startups</h2>
+					</div>
+
+				</div>
+			</section>
+			<!-- Welcome -->
+
+
+
+			<!-- -->
+			<section>
+				<div class="container">
+					<div class="row">
+					
+						<div class="col-md-4">
+							
+							<div class="heading-title heading-border-bottom heading-color">
+								<h3>Passion</h3>
+							</div>
+							
+							<p>Fabulas definitiones ei pri per recteque hendrerit scriptorem in errem scribentur mel fastidii propriae philosophia cu mea. Utinam ipsum everti necessitatibus at fuisset splendide.</p>
+							
+							<a href="#">
+								Read
+								<!-- /word rotator -->
+								<span class="word-rotator" data-delay="2000">
+									<span class="items">
+										<span>more</span>
+										<span>now</span>
+									</span>
+								</span><!-- /word rotator -->
+								<i class="glyphicon glyphicon-menu-right fs-12"></i>
+							</a>
+
+						</div>
+
+						<div class="col-md-4">
+							<div class="heading-title heading-border-bottom heading-color">
+								<h3>Precision</h3>
+							</div>
+							<p>Fabulas definitiones ei pri per recteque hendrerit scriptorem in errem scribentur mel fastidii propriae philosophia cu mea. Utinam ipsum everti necessitatibus at fuisset splendide.</p>
+
+							<a href="#">
+								Read
+								<!-- /word rotator -->
+								<span class="word-rotator" data-delay="2000">
+									<span class="items">
+										<span>more</span>
+										<span>now</span>
+									</span>
+								</span><!-- /word rotator -->
+								<i class="glyphicon glyphicon-menu-right fs-12"></i>
+							</a>
+
+						</div>
+
+						<div class="col-md-4">
+							<div class="heading-title heading-border-bottom heading-color">
+								<h3>Simplicity</h3>
+							</div>
+							<p>Fabulas definitiones ei pri per recteque hendrerit scriptorem in errem scribentur mel fastidii propriae philosophia cu mea. Utinam ipsum everti necessitatibus at fuisset splendide.</p>
+
+							<a href="#">
+								Read
+								<!-- /word rotator -->
+								<span class="word-rotator" data-delay="2000">
+									<span class="items">
+										<span>more</span>
+										<span>now</span>
+									</span>
+								</span><!-- /word rotator -->
+								<i class="glyphicon glyphicon-menu-right fs-12"></i>
+							</a>
+
+						</div>
+
+					</div>
+					
+				</div>
+			</section>
+			<!-- / -->
+
+
+
+
+			<!-- Portfolio -->
+			<section>
+				<div class="container">
+
+					<div id="portfolio" class="portfolio-nogutter">
+
+						<ul class="nav nav-pills mix-filter mb-60">
+							<li data-filter="all" class="filter active"><a href="#">All</a></li>
+							<li data-filter="development" class="filter"><a href="#">Development</a></li>
+							<li data-filter="photography" class="filter"><a href="#">Photography</a></li>
+							<li data-filter="design" class="filter"><a href="#">Design</a></li>
+						</ul>
+
+
+						<div class="row mix-grid">
+
+							<div class="col-md-3 col-sm-3 mix design"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/8-min.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+												<!-- details -->
+												<a class="ico-rounded" href="portfolio-single-slider.html">
+													<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<!-- carousel -->
+										<div class="owl-carousel buttons-autohide controlls-over m-0" data-plugin-options='{"singleItem": true, "autoPlay": 4000, "navigation": false, "pagination": true, "transitionStyle":"goDown"}'>
+											<div>
+												<img class="img-fluid" src="demo_files/images/mockups/600x399/8-min.jpg" width="600" height="399" alt="">
+											</div>
+											<div>
+												<img class="img-fluid" src="demo_files/images/mockups/600x399/9-min.jpg" width="600" height="399" alt="">
+											</div>
+											<div>
+												<img class="img-fluid" src="demo_files/images/mockups/600x399/10-min.jpg" width="600" height="399" alt="">
+											</div>
+										</div>
+										<!-- /carousel -->
+
+
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Street Photography</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Photography</a></li>
+											<li><a href="#">Design</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix development"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/9-min.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+												<!-- details -->
+												<a class="ico-rounded" href="portfolio-single-slider.html">
+													<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="demo_files/images/mockups/600x399/9-min.jpg" width="600" height="399" alt="">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Nature Photography</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Photography</a></li>
+											<li><a href="#">Design</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix photography"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/10-min.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+												<!-- details -->
+												<a class="ico-rounded" href="portfolio-single-slider.html">
+													<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="demo_files/images/mockups/600x399/10-min.jpg" width="600" height="399" alt="">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Fashion Design</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Photography</a></li>
+											<li><a href="#">Design</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix design"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/11-min.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+												<!-- details -->
+												<a class="ico-rounded" href="portfolio-single-slider.html">
+													<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="demo_files/images/mockups/600x399/11-min.jpg" width="600" height="399" alt="">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Ocean Project</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Photography</a></li>
+											<li><a href="#">Design</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix design"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/12-min.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+												<!-- details -->
+												<a class="ico-rounded" href="portfolio-single-slider.html">
+													<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="demo_files/images/mockups/600x399/12-min.jpg" width="600" height="399" alt="">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Architect Project</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Architecture</a></li>
+											<li><a href="#">Design</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix development"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/13-min.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+												<!-- details -->
+												<a class="ico-rounded" href="portfolio-single-slider.html">
+													<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="demo_files/images/mockups/600x399/13-min.jpg" width="600" height="399" alt="">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Speaker Design</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Audio</a></li>
+											<li><a href="#">Design</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix photography"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/14-min.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+												<!-- details -->
+												<a class="ico-rounded" href="portfolio-single-slider.html">
+													<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="demo_files/images/mockups/600x399/14-min.jpg" width="600" height="399" alt="">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Mobile Development</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Development</a></li>
+											<li><a href="#">Design</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix design"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/15-min.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+												<!-- details -->
+												<a class="ico-rounded" href="portfolio-single-slider.html">
+													<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="demo_files/images/mockups/600x399/15-min.jpg" width="600" height="399" alt="">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Nature Art</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Nature</a></li>
+											<li><a href="#">Art</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix design"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/16-min.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+												<!-- details -->
+												<a class="ico-rounded" href="portfolio-single-slider.html">
+													<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="demo_files/images/mockups/600x399/16-min.jpg" width="600" height="399" alt="">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Nature Art</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Nature</a></li>
+											<li><a href="#">Art</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix photography"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/1-min.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+												<!-- details -->
+												<a class="ico-rounded" href="portfolio-single-slider.html">
+													<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="demo_files/images/mockups/600x399/1-min.jpg" width="600" height="399" alt="">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Mobile Development</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Development</a></li>
+											<li><a href="#">Design</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix design"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/2-min.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+												<!-- details -->
+												<a class="ico-rounded" href="portfolio-single-slider.html">
+													<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="demo_files/images/mockups/600x399/2-min.jpg" width="600" height="399" alt="">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Nature Art</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Nature</a></li>
+											<li><a href="#">Art</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+							<div class="col-md-3 col-sm-3 mix design"><!-- item -->
+
+								<div class="item-box">
+									<figure>
+										<span class="item-hover">
+											<span class="overlay dark-5"></span>
+											<span class="inner">
+
+												<!-- lightbox -->
+												<a class="ico-rounded lightbox" href="demo_files/images/mockups/1200x800/3-min.jpg" data-plugin-options='{"type":"image"}'>
+													<span class="fa fa-plus fs-20"></span>
+												</a>
+
+												<!-- details -->
+												<a class="ico-rounded" href="portfolio-single-slider.html">
+													<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+												</a>
+
+											</span>
+										</span>
+
+										<img class="img-fluid" src="demo_files/images/mockups/600x399/3-min.jpg" width="600" height="399" alt="">
+									</figure>
+
+									<div class="item-box-desc">
+										<h3>Nature Art</h3>
+										<ul class="list-inline categories m-0">
+											<li><a href="#">Nature</a></li>
+											<li><a href="#">Art</a></li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div><!-- /item -->
+
+
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+			<!-- /Portfolio -->
+
+
+
+			<!-- CALLOUT -->
+			<div class="alert alert-transparent bordered-bottom m-0">
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-md-9 col-sm-12"><!-- left text -->
+							<h3>Call now at <span><strong>+800-565-2390</strong></span> and get 15% discount!</h3>
+							<p class="font-lato fw-300 fs-20 mb-0">
+								We truly care about our users and our product.
+							</p>
+						</div><!-- /left text -->
+
+						
+						<div class="col-md-3 col-sm-12 text-right"><!-- right btn -->
+							<a href="page-contact-1.html" class="btn btn-primary btn-lg">CONTACT US</a>
+						</div><!-- /right btn -->
+
+					</div>
+
+				</div>
+			</div>
+			<!-- /CALLOUT -->
+
+
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
+
+					<div class="row">
+						
+						<div class="col-md-3">
+							<!-- Footer Logo -->
+							<img class="footer-logo" src="assets/images/_smarty/logo-footer.png" alt="" />
+
+							<!-- Small Description -->
+							<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+
+							<!-- Contact Address -->
+							<address>
+								<ul class="list-unstyled">
+									<li class="footer-sprite address">
+										PO Box 21132<br>
+										Here Weare St, Melbourne<br>
+										Vivas 2355 Australia<br>
+									</li>
+									<li class="footer-sprite phone">
+										Phone: 1-800-565-2390
+									</li>
+									<li class="footer-sprite email">
+										<a href="mailto:support@yourname.com">support@yourname.com</a>
+									</li>
+								</ul>
+							</address>
+							<!-- /Contact Address -->
+
+						</div>
+
+						<div class="col-md-3">
+
+							<!-- Latest Blog Post -->
+							<h4 class="letter-spacing-1">LATEST NEWS</h4>
+							<ul class="footer-posts list-unstyled">
+								<li>
+									<a href="#">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue</a>
+									<small>29 June 2017</small>
+								</li>
+								<li>
+									<a href="#">Nullam id dolor id nibh ultricies</a>
+									<small>29 June 2017</small>
+								</li>
+								<li>
+									<a href="#">Duis mollis, est non commodo luctus</a>
+									<small>29 June 2017</small>
+								</li>
+							</ul>
+							<!-- /Latest Blog Post -->
+
+						</div>
+
+						<div class="col-md-2">
+
+							<!-- Links -->
+							<h4 class="letter-spacing-1">EXPLORE SMARTY</h4>
+							<ul class="footer-links list-unstyled">
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Our Services</a></li>
+								<li><a href="#">Our Clients</a></li>
+								<li><a href="#">Our Pricing</a></li>
+								<li><a href="#">Smarty Tour</a></li>
+								<li><a href="#">Contact Us</a></li>
+							</ul>
+							<!-- /Links -->
+
+						</div>
+
+						<div class="col-md-4">
+
+							<!-- Newsletter Form -->
+							<h4 class="letter-spacing-1">KEEP IN TOUCH</h4>
+							<p>Subscribe to Our Newsletter to get Important News &amp; Offers</p>
+
+							<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+									<span class="input-group-btn">
+										<button class="btn btn-success" type="submit">Subscribe</button>
+									</span>
+								</div>
+							</form>
+							<!-- /Newsletter Form -->
+
+							<!-- Social Icons -->
+							<div class="mt-20">
+								<a href="#" class="social-icon social-icon-border social-facebook float-left" data-toggle="tooltip" data-placement="top" title="Facebook">
+
+									<i class="icon-facebook"></i>
+									<i class="icon-facebook"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-twitter float-left" data-toggle="tooltip" data-placement="top" title="Twitter">
+									<i class="icon-twitter"></i>
+									<i class="icon-twitter"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-gplus float-left" data-toggle="tooltip" data-placement="top" title="Google plus">
+									<i class="icon-gplus"></i>
+									<i class="icon-gplus"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-linkedin float-left" data-toggle="tooltip" data-placement="top" title="Linkedin">
+									<i class="icon-linkedin"></i>
+									<i class="icon-linkedin"></i>
+								</a>
+
+								<a href="#" class="social-icon social-icon-border social-rss float-left" data-toggle="tooltip" data-placement="top" title="Rss">
+									<i class="icon-rss"></i>
+									<i class="icon-rss"></i>
+								</a>
+					
+							</div>
+							<!-- /Social Icons -->
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="copyright">
+					<div class="container">
+						<ul class="float-right m-0 list-inline mobile-block">
+							<li><a href="#">Terms &amp; Conditions</a></li>
+							<li>&bull;</li>
+							<li><a href="#">Privacy</a></li>
+						</ul>
+						&copy; All Rights Reserved, Company LTD
+					</div>
+				</div>
+			</footer>
+			<!-- /FOOTER -->
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script>var plugin_path = 'assets/plugins/';</script>
+		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+		<script src="assets/js/scripts.js"></script>
+		
+		<!-- STYLESWITCHER - REMOVE -->
+		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+
+		<!-- REVOLUTION SLIDER -->
+		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="assets/js/view/demo.revolution_slider.js"></script>
+	</body>
+</html>
