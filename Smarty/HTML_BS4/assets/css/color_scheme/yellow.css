@@ -1,13 +1,13 @@
 /** Yellow	#0b64a0
  **************************************************************** **/
 	::selection {
-		background: #ff2a5f;
+		background: #cd1732;
 	}
 	::-moz-selection {
-		background: #ff2a5f; /* Firefox */
+		background: #cd1732; /* Firefox */
 	}
 	::-webkit-selection {
-		background: #ff2a5f; /* Safari */
+		background: #cd1732; /* Safari */
 	}
 
 
@@ -119,7 +119,7 @@
 	#progressBar #bar,								/* OWL */
 	#page-menu,
 	#page-menu ul {
-		background-color:#ff2a5f;
+		background-color:#cd1732;
 	}
 	
 	/* !important required */
@@ -394,7 +394,7 @@ section.dark .pagination > li.active>a,
 *************************************************** **/
 .process-wizard-primary > .process-wizard-step > .process-wizard-dot,
 .process-wizard-primary > .process-wizard-step > .progress > .progress-bar {
-	background:#ff2a5f;
+	background:#cd1732;
 }
 .process-wizard-primary > .process-wizard-step > .process-wizard-dot:after {
 	background-color:rgba(0,0,0,0.4);
