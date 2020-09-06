@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 .font-times {
     font-family: 'Times New Roman', Times, serif;
 }
