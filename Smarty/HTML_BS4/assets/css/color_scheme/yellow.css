@@ -148,7 +148,7 @@
 	.btn-primary:hover,
 	.btn-primary:active,
 	.btn-primary:focus {
-		border-color:#0b64a0;
+		border-color:#cd1732;
 	}
 
 	.open>.dropdown-toggle.btn-primary,
@@ -159,7 +159,7 @@
 	.btn-primary:hover
 	.pagination>.active>a,
 	.pagination>.active>a:hover {
-		border-color: #0b64a0;
+		border-color: #cd1732;
 	}
 
 	#topNav ul.dropdown-menu { /* submenu border top color */
@@ -321,14 +321,14 @@ section.dark .btn-default:hover {
 		border-color:#0b64a0;
 	}
 	div.heading-border-bottom.heading-color {
-		border-bottom-color:#0b64a0;
+		border-bottom-color:#cd1732;
 	}
 	div.heading-title.heading-border.heading-color,
 	div.heading-title.heading-border.heading-inverse.heading-color {
 		border-color:#0b64a0;
 	}
 	section.dark div.heading-title.heading-border-bottom {
-		border-bottom-color:#0b64a0;
+		border-bottom-color:#cd1732;
 	}
 
 /**	[Shortcode] Icon Boxes

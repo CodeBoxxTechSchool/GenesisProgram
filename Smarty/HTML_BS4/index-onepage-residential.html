@@ -2,9 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>rocket elevators - multipurpose + admin</title>
+		<title>rocket elevators - residential buildings</title>
 		<meta name="description" content="" />
-		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+		<meta name="Author" content="emmy" />
 
 		<!-- mobile settings -->
 		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
@@ -27,7 +27,7 @@
 		<!-- PAGE LEVEL SCRIPTS -->
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/color_scheme/yellow.css" rel="stylesheet" type="text/css" id="color_scheme" />
-		<link rel="stylesheet" href="index-onepage-construction.css">
+		<link rel="stylesheet" href="index-onepage-home.css">
 
 		<!-- FAVICON -->
 		<link href="assets/images/_smarty/favicon.png" rel="shortcut icon" type="image/png">
@@ -141,7 +141,7 @@
 						</button>
 
 						<!-- Logo -->
-						<a class="logo float-left scrollTo" href="#top">
+						<a class="logo float-left" href="#top">
 							<img src="assets/images/_smarty/R2.png" alt="" />
 						</a>
 
@@ -160,41 +160,49 @@
 									
 									Add .external for an external link!
 								-->
-								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+								<ul id="topMain" class="nav nav-pills nav-main">
 									<li><!-- HOME -->
-										<a href="index-onepage-construction.html#">
+										<a href="index-onepage-home.html#">
 											HOME
 										</a>
 									</li>
-									<li><!-- SERVICES -->
-										<a href="index-onepage-construction.html#services">
+									<li class="dropdown"><!-- SERVICES -->
+										<a class="dropdown-toggle" href="#">
 											SERVICES
 										</a>
+										<ul class="dropdown-menu">
+											<li><a href="index-onepage-residential.html#">RESIDENTIAL</a></li>
+											<li><a href="index-onepage-corporate.html#">CORPORATE</a></li>
+										</ul>
 									</li>
 									<li><!-- PORTFOLIO -->
-										<a href="index-onepage-construction.html#portfolio">
+										<a href="#portfolio">
 											PORTFOLIO
 										</a>
 									</li>
 									<li><!-- NEWS -->
-										<a href="index-onepage-construction.html#news">
+										<a href="index-onepage-home.html#news">
 											NEWS
 										</a>
 									</li>
 									<li><!-- OVERVIEW -->
-										<a href="index-onepage-construction.html#overview">
+										<a href="index-onepage-home.html#overview">
 											OVERVIEW
 										</a>
 									</li>
 									<li><!-- CLIENTS -->
-										<a href="index-onepage-construction.html#clients">
+										<a href="index-onepage-home.html#clients">
 											CLIENTS
 										</a>
-									<li><!-- CONTACT -->
-										<a href="index-onepage-construction.html#contact">
-											CONTACT
-										</a>
-									</li>
+										<li class="dropdown"><!-- CONTACT -->
+											<a class="dropdown-toggle" href="#">
+												CONTACT
+											</a>
+											<ul class="dropdown-menu">
+												<li><a href="index-onepage-home.html#contact">CONTACT US</a></li>
+												<li><a href="index-onepage-quote.html#">GET A QUOTE</a></li>
+											</ul>
+										</li>
 								</ul>
 
 							</nav>
@@ -243,9 +251,9 @@
 
 						<!-- SLIDE  -->
 						<li>
-							<img data-lazyload="demo_files/images/1200x800/25-min.jpg" />
+							<img data-lazyload="demo_files/images/1200x800/AdobeStock_103570025.jpeg" />
 
-							<div class="overlay dark-7"><!-- dark overlay [1 to 9 opacity] --></div>
+							<div class="overlay dark-3"><!-- dark overlay [1 to 9 opacity] --></div>
 
 							<div class="tp-caption customin ltl tp-resizeme text_white"
 								data-x="center"
@@ -260,7 +268,7 @@
 								data-endelementdelay="0.1"
 								data-endspeed="1000"
 								data-endeasing="Power4.easeIn" style="z-index: 10;">
-								<span class="fw-300">houses — appartments — hotels</span>
+								<span class="fw-300">houses — appartments — hotels — and more!</span>
 							</div>
 
 							<div class="tp-caption customin ltl tp-resizeme large_bold_white"
@@ -292,7 +300,7 @@
 								data-endelementdelay="0.1"
 								data-endspeed="1000"
 								data-endeasing="Power4.easeIn" style="z-index: 10; width: 750px; max-width: 750px; white-space: normal; text-align:center;">
-								gyrsgfsgf
+								a whole new way to get around your house
 							</div>
 
 							<div class="tp-caption customin ltl tp-resizeme"
@@ -308,8 +316,8 @@
 								data-endelementdelay="0.1"
 								data-endspeed="1000"
 								data-endeasing="Power4.easeIn" style="z-index: 10;">
-								<a href="#quote" class="btn btn-default btn-lg" style="background: #cd1732">
-									<span>update your building</span> 
+								<a href="index-onepage-quote.html#" class="btn btn-default btn-lg" style="background: #cd1732">
+									<span>get a quote</span> 
 								</a>
 							</div>
 						</li>
@@ -326,7 +334,7 @@
 				<div class="container">
 
 					<div class="text-center">
-						<h1 class="mb-0">AN ELEVATOR FOR EVERY <span style="color: #0b64a0">JOURNEY</span></h1>
+						<h1 class="mb-0"><span style="color: #0b64a0">AN ELEVATOR FOR EVERY JOURNEY</span></h1>
 						<h2 class="col-sm-10 offset-sm-1 mb-0 fw-300 text-muted fs-20"><span style="color: #cd1732"><b>—</b></span> reinventing the way you move <span style="color: #cd1732"><b>—</b></span></h2>
 					</div>
 
@@ -334,6 +342,212 @@
 			</section>
 			<!-- Welcome -->
 
+			
+						<!-- PORTFOLIO -->
+						<section id="portfolio">
+							<div class="container">
+			
+								<div class="heading-title heading-dotted text-center">
+									<h2>featured work</h2>
+								</div>
+			
+								<div class="text-center">
+									<ul class="nav nav-pills mix-filter mb-60">
+										<li data-filter="residential" class="filter active"><a href="portfolio">residential</a></li>
+									</ul>
+								</div>
+			
+							</div>
+			
+							<div class="portfolio-nogutter">
+			
+									<div class="row mix-grid">
+			
+										<div class="col-md-3 col-sm-3 mix residential"><!-- item -->
+			
+											<div class="item-box">
+												<figure>
+													<span class="item-hover">
+														<span class="overlay dark-5"></span>
+														<span class="inner">
+			
+															<!-- lightbox -->
+															<a class="ico-rounded lightbox" href="demo_files/images/thematics/construction/p2.jpg" data-plugin-options='{"type":"image"}'>
+																<span class="fa fa-plus fs-20"></span>
+															</a>
+			
+															<!-- details -->
+															<a class="ico-rounded lightbox" href="ajax/portfolio-detail-modal-6.html" data-plugin-options='{"type":"ajax", "closeOnBgClick":false}'>
+																<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+															</a>
+			
+														</span>
+													</span>
+			
+													<img class="img-fluid" src="demo_files/images/thematics/construction/p2.2.jpg" width="600" height="399" alt="">
+												</figure>
+			
+												<div class="item-box-desc">
+													<h3>hotel</h3>
+													<ul class="list-inline categories m-0">
+														<li style="color: #cd1732">| <a href="#portfolio">residential</a> |</li>
+													</ul>
+												</div>
+			
+											</div>
+			
+										</div><!-- /item -->
+			
+			
+										<div class="col-md-3 col-sm-3 mix residential corporate"><!-- item -->
+			
+											<div class="item-box">
+												<figure>
+													<span class="item-hover">
+														<span class="overlay dark-5"></span>
+														<span class="inner">
+			
+															<!-- lightbox -->
+															<a class="ico-rounded lightbox" href="demo_files/images/thematics/construction/p6.jpg" data-plugin-options='{"type":"image"}'>
+																<span class="fa fa-plus fs-20"></span>
+															</a>
+			
+															<!-- details -->
+															<a class="ico-rounded" href="portfolio-single-slider.html">
+																<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+															</a>
+			
+														</span>
+													</span>
+			
+													<img class="img-fluid" src="demo_files/images/thematics/construction/p6.2.jpg" width="600" height="399" alt="">
+												</figure>
+			
+												<div class="item-box-desc">
+													<h3>airbnb</h3>
+													<ul class="list-inline categories m-0">
+														<li style="color: #cd1732">| <a href="#portfolio">residential</a> | <a href="index-onepage-corporate.html">corporate</a> |</li>
+													</ul>
+												</div>
+			
+											</div>
+			
+										</div><!-- /item -->
+			
+			
+										<div class="col-md-3 col-sm-3 mix residential"><!-- item -->
+			
+											<div class="item-box">
+												<figure>
+													<span class="item-hover">
+														<span class="overlay dark-5"></span>
+														<span class="inner">
+			
+															<!-- lightbox -->
+															<a class="ico-rounded lightbox" href="demo_files/images/thematics/construction/p8.jpg" data-plugin-options='{"type":"image"}'>
+																<span class="fa fa-plus fs-20"></span>
+															</a>
+			
+															<!-- details -->
+															<a class="ico-rounded" href="portfolio-single-slider.html">
+																<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+															</a>
+			
+														</span>
+													</span>
+			
+													<img class="img-fluid" src="demo_files/images/thematics/construction/p8.2.jpg" width="600" height="399" alt="">
+												</figure>
+			
+												<div class="item-box-desc">
+													<h3>house</h3>
+													<ul class="list-inline categories m-0">
+													<li style="color: #cd1732">| <a href="#portfolio">residential</a> |</li>
+													</ul>
+												</div>
+			
+											</div>
+			
+										</div><!-- /item -->
+													
+			
+										<div class="col-md-3 col-sm-3 mix residential"><!-- item -->
+			
+											<div class="item-box">
+												<figure>
+													<span class="item-hover">
+														<span class="overlay dark-5"></span>
+														<span class="inner">
+			
+															<!-- lightbox -->
+															<a class="ico-rounded lightbox" href="demo_files/images/thematics/construction/p9.png" data-plugin-options='{"type":"image"}'>
+																<span class="fa fa-plus fs-20"></span>
+															</a>
+			
+															<!-- details -->
+															<a class="ico-rounded lightbox" href="ajax/portfolio-detail-modal-6.html" data-plugin-options='{"type":"ajax", "closeOnBgClick":false}'>
+																<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+															</a>
+			
+														</span>
+													</span>
+			
+													<img class="img-fluid" src="demo_files/images/thematics/construction/p9.2.png" width="600" height="399" alt="">
+												</figure>
+			
+												<div class="item-box-desc">
+													<h3>house²</h3>
+													<ul class="list-inline categories m-0">
+														<li style="color: #cd1732">| <a href="#portfolio">residential</a> |</li>
+													</ul>
+												</div>
+			
+											</div>
+			
+										</div><!-- /item -->
+											
+											
+											<div class="col-md-3 col-sm-3 mix residential corporate"><!-- item -->
+												
+												<div class="item-box">
+													<figure>
+														<span class="item-hover">
+															<span class="overlay dark-5"></span>
+															<span class="inner">
+																
+																<!-- lightbox -->
+																<a class="ico-rounded lightbox" href="demo_files/images/thematics/construction/p11.jpg" data-plugin-options='{"type":"image"}'>
+																	<span class="fa fa-plus fs-20"></span>
+																</a>
+																
+																<!-- details -->
+																<a class="ico-rounded" href="portfolio-single-slider.html">
+																	<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
+																</a>
+																
+															</span>
+														</span>
+														
+														<img class="img-fluid" src="demo_files/images/thematics/construction/p11.2.jpg" width="600" height="399" alt="">
+													</figure>
+													
+													<div class="item-box-desc">
+														<h3>retirement home</h3>
+														<ul class="list-inline categories m-0">
+															<li style="color: #cd1732">| <a href="#portfolio">residential</a> | <a href="index-onepage-corporate.html">corporate</a> |</li>
+														</ul>
+													</div>
+													
+												</div>
+												
+											</div><!-- /item -->
+											
+									</div>
+			
+			
+							</div>
+						</section>
+						<!-- /PORTFOLIO -->
 
 
 			<!-- -->
@@ -347,19 +561,7 @@
 								<h3>passion</h3>
 							</div>
 							
-							<p>Fabulas definitiones ei pri per recteque hendrerit scriptorem in errem scribentur mel fastidii propriae philosophia cu mea. Utinam ipsum everti necessitatibus at fuisset splendide.</p>
-							
-							<a href="#">
-								Read
-								<!-- /word rotator -->
-								<span class="word-rotator" data-delay="2000">
-									<span class="items">
-										<span>more</span>
-										<span>now</span>
-									</span>
-								</span><!-- /word rotator -->
-								<i class="glyphicon glyphicon-menu-right fs-12"></i>
-							</a>
+							<p class="text-justify">we're proud to make every single one of our clients happy and provide them with the best elevators, as well as maintaining an exceptional customer satisfaction for over 40 years. </p>
 
 						</div>
 
@@ -367,19 +569,7 @@
 							<div class="heading-title heading-border-bottom heading-color">
 								<h3>precision</h3>
 							</div>
-							<p>Fabulas definitiones ei pri per recteque hendrerit scriptorem in errem scribentur mel fastidii propriae philosophia cu mea. Utinam ipsum everti necessitatibus at fuisset splendide.</p>
-
-							<a href="#">
-								Read
-								<!-- /word rotator -->
-								<span class="word-rotator" data-delay="2000">
-									<span class="items">
-										<span>more</span>
-										<span>now</span>
-									</span>
-								</span><!-- /word rotator -->
-								<i class="glyphicon glyphicon-menu-right fs-12"></i>
-							</a>
+							<p class="text-justify">our expert team of engineers always provides you with top quality products. every single elevators we build offers maximum reliability. we're here to get you where you need to be.</p>
 
 						</div>
 
@@ -387,19 +577,7 @@
 							<div class="heading-title heading-border-bottom heading-color">
 								<h3>simplicity</h3>
 							</div>
-							<p>Fabulas definitiones ei pri per recteque hendrerit scriptorem in errem scribentur mel fastidii propriae philosophia cu mea. Utinam ipsum everti necessitatibus at fuisset splendide.</p>
-
-							<a href="#">
-								Read
-								<!-- /word rotator -->
-								<span class="word-rotator" data-delay="2000">
-									<span class="items">
-										<span>more</span>
-										<span>now</span>
-									</span>
-								</span><!-- /word rotator -->
-								<i class="glyphicon glyphicon-menu-right fs-12"></i>
-							</a>
+							<p class="text-justify">we’ve always placed people at the heart of what we do, so naturally our approach shapes our customer service too. we’re committed to delivering the service you need.</p>
 
 						</div>
 
@@ -418,15 +596,15 @@
 					<div class="row">
 
 						<div class="col-md-9 col-sm-12"><!-- left text -->
-							<h3>Call now at <span><strong>+800-565-2390</strong></span> and get 15% discount!</h3>
+							<h3><span><strong>business inquiries</strong></span></h3>
 							<p class="font-lato fw-300 fs-20 mb-0">
-								We truly care about our users and our product.
+								we'll get back to you within two business days
 							</p>
 						</div><!-- /left text -->
 
 						
 						<div class="col-md-3 col-sm-12 text-right"><!-- right btn -->
-							<a href="page-contact-1.html" class="btn btn-primary btn-lg">CONTACT US</a>
+							<a href="page-contact-1.html" class="btn btn-primary btn-lg">contact us</a>
 						</div><!-- /right btn -->
 
 					</div>
