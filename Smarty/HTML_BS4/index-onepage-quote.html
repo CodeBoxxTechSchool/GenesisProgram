@@ -28,6 +28,7 @@
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/color_scheme/yellow.css" rel="stylesheet" type="text/css" id="color_scheme" />
 		<link rel="stylesheet" href="index-onepage-home.css">
+		<link rel="form" href="index-onepage-quote.js">
 
 		<!-- FAVICON -->
 		<link href="assets/images/_smarty/favicon.png" rel="shortcut icon" type="image/png">
@@ -252,174 +253,14 @@
 			<!-- /SLIDER -->
 
 
-			<!-- CONTACT -->
-			<section id="contact">
-				<div class="container">
-
-
-					<div class="row">
-
-						<!-- FORM -->
-						<div class="col-md-8 col-sm-8">
-
-							<h3>drop us a line or just say <strong style="color: #cd1732">hello!</strong></h3>
-
-							
-							<!--
-								MESSAGES
-								
-									How it works?
-									The form data is posted to php/contact.php where the fields are verified!
-									php.contact.php will redirect back here and will add a hash to the end of the URL:
-										#alert_success 		= email sent
-										#alert_failed		= email not sent - internal server error (404 error or SMTP problem)
-										#alert_mandatory	= email not sent - required fields empty
-										Hashes are handled by assets/js/contact.js
-
-									Form data: required to be an array. Example:
-										contact[email][required]  WHERE: [email] = field name, [required] = only if this field is required (PHP will check this)
-										Also, add `required` to input fields if is a mandatory field. 
-										Example: <input required type="email" value="" class="form-control" name="contact[email][required]">
-
-									PLEASE NOTE: IF YOU WANT TO ADD OR REMOVE FIELDS (EXCEPT CAPTCHA), JUST EDIT THE HTML CODE, NO NEED TO EDIT php/contact.php or javascript
-												 ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
-
-									WARNING! Do not change the `email` and `name`!
-												contact[name][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
-												contact[email][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
-							-->
-
-							<!-- Alert Success -->
-							<div id="alert_success" class="alert alert-success mb-30">
-								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-								<strong>thank you!</strong> your message successfully sent.
-							</div><!-- /Alert Success -->
-
-
-							<!-- Alert Failed -->
-							<div id="alert_failed" class="alert alert-danger mb-30">
-								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-								<strong>[SMTP] error!</strong> internal server error.
-							</div><!-- /Alert Failed -->
-
-
-							<!-- Alert Mandatory -->
-							<div id="alert_mandatory" class="alert alert-danger mb-30">
-								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-								<strong>sorry!</strong> you need to complete all mandatory (*) fields.
-							</div><!-- /Alert Mandatory -->
-
-
-							<form action="php/contact.php" method="post" enctype="multipart/form-data">
-								<fieldset>
-									<input type="hidden" name="action" value="contact_send" />
-
-									<div class="row">
-											<div class="col-md-4">
-												<label for="contact:name">contact full name *</label>
-												<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
-											</div>
-											<div class="col-md-4">
-												<label for="contact:business">business name *</label>
-												<input required type="text" value="" class="form-control" name="contact[business][required]" id="contact:business">
-											</div>
-											<div class="col-md-4">
-												<label for="contact:email">email *</label>
-												<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email" placeholder="example@email.com">
-											</div>
-											<div class="col-md-4">
-												<label for="contact:phone">phone</label>
-												<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone" placeholder="(800) 123-4567">
-											</div>
-											<div class="col-md-4">
-												<label for="contact:project">project name *</label>
-												<input required type="text" value="" class="form-control" name="contact[project][required]" id="contact:project">
-											</div>
-									</div>
-									<div class="row">
-											<div class="col-md-8">
-												<label for="contact:description">project description *</label>
-												<input required type="text" value="" class="form-control" name="contact[description][required]" id="contact:description">
-											</div>
-											<div class="col-md-4">
-												<label for="contact_department">department</label>
-												<select class="form-control pointer" name="contact[department]">
-													<option value="">[selection]</option>
-													<option value="residential">residential</option>
-													<option value="corporate">corporate</option>
-													<option value="commercial">commercial</option>
-												</select>
-											</div>
-									</div>
-									<div class="row">
-											<div class="col-md-12">
-												<label for="contact:message">message *</label>
-												<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
-											</div>
-									</div>
-									<div class="row">
-											<div class="col-md-12">
-												<label for="contact:attachment">file attachment</label>
-
-												<!-- custom file upload -->
-												<input class="custom-file-upload" type="file" id="file" name="contact[attachment]" id="contact:attachment" data-btn-text="select a file" />
-												<small class="text-muted block">max file size: 10mb (zip/pdf/jpg/png)</small>
-
-											</div>
-									</div>
-
-								</fieldset>
-
-								<div class="row">
-									<div class="col-md-12">
-										<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> send message</button>
-									</div>
-								</div>
-							</form>
-
-						</div>
-						<!-- /FORM -->
-
-
-						<!-- INFO -->
-						<div class="col-md-4 col-sm-4">
-
-							<h2>visit us</h2>
-
-							<!-- 
-							Available heights
-								h-100
-								h-150
-								h-200
-								h-250
-								h-300
-								h-350
-								h-400
-								h-450
-								h-500
-								h-550
-								h-600
-							-->
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2729.04877189324!2d-71.2808642449701!3d46.842729800870245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb897d0e1cafe3f%3A0x9863b2d992c71670!2sCodeBoxx!5e0!3m2!1sen!2sca!4v1599319424381!5m2!1sen!2sca" width="360" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-
-							<hr />
-
-							<p>
-								<span class="block"><strong><i class="fa fa-map-marker" style="color: #cd1732"></i> address:</strong> 418-725 boulevard lebourgneuf, quebec, canada</span>
-								<span class="block"><strong><i class="fa fa-phone" style="color: #cd1732"></i> phone:</strong> <a href="tel:(581) 701-0303">(581) 701-0303</a></span>
-								<span class="block"><strong><i class="fa fa-envelope" style="color: #cd1732"></i> email:</strong> <a href="mailto:info@codeboxx.biz">info@codeboxx.biz</a></span>
-							</p>
-
-						</div>
-						<!-- /INFO -->
-
-					</div>
-
-				</div>
+			<!-- FORM -->
+			<section>
+				<body>
+					kms
+				</body>
 			</section>
-			<!-- /CONTACT -->
 
-
+			<!-- /FORM -->
 
 
 			<!-- FOOTER -->
