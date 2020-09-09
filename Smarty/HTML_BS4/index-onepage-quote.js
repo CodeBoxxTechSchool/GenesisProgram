@@ -1,27 +1,16 @@
-Qualtrics.SurveyEngine.addOnload(function ()
-{
-document.getElementById("QID8").style.display="none";
+$(document).ready(function() {
 
-this.questionclick = function(event,element)
-{
-    console.log(event, element);
-    if (element.type == 'radio')
-    {
-        var choiceNum = element.id.split('~')[2];
+    $("#confirm_building_btn").click(function(){
 
-        var x = document.getElementById("QID2") //Question ID of the textbox Q
-    x.style.display="none"
+        $(question1).fadeIn();
+    
+    });
 
-    this.questionclick = function(event, element) {
-        var selectedChoice = this.getSelectedChoices()
+    var building_type = #building_type
+    if (building_type === "residential") {
 
-        console.log(selectedChoice) //use this to get the value of the choice when you want the textbox to appear
-        if (selectedChoice == "1") {
-            x.style.display="block"
-        }
-        else {
-            x.style.display="none"
-        }
-    }
-}
+        $("#question1").show(1000);
+        $("#question1-label").text("how many appartments are there in the building?");
+
+    };
 });

@@ -27,7 +27,7 @@
 		<!-- PAGE LEVEL SCRIPTS -->
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/color_scheme/yellow.css" rel="stylesheet" type="text/css" id="color_scheme" />
-		<link rel="stylesheet" href="index-onepage-home.css">
+		<link rel="stylesheet" href="index.css">
 		<link rel="form" href="index-onepage-quote.js">
 
 		<!-- FAVICON -->
@@ -163,7 +163,7 @@
 								-->
 								<ul id="topMain" class="nav nav-pills nav-main">
 									<li class="active"><!-- HOME -->
-										<a href="#home">
+										<a href="index.html#">
 											HOME
 										</a>
 									</li>
@@ -255,6 +255,7 @@
 
 			<!-- FORM -->
 			<section>
+			<script src="assets/js/index-onepage-quote.js"></script>
 			<div class="alert alert-transparent bordered-bottom m-0">
 				<div class="container">
 
@@ -262,21 +263,62 @@
 
 							<div class="col-md-4">
 								<label for="form_building">building type</label>
-								<select class="form-control pointer" name="contact[department]">
-									<option value="">[selection]</option>
+								<select id="building_type" class="form-control pointer" name="form_building">
+									<option>[select]</option>
 									<option value="residential">residential</option>
 									<option value="corporate">corporate</option>
 									<option value="commercial">commercial</option>
 									<option value="hybrid">hybrid</option>
 								</select>
-							</div>
 
+								<br />
+
+								<button id="confirm_building_btn" type="button" class="btn btn-primary">confirm</button>
+
+								<div id="question1" class="row justify-content-center" style="display: none;">
+                                    <div class="col-md-4">
+                                        <label id="question1-label" for="question-1"></label>
+                                        <input required type="number" value="" class="form-control" name="input_question1" id="input_question1">
+                                    </div>
+								</div>
+								<div id="question2" class="row justify-content-center" style="display: none;">
+                                    <div class="col-md-4">
+                                        <label id="question2-label" for="question-2"></label>
+                                        <input required type="number" value="" class="form-control" name="input_question2" id="input_question2">
+                                    </div>
+								</div>
+								<div id="question3" class="row justify-content-center" style="display: none;">
+                                    <div class="col-md-4">
+                                        <label id="question3-label" for="question-3"></label>
+                                        <input required type="number" value="" class="form-control" name="input_question3" id="input_question3">
+                                    </div>
+								</div>
+								<div id="question4" class="row justify-content-center" style="display: none;">
+                                    <div class="col-md-4">
+                                        <label id="question4-label" for="question-4"></label>
+                                        <input required type="number" value="" class="form-control" name="input_question4" id="input_question4">
+                                    </div>
+								</div>
+								<div id="question5" class="row justify-content-center" style="display: none;">
+                                    <div class="col-md-4">
+                                        <label id="question5-label" for="question-5"></label>
+                                        <input required type="number" value="" class="form-control" name="input_question5" id="input_question5">
+                                    </div>
+								</div>
+								<div id="question6" class="row justify-content-center" style="display: none;">
+                                    <div class="col-md-4">
+                                        <label id="question6-label" for="question-6"></label>
+                                        <input required type="number" value="" class="form-control" name="input_question6" id="input_question6">
+                                    </div>
+                        	    </div>
+
+
+							</div>
 					</div>
 
 				</div>
 			</div>
 			</section>
-
 			<!-- /FORM -->
 
 
