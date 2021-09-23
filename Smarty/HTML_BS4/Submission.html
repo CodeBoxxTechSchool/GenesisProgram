@@ -205,13 +205,184 @@
 				<!-- /Top Nav -->
 
 			</div>
-			
-			<!-- Entering Scripting Territory -->
 
-			<script>
+			<div>
+				<br>
+				<br>
+				<h1>Sumbission Form</h1>
+				<p><strong>First, Select the Service Type Below:</strong></p>
+
+				<p>
+					<select id="UserSelect" onchange="SortServices()">
+						<option></option> <!--Empty to keep field blank innitially-->
+						<option>Residential</option>
+						<option>Commercial</option>
+						<option>Corporate</option>
+						<option>Hybrid</option>
+					</select>
+
 				
-   
-			</script>
+				<script>
+
+					function UserSelection()
+					{
+						var DropdownSelect = document.getElementById("UserSelect");
+						var SelectedService = DropdownSelect.selectedIndex;
+
+						return SelectedService;
+					}
+
+
+				</script>	
+				</p>
+				<!--Number of Appartments-->
+				<div id="div1" style="display: block;">
+					Number of Appartments:
+					<br>
+					<input id="ApptNumber" type="number" name value oninput="Call()" onkeyup="Call()">
+				</div>
+				<!--Number of Floors-->
+				<div id="div2" style="display: block;">
+					Number of Floors:
+					<br>
+					<input id="FlrNumber" type="number" name value oninput="Call()" onkeyup="Call()">
+				</div>
+				<!--Number of Baements-->
+				<div id="div3" style="display: block;">
+					Number of Basements:
+					<br>
+					<input id="BsmntNumber" type="number" name value oninput="Call()" onkeyup="Call()">
+				</div>
+				<!--Number of Seperate Businesses-->
+				<div id="div4" style="display: block;">
+					How many seperate businesses do you have?:
+					<br>
+					<input id="BsnssNumber" type="number" name value oninput="Call()" onkeyup="Call()">
+				</div>
+				<!--Number of Available Parking spots-->
+				<div id="div5" style="display: block;">
+					Number of Available Parking spots:
+					<br>
+					<input id="PrksptNumber" type="number" name value oninput="Call()" onkeyup="Call()">
+				</div>
+				<!--Number of lift cages-->
+				<div id="div6" style="display: block;">
+					How many lift cages would you like to deploy?:
+					<br>
+					<input id="LftNumber" type="number" name value oninput="Call()" onkeyup="Call()">
+				</div>
+				<!--Number of Seperate rental Companies-->
+				<div id="div7" style="display: block;">
+					How many seperate <strong>Rental</strong> Businesses do you have?:
+					<br>
+					<input id="RntNumber" type="number" name value oninput="Call()" onkeyup="Call()">
+				</div>
+				<!--Number of Occupency per Floor-->
+				<div id="div8" style="display: block;">
+					Enter the number of Tenets/Occupents per floor:
+					<br>
+					<input id="MaxTntsNumber" type="number" name value oninput="Call()" onkeyup="Call()">
+				</div>
+				<!--Hours of activity in building-->
+				<div id="div9" style="display: block;">
+					For how many hours will the building be in activity per day?:
+					<br>
+					<input id="ActtimeNumber" type="number" name value oninput="Call()" onkeyup="Call()">
+				</div>
+				<!--Number of elevators needed-->
+				<div id="div10" style="display: block;">
+					Number of Elevators:
+					<br>
+					<input id="ElevatorResults" type="number" name value disabled>
+				</div>
+
+				<br>
+				<br>
+				<p><strong>Second, Select the quality of support service:</strong></p>
+
+				<input id="StandardPricing" type="radio" name="serivces" value="standard" onchange="Price()">
+				 > Standard
+				 <br>
+				 <input id="PremiumPricing" type="radio" name="serivces" value="premium" onchange="Price()">
+				 > Premium
+				 <br>
+				 <input id="ExceliumPricing" type="radio" name="serivces" value="excelium" onchange="Price()">
+				 > Excelium
+
+				<br>
+				<br>
+
+
+				Price of an elevator $: 
+				<input id="PriceUnit" type="text" disabled>
+				<br>
+				Installation Cost $:
+				<input id="InstallCost" type="text" disabled>
+				<br>
+				Total Cost $:
+				<input id="TotalCost" type="text" disabled>
+				<br>
+
+
+
+
+
+
+
+
+
+
+
+
+				<!--ENTERING SCRIPTING TERRITORY-->
+
+				<script>function Call() {UserSelectionFormula();}</script>
+
+				<script>
+
+					function UserSelectionFormula()
+					{
+						var service = UserSelection();
+
+						if(service == 1)
+						{
+							ResultNumberResidentialElevator();
+						}
+						if(service == 2)
+						{
+							ResultNumberCommercialElevator();
+						}
+						if(service == 3)
+						{
+							ResultNumberCorporateElevator();
+						}
+						if(service == 4)
+						{
+							ResultNumberHybridElevator();
+						}
+					}
+
+				</script>
+
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
