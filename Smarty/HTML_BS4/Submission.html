@@ -209,62 +209,7 @@
 			<!-- Entering Scripting Territory -->
 
 			<script>
-			function Call()  {  FormulesSelected();  }
-
-			function FormulesSelected()  {
 				
-			   var service =  MaFonctionDeSelection();  
-			   
-			   
-			   if ( service == 1 )
-			   {
-				  ResultNumberResidentialElevators(); 
-			   }
-			   
-			   if ( service == 2 )
-			   {
-				  ResultNumberCommercialElevators(); 
-			   }
-			   
-			   if ( service == 3 )
-			   {
-				  ResultNumberCorporateElevators(); 
-			   }
-			   
-			   if ( service == 4 )
-			   {
-				  ResultNumberCorporateElevators(); 
-			   }
-			   
-			   
-			   
-			}
-
-			
-			function ResultNumberResidentialElevators() {
-	   
-		
-	
-	  		 var x = document.getElementById("NberAppartement").value || 0 ;
-	  		 var y = document.getElementById("NbreFloor").value || 0 ;
-	  		 var z = document.getElementById("NbreBasements").value || 0;
-	  		 var Nber = Math.ceil( x /(y*6) ); 
-			 
-			  
-	  		 var colonne =  Math.ceil(y /20);
-		 
-	  		 var  NberElevators = Nber*colonne;
-	  			 if (x != 0  && y != 0   && z  != 0  )
-	  				 {
-						   document.getElementById("ResultatAscenseur").value= NberElevators;
-					 }
-	 			 else {
-			 		  document.getElementById("ResultatAscenseur").value = 0;
-			  		  }
-	   
-	   		return NberElevators;
-   
-   }
    
 			</script>
 
