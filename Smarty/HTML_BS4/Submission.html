@@ -205,7 +205,7 @@
 				<!-- /Top Nav -->
 
 			</div>
-
+			<!--Simple HTML Form UI-->
 			<div>
 				<br>
 				<br>
@@ -213,6 +213,7 @@
 				<p><strong>First, Select the Service Type Below:</strong></p>
 
 				<p>
+														<!--V   Suspected to be future function inside JS-->
 					<select id="UserSelect" onchange="SortServices()">
 						<option></option> <!--Empty to keep field blank innitially-->
 						<option>Residential</option>
@@ -220,32 +221,19 @@
 						<option>Corporate</option>
 						<option>Hybrid</option>
 					</select>
-
-				
-				<script>
-
-					function UserSelection()
-					{
-						var DropdownSelect = document.getElementById("UserSelect");
-						var SelectedService = DropdownSelect.selectedIndex;
-
-						return SelectedService;
-					}
-
-
-				</script>	
+	
 				</p>
 				<!--Number of Appartments-->
 				<div id="div1" style="display: block;">
 					Number of Appartments:
 					<br>
-					<input id="ApptNumber" type="number" name value oninput="Call()" onkeyup="Call()">
+					<input id="ApptNumber" type="number" name value="5" oninput="Call()" onkeyup="Call()">
 				</div>
 				<!--Number of Floors-->
 				<div id="div2" style="display: block;">
 					Number of Floors:
 					<br>
-					<input id="FlrNumber" type="number" name value oninput="Call()" onkeyup="Call()">
+					<input id="FlrNumber" type="number" name value="5" oninput="Call()" onkeyup="Call()">
 				</div>
 				<!--Number of Baements-->
 				<div id="div3" style="display: block;">
@@ -281,7 +269,7 @@
 				<div id="div8" style="display: block;">
 					Enter the number of Tenets/Occupents per floor:
 					<br>
-					<input id="MaxTntsNumber" type="number" name value oninput="Call()" onkeyup="Call()">
+					<input id="MaxOccNumber" type="number" name value oninput="Call()" onkeyup="Call()">
 				</div>
 				<!--Hours of activity in building-->
 				<div id="div9" style="display: block;">
@@ -336,32 +324,73 @@
 
 				<!--ENTERING SCRIPTING TERRITORY-->
 
-				<script>function Call() {UserSelectionFormula();}</script>
+				
 
 				<script>
-
-					function UserSelectionFormula()
+					function Call() 
 					{
-						var service = UserSelection();
+						SelectedFormula();
+					}
+				</script>
+
+
+
+				<script>
+					function SelectedFormula()
+					{
+
+						var service = document.getElementById("UserSelect");
 
 						if(service == 1)
 						{
-							ResultNumberResidentialElevator();
+							document.getElementById("ApptNumber").style.display = "none";
 						}
 						if(service == 2)
 						{
-							ResultNumberCommercialElevator();
+							NumberOfCommercialElevators();
 						}
 						if(service == 3)
 						{
-							ResultNumberCorporateElevator();
+							NumberOfCorporateElevators();
 						}
 						if(service == 4)
 						{
-							ResultNumberHybridElevator();
+							NumberOfCorporateElevators();
+						}
+						
+
+					}
+				</script>
+
+				<script>
+					function SortServices()
+					{
+						if(service == 1)
+						{
+							Add();
+						}
+						else
+						{
+							Remove();
 						}
 					}
 
+
+
+				</script>
+
+				<script>
+					function Remove()
+					{
+						document.getElementById("ApptNumber").style.display = "none";
+					}
+				</script>
+
+				<script>
+					function Add()
+					{
+						document.getElementById("ApptNumber").style.display = "block";
+					}
 				</script>
 
 			</div>
