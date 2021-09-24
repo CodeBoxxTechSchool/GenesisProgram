@@ -214,7 +214,7 @@
 
 				<p>
 														
-					<select id="UserSelect" onchange="SortFields()">
+					<select id="UserSelect" onchange="Call()">
 						<option value="nil"></option> <!--Empty to keep field blank initially-->
 						<option value="residential">Residential</option>
 						<option value="commercial">Commercial</option>
@@ -224,61 +224,61 @@
 	
 				</p>
 				<!--Number of Appartments-->
-				<div id="div1" style="display: none;">
+				<div id="NumAppartments" style="display: none;">
 					Number of Appartments:
 					<br>
 					<input id="ApptNumber" type="number" name value oninput="Call()" onkeyup="Call()">
 				</div>
 				<!--Number of Floors-->
-				<div id="div2" style="display: none;">
+				<div id="NumFloor" style="display: none;">
 					Number of Floors:
 					<br>
 					<input id="FlrNumber" type="number" name value oninput="Call()" onkeyup="Call()">
 				</div>
 				<!--Number of Baements-->
-				<div id="div3" style="display: none;">
+				<div id="NumBasement" style="display: none;">
 					Number of Basements:
 					<br>
 					<input id="BsmntNumber" type="number" name value oninput="Call()" onkeyup="Call()">
 				</div>
 				<!--Number of Seperate Businesses-->
-				<div id="div4" style="display: none;">
+				<div id="NumBusiness" style="display: none;">
 					How many seperate businesses do you have?:
 					<br>
 					<input id="BsnssNumber" type="number" name value oninput="Call()" onkeyup="Call()">
 				</div>
 				<!--Number of Available Parking spots-->
-				<div id="div5" style="display: none;">
+				<div id="NumSpots" style="display: none;">
 					Number of Available Parking spots:
 					<br>
 					<input id="PrksptNumber" type="number" name value oninput="Call()" onkeyup="Call()">
 				</div>
 				<!--Number of lift cages-->
-				<div id="div6" style="display: none;">
+				<div id="NumCages" style="display: none;">
 					How many lift cages would you like to deploy?:
 					<br>
 					<input id="LftNumber" type="number" name value oninput="Call()" onkeyup="Call()">
 				</div>
 				<!--Number of Seperate rental Companies-->
-				<div id="div7" style="display: none;">
+				<div id="NumRentals" style="display: none;">
 					How many seperate <strong>Rental</strong> Businesses do you have?:
 					<br>
 					<input id="RntNumber" type="number" name value oninput="Call()" onkeyup="Call()">
 				</div>
 				<!--Number of Occupency per Floor-->
-				<div id="div8" style="display: none;">
+				<div id="NumOccupant" style="display: none;">
 					Enter the number of Tenets/Occupents per floor:
 					<br>
 					<input id="MaxOccNumber" type="number" name value oninput="Call()" onkeyup="Call()">
 				</div>
 				<!--Hours of activity in building-->
-				<div id="div9" style="display: none;">
+				<div id="NumActivity" style="display: none;">
 					For how many hours will the building be in activity per day?:
 					<br>
 					<input id="ActtimeNumber" type="number" name value oninput="Call()" onkeyup="Call()">
 				</div>
 				<!--Number of elevators needed-->
-				<div id="div10" style="display: none;">
+				<div id="NumElevators" style="display: none;">
 					Number of Elevators:
 					<br>
 					<input id="ElevatorResults" type="number" name value disabled>
@@ -315,203 +315,7 @@
 
 
 
-
-
-
-
-
-
-
-				<!--ENTERING SCRIPTING TERRITORY-->
-
-
-
-
 				
-
-				<script>
-					/*This function is called when the user selects a building type in the dropdown menu being a <select> tag at line 217.
-					For this to work, each <option> tags inside the <select> tag must have a value assigned INSIDE THE OPENING <option> TAGS!
-					Using the onchange method, as soon as the user selects a service from the drop down menu, The function bellow is executed.*/
-
-				function SortFields() //SortFields has for purpose to sort all input user fields bellow the dropdown menu to show only the ones the user will be conserned with.
-				{
-					/*The following conditional branch works at follows:
-					 If the user selects an option in the dropdown menu, obtained in this script by "document.getElementById("UserSelect")" UserSelect is the ID 
-					 of our <select> tag at line 217. Because we have assigned <option> tags inside this <select> tag, and assigned a value to each <option> tags
-						we can get a direct refference in our script. 
-						
-						The condition translates in human language as follows:
-						"If the UserSelect <select> tag has been set to "Residential" (identified by the "residential" value with a small r instead of a Capital R)
-						Then do the following... (continued under IF statement)*/
-					if (document.getElementById("UserSelect").value == "residential")
-
-					{
-						/*When the option "Residential" (with a Capital R) which has an assigned value of "residential" (small r) is selected by the user, it will set each
-						fields .style.display parameters accordingly to your objective. "block" (somehow) means "show" and "none" means no display.*/
-						document.getElementById("div1").style.display = "block"; //Appartments
-						document.getElementById("div2").style.display = "block"; //Floors
-						document.getElementById("div3").style.display = "block"; //Basements
-						document.getElementById("div4").style.display = "none"; //Seperate businesses
-						document.getElementById("div5").style.display = "none"; //parking spots
-						document.getElementById("div6").style.display = "none"; //lift cages
-						document.getElementById("div7").style.display = "none"; //rental/tenet businesses
-						document.getElementById("div8").style.display = "none"; // occupency rate
-						document.getElementById("div9").style.display = "none"; //hours of activity
-						document.getElementById("div10").style.display = "none"; //numbers of elevators
-						console.log("Residential Selected")
-
-						//Call residential instructions to be executed.
-						ResidentialFunction();
-
-						
-					}
-
-					if (document.getElementById("UserSelect").value == "commercial")
-					{
-						document.getElementById("div1").style.display = "none";
-						document.getElementById("div2").style.display = "block";
-						document.getElementById("div3").style.display = "block";
-						document.getElementById("div4").style.display = "block";
-						document.getElementById("div5").style.display = "block";
-						document.getElementById("div6").style.display = "block";
-						document.getElementById("div7").style.display = "none";
-						document.getElementById("div8").style.display = "none";
-						document.getElementById("div9").style.display = "none";
-						document.getElementById("div10").style.display = "none";
-						console.log("Commercial Selected")
-
-						//Call commercial instructions to be executed.
-						CommercialFunction();
-					}
-
-					if (document.getElementById("UserSelect").value == "corporate")
-					{
-						document.getElementById("div1").style.display = "none";
-						document.getElementById("div2").style.display = "block";
-						document.getElementById("div3").style.display = "block";
-						document.getElementById("div4").style.display = "none";
-						document.getElementById("div5").style.display = "block";
-						document.getElementById("div6").style.display = "none";
-						document.getElementById("div7").style.display = "block";
-						document.getElementById("div8").style.display = "block";
-						document.getElementById("div9").style.display = "none";
-						document.getElementById("div10").style.display = "none";
-						console.log("Corporate Selected")
-					}
-
-					if (document.getElementById("UserSelect").value == "hybrid")
-					{
-						document.getElementById("div1").style.display = "none";
-						document.getElementById("div2").style.display = "block";
-						document.getElementById("div3").style.display = "block";
-						document.getElementById("div4").style.display = "block";
-						document.getElementById("div5").style.display = "block";
-						document.getElementById("div6").style.display = "none";
-						document.getElementById("div7").style.display = "none";
-						document.getElementById("div8").style.display = "block";
-						document.getElementById("div9").style.display = "block";
-						document.getElementById("div10").style.display = "none";
-						console.log("Hybrid Selected")
-					}
-					if (document.getElementById("UserSelect").value == "nil")
-					{
-						document.getElementById("div1").style.display = "none";
-						document.getElementById("div2").style.display = "none";
-						document.getElementById("div3").style.display = "none";
-						document.getElementById("div4").style.display = "none";
-						document.getElementById("div5").style.display = "none";
-						document.getElementById("div6").style.display = "none";
-						document.getElementById("div7").style.display = "none";
-						document.getElementById("div8").style.display = "none";
-						document.getElementById("div9").style.display = "none";
-						document.getElementById("div10").style.display = "none";
-						console.log("Nothing to be displayed unless an option is selected in the dropdown menu")
-					}
-
-				}
-				
-				</script>
-
-
-
-
-				<script>
-					function CommercialFunction()
-					{	/*If the type of building is Commercial, the number of elevator shafts
-						 to be deployed is specified (as a INT value) and the estimated number of cages is equal to the number required.*/
-						NumberOfLifts = NumberOfElevators;
-					}
-				</script>
-
-				<script>
-					function ResidentialFunction()
-					{
-						/*If the type of building is Residential, divide the number of apartments by the number of floors 
-						(excluding the number of basements) to obtain an average of doors per floor and require an elevator shaft for every 6 apartments. */
-						var ApptFloorDivide = NumberOfAppartments.value / NumberOfFloors.value;
-
-						/*If the apartment has more than 20 floors, it is necessary to provide an additional column of elevators
-						 and thus double the number of elevator shafts. A new column is therefore added to each new group of 20 stories.*/
-
-						if(NumberOfFloors.value > 20)
-						{
-							NumberOfLifts.value *= 2;
-						}
-						if(NumberOfFloors.value > 40)
-						{
-							NumberOfLifts.value *= 2;
-						}
-						if(NumberOfFloors.value > 60)
-						{
-							NumberOfLifts.value *= 2;
-						}
-						if(NumberOfFloors.value > 80)
-						{
-							NumberOfLifts.value *= 2;
-						}
-						if(NumberOfFloors.value > 100)
-						{
-							NumberOfLifts.value *= 2;
-						}
-						if(NumberOfFloors.value > 120)
-						{
-							NumberOfLifts.value *= 2;
-						}
-						if(NumberOfFloors.value > 140)
-						{
-							NumberOfLifts.value *= 2;
-						}
-						if(NumberOfFloors.value > 160)
-						{
-							NumberOfLifts.value *= 2;
-						}
-						if(NumberOfFloors.value > 180)
-						{
-							NumberOfLifts.value *= 2;
-						}
-						if(NumberOfFloors.value > 200)
-						{
-							NumberOfLifts.value *= 2;
-						}
-						if(NumberOfFloors.value > 220)
-						{
-							NumberOfLifts.value *= 2;
-						}
-						if(NumberOfFloors.value > 240)
-						{
-							NumberOfLifts.value *= 2;
-						}
-						if(NumberOfFloors.value > 260)
-						{
-							NumberOfLifts.value *= 2;
-						}
-						if(NumberOfFloors.value > 280)
-						{
-							console.log("How the hell do you want to build this high??")
-						}
-					}
-				</script>
 
 			</div>
 
@@ -599,4 +403,150 @@
 
 			</footer>
 
-			<script></script>
+			<script>
+				function Call()
+				{
+						
+					
+
+
+
+
+
+
+				 	// <!--ENTERING SCRIPTING TERRITORY-->
+
+
+
+
+				
+
+					/*This function is called when the user selects a building type in the dropdown menu being a <select> tag at line 217.
+					For this to work, each <option> tags inside the <select> tag must have a value assigned INSIDE THE OPENING <option> TAGS!
+					Using the onchange method, as soon as the user selects a service from the drop down menu, The function bellow is executed.*/
+					/*The following conditional branch works at follows:
+					 If the user selects an option in the dropdown menu, obtained in this script by "document.getElementById("UserSelect")" UserSelect is the ID 
+					 of our <select> tag at line 217. Because we have assigned <option> tags inside this <select> tag, and assigned a value to each <option> tags
+						we can get a direct refference in our script. 
+						
+						The condition translates in human language as follows:
+						"If the UserSelect <select> tag has been set to "Residential" (identified by the "residential" value with a small r instead of a Capital R)
+						Then do the following... (continued under IF statement)*/
+					if (document.getElementById("UserSelect").value == "residential")
+
+					{
+						/*When the option "Residential" (with a Capital R) which has an assigned value of "residential" (small r) is selected by the user, it will set each
+						fields .style.display parameters accordingly to your objective. "block" (somehow) means "show" and "none" means no display.*/
+						document.getElementById("NumAppartments").style.display = "block"; //Appartments
+						document.getElementById("NumFloor").style.display = "block"; //Floors
+						document.getElementById("NumBasement").style.display = "block"; //Basements
+						document.getElementById("NumBusiness").style.display = "none"; //Seperate businesses
+						document.getElementById("NumSpots").style.display = "none"; //parking spots
+						document.getElementById("NumCages").style.display = "none"; //lift cages
+						document.getElementById("NumRentals").style.display = "none"; //rental/tenet businesses
+						document.getElementById("NumOccupant").style.display = "none"; // occupency rate
+						document.getElementById("NumActivity").style.display = "none"; //hours of activity
+						document.getElementById("NumElevators").style.display = "block"; //numbers of elevators
+						console.log("Residential Selected")
+
+						//Call residential instructions to be executed.
+						ResidentialFunction();
+
+						
+					}
+
+					if (document.getElementById("UserSelect").value == "commercial")
+					{
+						document.getElementById("NumAppartments").style.display = "none";
+						document.getElementById("NumFloor").style.display = "block";
+						document.getElementById("NumBasement").style.display = "block";
+						document.getElementById("NumBusiness").style.display = "block";
+						document.getElementById("NumSpots").style.display = "block";
+						document.getElementById("NumCages").style.display = "block";
+						document.getElementById("NumRentals").style.display = "none";
+						document.getElementById("NumOccupant").style.display = "none";
+						document.getElementById("NumActivity").style.display = "none";
+						document.getElementById("NumElevators").style.display = "block";
+						console.log("Commercial Selected")
+
+						//Call commercial instructions to be executed.
+						CommercialFunction();
+					}
+
+					if (document.getElementById("UserSelect").value == "corporate")
+					{
+						document.getElementById("NumAppartments").style.display = "none";
+						document.getElementById("NumFloor").style.display = "block";
+						document.getElementById("NumBasement").style.display = "block";
+						document.getElementById("NumBusiness").style.display = "none";
+						document.getElementById("NumSpots").style.display = "block";
+						document.getElementById("NumCages").style.display = "none";
+						document.getElementById("NumRentals").style.display = "block";
+						document.getElementById("NumOccupant").style.display = "block";
+						document.getElementById("NumActivity").style.display = "none";
+						document.getElementById("NumElevators").style.display = "block";
+						console.log("Corporate Selected")
+					}
+
+					if (document.getElementById("UserSelect").value == "hybrid")
+					{
+						document.getElementById("NumAppartments").style.display = "none";
+						document.getElementById("NumFloor").style.display = "block";
+						document.getElementById("NumBasement").style.display = "block";
+						document.getElementById("NumBusiness").style.display = "block";
+						document.getElementById("NumSpots").style.display = "block";
+						document.getElementById("NumCages").style.display = "none";
+						document.getElementById("NumRentals").style.display = "none";
+						document.getElementById("NumOccupant").style.display = "block";
+						document.getElementById("NumActivity").style.display = "block";
+						document.getElementById("NumElevators").style.display = "block";
+						console.log("Hybrid Selected")
+					}
+					if (document.getElementById("UserSelect").value == "nil")
+					{
+						document.getElementById("NumAppartments").style.display = "none";
+						document.getElementById("NumFloor").style.display = "none";
+						document.getElementById("NumBasement").style.display = "none";
+						document.getElementById("NumBusiness").style.display = "none";
+						document.getElementById("NumSpots").style.display = "none";
+						document.getElementById("NumCages").style.display = "none";
+						document.getElementById("NumRentals").style.display = "none";
+						document.getElementById("NumOccupant").style.display = "none";
+						document.getElementById("NumActivity").style.display = "none";
+						document.getElementById("NumElevators").style.display = "block";
+						console.log("Nothing to be displayed unless an option is selected in the dropdown menu")
+					}
+
+				}
+				
+				function CommercialFunction()
+					{	/*If the type of building is Commercial, the number of elevator shafts
+						 to be deployed is specified (as a INT value) and the estimated number of cages is equal to the number required.*/
+						document.getElementById("NumCages").value = document.getElementById("NumElevators").value;
+					}
+
+				function ResidentialFunction()
+					{
+						console.log("Called ResidentialFunctions");
+						console.log(document.getElementById("NumFloor").value);
+						/*If the type of building is Residential, divide the number of apartments by the number of floors 
+						(excluding the number of basements) to obtain an average of doors per floor and require an elevator shaft for every 6 apartments. */
+						var ApptFloorDivide = document.getElementById("NumAppartments").value / document.getElementById("NumFloor").value;
+
+						/*If the apartment has more than 20 floors, it is necessary to provide an additional column of elevators
+						 and thus double the number of elevator shafts. A new column is therefore added to each new group of 20 stories.
+						 CLUE: NUMBER OF floors / 20 = NUMBERS OF elevators, 20 floors / 20 = 1 elevator*/
+
+						 //IF THE VALUE IS THE NUMBERS OF FLOOR IS UNDER 20, ALWAYS KEEP THE NUMBERS OF ELEVATORS TO 1.
+						if(document.getElementById("NumFloor").value <= 20)
+						{
+							document.getElementById("NumElevators").value = 1;
+							console.log("SHOULD FIRE");
+						}
+						//IF
+
+						document.getElementById("NumElevators").value = document.getElementById("NumElevators").value; 
+						
+					}
+			
+			</script>
