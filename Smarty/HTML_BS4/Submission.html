@@ -324,6 +324,9 @@
 
 				<!--ENTERING SCRIPTING TERRITORY-->
 
+
+
+
 				
 
 				<script>
@@ -345,7 +348,7 @@
 
 					{
 						/*When the option "Residential" (with a Capital R) which has an assigned value of "residential" (small r) is selected by the user, it will set each
-						fields .style.display parameters accordingly to your objective. "block" (somehow) means "show" and "none" means no display.
+						fields .style.display parameters accordingly to your objective. "block" (somehow) means "show" and "none" means no display.*/
 						document.getElementById("div1").style.display = "block"; //Appartments
 						document.getElementById("div2").style.display = "block"; //Floors
 						document.getElementById("div3").style.display = "block"; //Basements
@@ -357,6 +360,11 @@
 						document.getElementById("div9").style.display = "none"; //hours of activity
 						document.getElementById("div10").style.display = "none"; //numbers of elevators
 						console.log("Residential Selected")
+
+						//Call residential instructions to be executed.
+						ResidentialFunction();
+
+						
 					}
 
 					if (document.getElementById("UserSelect").value == "commercial")
@@ -372,6 +380,9 @@
 						document.getElementById("div9").style.display = "none";
 						document.getElementById("div10").style.display = "none";
 						console.log("Commercial Selected")
+
+						//Call commercial instructions to be executed.
+						CommercialFunction();
 					}
 
 					if (document.getElementById("UserSelect").value == "corporate")
@@ -420,6 +431,102 @@
 
 				}
 				
+				</script>
+
+					
+				<script>
+					function ListAllElements()
+					{
+						var NumberOfAppartments = document.getElementById("div1"); //Appartments
+						var NumberOfFloors = document.getElementById("div2"); //Floors
+						var NumberOfBasement = document.getElementById("div3"); //Basements
+						var NumberOfBusinesses = document.getElementById("div4"); //Seperate businesses
+						var NumberOfSpots = document.getElementById("div5"); //parking spots
+						var NumberOfLifts = document.getElementById("div6"); //lift cages
+						var NumberOfRentals = document.getElementById("div7"); //rental/tenet businesses
+						var OccupancyRate = document.getElementById("div8"); // occupency rate
+						var HoursOfActivity = document.getElementById("div9"); //hours of activity
+						var NumberOfElevators = document.getElementById("div10")
+					}
+				</script>
+
+
+
+				<script>
+					function CommercialFunction()
+					{	/*If the type of building is Commercial, the number of elevator shafts
+						 to be deployed is specified (as a INT value) and the estimated number of cages is equal to the number required.*/
+						NumberOfLifts = NumberOfElevators;
+					}
+				</script>
+
+				<script>
+					function ResidentialFunction()
+					{
+						/*If the type of building is Residential, divide the number of apartments by the number of floors 
+						(excluding the number of basements) to obtain an average of doors per floor and require an elevator shaft for every 6 apartments. */
+						var ApptFloorDivide = NumberOfAppartments.value / NumberOfFloors.value;
+
+						/*If the apartment has more than 20 floors, it is necessary to provide an additional column of elevators
+						 and thus double the number of elevator shafts. A new column is therefore added to each new group of 20 stories.*/
+
+						if(NumberOfFloors.value > 20)
+						{
+							NumberOfLifts.value *= 2;
+						}
+						if(NumberOfFloors.value > 40)
+						{
+							NumberOfLifts.value *= 2;
+						}
+						if(NumberOfFloors.value > 60)
+						{
+							NumberOfLifts.value *= 2;
+						}
+						if(NumberOfFloors.value > 80)
+						{
+							NumberOfLifts.value *= 2;
+						}
+						if(NumberOfFloors.value > 100)
+						{
+							NumberOfLifts.value *= 2;
+						}
+						if(NumberOfFloors.value > 120)
+						{
+							NumberOfLifts.value *= 2;
+						}
+						if(NumberOfFloors.value > 140)
+						{
+							NumberOfLifts.value *= 2;
+						}
+						if(NumberOfFloors.value > 160)
+						{
+							NumberOfLifts.value *= 2;
+						}
+						if(NumberOfFloors.value > 180)
+						{
+							NumberOfLifts.value *= 2;
+						}
+						if(NumberOfFloors.value > 200)
+						{
+							NumberOfLifts.value *= 2;
+						}
+						if(NumberOfFloors.value > 220)
+						{
+							NumberOfLifts.value *= 2;
+						}
+						if(NumberOfFloors.value > 240)
+						{
+							NumberOfLifts.value *= 2;
+						}
+						if(NumberOfFloors.value > 260)
+						{
+							NumberOfLifts.value *= 2;
+						}
+						if(NumberOfFloors.value > 280)
+						{
+							console.log("How the hell do you want to build this high?")
+						}
+					}
 				</script>
 
 			</div>
