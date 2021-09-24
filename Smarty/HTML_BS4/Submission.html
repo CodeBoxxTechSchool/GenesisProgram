@@ -209,76 +209,76 @@
 			<div>
 				<br>
 				<br>
-				<h1>Sumbission Form</h1>
+				<h1>Submission Form</h1>
 				<p><strong>First, Select the Service Type Below:</strong></p>
 
 				<p>
-														<!--V   Suspected to be future function inside JS-->
-					<select id="UserSelect" onchange="SortServices()">
-						<option></option> <!--Empty to keep field blank innitially-->
-						<option>Residential</option>
-						<option>Commercial</option>
-						<option>Corporate</option>
-						<option>Hybrid</option>
+														
+					<select id="UserSelect" onchange="SortFields()">
+						<option value="nil"></option> <!--Empty to keep field blank initially-->
+						<option value="residential">Residential</option>
+						<option value="commercial">Commercial</option>
+						<option value="corporate">Corporate</option>
+						<option value="hybrid">Hybrid</option>
 					</select>
 	
 				</p>
 				<!--Number of Appartments-->
-				<div id="div1" style="display: block;">
+				<div id="div1" style="display: none;">
 					Number of Appartments:
 					<br>
-					<input id="ApptNumber" type="number" name value="5" oninput="Call()" onkeyup="Call()">
+					<input id="ApptNumber" type="number" name value oninput="Call()" onkeyup="Call()">
 				</div>
 				<!--Number of Floors-->
-				<div id="div2" style="display: block;">
+				<div id="div2" style="display: none;">
 					Number of Floors:
 					<br>
-					<input id="FlrNumber" type="number" name value="5" oninput="Call()" onkeyup="Call()">
+					<input id="FlrNumber" type="number" name value oninput="Call()" onkeyup="Call()">
 				</div>
 				<!--Number of Baements-->
-				<div id="div3" style="display: block;">
+				<div id="div3" style="display: none;">
 					Number of Basements:
 					<br>
 					<input id="BsmntNumber" type="number" name value oninput="Call()" onkeyup="Call()">
 				</div>
 				<!--Number of Seperate Businesses-->
-				<div id="div4" style="display: block;">
+				<div id="div4" style="display: none;">
 					How many seperate businesses do you have?:
 					<br>
 					<input id="BsnssNumber" type="number" name value oninput="Call()" onkeyup="Call()">
 				</div>
 				<!--Number of Available Parking spots-->
-				<div id="div5" style="display: block;">
+				<div id="div5" style="display: none;">
 					Number of Available Parking spots:
 					<br>
 					<input id="PrksptNumber" type="number" name value oninput="Call()" onkeyup="Call()">
 				</div>
 				<!--Number of lift cages-->
-				<div id="div6" style="display: block;">
+				<div id="div6" style="display: none;">
 					How many lift cages would you like to deploy?:
 					<br>
 					<input id="LftNumber" type="number" name value oninput="Call()" onkeyup="Call()">
 				</div>
 				<!--Number of Seperate rental Companies-->
-				<div id="div7" style="display: block;">
+				<div id="div7" style="display: none;">
 					How many seperate <strong>Rental</strong> Businesses do you have?:
 					<br>
 					<input id="RntNumber" type="number" name value oninput="Call()" onkeyup="Call()">
 				</div>
 				<!--Number of Occupency per Floor-->
-				<div id="div8" style="display: block;">
+				<div id="div8" style="display: none;">
 					Enter the number of Tenets/Occupents per floor:
 					<br>
 					<input id="MaxOccNumber" type="number" name value oninput="Call()" onkeyup="Call()">
 				</div>
 				<!--Hours of activity in building-->
-				<div id="div9" style="display: block;">
+				<div id="div9" style="display: none;">
 					For how many hours will the building be in activity per day?:
 					<br>
 					<input id="ActtimeNumber" type="number" name value oninput="Call()" onkeyup="Call()">
 				</div>
 				<!--Number of elevators needed-->
-				<div id="div10" style="display: block;">
+				<div id="div10" style="display: none;">
 					Number of Elevators:
 					<br>
 					<input id="ElevatorResults" type="number" name value disabled>
@@ -327,70 +327,99 @@
 				
 
 				<script>
-					function Call() 
-					{
-						SelectedFormula();
-					}
-				</script>
+					/*This function is called when the user selects a building type in the dropdown menu being a <select> tag at line 217.
+					For this to work, each <option> tags inside the <select> tag must have a value assigned INSIDE THE OPENING <option> TAGS!
+					Using the onchange method, as soon as the user selects a service from the drop down menu, The function bellow is executed.*/
 
-
-
-				<script>
-					function SelectedFormula()
-					{
-
-						var service = document.getElementById("UserSelect");
-
-						if(service == 1)
-						{
-							document.getElementById("ApptNumber").style.display = "none";
-						}
-						if(service == 2)
-						{
-							NumberOfCommercialElevators();
-						}
-						if(service == 3)
-						{
-							NumberOfCorporateElevators();
-						}
-						if(service == 4)
-						{
-							NumberOfCorporateElevators();
-						}
+				function SortFields() //SortFields has for purpose to sort all input user fields bellow the dropdown menu to show only the ones the user will be conserned with.
+				{
+					/*The following conditional branch works at follows:
+					 If the user selects an option in the dropdown menu, obtained in this script by "document.getElementById("UserSelect")" UserSelect is the ID 
+					 of our <select> tag at line 217. Because we have assigned <option> tags inside this <select> tag, and assigned a value to each <option> tags
+						we can get a direct refference in our script. 
 						
+						The condition translates in human language as follows:
+						"If the UserSelect <select> tag has been set to "Residential" (identified by the "residential" value with a small r instead of a Capital R)
+						Then do the following... (continued under IF statement)*/
+					if (document.getElementById("UserSelect").value == "residential")
 
-					}
-				</script>
-
-				<script>
-					function SortServices()
 					{
-						if(service == 1)
-						{
-							Add();
-						}
-						else
-						{
-							Remove();
-						}
+						/*When the option "Residential" (with a Capital R) which has an assigned value of "residential" (small r) is selected by the user, it will set each
+						fields .style.display parameters accordingly to your objective. "block" (somehow) means "show" and "none" means no display.
+						document.getElementById("div1").style.display = "block"; //Appartments
+						document.getElementById("div2").style.display = "block"; //Floors
+						document.getElementById("div3").style.display = "block"; //Basements
+						document.getElementById("div4").style.display = "none"; //Seperate businesses
+						document.getElementById("div5").style.display = "none"; //parking spots
+						document.getElementById("div6").style.display = "none"; //lift cages
+						document.getElementById("div7").style.display = "none"; //rental/tenet businesses
+						document.getElementById("div8").style.display = "none"; // occupency rate
+						document.getElementById("div9").style.display = "none"; //hours of activity
+						document.getElementById("div10").style.display = "none"; //numbers of elevators
+						console.log("Residential Selected")
 					}
 
-
-
-				</script>
-
-				<script>
-					function Remove()
+					if (document.getElementById("UserSelect").value == "commercial")
 					{
-						document.getElementById("ApptNumber").style.display = "none";
+						document.getElementById("div1").style.display = "none";
+						document.getElementById("div2").style.display = "block";
+						document.getElementById("div3").style.display = "block";
+						document.getElementById("div4").style.display = "block";
+						document.getElementById("div5").style.display = "block";
+						document.getElementById("div6").style.display = "block";
+						document.getElementById("div7").style.display = "none";
+						document.getElementById("div8").style.display = "none";
+						document.getElementById("div9").style.display = "none";
+						document.getElementById("div10").style.display = "none";
+						console.log("Commercial Selected")
 					}
-				</script>
 
-				<script>
-					function Add()
+					if (document.getElementById("UserSelect").value == "corporate")
 					{
-						document.getElementById("ApptNumber").style.display = "block";
+						document.getElementById("div1").style.display = "none";
+						document.getElementById("div2").style.display = "block";
+						document.getElementById("div3").style.display = "block";
+						document.getElementById("div4").style.display = "none";
+						document.getElementById("div5").style.display = "block";
+						document.getElementById("div6").style.display = "none";
+						document.getElementById("div7").style.display = "block";
+						document.getElementById("div8").style.display = "block";
+						document.getElementById("div9").style.display = "none";
+						document.getElementById("div10").style.display = "none";
+						console.log("Corporate Selected")
 					}
+
+					if (document.getElementById("UserSelect").value == "hybrid")
+					{
+						document.getElementById("div1").style.display = "none";
+						document.getElementById("div2").style.display = "block";
+						document.getElementById("div3").style.display = "block";
+						document.getElementById("div4").style.display = "block";
+						document.getElementById("div5").style.display = "block";
+						document.getElementById("div6").style.display = "none";
+						document.getElementById("div7").style.display = "none";
+						document.getElementById("div8").style.display = "block";
+						document.getElementById("div9").style.display = "block";
+						document.getElementById("div10").style.display = "none";
+						console.log("Hybrid Selected")
+					}
+					if (document.getElementById("UserSelect").value == "nil")
+					{
+						document.getElementById("div1").style.display = "none";
+						document.getElementById("div2").style.display = "none";
+						document.getElementById("div3").style.display = "none";
+						document.getElementById("div4").style.display = "none";
+						document.getElementById("div5").style.display = "none";
+						document.getElementById("div6").style.display = "none";
+						document.getElementById("div7").style.display = "none";
+						document.getElementById("div8").style.display = "none";
+						document.getElementById("div9").style.display = "none";
+						document.getElementById("div10").style.display = "none";
+						console.log("Nothing to be displayed unless an option is selected in the dropdown menu")
+					}
+
+				}
+				
 				</script>
 
 			</div>
