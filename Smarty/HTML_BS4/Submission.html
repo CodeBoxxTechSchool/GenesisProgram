@@ -228,55 +228,55 @@
 				<div id="NumAppartments" style="display: none;">
 					Number of Appartments:
 					<br>
-					<input id="ApptNumber" type="number" name value oninput="Call(value, FlrNumber.value, BsmntNumber.value)">
+					<input id="ApptNumber" type="number" name value oninput="Call(value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
 				</div>
 				<!--Number of Floors-->
 				<div id="NumFloor" style="display: none;">
 					Number of Floors:
 					<br>
-					<input id="FlrNumber" type="number" name value oninput="Call(ApptNumber.value, value, BsmntNumber.value)">
+					<input id="FlrNumber" type="number" name value oninput="Call(ApptNumber.value, value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
 				</div>
 				<!--Number of Baements-->
 				<div id="NumBasement" style="display: none;">
 					Number of Basements:
 					<br>
-					<input id="BsmntNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, value)">
+					<input id="BsmntNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
 				</div>
 				<!--Number of Seperate Businesses-->
 				<div id="NumBusiness" style="display: none;">
 					How many seperate businesses do you have?:
 					<br>
-					<input id="BsnssNumber" type="number" name value oninput="Call()">
+					<input id="BsnssNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
 				</div>
 				<!--Number of Available Parking spots-->
 				<div id="NumSpots" style="display: none;">
 					Number of Available Parking spots:
 					<br>
-					<input id="PrksptNumber" type="number" name value oninput="Call()">
+					<input id="PrksptNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
 				</div>
 				<!--Number of lift cages-->
 				<div id="NumCages" style="display: none;">
 					How many lift cages would you like to deploy?:
 					<br>
-					<input id="LftNumber" type="number" name value oninput="Call()">
+					<input id="LftNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
 				</div>
 				<!--Number of Seperate rental Companies-->
 				<div id="NumRentals" style="display: none;">
 					How many seperate <strong>Rental</strong> Businesses do you have?:
 					<br>
-					<input id="RntNumber" type="number" name value oninput="Call()">
+					<input id="RntNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, value, MaxOccNumber.value, ActtimeNumber.value)">
 				</div>
 				<!--Number of Occupency per Floor-->
 				<div id="NumOccupant" style="display: none;">
 					Enter the number of Tenets/Occupents per floor:
 					<br>
-					<input id="MaxOccNumber" type="number" name value oninput="Call()">
+					<input id="MaxOccNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, value, ActtimeNumber.value)">
 				</div>
 				<!--Hours of activity in building-->
 				<div id="NumActivity" style="display: none;">
 					For how many hours will the building be in activity per day?:
 					<br>
-					<input id="ActtimeNumber" type="number" name value oninput="Call()">
+					<input id="ActtimeNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, value)">
 				</div>
 				<!--Number of elevators needed-->
 				<div id="NumElevators" style="display: none;">
@@ -310,39 +310,9 @@
 				<br>
 				Total Cost $:
 				<input id="TotalCost" type="text" disabled>
-				<br>
-
-
-
-
-
-				
+				<br>	
 
 			</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 			<!-- FOOTER -->
 			<footer id="footer">
@@ -362,29 +332,6 @@
 							</p>
 							<h2>(514) 435-3476</h2>
 						</div>
-						<!-- /col #1 -->
-
-						<!-- col #2 -->
-						<!-- <div class="col-md-4">
-							<h3 class="letter-spacing-1">KEEP IN TOUCH</h3> -->
-
-							<!-- Newsletter Form
-							<p>Subscribe to Our Newsletter to get Important News & Offers</p>
-
-							<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
-									<span class="input-group-btn">
-										<button class="btn btn-success" type="submit">Subscribe</button>
-									</span>
-								</div>
-							</form>
-							 /Newsletter Form -->
-
-
-						</div>
-						<!-- /col #2 -->
 
 					</div>
 
@@ -405,39 +352,29 @@
 			</footer>
 
 			<script>
-				function Call(numberofapps, numberoffloor, numberofbasements)
+				function Call(numberofapps, numberoffloor, numberofbasements, numberofseperatebusiness, numberofspots, numberofliftcages, numberofrentals, occupancyperfloor, hoursofactivity)
 				{
 
 					
 					console.log("---------MAIN CALL---------");
+					console.log("Received User Inputs:")
 					console.log("(NumAppartments: ", numberofapps, ")");
 					console.log("(NumFloor: ", numberoffloor, ")");
 					console.log("(NumBasement:", numberofbasements, ")");
-						
-					
-
-
-
-
-
-				 	// <!--ENTERING SCRIPTING TERRITORY-->
+					console.log("(NumBusiness:", numberofseperatebusiness, ")");
+					console.log("(NumSpots:", numberofspots, ")");
+					console.log("(NumCages:", numberofliftcages, ")");
+					console.log("(NumRentals:", numberofrentals, ")");
+					console.log("(NumOccupant:", occupancyperfloor, ")");
+					console.log("(NumActivity:", hoursofactivity, ")");
+				
 
 
 
 
 				
 
-					/*This function is called when the user selects a building type in the dropdown menu being a <select> tag at line 217.
-					For this to work, each <option> tags inside the <select> tag must have a value assigned INSIDE THE OPENING <option> TAGS!
-					Using the onchange method, as soon as the user selects a service from the drop down menu, The function bellow is executed.*/
-					/*The following conditional branch works at follows:
-					 If the user selects an option in the dropdown menu, obtained in this script by "document.getElementById("UserSelect")" UserSelect is the ID 
-					 of our <select> tag at line 217. Because we have assigned <option> tags inside this <select> tag, and assigned a value to each <option> tags
-						we can get a direct refference in our script. 
-						
-						The condition translates in human language as follows:
-						"If the UserSelect <select> tag has been set to "Residential" (identified by the "residential" value with a small r instead of a Capital R)
-						Then do the following... (continued under IF statement)*/
+			
 					if (document.getElementById("UserSelect").value == "residential")
 
 					{
@@ -455,7 +392,7 @@
 						document.getElementById("NumElevators").style.display = "block"; //numbers of elevators
 						console.log("Residential Selected")
 
-						//Call residential instructions to be executed and send both
+						//Call residential instructions to be executed and pass on the concerned arguments (aka value, aka User input) from the HTML elements 
 						ResidentialFunction(numberofapps, numberoffloor, numberofbasements);
 
 						
@@ -475,8 +412,8 @@
 						document.getElementById("NumElevators").style.display = "block";
 						console.log("Commercial Selected")
 
-						//Call commercial instructions to be executed.
-						CommercialFunction();
+						//Call commercial instructions to be executed and pass on the concerned arguments (aka value, aka User input) from the HTML elements 
+						CommercialFunction(numberoffloor, numberofbasements, numberofseperatebusiness, numberofspots, numberofliftcages);
 					}
 
 					if (document.getElementById("UserSelect").value == "corporate")
@@ -492,6 +429,8 @@
 						document.getElementById("NumActivity").style.display = "none";
 						document.getElementById("NumElevators").style.display = "block";
 						console.log("Corporate Selected")
+						//Call Corporate/Hybrid functionton be executed, and pass on the concerned arguments (aka value, aka User input) from the HTML elements
+						CorpFunction(numberoffloor, numberofbasements, numberofseperatebusiness, numberofspots, numberofliftcages, numberofrentals, occupancyperfloor, hoursofactivity);
 					}
 
 					if (document.getElementById("UserSelect").value == "hybrid")
@@ -507,6 +446,8 @@
 						document.getElementById("NumActivity").style.display = "block";
 						document.getElementById("NumElevators").style.display = "block";
 						console.log("Hybrid Selected")
+						//Call Corporate/Hybrid functionton be executed, and pass on the concerned arguments (aka value, aka User input) from the HTML elements
+						CorpFunction(numberoffloor, numberofbasements, numberofseperatebusiness, numberofspots, numberofliftcages, numberofrentals, occupancyperfloor, hoursofactivity);
 					}
 					if (document.getElementById("UserSelect").value == "nil")
 					{
@@ -527,10 +468,21 @@
 
 				}
 				
-				function CommercialFunction()
-					{	/*If the type of building is Commercial, the number of elevator shafts
-						 to be deployed is specified (as a INT value) and the estimated number of cages is equal to the number required.*/
-						document.getElementById("NumCages").value = document.getElementById("NumElevators").value;
+				function CommercialFunction(CommercialAmountOfFloors, CommercialAmountOfBasements, CommercialAmountOfBusinesses, CommercialAmountOfSpots, CommercialAmountOfLiftCages)
+					{	
+						console.log("--------COMMERCIAL FUNCTION-------");
+						console.log(CommercialAmountOfFloors, ": RECEIVED USER FLOOR INPUT");
+						console.log(CommercialAmountOfBasements, ": RECEIVED USER BASEMENT INPUT");
+						console.log(CommercialAmountOfBusinesses, ": RECEIVED USER BUSINESSES INPUT");
+						console.log(CommercialAmountOfSpots, ": RECEIVED USER PARKING SPOTS INPUT");
+						console.log(CommercialAmountOfLiftCages, ": RECEIVED USER LIFT CAGES INPUT");
+						
+						
+						
+						/*If the type of building is Commercial, the number of elevator shafts
+						 to be deployed is specified (as a INT value) and the estimated number of cages is equal to the number elevators required.*/
+						 document.getElementById("NumElevators").value = CommercialAmountOfLiftCages;
+						
 					}
 
 				function ResidentialFunction(ResidenceAmountOfAppartments, ResidenceAmountOfFloors, ResidenceAmountOfBasement)
@@ -541,13 +493,26 @@
 						console.log(ResidenceAmountOfAppartments, ": RECEIVED USER APPARTMENT INPUT");
 						console.log(ResidenceAmountOfFloors, ": RECEIVED USER FLOOR INPUT")
 						console.log(ResidenceAmountOfBasement, ": RECEIVED USER BASEMENT INPUT")
+
+
 						/*If the type of building is Residential, divide the number of apartments by the number of floors 
 						(excluding the number of basements) to obtain an average of doors per floor and require an elevator shaft for every 6 apartments. */
 
-						
-
-
-						
 					}
+				
+				function CorpFunction(CorpAmountOfFloors, CorpAmountOfBasements, CorpAmountOfBusinesses, CorpAmountOfSpots, CorpAmountOfLiftCages, CorpAmountOfRentals, CorpAmountOfOccupancy, CorpAmountOfActivity)
+				{
+					console.log("---CORPORATE/HYBRID FUNCTION---");
+					console.log(CorpAmountOfFloors, ": RECEIVED USER FLOOR INPUT");
+					console.log(CorpAmountOfBasements, ": RECEIVED USER BASEMENT INPUT");
+					console.log(CorpAmountOfBusinesses, ": RECEIVED USER BUSINESSES INPUT");
+					console.log(CorpAmountOfSpots, ": RECEIVED USER PARKING SPOTS INPUT");
+					console.log(CorpAmountOfLiftCages, ": RECEIVED USER LIFT CAGES INPUT");
+					console.log(CorpAmountOfRentals, ": RECEIVED USER RENTALS INPUT");
+					console.log(CorpAmountOfOccupancy, ": RECEIVED USER OCCUPANCY INPUT");
+					console.log(CorpAmountOfActivity, ": RECEIVED USER ACTIVITY/HOUR INPUT")
+
+
+				}
 			
 			</script>
