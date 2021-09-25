@@ -208,6 +208,7 @@
 			<!--Simple HTML Form UI-->
 			<div>
 				<br>
+				<button onclick="console.clear()">Clear Console</button>
 				<br>
 				<h1>Submission Form</h1>
 				<p><strong>First, Select the Service Type Below:</strong></p>
@@ -227,55 +228,55 @@
 				<div id="NumAppartments" style="display: none;">
 					Number of Appartments:
 					<br>
-					<input id="ApptNumber" type="number" name value oninput="Call()" onkeyup="Call()">
+					<input id="ApptNumber" type="number" name value oninput="Call(value)">
 				</div>
 				<!--Number of Floors-->
 				<div id="NumFloor" style="display: none;">
 					Number of Floors:
 					<br>
-					<input id="FlrNumber" type="number" name value oninput="Call()" onkeyup="Call()">
+					<input id="FlrNumber" type="number" name value oninput="Call(value)">
 				</div>
 				<!--Number of Baements-->
 				<div id="NumBasement" style="display: none;">
 					Number of Basements:
 					<br>
-					<input id="BsmntNumber" type="number" name value oninput="Call()" onkeyup="Call()">
+					<input id="BsmntNumber" type="number" name value oninput="Call()">
 				</div>
 				<!--Number of Seperate Businesses-->
 				<div id="NumBusiness" style="display: none;">
 					How many seperate businesses do you have?:
 					<br>
-					<input id="BsnssNumber" type="number" name value oninput="Call()" onkeyup="Call()">
+					<input id="BsnssNumber" type="number" name value oninput="Call()">
 				</div>
 				<!--Number of Available Parking spots-->
 				<div id="NumSpots" style="display: none;">
 					Number of Available Parking spots:
 					<br>
-					<input id="PrksptNumber" type="number" name value oninput="Call()" onkeyup="Call()">
+					<input id="PrksptNumber" type="number" name value oninput="Call()">
 				</div>
 				<!--Number of lift cages-->
 				<div id="NumCages" style="display: none;">
 					How many lift cages would you like to deploy?:
 					<br>
-					<input id="LftNumber" type="number" name value oninput="Call()" onkeyup="Call()">
+					<input id="LftNumber" type="number" name value oninput="Call()">
 				</div>
 				<!--Number of Seperate rental Companies-->
 				<div id="NumRentals" style="display: none;">
 					How many seperate <strong>Rental</strong> Businesses do you have?:
 					<br>
-					<input id="RntNumber" type="number" name value oninput="Call()" onkeyup="Call()">
+					<input id="RntNumber" type="number" name value oninput="Call()">
 				</div>
 				<!--Number of Occupency per Floor-->
 				<div id="NumOccupant" style="display: none;">
 					Enter the number of Tenets/Occupents per floor:
 					<br>
-					<input id="MaxOccNumber" type="number" name value oninput="Call()" onkeyup="Call()">
+					<input id="MaxOccNumber" type="number" name value oninput="Call()">
 				</div>
 				<!--Hours of activity in building-->
 				<div id="NumActivity" style="display: none;">
 					For how many hours will the building be in activity per day?:
 					<br>
-					<input id="ActtimeNumber" type="number" name value oninput="Call()" onkeyup="Call()">
+					<input id="ActtimeNumber" type="number" name value oninput="Call()">
 				</div>
 				<!--Number of elevators needed-->
 				<div id="NumElevators" style="display: none;">
@@ -404,11 +405,15 @@
 			</footer>
 
 			<script>
-				function Call()
+				function Call(numberofapps, numberoffloor)
 				{
+
+					
+					console.log("---------MAIN CALL---------");
+					console.log("(NumAppartments: ", numberofapps, ")");
+					console.log("(NumFloor: ", numberoffloor, ")");
 						
 					
-
 
 
 
@@ -449,8 +454,10 @@
 						document.getElementById("NumElevators").style.display = "block"; //numbers of elevators
 						console.log("Residential Selected")
 
-						//Call residential instructions to be executed.
-						ResidentialFunction();
+						results = document.getElementById("NumFloor").value
+
+						//Call residential instructions to be executed and send both
+						ResidentialFunction(numberofapps, numberoffloor);
 
 						
 					}
@@ -517,6 +524,8 @@
 						console.log("Nothing to be displayed unless an option is selected in the dropdown menu")
 					}
 
+					
+
 				}
 				
 				function CommercialFunction()
@@ -525,27 +534,28 @@
 						document.getElementById("NumCages").value = document.getElementById("NumElevators").value;
 					}
 
-				function ResidentialFunction()
+				function ResidentialFunction(ResidenceAmountOfAppartments, ResidenceAmountOfFloors)
+				
 					{
-						console.log("Called ResidentialFunctions");
+						//This variable has for purpose to catch (or Receive) the data coming from dival, which jumped into "divaldi"
+						//in this function.
+						var ReceivedNumFloor = ResidenceAmountOfFloors;
+						var ReceivedNumAppartments = ResidenceAmountOfAppartments;
+						
+						console.log("-------RESIDENTIAL FUNCTION-------");
+
+						console.log("----APPARTMENTS----");
+						console.log(ResidenceAmountOfAppartments, ": RECEIVED USER APPARTMENT INPUT");
+						console.log()
 						console.log(document.getElementById("NumFloor").value);
+						console.log();
 						/*If the type of building is Residential, divide the number of apartments by the number of floors 
 						(excluding the number of basements) to obtain an average of doors per floor and require an elevator shaft for every 6 apartments. */
-						var ApptFloorDivide = document.getElementById("NumAppartments").value / document.getElementById("NumFloor").value;
 
-						/*If the apartment has more than 20 floors, it is necessary to provide an additional column of elevators
-						 and thus double the number of elevator shafts. A new column is therefore added to each new group of 20 stories.
-						 CLUE: NUMBER OF floors / 20 = NUMBERS OF elevators, 20 floors / 20 = 1 elevator*/
+						
 
-						 //IF THE VALUE IS THE NUMBERS OF FLOOR IS UNDER 20, ALWAYS KEEP THE NUMBERS OF ELEVATORS TO 1.
-						if(document.getElementById("NumFloor").value <= 20)
-						{
-							document.getElementById("NumElevators").value = 1;
-							console.log("SHOULD FIRE");
-						}
-						//IF
 
-						document.getElementById("NumElevators").value = document.getElementById("NumElevators").value; 
+						document.getElementById("NumFloor").value = ReceivedNumFloor;
 						
 					}
 			
