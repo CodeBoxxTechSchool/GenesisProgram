@@ -228,19 +228,19 @@
 				<div id="NumAppartments" style="display: none;">
 					Number of Appartments:
 					<br>
-					<input id="ApptNumber" type="number" name value oninput="Call(value)">
+					<input id="ApptNumber" type="number" name value oninput="Call(value, FlrNumber.value, BsmntNumber.value)">
 				</div>
 				<!--Number of Floors-->
 				<div id="NumFloor" style="display: none;">
 					Number of Floors:
 					<br>
-					<input id="FlrNumber" type="number" name value oninput="Call(value)">
+					<input id="FlrNumber" type="number" name value oninput="Call(ApptNumber.value, value, BsmntNumber.value)">
 				</div>
 				<!--Number of Baements-->
 				<div id="NumBasement" style="display: none;">
 					Number of Basements:
 					<br>
-					<input id="BsmntNumber" type="number" name value oninput="Call()">
+					<input id="BsmntNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, value)">
 				</div>
 				<!--Number of Seperate Businesses-->
 				<div id="NumBusiness" style="display: none;">
@@ -405,13 +405,14 @@
 			</footer>
 
 			<script>
-				function Call(numberofapps, numberoffloor)
+				function Call(numberofapps, numberoffloor, numberofbasements)
 				{
 
 					
 					console.log("---------MAIN CALL---------");
 					console.log("(NumAppartments: ", numberofapps, ")");
 					console.log("(NumFloor: ", numberoffloor, ")");
+					console.log("(NumBasement:", numberofbasements, ")");
 						
 					
 
@@ -457,7 +458,7 @@
 						results = document.getElementById("NumFloor").value
 
 						//Call residential instructions to be executed and send both
-						ResidentialFunction(numberofapps, numberoffloor);
+						ResidentialFunction(numberofapps, numberoffloor, numberofbasements);
 
 						
 					}
@@ -534,28 +535,20 @@
 						document.getElementById("NumCages").value = document.getElementById("NumElevators").value;
 					}
 
-				function ResidentialFunction(ResidenceAmountOfAppartments, ResidenceAmountOfFloors)
+				function ResidentialFunction(ResidenceAmountOfAppartments, ResidenceAmountOfFloors, ResidenceAmountOfBasement)
 				
 					{
-						//This variable has for purpose to catch (or Receive) the data coming from dival, which jumped into "divaldi"
-						//in this function.
-						var ReceivedNumFloor = ResidenceAmountOfFloors;
-						var ReceivedNumAppartments = ResidenceAmountOfAppartments;
 						
 						console.log("-------RESIDENTIAL FUNCTION-------");
-
-						console.log("----APPARTMENTS----");
 						console.log(ResidenceAmountOfAppartments, ": RECEIVED USER APPARTMENT INPUT");
-						console.log()
-						console.log(document.getElementById("NumFloor").value);
-						console.log();
+						console.log(ResidenceAmountOfFloors, ": RECEIVED USER FLOOR INPUT")
+						console.log(ResidenceAmountOfBasement, ": RECEIVED USER BASEMENT INPUT")
 						/*If the type of building is Residential, divide the number of apartments by the number of floors 
 						(excluding the number of basements) to obtain an average of doors per floor and require an elevator shaft for every 6 apartments. */
 
 						
 
 
-						document.getElementById("NumFloor").value = ReceivedNumFloor;
 						
 					}
 			
