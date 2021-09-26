@@ -286,7 +286,6 @@
 					<br>
 					<input id="ElevatorResults" type="number" name value disabled>
 				</div>
-				
 
 				<br>
 				<br>
@@ -491,28 +490,15 @@
 						console.log(CommercialAmountOfLiftCages, ": RECEIVED USER LIFT CAGES INPUT");
 						
 						
-						console.log("---COMMERCIAL CALCULATIONS---");
-
 						
 						/*If the type of building is Commercial, the number of elevator shafts
 						 to be deployed is specified (as a INT value) and the estimated number 
 						 of cages is equal to the number elevators required.*/
-						 
-						//Declare easy access to elevator result read-only field
-						var ElevatorField = document.getElementById("ElevatorResults");
-
-				//	    the number elevators       is equal to      the estimated number of cages
-						var CommercialAmountOfElevators = CommercialAmountOfLiftCages;
-						//Set <input> field innerHTML to the value of the amount of elevators
-						ElevatorField.value = CommercialAmountOfElevators;
+						document.getElementById("NumElevators").write();
 
 
-
-						//The following console.log is the best translation we could come up with for the task description.
-						//Keep at end of script for correct display.
-						console.log(ElevatorField.value, ": NUMBER OF ELEVATORS = NUMBER OF LIFTCAGES: ", CommercialAmountOfLiftCages);
-						
-						
+						 console.log("---COMMERCIAL CALCULATIONS---");
+						 console.log(document.getElementById("NumElevators").value, ": NUMBER OF ELEVATORS");
 						
 					}
 
