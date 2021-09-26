@@ -215,7 +215,7 @@
 
 				<p>
 														
-					<select id="UserSelect" onchange="Call()">
+					<select id="UserSelect" onchange="ResetValues()">
 						<option value="nil"></option> <!--Empty to keep field blank initially-->
 						<option value="residential">Residential</option>
 						<option value="commercial">Commercial</option>
@@ -230,61 +230,61 @@
 				<div id="NumAppartments" style="display: none;">
 					Number of Appartments:
 					<br>
-					<input id="ApptNumber" type="number" name value oninput="Call(value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
+					<input id="ApptNumber" type="number" name value="0" oninput="Call(value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
 				</div>
 				<!--Number of Floors-->
 				<div id="NumFloor" style="display: none;">
 					Number of Floors:
 					<br>
-					<input id="FlrNumber" type="number" name value oninput="Call(ApptNumber.value, value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
+					<input id="FlrNumber" type="number" name value="0" oninput="Call(ApptNumber.value, value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
 				</div>
 				<!--Number of Baements-->
 				<div id="NumBasement" style="display: none;">
 					Number of Basements:
 					<br>
-					<input id="BsmntNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
+					<input id="BsmntNumber" type="number" name value="0" oninput="Call(ApptNumber.value, FlrNumber.value, value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
 				</div>
 				<!--Number of Seperate Businesses-->
 				<div id="NumBusiness" style="display: none;">
 					How many seperate businesses do you have?:
 					<br>
-					<input id="BsnssNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
+					<input id="BsnssNumber" type="number" name value="0" oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
 				</div>
 				<!--Number of Available Parking spots-->
 				<div id="NumSpots" style="display: none;">
 					Number of Available Parking spots:
 					<br>
-					<input id="PrksptNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
+					<input id="PrksptNumber" type="number" name value="0" oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
 				</div>
 				<!--Number of lift cages-->
 				<div id="NumCages" style="display: none;">
 					How many lift cages would you like to deploy?:
 					<br>
-					<input id="LftNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
+					<input id="LftNumber" type="number" name value="0" oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
 				</div>
 				<!--Number of Seperate rental Companies-->
 				<div id="NumRentals" style="display: none;">
 					How many seperate <strong>Rental</strong> Businesses do you have?:
 					<br>
-					<input id="RntNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, value, MaxOccNumber.value, ActtimeNumber.value)">
+					<input id="RntNumber" type="number" name value="0" oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, value, MaxOccNumber.value, ActtimeNumber.value)">
 				</div>
 				<!--Number of Occupency per Floor-->
 				<div id="NumOccupant" style="display: none;">
 					Enter the number of Tenets/Occupents per floor:
 					<br>
-					<input id="MaxOccNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, value, ActtimeNumber.value)">
+					<input id="MaxOccNumber" type="number" name value="0" oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, value, ActtimeNumber.value)">
 				</div>
 				<!--Hours of activity in building-->
 				<div id="NumActivity" style="display: none;">
 					For how many hours will the building be in activity per day?:
 					<br>
-					<input id="ActtimeNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, value)">
+					<input id="ActtimeNumber" type="number" name value="0" oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, value)">
 				</div>
 				<!--Number of elevators needed-->
 				<div id="NumElevators" style="display: none;">
 					Number of Elevators:
 					<br>
-					<input id="ElevatorResults" type="number" name value disabled>
+					<input id="ElevatorResults" type="number" name value="0" disabled>
 				</div>
 				
 
@@ -503,7 +503,7 @@
 
 				//	    the number elevators       is equal to      the estimated number of cages
 						var CommercialAmountOfElevators = CommercialAmountOfLiftCages;
-						//Set <input> field innerHTML to the value of the amount of elevators
+						//Set <input> field's value to the value of the amount of elevators
 						ElevatorField.value = CommercialAmountOfElevators;
 
 
@@ -551,6 +551,22 @@
 					console.log(CorpAmountOfActivity, ": RECEIVED USER ACTIVITY/HOUR INPUT")
 
 
+				}
+
+				//Called function when User Select switches tiem from drop down menu, preventing unconcerned User Input to miscalculate final estimate.
+				function ResetValues()
+				{
+						document.getElementById("NumAppartments").value = "0";
+						document.getElementById("NumFloor").value = "0";
+						document.getElementById("NumBasement").value = "0";
+						document.getElementById("NumBusiness").value = "0";
+						document.getElementById("NumSpots").value = "0";
+						document.getElementById("NumCages").value = "0";
+						document.getElementById("NumRentals").value = "0";
+						document.getElementById("NumOccupant").value = "0";
+						document.getElementById("NumActivity").value = "0";
+						document.getElementById("ElevatorResults").value = "0";
+						Call();
 				}
 			
 			</script>
