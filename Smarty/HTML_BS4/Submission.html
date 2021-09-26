@@ -224,6 +224,8 @@
 					</select>
 	
 				</p>
+
+				<!--NOTE: Call() values must not be rearranged, as the lone value order of appearance, is what assigns each input fields to Javascript parameters-->
 				<!--Number of Appartments-->
 				<div id="NumAppartments" style="display: none;">
 					Number of Appartments:
@@ -352,10 +354,13 @@
 			</footer>
 
 			<script>
+				/*Call is the primary function that gets called when the user inputs anything in the HTML form. It receives the User input
+				by order of appearance at each <input> fields in the HTML. It is the order of apperance that gives each parameter it's value.
+				By adding each value variable in the sequence inside the HTML <input>, we managed to keep the values saved in between inputs,
+				,and are transportable to other functions.*/
 				function Call(numberofapps, numberoffloor, numberofbasements, numberofseperatebusiness, numberofspots, numberofliftcages, numberofrentals, occupancyperfloor, hoursofactivity)
 				{
-
-					
+					//checking if all <input> values are passed correctly.
 					console.log("---------MAIN CALL---------");
 					console.log("Received User Inputs:")
 					console.log("(NumAppartments: ", numberofapps, ")");
@@ -467,9 +472,10 @@
 					
 
 				}
-				
+				//Called function when User Select has "Commercial" selected
 				function CommercialFunction(CommercialAmountOfFloors, CommercialAmountOfBasements, CommercialAmountOfBusinesses, CommercialAmountOfSpots, CommercialAmountOfLiftCages)
 					{	
+						//Log all received values from concerned HTML input fields.
 						console.log("--------COMMERCIAL FUNCTION-------");
 						console.log(CommercialAmountOfFloors, ": RECEIVED USER FLOOR INPUT");
 						console.log(CommercialAmountOfBasements, ": RECEIVED USER BASEMENT INPUT");
@@ -481,14 +487,15 @@
 						
 						/*If the type of building is Commercial, the number of elevator shafts
 						 to be deployed is specified (as a INT value) and the estimated number of cages is equal to the number elevators required.*/
-						 document.getElementById("NumElevators").value = CommercialAmountOfLiftCages;
+						 console.log("---COMMERCIAL CALCULATIONS---");
+						 console.log(document.getElementById("NumElevators").value, ": NUMBER OF ELEVATORS");
 						
 					}
-
+					//Called function when User Select has "Residential" Selected
 				function ResidentialFunction(ResidenceAmountOfAppartments, ResidenceAmountOfFloors, ResidenceAmountOfBasement)
 				
 					{
-						
+						//Log all received values from concerned HTML input fields
 						console.log("-------RESIDENTIAL FUNCTION-------");
 						console.log(ResidenceAmountOfAppartments, ": RECEIVED USER APPARTMENT INPUT");
 						console.log(ResidenceAmountOfFloors, ": RECEIVED USER FLOOR INPUT")
@@ -499,9 +506,10 @@
 						(excluding the number of basements) to obtain an average of doors per floor and require an elevator shaft for every 6 apartments. */
 
 					}
-				
+				//Called function when User Select has "Corporate" or "Hybrid" selected.
 				function CorpFunction(CorpAmountOfFloors, CorpAmountOfBasements, CorpAmountOfBusinesses, CorpAmountOfSpots, CorpAmountOfLiftCages, CorpAmountOfRentals, CorpAmountOfOccupancy, CorpAmountOfActivity)
 				{
+					//Log all received values from concerned HTML fields
 					console.log("---CORPORATE/HYBRID FUNCTION---");
 					console.log(CorpAmountOfFloors, ": RECEIVED USER FLOOR INPUT");
 					console.log(CorpAmountOfBasements, ": RECEIVED USER BASEMENT INPUT");
