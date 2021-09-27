@@ -481,6 +481,7 @@
 					}
 
 				//Called function when User Select has "Residential" Selected
+				//RESIDENTIAL FUNCTION HAS BEEN CONCLUDED BY INSTRUCTOR: PATRICK THE YUL DIRECTOR
 				function ResidentialFunction(ResidenceAmountOfAppartments, ResidenceAmountOfFloors, ResidenceAmountOfBasement)
 				
 					{
@@ -502,32 +503,26 @@
 
 						//divide the number of apartments by the number of floors (excluding the number of basements) to obtain an average of doors per floor.
 				//  >	Average door per floor  is   Amount of Appartments  divided by   Amount of Floors
-						var AverageDoorsPerFloor = ResidenceAmountOfAppartments / ResidenceAmountOfFloors;
-						
+
 						//The line below is what creates slices of 20 appartments. This line is still not fully understood.
 						var NumberOfShafts = Math.ceil(ResidenceAmountOfFloors / 20);
 
 						console.log(NumberOfShafts, "NUMERS OF SHAFTS");
-					
 						
-						ElevatorFieldTheSecond.value = NumberOfShafts * 2;
-						
-
+						ElevatorFieldTheSecond.value = NumberOfShafts;
 						
 
-						// console.log(WholeAverageDoorPerFloor);
-						
+						//As requierment of demanded task, the Average Door per floor is calculated, but remains unused.
+						var AverageDoorsPerFloor = ResidenceAmountOfAppartments / ResidenceAmountOfFloors;
 
+						console.log(AverageDoorsPerFloor);
+						
 						
 
 					}
 				//Called function when User Select has "Corporate" or "Hybrid" selected.
 				function CorpFunction(CorpAmountOfFloors, CorpAmountOfBasements, CorpAmountOfBusinesses, CorpAmountOfSpots, CorpAmountOfLiftCages, CorpAmountOfRentals, CorpAmountOfOccupancy, CorpAmountOfActivity)
 				{
-
-
-
-
 
 					console.log("---CORPORATE/HYBRID FUNCTION---");
 					//Log all received values from concerned HTML fields
@@ -543,7 +538,7 @@
 
 				}
 
-				//Called function when User Select switches tiem from drop down menu, preventing unconcerned User Input to miscalculate final estimate.
+				//Called function when User Select switches item from drop down menu, preventing unconcerned User Input to miscalculate final estimate.
 				function ResetValues()
 				{
 						document.getElementById("NumAppartments").value = "0";
