@@ -501,21 +501,22 @@
 
 						//If the type of building is Residential...
 
-						//divide the number of apartments by the number of floors (excluding the number of basements) to obtain an average of doors per floor.
-				//  >	Average door per floor  is   Amount of Appartments  divided by   Amount of Floors
-
+						
+						console.log("---RESIDENTIAL CALCULATIONS---")
 						//The line below is what creates slices of 20 appartments. This line is still not fully understood.
 						var NumberOfShafts = Math.ceil(ResidenceAmountOfFloors / 20);
 
-						console.log(NumberOfShafts, "NUMERS OF SHAFTS");
+						console.log(NumberOfShafts, "NUMBERS OF SHAFTS");
 						
 						ElevatorFieldTheSecond.value = NumberOfShafts;
 						
-
+						//divide the number of apartments by the number of floors (excluding the number of basements) to obtain an average of doors per floor.
 						//As requierment of demanded task, the Average Door per floor is calculated, but remains unused.
-						var AverageDoorsPerFloor = ResidenceAmountOfAppartments / ResidenceAmountOfFloors;
+					
+				//  >	Average door per floor  is   Amount of Appartments  divided by   Amount of Floors
+						var AverageDoorsPerFloor = Math.ceil(ResidenceAmountOfAppartments / ResidenceAmountOfFloors);
 
-						console.log(AverageDoorsPerFloor);
+						console.log(AverageDoorsPerFloor, "NUMBER OF DOORS");
 						
 						
 
@@ -523,6 +524,33 @@
 				//Called function when User Select has "Corporate" or "Hybrid" selected.
 				function CorpFunction(CorpAmountOfFloors, CorpAmountOfBasements, CorpAmountOfBusinesses, CorpAmountOfSpots, CorpAmountOfLiftCages, CorpAmountOfRentals, CorpAmountOfOccupancy, CorpAmountOfActivity)
 				{
+
+					//Declare easy access to elevator result read-only field
+					var ElevatorFieldTheThird = document.getElementById("ElevatorResults");
+
+					/*If the type of building is Corporate or Hybrid, multiply the number of occupants per 
+					floor by the number of floors (including the number of basements) to obtain the total number of occupants.*/
+					var TotalNumberOfOccupancy = CorpAmountOfOccupancy * CorpAmountOfFloors;
+
+					/*The number of elevators required is determined by the number of occupants divided by 1000.*/
+					var AmountOfElevators = Math.ceil(TotalNumberOfOccupancy / 1000);
+
+					/* The number of floors (including the number of basements) is divided by 20 to obtain 
+					the number of elevator columns required.*/
+					//Floor and Basement parameters are put between brackets for priority marking.
+					var TotalNumberOfColumns = Math.ceil((CorpAmountOfFloors + CorpAmountOfBasements) / 20);
+
+					/* Then divide the number of elevators by the number of columns to get the number of elevators per column.*/
+					var NumberOfElevatorsPerColumn = Math.ceil(AmountOfElevators / TotalNumberOfColumns);
+
+					/*The total number of elevators is determined by the number of elevators per column multiplied by the number of columns.*/
+					ElevatorFieldTheThird.value = NumberOfElevatorsPerColumn * TotalNumberOfColumns;
+
+
+
+
+
+
 
 					console.log("---CORPORATE/HYBRID FUNCTION---");
 					//Log all received values from concerned HTML fields
@@ -534,6 +562,13 @@
 					console.log(CorpAmountOfRentals, ": RECEIVED USER RENTALS INPUT");
 					console.log(CorpAmountOfOccupancy, ": RECEIVED USER OCCUPANCY INPUT");
 					console.log(CorpAmountOfActivity, ": RECEIVED USER ACTIVITY/HOUR INPUT");
+
+					console.log("---CORPORATE/HYBRID CALCULATIONS---");
+
+					console.log(TotalNumberOfOccupancy, "TOTAL OCCUPANTS");
+					console.log(AmountOfElevators, "REQUIERED AMOUNT OF ELEVATORS");
+					console.log(TotalNumberOfColumns, "TOTAL NUMBER OF COLUMNS");
+					console.log(NumberOfElevatorsPerColumn, "NUMBER OF ELEVATORS PER COLUMN");
 
 
 				}
