@@ -484,6 +484,11 @@
 				function ResidentialFunction(ResidenceAmountOfAppartments, ResidenceAmountOfFloors, ResidenceAmountOfBasement)
 				
 					{
+
+						//Declare easy access to elevator result read-only field
+						var ElevatorFieldTheSecond = document.getElementById("ElevatorResults");
+
+
 						console.log("-------RESIDENTIAL FUNCTION-------");
 						//Log all received values from concerned HTML input fields
 						console.log(ResidenceAmountOfAppartments, ": RECEIVED USER APPARTMENT INPUT");
@@ -494,20 +499,23 @@
 						
 
 						//If the type of building is Residential...
+
 						//divide the number of apartments by the number of floors (excluding the number of basements) to obtain an average of doors per floor.
-
-					//	Average door per floor   is   Amount of Appartments divided by Amount of Floors
+				//  >	Average door per floor  is   Amount of Appartments  divided by   Amount of Floors
 						var AverageDoorsPerFloor = ResidenceAmountOfAppartments / ResidenceAmountOfFloors;
-						var testamount = Math.ceil(AverageDoorsPerFloor);
 						
-						console.log(testamount);
+						//The line below is what creates slices of 20 appartments. This line is still not fully understood.
+						var NumberOfShafts = Math.ceil(ResidenceAmountOfFloors / 20);
+
+						console.log(NumberOfShafts, "NUMERS OF SHAFTS");
+					
+						
+						ElevatorFieldTheSecond.value = NumberOfShafts * 2;
 						
 
-						//and require an elevator shaft for every 6 apartments. 
-						for (var shafts = 0; shafts < ResidenceAmountOfAppartments; shafts++)
-						{
-							console.log("W3");
-						}
+						
+
+						// console.log(WholeAverageDoorPerFloor);
 						
 
 						
