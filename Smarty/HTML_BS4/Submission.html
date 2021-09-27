@@ -52,47 +52,6 @@
 	-->
 	<body class="smoothscroll enable-animation">
 
-		<!-- SLIDE TOP -->
-		<!-- <div id="slidetop">
-
-			<div class="container">
-				
-				<div class="row">                 Slide top not specified in Objectives
-
-					<div class="col-md-4">
-						<h6><i class="icon-heart"></i> WHY SMARTY?</h6>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. </p>
-					</div>
-
-					<div class="col-md-4">
-						<h6><i class="fa-facheck"></i> RECENTLY VISITED</h6>
-						<ul class="list-unstyled">
-							<li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet</a></li>
-							<li><a href="#"><i class="fa fa-angle-right"></i> This is a very long text, very very very very very very very very very very very very </a></li>
-							<li><a href="#"><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet</a></li>
-							<li><a href="#"><i class="fa fa-angle-right"></i> Dolor sit amet,consectetur adipiscing elit amet</a></li>
-							<li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet,consectetur adipiscing elit</a></li>
-						</ul>
-					</div>
-
-					<div class="col-md-4">
-						<h6><i class="icon-envelope"></i> CONTACT INFO</h6>
-						<ul class="list-unstyled">
-							<li><b>Address:</b> PO Box 21132, Here Weare St, <br /> Melbourne, Vivas 2355 Australia</li>
-							<li><b>Phone:</b> 1-800-565-2390</li>
-							<li><b>Email:</b> <a href="mailto:support@yourname.com">support@yourname.com</a></li>
-						</ul>
-					</div>
-
-				</div>
-
-			</div>
-
-			<a class="slidetop-toggle" href="#"></a>
-
-		</div> -->
-		<!-- /SLIDE TOP -->
-
 
 		<!-- wrapper -->
 		<div id="wrapper">
@@ -205,10 +164,13 @@
 				<!-- /Top Nav -->
 
 			</div>
+
+
 			<!--Simple HTML Form UI-->
 			<div>
 				<br>
-				<button onclick="console.clear()">Clear Console</button>
+				
+				<button onclick="console.clear()">Clear Console</button> <!--Help dev button. To be removed by end of task.-->
 				<br>
 				<h1>Submission Form</h1>
 				<p><strong>First, Select the Service Type Below:</strong></p>
@@ -362,6 +324,8 @@
 				by order of appearance at each <input> fields in the HTML. It is the order of apperance that gives each parameter it's value.
 				By adding each value variable in the sequence inside the HTML <input>, we managed to keep the values saved in between inputs,
 				,and are transportable to other functions.*/
+
+				//				The variables inside the parantheses are called "parameters", and the value they carry are called "arguments". Reminder: they are INDEED variables, they are just ghosts. Not declared anywhere except here, and only usable within the function.
 				function Call(numberofapps, numberoffloor, numberofbasements, numberofseperatebusiness, numberofspots, numberofliftcages, numberofrentals, occupancyperfloor, hoursofactivity)
 				{
 					//checking if all <input> values are passed correctly.
@@ -479,22 +443,10 @@
 					
 
 				}
+				//COMMERCIAL FUNCTION HAS BEEN CONCLUDED BY INSTRUCTOR: FRANK THE MILITARY GUY.
 				//Called function when User Select has "Commercial" selected
 				function CommercialFunction(CommercialAmountOfFloors, CommercialAmountOfBasements, CommercialAmountOfBusinesses, CommercialAmountOfSpots, CommercialAmountOfLiftCages)
-					{	
-						console.log("--------COMMERCIAL FUNCTION-------");
-						//Log all received values from concerned HTML fields
-						console.log(CommercialAmountOfFloors, ": RECEIVED USER FLOOR INPUT");
-						console.log(CommercialAmountOfBasements, ": RECEIVED USER BASEMENT INPUT");
-						console.log(CommercialAmountOfBusinesses, ": RECEIVED USER BUSINESSES INPUT");
-						console.log(CommercialAmountOfSpots, ": RECEIVED USER PARKING SPOTS INPUT");
-						console.log(CommercialAmountOfLiftCages, ": RECEIVED USER LIFT CAGES INPUT");
-						
-						
-						console.log("---COMMERCIAL CALCULATIONS---");
-
-						
-						/*If the type of building is Commercial, the number of elevator shafts
+					{	/*If the type of building is Commercial, the number of elevator shafts
 						 to be deployed is specified (as a INT value) and the estimated number 
 						 of cages is equal to the number elevators required.*/
 						 
@@ -503,13 +455,25 @@
 
 				//	    the number elevators       is equal to      the estimated number of cages
 						var CommercialAmountOfElevators = CommercialAmountOfLiftCages;
+
 						//Set <input> field's value to the value of the amount of elevators
 						ElevatorField.value = CommercialAmountOfElevators;
 
 
 
+
+						console.log("--------COMMERCIAL FUNCTION-------");
+						//Log all received values from concerned HTML fields
+						console.log(CommercialAmountOfFloors, ": RECEIVED USER FLOOR INPUT");
+						console.log(CommercialAmountOfBasements, ": RECEIVED USER BASEMENT INPUT");
+						console.log(CommercialAmountOfBusinesses, ": RECEIVED USER BUSINESSES INPUT");
+						console.log(CommercialAmountOfSpots, ": RECEIVED USER PARKING SPOTS INPUT");
+						console.log(CommercialAmountOfLiftCages, ": RECEIVED USER LIFT CAGES INPUT");
+
+
+						console.log("---COMMERCIAL CALCULATIONS---");
 						//The following console.log is the best translation we could come up with for the task description.
-						//Keep at end of script for correct display.
+						//Keep at end of function for correct display.
 						console.log(ElevatorField.value, ": NUMBER OF ELEVATORS = NUMBER OF LIFTCAGES: ", CommercialAmountOfLiftCages);
 						
 						
@@ -523,14 +487,27 @@
 						console.log("-------RESIDENTIAL FUNCTION-------");
 						//Log all received values from concerned HTML input fields
 						console.log(ResidenceAmountOfAppartments, ": RECEIVED USER APPARTMENT INPUT");
-						console.log(ResidenceAmountOfFloors, ": RECEIVED USER FLOOR INPUT")
-						console.log(ResidenceAmountOfBasement, ": RECEIVED USER BASEMENT INPUT")
+						console.log(ResidenceAmountOfFloors, ": RECEIVED USER FLOOR INPUT");
+						console.log(ResidenceAmountOfBasement, ": RECEIVED USER BASEMENT INPUT");
+						
 
+						
 
-						/*If the type of building is Residential... 
-						divide the number of apartments by the number of floors 
-						(excluding the number of basements) to obtain an average of doors per floor 
-						and require an elevator shaft for every 6 apartments. .*/
+						//If the type of building is Residential...
+						//divide the number of apartments by the number of floors (excluding the number of basements) to obtain an average of doors per floor.
+
+					//	Average door per floor   is   Amount of Appartments divided by Amount of Floors
+						var AverageDoorsPerFloor = ResidenceAmountOfAppartments / ResidenceAmountOfFloors;
+						var testamount = Math.ceil(AverageDoorsPerFloor);
+						
+						console.log(testamount);
+						
+
+						//and require an elevator shaft for every 6 apartments. 
+						for (var shafts = 0; shafts < ResidenceAmountOfAppartments; shafts++)
+						{
+							console.log("W3");
+						}
 						
 
 						
@@ -539,6 +516,11 @@
 				//Called function when User Select has "Corporate" or "Hybrid" selected.
 				function CorpFunction(CorpAmountOfFloors, CorpAmountOfBasements, CorpAmountOfBusinesses, CorpAmountOfSpots, CorpAmountOfLiftCages, CorpAmountOfRentals, CorpAmountOfOccupancy, CorpAmountOfActivity)
 				{
+
+
+
+
+
 					console.log("---CORPORATE/HYBRID FUNCTION---");
 					//Log all received values from concerned HTML fields
 					console.log(CorpAmountOfFloors, ": RECEIVED USER FLOOR INPUT");
@@ -548,7 +530,7 @@
 					console.log(CorpAmountOfLiftCages, ": RECEIVED USER LIFT CAGES INPUT");
 					console.log(CorpAmountOfRentals, ": RECEIVED USER RENTALS INPUT");
 					console.log(CorpAmountOfOccupancy, ": RECEIVED USER OCCUPANCY INPUT");
-					console.log(CorpAmountOfActivity, ": RECEIVED USER ACTIVITY/HOUR INPUT")
+					console.log(CorpAmountOfActivity, ": RECEIVED USER ACTIVITY/HOUR INPUT");
 
 
 				}
