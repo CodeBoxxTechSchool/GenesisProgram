@@ -317,29 +317,52 @@
 			</footer>
 
 
-			<!--ENTERING SCRIPTING TERRITORY-->
+
+
+
+
+			<!----------------------------------------------ENTERING SCRIPTING TERRITORY----------------------------------------------->
+
+
+
+
+
 
 			<script>
 				/*Call is the primary function that gets called when the user inputs anything in the HTML form. It receives the User input
 				by order of appearance at each <input> fields in the HTML. It is the order of apperance that gives each parameter it's value.
 				By adding each value variable in the sequence inside the HTML <input>, we managed to keep the values saved in between inputs,
-				,and are transportable to other functions.*/
+				and are transportable to other functions.*/
 
 				//				The variables inside the parantheses are called "parameters", and the value they carry are called "arguments". Reminder: they are INDEED variables, they are just ghosts. Not declared anywhere except here, and only usable within the function.
 				function Call(numberofapps, numberoffloor, numberofbasements, numberofseperatebusiness, numberofspots, numberofliftcages, numberofrentals, occupancyperfloor, hoursofactivity)
 				{
+
+					//Stringly numbers
+					var AmountOfAppartments = parseInt(numberofapps);
+					var AmountOfFloors = parseInt(numberoffloor);
+					var AmountOfBasements = parseInt(numberofbasements);
+					var AmountOfBusiness = parseInt(numberofseperatebusiness);
+					var AmountOfSpots = parseInt(numberofspots);
+					var AmountOfLiftcages = parseInt(numberofliftcages);
+					var AmountOfRentals = parseInt(numberofrentals);
+					var AmountOfOccupancy = parseInt(occupancyperfloor);
+					var AmountOfHours = parseInt(hoursofactivity);
+
 					//checking if all <input> values are passed correctly.
 					console.log("---------MAIN CALL---------");
 					console.log("Received User Inputs:")
-					console.log("(NumAppartments: ", numberofapps, ")");
-					console.log("(NumFloor: ", numberoffloor, ")");
-					console.log("(NumBasement:", numberofbasements, ")");
-					console.log("(NumBusiness:", numberofseperatebusiness, ")");
-					console.log("(NumSpots:", numberofspots, ")");
-					console.log("(NumCages:", numberofliftcages, ")");
-					console.log("(NumRentals:", numberofrentals, ")");
-					console.log("(NumOccupant:", occupancyperfloor, ")");
-					console.log("(NumActivity:", hoursofactivity, ")");
+					console.log("(NumAppartments:", AmountOfAppartments, ")", "Typeof:", typeof(AmountOfAppartments));
+					console.log("(NumFloor:", AmountOfFloors, ")", "Typeof:", typeof(AmountOfFloors));
+					console.log("(NumBasement:", AmountOfBasements, ")", "Typeof:", typeof(AmountOfBasements));
+					console.log("(NumBusiness:", AmountOfBusiness, ")", "Typeof:", typeof(AmountOfBusiness));
+					console.log("(NumSpots:", AmountOfSpots, ")", "Typeof:", typeof(AmountOfSpots));
+					console.log("(NumCages:", AmountOfLiftcages, ")", "Typeof:", typeof(AmountOfLiftcages));
+					console.log("(NumRentals:", AmountOfRentals, ")", "Typeof:", typeof(AmountOfRentals));
+					console.log("(NumOccupant:", AmountOfOccupancy, ")", "Typeof:", typeof(AmountOfOccupancy));
+					console.log("(NumActivity:", AmountOfHours, ")", "Typeof:", typeof(AmountOfHours));
+
+					
 				
 
 
@@ -367,7 +390,7 @@
 						console.log("Residential Selected")
 
 						//Call residential instructions to be executed and pass on the concerned arguments (aka value, aka User input) from the HTML elements 
-						ResidentialFunction(numberofapps, numberoffloor, numberofbasements);
+						ResidentialFunction(AmountOfAppartments, AmountOfFloors, AmountOfBasements);
 
 						
 					}
@@ -387,7 +410,7 @@
 						console.log("Commercial Selected")
 
 						//Call commercial instructions to be executed and pass on the concerned arguments (aka value, aka User input) from the HTML elements 
-						CommercialFunction(numberoffloor, numberofbasements, numberofseperatebusiness, numberofspots, numberofliftcages);
+						CommercialFunction(AmountOfFloors, AmountOfBasements, AmountOfBusiness, AmountOfSpots, AmountOfLiftcages);
 					}
 
 					if (document.getElementById("UserSelect").value == "corporate")
@@ -405,7 +428,7 @@
 						console.log("Corporate Selected")
 
 						//Call Corporate/Hybrid function be executed, and pass on the concerned arguments (aka value, aka User input) from the HTML elements
-						CorpFunction(numberoffloor, numberofbasements, numberofseperatebusiness, numberofspots, numberofliftcages, numberofrentals, occupancyperfloor, hoursofactivity);
+						CorpFunction(AmountOfFloors, AmountOfBasements, AmountOfBusiness, AmountOfSpots, AmountOfLiftcages, AmountOfRentals, AmountOfOccupancy, AmountOfHours);
 					}
 
 					if (document.getElementById("UserSelect").value == "hybrid")
@@ -423,7 +446,7 @@
 						console.log("Hybrid Selected")
 
 						//Call Corporate/Hybrid functionton be executed, and pass on the concerned arguments (aka value, aka User input) from the HTML elements
-						CorpFunction(numberoffloor, numberofbasements, numberofseperatebusiness, numberofspots, numberofliftcages, numberofrentals, occupancyperfloor, hoursofactivity);
+						CorpFunction(AmountOfFloors, AmountOfBasements, AmountOfBusiness, AmountOfSpots, AmountOfLiftcages, AmountOfRentals, AmountOfOccupancy, AmountOfHours);
 					}
 					if (document.getElementById("UserSelect").value == "nil")
 					{
@@ -529,9 +552,9 @@
 					var ElevatorFieldTheThird = document.getElementById("ElevatorResults");
 
 					//vars used to parse the data from string to int because for some DUMB FUCKING REASONS IT SENDS ME A FUCKING STRING. I blame Javascript.
-					var numberfloor = parseInt(CorpAmountOfFloors);
-					var numberbasement = parseInt(CorpAmountOfBasements);
-					var numberoccupant = parseInt(CorpAmountOfOccupancy);
+					var numberfloor = CorpAmountOfFloors;
+					var numberbasement = CorpAmountOfBasements;
+					var numberoccupant = CorpAmountOfOccupancy;
 					var FloorAndBasements = numberfloor + numberbasement;
 
 					// multiply the number of occupants per floor by the number of floors (including the number of basements) to obtain the total number of occupants.
@@ -642,7 +665,7 @@
 						var PremiumFees = PremiumPercent * 13;
 
 						InstallCost.value = PremiumFees;
-						TotalCost.value = (PremiumFees + CalculatedPremium).toFixed(2);
+						TotalCost.value = Math.ceil(PremiumFees + CalculatedPremium).toFixed(2);
 						console.log("PremiumPrice: ",PremiumPrice,"(", "Typeof:",typeof(PremiumPrice), ")", "*", "ElevatorResults:","(", "typeof:", typeof(ElevatorIntNumber),")", ElevatorIntNumber, "=", CalculatedPremium);
 						console.log("CalculatedPremium / 100 =", PremiumPercent);
 						console.log("PremiumFees =", PremiumPercent * 13);
