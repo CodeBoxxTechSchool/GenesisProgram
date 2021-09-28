@@ -501,6 +501,9 @@
 						//The following console.log is the best translation we could come up with for the task description.
 						//Keep at end of function for correct display.
 						console.log(ElevatorField.value, ": NUMBER OF ELEVATORS = NUMBER OF LIFTCAGES: ", CommercialAmountOfLiftCages);
+
+						//Send the end evelator results to the price function.
+						Price(CommercialAmountOfElevators);
 						
 						
 						
@@ -547,6 +550,9 @@
 
 						console.log(AverageDoorsPerFloor, "NUMBER OF DOORS");
 						
+						//Send the end evelator results to the price function.
+						var elev = NumberOfCages * NumberOfShafts;
+						Price(elev);
 						
 
 					}
