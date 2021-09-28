@@ -334,11 +334,12 @@
 				By adding each value variable in the sequence inside the HTML <input>, we managed to keep the values saved in between inputs,
 				and are transportable to other functions.*/
 
-				//				The variables inside the parantheses are called "parameters", and the value they carry are called "arguments". Reminder: they are INDEED variables, they are just ghosts. Not declared anywhere except here, and only usable within the function.
+				//The variables inside the parantheses are called "parameters", and the value they carry are called "arguments".
+				//Reminder: they are INDEED variables, they are just ghosts. Not declared anywhere except here, and only usable within the function.
 				function Call(numberofapps, numberoffloor, numberofbasements, numberofseperatebusiness, numberofspots, numberofliftcages, numberofrentals, occupancyperfloor, hoursofactivity)
 				{
 
-					//Stringly numbers
+					//StringlyStrictly numbers. NUMBERS!
 					var AmountOfAppartments = parseInt(numberofapps);
 					var AmountOfFloors = parseInt(numberoffloor);
 					var AmountOfBasements = parseInt(numberofbasements);
@@ -377,6 +378,8 @@
 						/*When the option "Residential" (with a Capital R) which has an assigned value of "residential" (small r) is selected by the user, it will set each
 						fields .style.display parameters accordingly to your objective. "block" (somehow) means "show" and "none" means no display.*/
 
+						//This is the same process for every <option> of the User Select drop down menu.
+
 						document.getElementById("NumAppartments").style.display = "block"; //Appartments
 						document.getElementById("NumFloor").style.display = "block"; //Floors
 						document.getElementById("NumBasement").style.display = "block"; //Basements
@@ -387,7 +390,7 @@
 						document.getElementById("NumOccupant").style.display = "none"; // occupency rate
 						document.getElementById("NumActivity").style.display = "none"; //hours of activity
 						document.getElementById("NumElevators").style.display = "block"; //numbers of elevators
-						console.log("Residential Selected")
+						console.log("Residential Selected");
 
 						//Call residential instructions to be executed and pass on the concerned arguments (aka value, aka User input) from the HTML elements 
 						ResidentialFunction(AmountOfAppartments, AmountOfFloors, AmountOfBasements);
@@ -407,7 +410,7 @@
 						document.getElementById("NumOccupant").style.display = "none";
 						document.getElementById("NumActivity").style.display = "none";
 						document.getElementById("NumElevators").style.display = "block";
-						console.log("Commercial Selected")
+						console.log("Commercial Selected");
 
 						//Call commercial instructions to be executed and pass on the concerned arguments (aka value, aka User input) from the HTML elements 
 						CommercialFunction(AmountOfFloors, AmountOfBasements, AmountOfBusiness, AmountOfSpots, AmountOfLiftcages);
@@ -425,7 +428,7 @@
 						document.getElementById("NumOccupant").style.display = "block";
 						document.getElementById("NumActivity").style.display = "none";
 						document.getElementById("NumElevators").style.display = "block";
-						console.log("Corporate Selected")
+						console.log("Corporate Selected");
 
 						//Call Corporate/Hybrid function be executed, and pass on the concerned arguments (aka value, aka User input) from the HTML elements
 						CorpFunction(AmountOfFloors, AmountOfBasements, AmountOfBusiness, AmountOfSpots, AmountOfLiftcages, AmountOfRentals, AmountOfOccupancy, AmountOfHours);
@@ -443,7 +446,7 @@
 						document.getElementById("NumOccupant").style.display = "block";
 						document.getElementById("NumActivity").style.display = "block";
 						document.getElementById("NumElevators").style.display = "block";
-						console.log("Hybrid Selected")
+						console.log("Hybrid Selected");
 
 						//Call Corporate/Hybrid functionton be executed, and pass on the concerned arguments (aka value, aka User input) from the HTML elements
 						CorpFunction(AmountOfFloors, AmountOfBasements, AmountOfBusiness, AmountOfSpots, AmountOfLiftcages, AmountOfRentals, AmountOfOccupancy, AmountOfHours);
@@ -466,8 +469,8 @@
 					
 
 				}
-				//COMMERCIAL FUNCTION HAS BEEN CONCLUDED BY INSTRUCTOR: FRANK THE MILITARY GUY.
-				//Called function when User Select has "Commercial" selected
+
+				//Called function when User Select has "Commercial" selected: HAS PASSED CHECKS.
 				function CommercialFunction(CommercialAmountOfFloors, CommercialAmountOfBasements, CommercialAmountOfBusinesses, CommercialAmountOfSpots, CommercialAmountOfLiftCages)
 					{	/*If the type of building is Commercial, the number of elevator shafts
 						 to be deployed is specified (as a INT value) and the estimated number 
@@ -503,13 +506,12 @@
 						
 					}
 
-				//Called function when User Select has "Residential" Selected
-				//RESIDENTIAL FUNCTION HAS BEEN CONCLUDED BY INSTRUCTOR: PATRICK THE YUL DIRECTOR
+				//Called function when User Select has "Residential" Selected : HAS PASSED CHECKS
 				function ResidentialFunction(ResidenceAmountOfAppartments, ResidenceAmountOfFloors, ResidenceAmountOfBasement)
 				
 					{
 
-						//Declare easy access to elevator result read-only field
+						//Declare easy access to elevator result read-only field. Eases your life.
 						var ElevatorFieldTheSecond = document.getElementById("ElevatorResults");
 
 
@@ -528,7 +530,7 @@
 						console.log("---RESIDENTIAL CALCULATIONS---")
 						//The line below is what creates slices of 20 appartments. This line is still not fully understood.
 						var NumberOfShafts = Math.ceil(ResidenceAmountOfFloors / 20);
-						//Sameshit But even LESS understood!
+						//Sameshit But even LESS understood! Acheived by observing template website script.
 						var NumberOfCages = Math.ceil(ResidenceAmountOfAppartments / (ResidenceAmountOfFloors * 6));
 
 						console.log(NumberOfShafts, "NUMBERS OF SHAFTS");
@@ -540,6 +542,7 @@
 				//  >	Average door per floor  is   Amount of Appartments  divided by   Amount of Floors
 						var AverageDoorsPerFloor = ResidenceAmountOfAppartments / ResidenceAmountOfFloors;
 
+						//The answer is (i think) The Number of Cages * Number of Shafts.
 						ElevatorFieldTheSecond.value = NumberOfCages * NumberOfShafts;
 
 						console.log(AverageDoorsPerFloor, "NUMBER OF DOORS");
@@ -622,6 +625,7 @@
 					var ExceliumRadioButton = document.getElementById("ExceliumPricing");
 
 					//Make extra FUCKING SURE that the passed on argument (which is supposed to be the number of elevators) is a GOD DAMN NUMBER AND NOT A FUCKING STRING!!!
+					//You do NOT want to perform arithmetics on strings it's gonna traumatize you as it traumatized me.
 					var ElevatorIntNumber = parseInt(argument);
 
 
@@ -632,7 +636,7 @@
 					const ExceliumPrice = 15400.00;
 					console.log(ElevatorIntNumber, "INCOMING NUMBER OF ELEVATORS");
 
-					if(StandardRadioButton.checked == true) //determine the unit price and thus multiply it by the number of cages previously calculated
+					if(StandardRadioButton.checked == true) //determine the unit price and thus multiply it by the number of cages previously calculated The same process is repeated for all radio button options.
 					{
 						console.log("----PERFORMING STANDARD PRICING CALCULATIONS----");
 						//Here we pass the ElevatorResults, and put them into the UnitCost read-only field.
