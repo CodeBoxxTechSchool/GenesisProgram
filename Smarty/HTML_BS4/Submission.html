@@ -240,7 +240,7 @@
 				<div id="NumActivity" style="display: none;">
 					For how many hours will the building be in activity per day?:
 					<br>
-					<input id="ActtimeNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, value)">
+					<input id="ActtimeNumber" type="number" max="24" name value oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, value)">
 				</div>
 				<!--Number of elevators needed-->
 				<div id="NumElevators" style="display: none;">
@@ -528,16 +528,19 @@
 						console.log("---RESIDENTIAL CALCULATIONS---")
 						//The line below is what creates slices of 20 appartments. This line is still not fully understood.
 						var NumberOfShafts = Math.ceil(ResidenceAmountOfFloors / 20);
+						//Sameshit But even LESS understood!
+						var NumberOfCages = Math.ceil(ResidenceAmountOfAppartments / (ResidenceAmountOfFloors * 6));
 
 						console.log(NumberOfShafts, "NUMBERS OF SHAFTS");
-						
-						ElevatorFieldTheSecond.value = NumberOfShafts;
+						console.log(NumberOfCages, "NUMBERS OF CAGES");
 						
 						//divide the number of apartments by the number of floors (excluding the number of basements) to obtain an average of doors per floor.
 						//As requierment of demanded task, the Average Door per floor is calculated, but remains unused.
 					
 				//  >	Average door per floor  is   Amount of Appartments  divided by   Amount of Floors
-						var AverageDoorsPerFloor = Math.ceil(ResidenceAmountOfAppartments / ResidenceAmountOfFloors);
+						var AverageDoorsPerFloor = ResidenceAmountOfAppartments / ResidenceAmountOfFloors;
+
+						ElevatorFieldTheSecond.value = NumberOfCages * NumberOfShafts;
 
 						console.log(AverageDoorsPerFloor, "NUMBER OF DOORS");
 						
@@ -561,7 +564,7 @@
 					var TotalNumberOfOccupancy = numberoccupant * (FloorAndBasements);
 
 					// The number of elevators required is determined by the number of occupants divided by 1000.
-					var numberelevators = Math.ceil(TotalNumberOfOccupancy / 1000);
+					var numberelevators = TotalNumberOfOccupancy / 1000;
 
 					//The number of floors (including the number of basements) is divided by 20 to obtain the number of elevator columns required.
 					var elevatorcolumns = Math.ceil((numberfloor + numberbasement) / 20);
@@ -570,7 +573,7 @@
 					var elevatorpercolumn = Math.ceil(numberelevators / elevatorcolumns);
 
 					// The total number of elevators is determined by the number of elevators per column multiplied by the number of columns.
-					var totalnumberofelevators = Math.ceil(numberelevators * elevatorpercolumn);
+					var totalnumberofelevators = elevatorcolumns * elevatorpercolumn;
 
 
 					console.log("---CORPORATE/HYBRID FUNCTION---");
@@ -595,7 +598,7 @@
 					console.log(FloorAndBasements, "FLOOR + BASEMENTS")
 					console.log(typeof totalnumberofelevators);
 
-					ElevatorFieldTheThird.value = totalnumberofelevators;
+					ElevatorFieldTheThird.value = Math.ceil(totalnumberofelevators); //big lol?
 					
 					//Send the end evelator results to the price function.
 					Price(totalnumberofelevators);
@@ -624,16 +627,16 @@
 
 					console.log("-------IS PRICE RIGHT?--------")
 					//Strict pricing policies requiers const(ant) variables to avoid unwanted changes to pricings.
-					const StandardPrice = 7565;
-					const PremiumPrice = 12345;
-					const ExceliumPrice = 15400;
+					const StandardPrice = 7565.00;
+					const PremiumPrice = 12345.00;
+					const ExceliumPrice = 15400.00;
 					console.log(ElevatorIntNumber, "INCOMING NUMBER OF ELEVATORS");
 
 					if(StandardRadioButton.checked == true) //determine the unit price and thus multiply it by the number of cages previously calculated
 					{
 						console.log("----PERFORMING STANDARD PRICING CALCULATIONS----");
 						//Here we pass the ElevatorResults, and put them into the UnitCost read-only field.
-						PriceUnit.value = StandardPrice * ElevatorIntNumber;
+						PriceUnit.value = StandardPrice * ElevatorIntNumber.toFixed(2);
 
 						//The Calculated Standard is the number of elevators * StandardPrice
 						var CalculatedStandard = StandardPrice * ElevatorIntNumber;
@@ -643,7 +646,7 @@
 						var StandardFees = StandardPercent * 10;
 
 						//Install fees displayed in install cost read-only field
-						InstallCost.value = StandardFees;
+						InstallCost.value = StandardFees.toFixed(2);
 						//Final price. toFixed for the decimal. It also returns it into as a string and not a number. Ironny.
 						TotalCost.value = (StandardFees + CalculatedStandard).toFixed(2);
 
@@ -658,14 +661,14 @@
 					if(PremiumRadioButton.checked == true)
 					{
 						console.log("----PERFORMING PREMIUM PRICING CALCULATIONS----");
-						PriceUnit.value = PremiumPrice * ElevatorIntNumber;
+						PriceUnit.value = PremiumPrice * ElevatorIntNumber.toFixed(2);
 
 						var CalculatedPremium = PremiumPrice * ElevatorIntNumber;
 						var PremiumPercent = (CalculatedPremium / 100);
 						var PremiumFees = PremiumPercent * 13;
 
-						InstallCost.value = PremiumFees;
-						TotalCost.value = Math.ceil(PremiumFees + CalculatedPremium).toFixed(2);
+						InstallCost.value = PremiumFees.toFixed(2);
+						TotalCost.value = (PremiumFees + CalculatedPremium).toFixed(2);
 						console.log("PremiumPrice: ",PremiumPrice,"(", "Typeof:",typeof(PremiumPrice), ")", "*", "ElevatorResults:","(", "typeof:", typeof(ElevatorIntNumber),")", ElevatorIntNumber, "=", CalculatedPremium);
 						console.log("CalculatedPremium / 100 =", PremiumPercent);
 						console.log("PremiumFees =", PremiumPercent * 13);
@@ -675,13 +678,13 @@
 					if(ExceliumRadioButton.checked == true)
 					{
 						console.log("----PERFORMING EXCELIUM PRICING CALCULATIONS----")
-						PriceUnit.value = ExceliumPrice * ElevatorIntNumber;
+						PriceUnit.value = ExceliumPrice * ElevatorIntNumber.toFixed(2);
 
 						var CalculatedExcelium = ExceliumPrice * ElevatorIntNumber;
 						var ExceliumPercent = (CalculatedExcelium / 100);
 						var ExceliumFees = ExceliumPercent * 16;
 
-						InstallCost.value = ExceliumFees;
+						InstallCost.value = ExceliumFees.toFixed(2);
 						TotalCost.value = (ExceliumFees + CalculatedExcelium).toFixed(2);
 						console.log("ExceliumPrice: ",ExceliumPrice,"(", "Typeof:",typeof(ExceliumPrice), ")", "*", "ElevatorResults:","(", "typeof:", typeof(ElevatorIntNumber),")", ElevatorIntNumber, "=", CalculatedExcelium);
 						console.log("CalculatedExcelium / 100 =", ExceliumPercent);
@@ -696,16 +699,22 @@
 				//Called function when User Select switches item from drop down menu, preventing unconcerned User Input to miscalculate final estimate.
 				function ResetValues()
 				{
-						document.getElementById("NumAppartments").value = undefined;
-						document.getElementById("NumFloor").value = undefined;
-						document.getElementById("NumBasement").value = undefined;
-						document.getElementById("NumBusiness").value = undefined;
-						document.getElementById("NumSpots").value = undefined ;
-						document.getElementById("NumCages").value = undefined ;
-						document.getElementById("NumRentals").value = undefined ;
-						document.getElementById("NumOccupant").value = undefined ;
-						document.getElementById("NumActivity").value = undefined ;
-						document.getElementById("ElevatorResults").value = undefined ;
+						document.getElementById("NumAppartments").value = 0;
+						document.getElementById("NumFloor").value = 0;
+						document.getElementById("NumBasement").value = 0;
+						document.getElementById("NumBusiness").value = 0;
+						document.getElementById("NumSpots").value = 0 ;
+						document.getElementById("NumCages").value = 0 ;
+						document.getElementById("NumRentals").value = 0 ;
+						document.getElementById("NumOccupant").value = 0 ;
+						document.getElementById("NumActivity").value = 0 ;
+						document.getElementById("ElevatorResults").value = 0 ;
+						document.getElementById("StandardPricing").checked = false;;
+						document.getElementById("PremiumPricing").checked = false;
+						document.getElementById("ExceliumPricing").checked = false;
+						document.getElementById("PriceUnit").value = 0;
+						document.getElementById("InstallCost").value = 0;
+						document.getElementById("TotalCost").value = 0;
 						Call();
 				}
 			
