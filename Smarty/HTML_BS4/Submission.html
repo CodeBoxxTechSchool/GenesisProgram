@@ -249,7 +249,7 @@
 				<br>
 				<br>
 				
-				<div id="RadioBtns" style="display: none;">
+				<div id="RadioBtns" style="display: block;">
 					<p><strong>Second, Select the quality of support service:</strong></p>
 					<input id="StandardPricing" type="radio" checked="true" name="serivces" value="standard" onchange="Price(ElevatorResults.value)">
 				 	> Standard
@@ -363,39 +363,8 @@
 					console.log("(NumOccupant:", AmountOfOccupancy, ")", "Typeof:", typeof(AmountOfOccupancy));
 					console.log("(NumActivity:", AmountOfHours, ")", "Typeof:", typeof(AmountOfHours));
 					console.log("(ElevatorResults:", AmountOfElevators, ")", "Typeof:", typeof(AmountOfElevators));
-
-					
-
-
-						var UnitElevator = document.getElementById("PriceUnit");
-						var InstallFees = document.getElementById("InstallCost");
-						var TotalPrice = document.getElementById("TotalCost");
-					
-						if(document.getElementById("PriceUnit").value == NaN)
-						{
-							UnitElevator.value = "0";
-							InstallFees.value = "0";
-							TotalPrice.value = "0";
-						}
-						if(document.getElementById("InstallCost").value == NaN)
-						{
-							UnitElevator.value = "0";
-							InstallFees.value = "0";
-							TotalPrice.value = "0";
-						}
-						if(document.getElementById("TotalCost").value == NaN)
-						{
-							UnitElevator.value = "0";
-							InstallFees.value = "0";
-							TotalPrice.value = "0";
-						}
-
-
-
-
 				
-
-			
+					
 					if (document.getElementById("UserSelect").value == "residential")
 
 					{
@@ -660,24 +629,9 @@
 					//Make extra FUCKING SURE that the passed on argument (which is supposed to be the number of elevators) is a GOD DAMN NUMBER AND NOT A FUCKING STRING!!!
 					//You do NOT want to perform arithmetics on strings it's gonna traumatize you as it traumatized me.
 
-					// NOTE 2: FOR SOME DUMB FUCKING REASONS EVEN parseInt DOES EVEN PROPERLY CONVERT THE INCOMMING VALUE TO AN INT
+					// NOTE 2: FOR SOME DUMB FUCKING REASONS EVEN parseInt DOES EVEN PROPERLY CONVERT THE INCOMING VALUE TO AN INT
 					// SO IT HAS TO BE VERY VERY VERY SPECIFIED BY USING THE KEY WORD Number GOD I HATE JAVASCRIPT. REMEMBER THIS! REMEMBER. THIS!!!
 					var ElevatorIntNumber = Number(argument);
-
-
-					if(StandardRadioButton.checked == false && PriceUnit.NaN == true)
-					{
-						PriceUnit.value = 0;
-					}
-					if(PremiumRadioButton.checked == false)
-					{
-						InstallCost.value = 0;
-					}
-					if(ExceliumRadioButton.checked == false)
-					{
-						TotalCost.value = 0;
-					}
-
 
 
 					console.log("-------IS PRICE RIGHT?--------")
@@ -755,22 +709,9 @@
 				//Called function when User Select switches item from drop down menu, preventing unconcerned User Input to miscalculate final estimate.
 				function ResetValues()
 				{
-						// document.getElementById("NumAppartments").value = "0";
-						// document.getElementById("NumFloor").value = "0";
-						// document.getElementById("NumBasement").value = "0";
-						// document.getElementById("NumBusiness").value = "0";
-						// document.getElementById("NumSpots").value = "0";
-						// document.getElementById("NumCages").value = "0";
-						// document.getElementById("NumRentals").value = "0";
-						// document.getElementById("NumOccupant").value = "0";
-						// document.getElementById("NumActivity").value = "0";
-						// document.getElementById("ElevatorResults").value = "0";
-						// document.getElementById("PriceUnit").value = "0";
-						// document.getElementById("InstallCost").value = "0";
-						// document.getElementById("TotalCost").value = "0";
-
 						var a1 = 0;
 
+						// LOLOLOLOLOLOLOLOLOLOLOLOLOL
 						
 						Call(a1, a1, a1, a1, a1, a1, a1, a1, a1, a1, a1, a1, a1);
 				}
