@@ -519,9 +519,6 @@
 						console.log(ResidenceAmountOfFloors, ": RECEIVED USER FLOOR INPUT");
 						console.log(ResidenceAmountOfBasement, ": RECEIVED USER BASEMENT INPUT");
 						
-
-						
-
 						//If the type of building is Residential...
 
 						
@@ -552,6 +549,7 @@
 						
 
 					}
+					
 				//Called function when User Select has "Corporate" or "Hybrid" selected.
 				function CorpFunction(CorpAmountOfFloors, CorpAmountOfBasements, CorpAmountOfBusinesses, CorpAmountOfSpots, CorpAmountOfLiftCages, CorpAmountOfRentals, CorpAmountOfOccupancy, CorpAmountOfActivity)
 				{
@@ -641,7 +639,9 @@
 					const ExceliumPrice = 15400.00;
 					console.log(ElevatorIntNumber, "INCOMING NUMBER OF ELEVATORS");
 
-					if(StandardRadioButton.checked == true) //determine the unit price and thus multiply it by the number of cages previously calculated The same process is repeated for all radio button options.
+					/*determine the unit price and thus multiply it by the number of cages previously 
+					calculated The same process is repeated for all radio button options.*/
+					if(StandardRadioButton.checked == true) 
 					{
 						console.log("----PERFORMING STANDARD PRICING CALCULATIONS----");
 						//Here we pass the ElevatorResults, and put them into the UnitCost read-only field.
