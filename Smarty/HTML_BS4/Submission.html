@@ -188,77 +188,78 @@
 				<div id="NumAppartments" style="display: none;">
 					Number of Appartments:
 					<br>
-					<input id="ApptNumber" type="number" name value oninput="Call(value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
+					<input id="ApptNumber" type="number" name value="0" oninput="Call(value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
 				</div>
 				<!--Number of Floors-->
 				<div id="NumFloor" style="display: none;">
 					Number of Floors:
 					<br>
-					<input id="FlrNumber" type="number" name value oninput="Call(ApptNumber.value, value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
+					<input id="FlrNumber" type="number" name value="0" oninput="Call(ApptNumber.value, value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
 				</div>
 				<!--Number of Baements-->
 				<div id="NumBasement" style="display: none;">
 					Number of Basements:
 					<br>
-					<input id="BsmntNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
+					<input id="BsmntNumber" type="number" name value="0" oninput="Call(ApptNumber.value, FlrNumber.value, value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
 				</div>
 				<!--Number of Seperate Businesses-->
 				<div id="NumBusiness" style="display: none;">
 					How many seperate businesses do you have?:
 					<br>
-					<input id="BsnssNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
+					<input id="BsnssNumber" type="number" name value="0" oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
 				</div>
 				<!--Number of Available Parking spots-->
 				<div id="NumSpots" style="display: none;">
 					Number of Available Parking spots:
 					<br>
-					<input id="PrksptNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
+					<input id="PrksptNumber" type="number" name value="0" oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
 				</div>
 				<!--Number of lift cages-->
 				<div id="NumCages" style="display: none;">
 					How many lift cages would you like to deploy?:
 					<br>
-					<input id="LftNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
+					<input id="LftNumber" type="number" name value="0" oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
 				</div>
 				<!--Number of Seperate rental Companies-->
 				<div id="NumRentals" style="display: none;">
 					How many seperate <strong>Rental</strong> Businesses do you have?:
 					<br>
-					<input id="RntNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, value, MaxOccNumber.value, ActtimeNumber.value)">
+					<input id="RntNumber" type="number" name value="0" oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, value, MaxOccNumber.value, ActtimeNumber.value)">
 				</div>
 				<!--Number of Occupency per Floor-->
 				<div id="NumOccupant" style="display: none;">
 					Enter the number of Tenets/Occupents per floor:
 					<br>
-					<input id="MaxOccNumber" type="number" name value oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, value, ActtimeNumber.value)">
+					<input id="MaxOccNumber" type="number" name value="0" oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, value, ActtimeNumber.value)">
 				</div>
 				<!--Hours of activity in building-->
 				<div id="NumActivity" style="display: none;">
 					For how many hours will the building be in activity per day?:
 					<br>
-					<input id="ActtimeNumber" type="number" max="24" name value oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, value)">
+					<input id="ActtimeNumber" type="number" max="24" name value="0" oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, value)">
 				</div>
 				<!--Number of elevators needed-->
 				<div id="NumElevators" style="display: none;">
 					Number of Elevators:
 					<br>
-					<input id="ElevatorResults" type="number" name value="0" disabled>
+					<input id="ElevatorResults" type="number" name value="0" disabled onchange="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value, value)">
 				</div>
 				
 
 				<br>
 				<br>
-				<p><strong>Second, Select the quality of support service:</strong></p>
-
-				<input id="StandardPricing" type="radio" checked="true" name="serivces" value="standard" onchange="Price(ElevatorResults.value)">
-				 > Standard
-				 <br>
-				 <input id="PremiumPricing" type="radio" name="serivces" value="premium" onchange="Price(ElevatorResults.value)">
-				 > Premium
-				 <br>
-				 <input id="ExceliumPricing" type="radio" name="serivces" value="excelium" onchange="Price(ElevatorResults.value)">
-				 > Excelium
-
+				
+				<div id="RadioBtns" style="display: none;">
+					<p><strong>Second, Select the quality of support service:</strong></p>
+					<input id="StandardPricing" type="radio" checked="true" name="serivces" value="standard" onchange="Price(ElevatorResults.value)">
+				 	> Standard
+				 	<br>
+				 	<input id="PremiumPricing" type="radio" name="serivces" value="premium" onchange="Price(ElevatorResults.value)">
+				 	> Premium
+				 	<br>
+				 	<input id="ExceliumPricing" type="radio" name="serivces" value="excelium" onchange="Price(ElevatorResults.value)">
+				 	> Excelium
+				</div>
 				<br>
 				<br>
 
@@ -334,7 +335,7 @@
 
 				//The variables inside the parantheses are called "parameters", and the value they carry are called "arguments".
 				//Reminder: they are INDEED variables, they are just ghosts. Not declared anywhere except here, and only usable within the function.
-				function Call(numberofapps, numberoffloor, numberofbasements, numberofseperatebusiness, numberofspots, numberofliftcages, numberofrentals, occupancyperfloor, hoursofactivity)
+				function Call(numberofapps, numberoffloor, numberofbasements, numberofseperatebusiness, numberofspots, numberofliftcages, numberofrentals, occupancyperfloor, hoursofactivity, numbersofelevators)
 				{
 
 					//StringlyStrictly numbers. NUMBERS!
@@ -347,6 +348,7 @@
 					var AmountOfRentals = parseInt(numberofrentals);			// USELESS!
 					var AmountOfOccupancy = parseInt(occupancyperfloor);		// USEFUL! TO -> CorpFunction()
 					var AmountOfHours = parseInt(hoursofactivity);				// USELESS!
+					var AmountOfElevators = parseInt(numbersofelevators);		// USEFUL!
 
 					//checking if all <input> values are passed correctly.
 					console.log("---------MAIN CALL---------");
@@ -360,9 +362,33 @@
 					console.log("(NumRentals:", AmountOfRentals, ")", "Typeof:", typeof(AmountOfRentals));
 					console.log("(NumOccupant:", AmountOfOccupancy, ")", "Typeof:", typeof(AmountOfOccupancy));
 					console.log("(NumActivity:", AmountOfHours, ")", "Typeof:", typeof(AmountOfHours));
+					console.log("(ElevatorResults:", AmountOfElevators, ")", "Typeof:", typeof(AmountOfElevators));
 
 					
-				
+
+
+						var UnitElevator = document.getElementById("PriceUnit");
+						var InstallFees = document.getElementById("InstallCost");
+						var TotalPrice = document.getElementById("TotalCost");
+					
+						if(document.getElementById("PriceUnit").value == NaN)
+						{
+							UnitElevator.value = "0";
+							InstallFees.value = "0";
+							TotalPrice.value = "0";
+						}
+						if(document.getElementById("InstallCost").value == NaN)
+						{
+							UnitElevator.value = "0";
+							InstallFees.value = "0";
+							TotalPrice.value = "0";
+						}
+						if(document.getElementById("TotalCost").value == NaN)
+						{
+							UnitElevator.value = "0";
+							InstallFees.value = "0";
+							TotalPrice.value = "0";
+						}
 
 
 
@@ -481,7 +507,7 @@
 						var CommercialAmountOfElevators = CommercialAmountOfLiftCages;
 
 						//Set <input> field's value to the value of the amount of elevators
-						ElevatorField.value = CommercialAmountOfElevators;
+						ElevatorField.value = parseInt(CommercialAmountOfElevators);
 
 						
 
@@ -532,7 +558,7 @@
 						
 						console.log("---RESIDENTIAL CALCULATIONS---")
 						//The line below is what creates slices of 20 appartments. This line is still not fully understood.
-						var NumberOfShafts = Math.ceil(ResidenceAmountOfFloors / 20);
+						var NumberOfShafts = parseInt(Math.ceil(ResidenceAmountOfFloors / 20));
 						//Sameshit But even LESS understood! Acheived by observing template website script.
 						var NumberOfCages = Math.ceil(ResidenceAmountOfAppartments / (ResidenceAmountOfFloors * 6));
 
@@ -546,15 +572,14 @@
 						var AverageDoorsPerFloor = ResidenceAmountOfAppartments / ResidenceAmountOfFloors;
 
 						//The answer is (i think) The Number of Cages * Number of Shafts.
-						ElevatorFieldTheSecond.value = NumberOfCages * NumberOfShafts;
+						ElevatorFieldTheSecond.value = parseInt(NumberOfCages * NumberOfShafts);
 
 						
 
 						console.log(AverageDoorsPerFloor, "NUMBER OF DOORS");
 						
 						//Send the end evelator results to the price function.
-						var elev = NumberOfCages * NumberOfShafts;
-						Price(elev);
+						Price(ElevatorFieldTheSecond.value);
 						
 
 					}
@@ -584,7 +609,7 @@
 					var elevatorpercolumn = Math.ceil(numberelevators / elevatorcolumns);
 
 					// The total number of elevators is determined by the number of elevators per column multiplied by the number of columns.
-					var totalnumberofelevators = elevatorcolumns * elevatorpercolumn;
+					var totalnumberofelevators = parseInt(elevatorcolumns * elevatorpercolumn);
 
 
 					console.log("---CORPORATE/HYBRID FUNCTION---");
@@ -612,7 +637,7 @@
 					ElevatorFieldTheThird.value = Math.ceil(totalnumberofelevators); //big lol?
 					
 					//Send the end evelator results to the price function.
-					Price(totalnumberofelevators);
+					Price(ElevatorFieldTheThird.value);
 					
 					
 
@@ -634,7 +659,25 @@
 
 					//Make extra FUCKING SURE that the passed on argument (which is supposed to be the number of elevators) is a GOD DAMN NUMBER AND NOT A FUCKING STRING!!!
 					//You do NOT want to perform arithmetics on strings it's gonna traumatize you as it traumatized me.
-					var ElevatorIntNumber = parseInt(argument);
+
+					// NOTE 2: FOR SOME DUMB FUCKING REASONS EVEN parseInt DOES EVEN PROPERLY CONVERT THE INCOMMING VALUE TO AN INT
+					// SO IT HAS TO BE VERY VERY VERY SPECIFIED BY USING THE KEY WORD Number GOD I HATE JAVASCRIPT. REMEMBER THIS! REMEMBER. THIS!!!
+					var ElevatorIntNumber = Number(argument);
+
+
+					if(StandardRadioButton.checked == false && PriceUnit.NaN == true)
+					{
+						PriceUnit.value = 0;
+					}
+					if(PremiumRadioButton.checked == false)
+					{
+						InstallCost.value = 0;
+					}
+					if(ExceliumRadioButton.checked == false)
+					{
+						TotalCost.value = 0;
+					}
+
 
 
 					console.log("-------IS PRICE RIGHT?--------")
@@ -648,7 +691,7 @@
 					{
 						console.log("----PERFORMING STANDARD PRICING CALCULATIONS----");
 						//Here we pass the ElevatorResults, and put them into the UnitCost read-only field.
-						PriceUnit.value = StandardPrice * ElevatorIntNumber.toFixed(2);
+						PriceUnit.value = parseInt(StandardPrice * ElevatorIntNumber.toFixed(2));
 
 						//The Calculated Standard is the number of elevators * StandardPrice
 						var CalculatedStandard = StandardPrice * ElevatorIntNumber;
@@ -667,7 +710,7 @@
 						console.log("CalculatedStandard / 100 =", StandardPercent);
 						console.log("StandardFees =", StandardPercent * 10);
 						console.log("Standard Fees Confirm:", StandardFees);
-						console.log(typeof(StandardFees), StandardFees + CalculatedStandard, typeof(CalculatedStandard));
+						console.log(typeof(StandardFees),"Standard Fee", StandardFees + CalculatedStandard,"Calculated Premium", typeof(CalculatedStandard));
 
 					}
 					if(PremiumRadioButton.checked == true)
@@ -685,7 +728,7 @@
 						console.log("CalculatedPremium / 100 =", PremiumPercent);
 						console.log("PremiumFees =", PremiumPercent * 13);
 						console.log("Premium Fees Confirm:", PremiumFees);
-						console.log(typeof(PremiumFees), PremiumFees + CalculatedPremium, typeof(CalculatedPremium));
+						console.log(typeof(PremiumFees),"Premium Fees +", PremiumFees + CalculatedPremium,"Calculated Premium", typeof(CalculatedPremium));
 					}
 					if(ExceliumRadioButton.checked == true)
 					{
@@ -702,7 +745,8 @@
 						console.log("CalculatedExcelium / 100 =", ExceliumPercent);
 						console.log("ExceliumFees =", ExceliumPercent * 16);
 						console.log("Excelium Fees Confirm:", ExceliumFees);
-						console.log(typeof(ExceliumFees), ExceliumFees + CalculatedExcelium, typeof(CalculatedExcelium));
+						console.log(typeof(ExceliumFees),"Calculated Premium", ExceliumFees + CalculatedExcelium, "Calculated Premium", typeof(CalculatedExcelium));
+						
 					}
 
 					
@@ -711,23 +755,24 @@
 				//Called function when User Select switches item from drop down menu, preventing unconcerned User Input to miscalculate final estimate.
 				function ResetValues()
 				{
-						document.getElementById("NumAppartments").value = 0;
-						document.getElementById("NumFloor").value = 0;
-						document.getElementById("NumBasement").value = 0;
-						document.getElementById("NumBusiness").value = 0;
-						document.getElementById("NumSpots").value = 0 ;
-						document.getElementById("NumCages").value = 0 ;
-						document.getElementById("NumRentals").value = 0 ;
-						document.getElementById("NumOccupant").value = 0 ;
-						document.getElementById("NumActivity").value = 0 ;
-						document.getElementById("ElevatorResults").value = 0 ;
-						document.getElementById("StandardPricing").checked = false;;
-						document.getElementById("PremiumPricing").checked = false;
-						document.getElementById("ExceliumPricing").checked = false;
-						document.getElementById("PriceUnit").value = 0;
-						document.getElementById("InstallCost").value = 0;
-						document.getElementById("TotalCost").value = 0;
-						Call();
+						// document.getElementById("NumAppartments").value = "0";
+						// document.getElementById("NumFloor").value = "0";
+						// document.getElementById("NumBasement").value = "0";
+						// document.getElementById("NumBusiness").value = "0";
+						// document.getElementById("NumSpots").value = "0";
+						// document.getElementById("NumCages").value = "0";
+						// document.getElementById("NumRentals").value = "0";
+						// document.getElementById("NumOccupant").value = "0";
+						// document.getElementById("NumActivity").value = "0";
+						// document.getElementById("ElevatorResults").value = "0";
+						// document.getElementById("PriceUnit").value = "0";
+						// document.getElementById("InstallCost").value = "0";
+						// document.getElementById("TotalCost").value = "0";
+
+						var a1 = 0;
+
+						
+						Call(a1, a1, a1, a1, a1, a1, a1, a1, a1, a1, a1, a1, a1);
 				}
 			
 			</script>
