@@ -173,7 +173,7 @@
 
 				<p>
 														
-					<select id="UserSelect" onchange="ResetValues()">
+					<select id="UserSelect" onchange="ResetValues(), DemoLoop()">
 						<option value="nil"></option> <!--Empty to keep field blank initially-->
 						<option value="residential">Residential</option>
 						<option value="commercial">Commercial</option>
@@ -524,14 +524,10 @@
 						var NumberOfShafts = Math.ceil(ResidenceAmountOfFloors / 20);
 
 						//Sameshit But even LESS understood! Acheived by observing template website script.
-						var NumberOfCages = Math.ceil(ResidenceAmountOfAppartments / (ResidenceAmountOfFloors * 6)); //This variable is marked as NaN. FIXME.						
+						var NumberOfCages = Math.ceil(ResidenceAmountOfAppartments / (ResidenceAmountOfFloors * 6)); //This variable is marked as NaN. FIXME.
+
 
 						console.log(NumberOfShafts, "NUMBERS OF SHAFTS", "Typeof: ", typeof NumberOfShafts);
-
-						console.log(NumberOfCages, "NUMBERS OF CAGES", "Typeof: ", typeof NumberOfCages); // NaN Fault.
-						console.log("Diagnosing NaN:", "ResidenceAmountOfAppartments(value:", ResidenceAmountOfAppartments, "Typeof:", typeof ResidenceAmountOfAppartments, ")");
-						console.log("Diagnosing NaN:", "ResidenceAmountOfFloors(value:", ResidenceAmountOfFloors, "Typeof:", typeof ResidenceAmountOfFloors, ")");
-						console.log("Diagnosing NaN:", "Calculated NumberOfCages(value:", NumberOfCages, "Typeof:", typeof NumberOfCages, ")"); //How the fuck does a math operation that uses Numbers returns Not a Number??
 						
 						//divide the number of apartments by the number of floors (excluding the number of basements) to obtain an average of doors per floor.
 						//As requierment of demanded task, the Average Door per floor is calculated, but remains unused.
@@ -713,8 +709,16 @@
 						var a1 = 0;
 
 						// LOLOLOLOLOLOLOLOLOLOLOLOLOL
+
+
 						
 						Call(a1, a1, a1, a1, a1, a1, a1, a1, a1, a1, a1, a1, a1);
+				}
+				let arr = new Array (1, 2, 3, 4, 5, 6, 7, 8);
+				function DemoLoop() {
+					for (let counter = 0; counter < arr.length; counter++) {
+  						console.log(arr[counter], "Wow this is awesome");
+						}
 				}
 			
 			</script>
