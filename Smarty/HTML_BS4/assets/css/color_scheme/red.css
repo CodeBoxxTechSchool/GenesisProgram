@@ -281,7 +281,7 @@ body.menu-vertical #mainMenu.sidebar-vertical .sidebar-nav .navbar li:hover>a {
 *************************************************** **/
 section.dark .btn-default:hover {
 	color: #A94545;
-	background-color:rgba(0,0,0,0.3);
+	background-color:rgba(255, 0, 0, 0.767);
 }
 
 
