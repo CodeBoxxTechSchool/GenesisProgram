@@ -51,7 +51,7 @@ jQuery(document).ready(function() {
 		// Init Revolution Slider
 		revapi = jQuery('.fullwidthbanner').revolution({
 			dottedOverlay:"none",
-			delay:9000,
+			delay:7000,
 			startwidth:1170,
 			startheight: jQuery(".fullwidthbanner").attr('data-height') || 500,
 			hideThumbs:hideThumbs,

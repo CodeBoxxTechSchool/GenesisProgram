@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Sumbission Form</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/blue.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+		<!-- REVOLUTION SLIDER -->
+		<link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation">
+
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- Logo -->
+						<a class="logo float-left scrollTo" href="index.html">
+							<img src="RocketElevatorAssetsSmarty\R2.png" alt=""/>
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<nav class="nav-main">
+
+								<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									<li class="active"><!-- HOME -->
+										<a href="index.html">
+											HOME
+										</a>
+									</li>
+									<li><!-- SERVICES -->
+										<a href="index.html#services">
+											SERVICES
+										</a>
+									</li>
+									<li><!-- WORK -->
+										<a href="index.html#work">
+											PORTFOLIO
+										</a>
+									</li>
+									<li><!-- NEWS -->
+										<a href="index.html#news">
+											NEWS
+										</a>
+									</li>
+									<!--<li> OVERVIEW deleted
+										<a href="#overview">
+											OVERVIEW      
+										</a>
+									</li> -->
+									<li><!-- CLIENTS -->
+										<a href="index.html#clients">
+											CLIENTS
+										</a>
+									</li>
+									<!--<li> BLOG deleted
+										<a class="external" href="blog-default-aside-left.html">
+											BLOG     
+										</a>
+									</li>-->
+									<li><!-- CONTACT -->
+										<a href="index.html#contact">
+											CONTACT
+										</a>
+									</li>
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+
+			<!--Simple HTML Form UI-->
+			<div style="padding: 35px;">
+				<h1>Submission Form</h1>
+				<p><strong>First, Select the Building Type Below:</strong></p>
+
+				<p>
+														
+					<select id="UserSelect" onchange="ResetValues(), DemoLoop()">
+						<option value="nil"></option> <!--Empty to keep field blank initially-->
+						<option value="residential">Residential</option>
+						<option value="commercial">Commercial</option>
+						<option value="corporate">Corporate</option>
+						<option value="hybrid">Hybrid</option>
+					</select>
+	
+				</p>
+
+				<!--NOTE: Call() values must not be rearranged, as the lone value order of appearance, is what assigns each input fields to Javascript parameters-->
+				<!--Number of Appartments-->
+				<div id="NumAppartments" style="display: none;">
+					Number of Appartments:
+					<br>
+					<input id="ApptNumber" type="number" name value=0 oninput="Call(value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
+				</div>
+				<!--Number of Floors-->
+				<div id="NumFloor" style="display: none;">
+					Number of Floors:
+					<br>
+					<input id="FlrNumber" type="number" name value=0 oninput="Call(ApptNumber.value, value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
+				</div>
+				<!--Number of Baements-->
+				<div id="NumBasement" style="display: none;">
+					Number of Basements:
+					<br>
+					<input id="BsmntNumber" type="number" name value=0 oninput="Call(ApptNumber.value, FlrNumber.value, value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
+				</div>
+				<!--Number of Seperate Businesses-->
+				<div id="NumBusiness" style="display: none;">
+					How many seperate businesses do you have?:
+					<br>
+					<input id="BsnssNumber" type="number" name value=0 oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
+				</div>
+				<!--Number of Available Parking spots-->
+				<div id="NumSpots" style="display: none;">
+					Number of Available Parking spots:
+					<br>
+					<input id="PrksptNumber" type="number" name value=0 oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
+				</div>
+				<!--Number of lift cages-->
+				<div id="NumCages" style="display: none;">
+					How many lift cages would you like to deploy?:
+					<br>
+					<input id="LftNumber" type="number" name value=0 oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value)">
+				</div>
+				<!--Number of Seperate rental Companies-->
+				<div id="NumRentals" style="display: none;">
+					How many seperate <strong>Rental</strong> Businesses do you have?:
+					<br>
+					<input id="RntNumber" type="number" name value=0 oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, value, MaxOccNumber.value, ActtimeNumber.value)">
+				</div>
+				<!--Number of Occupency per Floor-->
+				<div id="NumOccupant" style="display: none;">
+					Enter the number of Tenets/Occupents per floor:
+					<br>
+					<input id="MaxOccNumber" type="number" name value=0 oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, value, ActtimeNumber.value)">
+				</div>
+				<!--Hours of activity in building-->
+				<div id="NumActivity" style="display: none;">
+					For how many hours will the building be in activity per day?:
+					<br>
+					<input id="ActtimeNumber" type="number" max="24" name value=0 oninput="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, value)">
+				</div>
+				<!--Number of elevators needed-->
+				<div id="NumElevators" style="display: none;">
+					Number of Elevators:
+					<br>
+					<input id="ElevatorResults" type="number" name value=0 disabled onchange="Call(ApptNumber.value, FlrNumber.value, BsmntNumber.value, BsnssNumber.value, PrksptNumber.value, LftNumber.value, RntNumber.value, MaxOccNumber.value, ActtimeNumber.value, value)">
+				</div>
+				
+
+				<br>
+				<br>
+				
+				<div id="RadioBtns" style="display: block;">
+					<p><strong>Second, Select the quality of support service:</strong></p>
+					<input id="StandardPricing" type="radio" checked="true" name="serivces" value="standard" onchange="Price(ElevatorResults.value)">
+				 	> Standard
+				 	<br>
+				 	<input id="PremiumPricing" type="radio" name="serivces" value="premium" onchange="Price(ElevatorResults.value)">
+				 	> Premium
+				 	<br>
+				 	<input id="ExceliumPricing" type="radio" name="serivces" value="excelium" onchange="Price(ElevatorResults.value)">
+				 	> Excelium
+				</div>
+				<br>
+				<br>
+
+
+				Price of all Elevator $: 
+				<input id="PriceUnit" type="text" disabled>
+				<br>
+				<br>
+				Installation Cost $:
+				<input id="InstallCost" type="text" disabled>
+				<br>
+				<br>
+				Total Cost $:
+				<input id="TotalCost" type="text" disabled>
+				<br>	
+
+			</div>
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
+
+
+					<div class="row">
+
+						<!-- col #1 -->
+						<div class="col-md-8">
+
+							<h3 class="letter-spacing-1">WHY US?</h3>
+
+							<!-- Small Description -->
+							<p>
+								Unmatched Experience with unrivaled reliability, along with unprecedented speeds, Rocket Elevators will lift you to new heights!
+							</p>
+							<h2>(514) 435-3476</h2>
+						</div>
+
+					</div>
+
+
+				</div>
+
+				<div class="copyright">
+					<div class="container">
+						<ul class="float-right m-0 list-inline mobile-block">
+							<li><a href="https://opensource.org/licenses/MIT">Terms &amp; Conditions</a></li>
+							<!-- <li>&bull;</li>
+							<li><a href="#">Privacy</a></li> -->
+						</ul>
+						&copy; All Rights Reserved, Rocket Elevators Company LTD
+					</div>
+				</div>
+
+			</footer>
+
+
+
+
+
+
+			<!----------------------------------------------ENTERING SCRIPTING TERRITORY----------------------------------------------->
+
+
+
+
+
+
+			<script>
+				/*Call is the primary function that gets called when the user inputs anything in the HTML form. It receives the User input
+				by order of appearance at each <input> fields in the HTML. It is the order of apperance that gives each parameter it's value.
+				By adding each value variable in the sequence inside the HTML <input>, we managed to keep the values saved in between inputs,
+				and are transportable to other functions.*/
+
+				//The variables inside the parantheses are called "parameters", and the value they carry are called "arguments".
+				//Reminder: they are INDEED variables, they are just ghosts. Not declared anywhere except here, and only usable within the function.
+				function Call(numberofapps, numberoffloor, numberofbasements, numberofseperatebusiness, numberofspots, numberofliftcages, numberofrentals, occupancyperfloor, hoursofactivity, numbersofelevators)
+				{
+
+					//StringlyStrictly numbers. NUMBERS!
+					var AmountOfAppartments = parseInt(numberofapps); 			// USEFUL! TO -> ResidentialFunction()
+					var AmountOfFloors = parseInt(numberoffloor); 				// USEFUL! TO -> CorpFunction(), ResidentialFunction()
+					var AmountOfBasements = parseInt(numberofbasements);		// USEFUL! TO -> CorpFunction()
+					var AmountOfBusiness = parseInt(numberofseperatebusiness);  // USELESS!
+					var AmountOfSpots = parseInt(numberofspots);				// USELESS!
+					var AmountOfLiftcages = parseInt(numberofliftcages);		// USEFUL! TO -> CommercialFunction()
+					var AmountOfRentals = parseInt(numberofrentals);			// USELESS!
+					var AmountOfOccupancy = parseInt(occupancyperfloor);		// USEFUL! TO -> CorpFunction()
+					var AmountOfHours = parseInt(hoursofactivity);				// USELESS!
+					var AmountOfElevators = parseInt(numbersofelevators);		// USEFUL!
+
+					//checking if all <input> values are passed correctly.
+					console.log("---------MAIN CALL---------");
+					console.log("Received User Inputs:")
+					console.log("(NumAppartments:", AmountOfAppartments, ")", "Typeof:", typeof(AmountOfAppartments));
+					console.log("(NumFloor:", AmountOfFloors, ")", "Typeof:", typeof(AmountOfFloors));
+					console.log("(NumBasement:", AmountOfBasements, ")", "Typeof:", typeof(AmountOfBasements));
+					console.log("(NumBusiness:", AmountOfBusiness, ")", "Typeof:", typeof(AmountOfBusiness));
+					console.log("(NumSpots:", AmountOfSpots, ")", "Typeof:", typeof(AmountOfSpots));
+					console.log("(NumCages:", AmountOfLiftcages, ")", "Typeof:", typeof(AmountOfLiftcages));
+					console.log("(NumRentals:", AmountOfRentals, ")", "Typeof:", typeof(AmountOfRentals));
+					console.log("(NumOccupant:", AmountOfOccupancy, ")", "Typeof:", typeof(AmountOfOccupancy));
+					console.log("(NumActivity:", AmountOfHours, ")", "Typeof:", typeof(AmountOfHours));
+					console.log("(ElevatorResults:", AmountOfElevators, ")", "Typeof:", typeof(AmountOfElevators));
+				
+					
+					if (document.getElementById("UserSelect").value == "residential")
+
+					{
+						/*When the option "Residential" (with a Capital R) which has an assigned value of "residential" (small r) is selected by the user, it will set each
+						fields .style.display parameters accordingly to your objective. "block" (somehow) means "show" and "none" means no display.*/
+
+						//This is the same process for every <option> of the User Select drop down menu.
+
+						document.getElementById("NumAppartments").style.display = "block"; //Appartments
+						document.getElementById("NumFloor").style.display = "block"; //Floors
+						document.getElementById("NumBasement").style.display = "block"; //Basements
+						document.getElementById("NumBusiness").style.display = "none"; //Seperate businesses
+						document.getElementById("NumSpots").style.display = "none"; //parking spots
+						document.getElementById("NumCages").style.display = "none"; //lift cages
+						document.getElementById("NumRentals").style.display = "none"; //rental/tenet businesses
+						document.getElementById("NumOccupant").style.display = "none"; // occupency rate
+						document.getElementById("NumActivity").style.display = "none"; //hours of activity
+						document.getElementById("NumElevators").style.display = "block"; //numbers of elevators
+						console.log("Residential Selected");
+
+						//Call residential instructions to be executed and pass on the concerned arguments (aka value, aka User input) from the HTML elements 
+						ResidentialFunction(AmountOfAppartments, AmountOfFloors, AmountOfBasements);
+
+						
+					}
+
+					if (document.getElementById("UserSelect").value == "commercial")
+					{
+						document.getElementById("NumAppartments").style.display = "none";
+						document.getElementById("NumFloor").style.display = "block";
+						document.getElementById("NumBasement").style.display = "block";
+						document.getElementById("NumBusiness").style.display = "block";
+						document.getElementById("NumSpots").style.display = "block";
+						document.getElementById("NumCages").style.display = "block";
+						document.getElementById("NumRentals").style.display = "none";
+						document.getElementById("NumOccupant").style.display = "none";
+						document.getElementById("NumActivity").style.display = "none";
+						document.getElementById("NumElevators").style.display = "block";
+						console.log("Commercial Selected");
+
+						//Call commercial instructions to be executed and pass on the concerned arguments (aka value, aka User input) from the HTML elements 
+						CommercialFunction(AmountOfLiftcages);
+					}
+
+					if (document.getElementById("UserSelect").value == "corporate")
+					{
+						document.getElementById("NumAppartments").style.display = "none";
+						document.getElementById("NumFloor").style.display = "block";
+						document.getElementById("NumBasement").style.display = "block";
+						document.getElementById("NumBusiness").style.display = "none";
+						document.getElementById("NumSpots").style.display = "block";
+						document.getElementById("NumCages").style.display = "none";
+						document.getElementById("NumRentals").style.display = "block";
+						document.getElementById("NumOccupant").style.display = "block";
+						document.getElementById("NumActivity").style.display = "none";
+						document.getElementById("NumElevators").style.display = "block";
+						console.log("Corporate Selected");
+
+						//Call Corporate/Hybrid function be executed, and pass on the concerned arguments (aka value, aka User input) from the HTML elements
+						CorpFunction(AmountOfFloors, AmountOfBasements, AmountOfBusiness, AmountOfSpots, AmountOfLiftcages, AmountOfRentals, AmountOfOccupancy, AmountOfHours);
+					}
+
+					if (document.getElementById("UserSelect").value == "hybrid")
+					{
+						document.getElementById("NumAppartments").style.display = "none";
+						document.getElementById("NumFloor").style.display = "block";
+						document.getElementById("NumBasement").style.display = "block";
+						document.getElementById("NumBusiness").style.display = "block";
+						document.getElementById("NumSpots").style.display = "block";
+						document.getElementById("NumCages").style.display = "none";
+						document.getElementById("NumRentals").style.display = "none";
+						document.getElementById("NumOccupant").style.display = "block";
+						document.getElementById("NumActivity").style.display = "block";
+						document.getElementById("NumElevators").style.display = "block";
+						console.log("Hybrid Selected");
+
+						//Call Corporate/Hybrid functionton be executed, and pass on the concerned arguments (aka value, aka User input) from the HTML elements
+						CorpFunction(AmountOfFloors, AmountOfBasements, AmountOfBusiness, AmountOfSpots, AmountOfLiftcages, AmountOfRentals, AmountOfOccupancy, AmountOfHours);
+					}
+					if (document.getElementById("UserSelect").value == "nil")
+					{
+						document.getElementById("NumAppartments").style.display = "none";
+						document.getElementById("NumFloor").style.display = "none";
+						document.getElementById("NumBasement").style.display = "none";
+						document.getElementById("NumBusiness").style.display = "none";
+						document.getElementById("NumSpots").style.display = "none";
+						document.getElementById("NumCages").style.display = "none";
+						document.getElementById("NumRentals").style.display = "none";
+						document.getElementById("NumOccupant").style.display = "none";
+						document.getElementById("NumActivity").style.display = "none";
+						document.getElementById("NumElevators").style.display = "block";
+						console.log("Nothing to be displayed unless an option is selected in the dropdown menu")
+					}
+
+					
+
+				}
+
+				//Called function when User Select has "Commercial" selected: HAS PASSED CHECKS.
+				function CommercialFunction(CommercialAmountOfLiftCages)
+					{	/*If the type of building is Commercial, the number of elevator shafts
+						 to be deployed is specified (as a INT value) and the estimated number 
+						 of cages is equal to the number elevators required.*/
+						 
+						//Declare easy access to elevator result read-only field
+						var ElevatorField = document.getElementById("ElevatorResults");
+
+				//	    the number elevators       is equal to      the estimated number of cages
+						var CommercialAmountOfElevators = CommercialAmountOfLiftCages;
+
+						//Set <input> field's value to the value of the amount of elevators
+						ElevatorField.value = parseInt(CommercialAmountOfElevators);
+
+						
+
+
+
+
+						console.log("--------COMMERCIAL FUNCTION-------");
+						//Log all received values from concerned HTML fields
+						console.log(CommercialAmountOfLiftCages, ": RECEIVED USER LIFT CAGES INPUT");
+
+
+						console.log("---COMMERCIAL CALCULATIONS---");
+						//The following console.log is the best translation we could come up with for the task description.
+						//Keep at end of function for correct display.
+						console.log(ElevatorField.value, ": NUMBER OF ELEVATORS = NUMBER OF LIFTCAGES: ", CommercialAmountOfLiftCages);
+
+						//Send the end evelator results to the price function.
+						Price(CommercialAmountOfElevators);
+						
+						
+						
+					}
+
+				//Called function when User Select has "Residential" Selected : HAS PASSED CHECKS
+				function ResidentialFunction(ResidenceAmountOfAppartments, ResidenceAmountOfFloors, ResidenceAmountOfBasement)
+				
+					{
+						
+
+						//Declare easy access to elevator result read-only field. Eases your life.
+						var ElevatorFieldTheSecond = document.getElementById("ElevatorResults");
+
+
+						console.log("-------RESIDENTIAL FUNCTION-------");
+						//Log all received values from concerned HTML input fields
+						console.log(ResidenceAmountOfAppartments, ": RECEIVED USER APPARTMENT INPUT");
+						console.log(ResidenceAmountOfFloors, ": RECEIVED USER FLOOR INPUT");
+						console.log(ResidenceAmountOfBasement, ": RECEIVED USER BASEMENT INPUT");
+						
+						//If the type of building is Residential...
+
+						
+						console.log("---RESIDENTIAL CALCULATIONS---")
+						//The line below is what creates slices of 20 appartments. This line is still not fully understood.
+						var NumberOfShafts = Math.ceil(ResidenceAmountOfFloors / 20);
+
+						//Sameshit But even LESS understood! Acheived by observing template website script.
+						var NumberOfCages = Math.ceil(ResidenceAmountOfAppartments / (ResidenceAmountOfFloors * 6)); //This variable is marked as NaN. FIXME.
+
+
+						console.log(NumberOfShafts, "NUMBERS OF SHAFTS", "Typeof: ", typeof NumberOfShafts);
+						
+						//divide the number of apartments by the number of floors (excluding the number of basements) to obtain an average of doors per floor.
+						//As requierment of demanded task, the Average Door per floor is calculated, but remains unused.
+					
+				//  >	Average door per floor  is   Amount of Appartments  divided by   Amount of Floors
+						var AverageDoorsPerFloor = ResidenceAmountOfAppartments / ResidenceAmountOfFloors; //We don't even use this variable in any way why did you asked us to do it?
+
+						//The answer is (i think) The Number of Cages * Number of Shafts.
+						ElevatorFieldTheSecond.value = parseInt(NumberOfCages * NumberOfShafts);
+
+						
+
+						// console.log(AverageDoorsPerFloor, "NUMBER OF DOORS");
+						
+						//Send the end evelator results to the price function.
+						Price(ElevatorFieldTheSecond.value);
+						
+
+					}
+					
+				//Called function when User Select has "Corporate" or "Hybrid" selected.
+				function CorpFunction(CorpAmountOfFloors, CorpAmountOfBasements, CorpAmountOfBusinesses, CorpAmountOfSpots, CorpAmountOfLiftCages, CorpAmountOfRentals, CorpAmountOfOccupancy, CorpAmountOfActivity)
+				{
+
+					//Declare easy access to elevator result read-only field
+					var ElevatorFieldTheThird = document.getElementById("ElevatorResults");
+
+					//vars used to parse the data from string to int because for some DUMB FUCKING REASONS IT SENDS ME A FUCKING STRING. I blame Javascript.
+					var numberfloor = CorpAmountOfFloors;
+					var numberbasement = CorpAmountOfBasements;
+					var numberoccupant = CorpAmountOfOccupancy;
+					var FloorAndBasements = numberfloor + numberbasement;
+
+					// multiply the number of occupants per floor by the number of floors (including the number of basements) to obtain the total number of occupants.
+					var TotalNumberOfOccupancy = numberoccupant * (FloorAndBasements);
+
+					// The number of elevators required is determined by the number of occupants divided by 1000.
+					var numberelevators = (TotalNumberOfOccupancy / 1000);
+
+					//The number of floors (including the number of basements) is divided by 20 to obtain the number of elevator columns required.
+					var elevatorcolumns = Math.ceil((numberfloor + numberbasement) / 20);
+
+					//Then divide the number of elevators by the number of columns to get the number of elevators per column.
+					var elevatorpercolumn = Math.ceil(numberelevators / elevatorcolumns);
+
+					// The total number of elevators is determined by the number of elevators per column multiplied by the number of columns.
+					var totalnumberofelevators = parseInt(elevatorcolumns * elevatorpercolumn);
+
+
+					console.log("---CORPORATE/HYBRID FUNCTION---");
+					//Log all received values from concerned HTML fields
+					console.log(CorpAmountOfFloors, ": RECEIVED USER FLOOR INPUT");
+					console.log(CorpAmountOfBasements, ": RECEIVED USER BASEMENT INPUT");
+					console.log(CorpAmountOfBusinesses, ": RECEIVED USER BUSINESSES INPUT");
+					console.log(CorpAmountOfSpots, ": RECEIVED USER PARKING SPOTS INPUT");
+					console.log(CorpAmountOfLiftCages, ": RECEIVED USER LIFT CAGES INPUT");
+					console.log(CorpAmountOfRentals, ": RECEIVED USER RENTALS INPUT");
+					console.log(CorpAmountOfOccupancy, ": RECEIVED USER OCCUPANCY INPUT");
+					console.log(CorpAmountOfActivity, ": RECEIVED USER ACTIVITY/HOUR INPUT");
+
+					console.log("---CORPORATE/HYBRID CALCULATIONS---");
+
+					console.log(TotalNumberOfOccupancy, "TOTAL OCCUPANTS", typeof TotalNumberOfOccupancy);
+					console.log(numberelevators, "NUMBERS OF ELEVATORS", typeof numberelevators);
+					console.log(elevatorcolumns, "NUMBERS OF COLUMNS", typeof elevatorcolumns);
+					console.log(elevatorpercolumn, "ELEVATOR PER COLUMN", typeof elevatorpercolumn);
+
+
+					console.log(FloorAndBasements, "FLOOR + BASEMENTS")
+
+					ElevatorFieldTheThird.value = Math.ceil(totalnumberofelevators);
+					
+					//Send the end evelator results to the price function.
+					Price(ElevatorFieldTheThird.value);
+					
+					
+
+
+				}
+
+				//This function is called when the User selects one of the service quality radio buttons.
+				function Price(argument)
+				{	
+					//Easy access to final price read-only fields 
+					var PriceUnit = document.getElementById("PriceUnit");
+					var InstallCost = document.getElementById("InstallCost");
+					var TotalCost = document.getElementById("TotalCost");
+
+					//Get radio buttons
+					var StandardRadioButton = document.getElementById("StandardPricing");
+					var PremiumRadioButton = document.getElementById("PremiumPricing");
+					var ExceliumRadioButton = document.getElementById("ExceliumPricing");
+
+					//Make extra FUCKING SURE that the passed on argument (which is supposed to be the number of elevators) is a GOD DAMN NUMBER AND NOT A FUCKING STRING!!!
+					//You do NOT want to perform arithmetics on strings it's gonna traumatize you as it traumatized me.
+
+					// NOTE 2: FOR SOME DUMB FUCKING REASONS EVEN parseInt DOES EVEN PROPERLY CONVERT THE INCOMING VALUE TO AN INT
+					// SO IT HAS TO BE VERY VERY VERY SPECIFIED BY USING THE KEY WORD Number GOD I HATE JAVASCRIPT. REMEMBER THIS! REMEMBER. THIS!!!
+					var ElevatorIntNumber = Number(argument);
+
+
+					console.log("-------IS PRICE RIGHT?--------")
+					//Strict pricing policies requiers const(ant) variables to avoid unwanted changes to pricings.
+					const StandardPrice = 7565.00;
+					const PremiumPrice = 12345.00;
+					const ExceliumPrice = 15400.00;
+					console.log(ElevatorIntNumber, "INCOMING NUMBER OF ELEVATORS");
+
+					/*determine the unit price and thus multiply it by the number of cages previously 
+					calculated The same process is repeated for all radio button options.*/
+					if(StandardRadioButton.checked == true) 
+					{
+						console.log("----PERFORMING STANDARD PRICING CALCULATIONS----");
+						//Here we pass the ElevatorResults, and put them into the UnitCost read-only field.
+						PriceUnit.value = parseInt(StandardPrice * ElevatorIntNumber.toFixed(2));
+
+						//The Calculated Standard is the number of elevators * StandardPrice
+						var CalculatedStandard = StandardPrice * ElevatorIntNumber;
+						//We devide the CalculatedStandard by 100 to obtain a percentage
+						var StandardPercent = (CalculatedStandard / 100);
+						//We calculate 10% of that Calculated StandardPercent
+						var StandardFees = StandardPercent * 10;
+
+						//Install fees displayed in install cost read-only field
+						InstallCost.value = StandardFees.toFixed(2);
+						//Final price. toFixed for the decimal. It also returns it into as a string and not a number. Ironny.
+						TotalCost.value = (StandardFees + CalculatedStandard).toFixed(2);
+
+						//DEBUG LINES
+						console.log("StandardPrice: ",StandardPrice,"(", "Typeof:",typeof(StandardPrice), ")", "*", "ElevatorResults:","(", "typeof:", typeof(ElevatorIntNumber),")", ElevatorIntNumber, "=", CalculatedStandard);
+						console.log("CalculatedStandard / 100 =", StandardPercent);
+						console.log("StandardFees =", StandardPercent * 10);
+						console.log("Standard Fees Confirm:", StandardFees);
+						console.log(typeof(StandardFees),"Standard Fees", StandardFees,"Sum:", StandardFees + CalculatedStandard, CalculatedStandard, "Calculated Premium", typeof(CalculatedStandard));
+
+					}
+					if(PremiumRadioButton.checked == true)
+					{
+						console.log("----PERFORMING PREMIUM PRICING CALCULATIONS----");
+						PriceUnit.value = PremiumPrice * ElevatorIntNumber.toFixed(2);
+
+						var CalculatedPremium = PremiumPrice * ElevatorIntNumber;
+						var PremiumPercent = (CalculatedPremium / 100);
+						var PremiumFees = PremiumPercent * 13;
+
+						InstallCost.value = PremiumFees.toFixed(2);
+						TotalCost.value = (PremiumFees + CalculatedPremium).toFixed(2);
+						console.log("PremiumPrice: ",PremiumPrice,"(", "Typeof:",typeof(PremiumPrice), ")", "*", "ElevatorResults:","(", "typeof:", typeof(ElevatorIntNumber),")", ElevatorIntNumber, "=", CalculatedPremium);
+						console.log("CalculatedPremium / 100 =", PremiumPercent);
+						console.log("PremiumFees =", PremiumPercent * 13);
+						console.log("Premium Fees Confirm:", PremiumFees);
+						console.log(typeof(PremiumFees),"Premium Fees", PremiumFees,"Sum", PremiumFees + CalculatedPremium, CalculatedPremium, "Calculated Premium", typeof(CalculatedPremium));
+					}
+					if(ExceliumRadioButton.checked == true)
+					{
+						console.log("----PERFORMING EXCELIUM PRICING CALCULATIONS----")
+						PriceUnit.value = ExceliumPrice * ElevatorIntNumber.toFixed(2);
+
+						var CalculatedExcelium = ExceliumPrice * ElevatorIntNumber;
+						var ExceliumPercent = (CalculatedExcelium / 100);
+						var ExceliumFees = ExceliumPercent * 16;
+
+						InstallCost.value = ExceliumFees.toFixed(2);
+						TotalCost.value = (ExceliumFees + CalculatedExcelium).toFixed(2);
+						console.log("ExceliumPrice: ",ExceliumPrice,"(", "Typeof:",typeof(ExceliumPrice), ")", "*", "ElevatorResults:","(", "typeof:", typeof(ElevatorIntNumber),")", ElevatorIntNumber, "=", CalculatedExcelium);
+						console.log("CalculatedExcelium / 100 =", ExceliumPercent);
+						console.log("ExceliumFees =", ExceliumPercent * 16);
+						console.log("Excelium Fees Confirm:", ExceliumFees);
+						console.log(typeof(ExceliumFees),"Excelium Fees", ExceliumFees,"Sum:", ExceliumFees + CalculatedExcelium, CalculatedExcelium, "Calculated Excelium", typeof(CalculatedExcelium));
+						
+					}
+
+					
+				}
+
+				//Called function when User Select switches item from drop down menu, preventing unconcerned User Input to miscalculate final estimate.
+				function ResetValues()
+				{
+						var a1 = 0;
+
+						// LOLOLOLOLOLOLOLOLOLOLOLOLOL
+
+
+						
+						Call(a1, a1, a1, a1, a1, a1, a1, a1, a1, a1, a1, a1, a1);
+				}
+				let arr = new Array (1, 2, 3, 4, 5, 6, 7, 8);
+				function DemoLoop() {
+					for (let counter = 0; counter < arr.length; counter++) {
+  						console.log(arr[counter], "Wow this is awesome");
+						}
+				}
+			
+			</script>
