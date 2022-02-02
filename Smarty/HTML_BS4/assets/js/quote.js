@@ -1,4 +1,38 @@
 
+$(document).ready(function() {
+    hideAllFields();
+    $("#building-type").on("change", function() {
+        
+        refreshFields()
+        
+    })
+})
+
+// Show appropriate fields based on building type
+function refreshFields() {
+    // Hide all fields
+    hideAllFields()
+
+    let buildingType = $("#building-type").val()
+    // Show appropriate fields
+
+    if(buildingType == BUILDING_TYPE_RESIDENTIAL) {
+        $("#number-of-apartments, #number-of-floors, #number-of-basements").show();
+        //$("#number-of-basements :input").val();
+    } else if(buildingType == BUILDING_TYPE_COMMERCIAL) {
+        $("#number-of-floors, #number-of-basements, #number-of-companies, #number-of-parking-spots, #number-of-elevators").show();
+    } else if(buildingType == BUILDING_TYPE_CORPORATE) {
+        $("#number-of-floors, #number-of-basements, #number-of-parking-spots, #number-of-corporations, #maximum-occupancy").show();
+    } else if(buildingType == BUILDING_TYPE_HYBRID) {
+        $("#number-of-floors, #number-of-basements, #number-of-companies, #number-of-parking-spots, #maximum-occupancy, #business-hours").show();
+    }
+
+
+}
+
+function hideAllFields() {
+    $("#number-of-apartments, #number-of-floors, #number-of-basements, #number-of-elevators, #number-of-companies, #number-of-parking-spots, #number-of-corporations, #maximum-occupancy, #business-hours").hide();
+}
 
 var theForm = document.forms ["elevatorform"];
 
@@ -8,9 +42,9 @@ var BUILDING_TYPE_CORPORATE = "corporate";
 var BUILDING_TYPE_HYBRID = "hybrid";
 
 var installationPrices = new Array ();
-Installation["Standard"]=20;
-Installation["Premium"]=25;
-Installation["Excelium"]=35;
+installationPrices["Standard"]=20;
+installationPrices["Premium"]=25;
+installationPrices["Excelium"]=35;
 
 function getInstallationPrice()
 {
