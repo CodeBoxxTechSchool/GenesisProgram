@@ -157,7 +157,7 @@
 
 <!-- QUOTE FORM -->
 <!-- Drop down scroll and buttons-->
-<form>
+<form action="" id="elevatorform">
 
 	<select id="building-type">
 		<option value="">-- SELECT --</option>
@@ -166,7 +166,6 @@
 		<option value="corporate">Corporate</option>
 		<option value="hybrid">Hybrid</option>
 	</select>
-
 	<div id="number-of-apartments">
 		<label>Number of apartments:</label>
 		<input type="number">
@@ -203,13 +202,14 @@
 		<label>Business hours:</label>
 		<input type="number">
 	</div>
+	<br><br>
 
 	<!--Radio Button-->
-		<input type="radio" id="Standard" name="Installation" value="Standard>"
+		<input type="radio" id="Standard" name="selectedInstallation" value="Standard>"
 		<label for="Standard">Standard</label><br>
-		<input type="radio" id="Premium" name="Installation" value="Premium>"
+		<input type="radio" id="Premium" name="selectedInstallation" value="Premium>"
 		<label for="Premium">Premium</label><br>
-		<input type="radio" id="Excelium" name="Installation" value="Excelium>"
+		<input type="radio" id="Excelium" name="selectedInstallation" value="Excelium>"
 		<label for="Excelium">Excelium</label><br>
 	</form>
 
