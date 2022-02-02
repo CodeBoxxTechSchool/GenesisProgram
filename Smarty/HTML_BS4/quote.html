@@ -155,61 +155,69 @@
 			</div>
 
 
+<!-- QUOTE FORM -->
+<!-- Drop down scroll and buttons-->
+<form>
+
+	<select id="building-type">
+		<option value="">-- SELECT --</option>
+		<option value="residential">Residential</option>
+		<option value="commercial">Commercial</option>
+		<option value="corporate">Corporate</option>
+		<option value="hybrid">Hybrid</option>
+	</select>
+
+	<div id="number-of-apartments">
+		<label>Number of apartments:</label>
+		<input type="number">
+	</div>
+	<div id="number-of-floors">
+		<label>Number of floors:</label>
+		<input type="number">
+	</div>
+	<div id="number-of-basements">
+		<label>Number of basements:</label>
+		<input type="number">
+	</div>
+	<div id="number-of-elevators">
+		<label>Number of elevators:</label>
+		<input type="number">
+	</div>
+	<div id="number-of-companies">
+		<label>Number of companies:</label>
+		<input type="number">
+	</div>
+	<div id="number-of-parking-spots">
+		<label>Number of parking spots:</label>
+		<input type="number">
+	</div>
+	<div id="number-of-corporations">
+		<label>Number of corporations:</label>
+		<input type="number">
+	</div>
+	<div id="maximum-occupancy">
+		<label>Maximum occupancy:</label>
+		<input type="number">
+	</div>
+	<div id="business-hours">
+		<label>Business hours:</label>
+		<input type="number">
+	</div>
+
+	<!--Radio Button-->
+		<input type="radio" id="Standard" name="Installation" value="Standard>"
+		<label for="Standard">Standard</label><br>
+		<input type="radio" id="Premium" name="Installation" value="Premium>"
+		<label for="Premium">Premium</label><br>
+		<input type="radio" id="Excelium" name="Installation" value="Excelium>"
+		<label for="Excelium">Excelium</label><br>
+	</form>
 
 
 
-			<form action="php/contact.php" method="post" enctype="multipart/form-data">
-				<fieldset>
-					<input type="hidden" name="action" value="contact_send" />
 
-					<div class="row">
-							<div class="col-md-4">
-								<label for="contact:name">Contact Full Name *</label>
-								<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
-							</div>
-							<div class="col-md-4">
-								<label for="contact:name">Business Name *</label>
-								<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
-							</div>
-							<div class="col-md-4">
-								<label for="contact:email">E-mail*</label>
-								<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
-							</div>
-							<div class="col-md-4">
-								<label for="contact:phone">Phone Number</label>
-								<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
-							</div>
-							<div class="col-md-4">
-								<label for="contact:phone">Project Name</label>
-								<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
-							</div>
-					</div>
-					<div class="row">
-							<div class="col-md-8">
-								<label for="contact:subject">Project Description *</label>
-								<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
-							</div>
-							<div class="col-md-4">
-								<label for="contact_department">Installation</label>
-								<select class="form-control pointer" name="contact[department]">
-									<option value="">--- Select ---</option>
-									<option value="Standard">Standard</option>
-									<option value="Premium">Premium</option>
-									<option value="Excelium">Excelium</option>
-								</select>
-							</div>
-					</div>
-					<div class="row">
-							<div class="col-md-12">
-								<label for="contact:message">Message *</label>
-								<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
-							</div>
-					</div>
-					</div>
 
-				</fieldset>
-				</div>
-			</form>
+
 
 		</div>
 			<!-- FOOTER -->
@@ -276,9 +284,6 @@
 		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 
 		<script src="assets/js/scripts.js"></script>
-		
-		<!-- STYLESWITCHER - REMOVE -->
-		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
 
 		<!-- REVOLUTION SLIDER -->
 		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
@@ -287,6 +292,8 @@
 
 		<!-- PAGELEVEL SCRIPTS -->
 		<script src="assets/js/contact.js"></script>
+
+		<script src="assets/js/quote.js"></script>
 
 		<!-- 
 			GMAP.JS 
