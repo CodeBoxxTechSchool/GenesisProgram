@@ -1,14 +1,18 @@
-
 $(document).ready(function () {
     hideAllFields();
     $("#building-type").on("change", function () {
-
         refreshFields()
-
     })
-    $(".inputfield input").on("input", calculateTotal)
-})
 
+    $(".inputfield input").on("input", function() {
+        calculateTotal();
+    })
+
+    $("input[type='radio'][name='product-type']").on("input", function() {
+        calculateTotal();
+    })
+})
+console.log("what happened")
 // Show appropriate fields based on building type
 function refreshFields() {
     // Hide all fields
@@ -19,7 +23,6 @@ function refreshFields() {
 
     if (buildingType == BUILDING_TYPE_RESIDENTIAL) {
         $("#number-of-apartments, #number-of-floors, #number-of-basements").show();
-        //$("#number-of-basements :input").val();
     } else if (buildingType == BUILDING_TYPE_COMMERCIAL) {
         $("#number-of-floors, #number-of-basements, #number-of-companies, #number-of-parking-spots, #number-of-elevators").show();
     } else if (buildingType == BUILDING_TYPE_CORPORATE) {
@@ -47,6 +50,7 @@ installationPrices["Standard"] = 20;
 installationPrices["Premium"] = 25;
 installationPrices["Excelium"] = 35;
 
+/*
 function getInstallationPrice() {
     var installationPrice = 0;
     var theForm = document.forms["elevatorform"];
@@ -59,6 +63,7 @@ function getInstallationPrice() {
     }
     return installationPrice
 }
+*/
 
 function getTotal() {
     var installationPrice = installationPrice;
@@ -66,11 +71,7 @@ function getTotal() {
     //display the result
     document.getElementById('installationPrice').innerHTML =
         "Total Price For Installation $" + installationPrice;
-
 }
-
-var whatever = elvAmountResidentialBuilding(4, 5, 3).finalPrice
-
 //oninput calculateTotal
 function calculateTotal() {
     let buildingType = $("#building-type").val()
@@ -85,40 +86,70 @@ function calculateTotal() {
     }
 
     if (buildingType == BUILDING_TYPE_RESIDENTIAL) {
-        quote.amountOfElevators = elvAmountResidentialBuilding(
-            $("#number-of-apartments input").val(),
-            $("#number-of-floors input").val(),
-            $("#number-of-basements input").val())
+            quote.amountOfElevators = getResidentialAmountOfElevators();
+
     } else if (buildingType == BUILDING_TYPE_COMMERCIAL) {
-        quote.amountOfElevators = $("#number-of-elevators input").val()
     } else if (buildingType == BUILDING_TYPE_CORPORATE) {
-        $("#number-of-floors, #number-of-basements, #number-of-parking-spots, #number-of-corporations, #maximum-occupancy").show();
     } else if (buildingType == BUILDING_TYPE_HYBRID) {
-        $("#number-of-floors, #number-of-basements, #number-of-companies, #number-of-parking-spots, #maximum-occupancy, #business-hours").show();
     }
 
     //find unit price
-    quote.unitPriceOfElevators = unitprice()
-    quote.totalPriceOfElevators= quote.amountOfElevators * quote.unitPriceOfElevators
+    quote.unitPriceOfElevators = unitPrice()
+    quote.totalPriceOfElevators = quote.amountOfElevators * unitPriceOfElevators;
+
+    console.log("amount of elevators: " + quote.amountOfElevators)
+    console.log("unit price: " + quote.unitPriceOfElevators)
+    quote.totalPriceOfElevators = quote.amountOfElevators * quote.unitPriceOfElevators
+    
+    
     //find installation fee
-    quote.installationFee = quote.totalPriceOfElevators * calcInstallationFee()
+    //quote.installationFee = quote.totalPriceOfElevators * calcInstallationFee()
     //calculate total
-    quote.finalPrice = quote.totalPriceOfElevators + quote.installationFee
+    //quote.finalPrice = quote.totalPriceOfElevators + quote.installationFee
     //display results
-    $("#final-price input").val(quote.finalPrice)
-    $("#installation-fee input").val(quote.installationFee)
+    //$("#final-price input").val(quote.finalPrice)
+    //$("#installation-fee input").val(quote.installationFee)
     $("#total-price-of-elevators input").val(quote.totalPriceOfElevators)
     $("#price-per-elevator input").val(quote.unitPriceOfElevators)
     $("#amount-of-elevators input").val(quote.amountOfElevators)
 
 }
-// if statement pour retourner la value
-function unitprice() {
-    return 6
+
+
+// Returns unit price based on product type
+function unitPrice() {
+    let productType = $("input[name='product-type']:checked").val();
+    if(productType == "standard") {
+        return 7565;
+    } else if(productType == "premium") {
+        return 12345;
+    } else if(productType == "excelium") {
+        return 15400;
+    }
 }
 
+// Returns installation fee based on product type
 function calcInstallationFee() {
-    return 0.1
+    let productType = $("input[name='product-type']:checked").val();
+    if(productType == "standard") {
+        return 0.1;
+    } else if(productType == "premium") {
+        return 0.13;
+    } else if(productType == "excelium") {
+        return 0.16;
+    }
+}
+
+function getResidentialAmountOfElevators() {
+    // Retrieve needed values
+    let numberOfApartments = $("#number-of-apartments input").val();
+    let numberOfFloors = $("#number-of-floors input").val();
+
+    // Do calculations and return number of elevators required
+    let avgApartmentsPerFloor = Math.ceil(numberOfApartments / numberOfFloors);
+    let elevatorsRequired = Math.ceil(avgApartmentsPerFloor / 6);
+    let nbColumnsRequired = Math.ceil(numberOfFloors / 20);
+    return elevatorsRequired * nbColumnsRequired;
 }
 
 function elvAmountResidentialBuilding(number_of_apartments, number_of_floors, number_of_basements) {
@@ -133,5 +164,3 @@ function elvAmountHybridBuilding(number_of_floors, numbers_of_basements, number_
     var amountOfElevators = 0
     return quoteResults;
 }
-
-// //noms de variables, faire les 4 fonctions, fonction qui handle le show-hide (toggle), fonction de peser sur le bouton (laquelle est caller).
