@@ -12,7 +12,7 @@ $(document).ready(function () {
         calculateTotal();
     })
 })
-console.log("what happened")
+
 // Show appropriate fields based on building type
 function refreshFields() {
     // Hide all fields
@@ -38,8 +38,6 @@ function hideAllFields() {
     $("#number-of-apartments, #number-of-floors, #number-of-basements, #number-of-elevators, #number-of-companies, #number-of-parking-spots, #number-of-corporations, #maximum-occupancy, #business-hours").hide();
 }
 
-var theForm = document.forms["elevatorform"];
-
 var BUILDING_TYPE_RESIDENTIAL = "residential";
 var BUILDING_TYPE_COMMERCIAL = "commercial";
 var BUILDING_TYPE_CORPORATE = "corporate";
@@ -49,21 +47,6 @@ var installationPrices = new Array();
 installationPrices["Standard"] = 20;
 installationPrices["Premium"] = 25;
 installationPrices["Excelium"] = 35;
-
-/*
-function getInstallationPrice() {
-    var installationPrice = 0;
-    var theForm = document.forms["elevatorform"];
-    var selectedInstallation = theForm.elements["selectedInstallation"];
-    for (var i = 0; i < selectedInstallation.lenght; i++) {
-        if (selectedInstallation[i].checked) {
-            installationPrice = installationPrices[selectedInstallation[i].value];
-            break;
-        }
-    }
-    return installationPrice
-}
-*/
 
 function getTotal() {
     var installationPrice = installationPrice;
@@ -94,21 +77,23 @@ function calculateTotal() {
     }
 
     //find unit price
+    console.log(quote.unitPriceOfElevators, "blabla")
     quote.unitPriceOfElevators = unitPrice()
-    quote.totalPriceOfElevators = quote.amountOfElevators * unitPriceOfElevators;
+    quote.totalPriceOfElevators = quote.amountOfElevators * quote.unitPriceOfElevators;
 
+    console.log(quote.amountOfElevators);
     console.log("amount of elevators: " + quote.amountOfElevators)
     console.log("unit price: " + quote.unitPriceOfElevators)
     quote.totalPriceOfElevators = quote.amountOfElevators * quote.unitPriceOfElevators
     
     
-    //find installation fee
-    //quote.installationFee = quote.totalPriceOfElevators * calcInstallationFee()
-    //calculate total
-    //quote.finalPrice = quote.totalPriceOfElevators + quote.installationFee
-    //display results
-    //$("#final-price input").val(quote.finalPrice)
-    //$("#installation-fee input").val(quote.installationFee)
+    // find installation fee
+    quote.installationFee = quote.totalPriceOfElevators * calcInstallationFee()
+    // calculate total
+    quote.finalPrice = quote.totalPriceOfElevators + quote.installationFee
+    // display results
+    $("#final-price input").val(quote.finalPrice)
+    $("#installation-fee input").val(quote.installationFee)
     $("#total-price-of-elevators input").val(quote.totalPriceOfElevators)
     $("#price-per-elevator input").val(quote.unitPriceOfElevators)
     $("#amount-of-elevators input").val(quote.amountOfElevators)
@@ -127,7 +112,7 @@ function unitPrice() {
         return 15400;
     }
 }
-
+console.log(unitPrice)
 // Returns installation fee based on product type
 function calcInstallationFee() {
     let productType = $("input[name='product-type']:checked").val();
