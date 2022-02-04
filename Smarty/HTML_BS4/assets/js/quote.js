@@ -58,7 +58,6 @@ function getTotal() {
 //oninput calculateTotal
 function calculateTotal() {
     let buildingType = $("#building-type").val()
-    // Show appropriate fields
 
     var quote = {
         amountOfElevators: 0,
@@ -70,25 +69,19 @@ function calculateTotal() {
 
     if (buildingType == BUILDING_TYPE_RESIDENTIAL) {
             quote.amountOfElevators = getResidentialAmountOfElevators();
-
     } else if (buildingType == BUILDING_TYPE_COMMERCIAL) {
+            quote.amountOfElevators = $("#number-of-elevators").val;
     } else if (buildingType == BUILDING_TYPE_CORPORATE) {
+            quote.amountOfElevators = getHybridorCorporateAmountofElevators();
     } else if (buildingType == BUILDING_TYPE_HYBRID) {
-    }
+            quote.amountOfElevators = getHybridOrCorporateAmountofElevators();
+    } 
 
     //find unit price
-    console.log(quote.unitPriceOfElevators, "blabla")
     quote.unitPriceOfElevators = unitPrice()
     quote.totalPriceOfElevators = quote.amountOfElevators * quote.unitPriceOfElevators;
-
-    console.log(quote.amountOfElevators);
-    console.log("amount of elevators: " + quote.amountOfElevators)
-    console.log("unit price: " + quote.unitPriceOfElevators)
-    quote.totalPriceOfElevators = quote.amountOfElevators * quote.unitPriceOfElevators
-    
-    
     // find installation fee
-    quote.installationFee = quote.totalPriceOfElevators * calcInstallationFee()
+    quote.installationFee = Math.ceil(quote.totalPriceOfElevators * calcInstallationFee())
     // calculate total
     quote.finalPrice = quote.totalPriceOfElevators + quote.installationFee
     // display results
@@ -136,16 +129,25 @@ function getResidentialAmountOfElevators() {
     let nbColumnsRequired = Math.ceil(numberOfFloors / 20);
     return elevatorsRequired * nbColumnsRequired;
 }
+function getHybridOrCorporateAmountofElevators(){
+    let occupantsPerFloor = $("#maximum-occupancy").val();
+    let numberOfFloors = $("#number-of-floors").val();
+    
+    let totalNumberOfOccupants = occupantsPerFloor * numberOfFloors;
+    let elevatorsRequired = totalNumberOfOccupants / 1000
+    return elevatorsRequired
+}
 
-function elvAmountResidentialBuilding(number_of_apartments, number_of_floors, number_of_basements) {
-    var amountOfElevators = (number_of_basements * number_of_floors)
-    return amountOfElevators
-}
-function elvAmountCorporateBuilding(number_of_floors, numbers_of_basements, number_of_parking_spots, number_of_corporations, maximum_occupancy) {
-    var amountOfElevators = 0
-    return amountOfElevators;
-}
-function elvAmountHybridBuilding(number_of_floors, numbers_of_basements, number_of_companies, number_of_parking_spots, maximum_occupancy, business_hours) {
-    var amountOfElevators = 0
-    return quoteResults;
-}
+
+// function elvAmountResidentialBuilding(number_of_apartments, number_of_floors, number_of_basements) {
+//     var amountOfElevators = (number_of_basements * number_of_floors)
+//     return amountOfElevators
+// }
+// function elvAmountCorporateBuilding(number_of_floors, numbers_of_basements, number_of_parking_spots, number_of_corporations, maximum_occupancy) {
+//     var amountOfElevators = 0
+//     return amountOfElevators;
+// }
+// function elvAmountHybridBuilding(number_of_floors, numbers_of_basements, number_of_companies, number_of_parking_spots, maximum_occupancy, business_hours) {
+//     var amountOfElevators = 0
+//     return quoteResults;
+// }
