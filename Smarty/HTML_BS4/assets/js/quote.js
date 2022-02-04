@@ -4,11 +4,11 @@ $(document).ready(function () {
         refreshFields()
     })
 
-    $(".inputfield input").on("input", function() {
+    $(".inputfield input").on("input", function () {
         calculateTotal();
     })
 
-    $("input[type='radio'][name='product-type']").on("input", function() {
+    $("input[type='radio'][name='product-type']").on("input", function () {
         calculateTotal();
     })
 })
@@ -30,7 +30,7 @@ function refreshFields() {
     } else if (buildingType == BUILDING_TYPE_HYBRID) {
         $("#number-of-floors, #number-of-basements, #number-of-companies, #number-of-parking-spots, #maximum-occupancy, #business-hours").show();
     }
-
+    calculateTotal()
 
 }
 
@@ -68,52 +68,52 @@ function calculateTotal() {
     }
 
     if (buildingType == BUILDING_TYPE_RESIDENTIAL) {
-            quote.amountOfElevators = getResidentialAmountOfElevators();
+        quote.amountOfElevators = getResidentialAmountOfElevators();
     } else if (buildingType == BUILDING_TYPE_COMMERCIAL) {
-            quote.amountOfElevators = $("#number-of-elevators").val;
-    } else if (buildingType == BUILDING_TYPE_CORPORATE) {
-            quote.amountOfElevators = getHybridorCorporateAmountofElevators();
-    } else if (buildingType == BUILDING_TYPE_HYBRID) {
-            quote.amountOfElevators = getHybridOrCorporateAmountofElevators();
-    } 
-
+        quote.amountOfElevators = $("#number-of-elevators input").val();
+    } else if (buildingType == BUILDING_TYPE_CORPORATE || buildingType == BUILDING_TYPE_HYBRID) {
+        quote.amountOfElevators = getHybridOrCorporateAmountofElevators();
+    }
     //find unit price
     quote.unitPriceOfElevators = unitPrice()
     quote.totalPriceOfElevators = quote.amountOfElevators * quote.unitPriceOfElevators;
     // find installation fee
-    quote.installationFee = Math.ceil(quote.totalPriceOfElevators * calcInstallationFee())
+    quote.installationFee = quote.totalPriceOfElevators * calcInstallationFee()
     // calculate total
-    quote.finalPrice = quote.totalPriceOfElevators + quote.installationFee
+    quote.finalPrice = parseFloat(quote.totalPriceOfElevators) + parseFloat(quote.installationFee)
     // display results
-    $("#final-price input").val(quote.finalPrice)
-    $("#installation-fee input").val(quote.installationFee)
-    $("#total-price-of-elevators input").val(quote.totalPriceOfElevators)
-    $("#price-per-elevator input").val(quote.unitPriceOfElevators)
-    $("#amount-of-elevators input").val(quote.amountOfElevators)
+    $("#final-price input").val(formatPriceString(quote.finalPrice))
+    $("#installation-fee input").val(formatPriceString(quote.installationFee))
+    $("#total-price-of-elevators input").val(formatPriceString(quote.totalPriceOfElevators))
+    $("#price-per-elevator input").val(formatPriceString(quote.unitPriceOfElevators))
+    $("#amount-of-elevators input").val(isNaN(quote.amountOfElevators) ? 0: quote.amountOfElevators)
 
 }
 
+function formatPriceString(inputString){
+    // return inputString.toLocaleString(undefined, {minimumFractionDigits:2}) + "$"
+    return (isNaN(inputString)? 0 : inputString.toLocaleString(undefined, {minimumFractionDigits:2})) + "$"
+}
 
 // Returns unit price based on product type
 function unitPrice() {
     let productType = $("input[name='product-type']:checked").val();
-    if(productType == "standard") {
+    if (productType == "standard") {
         return 7565;
-    } else if(productType == "premium") {
+    } else if (productType == "premium") {
         return 12345;
-    } else if(productType == "excelium") {
+    } else if (productType == "excelium") {
         return 15400;
     }
 }
-console.log(unitPrice)
 // Returns installation fee based on product type
 function calcInstallationFee() {
     let productType = $("input[name='product-type']:checked").val();
-    if(productType == "standard") {
+    if (productType == "standard") {
         return 0.1;
-    } else if(productType == "premium") {
+    } else if (productType == "premium") {
         return 0.13;
-    } else if(productType == "excelium") {
+    } else if (productType == "excelium") {
         return 0.16;
     }
 }
@@ -129,12 +129,12 @@ function getResidentialAmountOfElevators() {
     let nbColumnsRequired = Math.ceil(numberOfFloors / 20);
     return elevatorsRequired * nbColumnsRequired;
 }
-function getHybridOrCorporateAmountofElevators(){
-    let occupantsPerFloor = $("#maximum-occupancy").val();
-    let numberOfFloors = $("#number-of-floors").val();
-    
+function getHybridOrCorporateAmountofElevators() {
+    let occupantsPerFloor = $("#maximum-occupancy input").val();
+    let numberOfFloors = $("#number-of-floors input").val();
+
     let totalNumberOfOccupants = occupantsPerFloor * numberOfFloors;
-    let elevatorsRequired = totalNumberOfOccupants / 1000
+    let elevatorsRequired = Math.ceil(totalNumberOfOccupants / 1000)
     return elevatorsRequired
 }
 
