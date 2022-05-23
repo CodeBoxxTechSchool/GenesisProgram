@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Smarty - Multipurpose + Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- REVOLUTION SLIDER -->
+		<link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/blue.css" rel="stylesheet" type="text/css" id="color_scheme" />
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation">
+
+
+
+
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				.scroll			= reveal on scroll up (should be not used with topBar)
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- Logo -->
+						<a class="logo float-left scrollTo" href="#top">
+							<img src="demo_files/images/R2.png" alt="" />
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<nav class="nav-main">
+
+								<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									<li class="active"><!-- HOME -->
+										<a href="#home">
+											HOME
+										</a>
+									</li>
+									<li><!-- SERVICES -->
+										<a href="#services">
+											SERVICES
+										</a>
+									</li>
+									<li><!-- PORTFOLIO -->
+										<a href="#portfolio">
+											PORTFOLIO
+										</a>
+									</li>
+									<li><!-- NEWS -->
+										<a href="#news">
+											NEWS
+										</a>
+									<li><!-- CLIENTS -->
+										<a href="#clients">
+											CLIENTS
+										</a>
+									</li>
+									<li><!-- CONTACT -->
+										<a href="#contact">
+											CONTACT
+										</a>
+									</li>
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+
+
+
+
+			<!-- START -->
+			<section class="b-0 pt-0 pb-0" style="background-color: #fbfbfb;">
+		
+				<div class="container text-center">
+					
+					<div class="clearfix pt-80 pb-80">
+						<h1 class="m-0 fs-50 text-dark fw-600" data-bgtext="Smarty">Smarty Template</h1>
+						<p class="lead fs-30 text-dark mb-0">Bootstrap 3 + Bootstrap 4</p>
+						<h3 class="fs-12 text-dark">BUILD <b>EASY</b> AND <b>FAST</b>! <span><u>NO JAVASCRIPT KNOWLEDGE REQUIRED</u></span> WITH SMARTY!</h3>
+
+
+						<a href="https://www.facebook.com/stepofweb" target="_blank" class="social-icon social-icon-border b-0 btn-round social-facebook btn-shadow-1 mb-0" data-toggle="tooltip" data-placement="top" title="Facebook">
+							<i class="icon-facebook"></i>
+							<i class="icon-facebook"></i>
+						</a>
+
+						<a href="https://www.twitter.com/stepofweb" target="_blank" class="social-icon social-icon-border b-0 btn-round social-twitter btn-shadow-1 mb-0" data-toggle="tooltip" data-placement="top" title="Twitter">
+							<i class="icon-twitter"></i>
+							<i class="icon-twitter"></i>
+						</a>
+
+					</div>
+
+
+					<div class="row pb-0">
+						<div class="col-lg-10 offset-lg-1">
+							<img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="demo_files/images/start/v2/iso2.png" alt="product image" />
+						</div>
+					</div>
+
+				</div>
+
+			</section>
+			<!-- /START -->
+
+
+
+
+
+
+			<!-- CALLOUT -->
+			<div class="alert mt-6 mb-6 b-0 text-xs-center" style="background-color: #fbfbfb;">
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-md-9 col-sm-12"><!-- left text -->
+							<h3 class="mb-0 fw-200">
+								<b>Time is valuable!</b> Start a new project in a smart way!
+
+								<span class="word-rotator" data-delay="2000">
+									<span class="items">
+										<span>Easy!</span>
+										<span>Fast!</span>
+										<span>Smart!</span>
+									</span>
+								</span><!-- /word rotator -->
+							</h3>
+							<p class="mb-0 fw-200 fs-15">
+								Lifetime Free Updates included. <b>It's ok to be smart!</b>
+							</p>
+						</div><!-- /left text -->
+
+						<div class="col-12 mt-15 hidden-md-up"><!-- mobile spacer -->&nbsp;</div>
+						
+						<div class="col-12 col-lg-3 col-md-3 col-sm-12"><!-- right btn -->
+							<a target="_blank" rel="nofollow" href="https://wrapbootstrap.com/theme/smarty-website-admin-rtl-WB02DSN1B" class="btn btn-3d btn-blue btn-shadow-1 btn-round btn-lg fs-16 mb-0">
+								<i class="et-download"></i> 
+								GET SMARTY <b>NOW</b>
+							</a>
+						</div><!-- /right btn -->
+
+					</div>
+
+				</div>
+			</div>
+			<!-- /CALLOUT -->
+
+
+
+
+
+			<!-- Packages ; Main Multipurpose -->
+			<section class="b-0 mt-6 mb-6">
+				<div class="leftTriangle invert hidden-md-down" style="background-color: #f9fdf9;"><!-- trianble background --></div>
+				<div class="rightTriangle invert hidden-md-down" style="background-color: #fbf9f0;"><!-- trianble background --></div>
+				
+				<div class="container">
+					
+					<div class="row">
+						
+						<div class="col-lg-6 text-left text-md-center">
+
+							<a href="start-package.html" class="mt-30 mb-30 d-block">
+							
+								<h1 class="mb-0 fs-50 fw-200">Packages</h1>
+								<h3 class="font-lato fs-17 d-block text-muted m-0">
+									More than a single template.<br>
+									Complete niche templates ready to use.
+								</h3>
+
+								<!-- customizable color hr -->
+								<hr class="hr-color hr-success w-100">
+
+								<div class="mt-60">
+									<span class="btn btn-light btn-shadow-1 btn-round fs-16 mb-0">
+										<i class="et-trophy text-success"></i> &nbsp;
+										EXPLORE PACKAGES
+									</span>
+								</div>
+							
+								<div class="clearfix mt-80 hidden-md-down"><!-- optical spacer --></div>
+
+							</a>
+
+						</div>
+
+						<div class="col-lg-6 text-right text-md-center">
+
+							<a href="start-multipage.html" class="mt-30 mb-30 d-block">
+								
+								<h1 class="mb-0 fs-50 fw-200">Main Multipurpose</h1>
+								<h3 class="font-lato fs-17 d-block text-muted m-0">
+									Ready to use layouts &amp; elements! <span class="text-danger">Admin template included!</span>
+								</h3>
+
+								<!-- customizable color hr -->
+								<hr class="hr-color hr-warning w-100">
+
+								<div class="mt-60">
+									<span class="btn btn-light btn-shadow-1 btn-round fs-16 mb-0">
+										<i class="et-expand text-warning"></i> &nbsp;
+										EXPLORE MULTIPURPOSE
+									</span>
+								</div>
+
+								<div class="clearfix mt-80 hidden-md-down"><!-- optical spacer --></div>
+
+							</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+			<!-- /Packages ; Main Multipurpose -->
+
+
+
+			<hr class="hidden-md-up">
+
+
+
+
+			<!-- eCommerce ; Onepage fbf8ff -->
+			<section class="b-0 mt-6 mb-6">
+				<div class="rightTriangle hidden-md-down" style="background-color: #f9fdff;"><!-- trianble background --></div>
+				<div class="leftTriangle hidden-md-down" style="background-color: #fffaf5;"><!-- trianble background --></div>
+
+				<div class="container">
+					
+					<div class="row text-right text-md-center">
+						
+						<div class="col-lg-6 order-lg-2 order-md-1">
+
+							<a href="start-ecommerce.html" class="mt-30 mb-30 d-block">
+							
+								<h1 class="mb-0 fs-50 fw-200">eCommerce</h1>
+								<h3 class="font-lato fs-17 d-block text-muted m-0">
+									Explore Smarty shop pages.
+								</h3>
+
+								<!-- customizable color hr -->
+								<hr class="hr-color hr-info w-100">
+
+								<div class="mt-60">
+									<span class="btn btn-light btn-shadow-1 btn-round fs-16 mb-0">
+										<i class="et-basket text-info"></i> &nbsp;
+										EXPLORE ECOMMERCE
+									</span>
+								</div>
+
+								<div class="clearfix mt-80 hidden-md-down"><!-- optical spacer --></div>
+
+							</a>
+
+						</div>
+
+						<div class="col-lg-6 order-lg-1 order-md-2">
+
+							<a href="start-onepage.html" class="mt-30 mb-30 text-left text-md-center d-block">
+								
+								<h1 class="mb-0 fs-50 fw-200">One Page</h1>
+								<h3 class="font-lato fs-17 d-block text-muted m-0">
+									Explore one page templates
+								</h3>
+
+								<!-- customizable color hr -->
+								<hr class="hr-color hr-danger w-100">
+
+								<div class="mt-60">
+									<span class="btn btn-light btn-shadow-1 btn-round fs-16 mb-0">
+										<i class="et-megaphone text-danger"></i> &nbsp;
+										EXPLORE ONEPAGE
+									</span>
+								</div>
+
+								<div class="clearfix mt-80 hidden-md-down"><!-- optical spacer --></div>
+
+							</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+			<!-- /eCommerce ; Onepage -->
+
+
+
+
+
+
+
+
+			<!-- CALLOUT -->
+			<div class="alert mt-6 mb-6 b-0 text-xs-center" style="background-color: #fbfbfb;">
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-md-9 col-sm-12"><!-- left text -->
+							<h3 class="mb-0 fw-200">
+								<b>Time is valuable!</b> Start a new project in a smart way!
+
+								<span class="word-rotator" data-delay="2000">
+									<span class="items">
+										<span>Easy!</span>
+										<span>Fast!</span>
+										<span>Smart!</span>
+									</span>
+								</span><!-- /word rotator -->
+							</h3>
+							<p class="mb-0 fw-200 fs-15">
+								Lifetime Free Updates included. <b>It's ok to be smart!</b>
+							</p>
+						</div><!-- /left text -->
+
+						<div class="col-12 mt-15 hidden-md-up"><!-- mobile spacer -->&nbsp;</div>
+						
+						<div class="col-12 col-lg-3 col-md-3 col-sm-12"><!-- right btn -->
+							<a target="_blank" rel="nofollow" href="https://wrapbootstrap.com/theme/smarty-website-admin-rtl-WB02DSN1B" class="btn btn-3d btn-red btn-shadow-1 btn-round btn-lg fs-16 mb-0">
+								<i class="et-download"></i> 
+								GET SMARTY <b>NOW</b>
+							</a>
+						</div><!-- /right btn -->
+
+					</div>
+
+				</div>
+			</div>
+			<!-- /CALLOUT -->
+
+
+
+
+
+
+
+
+			<!-- Sliders -->
+			<section class="b-0 mt-6 mb-6">
+				<div class="rightTriangle pillar hidden-md-down"><!-- trianble background --></div>
+				<div class="leftTriangle pillar hidden-md-down"><!-- trianble background --></div>
+				
+				<div class="container">
+					
+					
+						<div class="row">
+
+							<div class="col-lg-6 text-left text-md-center">
+
+								<a href="start-revslider.html" class="d-block pt-30 pb-100">
+
+									<i class="et-refresh fs-50 text-danger"></i>
+									<h1 class="mb-0 mt-8 fs-50 fw-200"><b>Revolution</b> Slider</h1>
+									<h3 class="font-lato fs-17 d-block text-muted m-0">
+										Explore more than 50 revolution sliders
+									</h3>
+
+									<div class="mt-60">
+										<span class="btn btn-light btn-shadow-1 btn-round fs-16 mb-0">
+											<i class="et-refresh text-danger"></i> &nbsp;
+											CLICK TO EXPLORE
+										</span>
+									</div>
+
+
+								</a>
+
+							</div>
+
+							<div class="col-lg-6 text-right text-md-center">
+								<a href="start-layerslider.html" class="d-block pt-30 pb-100">
+
+									<i class="et-layers fs-50 text-warning"></i>
+									<h1 class="mb-0 mt-8 fs-50 fw-200"><b>Layer</b> Slider</h1>
+									<h3 class="font-lato fs-17 d-block text-muted m-0">
+										Explore layerslider
+									</h3>
+
+									<div class="mt-60">
+										<span class="btn btn-light btn-shadow-1 btn-round fs-16 mb-0">
+											<i class="et-layers text-warning"></i> &nbsp;
+											CLICK TO EXPLORE
+										</span>
+									</div>
+
+								</a>
+
+							</div>
+
+						</div>
+
+					
+
+
+				</div>
+
+			</section>
+			<!-- /Sliders -->
+
+
+
+
+
+			
+
+
+
+
+			<!-- -->
+			<section class="b-0 mt-6 mb-6" style="background-color:#f5f6fa">
+				<div class="container">
+
+					<div class="mt-30 mb-100 text-center">
+						<h2 class="mb-0 fw-200 fs-40">Core Features</h2>
+						<h3 class="font-lato fs-17 d-block text-muted m-0">
+							Javascript knowledge is not required to work with Smarty. <br>
+							Everything is easy, fast and dynamically loaded in a smart way!
+						</h3>
+
+						<!-- customizable color hr -->
+						<hr class="hr-color hr-muted w-100">
+
+					</div>
+
+
+
+					<div class="clearfix row">
+
+						<div class="col text-center">
+							<div class="w-100 clearfix text-center d-inline-block">
+								<div class="mb-15 mr-0 w-80 h-80 d-inline-block bg-white rounded-circle btn-shadow-1 text-center">
+									<i class="et-briefcase fs-30 pt-20 mt-5 text-info"></i>
+								</div>
+
+								<h5 class="fs-12">Bootstrap 4+</h5>
+							</div>
+						</div>
+
+						<div class="col text-center">
+							<div class="w-100 clearfix text-center d-inline-block">
+								<div class="mb-15 mr-0 w-80 h-80 d-inline-block bg-white rounded-circle btn-shadow-1 text-center">
+									<i class="et-circle-compass fs-30 pt-20 mt-5 text-info"></i>
+								</div>
+
+								<h5 class="fs-12">jQuery 3+</h5>
+							</div>
+						</div>
+
+						<div class="col text-center">
+							<div class="w-100 clearfix text-center d-inline-block">
+								<div class="mb-15 mr-0 w-80 h-80 d-inline-block bg-white rounded-circle btn-shadow-1 text-center">
+									<i class="et-recycle fs-30 pt-20 mt-5 text-warning"></i>
+								</div>
+
+								<h5 class="fs-12">Reusable Elements</h5>
+							</div>
+						</div>
+
+						<div class="col text-center">
+							<div class="w-100 clearfix text-center d-inline-block">
+								<div class="mb-15 mr-0 w-80 h-80 d-inline-block bg-white rounded-circle btn-shadow-1 text-center">
+									<i class="et-cloud fs-30 pt-20 mt-5 text-muted"></i>
+								</div>
+
+								<h5 class="fs-12">Google Fonts</h5>
+							</div>
+						</div>
+
+						<div class="col text-center">
+							<div class="w-100 clearfix text-center d-inline-block">
+								<div class="mb-15 mr-0 w-80 h-80 d-inline-block bg-white rounded-circle btn-shadow-1 text-center">
+									<i class="et-genius fs-30 pt-20 mt-5 text-info"></i>
+								</div>
+
+								<h5 class="fs-12">Animate CSS</h5>
+							</div>	
+						</div>
+
+						<div class="col text-center">
+							<div class="w-100 clearfix text-center d-inline-block">
+								<div class="mb-15 mr-0 w-80 h-80 d-inline-block bg-white rounded-circle btn-shadow-1 text-center">
+									<i class="et-linegraph fs-30 pt-20 mt-5 text-warning"></i>
+								</div>
+
+								<h5 class="fs-12">Wow Animation</h5>
+							</div>
+						</div>
+
+						<div class="col text-center">
+							<div class="w-100 clearfix text-center d-inline-block">
+								<div class="mb-15 mr-0 w-80 h-80 d-inline-block bg-white rounded-circle btn-shadow-1 text-center">
+									<i class="et-flag fs-30 pt-20 mt-5 text-primary"></i>
+								</div>
+
+								<h5 class="fs-12">Font Awesome</h5>
+							</div>
+						</div>
+
+					</div>
+
+
+
+					<div class="clearfix row mt-30">
+
+						<div class="col text-center">
+							<div class="w-100 clearfix text-center d-inline-block">
+								<div class="mb-15 mr-0 w-80 h-80 d-inline-block bg-white rounded-circle btn-shadow-1 text-center">
+									<i class="et-mobile fs-30 pt-20 mt-5 text-muted"></i>
+								</div>
+
+								<h5 class="fs-12">ET Line Icon</h5>
+							</div>
+						</div>
+
+						<div class="col text-center">
+							<div class="w-100 clearfix text-center d-inline-block">
+								<div class="mb-15 mr-0 w-80 h-80 d-inline-block bg-white rounded-circle btn-shadow-1 text-center">
+									<i class="et-pictures fs-30 pt-20 mt-5 text-warning"></i>
+								</div>
+
+								<h5 class="fs-12">Magnific Popup</h5>
+							</div>
+						</div>
+
+						<div class="col text-center">
+							<div class="w-100 clearfix text-center d-inline-block">
+								<div class="mb-15 mr-0 w-80 h-80 d-inline-block bg-white rounded-circle btn-shadow-1 text-center">
+									<i class="et-layers fs-30 pt-20 mt-5 text-danger"></i>
+								</div>
+
+								<h5 class="fs-12">Parallax</h5>
+							</div>
+						</div>
+
+						<div class="col text-center">
+							<div class="w-100 clearfix text-center d-inline-block">
+								<div class="mb-15 mr-0 w-80 h-80 d-inline-block bg-white rounded-circle btn-shadow-1 text-center">
+									<i class="et-lightbulb fs-30 pt-20 mt-5 text-info"></i>
+								</div>
+
+								<h5 class="fs-12">Isotope Filtering</h5>
+							</div>
+						</div>
+
+						<div class="col text-center">
+							<div class="w-100 clearfix text-center d-inline-block">
+								<div class="mb-15 mr-0 w-80 h-80 d-inline-block bg-white rounded-circle btn-shadow-1 text-center">
+									<i class="et-envelope fs-30 pt-20 mt-5 text-danger"></i>
+								</div>
+
+								<h5 class="fs-12">Ajax Contact</h5>
+							</div>
+						</div>
+
+						<div class="col text-center">
+							<div class="w-100 clearfix text-center d-inline-block">
+								<div class="mb-15 mr-0 w-80 h-80 d-inline-block bg-white rounded-circle btn-shadow-1 text-center">
+									<i class="et-happy fs-30 pt-20 mt-5 text-primary"></i>
+								</div>
+
+								<h5 class="fs-12">W3C Valid</h5>
+							</div>
+						</div>
+
+						<div class="col text-center">
+							<div class="w-100 clearfix text-center d-inline-block">
+								<div class="mb-15 mr-0 w-80 h-80 d-inline-block bg-white rounded-circle btn-shadow-1 text-center">
+									<i class="et-speedometer fs-30 pt-20 mt-5 text-success"></i>
+								</div>
+
+								<h5 class="fs-12">Speed Optimized</h5>
+							</div>
+						</div>
+
+					</div>
+
+
+
+					<div class="clearfix row mt-30">
+
+						<div class="col text-center hidden-md-down"></div>
+
+						<div class="col text-center">
+							<div class="w-100 clearfix text-center d-inline-block">
+								<div class="mb-15 mr-0 w-80 h-80 d-inline-block bg-white rounded-circle btn-shadow-1 text-center">
+									<i class="et-wine fs-30 pt-20 mt-5 text-muted"></i>
+								</div>
+
+								<h5 class="fs-12">700+ HTML</h5>
+							</div>
+						</div>
+
+
+						<div class="col text-center">
+							<div class="w-100 clearfix text-center d-inline-block">
+								<div class="mb-15 mr-0 w-80 h-80 d-inline-block bg-white rounded-circle btn-shadow-1 text-center">
+									<i class="et-edit fs-30 pt-20 mt-5 text-muted"></i>
+								</div>
+
+								<h5 class="fs-12">1000+ Elements</h5>
+							</div>
+						</div>
+
+						<div class="col text-center">
+							<div class="w-100 clearfix text-center d-inline-block">
+								<div class="mb-15 mr-0 w-80 h-80 d-inline-block bg-white rounded-circle btn-shadow-1 text-center">
+									<i class="et-heart fs-30 pt-20 mt-5 text-success"></i>
+								</div>
+
+								<h5 class="fs-12">Paid Plugins Included</h5>
+							</div>
+						</div>
+
+						<div class="col text-center">
+							<div class="w-100 clearfix text-center d-inline-block">
+								<div class="mb-15 mr-0 w-80 h-80 d-inline-block bg-white rounded-circle btn-shadow-1 text-center">
+									<i class="et-linegraph fs-30 pt-20 mt-5 text-success"></i>
+								</div>
+
+								<h5 class="fs-12">Free Updates</h5>
+							</div>
+						</div>
+
+						<div class="col text-center">
+							<div class="w-100 clearfix text-center d-inline-block">
+								<div class="mb-15 mr-0 w-80 h-80 d-inline-block bg-white rounded-circle btn-shadow-1 text-center">
+									<i class="et-globe fs-30 pt-20 mt-5 text-muted"></i>
+								</div>
+
+								<h5 class="fs-12">Free Support</h5>
+							</div>
+						</div>
+
+						<div class="col text-center hidden-md-down"></div>
+
+					</div>
+
+
+					
+
+					<div class="text-center mt-80">
+
+						<a href="https://wrapbootstrap.com/theme/smarty-website-admin-rtl-WB02DSN1B" target="_blank" class="btn btn-featured btn-secondary w-250 btn-round btn-inverse text-left">
+							<span class="fs-15 fw-200">GET SMARTY NOW</span>
+							<i class="et-download fs-25 btn-round"></i>
+						</a>
+
+					</div>
+
+				</div>
+			</section>
+			<!-- / -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+			
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
+
+
+					<div class="row">
+
+						<!-- col #1 -->
+						<div class="col-md-8">
+
+							<h3 class="letter-spacing-1">WHY US?</h3>
+
+							<!-- Small Description -->
+							<p>
+								We have the conviction that we create the <b>most innovative and reliable</b> products on the market. 
+								<br>Contact us today for any questions you might have.
+							</p>
+							<h2>555-1234</h2>
+						</div>
+						
+						<!-- /col #1 -->
+
+						<!-- col #2 -->
+
+					</div>
+
+
+				</div>
+
+				<div class="copyright">
+					<div class="container">
+						<ul class="float-right m-0 list-inline mobile-block">
+							<li><a href="#">Terms &amp; Conditions</a></li>
+							<li>&bull;</li>
+							<li><a href="#">Privacy</a></li>
+						</ul>
+						&copy; All Rights Reserved, Company LTD
+					</div>
+				</div>
+
+			</footer>
+			<!-- /FOOTER -->
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script>var plugin_path = 'assets/plugins/';</script>
+		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+		<script src="assets/js/scripts.js"></script>
+		
+		<!-- STYLESWITCHER - REMOVE -->
+		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+
+		<!-- REVOLUTION SLIDER -->
+		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="assets/js/view/demo.revolution_slider.js"></script>
+
+		<!-- PAGELEVEL SCRIPTS -->
+		<script src="assets/js/contact.js"></script>
+
+		<!-- 
+			GMAP.JS 
+			http://hpneo.github.io/gmaps/
+		-->
+		<script src="//maps.google.com/maps/api/js?key=AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY"></script>
+		<script src="assets/plugins/gmaps.js"></script>
+		<script>
+
+			jQuery(document).ready(function(){
+
+				/**
+					@BASIC GOOGLE MAP
+				**/
+				var map2 = new GMaps({
+					div: '#map2',
+					lat: -12.043333,
+					lng: -77.028333,
+					scrollwheel: false
+				});
+
+				var marker = map2.addMarker({
+					lat: -12.043333,
+					lng: -77.028333,
+					title: 'Company, Inc.'
+				});
+
+			});
+
+		</script>
+	</body>
+</html>
